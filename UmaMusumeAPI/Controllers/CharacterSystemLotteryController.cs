@@ -1,0 +1,122 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using UmaMusumeAPI.Context;
+using UmaMusumeAPI.Models.Tables;
+
+namespace UmaMusumeAPI.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CharacterSystemLotteryController : ControllerBase
+    {
+        private readonly UmaMusumeDbContext _context;
+
+        public CharacterSystemLotteryController(UmaMusumeDbContext context)
+        {
+            _context = context;
+        }
+
+        // GET: api/CharacterSystemLottery
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<CharacterSystemLottery>>> GetCharacterSystemLotteries()
+        {
+            return await _context.CharacterSystemLotteries.ToListAsync();
+        }
+
+        // GET: api/CharacterSystemLottery/5
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CharacterSystemLottery>> GetCharacterSystemLottery(int id)
+        {
+            var characterSystemLottery = await _context.CharacterSystemLotteries.FindAsync(id);
+
+            if (characterSystemLottery == null)
+            {
+                return NotFound();
+            }
+
+            return characterSystemLottery;
+        }
+
+        // PUT: api/CharacterSystemLottery/5
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutCharacterSystemLottery(int id, CharacterSystemLottery characterSystemLottery)
+        {
+            if (id != characterSystemLottery.Id)
+            {
+                return BadRequest();
+            }
+
+            _context.Entry(characterSystemLottery).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CharacterSystemLotteryExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+
+        // POST: api/CharacterSystemLottery
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [HttpPost]
+        public async Task<ActionResult<CharacterSystemLottery>> PostCharacterSystemLottery(CharacterSystemLottery characterSystemLottery)
+        {
+            _context.CharacterSystemLotteries.Add(characterSystemLottery);
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (CharacterSystemLotteryExists(characterSystemLottery.Id))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return CreatedAtAction("GetCharacterSystemLottery", new { id = characterSystemLottery.Id }, characterSystemLottery);
+        }
+
+        // DELETE: api/CharacterSystemLottery/5
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteCharacterSystemLottery(int id)
+        {
+            var characterSystemLottery = await _context.CharacterSystemLotteries.FindAsync(id);
+            if (characterSystemLottery == null)
+            {
+                return NotFound();
+            }
+
+            _context.CharacterSystemLotteries.Remove(characterSystemLottery);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        private bool CharacterSystemLotteryExists(int id)
+        {
+            return _context.CharacterSystemLotteries.Any(e => e.Id == id);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+
+#nullable disable
+
+namespace UmaMusumeAPI.Models.Tables
+{
+    public partial class RacePlayerCamera
+    {
+        public int Id { get; set; }
+        public long Priority { get; set; }
+        public string PrefabName { get; set; }
+        public long Category { get; set; }
+    }
+}

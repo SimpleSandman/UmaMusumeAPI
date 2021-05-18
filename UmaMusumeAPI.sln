@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmaMusumeAPI", "UmaMusumeAPI\UmaMusumeAPI.csproj", "{3C6FE81E-FE31-4C43-8E63-C51CB5861FCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C6FE81E-FE31-4C43-8E63-C51CB5861FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6FE81E-FE31-4C43-8E63-C51CB5861FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6FE81E-FE31-4C43-8E63-C51CB5861FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6FE81E-FE31-4C43-8E63-C51CB5861FCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {162B2DE7-1D5F-4892-BB4E-74218CAD4D45}
+	EndGlobalSection
+EndGlobal

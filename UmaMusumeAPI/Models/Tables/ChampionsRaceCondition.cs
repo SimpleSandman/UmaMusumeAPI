@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+
+#nullable disable
+
+namespace UmaMusumeAPI.Models.Tables
+{
+    public partial class ChampionsRaceCondition
+    {
+        public int ChampionsId { get; set; }
+        public int RoundId { get; set; }
+        public long RaceInstanceId { get; set; }
+        public long RaceConditionId { get; set; }
+    }
+}
