@@ -34,7 +34,9 @@ Scaffold-DbContext 'User Id=root;Password=$0meth1ngC00L;Host=localhost;Database=
 
 -----------
 
-This particular command below is a modified version of [this StackOverflow answer](https://stackoverflow.com/a/54422926/2113548). I personally put the code into a `.ps1` file in the same folder where `C:\Users\<YOUR_NAME_HERE>\.dotnet\tools` is located since I installed the `dotnet-aspnet-codegenerator.exe` from [this NuGet page](https://www.nuget.org/packages/dotnet-aspnet-codegenerator/) with the ".NET CLI (Global)" command.
+This particular command below is a modified version of [this StackOverflow answer](https://stackoverflow.com/a/54422926/2113548). I personally put the code into a `.ps1` file in the same folder where `C:\Users\<YOUR_NAME_HERE>\.dotnet\tools` is located since I installed the `dotnet-aspnet-codegenerator.exe` from [this NuGet page](https://www.nuget.org/packages/dotnet-aspnet-codegenerator/) with the ".NET CLI (Global)" command. 
+
+This will allow you to generate all of your controllers from all of the models in a given folder (i.e. Tables).
 
 NOTE: Please modify your repo path in the script below if it's not in the same location.
 ```powershell
