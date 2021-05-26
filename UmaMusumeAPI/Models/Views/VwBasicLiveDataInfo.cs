@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 
 #nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicLiveDataInfo
+    public partial class VwBasicLiveDataInfo
     {
         public int MusicId { get; set; }
         public DateTime? StartDate { get; set; }

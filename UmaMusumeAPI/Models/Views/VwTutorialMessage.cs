@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class TutorialMessage
+    public partial class VwTutorialMessage
     {
         public long TutorialId { get; set; }
         public int TutorialIndex { get; set; }

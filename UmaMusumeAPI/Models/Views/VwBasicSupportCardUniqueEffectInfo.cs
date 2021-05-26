@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicSupportCardUniqueEffectInfo
+    public partial class VwBasicSupportCardUniqueEffectInfo
     {
         public int SupportCardUniqueEffectId { get; set; }
         public long Lv { get; set; }

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicDressDataInfo
+    public partial class VwBasicDressDataInfo
     {
         public int DressId { get; set; }
         public long CharaId { get; set; }

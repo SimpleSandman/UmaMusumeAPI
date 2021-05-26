@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class ErrorMessage
+    public partial class VwErrorMessage
     {
         public long ErrorId { get; set; }
         public int ErrorIndex { get; set; }

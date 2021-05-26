@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 
 #nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicStoryEventDataInfo
+    public partial class VwBasicStoryEventDataInfo
     {
         public int StoryEventId { get; set; }
         public DateTime? NoticeDate { get; set; }

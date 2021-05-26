@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicMainStoryDataInfo
+    public partial class VwBasicMainStoryDataInfo
     {
         public int MainStoryDataId { get; set; }
         public long PartId { get; set; }

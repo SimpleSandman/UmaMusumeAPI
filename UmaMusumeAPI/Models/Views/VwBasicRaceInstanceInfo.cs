@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicRaceInstanceInfo
+    public partial class VwBasicRaceInstanceInfo
     {
         public int RaceInstanceId { get; set; }
         public long RaceId { get; set; }

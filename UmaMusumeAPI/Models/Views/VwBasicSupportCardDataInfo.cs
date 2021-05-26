@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicSupportCardDataInfo
+    public partial class VwBasicSupportCardDataInfo
     {
         public int SupportCardDataId { get; set; }
         public long CharaId { get; set; }

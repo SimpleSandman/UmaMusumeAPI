@@ -17,36 +17,13 @@ namespace UmaMusumeAPI.Context
         #region DbSets
         public virtual DbSet<AnnounceCharacter> AnnounceCharacters { get; set; }
         public virtual DbSet<AnnounceData> AnnounceData { get; set; }
+        public virtual DbSet<AnnounceEvent> AnnounceEvents { get; set; }
         public virtual DbSet<AnnounceSupportCard> AnnounceSupportCards { get; set; }
         public virtual DbSet<AudioCuesheet> AudioCuesheets { get; set; }
         public virtual DbSet<AudioIgnoredCueOnHighspeed> AudioIgnoredCueOnHighspeeds { get; set; }
         public virtual DbSet<AvailableSkillSet> AvailableSkillSets { get; set; }
         public virtual DbSet<BackgroundData> BackgroundData { get; set; }
         public virtual DbSet<BannerData> BannerData { get; set; }
-        public virtual DbSet<BasicCharaDataInfo> BasicCharaDataInfos { get; set; }
-        public virtual DbSet<BasicDressDataInfo> BasicDressDataInfos { get; set; }
-        public virtual DbSet<BasicGachaDataInfo> BasicGachaDataInfos { get; set; }
-        public virtual DbSet<BasicGiftMessageInfo> BasicGiftMessageInfos { get; set; }
-        public virtual DbSet<BasicItemDataInfo> BasicItemDataInfos { get; set; }
-        public virtual DbSet<BasicItemExchangeInfo> BasicItemExchangeInfos { get; set; }
-        public virtual DbSet<BasicItemExchangeTopInfo> BasicItemExchangeTopInfos { get; set; }
-        public virtual DbSet<BasicLiveDataInfo> BasicLiveDataInfos { get; set; }
-        public virtual DbSet<BasicLoginBonusDataInfo> BasicLoginBonusDataInfos { get; set; }
-        public virtual DbSet<BasicMainStoryDataInfo> BasicMainStoryDataInfos { get; set; }
-        public virtual DbSet<BasicMissionDataInfo> BasicMissionDataInfos { get; set; }
-        public virtual DbSet<BasicMobDataInfo> BasicMobDataInfos { get; set; }
-        public virtual DbSet<BasicPieceDataInfo> BasicPieceDataInfos { get; set; }
-        public virtual DbSet<BasicRaceInfo> BasicRaceInfos { get; set; }
-        public virtual DbSet<BasicRaceInstanceInfo> BasicRaceInstanceInfos { get; set; }
-        public virtual DbSet<BasicRaceTrackInfo> BasicRaceTrackInfos { get; set; }
-        public virtual DbSet<BasicSingleModeCharaGradeInfo> BasicSingleModeCharaGradeInfos { get; set; }
-        public virtual DbSet<BasicSkillDataInfo> BasicSkillDataInfos { get; set; }
-        public virtual DbSet<BasicStoryEventDataInfo> BasicStoryEventDataInfos { get; set; }
-        public virtual DbSet<BasicStoryEventMissionInfo> BasicStoryEventMissionInfos { get; set; }
-        public virtual DbSet<BasicStoryEventStoryDataInfo> BasicStoryEventStoryDataInfos { get; set; }
-        public virtual DbSet<BasicSupportCardDataInfo> BasicSupportCardDataInfos { get; set; }
-        public virtual DbSet<BasicSupportCardUniqueEffectInfo> BasicSupportCardUniqueEffectInfos { get; set; }
-        public virtual DbSet<BasicTeamStadiumScoreBonusInfo> BasicTeamStadiumScoreBonusInfos { get; set; }
         public virtual DbSet<CampaignCharaStorySchedule> CampaignCharaStorySchedules { get; set; }
         public virtual DbSet<CampaignData> CampaignData { get; set; }
         public virtual DbSet<CardData> CardData { get; set; }
@@ -93,7 +70,6 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<DailyRaceNpc> DailyRaceNpcs { get; set; }
         public virtual DbSet<Directory> Directories { get; set; }
         public virtual DbSet<DressData> DressData { get; set; }
-        public virtual DbSet<ErrorMessage> ErrorMessages { get; set; }
         public virtual DbSet<EventMotionData> EventMotionData { get; set; }
         public virtual DbSet<EventMotionPlusData> EventMotionPlusData { get; set; }
         public virtual DbSet<FaceTypeData> FaceTypeData { get; set; }
@@ -146,7 +122,6 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<MobDressColorSet> MobDressColorSets { get; set; }
         public virtual DbSet<MobHairColorSet> MobHairColorSets { get; set; }
         public virtual DbSet<NeedPieceNumData> NeedPieceNumData { get; set; }
-        public virtual DbSet<NiceItemNamesComment> NiceItemNamesComments { get; set; }
         public virtual DbSet<Nickname> Nicknames { get; set; }
         public virtual DbSet<NoteProfile> NoteProfiles { get; set; }
         public virtual DbSet<NoteProfileTextType> NoteProfileTextTypes { get; set; }
@@ -271,7 +246,38 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<TrainingCuttCharaData> TrainingCuttCharaData { get; set; }
         public virtual DbSet<TrainingCuttData> TrainingCuttData { get; set; }
         public virtual DbSet<TutorialGuideData> TutorialGuideData { get; set; }
-        public virtual DbSet<TutorialMessage> TutorialMessages { get; set; }
+        public virtual DbSet<VwBasicCharaDataInfo> VwBasicCharaDataInfos { get; set; }
+        public virtual DbSet<VwBasicDressDataInfo> VwBasicDressDataInfos { get; set; }
+        public virtual DbSet<VwBasicGachaDataInfo> VwBasicGachaDataInfos { get; set; }
+        public virtual DbSet<VwBasicGiftMessageInfo> VwBasicGiftMessageInfos { get; set; }
+        public virtual DbSet<VwBasicItemDataInfo> VwBasicItemDataInfos { get; set; }
+        public virtual DbSet<VwBasicItemExchangeInfo> VwBasicItemExchangeInfos { get; set; }
+        public virtual DbSet<VwBasicItemExchangeTopInfo> VwBasicItemExchangeTopInfos { get; set; }
+        public virtual DbSet<VwBasicLiveDataInfo> VwBasicLiveDataInfos { get; set; }
+        public virtual DbSet<VwBasicLoginBonusDataInfo> VwBasicLoginBonusDataInfos { get; set; }
+        public virtual DbSet<VwBasicMainStoryDataInfo> VwBasicMainStoryDataInfos { get; set; }
+        public virtual DbSet<VwBasicMissionDataInfo> VwBasicMissionDataInfos { get; set; }
+        public virtual DbSet<VwBasicMobDataInfo> VwBasicMobDataInfos { get; set; }
+        public virtual DbSet<VwBasicPieceDataInfo> VwBasicPieceDataInfos { get; set; }
+        public virtual DbSet<VwBasicRaceInfo> VwBasicRaceInfos { get; set; }
+        public virtual DbSet<VwBasicRaceInstanceInfo> VwBasicRaceInstanceInfos { get; set; }
+        public virtual DbSet<VwBasicRaceTrackInfo> VwBasicRaceTrackInfos { get; set; }
+        public virtual DbSet<VwBasicSingleModeCharaGradeInfo> VwBasicSingleModeCharaGradeInfos { get; set; }
+        public virtual DbSet<VwBasicSkillDataInfo> VwBasicSkillDataInfos { get; set; }
+        public virtual DbSet<VwBasicStoryEventDataInfo> VwBasicStoryEventDataInfos { get; set; }
+        public virtual DbSet<VwBasicStoryEventMissionInfo> VwBasicStoryEventMissionInfos { get; set; }
+        public virtual DbSet<VwBasicStoryEventStoryDataInfo> VwBasicStoryEventStoryDataInfos { get; set; }
+        public virtual DbSet<VwBasicSupportCardDataInfo> VwBasicSupportCardDataInfos { get; set; }
+        public virtual DbSet<VwBasicSupportCardUniqueEffectInfo> VwBasicSupportCardUniqueEffectInfos { get; set; }
+        public virtual DbSet<VwBasicTeamStadiumScoreBonusInfo> VwBasicTeamStadiumScoreBonusInfos { get; set; }
+        public virtual DbSet<VwErrorMessage> VwErrorMessages { get; set; }
+        public virtual DbSet<VwNiceCharaBioInfo> VwNiceCharaBioInfos { get; set; }
+        public virtual DbSet<VwNiceCharaDataInfo> VwNiceCharaDataInfos { get; set; }
+        public virtual DbSet<VwNiceItemNamesCommentsInfo> VwNiceItemNamesCommentsInfos { get; set; }
+        public virtual DbSet<VwNiceObjectivesInfo> VwNiceObjectivesInfos { get; set; }
+        public virtual DbSet<VwNiceRaceInfo> VwNiceRaceInfos { get; set; }
+        public virtual DbSet<VwSuccessionRelationMemberType> VwSuccessionRelationMemberTypes { get; set; }
+        public virtual DbSet<VwTutorialMessage> VwTutorialMessages { get; set; }
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -342,6 +348,38 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StartDate)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<AnnounceEvent>(entity =>
+            {
+                entity.ToTable("announce_event");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CueName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("cue_name");
+
+                entity.Property(e => e.CueSheetName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("cue_sheet_name");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.VoiceTextAsset)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("voice_text_asset");
             });
 
             modelBuilder.Entity<AnnounceSupportCard>(entity =>
@@ -545,760 +583,6 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Type)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("type");
-            });
-
-            modelBuilder.Entity<BasicCharaDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_chara_data_info");
-
-                entity.Property(e => e.CharaId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("chara_id");
-
-                entity.Property(e => e.CharaStartDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("chara_start_date");
-
-                entity.Property(e => e.CharaVersionId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_version_id");
-
-                entity.Property(e => e.HorseName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("horse_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-            });
-
-            modelBuilder.Entity<BasicDressDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_dress_data_info");
-
-                entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id");
-
-                entity.Property(e => e.DressColorMain)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("dress_color_main")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.DressColorSub)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("dress_color_sub")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.DressId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("dress_id");
-
-                entity.Property(e => e.Text)
-                    .HasColumnType("text")
-                    .HasColumnName("text")
-                    .UseCollation("utf8mb4_unicode_ci");
-            });
-
-            modelBuilder.Entity<BasicGachaDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_gacha_data_info");
-
-                entity.Property(e => e.CardType)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("card_type");
-
-                entity.Property(e => e.CostSingle)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("cost_single");
-
-                entity.Property(e => e.CostType)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("cost_type");
-
-                entity.Property(e => e.DailyPayCost)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("daily_pay_cost");
-
-                entity.Property(e => e.EndDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("end_date");
-
-                entity.Property(e => e.FreeCampaignEndDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("free_campaign_end_date");
-
-                entity.Property(e => e.FreeCampaignStartDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("free_campaign_start_date");
-
-                entity.Property(e => e.GachaId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("gacha_id");
-
-                entity.Property(e => e.GachaText)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("gacha_text")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.OnlyOnceFlag)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("only_once_flag");
-
-                entity.Property(e => e.StartDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("start_date");
-            });
-
-            modelBuilder.Entity<BasicGiftMessageInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_gift_message_info");
-
-                entity.Property(e => e.GiftMessage)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("gift_message")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.GiftMessageId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("gift_message_id");
-            });
-
-            modelBuilder.Entity<BasicItemDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_item_data_info");
-
-                entity.Property(e => e.EndDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("end_date");
-
-                entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("group_id");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("id");
-
-                entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("item_category");
-
-                entity.Property(e => e.ItemName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("item_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.ItemPlaceId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("item_place_id");
-
-                entity.Property(e => e.StartDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("start_date");
-            });
-
-            modelBuilder.Entity<BasicItemExchangeInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_item_exchange_info");
-
-                entity.Property(e => e.EndDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("end_date");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("id");
-
-                entity.Property(e => e.ItemExchangeCondition)
-                    .HasColumnType("text")
-                    .HasColumnName("item_exchange_condition")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.ItemExchangeTopId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("item_exchange_top_id");
-
-                entity.Property(e => e.StartDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("start_date");
-            });
-
-            modelBuilder.Entity<BasicItemExchangeTopInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_item_exchange_top_info");
-
-                entity.Property(e => e.ItemExchangeDescription)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("item_exchange_description")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.ItemExchangeDispOrder)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("item_exchange_disp_order");
-
-                entity.Property(e => e.ItemExchangeName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("item_exchange_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.ItemExchangeTopId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("item_exchange_top_id");
-            });
-
-            modelBuilder.Entity<BasicLiveDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_live_data_info");
-
-                entity.Property(e => e.EndDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("end_date");
-
-                entity.Property(e => e.MusicId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("music_id");
-
-                entity.Property(e => e.SongName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("song_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.StartDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("start_date");
-            });
-
-            modelBuilder.Entity<BasicLoginBonusDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_login_bonus_data_info");
-
-                entity.Property(e => e.CountNum)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("count_num");
-
-                entity.Property(e => e.EndDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("end_date");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("id");
-
-                entity.Property(e => e.LoginBonusName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("login_bonus_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.StartDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("start_date");
-
-                entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("type");
-            });
-
-            modelBuilder.Entity<BasicMainStoryDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_main_story_data_info");
-
-                entity.Property(e => e.EpisodeIndex)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("episode_index");
-
-                entity.Property(e => e.MainStoryDataId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("main_story_data_id");
-
-                entity.Property(e => e.MainStoryEpisodeTitle)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("main_story_episode_title")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.PartId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("part_id");
-
-                entity.Property(e => e.StoryNumber)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("story_number");
-            });
-
-            modelBuilder.Entity<BasicMissionDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_mission_data_info");
-
-                entity.Property(e => e.EndDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("end_date");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("id");
-
-                entity.Property(e => e.MissionName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("mission_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.MissionType)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("mission_type");
-
-                entity.Property(e => e.StartDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("start_date");
-            });
-
-            modelBuilder.Entity<BasicMobDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_mob_data_info");
-
-                entity.Property(e => e.CharaFaceModel)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_face_model");
-
-                entity.Property(e => e.CharaHairColor)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_hair_color");
-
-                entity.Property(e => e.CharaHairModel)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_hair_model");
-
-                entity.Property(e => e.DressColorId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_id");
-
-                entity.Property(e => e.DressId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id");
-
-                entity.Property(e => e.MobId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("mob_id");
-
-                entity.Property(e => e.MobName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("mob_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-            });
-
-            modelBuilder.Entity<BasicPieceDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_piece_data_info");
-
-                entity.Property(e => e.CharacterPieceName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("character_piece_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.EndDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("end_date");
-
-                entity.Property(e => e.ItemPlaceId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("item_place_id");
-
-                entity.Property(e => e.PieceId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("piece_id");
-
-                entity.Property(e => e.StartDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("start_date");
-            });
-
-            modelBuilder.Entity<BasicRaceInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_race_info");
-
-                entity.Property(e => e.RaceCourseSet)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("race_course_set");
-
-                entity.Property(e => e.RaceId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("race_id");
-
-                entity.Property(e => e.RaceName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("race_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-            });
-
-            modelBuilder.Entity<BasicRaceInstanceInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_race_instance_info");
-
-                entity.Property(e => e.RaceId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("race_id");
-
-                entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("race_instance_id");
-
-                entity.Property(e => e.RaceInstanceName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("race_instance_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-            });
-
-            modelBuilder.Entity<BasicRaceTrackInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_race_track_info");
-
-                entity.Property(e => e.RaceTrackId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("race_track_id");
-
-                entity.Property(e => e.RaceTrackName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("race_track_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-            });
-
-            modelBuilder.Entity<BasicSingleModeCharaGradeInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_single_mode_chara_grade_info");
-
-                entity.Property(e => e.NeedFanCount)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("need_fan_count");
-
-                entity.Property(e => e.RunNum)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("run_num");
-
-                entity.Property(e => e.SingleModeCharaGradeId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("single_mode_chara_grade_id");
-
-                entity.Property(e => e.SingleModeCharaGradeName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("single_mode_chara_grade_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.WinNum)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("win_num");
-            });
-
-            modelBuilder.Entity<BasicSkillDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_skill_data_info");
-
-                entity.Property(e => e.Condition1)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("condition_1")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.Condition2)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("condition_2")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("group_id");
-
-                entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("rarity");
-
-                entity.Property(e => e.SkillCategory)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("skill_category");
-
-                entity.Property(e => e.SkillDataId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("skill_data_id");
-
-                entity.Property(e => e.SkillDesc)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("skill_desc")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.SkillName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("skill_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-            });
-
-            modelBuilder.Entity<BasicStoryEventDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_story_event_data_info");
-
-                entity.Property(e => e.EndDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("end_date");
-
-                entity.Property(e => e.EndingDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("ending_date");
-
-                entity.Property(e => e.MiddleDate01)
-                    .HasColumnType("datetime")
-                    .HasColumnName("middle_date_01");
-
-                entity.Property(e => e.MiddleDate02)
-                    .HasColumnType("datetime")
-                    .HasColumnName("middle_date_02");
-
-                entity.Property(e => e.NoticeDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("notice_date");
-
-                entity.Property(e => e.StartDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("start_date");
-
-                entity.Property(e => e.StoryEventId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("story_event_id");
-
-                entity.Property(e => e.StoryEventTitle)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("story_event_title")
-                    .UseCollation("utf8mb4_unicode_ci");
-            });
-
-            modelBuilder.Entity<BasicStoryEventMissionInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_story_event_mission_info");
-
-                entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("item_category");
-
-                entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("item_id");
-
-                entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("item_num");
-
-                entity.Property(e => e.MissionType)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("mission_type");
-
-                entity.Property(e => e.StepGroupId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("step_group_id");
-
-                entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("story_event_id");
-
-                entity.Property(e => e.StoryEventMissionId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("story_event_mission_id");
-
-                entity.Property(e => e.StoryEventMissionName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("story_event_mission_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-            });
-
-            modelBuilder.Entity<BasicStoryEventStoryDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_story_event_story_data_info");
-
-                entity.Property(e => e.EpisodeIndexId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("episode_index_id");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("id");
-
-                entity.Property(e => e.NeedPoint)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("need_point");
-
-                entity.Property(e => e.StartDate)
-                    .HasColumnType("datetime")
-                    .HasColumnName("start_date");
-
-                entity.Property(e => e.StoryEventEpisodeTitle)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("story_event_episode_title")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("story_event_id");
-            });
-
-            modelBuilder.Entity<BasicSupportCardDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_support_card_data_info");
-
-                entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id");
-
-                entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("rarity");
-
-                entity.Property(e => e.SkillSetId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("skill_set_id");
-
-                entity.Property(e => e.SupportCardDataId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("support_card_data_id");
-
-                entity.Property(e => e.SupportCardTitleName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("support_card_title_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-            });
-
-            modelBuilder.Entity<BasicSupportCardUniqueEffectInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_support_card_unique_effect_info");
-
-                entity.Property(e => e.Lv)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("lv");
-
-                entity.Property(e => e.ScoreBonusName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("score_bonus_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.SupportCardUniqueEffectId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("support_card_unique_effect_id");
-
-                entity.Property(e => e.Type0)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("type_0");
-
-                entity.Property(e => e.Type1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("type_1");
-
-                entity.Property(e => e.Value0)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("value_0");
-
-                entity.Property(e => e.Value1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("value_1");
-            });
-
-            modelBuilder.Entity<BasicTeamStadiumScoreBonusInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("basic_team_stadium_score_bonus_info");
-
-                entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("condition_type");
-
-                entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("condition_value_1");
-
-                entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("condition_value_2");
-
-                entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("priority");
-
-                entity.Property(e => e.ScoreBonusName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("score_bonus_name")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.ScoreRate)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("score_rate");
-
-                entity.Property(e => e.TeamStadiumScoreBonusId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("team_stadium_score_bonus_id");
             });
 
             modelBuilder.Entity<CampaignCharaStorySchedule>(entity =>
@@ -3542,27 +2826,6 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.UseSeason)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("use_season");
-            });
-
-            modelBuilder.Entity<ErrorMessage>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("error_messages");
-
-                entity.Property(e => e.ErrorId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("error_id");
-
-                entity.Property(e => e.ErrorIndex)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("error_index");
-
-                entity.Property(e => e.ErrorText)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("error_text")
-                    .UseCollation("utf8mb4_unicode_ci");
             });
 
             modelBuilder.Entity<EventMotionData>(entity =>
@@ -6619,34 +5882,6 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Rarity)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("rarity");
-            });
-
-            modelBuilder.Entity<NiceItemNamesComment>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("nice_item_names_comments");
-
-                entity.Property(e => e.ItemComment)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("item_comment")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.ItemComment2)
-                    .HasColumnType("text")
-                    .HasColumnName("item_comment_2")
-                    .UseCollation("utf8mb4_unicode_ci");
-
-                entity.Property(e => e.ItemId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("item_id");
-
-                entity.Property(e => e.ItemName)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("item_name")
-                    .UseCollation("utf8mb4_unicode_ci");
             });
 
             modelBuilder.Entity<Nickname>(entity =>
@@ -12436,11 +11671,1367 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("page_index");
             });
 
-            modelBuilder.Entity<TutorialMessage>(entity =>
+            modelBuilder.Entity<VwBasicCharaDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
-                entity.ToView("tutorial_messages");
+                entity.ToView("vw_basic_chara_data_info");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.CharaStartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("chara_start_date");
+
+                entity.Property(e => e.CharaVersionId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_version_id");
+
+                entity.Property(e => e.HorseName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("horse_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<VwBasicDressDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_dress_data_info");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.DressColorMain)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("dress_color_main")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.DressColorSub)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("dress_color_sub")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.DressId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("dress_id");
+
+                entity.Property(e => e.Text)
+                    .HasColumnType("text")
+                    .HasColumnName("text")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<VwBasicGachaDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_gacha_data_info");
+
+                entity.Property(e => e.CardType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("card_type");
+
+                entity.Property(e => e.CostSingle)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("cost_single");
+
+                entity.Property(e => e.CostType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("cost_type");
+
+                entity.Property(e => e.DailyPayCost)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("daily_pay_cost");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.FreeCampaignEndDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("free_campaign_end_date");
+
+                entity.Property(e => e.FreeCampaignStartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("free_campaign_start_date");
+
+                entity.Property(e => e.GachaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gacha_id");
+
+                entity.Property(e => e.GachaText)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("gacha_text")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.OnlyOnceFlag)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("only_once_flag");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<VwBasicGiftMessageInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_gift_message_info");
+
+                entity.Property(e => e.GiftMessage)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("gift_message")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.GiftMessageId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gift_message_id");
+            });
+
+            modelBuilder.Entity<VwBasicItemDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_item_data_info");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.GroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("group_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ItemCategory)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_category");
+
+                entity.Property(e => e.ItemName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("item_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.ItemPlaceId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_place_id");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<VwBasicItemExchangeInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_item_exchange_info");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ItemExchangeCondition)
+                    .HasColumnType("text")
+                    .HasColumnName("item_exchange_condition")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.ItemExchangeTopId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_exchange_top_id");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<VwBasicItemExchangeTopInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_item_exchange_top_info");
+
+                entity.Property(e => e.ItemExchangeDescription)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("item_exchange_description")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.ItemExchangeDispOrder)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_exchange_disp_order");
+
+                entity.Property(e => e.ItemExchangeName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("item_exchange_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.ItemExchangeTopId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_exchange_top_id");
+            });
+
+            modelBuilder.Entity<VwBasicLiveDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_live_data_info");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.MusicId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("music_id");
+
+                entity.Property(e => e.SongName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("song_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<VwBasicLoginBonusDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_login_bonus_data_info");
+
+                entity.Property(e => e.CountNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("count_num");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.LoginBonusName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("login_bonus_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.Type)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("type");
+            });
+
+            modelBuilder.Entity<VwBasicMainStoryDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_main_story_data_info");
+
+                entity.Property(e => e.EpisodeIndex)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("episode_index");
+
+                entity.Property(e => e.MainStoryDataId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("main_story_data_id");
+
+                entity.Property(e => e.MainStoryEpisodeTitle)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("main_story_episode_title")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.PartId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("part_id");
+
+                entity.Property(e => e.StoryNumber)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_number");
+            });
+
+            modelBuilder.Entity<VwBasicMissionDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_mission_data_info");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.MissionName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mission_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.MissionType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("mission_type");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<VwBasicMobDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_mob_data_info");
+
+                entity.Property(e => e.CharaFaceModel)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_face_model");
+
+                entity.Property(e => e.CharaHairColor)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_hair_color");
+
+                entity.Property(e => e.CharaHairModel)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_hair_model");
+
+                entity.Property(e => e.DressColorId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("dress_color_id");
+
+                entity.Property(e => e.DressId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("dress_id");
+
+                entity.Property(e => e.MobId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("mob_id");
+
+                entity.Property(e => e.MobName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mob_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<VwBasicPieceDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_piece_data_info");
+
+                entity.Property(e => e.CharacterPieceName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("character_piece_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.ItemPlaceId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_place_id");
+
+                entity.Property(e => e.PieceId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("piece_id");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<VwBasicRaceInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_race_info");
+
+                entity.Property(e => e.RaceCourseSet)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_course_set");
+
+                entity.Property(e => e.RaceId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("race_id");
+
+                entity.Property(e => e.RaceName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("race_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<VwBasicRaceInstanceInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_race_instance_info");
+
+                entity.Property(e => e.RaceId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_id");
+
+                entity.Property(e => e.RaceInstanceId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("race_instance_id");
+
+                entity.Property(e => e.RaceInstanceName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("race_instance_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<VwBasicRaceTrackInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_race_track_info");
+
+                entity.Property(e => e.RaceTrackId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("race_track_id");
+
+                entity.Property(e => e.RaceTrackName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("race_track_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<VwBasicSingleModeCharaGradeInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_single_mode_chara_grade_info");
+
+                entity.Property(e => e.NeedFanCount)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("need_fan_count");
+
+                entity.Property(e => e.RunNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("run_num");
+
+                entity.Property(e => e.SingleModeCharaGradeId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("single_mode_chara_grade_id");
+
+                entity.Property(e => e.SingleModeCharaGradeName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("single_mode_chara_grade_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.WinNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("win_num");
+            });
+
+            modelBuilder.Entity<VwBasicSkillDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_skill_data_info");
+
+                entity.Property(e => e.Condition1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("condition_1")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.Condition2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("condition_2")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.GroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("group_id");
+
+                entity.Property(e => e.Rarity)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("rarity");
+
+                entity.Property(e => e.SkillCategory)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("skill_category");
+
+                entity.Property(e => e.SkillDataId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("skill_data_id");
+
+                entity.Property(e => e.SkillDesc)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("skill_desc")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.SkillName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("skill_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<VwBasicStoryEventDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_story_event_data_info");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.EndingDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("ending_date");
+
+                entity.Property(e => e.MiddleDate01)
+                    .HasColumnType("datetime")
+                    .HasColumnName("middle_date_01");
+
+                entity.Property(e => e.MiddleDate02)
+                    .HasColumnType("datetime")
+                    .HasColumnName("middle_date_02");
+
+                entity.Property(e => e.NoticeDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("notice_date");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.StoryEventId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_event_id");
+
+                entity.Property(e => e.StoryEventTitle)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("story_event_title")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<VwBasicStoryEventMissionInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_story_event_mission_info");
+
+                entity.Property(e => e.ItemCategory)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_category");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.ItemNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_num");
+
+                entity.Property(e => e.MissionType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("mission_type");
+
+                entity.Property(e => e.StepGroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("step_group_id");
+
+                entity.Property(e => e.StoryEventId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_event_id");
+
+                entity.Property(e => e.StoryEventMissionId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_event_mission_id");
+
+                entity.Property(e => e.StoryEventMissionName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("story_event_mission_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<VwBasicStoryEventStoryDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_story_event_story_data_info");
+
+                entity.Property(e => e.EpisodeIndexId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("episode_index_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.NeedPoint)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("need_point");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.StoryEventEpisodeTitle)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("story_event_episode_title")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.StoryEventId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_event_id");
+            });
+
+            modelBuilder.Entity<VwBasicSupportCardDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_support_card_data_info");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.Rarity)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("rarity");
+
+                entity.Property(e => e.SkillSetId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("skill_set_id");
+
+                entity.Property(e => e.SupportCardDataId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("support_card_data_id");
+
+                entity.Property(e => e.SupportCardTitleName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("support_card_title_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<VwBasicSupportCardUniqueEffectInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_support_card_unique_effect_info");
+
+                entity.Property(e => e.Lv)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("lv");
+
+                entity.Property(e => e.ScoreBonusName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("score_bonus_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.SupportCardUniqueEffectId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("support_card_unique_effect_id");
+
+                entity.Property(e => e.Type0)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("type_0");
+
+                entity.Property(e => e.Type1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("type_1");
+
+                entity.Property(e => e.Value0)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("value_0");
+
+                entity.Property(e => e.Value1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("value_1");
+            });
+
+            modelBuilder.Entity<VwBasicTeamStadiumScoreBonusInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_team_stadium_score_bonus_info");
+
+                entity.Property(e => e.ConditionType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_type");
+
+                entity.Property(e => e.ConditionValue1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_value_1");
+
+                entity.Property(e => e.ConditionValue2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_value_2");
+
+                entity.Property(e => e.Priority)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("priority");
+
+                entity.Property(e => e.ScoreBonusName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("score_bonus_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.ScoreRate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("score_rate");
+
+                entity.Property(e => e.TeamStadiumScoreBonusId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("team_stadium_score_bonus_id");
+            });
+
+            modelBuilder.Entity<VwErrorMessage>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_error_messages");
+
+                entity.Property(e => e.ErrorId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("error_id");
+
+                entity.Property(e => e.ErrorIndex)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("error_index");
+
+                entity.Property(e => e.ErrorText)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("error_text")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<VwNiceCharaBioInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_nice_chara_bio_info");
+
+                entity.Property(e => e.AttachmentModelId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("attachment_model_id");
+
+                entity.Property(e => e.BirthDay)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("birth_day");
+
+                entity.Property(e => e.BirthMonth)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("birth_month");
+
+                entity.Property(e => e.BirthYear)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("birth_year");
+
+                entity.Property(e => e.Bust)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("bust");
+
+                entity.Property(e => e.CharaCategory)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_category");
+
+                entity.Property(e => e.EarRandomTimeMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ear_random_time_max");
+
+                entity.Property(e => e.EarRandomTimeMin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ear_random_time_min");
+
+                entity.Property(e => e.Height)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("height");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ImageColorMain)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("image_color_main")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.ImageColorSub)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("image_color_sub")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.MiniMayuShaderType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("mini_mayu_shader_type");
+
+                entity.Property(e => e.PersonalDress)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("personal_dress");
+
+                entity.Property(e => e.RaceRunningType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_running_type");
+
+                entity.Property(e => e.Scale)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("scale");
+
+                entity.Property(e => e.Sex)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("sex");
+
+                entity.Property(e => e.Shape)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("shape");
+
+                entity.Property(e => e.Skin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("skin");
+
+                entity.Property(e => e.Socks)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("socks");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.StoryEarRandomTimeMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_ear_random_time_max");
+
+                entity.Property(e => e.StoryEarRandomTimeMin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_ear_random_time_min");
+
+                entity.Property(e => e.StoryTailRandomTimeMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_tail_random_time_max");
+
+                entity.Property(e => e.StoryTailRandomTimeMin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_tail_random_time_min");
+
+                entity.Property(e => e.TailModelId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("tail_model_id");
+
+                entity.Property(e => e.TailRandomTimeMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("tail_random_time_max");
+
+                entity.Property(e => e.TailRandomTimeMin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("tail_random_time_min");
+
+                entity.Property(e => e.UiBorderColor)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_border_color")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiColorMain)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_color_main")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiColorSub)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_color_sub")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiNameplateColor1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_nameplate_color_1")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiNameplateColor2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_nameplate_color_2")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiNumColor1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_num_color_1")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiNumColor2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_num_color_2")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiSpeechColor1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_speech_color_1")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiSpeechColor2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_speech_color_2")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiTrainingColor1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_training_color_1")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiTrainingColor2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_training_color_2")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiTurnColor)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_turn_color")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiWipeColor1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_wipe_color_1")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiWipeColor2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_wipe_color_2")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UiWipeColor3)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("ui_wipe_color_3")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.UraObjectives)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ura_objectives");
+            });
+
+            modelBuilder.Entity<VwNiceCharaDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_nice_chara_data_info");
+
+                entity.Property(e => e.AptitudeBetweener)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_betweener");
+
+                entity.Property(e => e.AptitudeChaser)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_chaser");
+
+                entity.Property(e => e.AptitudeDirt)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_dirt");
+
+                entity.Property(e => e.AptitudeLeader)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_leader");
+
+                entity.Property(e => e.AptitudeLong)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_long");
+
+                entity.Property(e => e.AptitudeMiddle)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_middle");
+
+                entity.Property(e => e.AptitudeMile)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_mile");
+
+                entity.Property(e => e.AptitudeRunner)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_runner");
+
+                entity.Property(e => e.AptitudeShort)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_short");
+
+                entity.Property(e => e.AptitudeTurf)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_turf");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.DefaultRarity)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("default_rarity");
+
+                entity.Property(e => e.Guts1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts1");
+
+                entity.Property(e => e.Guts2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts2");
+
+                entity.Property(e => e.Guts3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts3");
+
+                entity.Property(e => e.Guts4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts4");
+
+                entity.Property(e => e.Guts5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts5");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.LimitedChara)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("limited_chara");
+
+                entity.Property(e => e.Power1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("power1");
+
+                entity.Property(e => e.Power2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("power2");
+
+                entity.Property(e => e.Power3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("power3");
+
+                entity.Property(e => e.Power4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("power4");
+
+                entity.Property(e => e.Power5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("power5");
+
+                entity.Property(e => e.Speed1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed1");
+
+                entity.Property(e => e.Speed2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed2");
+
+                entity.Property(e => e.Speed3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed3");
+
+                entity.Property(e => e.Speed4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed4");
+
+                entity.Property(e => e.Speed5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed5");
+
+                entity.Property(e => e.Stamina1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina1");
+
+                entity.Property(e => e.Stamina2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina2");
+
+                entity.Property(e => e.Stamina3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina3");
+
+                entity.Property(e => e.Stamina4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina4");
+
+                entity.Property(e => e.Stamina5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina5");
+
+                entity.Property(e => e.TalentGuts)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("talent_guts");
+
+                entity.Property(e => e.TalentPow)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("talent_pow");
+
+                entity.Property(e => e.TalentSpeed)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("talent_speed");
+
+                entity.Property(e => e.TalentStamina)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("talent_stamina");
+
+                entity.Property(e => e.TalentWiz)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("talent_wiz");
+
+                entity.Property(e => e.Wisdom1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wisdom1");
+
+                entity.Property(e => e.Wisdom2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wisdom2");
+
+                entity.Property(e => e.Wisdom3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wisdom3");
+
+                entity.Property(e => e.Wisdom4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wisdom4");
+
+                entity.Property(e => e.Wisdom5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wisdom5");
+            });
+
+            modelBuilder.Entity<VwNiceItemNamesCommentsInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_nice_item_names_comments_info");
+
+                entity.Property(e => e.ItemComment)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("item_comment")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.ItemComment2)
+                    .HasColumnType("text")
+                    .HasColumnName("item_comment_2")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.ItemName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("item_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<VwNiceObjectivesInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_nice_objectives_info");
+
+                entity.Property(e => e.ConditionId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_id");
+
+                entity.Property(e => e.ConditionType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_type");
+
+                entity.Property(e => e.ConditionValue1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_value_1");
+
+                entity.Property(e => e.ConditionValue2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_value_2");
+
+                entity.Property(e => e.DetermineRace)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("determine_race");
+
+                entity.Property(e => e.DetermineRaceFlag)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("determine_race_flag");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.RaceInstanceId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_instance_id");
+
+                entity.Property(e => e.RaceSetId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_set_id");
+
+                entity.Property(e => e.RaceType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_type");
+
+                entity.Property(e => e.SortId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("sort_id");
+
+                entity.Property(e => e.TargetType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("target_type");
+
+                entity.Property(e => e.Turn)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("turn");
+            });
+
+            modelBuilder.Entity<VwNiceRaceInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_nice_race_info");
+
+                entity.Property(e => e.Class)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("class");
+
+                entity.Property(e => e.Course)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("course");
+
+                entity.Property(e => e.CourseSet)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("course_set");
+
+                entity.Property(e => e.Direction)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("direction");
+
+                entity.Property(e => e.Distance)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("distance");
+
+                entity.Property(e => e.EntryNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("entry_num");
+
+                entity.Property(e => e.FanCount)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("fan_count");
+
+                entity.Property(e => e.Grade)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("grade");
+
+                entity.Property(e => e.Group)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("group");
+
+                entity.Property(e => e.Half)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("half");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Month)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("month");
+
+                entity.Property(e => e.RaceId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_id");
+
+                entity.Property(e => e.RaceTrackId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_track_id");
+
+                entity.Property(e => e.RequiredFans)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("required_fans");
+
+                entity.Property(e => e.Terrain)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("terrain");
+            });
+
+            modelBuilder.Entity<VwSuccessionRelationMemberType>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_succession_relation_member_types");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.RelationPoint)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("relation_point");
+
+                entity.Property(e => e.RelationType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("relation_type");
+
+                entity.Property(e => e.SrmId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("srm_id");
+            });
+
+            modelBuilder.Entity<VwTutorialMessage>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_tutorial_messages");
 
                 entity.Property(e => e.TutorialId)
                     .HasColumnType("bigint(20)")

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicMobDataInfo
+    public partial class VwBasicMobDataInfo
     {
         public int MobId { get; set; }
         public long CharaFaceModel { get; set; }

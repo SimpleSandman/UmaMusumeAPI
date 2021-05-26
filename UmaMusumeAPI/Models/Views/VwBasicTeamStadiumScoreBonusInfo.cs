@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicTeamStadiumScoreBonusInfo
+    public partial class VwBasicTeamStadiumScoreBonusInfo
     {
         public int TeamStadiumScoreBonusId { get; set; }
         public long Priority { get; set; }

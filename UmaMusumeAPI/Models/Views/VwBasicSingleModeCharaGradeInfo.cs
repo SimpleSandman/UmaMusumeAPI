@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicSingleModeCharaGradeInfo
+    public partial class VwBasicSingleModeCharaGradeInfo
     {
         public int SingleModeCharaGradeId { get; set; }
         public long WinNum { get; set; }

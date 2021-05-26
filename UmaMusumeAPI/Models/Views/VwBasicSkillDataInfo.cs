@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicSkillDataInfo
+    public partial class VwBasicSkillDataInfo
     {
         public int SkillDataId { get; set; }
         public long Rarity { get; set; }

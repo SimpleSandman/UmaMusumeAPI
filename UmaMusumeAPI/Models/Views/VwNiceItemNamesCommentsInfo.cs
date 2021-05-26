@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class NiceItemNamesComment
+    public partial class VwNiceItemNamesCommentsInfo
     {
         public int ItemId { get; set; }
         public string ItemName { get; set; }

@@ -1,16 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 
 #nullable disable
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicMissionDataInfo
+    public partial class VwBasicLoginBonusDataInfo
     {
         public int Id { get; set; }
-        public long MissionType { get; set; }
+        public long Type { get; set; }
+        public long CountNum { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public string MissionName { get; set; }
+        public string LoginBonusName { get; set; }
     }
 }
