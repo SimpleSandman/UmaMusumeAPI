@@ -15,10 +15,6 @@ namespace UmaMusumeAPI.Context
     {
         public UmaMusumeDbContext(DbContextOptions<UmaMusumeDbContext> options) : base(options) { }
 
-        #region DbSets Stored Procedures
-        public virtual DbSet<SpSuccessionPointSum> SpSuccessionPointSum { get; set; }
-        #endregion
-
         #region DbSets Tables
         public virtual DbSet<AnnounceCharacter> AnnounceCharacters { get; set; }
         public virtual DbSet<AnnounceData> AnnounceData { get; set; }
