@@ -3,6 +3,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
+using UmaMusumeAPI.Models.StoredProcedures;
 using UmaMusumeAPI.Models.Tables;
 using UmaMusumeAPI.Models.Views;
 
@@ -14,7 +15,11 @@ namespace UmaMusumeAPI.Context
     {
         public UmaMusumeDbContext(DbContextOptions<UmaMusumeDbContext> options) : base(options) { }
 
-        #region DbSets
+        #region DbSets Stored Procedures
+        public virtual DbSet<SpSuccessionPointSum> SpSuccessionPointSum { get; set; }
+        #endregion
+
+        #region DbSets Tables
         public virtual DbSet<AnnounceCharacter> AnnounceCharacters { get; set; }
         public virtual DbSet<AnnounceData> AnnounceData { get; set; }
         public virtual DbSet<AnnounceEvent> AnnounceEvents { get; set; }
@@ -246,6 +251,9 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<TrainingCuttCharaData> TrainingCuttCharaData { get; set; }
         public virtual DbSet<TrainingCuttData> TrainingCuttData { get; set; }
         public virtual DbSet<TutorialGuideData> TutorialGuideData { get; set; }
+        #endregion
+
+        #region DbSets Views
         public virtual DbSet<VwBasicCharaDataInfo> VwBasicCharaDataInfos { get; set; }
         public virtual DbSet<VwBasicDressDataInfo> VwBasicDressDataInfos { get; set; }
         public virtual DbSet<VwBasicGachaDataInfo> VwBasicGachaDataInfos { get; set; }
@@ -301,6 +309,9 @@ namespace UmaMusumeAPI.Context
         {
             modelBuilder.HasCharSet("utf8mb4")
                 .UseCollation("utf8mb4_general_ci");
+
+            modelBuilder.Entity<SpSuccessionPointSum>()
+                .HasNoKey();
 
             modelBuilder.Entity<AnnounceCharacter>(entity =>
             {

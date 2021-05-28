@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UmaMusumeAPI</name>
+    </assembly>
+    <members>
+        <member name="P:UmaMusumeAPI.DTO.SpSuccessionPointSumDTO.Child">
+            <example>1008</example>
+        </member>
+        <member name="P:UmaMusumeAPI.DTO.SpSuccessionPointSumDTO.Parent1">
+            <example>1011</example>
+        </member>
+        <member name="P:UmaMusumeAPI.DTO.SpSuccessionPointSumDTO.Grandparent1A">
+            <example>1008</example>
+        </member>
+        <member name="P:UmaMusumeAPI.DTO.SpSuccessionPointSumDTO.Grandparent1B">
+            <example>1009</example>
+        </member>
+        <member name="P:UmaMusumeAPI.DTO.SpSuccessionPointSumDTO.Parent2">
+            <example>1014</example>
+        </member>
+        <member name="P:UmaMusumeAPI.DTO.SpSuccessionPointSumDTO.Grandparent2A">
+            <example>1009</example>
+        </member>
+        <member name="P:UmaMusumeAPI.DTO.SpSuccessionPointSumDTO.Grandparent2B">
+            <example>1011</example>
+        </member>
+    </members>
+</doc>
