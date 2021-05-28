@@ -1,7 +1,9 @@
-# Uma Musume Community REST API
+# Uma Musume REST API
 This is a community REST API based on [Uma Musume: Pretty Derby](https://umamusume.jp/)'s `master.mdb` file that reads from a MariaDB database. This is based on the Swagger UI/OpenAPI specification. I'm using MariaDB instead of MySQL for the sake of keeping as much of this as open-source as possible. 
 
 I've written a [loader app](https://github.com/SimpleSandman/UmaMusumeLoadSqlData) that allows you to load the `master.mdb`'s data from the [DMM version](https://dmg.umamusume.jp/) of this game into either SQL Server or MySQL/MariaDB databases. The reason for both is due to change in database specifications midway through development, but I didn't want to let my hard work go to waste.
+
+This API not only has endpoints to the tables, but I've created views for basic info for frequently used tables. I've even implemented stored procedures for a few particular calculations like parent compatibility and recommendations.
 
 # Initial Setup
 Add `appsettings.json` and `appsettings.Development.json` at the project level (where the `.csproj` file lives). The template for both files is shown below, but configure your "DefaultConnection" to your MariaDB database for both development and production.
