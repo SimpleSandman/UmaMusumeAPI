@@ -43,13 +43,13 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
                     command.CommandType = CommandType.StoredProcedure;
                     command.CommandText = "sp_succession_point_sum";
 
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@child", Value = body.Child, MySqlDbType = MySqlDbType.Decimal });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@parent1", Value = body.Parent1, MySqlDbType = MySqlDbType.Decimal });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_1a", Value = body.Grandparent1A, MySqlDbType = MySqlDbType.Decimal });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_1b", Value = body.Grandparent1B, MySqlDbType = MySqlDbType.Decimal });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@parent2", Value = body.Parent2, MySqlDbType = MySqlDbType.Decimal });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_2a", Value = body.Grandparent2A, MySqlDbType = MySqlDbType.Decimal });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_2b", Value = body.Grandparent2B, MySqlDbType = MySqlDbType.Decimal });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@child", Value = body.Child, MySqlDbType = MySqlDbType.Int64 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@parent1", Value = body.Parent1, MySqlDbType = MySqlDbType.Int64 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_1a", Value = body.Grandparent1A, MySqlDbType = MySqlDbType.Int64 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_1b", Value = body.Grandparent1B, MySqlDbType = MySqlDbType.Int64 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@parent2", Value = body.Parent2, MySqlDbType = MySqlDbType.Int64 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_2a", Value = body.Grandparent2A, MySqlDbType = MySqlDbType.Int64 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_2b", Value = body.Grandparent2B, MySqlDbType = MySqlDbType.Int64 });
 
                     using (MySqlDataReader dr = await command.ExecuteReaderAsync())
                     {
@@ -57,14 +57,14 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
 
                         return new SpSuccessionPointSum
                         {
-                            Parent1Child = (decimal)dr["parent1_child"],
-                            GrandparentAParent1 = (decimal)dr["grandparentA_parent1"],
-                            GrandparentBParent1 = (decimal)dr["grandparentB_parent1"],
-                            Parent2Child = (decimal)dr["parent2_child"],
-                            GrandparentAParent2 = (decimal)dr["grandparentA_parent2"],
-                            GrandparentBParent2 = (decimal)dr["grandparentB_parent2"],
-                            Parent1Parent2 = (decimal)dr["parent1_parent2"],
-                            PointSum = (decimal)dr["point_sum"]
+                            Parent1Child = (long)dr["parent1_child"],
+                            GrandparentAParent1 = (long)dr["grandparentA_parent1"],
+                            GrandparentBParent1 = (long)dr["grandparentB_parent1"],
+                            Parent2Child = (long)dr["parent2_child"],
+                            GrandparentAParent2 = (long)dr["grandparentA_parent2"],
+                            GrandparentBParent2 = (long)dr["grandparentB_parent2"],
+                            Parent1Parent2 = (long)dr["parent1_parent2"],
+                            PointSum = (long)dr["point_sum"]
                         };
                     };
                 }

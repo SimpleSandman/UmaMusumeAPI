@@ -4,13 +4,13 @@ namespace UmaMusumeAPI.Models.StoredProcedures
 {
     public class SpSuccessionPointSum
     {
-        public decimal Parent1Child { get; set; }
-        public decimal GrandparentAParent1 { get; set; }
-        public decimal GrandparentBParent1 { get; set; }
-        public decimal Parent2Child { get; set; }
-        public decimal GrandparentAParent2 { get; set; }
-        public decimal GrandparentBParent2 { get; set; }
-        public decimal Parent1Parent2 { get; set; }
-        public decimal PointSum { get; set; }
+        public long Parent1Child { get; set; }
+        public long GrandparentAParent1 { get; set; }
+        public long GrandparentBParent1 { get; set; }
+        public long Parent2Child { get; set; }
+        public long GrandparentAParent2 { get; set; }
+        public long GrandparentBParent2 { get; set; }
+        public long Parent1Parent2 { get; set; }
+        public long PointSum { get; set; }
     }
 }
