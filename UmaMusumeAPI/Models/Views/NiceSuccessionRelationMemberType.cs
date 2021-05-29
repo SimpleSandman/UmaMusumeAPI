@@ -2,7 +2,7 @@
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class SuccessionRelationMemberType
+    public partial class NiceSuccessionRelationMemberType
     {
         public int SrmId { get; set; }
         public long CharaId { get; set; }

@@ -2,7 +2,7 @@
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class ErrorMessage
+    public partial class NiceErrorMessage
     {
         public long ErrorId { get; set; }
         public int ErrorIndex { get; set; }

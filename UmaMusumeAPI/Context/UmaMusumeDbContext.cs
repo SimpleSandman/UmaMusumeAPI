@@ -250,38 +250,38 @@ namespace UmaMusumeAPI.Context
         #endregion
 
         #region DbSets Views
-        public virtual DbSet<BasicCharaDataInfo> VwBasicCharaDataInfos { get; set; }
-        public virtual DbSet<BasicDressDataInfo> VwBasicDressDataInfos { get; set; }
-        public virtual DbSet<BasicGachaDataInfo> VwBasicGachaDataInfos { get; set; }
-        public virtual DbSet<BasicGiftMessageInfo> VwBasicGiftMessageInfos { get; set; }
-        public virtual DbSet<BasicItemDataInfo> VwBasicItemDataInfos { get; set; }
-        public virtual DbSet<BasicItemExchangeInfo> VwBasicItemExchangeInfos { get; set; }
-        public virtual DbSet<BasicItemExchangeTopInfo> VwBasicItemExchangeTopInfos { get; set; }
-        public virtual DbSet<BasicLiveDataInfo> VwBasicLiveDataInfos { get; set; }
-        public virtual DbSet<BasicLoginBonusDataInfo> VwBasicLoginBonusDataInfos { get; set; }
-        public virtual DbSet<BasicMainStoryDataInfo> VwBasicMainStoryDataInfos { get; set; }
-        public virtual DbSet<BasicMissionDataInfo> VwBasicMissionDataInfos { get; set; }
-        public virtual DbSet<BasicMobDataInfo> VwBasicMobDataInfos { get; set; }
-        public virtual DbSet<BasicPieceDataInfo> VwBasicPieceDataInfos { get; set; }
-        public virtual DbSet<BasicRaceInfo> VwBasicRaceInfos { get; set; }
-        public virtual DbSet<BasicRaceInstanceInfo> VwBasicRaceInstanceInfos { get; set; }
-        public virtual DbSet<BasicRaceTrackInfo> VwBasicRaceTrackInfos { get; set; }
-        public virtual DbSet<BasicSingleModeCharaGradeInfo> VwBasicSingleModeCharaGradeInfos { get; set; }
-        public virtual DbSet<BasicSkillDataInfo> VwBasicSkillDataInfos { get; set; }
-        public virtual DbSet<BasicStoryEventDataInfo> VwBasicStoryEventDataInfos { get; set; }
-        public virtual DbSet<BasicStoryEventMissionInfo> VwBasicStoryEventMissionInfos { get; set; }
-        public virtual DbSet<BasicStoryEventStoryDataInfo> VwBasicStoryEventStoryDataInfos { get; set; }
-        public virtual DbSet<BasicSupportCardDataInfo> VwBasicSupportCardDataInfos { get; set; }
-        public virtual DbSet<BasicSupportCardUniqueEffectInfo> VwBasicSupportCardUniqueEffectInfos { get; set; }
-        public virtual DbSet<BasicTeamStadiumScoreBonusInfo> VwBasicTeamStadiumScoreBonusInfos { get; set; }
-        public virtual DbSet<ErrorMessage> VwErrorMessages { get; set; }
-        public virtual DbSet<NiceCharaBioInfo> VwNiceCharaBioInfos { get; set; }
-        public virtual DbSet<NiceCharaDataInfo> VwNiceCharaDataInfos { get; set; }
-        public virtual DbSet<NiceItemNamesCommentsInfo> VwNiceItemNamesCommentsInfos { get; set; }
-        public virtual DbSet<NiceObjectivesInfo> VwNiceObjectivesInfos { get; set; }
-        public virtual DbSet<NiceRaceInfo> VwNiceRaceInfos { get; set; }
-        public virtual DbSet<SuccessionRelationMemberType> VwSuccessionRelationMemberTypes { get; set; }
-        public virtual DbSet<TutorialMessage> VwTutorialMessages { get; set; }
+        public virtual DbSet<BasicCharaDataInfo> BasicCharaDataInfos { get; set; }
+        public virtual DbSet<BasicDressDataInfo> BasicDressDataInfos { get; set; }
+        public virtual DbSet<BasicGachaDataInfo> BasicGachaDataInfos { get; set; }
+        public virtual DbSet<BasicGiftMessageInfo> BasicGiftMessageInfos { get; set; }
+        public virtual DbSet<BasicItemDataInfo> BasicItemDataInfos { get; set; }
+        public virtual DbSet<BasicItemExchangeInfo> BasicItemExchangeInfos { get; set; }
+        public virtual DbSet<BasicItemExchangeTopInfo> BasicItemExchangeTopInfos { get; set; }
+        public virtual DbSet<BasicLiveDataInfo> BasicLiveDataInfos { get; set; }
+        public virtual DbSet<BasicLoginBonusDataInfo> BasicLoginBonusDataInfos { get; set; }
+        public virtual DbSet<BasicMainStoryDataInfo> BasicMainStoryDataInfos { get; set; }
+        public virtual DbSet<BasicMissionDataInfo> BasicMissionDataInfos { get; set; }
+        public virtual DbSet<BasicMobDataInfo> BasicMobDataInfos { get; set; }
+        public virtual DbSet<BasicPieceDataInfo> BasicPieceDataInfos { get; set; }
+        public virtual DbSet<BasicRaceInfo> BasicRaceInfos { get; set; }
+        public virtual DbSet<BasicRaceInstanceInfo> BasicRaceInstanceInfos { get; set; }
+        public virtual DbSet<BasicRaceTrackInfo> BasicRaceTrackInfos { get; set; }
+        public virtual DbSet<BasicSingleModeCharaGradeInfo> BasicSingleModeCharaGradeInfos { get; set; }
+        public virtual DbSet<BasicSkillDataInfo> BasicSkillDataInfos { get; set; }
+        public virtual DbSet<BasicStoryEventDataInfo> BasicStoryEventDataInfos { get; set; }
+        public virtual DbSet<BasicStoryEventMissionInfo> BasicStoryEventMissionInfos { get; set; }
+        public virtual DbSet<BasicStoryEventStoryDataInfo> BasicStoryEventStoryDataInfos { get; set; }
+        public virtual DbSet<BasicSupportCardDataInfo> BasicSupportCardDataInfos { get; set; }
+        public virtual DbSet<BasicSupportCardUniqueEffectInfo> BasicSupportCardUniqueEffectInfos { get; set; }
+        public virtual DbSet<BasicTeamStadiumScoreBonusInfo> BasicTeamStadiumScoreBonusInfos { get; set; }
+        public virtual DbSet<NiceErrorMessage> ErrorMessages { get; set; }
+        public virtual DbSet<NiceCharaBioInfo> NiceCharaBioInfos { get; set; }
+        public virtual DbSet<NiceCharaDataInfo> NiceCharaDataInfos { get; set; }
+        public virtual DbSet<NiceItemNamesCommentsInfo> NiceItemNamesCommentsInfos { get; set; }
+        public virtual DbSet<NiceObjectivesInfo> NiceObjectivesInfos { get; set; }
+        public virtual DbSet<NiceRaceInfo> NiceRaceInfos { get; set; }
+        public virtual DbSet<NiceSuccessionRelationMemberType> SuccessionRelationMemberTypes { get; set; }
+        public virtual DbSet<NiceTutorialMessage> TutorialMessages { get; set; }
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -12432,7 +12432,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("team_stadium_score_bonus_id");
             });
 
-            modelBuilder.Entity<ErrorMessage>(entity =>
+            modelBuilder.Entity<NiceErrorMessage>(entity =>
             {
                 entity.HasNoKey();
 
@@ -13011,7 +13011,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("terrain");
             });
 
-            modelBuilder.Entity<SuccessionRelationMemberType>(entity =>
+            modelBuilder.Entity<NiceSuccessionRelationMemberType>(entity =>
             {
                 entity.HasNoKey();
 
@@ -13034,7 +13034,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("srm_id");
             });
 
-            modelBuilder.Entity<TutorialMessage>(entity =>
+            modelBuilder.Entity<NiceTutorialMessage>(entity =>
             {
                 entity.HasNoKey();
 

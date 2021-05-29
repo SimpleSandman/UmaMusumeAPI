@@ -2,7 +2,7 @@
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class TutorialMessage
+    public partial class NiceTutorialMessage
     {
         public long TutorialId { get; set; }
         public int TutorialIndex { get; set; }
