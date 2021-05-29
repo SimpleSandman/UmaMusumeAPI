@@ -250,38 +250,38 @@ namespace UmaMusumeAPI.Context
         #endregion
 
         #region DbSets Views
-        public virtual DbSet<VwBasicCharaDataInfo> VwBasicCharaDataInfos { get; set; }
-        public virtual DbSet<VwBasicDressDataInfo> VwBasicDressDataInfos { get; set; }
-        public virtual DbSet<VwBasicGachaDataInfo> VwBasicGachaDataInfos { get; set; }
-        public virtual DbSet<VwBasicGiftMessageInfo> VwBasicGiftMessageInfos { get; set; }
-        public virtual DbSet<VwBasicItemDataInfo> VwBasicItemDataInfos { get; set; }
-        public virtual DbSet<VwBasicItemExchangeInfo> VwBasicItemExchangeInfos { get; set; }
-        public virtual DbSet<VwBasicItemExchangeTopInfo> VwBasicItemExchangeTopInfos { get; set; }
-        public virtual DbSet<VwBasicLiveDataInfo> VwBasicLiveDataInfos { get; set; }
-        public virtual DbSet<VwBasicLoginBonusDataInfo> VwBasicLoginBonusDataInfos { get; set; }
-        public virtual DbSet<VwBasicMainStoryDataInfo> VwBasicMainStoryDataInfos { get; set; }
-        public virtual DbSet<VwBasicMissionDataInfo> VwBasicMissionDataInfos { get; set; }
-        public virtual DbSet<VwBasicMobDataInfo> VwBasicMobDataInfos { get; set; }
-        public virtual DbSet<VwBasicPieceDataInfo> VwBasicPieceDataInfos { get; set; }
-        public virtual DbSet<VwBasicRaceInfo> VwBasicRaceInfos { get; set; }
-        public virtual DbSet<VwBasicRaceInstanceInfo> VwBasicRaceInstanceInfos { get; set; }
-        public virtual DbSet<VwBasicRaceTrackInfo> VwBasicRaceTrackInfos { get; set; }
-        public virtual DbSet<VwBasicSingleModeCharaGradeInfo> VwBasicSingleModeCharaGradeInfos { get; set; }
-        public virtual DbSet<VwBasicSkillDataInfo> VwBasicSkillDataInfos { get; set; }
-        public virtual DbSet<VwBasicStoryEventDataInfo> VwBasicStoryEventDataInfos { get; set; }
-        public virtual DbSet<VwBasicStoryEventMissionInfo> VwBasicStoryEventMissionInfos { get; set; }
-        public virtual DbSet<VwBasicStoryEventStoryDataInfo> VwBasicStoryEventStoryDataInfos { get; set; }
-        public virtual DbSet<VwBasicSupportCardDataInfo> VwBasicSupportCardDataInfos { get; set; }
-        public virtual DbSet<VwBasicSupportCardUniqueEffectInfo> VwBasicSupportCardUniqueEffectInfos { get; set; }
-        public virtual DbSet<VwBasicTeamStadiumScoreBonusInfo> VwBasicTeamStadiumScoreBonusInfos { get; set; }
-        public virtual DbSet<VwErrorMessage> VwErrorMessages { get; set; }
-        public virtual DbSet<VwNiceCharaBioInfo> VwNiceCharaBioInfos { get; set; }
-        public virtual DbSet<VwNiceCharaDataInfo> VwNiceCharaDataInfos { get; set; }
-        public virtual DbSet<VwNiceItemNamesCommentsInfo> VwNiceItemNamesCommentsInfos { get; set; }
-        public virtual DbSet<VwNiceObjectivesInfo> VwNiceObjectivesInfos { get; set; }
-        public virtual DbSet<VwNiceRaceInfo> VwNiceRaceInfos { get; set; }
-        public virtual DbSet<VwSuccessionRelationMemberType> VwSuccessionRelationMemberTypes { get; set; }
-        public virtual DbSet<VwTutorialMessage> VwTutorialMessages { get; set; }
+        public virtual DbSet<BasicCharaDataInfo> VwBasicCharaDataInfos { get; set; }
+        public virtual DbSet<BasicDressDataInfo> VwBasicDressDataInfos { get; set; }
+        public virtual DbSet<BasicGachaDataInfo> VwBasicGachaDataInfos { get; set; }
+        public virtual DbSet<BasicGiftMessageInfo> VwBasicGiftMessageInfos { get; set; }
+        public virtual DbSet<BasicItemDataInfo> VwBasicItemDataInfos { get; set; }
+        public virtual DbSet<BasicItemExchangeInfo> VwBasicItemExchangeInfos { get; set; }
+        public virtual DbSet<BasicItemExchangeTopInfo> VwBasicItemExchangeTopInfos { get; set; }
+        public virtual DbSet<BasicLiveDataInfo> VwBasicLiveDataInfos { get; set; }
+        public virtual DbSet<BasicLoginBonusDataInfo> VwBasicLoginBonusDataInfos { get; set; }
+        public virtual DbSet<BasicMainStoryDataInfo> VwBasicMainStoryDataInfos { get; set; }
+        public virtual DbSet<BasicMissionDataInfo> VwBasicMissionDataInfos { get; set; }
+        public virtual DbSet<BasicMobDataInfo> VwBasicMobDataInfos { get; set; }
+        public virtual DbSet<BasicPieceDataInfo> VwBasicPieceDataInfos { get; set; }
+        public virtual DbSet<BasicRaceInfo> VwBasicRaceInfos { get; set; }
+        public virtual DbSet<BasicRaceInstanceInfo> VwBasicRaceInstanceInfos { get; set; }
+        public virtual DbSet<BasicRaceTrackInfo> VwBasicRaceTrackInfos { get; set; }
+        public virtual DbSet<BasicSingleModeCharaGradeInfo> VwBasicSingleModeCharaGradeInfos { get; set; }
+        public virtual DbSet<BasicSkillDataInfo> VwBasicSkillDataInfos { get; set; }
+        public virtual DbSet<BasicStoryEventDataInfo> VwBasicStoryEventDataInfos { get; set; }
+        public virtual DbSet<BasicStoryEventMissionInfo> VwBasicStoryEventMissionInfos { get; set; }
+        public virtual DbSet<BasicStoryEventStoryDataInfo> VwBasicStoryEventStoryDataInfos { get; set; }
+        public virtual DbSet<BasicSupportCardDataInfo> VwBasicSupportCardDataInfos { get; set; }
+        public virtual DbSet<BasicSupportCardUniqueEffectInfo> VwBasicSupportCardUniqueEffectInfos { get; set; }
+        public virtual DbSet<BasicTeamStadiumScoreBonusInfo> VwBasicTeamStadiumScoreBonusInfos { get; set; }
+        public virtual DbSet<ErrorMessage> VwErrorMessages { get; set; }
+        public virtual DbSet<NiceCharaBioInfo> VwNiceCharaBioInfos { get; set; }
+        public virtual DbSet<NiceCharaDataInfo> VwNiceCharaDataInfos { get; set; }
+        public virtual DbSet<NiceItemNamesCommentsInfo> VwNiceItemNamesCommentsInfos { get; set; }
+        public virtual DbSet<NiceObjectivesInfo> VwNiceObjectivesInfos { get; set; }
+        public virtual DbSet<NiceRaceInfo> VwNiceRaceInfos { get; set; }
+        public virtual DbSet<SuccessionRelationMemberType> VwSuccessionRelationMemberTypes { get; set; }
+        public virtual DbSet<TutorialMessage> VwTutorialMessages { get; set; }
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -11678,7 +11678,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("page_index");
             });
 
-            modelBuilder.Entity<VwBasicCharaDataInfo>(entity =>
+            modelBuilder.Entity<BasicCharaDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -11703,7 +11703,7 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
-            modelBuilder.Entity<VwBasicDressDataInfo>(entity =>
+            modelBuilder.Entity<BasicDressDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -11735,7 +11735,7 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
-            modelBuilder.Entity<VwBasicGachaDataInfo>(entity =>
+            modelBuilder.Entity<BasicGachaDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -11788,7 +11788,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("start_date");
             });
 
-            modelBuilder.Entity<VwBasicGiftMessageInfo>(entity =>
+            modelBuilder.Entity<BasicGiftMessageInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -11805,7 +11805,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("gift_message_id");
             });
 
-            modelBuilder.Entity<VwBasicItemDataInfo>(entity =>
+            modelBuilder.Entity<BasicItemDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -11842,7 +11842,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("start_date");
             });
 
-            modelBuilder.Entity<VwBasicItemExchangeInfo>(entity =>
+            modelBuilder.Entity<BasicItemExchangeInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -11870,7 +11870,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("start_date");
             });
 
-            modelBuilder.Entity<VwBasicItemExchangeTopInfo>(entity =>
+            modelBuilder.Entity<BasicItemExchangeTopInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -11897,7 +11897,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("item_exchange_top_id");
             });
 
-            modelBuilder.Entity<VwBasicLiveDataInfo>(entity =>
+            modelBuilder.Entity<BasicLiveDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -11922,7 +11922,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("start_date");
             });
 
-            modelBuilder.Entity<VwBasicLoginBonusDataInfo>(entity =>
+            modelBuilder.Entity<BasicLoginBonusDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -11955,7 +11955,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("type");
             });
 
-            modelBuilder.Entity<VwBasicMainStoryDataInfo>(entity =>
+            modelBuilder.Entity<BasicMainStoryDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -11984,7 +11984,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("story_number");
             });
 
-            modelBuilder.Entity<VwBasicMissionDataInfo>(entity =>
+            modelBuilder.Entity<BasicMissionDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12013,7 +12013,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("start_date");
             });
 
-            modelBuilder.Entity<VwBasicMobDataInfo>(entity =>
+            modelBuilder.Entity<BasicMobDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12050,7 +12050,7 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
-            modelBuilder.Entity<VwBasicPieceDataInfo>(entity =>
+            modelBuilder.Entity<BasicPieceDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12079,7 +12079,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("start_date");
             });
 
-            modelBuilder.Entity<VwBasicRaceInfo>(entity =>
+            modelBuilder.Entity<BasicRaceInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12100,7 +12100,7 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
-            modelBuilder.Entity<VwBasicRaceInstanceInfo>(entity =>
+            modelBuilder.Entity<BasicRaceInstanceInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12121,7 +12121,7 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
-            modelBuilder.Entity<VwBasicRaceTrackInfo>(entity =>
+            modelBuilder.Entity<BasicRaceTrackInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12138,7 +12138,7 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
-            modelBuilder.Entity<VwBasicSingleModeCharaGradeInfo>(entity =>
+            modelBuilder.Entity<BasicSingleModeCharaGradeInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12167,7 +12167,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("win_num");
             });
 
-            modelBuilder.Entity<VwBasicSkillDataInfo>(entity =>
+            modelBuilder.Entity<BasicSkillDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12214,7 +12214,7 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
-            modelBuilder.Entity<VwBasicStoryEventDataInfo>(entity =>
+            modelBuilder.Entity<BasicStoryEventDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12255,7 +12255,7 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
-            modelBuilder.Entity<VwBasicStoryEventMissionInfo>(entity =>
+            modelBuilder.Entity<BasicStoryEventMissionInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12296,7 +12296,7 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
-            modelBuilder.Entity<VwBasicStoryEventStoryDataInfo>(entity =>
+            modelBuilder.Entity<BasicStoryEventStoryDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12329,7 +12329,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("story_event_id");
             });
 
-            modelBuilder.Entity<VwBasicSupportCardDataInfo>(entity =>
+            modelBuilder.Entity<BasicSupportCardDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12358,7 +12358,7 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
-            modelBuilder.Entity<VwBasicSupportCardUniqueEffectInfo>(entity =>
+            modelBuilder.Entity<BasicSupportCardUniqueEffectInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12395,7 +12395,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("value_1");
             });
 
-            modelBuilder.Entity<VwBasicTeamStadiumScoreBonusInfo>(entity =>
+            modelBuilder.Entity<BasicTeamStadiumScoreBonusInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12432,7 +12432,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("team_stadium_score_bonus_id");
             });
 
-            modelBuilder.Entity<VwErrorMessage>(entity =>
+            modelBuilder.Entity<ErrorMessage>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12453,7 +12453,7 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
-            modelBuilder.Entity<VwNiceCharaBioInfo>(entity =>
+            modelBuilder.Entity<NiceCharaBioInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12670,7 +12670,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("ura_objectives");
             });
 
-            modelBuilder.Entity<VwNiceCharaDataInfo>(entity =>
+            modelBuilder.Entity<NiceCharaDataInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12853,7 +12853,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("wisdom5");
             });
 
-            modelBuilder.Entity<VwNiceItemNamesCommentsInfo>(entity =>
+            modelBuilder.Entity<NiceItemNamesCommentsInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12881,7 +12881,7 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
-            modelBuilder.Entity<VwNiceObjectivesInfo>(entity =>
+            modelBuilder.Entity<NiceObjectivesInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -12940,7 +12940,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("turn");
             });
 
-            modelBuilder.Entity<VwNiceRaceInfo>(entity =>
+            modelBuilder.Entity<NiceRaceInfo>(entity =>
             {
                 entity.HasNoKey();
 
@@ -13011,7 +13011,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("terrain");
             });
 
-            modelBuilder.Entity<VwSuccessionRelationMemberType>(entity =>
+            modelBuilder.Entity<SuccessionRelationMemberType>(entity =>
             {
                 entity.HasNoKey();
 
@@ -13034,7 +13034,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("srm_id");
             });
 
-            modelBuilder.Entity<VwTutorialMessage>(entity =>
+            modelBuilder.Entity<TutorialMessage>(entity =>
             {
                 entity.HasNoKey();
 
