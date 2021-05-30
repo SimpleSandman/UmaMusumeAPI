@@ -23,7 +23,7 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
             _context = context;
         }
 
-        // GET: api/SpSuccessionPointSum
+        // POST: api/SpSuccessionPointSum
         [HttpPost]
         public async Task<ActionResult<SpSuccessionPointSum>> GetSpSuccessionPointSum([FromBody] SpSuccessionPointSumDTO body)
         {

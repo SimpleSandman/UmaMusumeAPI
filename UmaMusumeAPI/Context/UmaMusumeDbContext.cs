@@ -306,8 +306,16 @@ namespace UmaMusumeAPI.Context
             modelBuilder.HasCharSet("utf8mb4")
                 .UseCollation("utf8mb4_general_ci");
 
+            #region Stored Procedures
+            modelBuilder.Entity<SpSuccessionGrandparentRecommendation>()
+                .HasNoKey();
+
+            modelBuilder.Entity<SpSuccessionParentRecommendation>()
+                .HasNoKey();
+
             modelBuilder.Entity<SpSuccessionPointSum>()
                 .HasNoKey();
+            #endregion
 
             modelBuilder.Entity<AnnounceCharacter>(entity =>
             {
