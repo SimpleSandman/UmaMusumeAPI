@@ -22,14 +22,14 @@ namespace UmaMusumeAPI.Controllers.Views
 
         // GET: api/BasicCharaDataInfo
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BasicCharaDataInfo>>> GetAnnounceCharacters()
+        public async Task<ActionResult<IEnumerable<BasicCharaDataInfo>>> GetBasicCharaDataInfos()
         {
             return await _context.BasicCharaDataInfos.ToListAsync();
         }
 
         // GET: api/BasicCharaDataInfo/5
         [HttpGet("{charaId}")]
-        public async Task<ActionResult<BasicCharaDataInfo>> GetAnnounceCharacter(int charaId)
+        public async Task<ActionResult<BasicCharaDataInfo>> GetBasicCharaDataInfo(int charaId)
         {
             // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
             var basicCharaDatainfo = await _context.BasicCharaDataInfos.SingleOrDefaultAsync(c => c.CharaId == charaId);
