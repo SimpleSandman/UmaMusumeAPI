@@ -11,35 +11,35 @@ namespace UmaMusumeAPI.Controllers.Views
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BasicCharaDataInfoController : ControllerBase
+    public class BasicDressDataInfoController : ControllerBase
     {
         private readonly UmaMusumeDbContext _context;
 
-        public BasicCharaDataInfoController(UmaMusumeDbContext context)
+        public BasicDressDataInfoController(UmaMusumeDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/BasicCharaDataInfo
+        // GET: api/BasicDressDataInfo
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BasicCharaDataInfo>>> GetBasicCharaDataInfos()
+        public async Task<ActionResult<IEnumerable<BasicDressDataInfo>>> GetBasicDressDataInfos()
         {
-            return await _context.BasicCharaDataInfos.ToListAsync();
+            return await _context.BasicDressDataInfos.ToListAsync();
         }
 
-        // GET: api/BasicCharaDataInfo/5
+        // GET: api/BasicDressDataInfo/5
         [HttpGet("{charaId}")]
-        public async Task<ActionResult<BasicCharaDataInfo>> GetBasicCharaDataInfo(int charaId)
+        public async Task<ActionResult<BasicDressDataInfo>> GetBasicDressDataInfo(int dressId)
         {
             // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
-            var basicCharaDatainfo = await _context.BasicCharaDataInfos.SingleOrDefaultAsync(c => c.CharaId == charaId);
+            var basicDressDatainfo = await _context.BasicDressDataInfos.SingleOrDefaultAsync(c => c.DressId == dressId);
 
-            if (basicCharaDatainfo == null)
+            if (basicDressDatainfo == null)
             {
                 return NotFound();
             }
 
-            return basicCharaDatainfo;
+            return basicDressDatainfo;
         }
     }
 }
