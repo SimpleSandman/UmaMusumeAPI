@@ -11827,9 +11827,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("group_id");
 
-                entity.Property(e => e.Id)
+                entity.Property(e => e.ItemId)
                     .HasColumnType("int(11)")
-                    .HasColumnName("id");
+                    .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemCategory)
                     .HasColumnType("bigint(20)")
@@ -11860,9 +11860,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("datetime")
                     .HasColumnName("end_date");
 
-                entity.Property(e => e.Id)
+                entity.Property(e => e.ItemExchangeId)
                     .HasColumnType("int(11)")
-                    .HasColumnName("id");
+                    .HasColumnName("item_exchange_id");
 
                 entity.Property(e => e.ItemExchangeCondition)
                     .HasColumnType("text")
@@ -11944,9 +11944,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("datetime")
                     .HasColumnName("end_date");
 
-                entity.Property(e => e.Id)
+                entity.Property(e => e.LoginBonusId)
                     .HasColumnType("int(11)")
-                    .HasColumnName("id");
+                    .HasColumnName("login_bonus_id");
 
                 entity.Property(e => e.LoginBonusName)
                     .IsRequired()
@@ -11973,9 +11973,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("episode_index");
 
-                entity.Property(e => e.MainStoryDataId)
+                entity.Property(e => e.MainStoryId)
                     .HasColumnType("int(11)")
-                    .HasColumnName("main_story_data_id");
+                    .HasColumnName("main_story_id");
 
                 entity.Property(e => e.MainStoryEpisodeTitle)
                     .IsRequired()
@@ -12002,9 +12002,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("datetime")
                     .HasColumnName("end_date");
 
-                entity.Property(e => e.Id)
+                entity.Property(e => e.MissionId)
                     .HasColumnType("int(11)")
-                    .HasColumnName("id");
+                    .HasColumnName("mission_id");
 
                 entity.Property(e => e.MissionName)
                     .IsRequired()
@@ -12205,9 +12205,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("skill_category");
 
-                entity.Property(e => e.SkillDataId)
+                entity.Property(e => e.SkillId)
                     .HasColumnType("int(11)")
-                    .HasColumnName("skill_data_id");
+                    .HasColumnName("skill_id");
 
                 entity.Property(e => e.SkillDesc)
                     .IsRequired()
@@ -12314,9 +12314,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("episode_index_id");
 
-                entity.Property(e => e.Id)
+                entity.Property(e => e.StoryEventStoryId)
                     .HasColumnType("int(11)")
-                    .HasColumnName("id");
+                    .HasColumnName("story_event_story_id");
 
                 entity.Property(e => e.NeedPoint)
                     .HasColumnType("bigint(20)")
@@ -12355,9 +12355,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("skill_set_id");
 
-                entity.Property(e => e.SupportCardDataId)
+                entity.Property(e => e.SupportCardId)
                     .HasColumnType("int(11)")
-                    .HasColumnName("support_card_data_id");
+                    .HasColumnName("support_card_id");
 
                 entity.Property(e => e.SupportCardTitleName)
                     .IsRequired()
@@ -12503,9 +12503,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("height");
 
-                entity.Property(e => e.Id)
+                entity.Property(e => e.CharaId)
                     .HasColumnType("int(11)")
-                    .HasColumnName("id");
+                    .HasColumnName("chara_id");
 
                 entity.Property(e => e.ImageColorMain)
                     .IsRequired()
@@ -12752,9 +12752,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("guts5");
 
-                entity.Property(e => e.Id)
+                entity.Property(e => e.CardId)
                     .HasColumnType("int(11)")
-                    .HasColumnName("id");
+                    .HasColumnName("card_id");
 
                 entity.Property(e => e.LimitedChara)
                     .HasColumnType("bigint(20)")
@@ -12919,9 +12919,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("determine_race_flag");
 
-                entity.Property(e => e.Id)
+                entity.Property(e => e.RouteId)
                     .HasColumnType("int(11)")
-                    .HasColumnName("id");
+                    .HasColumnName("route_id");
 
                 entity.Property(e => e.RaceInstanceId)
                     .HasColumnType("bigint(20)")
@@ -12994,9 +12994,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("half");
 
-                entity.Property(e => e.Id)
+                entity.Property(e => e.RouteId)
                     .HasColumnType("int(11)")
-                    .HasColumnName("id");
+                    .HasColumnName("route_id");
 
                 entity.Property(e => e.Month)
                     .HasColumnType("bigint(20)")

@@ -6,7 +6,7 @@ namespace UmaMusumeAPI.Models.Views
 {
     public partial class BasicLoginBonusDataInfo
     {
-        public int Id { get; set; }
+        public int LoginBonusId { get; set; }
         public long Type { get; set; }
         public long CountNum { get; set; }
         public DateTime? StartDate { get; set; }

@@ -6,7 +6,7 @@ namespace UmaMusumeAPI.Models.Views
 {
     public partial class NiceCharaBioInfo
     {
-        public int Id { get; set; }
+        public int CharaId { get; set; }
         public long BirthYear { get; set; }
         public long BirthMonth { get; set; }
         public long BirthDay { get; set; }

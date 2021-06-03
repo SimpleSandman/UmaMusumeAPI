@@ -32,14 +32,14 @@ namespace UmaMusumeAPI.Controllers.Views
         public async Task<ActionResult<BasicDressDataInfo>> GetBasicDressDataInfo(int dressId)
         {
             // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
-            var basicDressDatainfo = await _context.BasicDressDataInfos.SingleOrDefaultAsync(c => c.DressId == dressId);
+            var basicDressDataInfo = await _context.BasicDressDataInfos.SingleOrDefaultAsync(c => c.DressId == dressId);
 
-            if (basicDressDatainfo == null)
+            if (basicDressDataInfo == null)
             {
                 return NotFound();
             }
 
-            return basicDressDatainfo;
+            return basicDressDataInfo;
         }
     }
 }

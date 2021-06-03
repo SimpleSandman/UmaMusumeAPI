@@ -32,14 +32,14 @@ namespace UmaMusumeAPI.Controllers.Views
         public async Task<ActionResult<BasicCharaDataInfo>> GetBasicCharaDataInfo(int charaId)
         {
             // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
-            var basicCharaDatainfo = await _context.BasicCharaDataInfos.SingleOrDefaultAsync(c => c.CharaId == charaId);
+            var basicCharaDataInfo = await _context.BasicCharaDataInfos.SingleOrDefaultAsync(c => c.CharaId == charaId);
 
-            if (basicCharaDatainfo == null)
+            if (basicCharaDataInfo == null)
             {
                 return NotFound();
             }
 
-            return basicCharaDatainfo;
+            return basicCharaDataInfo;
         }
     }
 }

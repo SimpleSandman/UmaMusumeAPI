@@ -4,7 +4,7 @@ namespace UmaMusumeAPI.Models.Views
 {
     public partial class BasicSkillDataInfo
     {
-        public int SkillDataId { get; set; }
+        public int SkillId { get; set; }
         public long Rarity { get; set; }
         public long GroupId { get; set; }
         public long SkillCategory { get; set; }

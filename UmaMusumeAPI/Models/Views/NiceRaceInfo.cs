@@ -4,7 +4,7 @@ namespace UmaMusumeAPI.Models.Views
 {
     public partial class NiceRaceInfo
     {
-        public int Id { get; set; }
+        public int RouteId { get; set; }
         public long RaceId { get; set; }
         public long? Group { get; set; }
         public long? Grade { get; set; }
