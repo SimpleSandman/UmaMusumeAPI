@@ -7,8 +7,6 @@ using UmaMusumeAPI.Models.StoredProcedures;
 using UmaMusumeAPI.Models.Tables;
 using UmaMusumeAPI.Models.Views;
 
-#nullable disable
-
 namespace UmaMusumeAPI.Context
 {
     public partial class UmaMusumeDbContext : DbContext

@@ -1,6 +1,4 @@
-﻿#nullable disable
-
-namespace UmaMusumeAPI.Models.Views
+﻿namespace UmaMusumeAPI.Models.Views
 {
     public partial class BasicSupportCardDataInfo
     {

@@ -1,6 +1,4 @@
-﻿#nullable disable
-
-namespace UmaMusumeAPI.Models.StoredProcedures
+﻿namespace UmaMusumeAPI.Models.StoredProcedures
 {
     public class SpSuccessionGrandparentRecommendation
     {

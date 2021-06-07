@@ -1,7 +1,5 @@
 ﻿using System;
 
-#nullable disable
-
 namespace UmaMusumeAPI.Models.Views
 {
     public partial class BasicMissionDataInfo
