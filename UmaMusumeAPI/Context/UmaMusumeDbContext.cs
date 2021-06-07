@@ -272,14 +272,14 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<BasicSupportCardDataInfo> BasicSupportCardDataInfos { get; set; }
         public virtual DbSet<BasicSupportCardUniqueEffectInfo> BasicSupportCardUniqueEffectInfos { get; set; }
         public virtual DbSet<BasicTeamStadiumScoreBonusInfo> BasicTeamStadiumScoreBonusInfos { get; set; }
-        public virtual DbSet<NiceErrorMessage> ErrorMessages { get; set; }
+        public virtual DbSet<NiceErrorMessage> NiceErrorMessages { get; set; }
         public virtual DbSet<NiceCharaBioInfo> NiceCharaBioInfos { get; set; }
         public virtual DbSet<NiceCharaDataInfo> NiceCharaDataInfos { get; set; }
         public virtual DbSet<NiceItemNamesCommentsInfo> NiceItemNamesCommentsInfos { get; set; }
         public virtual DbSet<NiceObjectivesInfo> NiceObjectivesInfos { get; set; }
         public virtual DbSet<NiceRaceInfo> NiceRaceInfos { get; set; }
-        public virtual DbSet<NiceSuccessionRelationMemberType> SuccessionRelationMemberTypes { get; set; }
-        public virtual DbSet<NiceTutorialMessage> TutorialMessages { get; set; }
+        public virtual DbSet<NiceSuccessionRelationMemberType> NiceSuccessionRelationMemberTypes { get; set; }
+        public virtual DbSet<NiceTutorialMessage> NiceTutorialMessages { get; set; }
         #endregion
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
