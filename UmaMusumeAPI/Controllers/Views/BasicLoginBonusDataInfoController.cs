@@ -28,11 +28,11 @@ namespace UmaMusumeAPI.Controllers.Views
         }
 
         // GET: api/BasicLoginBonusDataInfo/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<BasicLoginBonusDataInfo>> GetBasicLoginBonusDataInfo(int id)
+        [HttpGet("{loginBonusId}")]
+        public async Task<ActionResult<BasicLoginBonusDataInfo>> GetBasicLoginBonusDataInfo(int loginBonusId)
         {
             // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
-            var basicLoginBonusDataInfo = await _context.BasicLoginBonusDataInfos.SingleOrDefaultAsync(c => c.LoginBonusId == id);
+            var basicLoginBonusDataInfo = await _context.BasicLoginBonusDataInfos.SingleOrDefaultAsync(c => c.LoginBonusId == loginBonusId);
 
             if (basicLoginBonusDataInfo == null)
             {

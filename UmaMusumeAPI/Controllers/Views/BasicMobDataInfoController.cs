@@ -28,11 +28,11 @@ namespace UmaMusumeAPI.Controllers.Views
         }
 
         // GET: api/BasicMobDataInfo/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<BasicMobDataInfo>> GetBasicMobDataInfo(int id)
+        [HttpGet("{mobId}")]
+        public async Task<ActionResult<BasicMobDataInfo>> GetBasicMobDataInfo(int mobId)
         {
             // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
-            var basicMobDataInfo = await _context.BasicMobDataInfos.SingleOrDefaultAsync(c => c.MobId == id);
+            var basicMobDataInfo = await _context.BasicMobDataInfos.SingleOrDefaultAsync(c => c.MobId == mobId);
 
             if (basicMobDataInfo == null)
             {

@@ -28,11 +28,11 @@ namespace UmaMusumeAPI.Controllers.Views
         }
 
         // GET: api/BasicMainStoryDataInfo/5
-        [HttpGet("{mainStoryDataId}")]
-        public async Task<ActionResult<BasicMainStoryDataInfo>> GetBasicMainStoryDataInfo(int mainStoryDataId)
+        [HttpGet("{mainStoryId}")]
+        public async Task<ActionResult<BasicMainStoryDataInfo>> GetBasicMainStoryDataInfo(int mainStoryId)
         {
             // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
-            var basicMainStoryDataInfo = await _context.BasicMainStoryDataInfos.SingleOrDefaultAsync(c => c.MainStoryId == mainStoryDataId);
+            var basicMainStoryDataInfo = await _context.BasicMainStoryDataInfos.SingleOrDefaultAsync(c => c.MainStoryId == mainStoryId);
 
             if (basicMainStoryDataInfo == null)
             {

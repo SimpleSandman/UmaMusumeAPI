@@ -28,11 +28,11 @@ namespace UmaMusumeAPI.Controllers.Views
         }
 
         // GET: api/BasicMissionDataInfo/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<BasicMissionDataInfo>> GetBasicMissionDataInfo(int id)
+        [HttpGet("{missionId}")]
+        public async Task<ActionResult<BasicMissionDataInfo>> GetBasicMissionDataInfo(int missionId)
         {
             // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
-            var basicMissionDataInfo = await _context.BasicMissionDataInfos.SingleOrDefaultAsync(c => c.MissionId == id);
+            var basicMissionDataInfo = await _context.BasicMissionDataInfos.SingleOrDefaultAsync(c => c.MissionId == missionId);
 
             if (basicMissionDataInfo == null)
             {

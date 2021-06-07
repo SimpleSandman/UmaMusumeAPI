@@ -28,7 +28,7 @@ namespace UmaMusumeAPI.Controllers.Views
         }
 
         // GET: api/BasicDressDataInfo/5
-        [HttpGet("{charaId}")]
+        [HttpGet("{dressId}")]
         public async Task<ActionResult<BasicDressDataInfo>> GetBasicDressDataInfo(int dressId)
         {
             // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
