@@ -235,7 +235,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<TeamStadiumRaceResultMotion> TeamStadiumRaceResultMotions { get; set; }
         public virtual DbSet<TeamStadiumRank> TeamStadiumRanks { get; set; }
         public virtual DbSet<TeamStadiumRawScore> TeamStadiumRawScores { get; set; }
-        public virtual DbSet<TeamStadiumScoreBonu> TeamStadiumScoreBonus { get; set; }
+        public virtual DbSet<TeamStadiumScoreBonus> TeamStadiumScoreBonus { get; set; }
         public virtual DbSet<TeamStadiumStandMotion> TeamStadiumStandMotions { get; set; }
         public virtual DbSet<TeamStadiumSupportText> TeamStadiumSupportTexts { get; set; }
         public virtual DbSet<TextData> TextData { get; set; }
@@ -11372,7 +11372,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("sort_order");
             });
 
-            modelBuilder.Entity<TeamStadiumScoreBonu>(entity =>
+            modelBuilder.Entity<TeamStadiumScoreBonus>(entity =>
             {
                 entity.ToTable("team_stadium_score_bonus");
 

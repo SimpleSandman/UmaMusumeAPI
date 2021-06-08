@@ -11,34 +11,34 @@ namespace UmaMusumeAPI.Controllers.Tables
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TeamStadiumScoreBonuController : ControllerBase
+    public class TeamStadiumScoreBonusController : ControllerBase
     {
         private readonly UmaMusumeDbContext _context;
 
-        public TeamStadiumScoreBonuController(UmaMusumeDbContext context)
+        public TeamStadiumScoreBonusController(UmaMusumeDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/TeamStadiumScoreBonu
+        // GET: api/TeamStadiumScoreBonus
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<TeamStadiumScoreBonu>>> GetTeamStadiumScoreBonus()
+        public async Task<ActionResult<IEnumerable<TeamStadiumScoreBonus>>> GetTeamStadiumScoreBonus()
         {
             return await _context.TeamStadiumScoreBonus.ToListAsync();
         }
 
-        // GET: api/TeamStadiumScoreBonu/5
+        // GET: api/TeamStadiumScoreBonus/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<TeamStadiumScoreBonu>> GetTeamStadiumScoreBonu(int id)
+        public async Task<ActionResult<TeamStadiumScoreBonus>> GetTeamStadiumScoreBonus(int id)
         {
-            var teamStadiumScoreBonu = await _context.TeamStadiumScoreBonus.FindAsync(id);
+            var teamStadiumScoreBonus = await _context.TeamStadiumScoreBonus.FindAsync(id);
 
-            if (teamStadiumScoreBonu == null)
+            if (teamStadiumScoreBonus == null)
             {
                 return NotFound();
             }
 
-            return teamStadiumScoreBonu;
+            return teamStadiumScoreBonus;
         }
     }
 }

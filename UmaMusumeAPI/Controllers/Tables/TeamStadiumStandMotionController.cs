@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -29,9 +30,11 @@ namespace UmaMusumeAPI.Controllers.Tables
 
         // GET: api/TeamStadiumStandMotion/5
         [HttpGet("{characterId}")]
-        public async Task<ActionResult<TeamStadiumStandMotion>> GetTeamStadiumStandMotion(int characterId)
+        public async Task<ActionResult<IEnumerable<TeamStadiumStandMotion>>> GetTeamStadiumStandMotion(int characterId)
         {
-            var teamStadiumStandMotion = await _context.TeamStadiumStandMotions.SingleOrDefaultAsync(c => c.CharacterId == characterId);
+            var teamStadiumStandMotion = await _context.TeamStadiumStandMotions
+                .Where(c => c.CharacterId == characterId)
+                .ToListAsync();
 
             if (teamStadiumStandMotion == null)
             {

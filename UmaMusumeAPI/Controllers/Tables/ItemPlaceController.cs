@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -29,9 +30,11 @@ namespace UmaMusumeAPI.Controllers.Tables
 
         // GET: api/ItemPlace/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ItemPlace>> GetItemPlace(int id)
+        public async Task<ActionResult<IEnumerable<ItemPlace>>> GetItemPlace(int id)
         {
-            var itemPlace = await _context.ItemPlaces.SingleOrDefaultAsync(c => c.Id == id);
+            var itemPlace = await _context.ItemPlaces
+                .Where(c => c.Id == id)
+                .ToListAsync();
 
             if (itemPlace == null)
             {

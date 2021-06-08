@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -29,9 +30,11 @@ namespace UmaMusumeAPI.Controllers.Tables
 
         // GET: api/CampaignCharaStorySchedule/5
         [HttpGet("{campaignId}")]
-        public async Task<ActionResult<CampaignCharaStorySchedule>> GetCampaignCharaStorySchedule(int campaignId)
+        public async Task<ActionResult<IEnumerable<CampaignCharaStorySchedule>>> GetCampaignCharaStorySchedule(int campaignId)
         {
-            var campaignCharaStorySchedule = await _context.CampaignCharaStorySchedules.SingleOrDefaultAsync(c => c.CampaignId == campaignId);
+            var campaignCharaStorySchedule = await _context.CampaignCharaStorySchedules
+                .Where(c => c.CampaignId == campaignId)
+                .ToListAsync();
 
             if (campaignCharaStorySchedule == null)
             {

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -29,9 +30,11 @@ namespace UmaMusumeAPI.Controllers.Tables
 
         // GET: api/TrainingCuttData/5
         [HttpGet("{commandId}")]
-        public async Task<ActionResult<TrainingCuttData>> GetTrainingCuttData(int commandId)
+        public async Task<ActionResult<IEnumerable<TrainingCuttData>>> GetTrainingCuttData(int commandId)
         {
-            var trainingCuttData = await _context.TrainingCuttData.SingleOrDefaultAsync(c => c.CommandId == commandId);
+            var trainingCuttData = await _context.TrainingCuttData
+                .Where(c => c.CommandId == commandId)
+                .ToListAsync();
 
             if (trainingCuttData == null)
             {
