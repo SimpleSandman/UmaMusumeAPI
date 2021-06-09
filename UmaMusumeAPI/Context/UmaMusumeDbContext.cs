@@ -286,13 +286,10 @@ namespace UmaMusumeAPI.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-                string envName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
                 IConfigurationRoot configuration = new ConfigurationBuilder()
                      .SetBasePath(System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory()))
-                     .AddJsonFile("appsettings.json", optional: false)
-                     .AddJsonFile($"appsettings.{envName}.json", optional: false)
                      .Build();
-                string connectionString = configuration.GetConnectionString("DefaultConnection");
+                string connectionString = Environment.GetEnvironmentVariable("JAWSDB_MARIA_URL");
 
                 MariaDbServerVersion serverVersion = new MariaDbServerVersion(ServerVersion.AutoDetect(connectionString));
                 optionsBuilder.UseMySql(connectionString, serverVersion);

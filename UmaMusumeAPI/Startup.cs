@@ -26,16 +26,14 @@ namespace UmaMusumeAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectionString = Configuration.GetConnectionString("DefaultConnection");
+            string connectionString = Environment.GetEnvironmentVariable("JAWSDB_MARIA_URL");
             MariaDbServerVersion serverVersion = new MariaDbServerVersion(ServerVersion.AutoDetect(connectionString));
 
             services.AddDbContextPool<UmaMusumeDbContext>(
                 dbContextOptions => dbContextOptions
                     .UseMySql(connectionString, serverVersion)
-#if DEBUG
-                    .EnableSensitiveDataLogging() // These two calls are optional but help
-                    .EnableDetailedErrors()       // with debugging (remove for production).
-#endif
+                    //.EnableSensitiveDataLogging() // These two calls are optional but help
+                    //.EnableDetailedErrors()       // with debugging (remove for production).
             );
 
             services.AddControllers();

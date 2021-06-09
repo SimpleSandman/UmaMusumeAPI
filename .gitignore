@@ -387,8 +387,5 @@ FodyWeavers.xsd
 .idea/
 *.sln.iml
 
-# Project ignore(s)
-UmaMusumeAPI/appsettings*.json
-
 # Project include(s)
 !NuGet.config

@@ -13,7 +13,8 @@
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "JAWSDB_MARIA_URL": "user id=root;password=sa;host=localhost;database=umamusume;character set=utf8mb4"
       }
     },
     "UmaMusumeAPI": {
@@ -21,7 +22,8 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "JAWSDB_MARIA_URL": "user id=root;password=sa;host=localhost;database=umamusume;character set=utf8mb4"
       },
       "dotnetRunMessages": "true",
       "applicationUrl": "https://localhost:5001;http://localhost:5000"
