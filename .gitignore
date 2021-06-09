@@ -389,3 +389,6 @@ FodyWeavers.xsd
 
 # Project ignore(s)
 UmaMusumeAPI/appsettings*.json
+
+# Project include(s)
+!NuGet.config
