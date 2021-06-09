@@ -289,7 +289,7 @@ namespace UmaMusumeAPI.Context
                 IConfigurationRoot configuration = new ConfigurationBuilder()
                      .SetBasePath(System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory()))
                      .Build();
-                string connectionString = Environment.GetEnvironmentVariable("JAWSDB_MARIA_URL");
+                string connectionString = Environment.GetEnvironmentVariable("MARIA_CONNECTION_STRING");
 
                 MariaDbServerVersion serverVersion = new MariaDbServerVersion(ServerVersion.AutoDetect(connectionString));
                 optionsBuilder.UseMySql(connectionString, serverVersion);

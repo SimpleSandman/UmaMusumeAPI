@@ -26,7 +26,7 @@ namespace UmaMusumeAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string connectionString = Environment.GetEnvironmentVariable("JAWSDB_MARIA_URL");
+            string connectionString = Environment.GetEnvironmentVariable("MARIA_CONNECTION_STRING");
             MariaDbServerVersion serverVersion = new MariaDbServerVersion(ServerVersion.AutoDetect(connectionString));
 
             services.AddDbContextPool<UmaMusumeDbContext>(
