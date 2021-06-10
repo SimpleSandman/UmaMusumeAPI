@@ -15,7 +15,7 @@ Simplified `launchSettings.json` Example:
   "IIS Express": {
     "environmentVariables": {
       "ASPNETCORE_ENVIRONMENT": "Development",
-      "JAWSDB_MARIA_URL": "user id=root;password=$0meth1ngC00L;host=localhost;database=umamusume;character set=utf8mb4"
+      "MARIA_CONNECTION_STRING": "user id=root;password=$0meth1ngC00L;host=localhost;database=umamusume;character set=utf8mb4"
     }
   }
 }
