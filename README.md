@@ -6,7 +6,7 @@ I've written a [loader app](https://github.com/SimpleSandman/UmaMusumeLoadSqlDat
 This API not only has endpoints to the tables, but I've created views for basic info for frequently used tables. I've even implemented stored procedures for a few particular calculations like parent compatibility and recommendations.
 
 # Initial Setup
-Under `UmaMusumeAPI/Properties/launchSettings.json`, set the `JAWSDB_MARIA_URL` environment variable to your MariaDB database for development and on the hosting site's config variables section.
+Under `UmaMusumeAPI/Properties/launchSettings.json`, set the `MARIA_CONNECTION_STRING` environment variable to your MariaDB database for development and on the hosting site's config variables section.
 
 Simplified `launchSettings.json` Example:
 
