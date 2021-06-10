@@ -6,7 +6,7 @@ I've written a [loader app](https://github.com/SimpleSandman/UmaMusumeLoadSqlDat
 This API not only has endpoints to the tables, but I've created views for basic info for frequently used tables. I've even implemented stored procedures for a few particular calculations like parent compatibility and recommendations.
 
 # Initial Setup
-Under `UmaMusumeAPI/Properties/launchSettings.json`, set the `MARIA_CONNECTION_STRING` environment variable to your MariaDB database for development and on the hosting site's config variables section.
+Under `UmaMusumeAPI/Properties/launchSettings.json`, set the `MARIA_CONNECTION_STRING` environment variable to your MariaDB database for "development" and on the hosting site's config variables section for "release".
 
 Simplified `launchSettings.json` Example:
 
@@ -15,13 +15,13 @@ Simplified `launchSettings.json` Example:
   "IIS Express": {
     "environmentVariables": {
       "ASPNETCORE_ENVIRONMENT": "Development",
-      "MARIA_CONNECTION_STRING": "user id=root;password=$0meth1ngC00L;host=localhost;database=umamusume;character set=utf8mb4"
+      "MARIA_CONNECTION_STRING": "user id=;password=;host=;database=;character set=utf8mb4"
     }
   }
 }
 ```
 
-# Database Set Up
+# Database Setup
 
 Use the scripts in `UmaMusumeAPI/SqlScripts` to generate everything you need for the database. As mentioned before, if you want to load all of the data from the DMM version of this game, use my [loader app](https://github.com/SimpleSandman/UmaMusumeLoadSqlData) and point the connection string to your new database.
 
@@ -32,7 +32,7 @@ In case if you need to scaffold anything, here are some commands that may be use
 
 This is a single-line command using the "Package Manager Console" in Visual Studio that allows you to generate all of the models and the DbContext class.
 ```powershell
-Scaffold-DbContext 'User Id=root;Password=$0meth1ngC00L;Host=localhost;Database=umamusume;Character Set=utf8mb4' Pomelo.EntityFrameworkCore.MySql -OutputDir Models -ContextDir Context
+Scaffold-DbContext 'User Id=;Password=;Host=;Database=;Character Set=utf8mb4' Pomelo.EntityFrameworkCore.MySql -OutputDir Models -ContextDir Context
 ```
 
 -----------
