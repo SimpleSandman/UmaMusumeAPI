@@ -88,6 +88,8 @@ namespace UmaMusumeAPI
                 app.UseHsts(); // HTTP Strict Transport Security (HSTS)
             }
 
+            app.UseCors("AllowAnyOrigin");
+
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger();
 
@@ -95,7 +97,7 @@ namespace UmaMusumeAPI
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("./swagger/v1/swagger.json", "UmaMusumeAPI V1");
+                c.SwaggerEndpoint("./swagger/v1/swagger.json", "UmaMusumeAPI v1");
                 c.RoutePrefix = string.Empty;
             });
 
@@ -107,8 +109,6 @@ namespace UmaMusumeAPI
             {
                 endpoints.MapControllers();
             });
-
-            app.UseCors();
         }
     }
 }
