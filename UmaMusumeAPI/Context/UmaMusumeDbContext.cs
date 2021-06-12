@@ -20,6 +20,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<AnnounceSupportCard> AnnounceSupportCards { get; set; }
         public virtual DbSet<AudioCuesheet> AudioCuesheets { get; set; }
         public virtual DbSet<AudioIgnoredCueOnHighspeed> AudioIgnoredCueOnHighspeeds { get; set; }
+        public virtual DbSet<AudioStoryEffect> AudioStoryEffects { get; set; }
         public virtual DbSet<AvailableSkillSet> AvailableSkillSets { get; set; }
         public virtual DbSet<BackgroundData> BackgroundData { get; set; }
         public virtual DbSet<BannerData> BannerData { get; set; }
@@ -466,6 +467,38 @@ namespace UmaMusumeAPI.Context
                     .HasMaxLength(300)
                     .HasColumnName("cue_sheet")
                     .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<AudioStoryEffect>(entity =>
+            {
+                entity.ToTable("audio_story_effect");
+
+                entity.HasIndex(e => e.EffectName, "audio_story_effect_audio_story_effect_0_effect_name")
+                    .IsUnique();
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CueName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("cue_name");
+
+                entity.Property(e => e.CueSheet)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("cue_sheet");
+
+                entity.Property(e => e.EffectName)
+                    .IsRequired()
+                    .HasMaxLength(600)
+                    .HasColumnName("effect_name");
+
+                entity.Property(e => e.LoopSet)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("loop_set");
             });
 
             modelBuilder.Entity<AvailableSkillSet>(entity =>
