@@ -1,9 +1,11 @@
 using System;
 using System.IO;
 using System.Reflection;
+using System.Text;
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -47,9 +49,9 @@ namespace UmaMusumeAPI
                         + "This is utilizing the \"master.mdb\" file",
                     Contact = new OpenApiContact
                     {
-                        Name = "Simple Sandman",
+                        Name = "GitHub",
                         Email = string.Empty,
-                        Url = new Uri("https://twitter.com/simple_sandman")
+                        Url = new Uri("https://github.com/SimpleSandman/UmaMusumeAPI")
                     },
                     License = new OpenApiLicense
                     {
@@ -99,6 +101,32 @@ namespace UmaMusumeAPI
             {
                 c.SwaggerEndpoint("./swagger/v1/swagger.json", "UmaMusumeAPI v1");
                 c.RoutePrefix = string.Empty;
+            });
+
+            // RapiDoc workaround
+            app.MapWhen(x => x.Request.Path.StartsWithSegments("/rapidoc"), appBuilder =>
+            {
+                appBuilder.Run(async context =>
+                {
+                    context.Response.ContentType = "text/html";
+
+                    StringBuilder sb = new StringBuilder();
+                    sb.AppendLine("<!doctype html>");
+                    sb.AppendLine("<html>");
+                    sb.AppendLine("<head>");
+                    sb.AppendLine("  <meta charset=\"utf-8\">");
+                    sb.AppendLine("  <script type=\"module\" src=\"https://unpkg.com/rapidoc/dist/rapidoc-min.js\"></script>");
+                    sb.AppendLine("</head>");
+                    sb.AppendLine("<body>");
+                    sb.AppendLine("  <rapi-doc");
+                    sb.AppendLine("    spec-url=\"./swagger/v1/swagger.json\"");
+                    sb.AppendLine("    theme=\"dark\"");
+                    sb.AppendLine("  > </rapi-doc>");
+                    sb.AppendLine("</body> ");
+                    sb.AppendLine("</html>");
+
+                    await context.Response.WriteAsync(sb.ToString());
+                });
             });
 
             app.UseHttpsRedirection();
