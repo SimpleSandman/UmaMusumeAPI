@@ -66,7 +66,7 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
                             Parent1Parent2 = (long)dr["parent1_parent2"],
                             PointSum = (long)dr["point_sum"]
                         };
-                    };
+                    }
                 }
             }
         }
