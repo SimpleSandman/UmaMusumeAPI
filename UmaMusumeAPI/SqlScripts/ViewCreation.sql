@@ -9,6 +9,11 @@ SET NAMES 'utf8mb4';
 USE umamusume;
 
 --
+-- Drop view `vw_basic_card_data_info`
+--
+DROP VIEW IF EXISTS vw_basic_card_data_info CASCADE;
+
+--
 -- Drop view `vw_basic_chara_data_info`
 --
 DROP VIEW IF EXISTS vw_basic_chara_data_info CASCADE;
@@ -458,12 +463,17 @@ AS
 SELECT `scd`.`id` AS `support_card_id`
      , `scd`.`chara_id` AS `chara_id`
      , `scd`.`rarity` AS `rarity`
-     , `scd`.`skill_set_id` AS `skill_set_id`
-     , `td`.`text` AS `support_card_title_name`
-FROM (`support_card_data` `scd`
-    JOIN `text_data` `td`
-        ON (`scd`.`id` = `td`.`index`))
-WHERE `td`.`category` = 76;
+     , `td_scd`.`text` AS `support_card_title`
+     , `td_cd`.`text` AS `support_card_name`
+FROM (((`support_card_data` `scd`
+    JOIN `text_data` `td_scd`
+        ON (`scd`.`id` = `td_scd`.`index`))
+    LEFT JOIN `chara_data` `cd`
+        ON (`scd`.`chara_id` = `cd`.`id`))
+    JOIN `text_data` `td_cd`
+        ON (`cd`.`id` = `td_cd`.`index`))
+WHERE `td_scd`.`category` = 76
+    AND `td_cd`.`category` = 6;
 
 --
 -- Create view `vw_basic_story_event_story_data_info`
@@ -809,12 +819,44 @@ CREATE
 VIEW vw_basic_chara_data_info
 AS
 SELECT `chara`.`id` AS `chara_id`
-     , `card`.`id` AS `chara_version_id`
+     , `card`.`id` AS `card_id`
+     , `scd`.`id` AS `support_card_id`
      , `FROM_UNIXTIME_SECONDS`(`chara`.`start_date`) AS `chara_start_date`
-     , `td`.`text` AS `horse_name`
-FROM ((`chara_data` `chara`
-    JOIN `text_data` `td`
-        ON (`chara`.`id` = `td`.`index`))
+     , `td_chara_name`.`text` AS `chara_name`
+     , `td_chara_cv`.`text` AS `chara_cv`
+FROM ((((`chara_data` `chara`
+    JOIN `text_data` `td_chara_name`
+        ON (`chara`.`id` = `td_chara_name`.`index`))
+    JOIN `text_data` `td_chara_cv`
+        ON (`chara`.`id` = `td_chara_cv`.`index`))
     LEFT JOIN `card_data` `card`
         ON (`chara`.`id` = `card`.`chara_id`))
-WHERE `td`.`category` = 6;
+    LEFT JOIN `support_card_data` `scd`
+        ON (`card`.`chara_id` = `scd`.`chara_id`))
+WHERE `td_chara_name`.`category` = 6
+    AND `td_chara_cv`.`category` = 7;
+
+--
+-- Create view `vw_basic_card_data_info`
+--
+CREATE
+VIEW vw_basic_card_data_info
+AS
+SELECT `cr_d`.`id` AS `card_id`
+     , `cr_d`.`chara_id` AS `chara_id`
+     , `cr_d`.`default_rarity` AS `default_rarity`
+     , `cr_d`.`limited_chara` AS `limited_chara`
+     , `cr_d`.`talent_speed` AS `talent_speed`
+     , `cr_d`.`talent_stamina` AS `talent_stamina`
+     , `cr_d`.`talent_pow` AS `talent_pow`
+     , `cr_d`.`talent_guts` AS `talent_guts`
+     , `cr_d`.`talent_wiz` AS `talent_wiz`
+     , `td_chara`.`text` AS `card_name`
+     , `td_card`.`text` AS `card_title`
+FROM ((`card_data` `cr_d`
+    JOIN `text_data` `td_chara`
+        ON (`cr_d`.`chara_id` = `td_chara`.`index`))
+    LEFT JOIN `text_data` `td_card`
+        ON (`cr_d`.`id` = `td_card`.`index`))
+WHERE `td_chara`.`category` = 6
+    AND `td_card`.`category` = 5;

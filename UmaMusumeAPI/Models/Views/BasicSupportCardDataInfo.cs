@@ -5,7 +5,7 @@
         public int SupportCardId { get; set; }
         public long CharaId { get; set; }
         public long Rarity { get; set; }
-        public long SkillSetId { get; set; }
-        public string SupportCardTitleName { get; set; }
+        public string SupportCardTitle { get; set; }
+        public string SupportCardName { get; set; }
     }
 }
