@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeAnalyzeMessage
+    public class SingleModeAnalyzeMessage
     {
         public int Id { get; set; }
         public long ProperGround { get; set; }

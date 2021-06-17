@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class AnnounceCharacter
+    public class AnnounceCharacter
     {
         public int Id { get; set; }
         public long MovieId { get; set; }

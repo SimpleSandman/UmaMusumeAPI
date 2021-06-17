@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicRaceInstanceInfo
+    public class BasicRaceInstanceInfo
     {
         public int RaceInstanceId { get; set; }
         public long RaceId { get; set; }

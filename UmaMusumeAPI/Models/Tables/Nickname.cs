@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class Nickname
+    public class Nickname
     {
         public int Id { get; set; }
         public long DispOrder { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CraneGameHiddenOdd
+    public class CraneGameHiddenOdd
     {
         public int Id { get; set; }
         public long AnimationId { get; set; }

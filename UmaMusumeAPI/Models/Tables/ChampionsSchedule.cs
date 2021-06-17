@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class ChampionsSchedule
+    public class ChampionsSchedule
     {
         public int Id { get; set; }
         public long ResourceId { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeRoute
+    public class SingleModeRoute
     {
         public int Id { get; set; }
         public long ScenarioId { get; set; }

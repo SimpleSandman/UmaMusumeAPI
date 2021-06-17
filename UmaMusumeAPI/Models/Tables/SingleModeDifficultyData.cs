@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeDifficultyData
+    public class SingleModeDifficultyData
     {
         public int DifficultyId { get; set; }
         public int Difficulty { get; set; }

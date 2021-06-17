@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CharacterSystemText
+    public class CharacterSystemText
     {
         public int CharacterId { get; set; }
         public int VoiceId { get; set; }

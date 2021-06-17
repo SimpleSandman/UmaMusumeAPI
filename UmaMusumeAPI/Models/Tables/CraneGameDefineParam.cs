@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CraneGameDefineParam
+    public class CraneGameDefineParam
     {
         public int Id { get; set; }
         public string Distance1 { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class TutorialGuideData
+    public class TutorialGuideData
     {
         public int Id { get; set; }
         public long GroupId { get; set; }

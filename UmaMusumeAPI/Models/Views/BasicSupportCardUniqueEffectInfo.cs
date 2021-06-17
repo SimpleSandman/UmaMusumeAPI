@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicSupportCardUniqueEffectInfo
+    public class BasicSupportCardUniqueEffectInfo
     {
         public int SupportCardUniqueEffectId { get; set; }
         public long Lv { get; set; }

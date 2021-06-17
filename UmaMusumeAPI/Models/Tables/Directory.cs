@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class Directory
+    public class Directory
     {
         public int Id { get; set; }
         public long RequiredPoint { get; set; }

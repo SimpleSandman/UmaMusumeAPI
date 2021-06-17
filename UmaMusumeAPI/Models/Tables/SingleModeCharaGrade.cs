@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeCharaGrade
+    public class SingleModeCharaGrade
     {
         public int Id { get; set; }
         public long WinNum { get; set; }

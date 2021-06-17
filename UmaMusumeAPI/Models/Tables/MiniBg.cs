@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class MiniBg
+    public class MiniBg
     {
         public int Id { get; set; }
         public long SceneType { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class AudioIgnoredCueOnHighspeed
+    public class AudioIgnoredCueOnHighspeed
     {
         public int Id { get; set; }
         public string CueName { get; set; }

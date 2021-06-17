@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeAnalyzeTicket
+    public class SingleModeAnalyzeTicket
     {
         public int Id { get; set; }
         public long Grade { get; set; }

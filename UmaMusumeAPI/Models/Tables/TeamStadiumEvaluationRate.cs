@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class TeamStadiumEvaluationRate
+    public class TeamStadiumEvaluationRate
     {
         public long Id { get; set; }
         public int ProperType { get; set; }

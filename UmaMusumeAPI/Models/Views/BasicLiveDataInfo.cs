@@ -2,7 +2,7 @@
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicLiveDataInfo
+    public class BasicLiveDataInfo
     {
         public int MusicId { get; set; }
         public DateTime? StartDate { get; set; }

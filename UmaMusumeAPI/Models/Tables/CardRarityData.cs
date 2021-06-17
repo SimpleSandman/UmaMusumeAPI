@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CardRarityData
+    public class CardRarityData
     {
         public int Id { get; set; }
         public long CardId { get; set; }

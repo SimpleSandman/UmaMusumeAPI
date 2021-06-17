@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SupportCardUniqueEffect
+    public class SupportCardUniqueEffect
     {
         public int Id { get; set; }
         public long Lv { get; set; }

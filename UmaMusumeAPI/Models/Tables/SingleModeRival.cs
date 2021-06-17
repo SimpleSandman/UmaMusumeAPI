@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeRival
+    public class SingleModeRival
     {
         public int Id { get; set; }
         public long CharaId { get; set; }

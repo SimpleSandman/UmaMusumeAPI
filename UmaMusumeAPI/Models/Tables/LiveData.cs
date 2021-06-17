@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class LiveData
+    public class LiveData
     {
         public int MusicId { get; set; }
         public long Sort { get; set; }

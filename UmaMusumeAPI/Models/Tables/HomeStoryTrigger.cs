@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class HomeStoryTrigger
+    public class HomeStoryTrigger
     {
         public int Id { get; set; }
         public long PosId { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class MobData
+    public class MobData
     {
         public int MobId { get; set; }
         public long CharaFaceModel { get; set; }

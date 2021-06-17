@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SkillData
+    public class SkillData
     {
         public int Id { get; set; }
         public long Rarity { get; set; }

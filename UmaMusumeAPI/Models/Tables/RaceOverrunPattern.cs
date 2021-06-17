@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class RaceOverrunPattern
+    public class RaceOverrunPattern
     {
         public int Id { get; set; }
         public long FinishOrder0Type { get; set; }

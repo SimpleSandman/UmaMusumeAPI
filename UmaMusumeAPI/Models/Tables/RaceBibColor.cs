@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class RaceBibColor
+    public class RaceBibColor
     {
         public int Grade { get; set; }
         public int RaceId { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeRecommendSetting
+    public class SingleModeRecommendSetting
     {
         public int Id { get; set; }
         public long RecommendCourseId { get; set; }

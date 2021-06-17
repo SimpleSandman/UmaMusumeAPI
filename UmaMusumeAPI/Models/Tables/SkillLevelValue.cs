@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SkillLevelValue
+    public class SkillLevelValue
     {
         public int Id { get; set; }
         public long AbilityType { get; set; }

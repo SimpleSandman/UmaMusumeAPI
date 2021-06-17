@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class TeamStadiumBgm
+    public class TeamStadiumBgm
     {
         public int Id { get; set; }
         public long SceneType { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class NiceObjectivesInfo
+    public class NiceObjectivesInfo
     {
         public int RouteId { get; set; }
         public long RaceSetId { get; set; }

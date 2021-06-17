@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class AudioStoryEffect
+    public class AudioStoryEffect
     {
         public int Id { get; set; }
         public string EffectName { get; set; }

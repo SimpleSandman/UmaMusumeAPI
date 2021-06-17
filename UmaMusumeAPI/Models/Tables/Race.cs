@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class Race
+    public class Race
     {
         public int Id { get; set; }
         public long Group { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class GachaFreeCampaign
+    public class GachaFreeCampaign
     {
         public int Id { get; set; }
         public long GachaId { get; set; }

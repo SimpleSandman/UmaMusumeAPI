@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeRouteRace
+    public class SingleModeRouteRace
     {
         public int Id { get; set; }
         public long RaceSetId { get; set; }

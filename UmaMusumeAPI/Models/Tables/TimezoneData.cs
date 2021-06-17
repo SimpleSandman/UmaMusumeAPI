@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class TimezoneData
+    public class TimezoneData
     {
         public int Timezone { get; set; }
         public long Priority { get; set; }

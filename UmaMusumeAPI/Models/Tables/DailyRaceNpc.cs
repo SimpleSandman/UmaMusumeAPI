@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class DailyRaceNpc
+    public class DailyRaceNpc
     {
         public int Id { get; set; }
         public long NpcGroupId { get; set; }

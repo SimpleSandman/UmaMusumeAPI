@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeEvaluation
+    public class SingleModeEvaluation
     {
         public int Id { get; set; }
         public long Evaluation { get; set; }

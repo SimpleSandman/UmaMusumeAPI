@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class GachaData
+    public class GachaData
     {
         public int Id { get; set; }
         public long Type { get; set; }

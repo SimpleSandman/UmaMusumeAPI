@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class RaceBgmCutinExtensionTime
+    public class RaceBgmCutinExtensionTime
     {
         public int Id { get; set; }
         public long CutinCategory { get; set; }

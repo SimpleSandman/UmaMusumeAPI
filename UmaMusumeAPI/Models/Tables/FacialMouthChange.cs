@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class FacialMouthChange
+    public class FacialMouthChange
     {
         public int Id { get; set; }
         public long CharaId { get; set; }

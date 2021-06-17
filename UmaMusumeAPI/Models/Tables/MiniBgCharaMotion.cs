@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class MiniBgCharaMotion
+    public class MiniBgCharaMotion
     {
         public int Id { get; set; }
         public long BgId { get; set; }

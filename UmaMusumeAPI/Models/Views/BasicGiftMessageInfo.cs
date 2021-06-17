@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicGiftMessageInfo
+    public class BasicGiftMessageInfo
     {
         public int GiftMessageId { get; set; }
         public string GiftMessage { get; set; }

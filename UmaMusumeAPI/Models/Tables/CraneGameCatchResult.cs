@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CraneGameCatchResult
+    public class CraneGameCatchResult
     {
         public int OddsId { get; set; }
         public int GetNum { get; set; }

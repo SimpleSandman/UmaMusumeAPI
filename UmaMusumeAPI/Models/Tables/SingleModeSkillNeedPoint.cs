@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeSkillNeedPoint
+    public class SingleModeSkillNeedPoint
     {
         public int Id { get; set; }
         public long NeedSkillPoint { get; set; }

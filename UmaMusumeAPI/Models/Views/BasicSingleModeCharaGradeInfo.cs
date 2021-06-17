@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicSingleModeCharaGradeInfo
+    public class BasicSingleModeCharaGradeInfo
     {
         public int SingleModeCharaGradeId { get; set; }
         public long WinNum { get; set; }

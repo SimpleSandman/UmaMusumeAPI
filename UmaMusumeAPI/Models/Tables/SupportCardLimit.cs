@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SupportCardLimit
+    public class SupportCardLimit
     {
         public int Rarity { get; set; }
         public long Limit0 { get; set; }

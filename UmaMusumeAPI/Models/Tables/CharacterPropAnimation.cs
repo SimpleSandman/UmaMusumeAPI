@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CharacterPropAnimation
+    public class CharacterPropAnimation
     {
         public int Id { get; set; }
         public long PropId { get; set; }

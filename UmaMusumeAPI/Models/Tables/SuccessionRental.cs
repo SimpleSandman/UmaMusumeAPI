@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SuccessionRental
+    public class SuccessionRental
     {
         public int Id { get; set; }
         public long RentalRank { get; set; }

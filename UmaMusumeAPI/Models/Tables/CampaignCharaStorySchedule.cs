@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CampaignCharaStorySchedule
+    public class CampaignCharaStorySchedule
     {
         public long CampaignId { get; set; }
         public long CharaId { get; set; }

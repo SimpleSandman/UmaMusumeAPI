@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class HomeEnvSetting
+    public class HomeEnvSetting
     {
         public int Id { get; set; }
         public long HomeSetId { get; set; }

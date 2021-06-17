@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CircleRankData
+    public class CircleRankData
     {
         public int Id { get; set; }
         public long NeedRankingMax { get; set; }

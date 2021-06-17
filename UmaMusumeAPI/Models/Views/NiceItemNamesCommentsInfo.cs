@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class NiceItemNamesCommentsInfo
+    public class NiceItemNamesCommentsInfo
     {
         public int ItemId { get; set; }
         public string ItemName { get; set; }

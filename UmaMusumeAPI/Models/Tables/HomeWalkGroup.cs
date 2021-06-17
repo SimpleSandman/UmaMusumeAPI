@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class HomeWalkGroup
+    public class HomeWalkGroup
     {
         public int Id { get; set; }
         public long CharaId1 { get; set; }

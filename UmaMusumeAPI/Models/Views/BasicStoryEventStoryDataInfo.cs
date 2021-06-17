@@ -2,7 +2,7 @@
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicStoryEventStoryDataInfo
+    public class BasicStoryEventStoryDataInfo
     {
         public int StoryEventStoryId { get; set; }
         public long StoryEventId { get; set; }

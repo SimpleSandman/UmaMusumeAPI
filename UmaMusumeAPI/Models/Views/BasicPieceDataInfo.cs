@@ -2,7 +2,7 @@
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicPieceDataInfo
+    public class BasicPieceDataInfo
     {
         public int PieceId { get; set; }
         public long ItemPlaceId { get; set; }

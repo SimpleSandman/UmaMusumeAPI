@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class HomePosterData
+    public class HomePosterData
     {
         public int Id { get; set; }
         public long Priority { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SupportCardLevel
+    public class SupportCardLevel
     {
         public int Id { get; set; }
         public long Rarity { get; set; }

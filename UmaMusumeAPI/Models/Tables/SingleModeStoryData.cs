@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeStoryData
+    public class SingleModeStoryData
     {
         public int Id { get; set; }
         public long StoryId { get; set; }

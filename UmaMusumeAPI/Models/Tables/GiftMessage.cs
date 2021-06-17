@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class GiftMessage
+    public class GiftMessage
     {
         public int Id { get; set; }
         public long Type1 { get; set; }

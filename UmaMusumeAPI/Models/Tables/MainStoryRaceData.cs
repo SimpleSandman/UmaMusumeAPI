@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class MainStoryRaceData
+    public class MainStoryRaceData
     {
         public int Id { get; set; }
         public long RaceInstanceId { get; set; }

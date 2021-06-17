@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class LoginBonusDetail
+    public class LoginBonusDetail
     {
         public int Id { get; set; }
         public long LoginBonusId { get; set; }

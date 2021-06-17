@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class StoryStill
+    public class StoryStill
     {
         public int Id { get; set; }
         public long StillId { get; set; }

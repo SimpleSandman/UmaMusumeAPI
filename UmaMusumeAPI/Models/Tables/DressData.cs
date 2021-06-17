@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class DressData
+    public class DressData
     {
         public int Id { get; set; }
         public long ConditionType { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class BannerData
+    public class BannerData
     {
         public int Id { get; set; }
         public long BannerId { get; set; }

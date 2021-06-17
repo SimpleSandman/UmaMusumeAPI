@@ -2,7 +2,7 @@
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicLoginBonusDataInfo
+    public class BasicLoginBonusDataInfo
     {
         public int LoginBonusId { get; set; }
         public long Type { get; set; }

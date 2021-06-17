@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class StoryEventBonusSupportCard
+    public class StoryEventBonusSupportCard
     {
         public int Id { get; set; }
         public long StoryEventId { get; set; }

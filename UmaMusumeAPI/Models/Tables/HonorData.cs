@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class HonorData
+    public class HonorData
     {
         public int Id { get; set; }
         public long Rank { get; set; }

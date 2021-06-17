@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class TeamStadiumRaceResultMotion
+    public class TeamStadiumRaceResultMotion
     {
         public long CharacterId { get; set; }
         public long Win1 { get; set; }

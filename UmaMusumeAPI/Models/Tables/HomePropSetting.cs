@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class HomePropSetting
+    public class HomePropSetting
     {
         public int PosId { get; set; }
         public int Personality { get; set; }

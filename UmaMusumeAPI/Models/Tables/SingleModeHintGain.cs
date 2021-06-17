@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeHintGain
+    public class SingleModeHintGain
     {
         public long Id { get; set; }
         public long HintId { get; set; }

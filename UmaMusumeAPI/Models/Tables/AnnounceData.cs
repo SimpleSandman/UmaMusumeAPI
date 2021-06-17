@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class AnnounceData
+    public class AnnounceData
     {
         public int Id { get; set; }
         public long AnnounceType { get; set; }

@@ -2,7 +2,7 @@
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicStoryEventDataInfo
+    public class BasicStoryEventDataInfo
     {
         public int StoryEventId { get; set; }
         public DateTime? NoticeDate { get; set; }

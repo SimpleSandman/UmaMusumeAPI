@@ -2,7 +2,7 @@
 
 namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicMissionDataInfo
+    public class BasicMissionDataInfo
     {
         public int MissionId { get; set; }
         public long MissionType { get; set; }

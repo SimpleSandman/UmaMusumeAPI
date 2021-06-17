@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class RaceTrack
+    public class RaceTrack
     {
         public int Id { get; set; }
         public long InitialLaneType { get; set; }

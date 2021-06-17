@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class RaceCourseSet
+    public class RaceCourseSet
     {
         public int Id { get; set; }
         public long RaceTrackId { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeTagCardPo
+    public class SingleModeTagCardPo
     {
         public int Id { get; set; }
         public long SupportCardId { get; set; }

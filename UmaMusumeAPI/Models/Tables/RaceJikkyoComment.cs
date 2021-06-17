@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class RaceJikkyoComment
+    public class RaceJikkyoComment
     {
         public int Id { get; set; }
         public long GroupId { get; set; }

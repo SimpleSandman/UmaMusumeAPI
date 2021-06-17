@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicTeamStadiumScoreBonusInfo
+    public class BasicTeamStadiumScoreBonusInfo
     {
         public int TeamStadiumScoreBonusId { get; set; }
         public long Priority { get; set; }

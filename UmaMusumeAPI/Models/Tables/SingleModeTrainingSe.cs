@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeTrainingSe
+    public class SingleModeTrainingSe
     {
         public int Id { get; set; }
         public string SheetId { get; set; }

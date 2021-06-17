@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CampaignData
+    public class CampaignData
     {
         public int CampaignId { get; set; }
         public long TargetType { get; set; }

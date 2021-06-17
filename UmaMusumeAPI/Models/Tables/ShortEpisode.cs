@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class ShortEpisode
+    public class ShortEpisode
     {
         public int Id { get; set; }
         public long Scene { get; set; }

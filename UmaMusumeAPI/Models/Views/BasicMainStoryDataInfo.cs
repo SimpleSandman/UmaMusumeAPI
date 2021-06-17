@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicMainStoryDataInfo
+    public class BasicMainStoryDataInfo
     {
         public int MainStoryId { get; set; }
         public long PartId { get; set; }

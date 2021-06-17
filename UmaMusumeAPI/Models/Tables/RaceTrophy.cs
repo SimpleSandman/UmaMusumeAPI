@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class RaceTrophy
+    public class RaceTrophy
     {
         public int Id { get; set; }
         public long TrophyId { get; set; }

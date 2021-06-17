@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class ChampionsNewsCharaDetail
+    public class ChampionsNewsCharaDetail
     {
         public int Id { get; set; }
         public long CharaTextGroup { get; set; }

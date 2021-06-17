@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SuccessionInitialFactor
+    public class SuccessionInitialFactor
     {
         public int Id { get; set; }
         public long FactorType { get; set; }

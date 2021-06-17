@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeOutingSet
+    public class SingleModeOutingSet
     {
         public int Id { get; set; }
         public long CommandGroupId1 { get; set; }

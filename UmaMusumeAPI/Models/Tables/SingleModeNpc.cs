@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeNpc
+    public class SingleModeNpc
     {
         public int Id { get; set; }
         public long NpcGroupId { get; set; }

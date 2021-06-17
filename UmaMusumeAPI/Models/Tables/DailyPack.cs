@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class DailyPack
+    public class DailyPack
     {
         public int ShopDataId { get; set; }
         public int PlatformId { get; set; }

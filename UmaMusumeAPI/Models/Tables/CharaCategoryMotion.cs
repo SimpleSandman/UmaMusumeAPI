@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CharaCategoryMotion
+    public class CharaCategoryMotion
     {
         public int CharaId { get; set; }
         public long StandbyMotion1 { get; set; }

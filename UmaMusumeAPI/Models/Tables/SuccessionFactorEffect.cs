@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SuccessionFactorEffect
+    public class SuccessionFactorEffect
     {
         public int Id { get; set; }
         public long FactorGroupId { get; set; }

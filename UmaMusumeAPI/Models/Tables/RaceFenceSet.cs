@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class RaceFenceSet
+    public class RaceFenceSet
     {
         public int Id { get; set; }
         public long Fence1 { get; set; }

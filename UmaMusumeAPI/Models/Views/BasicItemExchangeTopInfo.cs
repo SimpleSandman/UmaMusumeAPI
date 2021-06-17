@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicItemExchangeTopInfo
+    public class BasicItemExchangeTopInfo
     {
         public int ItemExchangeTopId { get; set; }
         public long ItemExchangeDispOrder { get; set; }

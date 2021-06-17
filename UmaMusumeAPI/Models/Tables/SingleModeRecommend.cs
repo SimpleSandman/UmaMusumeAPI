@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeRecommend
+    public class SingleModeRecommend
     {
         public int Id { get; set; }
         public long GradeUpperLimit { get; set; }

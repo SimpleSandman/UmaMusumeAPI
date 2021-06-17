@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class NiceSuccessionRelationMemberType
+    public class NiceSuccessionRelationMemberType
     {
         public int SrmId { get; set; }
         public long CharaId { get; set; }

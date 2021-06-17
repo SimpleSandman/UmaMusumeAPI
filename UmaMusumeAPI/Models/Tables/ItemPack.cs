@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class ItemPack
+    public class ItemPack
     {
         public int Id { get; set; }
         public long ItemPackId { get; set; }

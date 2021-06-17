@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class StoryEventData
+    public class StoryEventData
     {
         public int StoryEventId { get; set; }
         public long NoticeDate { get; set; }

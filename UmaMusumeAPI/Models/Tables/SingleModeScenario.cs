@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeScenario
+    public class SingleModeScenario
     {
         public int Id { get; set; }
         public long SortId { get; set; }

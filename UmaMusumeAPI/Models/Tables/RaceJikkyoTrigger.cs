@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class RaceJikkyoTrigger
+    public class RaceJikkyoTrigger
     {
         public int Id { get; set; }
         public long Command { get; set; }

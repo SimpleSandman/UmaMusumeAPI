@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicMobDataInfo
+    public class BasicMobDataInfo
     {
         public int MobId { get; set; }
         public long CharaFaceModel { get; set; }

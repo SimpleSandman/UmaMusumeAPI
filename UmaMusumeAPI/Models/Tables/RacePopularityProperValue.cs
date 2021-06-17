@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class RacePopularityProperValue
+    public class RacePopularityProperValue
     {
         public int Id { get; set; }
         public long ProperType { get; set; }

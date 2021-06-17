@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class MiniFaceTypeData
+    public class MiniFaceTypeData
     {
         public string Label { get; set; }
         public long EyebrowL { get; set; }

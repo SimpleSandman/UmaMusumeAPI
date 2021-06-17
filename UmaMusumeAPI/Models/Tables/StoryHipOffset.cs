@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class StoryHipOffset
+    public class StoryHipOffset
     {
         public long CategoryId { get; set; }
         public long CharaId { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class AudioCuesheet
+    public class AudioCuesheet
     {
         public int Id { get; set; }
         public string CueSheet { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeCharaEffect
+    public class SingleModeCharaEffect
     {
         public int Id { get; set; }
         public long EffectType { get; set; }

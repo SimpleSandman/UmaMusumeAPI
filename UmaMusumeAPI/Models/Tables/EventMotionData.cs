@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class EventMotionData
+    public class EventMotionData
     {
         public int Id { get; set; }
         public string CommandName { get; set; }

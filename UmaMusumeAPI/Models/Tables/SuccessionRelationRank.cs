@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SuccessionRelationRank
+    public class SuccessionRelationRank
     {
         public int RelationRank { get; set; }
         public long RankValueMin { get; set; }

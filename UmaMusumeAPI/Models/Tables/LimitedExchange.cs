@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class LimitedExchange
+    public class LimitedExchange
     {
         public int Id { get; set; }
         public long ItemExchangeTopId { get; set; }

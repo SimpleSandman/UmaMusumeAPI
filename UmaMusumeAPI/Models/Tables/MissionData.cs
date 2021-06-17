@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class MissionData
+    public class MissionData
     {
         public int Id { get; set; }
         public long MissionType { get; set; }

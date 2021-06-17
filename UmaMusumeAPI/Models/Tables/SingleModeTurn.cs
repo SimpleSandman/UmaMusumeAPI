@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeTurn
+    public class SingleModeTurn
     {
         public int Id { get; set; }
         public long TurnSetId { get; set; }

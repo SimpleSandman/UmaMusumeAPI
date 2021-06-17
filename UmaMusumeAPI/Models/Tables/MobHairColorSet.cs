@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class MobHairColorSet
+    public class MobHairColorSet
     {
         public int Id { get; set; }
         public string HairColorR1 { get; set; }

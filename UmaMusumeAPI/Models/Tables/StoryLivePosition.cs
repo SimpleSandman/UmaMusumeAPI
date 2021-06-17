@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class StoryLivePosition
+    public class StoryLivePosition
     {
         public int Id { get; set; }
         public long SetId { get; set; }

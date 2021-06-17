@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class ChampionsEntryReward
+    public class ChampionsEntryReward
     {
         public int ChampionsId { get; set; }
         public long ItemCategory { get; set; }

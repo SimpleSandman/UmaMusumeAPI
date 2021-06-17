@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CharaType
+    public class CharaType
     {
         public string Id { get; set; }
         public long CharaId { get; set; }

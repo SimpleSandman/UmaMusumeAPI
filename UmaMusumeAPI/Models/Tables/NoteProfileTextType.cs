@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class NoteProfileTextType
+    public class NoteProfileTextType
     {
         public int Id { get; set; }
         public long TextType { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class ItemPlace
+    public class ItemPlace
     {
         public long Id { get; set; }
         public long TransitionType { get; set; }

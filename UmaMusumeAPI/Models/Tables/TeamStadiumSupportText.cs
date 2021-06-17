@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class TeamStadiumSupportText
+    public class TeamStadiumSupportText
     {
         public int Id { get; set; }
         public long Type { get; set; }

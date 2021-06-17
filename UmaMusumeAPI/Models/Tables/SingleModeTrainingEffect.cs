@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeTrainingEffect
+    public class SingleModeTrainingEffect
     {
         public int Id { get; set; }
         public long CommandId { get; set; }

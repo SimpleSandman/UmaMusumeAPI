@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class RaceBgmPattern
+    public class RaceBgmPattern
     {
         public int Id { get; set; }
         public long BgmTime1 { get; set; }

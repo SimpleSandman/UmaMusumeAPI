@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class LimitedExchangeRewardOdd
+    public class LimitedExchangeRewardOdd
     {
         public int Id { get; set; }
         public long OddsId { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CardTalentUpgrade
+    public class CardTalentUpgrade
     {
         public int Id { get; set; }
         public long TalentGroupId { get; set; }

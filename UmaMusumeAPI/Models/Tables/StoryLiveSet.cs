@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class StoryLiveSet
+    public class StoryLiveSet
     {
         public int Id { get; set; }
         public long MusicId { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class ChampionsStandMotion
+    public class ChampionsStandMotion
     {
         public int CharaId { get; set; }
         public int Type { get; set; }

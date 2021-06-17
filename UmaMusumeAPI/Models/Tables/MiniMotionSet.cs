@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class MiniMotionSet
+    public class MiniMotionSet
     {
         public long Id { get; set; }
         public string Label { get; set; }

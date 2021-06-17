@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class TrainedCharaTradeItem
+    public class TrainedCharaTradeItem
     {
         public int Id { get; set; }
         public long TrainedCharaRank { get; set; }

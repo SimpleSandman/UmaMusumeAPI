@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class CraneGameArmSwing
+    public class CraneGameArmSwing
     {
         public int ResultType { get; set; }
         public long Odds1 { get; set; }

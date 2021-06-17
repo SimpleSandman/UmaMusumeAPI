@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class RandomEarTailMotion
+    public class RandomEarTailMotion
     {
         public int Id { get; set; }
         public long PartsType { get; set; }

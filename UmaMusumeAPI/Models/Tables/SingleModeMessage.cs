@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class SingleModeMessage
+    public class SingleModeMessage
     {
         public int Id { get; set; }
         public long Priority { get; set; }

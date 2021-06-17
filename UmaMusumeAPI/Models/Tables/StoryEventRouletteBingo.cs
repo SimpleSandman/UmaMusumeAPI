@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class StoryEventRouletteBingo
+    public class StoryEventRouletteBingo
     {
         public int Id { get; set; }
         public long RouletteId { get; set; }
