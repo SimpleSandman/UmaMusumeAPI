@@ -276,7 +276,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<BasicTeamStadiumScoreBonusInfo> BasicTeamStadiumScoreBonusInfos { get; set; }
         public virtual DbSet<NiceErrorMessage> NiceErrorMessages { get; set; }
         public virtual DbSet<NiceCharaBioInfo> NiceCharaBioInfos { get; set; }
-        public virtual DbSet<NiceCharaDataInfo> NiceCharaDataInfos { get; set; }
+        public virtual DbSet<NiceCardDataInfo> NiceCardDataInfos { get; set; }
         public virtual DbSet<NiceItemNamesCommentsInfo> NiceItemNamesCommentsInfos { get; set; }
         public virtual DbSet<NiceObjectivesInfo> NiceObjectivesInfos { get; set; }
         public virtual DbSet<NiceRaceInfo> NiceRaceInfos { get; set; }
@@ -12559,6 +12559,189 @@ namespace UmaMusumeAPI.Context
                     .UseCollation("utf8mb4_unicode_ci");
             });
 
+            modelBuilder.Entity<NiceCardDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_nice_card_data_info");
+
+                entity.Property(e => e.AptitudeBetweener)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_betweener");
+
+                entity.Property(e => e.AptitudeChaser)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_chaser");
+
+                entity.Property(e => e.AptitudeDirt)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_dirt");
+
+                entity.Property(e => e.AptitudeLeader)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_leader");
+
+                entity.Property(e => e.AptitudeLong)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_long");
+
+                entity.Property(e => e.AptitudeMiddle)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_middle");
+
+                entity.Property(e => e.AptitudeMile)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_mile");
+
+                entity.Property(e => e.AptitudeRunner)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_runner");
+
+                entity.Property(e => e.AptitudeShort)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_short");
+
+                entity.Property(e => e.AptitudeTurf)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("aptitude_turf");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.DefaultRarity)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("default_rarity");
+
+                entity.Property(e => e.Guts1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts1");
+
+                entity.Property(e => e.Guts2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts2");
+
+                entity.Property(e => e.Guts3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts3");
+
+                entity.Property(e => e.Guts4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts4");
+
+                entity.Property(e => e.Guts5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts5");
+
+                entity.Property(e => e.CardId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("card_id");
+
+                entity.Property(e => e.LimitedChara)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("limited_chara");
+
+                entity.Property(e => e.Power1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("power1");
+
+                entity.Property(e => e.Power2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("power2");
+
+                entity.Property(e => e.Power3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("power3");
+
+                entity.Property(e => e.Power4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("power4");
+
+                entity.Property(e => e.Power5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("power5");
+
+                entity.Property(e => e.Speed1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed1");
+
+                entity.Property(e => e.Speed2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed2");
+
+                entity.Property(e => e.Speed3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed3");
+
+                entity.Property(e => e.Speed4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed4");
+
+                entity.Property(e => e.Speed5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed5");
+
+                entity.Property(e => e.Stamina1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina1");
+
+                entity.Property(e => e.Stamina2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina2");
+
+                entity.Property(e => e.Stamina3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina3");
+
+                entity.Property(e => e.Stamina4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina4");
+
+                entity.Property(e => e.Stamina5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina5");
+
+                entity.Property(e => e.TalentGuts)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("talent_guts");
+
+                entity.Property(e => e.TalentPow)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("talent_pow");
+
+                entity.Property(e => e.TalentSpeed)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("talent_speed");
+
+                entity.Property(e => e.TalentStamina)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("talent_stamina");
+
+                entity.Property(e => e.TalentWiz)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("talent_wiz");
+
+                entity.Property(e => e.Wisdom1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wisdom1");
+
+                entity.Property(e => e.Wisdom2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wisdom2");
+
+                entity.Property(e => e.Wisdom3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wisdom3");
+
+                entity.Property(e => e.Wisdom4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wisdom4");
+
+                entity.Property(e => e.Wisdom5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wisdom5");
+            });
+
             modelBuilder.Entity<NiceCharaBioInfo>(entity =>
             {
                 entity.HasNoKey();
@@ -12774,189 +12957,6 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.UraObjectives)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("ura_objectives");
-            });
-
-            modelBuilder.Entity<NiceCharaDataInfo>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToView("vw_nice_chara_data_info");
-
-                entity.Property(e => e.AptitudeBetweener)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("aptitude_betweener");
-
-                entity.Property(e => e.AptitudeChaser)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("aptitude_chaser");
-
-                entity.Property(e => e.AptitudeDirt)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("aptitude_dirt");
-
-                entity.Property(e => e.AptitudeLeader)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("aptitude_leader");
-
-                entity.Property(e => e.AptitudeLong)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("aptitude_long");
-
-                entity.Property(e => e.AptitudeMiddle)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("aptitude_middle");
-
-                entity.Property(e => e.AptitudeMile)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("aptitude_mile");
-
-                entity.Property(e => e.AptitudeRunner)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("aptitude_runner");
-
-                entity.Property(e => e.AptitudeShort)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("aptitude_short");
-
-                entity.Property(e => e.AptitudeTurf)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("aptitude_turf");
-
-                entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id");
-
-                entity.Property(e => e.DefaultRarity)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("default_rarity");
-
-                entity.Property(e => e.Guts1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("guts1");
-
-                entity.Property(e => e.Guts2)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("guts2");
-
-                entity.Property(e => e.Guts3)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("guts3");
-
-                entity.Property(e => e.Guts4)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("guts4");
-
-                entity.Property(e => e.Guts5)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("guts5");
-
-                entity.Property(e => e.CardId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("card_id");
-
-                entity.Property(e => e.LimitedChara)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("limited_chara");
-
-                entity.Property(e => e.Power1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("power1");
-
-                entity.Property(e => e.Power2)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("power2");
-
-                entity.Property(e => e.Power3)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("power3");
-
-                entity.Property(e => e.Power4)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("power4");
-
-                entity.Property(e => e.Power5)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("power5");
-
-                entity.Property(e => e.Speed1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("speed1");
-
-                entity.Property(e => e.Speed2)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("speed2");
-
-                entity.Property(e => e.Speed3)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("speed3");
-
-                entity.Property(e => e.Speed4)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("speed4");
-
-                entity.Property(e => e.Speed5)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("speed5");
-
-                entity.Property(e => e.Stamina1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("stamina1");
-
-                entity.Property(e => e.Stamina2)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("stamina2");
-
-                entity.Property(e => e.Stamina3)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("stamina3");
-
-                entity.Property(e => e.Stamina4)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("stamina4");
-
-                entity.Property(e => e.Stamina5)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("stamina5");
-
-                entity.Property(e => e.TalentGuts)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("talent_guts");
-
-                entity.Property(e => e.TalentPow)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("talent_pow");
-
-                entity.Property(e => e.TalentSpeed)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("talent_speed");
-
-                entity.Property(e => e.TalentStamina)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("talent_stamina");
-
-                entity.Property(e => e.TalentWiz)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("talent_wiz");
-
-                entity.Property(e => e.Wisdom1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("wisdom1");
-
-                entity.Property(e => e.Wisdom2)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("wisdom2");
-
-                entity.Property(e => e.Wisdom3)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("wisdom3");
-
-                entity.Property(e => e.Wisdom4)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("wisdom4");
-
-                entity.Property(e => e.Wisdom5)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("wisdom5");
             });
 
             modelBuilder.Entity<NiceItemNamesCommentsInfo>(entity =>

@@ -139,14 +139,14 @@ DROP VIEW IF EXISTS vw_basic_team_stadium_score_bonus_info CASCADE;
 DROP VIEW IF EXISTS vw_error_messages CASCADE;
 
 --
+-- Drop view `vw_nice_card_data_info`
+--
+DROP VIEW IF EXISTS vw_nice_card_data_info CASCADE;
+
+--
 -- Drop view `vw_nice_chara_bio_info`
 --
 DROP VIEW IF EXISTS vw_nice_chara_bio_info CASCADE;
-
---
--- Drop view `vw_nice_chara_data_info`
---
-DROP VIEW IF EXISTS vw_nice_chara_data_info CASCADE;
 
 --
 -- Drop view `vw_nice_item_names_comments_info`
@@ -285,10 +285,65 @@ WHERE `txt_name`.`category` = 23
     AND `txt_comment`.`category` = 24;
 
 --
--- Create view `vw_nice_chara_data_info`
+-- Create view `vw_nice_chara_bio_info`
 --
 CREATE
-VIEW vw_nice_chara_data_info
+VIEW vw_nice_chara_bio_info
+AS
+SELECT `chara_data`.`id` AS `chara_id`
+     , `chara_data`.`birth_year` AS `birth_year`
+     , `chara_data`.`birth_month` AS `birth_month`
+     , `chara_data`.`birth_day` AS `birth_day`
+     , `chara_data`.`sex` AS `sex`
+     , `chara_data`.`image_color_main` AS `image_color_main`
+     , `chara_data`.`image_color_sub` AS `image_color_sub`
+     , `chara_data`.`ui_color_main` AS `ui_color_main`
+     , `chara_data`.`ui_color_sub` AS `ui_color_sub`
+     , `chara_data`.`ui_training_color_1` AS `ui_training_color_1`
+     , `chara_data`.`ui_training_color_2` AS `ui_training_color_2`
+     , `chara_data`.`ui_border_color` AS `ui_border_color`
+     , `chara_data`.`ui_num_color_1` AS `ui_num_color_1`
+     , `chara_data`.`ui_num_color_2` AS `ui_num_color_2`
+     , `chara_data`.`ui_turn_color` AS `ui_turn_color`
+     , `chara_data`.`ui_wipe_color_1` AS `ui_wipe_color_1`
+     , `chara_data`.`ui_wipe_color_2` AS `ui_wipe_color_2`
+     , `chara_data`.`ui_wipe_color_3` AS `ui_wipe_color_3`
+     , `chara_data`.`ui_speech_color_1` AS `ui_speech_color_1`
+     , `chara_data`.`ui_speech_color_2` AS `ui_speech_color_2`
+     , `chara_data`.`ui_nameplate_color_1` AS `ui_nameplate_color_1`
+     , `chara_data`.`ui_nameplate_color_2` AS `ui_nameplate_color_2`
+     , `chara_data`.`height` AS `height`
+     , `chara_data`.`bust` AS `bust`
+     , `chara_data`.`scale` AS `scale`
+     , `chara_data`.`skin` AS `skin`
+     , `chara_data`.`shape` AS `shape`
+     , `chara_data`.`socks` AS `socks`
+     , `chara_data`.`personal_dress` AS `personal_dress`
+     , `chara_data`.`tail_model_id` AS `tail_model_id`
+     , `chara_data`.`race_running_type` AS `race_running_type`
+     , `chara_data`.`ear_random_time_min` AS `ear_random_time_min`
+     , `chara_data`.`ear_random_time_max` AS `ear_random_time_max`
+     , `chara_data`.`tail_random_time_min` AS `tail_random_time_min`
+     , `chara_data`.`tail_random_time_max` AS `tail_random_time_max`
+     , `chara_data`.`story_ear_random_time_min` AS `story_ear_random_time_min`
+     , `chara_data`.`story_ear_random_time_max` AS `story_ear_random_time_max`
+     , `chara_data`.`story_tail_random_time_min` AS `story_tail_random_time_min`
+     , `chara_data`.`story_tail_random_time_max` AS `story_tail_random_time_max`
+     , `chara_data`.`attachment_model_id` AS `attachment_model_id`
+     , `chara_data`.`mini_mayu_shader_type` AS `mini_mayu_shader_type`
+     , `FROM_UNIXTIME_SECONDS`(`chara_data`.`start_date`) AS `start_date`
+     , `chara_data`.`chara_category` AS `chara_category`
+     , `ura_route`.`race_set_id` AS `ura_objectives`
+FROM (`chara_data`
+    LEFT JOIN `single_mode_route` `ura_route`
+        ON (`ura_route`.`chara_id` = `chara_data`.`id`
+                AND `ura_route`.`scenario_id` = 0));
+
+--
+-- Create view `vw_nice_card_data_info`
+--
+CREATE
+VIEW vw_nice_card_data_info
 AS
 SELECT `card_data`.`id` AS `card_id`
      , `card_data`.`chara_id` AS `chara_id`
@@ -350,61 +405,6 @@ FROM (((((`card_data`
     LEFT JOIN `card_rarity_data` `r5`
         ON (`r5`.`card_id` = `card_data`.`id`
                 AND `r5`.`rarity` = 5));
-
---
--- Create view `vw_nice_chara_bio_info`
---
-CREATE
-VIEW vw_nice_chara_bio_info
-AS
-SELECT `chara_data`.`id` AS `chara_id`
-     , `chara_data`.`birth_year` AS `birth_year`
-     , `chara_data`.`birth_month` AS `birth_month`
-     , `chara_data`.`birth_day` AS `birth_day`
-     , `chara_data`.`sex` AS `sex`
-     , `chara_data`.`image_color_main` AS `image_color_main`
-     , `chara_data`.`image_color_sub` AS `image_color_sub`
-     , `chara_data`.`ui_color_main` AS `ui_color_main`
-     , `chara_data`.`ui_color_sub` AS `ui_color_sub`
-     , `chara_data`.`ui_training_color_1` AS `ui_training_color_1`
-     , `chara_data`.`ui_training_color_2` AS `ui_training_color_2`
-     , `chara_data`.`ui_border_color` AS `ui_border_color`
-     , `chara_data`.`ui_num_color_1` AS `ui_num_color_1`
-     , `chara_data`.`ui_num_color_2` AS `ui_num_color_2`
-     , `chara_data`.`ui_turn_color` AS `ui_turn_color`
-     , `chara_data`.`ui_wipe_color_1` AS `ui_wipe_color_1`
-     , `chara_data`.`ui_wipe_color_2` AS `ui_wipe_color_2`
-     , `chara_data`.`ui_wipe_color_3` AS `ui_wipe_color_3`
-     , `chara_data`.`ui_speech_color_1` AS `ui_speech_color_1`
-     , `chara_data`.`ui_speech_color_2` AS `ui_speech_color_2`
-     , `chara_data`.`ui_nameplate_color_1` AS `ui_nameplate_color_1`
-     , `chara_data`.`ui_nameplate_color_2` AS `ui_nameplate_color_2`
-     , `chara_data`.`height` AS `height`
-     , `chara_data`.`bust` AS `bust`
-     , `chara_data`.`scale` AS `scale`
-     , `chara_data`.`skin` AS `skin`
-     , `chara_data`.`shape` AS `shape`
-     , `chara_data`.`socks` AS `socks`
-     , `chara_data`.`personal_dress` AS `personal_dress`
-     , `chara_data`.`tail_model_id` AS `tail_model_id`
-     , `chara_data`.`race_running_type` AS `race_running_type`
-     , `chara_data`.`ear_random_time_min` AS `ear_random_time_min`
-     , `chara_data`.`ear_random_time_max` AS `ear_random_time_max`
-     , `chara_data`.`tail_random_time_min` AS `tail_random_time_min`
-     , `chara_data`.`tail_random_time_max` AS `tail_random_time_max`
-     , `chara_data`.`story_ear_random_time_min` AS `story_ear_random_time_min`
-     , `chara_data`.`story_ear_random_time_max` AS `story_ear_random_time_max`
-     , `chara_data`.`story_tail_random_time_min` AS `story_tail_random_time_min`
-     , `chara_data`.`story_tail_random_time_max` AS `story_tail_random_time_max`
-     , `chara_data`.`attachment_model_id` AS `attachment_model_id`
-     , `chara_data`.`mini_mayu_shader_type` AS `mini_mayu_shader_type`
-     , `FROM_UNIXTIME_SECONDS`(`chara_data`.`start_date`) AS `start_date`
-     , `chara_data`.`chara_category` AS `chara_category`
-     , `ura_route`.`race_set_id` AS `ura_objectives`
-FROM (`chara_data`
-    LEFT JOIN `single_mode_route` `ura_route`
-        ON (`ura_route`.`chara_id` = `chara_data`.`id`
-                AND `ura_route`.`scenario_id` = 0));
 
 --
 -- Create view `vw_error_messages`

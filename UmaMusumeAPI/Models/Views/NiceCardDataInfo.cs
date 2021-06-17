@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class NiceCharaDataInfo
+    public partial class NiceCardDataInfo
     {
         public int CardId { get; set; }
         public long CharaId { get; set; }
