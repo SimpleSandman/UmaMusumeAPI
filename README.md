@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3dc4516c93d44ad6b35a244380385bac)](https://app.codacy.com/gh/SimpleSandman/UmaMusumeAPI?utm_source=github.com&utm_medium=referral&utm_content=SimpleSandman/UmaMusumeAPI&utm_campaign=Badge_Grade_Settings)
 # Uma Musume REST API [![.NET](https://github.com/SimpleSandman/UmaMusumeAPI/actions/workflows/dotnet.yml/badge.svg)](https://github.com/SimpleSandman/UmaMusumeAPI/actions/workflows/dotnet.yml)
 This is a community REST API based on [Uma Musume: Pretty Derby](https://umamusume.jp/)'s `master.mdb` file that reads from a MariaDB database. This is based on the Swagger UI/OpenAPI specification. I'm using MariaDB instead of MySQL for the sake of keeping as much of this as open-source as possible. The API is available [here](https://www.tracenacademy.com/index.html) for your viewing pleasure.
 
