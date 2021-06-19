@@ -134,6 +134,11 @@ DROP VIEW IF EXISTS vw_basic_support_card_unique_effect_info CASCADE;
 DROP VIEW IF EXISTS vw_basic_team_stadium_score_bonus_info CASCADE;
 
 --
+-- Drop view `vw_condensed_skill_data_info`
+--
+DROP VIEW IF EXISTS vw_condensed_skill_data_info CASCADE;
+
+--
 -- Drop view `vw_error_messages`
 --
 DROP VIEW IF EXISTS vw_error_messages CASCADE;
@@ -162,6 +167,11 @@ DROP VIEW IF EXISTS vw_nice_objectives_info CASCADE;
 -- Drop view `vw_nice_race_info`
 --
 DROP VIEW IF EXISTS vw_nice_race_info CASCADE;
+
+--
+-- Drop view `vw_nice_skill_data_info`
+--
+DROP VIEW IF EXISTS vw_nice_skill_data_info CASCADE;
 
 --
 -- Drop view `vw_succession_relation_member_types`
@@ -205,6 +215,65 @@ FROM (`succession_relation_member` `srm`
         ON (`srm`.`relation_type` = `sr`.`relation_type`))
 ORDER BY `srm`.`chara_id`
        , `sr`.`relation_type`;
+
+--
+-- Create view `vw_nice_skill_data_info`
+--
+CREATE
+VIEW vw_nice_skill_data_info
+AS
+SELECT DISTINCT `sd`.`id` AS `skill_id`
+              , `sd`.`rarity` AS `rarity`
+              , `sd`.`grade_value` AS `grade_value`
+              , `sd`.`skill_category` AS `skill_category`
+              , `sd`.`tag_id` AS `tag_id`
+              , `sd`.`condition_1` AS `condition_1`
+              , `sd`.`float_ability_time_1` AS `float_ability_time_1`
+              , `sd`.`ability_type_1_1` AS `ability_type_1_1`
+              , `sd`.`float_ability_value_1_1` AS `float_ability_value_1_1`
+              , `sd`.`ability_type_1_2` AS `ability_type_1_2`
+              , `sd`.`float_ability_value_1_2` AS `float_ability_value_1_2`
+              , `sd`.`ability_type_1_3` AS `ability_type_1_3`
+              , `sd`.`float_ability_value_1_3` AS `float_ability_value_1_3`
+              , `sd`.`condition_2` AS `condition_2`
+              , `sd`.`float_ability_time_2` AS `float_ability_time_2`
+              , `sd`.`ability_type_2_1` AS `ability_type_2_1`
+              , `sd`.`float_ability_value_2_1` AS `float_ability_value_2_1`
+              , `sd`.`ability_type_2_2` AS `ability_type_2_2`
+              , `sd`.`float_ability_value_2_2` AS `float_ability_value_2_2`
+              , `sd`.`ability_type_2_3` AS `ability_type_2_3`
+              , `sd`.`float_ability_value_2_3` AS `float_ability_value_2_3`
+              , `sd`.`popularity_add_param_1` AS `popularity_add_param_1`
+              , `sd`.`popularity_add_value_1` AS `popularity_add_value_1`
+              , `sd`.`popularity_add_param_2` AS `popularity_add_param_2`
+              , `sd`.`popularity_add_value_2` AS `popularity_add_value_2`
+              , `sd`.`icon_id` AS `icon_id`
+              , `smsnp`.`need_skill_point` AS `need_skill_point`
+              , `td_name`.`text` AS `skill_name`
+              , `td_desc`.`text` AS `skill_desc`
+              , `ass`.`available_skill_set_id` AS `card_id`
+              , `smhg`.`support_card_id` AS `support_card_id`
+FROM ((((((((`skill_data` `sd`
+    JOIN `text_data` `td_name`
+        ON (`sd`.`id` = `td_name`.`index`))
+    JOIN `text_data` `td_desc`
+        ON (`sd`.`id` = `td_desc`.`index`))
+    LEFT JOIN `available_skill_set` `ass`
+        ON (`sd`.`id` = `ass`.`skill_id`))
+    LEFT JOIN `single_mode_skill_need_point` `smsnp`
+        ON (`sd`.`id` = `smsnp`.`id`))
+    LEFT JOIN `skill_set` `ss`
+        ON (`sd`.`id` = `ss`.`skill_id1`
+                AND `ss`.`skill_id2` = 0))
+    LEFT JOIN `single_mode_hint_gain` `smhg`
+        ON (`sd`.`id` = `smhg`.`hint_value_1`))
+    LEFT JOIN `support_card_data` `scd`
+        ON (`smhg`.`support_card_id` = `scd`.`id`
+                AND `smhg`.`hint_id` = `scd`.`skill_set_id`))
+    LEFT JOIN `card_data` `card_d`
+        ON (`ass`.`available_skill_set_id` = `card_d`.`available_skill_set_id`))
+WHERE `td_name`.`category` = 47
+    AND `td_desc`.`category` = 48;
 
 --
 -- Create view `vw_nice_race_info`
@@ -417,6 +486,66 @@ SELECT `text_data`.`id` AS `error_id`
      , `text_data`.`text` AS `error_text`
 FROM `text_data`
 WHERE `text_data`.`category` = 1;
+
+--
+-- Create view `vw_condensed_skill_data_info`
+--
+CREATE
+VIEW vw_condensed_skill_data_info
+AS
+SELECT `sd`.`id` AS `skill_id`
+     , `sd`.`rarity` AS `rarity`
+     , `sd`.`grade_value` AS `grade_value`
+     , `sd`.`skill_category` AS `skill_category`
+     , `sd`.`tag_id` AS `tag_id`
+     , `sd`.`condition_1` AS `condition_1`
+     , `sd`.`float_ability_time_1` AS `float_ability_time_1`
+     , `sd`.`ability_type_1_1` AS `ability_type_1_1`
+     , `sd`.`float_ability_value_1_1` AS `float_ability_value_1_1`
+     , `sd`.`ability_type_1_2` AS `ability_type_1_2`
+     , `sd`.`float_ability_value_1_2` AS `float_ability_value_1_2`
+     , `sd`.`ability_type_1_3` AS `ability_type_1_3`
+     , `sd`.`float_ability_value_1_3` AS `float_ability_value_1_3`
+     , `sd`.`condition_2` AS `condition_2`
+     , `sd`.`float_ability_time_2` AS `float_ability_time_2`
+     , `sd`.`ability_type_2_1` AS `ability_type_2_1`
+     , `sd`.`float_ability_value_2_1` AS `float_ability_value_2_1`
+     , `sd`.`ability_type_2_2` AS `ability_type_2_2`
+     , `sd`.`float_ability_value_2_2` AS `float_ability_value_2_2`
+     , `sd`.`ability_type_2_3` AS `ability_type_2_3`
+     , `sd`.`float_ability_value_2_3` AS `float_ability_value_2_3`
+     , `sd`.`popularity_add_param_1` AS `popularity_add_param_1`
+     , `sd`.`popularity_add_value_1` AS `popularity_add_value_1`
+     , `sd`.`popularity_add_param_2` AS `popularity_add_param_2`
+     , `sd`.`popularity_add_value_2` AS `popularity_add_value_2`
+     , `sd`.`icon_id` AS `icon_id`
+     , `smsnp`.`need_skill_point` AS `need_skill_point`
+     , `td_name`.`text` AS `skill_name`
+     , `td_desc`.`text` AS `skill_desc`
+     , GROUP_CONCAT(DISTINCT `ass`.`available_skill_set_id` SEPARATOR ',') AS `card_ids`
+     , GROUP_CONCAT(DISTINCT `smhg`.`support_card_id` SEPARATOR ',') AS `support_card_ids`
+FROM ((((((((`skill_data` `sd`
+    JOIN `text_data` `td_name`
+        ON (`sd`.`id` = `td_name`.`index`))
+    JOIN `text_data` `td_desc`
+        ON (`sd`.`id` = `td_desc`.`index`))
+    LEFT JOIN `available_skill_set` `ass`
+        ON (`sd`.`id` = `ass`.`skill_id`))
+    LEFT JOIN `single_mode_skill_need_point` `smsnp`
+        ON (`sd`.`id` = `smsnp`.`id`))
+    LEFT JOIN `skill_set` `ss`
+        ON (`sd`.`id` = `ss`.`skill_id1`
+                AND `ss`.`skill_id2` = 0))
+    LEFT JOIN `single_mode_hint_gain` `smhg`
+        ON (`sd`.`id` = `smhg`.`hint_value_1`))
+    LEFT JOIN `support_card_data` `scd`
+        ON (`smhg`.`support_card_id` = `scd`.`id`
+                AND `smhg`.`hint_id` = `scd`.`skill_set_id`))
+    LEFT JOIN `card_data` `card_d`
+        ON (`ass`.`available_skill_set_id` = `card_d`.`available_skill_set_id`))
+WHERE `td_name`.`category` = 47
+    AND `td_desc`.`category` = 48
+GROUP BY `sd`.`id`;
 
 --
 -- Create view `vw_basic_team_stadium_score_bonus_info`

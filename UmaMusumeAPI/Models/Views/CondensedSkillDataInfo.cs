@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class NiceSkillDataInfo
+    public partial class CondensedSkillDataInfo
     {
         public int SkillId { get; set; }
         public long Rarity { get; set; }
@@ -31,7 +31,7 @@
         public long? NeedSkillPoint { get; set; }
         public string SkillName { get; set; }
         public string SkillDesc { get; set; }
-        public long? CardId { get; set; }
-        public long? SupportCardId { get; set; }
+        public string CardIds { get; set; }
+        public string SupportCardIds { get; set; }
     }
 }

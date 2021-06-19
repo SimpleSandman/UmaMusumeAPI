@@ -274,6 +274,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<BasicSupportCardDataInfo> BasicSupportCardDataInfos { get; set; }
         public virtual DbSet<BasicSupportCardUniqueEffectInfo> BasicSupportCardUniqueEffectInfos { get; set; }
         public virtual DbSet<BasicTeamStadiumScoreBonusInfo> BasicTeamStadiumScoreBonusInfos { get; set; }
+        public virtual DbSet<CondensedSkillDataInfo> CondensedSkillDataInfos { get; set; }
         public virtual DbSet<NiceErrorMessage> NiceErrorMessages { get; set; }
         public virtual DbSet<NiceCharaBioInfo> NiceCharaBioInfos { get; set; }
         public virtual DbSet<NiceCardDataInfo> NiceCardDataInfos { get; set; }
@@ -12539,6 +12540,147 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("team_stadium_score_bonus_id");
             });
 
+            modelBuilder.Entity<CondensedSkillDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_condensed_skill_data_info");
+
+                entity.Property(e => e.AbilityType11)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ability_type_1_1");
+
+                entity.Property(e => e.AbilityType12)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ability_type_1_2");
+
+                entity.Property(e => e.AbilityType13)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ability_type_1_3");
+
+                entity.Property(e => e.AbilityType21)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ability_type_2_1");
+
+                entity.Property(e => e.AbilityType22)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ability_type_2_2");
+
+                entity.Property(e => e.AbilityType23)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ability_type_2_3");
+
+                entity.Property(e => e.CardIds)
+                    .HasColumnType("mediumtext")
+                    .HasColumnName("card_ids");
+
+                entity.Property(e => e.Condition1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("condition_1")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.Condition2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("condition_2")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.FloatAbilityTime1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_time_1");
+
+                entity.Property(e => e.FloatAbilityTime2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_time_2");
+
+                entity.Property(e => e.FloatAbilityValue11)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_value_1_1");
+
+                entity.Property(e => e.FloatAbilityValue12)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_value_1_2");
+
+                entity.Property(e => e.FloatAbilityValue13)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_value_1_3");
+
+                entity.Property(e => e.FloatAbilityValue21)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_value_2_1");
+
+                entity.Property(e => e.FloatAbilityValue22)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_value_2_2");
+
+                entity.Property(e => e.FloatAbilityValue23)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_value_2_3");
+
+                entity.Property(e => e.GradeValue)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("grade_value");
+
+                entity.Property(e => e.IconId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("icon_id");
+
+                entity.Property(e => e.NeedSkillPoint)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("need_skill_point");
+
+                entity.Property(e => e.PopularityAddParam1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("popularity_add_param_1");
+
+                entity.Property(e => e.PopularityAddParam2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("popularity_add_param_2");
+
+                entity.Property(e => e.PopularityAddValue1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("popularity_add_value_1");
+
+                entity.Property(e => e.PopularityAddValue2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("popularity_add_value_2");
+
+                entity.Property(e => e.Rarity)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("rarity");
+
+                entity.Property(e => e.SkillCategory)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("skill_category");
+
+                entity.Property(e => e.SkillDesc)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("skill_desc")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.SkillId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("skill_id");
+
+                entity.Property(e => e.SkillName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("skill_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.SupportCardIds)
+                    .HasColumnType("mediumtext")
+                    .HasColumnName("support_card_ids");
+
+                entity.Property(e => e.TagId)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("tag_id")
+                    .UseCollation("utf8mb4_unicode_ci");
+            });
+
             modelBuilder.Entity<NiceErrorMessage>(entity =>
             {
                 entity.HasNoKey();
@@ -13124,29 +13266,113 @@ namespace UmaMusumeAPI.Context
 
                 entity.ToView("vw_nice_skill_data_info");
 
-                entity.Property(e => e.AvailableSkillSetId)
+                entity.Property(e => e.AbilityType11)
                     .HasColumnType("bigint(20)")
-                    .HasColumnName("available_skill_set_id");
+                    .HasColumnName("ability_type_1_1");
+
+                entity.Property(e => e.AbilityType12)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ability_type_1_2");
+
+                entity.Property(e => e.AbilityType13)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ability_type_1_3");
+
+                entity.Property(e => e.AbilityType21)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ability_type_2_1");
+
+                entity.Property(e => e.AbilityType22)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ability_type_2_2");
+
+                entity.Property(e => e.AbilityType23)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ability_type_2_3");
 
                 entity.Property(e => e.CardId)
-                    .HasColumnType("int(11)")
+                    .HasColumnType("bigint(20)")
                     .HasColumnName("card_id");
 
-                entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id");
+                entity.Property(e => e.Condition1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("condition_1")
+                    .UseCollation("utf8mb4_unicode_ci");
 
-                entity.Property(e => e.HintId)
+                entity.Property(e => e.Condition2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("condition_2")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.FloatAbilityTime1)
                     .HasColumnType("bigint(20)")
-                    .HasColumnName("hint_id");
+                    .HasColumnName("float_ability_time_1");
+
+                entity.Property(e => e.FloatAbilityTime2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_time_2");
+
+                entity.Property(e => e.FloatAbilityValue11)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_value_1_1");
+
+                entity.Property(e => e.FloatAbilityValue12)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_value_1_2");
+
+                entity.Property(e => e.FloatAbilityValue13)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_value_1_3");
+
+                entity.Property(e => e.FloatAbilityValue21)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_value_2_1");
+
+                entity.Property(e => e.FloatAbilityValue22)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_value_2_2");
+
+                entity.Property(e => e.FloatAbilityValue23)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("float_ability_value_2_3");
+
+                entity.Property(e => e.GradeValue)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("grade_value");
+
+                entity.Property(e => e.IconId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("icon_id");
 
                 entity.Property(e => e.NeedSkillPoint)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("need_skill_point");
 
+                entity.Property(e => e.PopularityAddParam1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("popularity_add_param_1");
+
+                entity.Property(e => e.PopularityAddParam2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("popularity_add_param_2");
+
+                entity.Property(e => e.PopularityAddValue1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("popularity_add_value_1");
+
+                entity.Property(e => e.PopularityAddValue2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("popularity_add_value_2");
+
                 entity.Property(e => e.Rarity)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("rarity");
+
+                entity.Property(e => e.SkillCategory)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("skill_category");
 
                 entity.Property(e => e.SkillDesc)
                     .IsRequired()
@@ -13164,17 +13390,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("skill_name")
                     .UseCollation("utf8mb4_unicode_ci");
 
-                entity.Property(e => e.SkillSetId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("skill_set_id");
-
                 entity.Property(e => e.SupportCardId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("support_card_id");
 
-                entity.Property(e => e.UniqueEffectId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("unique_effect_id");
+                entity.Property(e => e.TagId)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("tag_id")
+                    .UseCollation("utf8mb4_unicode_ci");
             });
 
             modelBuilder.Entity<NiceSuccessionRelationMemberType>(entity =>
