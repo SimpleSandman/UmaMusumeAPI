@@ -280,6 +280,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<NiceItemNamesCommentsInfo> NiceItemNamesCommentsInfos { get; set; }
         public virtual DbSet<NiceObjectivesInfo> NiceObjectivesInfos { get; set; }
         public virtual DbSet<NiceRaceInfo> NiceRaceInfos { get; set; }
+        public virtual DbSet<NiceSkillDataInfo> NiceSkillDataInfos { get; set; }
         public virtual DbSet<NiceSuccessionRelationMemberType> NiceSuccessionRelationMemberTypes { get; set; }
         public virtual DbSet<NiceTutorialMessage> NiceTutorialMessages { get; set; }
         #endregion
@@ -13115,6 +13116,65 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Terrain)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("terrain");
+            });
+
+            modelBuilder.Entity<NiceSkillDataInfo>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_nice_skill_data_info");
+
+                entity.Property(e => e.AvailableSkillSetId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("available_skill_set_id");
+
+                entity.Property(e => e.CardId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("card_id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.HintId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("hint_id");
+
+                entity.Property(e => e.NeedSkillPoint)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("need_skill_point");
+
+                entity.Property(e => e.Rarity)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("rarity");
+
+                entity.Property(e => e.SkillDesc)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("skill_desc")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.SkillId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("skill_id");
+
+                entity.Property(e => e.SkillName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("skill_name")
+                    .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.SkillSetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("skill_set_id");
+
+                entity.Property(e => e.SupportCardId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("support_card_id");
+
+                entity.Property(e => e.UniqueEffectId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("unique_effect_id");
             });
 
             modelBuilder.Entity<NiceSuccessionRelationMemberType>(entity =>
