@@ -29,11 +29,27 @@ namespace UmaMusumeAPI.Controllers.Views
         }
 
         // GET: api/BasicCharaDataInfo/5
-        [HttpGet("{charaId}")]
+        [HttpGet("{charaId:int}")]
         public async Task<ActionResult<IEnumerable<BasicCharaDataInfo>>> GetBasicCharaDataInfo(int charaId)
         {
             var basicCharaDataInfo = await _context.BasicCharaDataInfos
                 .Where(c => c.CharaId == charaId)
+                .ToListAsync();
+
+            if (basicCharaDataInfo == null)
+            {
+                return NotFound();
+            }
+
+            return basicCharaDataInfo;
+        }
+
+        // GET: api/BasicCharaDataInfo/HorseGirl
+        [HttpGet("{charaName}")]
+        public async Task<ActionResult<IEnumerable<BasicCharaDataInfo>>> GetBasicCharaDataInfoByCharaName(string charaName)
+        {
+            var basicCharaDataInfo = await _context.BasicCharaDataInfos
+                .Where(c => c.CharaName == charaName)
                 .ToListAsync();
 
             if (basicCharaDataInfo == null)
