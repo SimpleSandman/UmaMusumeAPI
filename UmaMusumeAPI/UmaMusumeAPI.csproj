@@ -17,8 +17,8 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
-    <PackageReference Include="MySqlConnector" Version="1.3.9" />
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.1-servicing.1.ci.20210516025933" />
+    <PackageReference Include="MySqlConnector" Version="1.3.11" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
   </ItemGroup>
 
