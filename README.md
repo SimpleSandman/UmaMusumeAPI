@@ -41,38 +41,54 @@ Use the scripts in `UmaMusumeAPI/SqlScripts` to generate everything you need for
 Make sure the MariaDB database and all of its objects have the character set of `utf8mb4` and collation of `utf8mb4_generic_ci` as that is the official UTF-8 specification. There are not only so many articles on this topic, but the devs from the [Pomelo.EntityFrameworkCore.MySql](https://github.com/PomeloFoundation/Pomelo.EntityFrameworkCore.MySql) project recommends this personally from their repo's README and [in this issue](https://github.com/PomeloFoundation/Pomelo.EntityFrameworkCore.MySql/issues/1427). I'm using their EF Core library to help scaffold the models and controllers since it's far more active and stable than the Oracle equivalent.
 
 # Scaffold Commands
-*In case if you need to scaffold anything, here are some commands that may be useful:*
+*In case if you need to scaffold anything, here are some commands that may be useful*
+
+## Models and DbContext
 
 This is a single-line command using the "Package Manager Console" in Visual Studio that allows you to generate all of the models and the DbContext class.
 ```powershell
 Scaffold-DbContext 'User Id=;Password=;Host=;Database=;Character Set=utf8mb4' Pomelo.EntityFrameworkCore.MySql -OutputDir Models -ContextDir Context
 ```
 
------------
+## Controllers
 
-This command below will allow you to generate all of your controllers from all of the models in a given folder (i.e. tables and views).
+This command below will allow you to generate all of your controllers from all of the models in a given folder (i.e. tables and views). This is a modified version of [this StackOverflow answer](https://stackoverflow.com/a/54422926/2113548).
 
-This is a modified version of [this StackOverflow answer](https://stackoverflow.com/a/54422926/2113548). I personally put the code into a `.ps1` file in the same folder where `C:\Users\<YOUR_NAME_HERE>\.dotnet\tools` is located. This is because I installed the `dotnet-aspnet-codegenerator.exe` from [this NuGet page](https://www.nuget.org/packages/dotnet-aspnet-codegenerator/) with the ".NET CLI (Global)" command. 
+I personally put the code into a `.ps1` file in the same folder where `dotnet-aspnet-codegenerator.exe` is located (i.e. `C:\Users\<YOUR_NAME_HERE>\.dotnet\tools`). You can install this package from [this NuGet page](https://www.nuget.org/packages/dotnet-aspnet-codegenerator/) with the provided ".NET CLI (Global)" command. 
 
-NOTE: Please modify your repo path in the script below if it's not in the same location.
 ```powershell
-Get-ChildItem "C:\Users\<YOUR_NAME_HERE>\source\repos\UmaMusumeAPI\UmaMusumeAPI\Models\Tables" -Filter *.cs | 
+# Settings
+$projectPath = "C:\Users\<YOUR_NAME_HERE>\source\repos\UmaMusumeAPI\UmaMusumeAPI"
+$objectType = "Views"
+
+# Remember to set the environment variable before running the loop. 
+# Environment variables are session-based
+$env:MARIA_CONNECTION_STRING = "user id=;password=;host=;database=;character set=utf8mb4"
+
+# Start scripting
+$objectLocation = $projectPath + "\Models\" + $objectType
+
+# Validation only (can be commented out)
+Write-Output '$env:MARIA_CONNECTION_STRING=' $env:MARIA_CONNECTION_STRING `r`n
+
+Get-ChildItem $objectLocation -Filter *.cs | 
 Foreach-Object {
     $scaffoldCmd = 
     'dotnet-aspnet-codegenerator.exe ' + 
-    '-p "C:\Users\<YOUR_NAME_HERE>\source\repos\UmaMusumeAPI\UmaMusumeAPI\UmaMusumeAPI.csproj" ' +
+    '-p "' + $projectPath + '\UmaMusumeAPI.csproj" ' +
     'controller ' + 
     '-name ' + $_.BaseName + 'Controller ' +
     '-api ' + 
-    '-m UmaMusumeAPI.Models.Tables.' + $_.BaseName + ' ' +
+    '-m UmaMusumeAPI.Models.' + $objectType + '.' + $_.BaseName + ' ' +
     '-dc UmaMusumeDbContext ' +
     '-outDir Controllers ' +
     '-namespace UmaMusumeAPI.Controllers'
 
-    # List commands for testing:
+    # List commands for testing
     $scaffoldCmd
 
-    # Excute commands (uncomment this line):
+    # Excute commands (uncomment this line)
     #iex $scaffoldCmd
 }
+
 ```
