@@ -110,6 +110,8 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<LoveRank> LoveRanks { get; set; }
         public virtual DbSet<MainStoryData> MainStoryData { get; set; }
         public virtual DbSet<MainStoryPart> MainStoryParts { get; set; }
+        public virtual DbSet<MainStoryRaceBonus> MainStoryRaceBonus { get; set; }
+        public virtual DbSet<MainStoryRaceBonusCondition> MainStoryRaceBonusConditions { get; set; }
         public virtual DbSet<MainStoryRaceCharaData> MainStoryRaceCharaData { get; set; }
         public virtual DbSet<MainStoryRaceData> MainStoryRaceData { get; set; }
         public virtual DbSet<MiniBg> MiniBgs { get; set; }
@@ -245,6 +247,9 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<TrainedCharaTradeItem> TrainedCharaTradeItems { get; set; }
         public virtual DbSet<TrainingCuttCharaData> TrainingCuttCharaData { get; set; }
         public virtual DbSet<TrainingCuttData> TrainingCuttData { get; set; }
+        public virtual DbSet<TransferEventData> TransferEventData { get; set; }
+        public virtual DbSet<TransferEventDetail> TransferEventDetails { get; set; }
+        public virtual DbSet<TransferEventReward> TransferEventRewards { get; set; }
         public virtual DbSet<TutorialGuideData> TutorialGuideData { get; set; }
         #endregion
 
@@ -4887,6 +4892,58 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("text")
                     .HasColumnName("ui_color")
                     .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<MainStoryRaceBonus>(entity =>
+            {
+                entity.ToTable("main_story_race_bonus");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BonusType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("bonus_type");
+
+                entity.Property(e => e.BonusValue)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("bonus_value");
+
+                entity.Property(e => e.ConditionGroup)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_group");
+
+                entity.Property(e => e.GroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("group_id");
+            });
+
+            modelBuilder.Entity<MainStoryRaceBonusCondition>(entity =>
+            {
+                entity.ToTable("main_story_race_bonus_condition");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ConditionType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_type");
+
+                entity.Property(e => e.ConditionValue1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_value_1");
+
+                entity.Property(e => e.ConditionValue2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_value_2");
+
+                entity.Property(e => e.GroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("group_id");
             });
 
             modelBuilder.Entity<MainStoryRaceCharaData>(entity =>
@@ -11689,6 +11746,169 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.TargetValue)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("target_value");
+            });
+
+            modelBuilder.Entity<TransferEventData>(entity =>
+            {
+                entity.HasKey(e => e.TransferEventId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("transfer_event_data");
+
+                entity.Property(e => e.TransferEventId)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("transfer_event_id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.PreStartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pre_start_date");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<TransferEventDetail>(entity =>
+            {
+                entity.HasKey(e => e.TransferDetailId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("transfer_event_detail");
+
+                entity.Property(e => e.TransferDetailId)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("transfer_detail_id");
+
+                entity.Property(e => e.Condition1Type)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition1_type");
+
+                entity.Property(e => e.Condition1Value1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition1_value1");
+
+                entity.Property(e => e.Condition1Value2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition1_value2");
+
+                entity.Property(e => e.Condition2Type)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition2_type");
+
+                entity.Property(e => e.Condition2Value1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition2_value1");
+
+                entity.Property(e => e.Condition2Value2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition2_value2");
+
+                entity.Property(e => e.Condition3Type)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition3_type");
+
+                entity.Property(e => e.Condition3Value1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition3_value1");
+
+                entity.Property(e => e.Condition3Value2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition3_value2");
+
+                entity.Property(e => e.Condition4Type)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition4_type");
+
+                entity.Property(e => e.Condition4Value1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition4_value1");
+
+                entity.Property(e => e.Condition4Value2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition4_value2");
+
+                entity.Property(e => e.Condition5Type)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition5_type");
+
+                entity.Property(e => e.Condition5Value1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition5_value1");
+
+                entity.Property(e => e.Condition5Value2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition5_value2");
+
+                entity.Property(e => e.CoolTime)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("cool_time");
+
+                entity.Property(e => e.Difficulty)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("difficulty");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.LimitedType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("limited_type");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.TrainerType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("trainer_type");
+
+                entity.Property(e => e.TransferEventId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("transfer_event_id");
+            });
+
+            modelBuilder.Entity<TransferEventReward>(entity =>
+            {
+                entity.HasKey(e => e.TransferRewardId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("transfer_event_reward");
+
+                entity.Property(e => e.TransferRewardId)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("transfer_reward_id");
+
+                entity.Property(e => e.ItemCategory)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_category");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.ItemNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_num");
+
+                entity.Property(e => e.Odds)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("odds");
+
+                entity.Property(e => e.RewardRank)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reward_rank");
+
+                entity.Property(e => e.TransferDetailId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("transfer_detail_id");
             });
 
             modelBuilder.Entity<TutorialGuideData>(entity =>
