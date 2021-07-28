@@ -15,7 +15,7 @@ namespace UmaMusumeAPI.Context
              * then call "dotnet-aspnet-codegenerator.exe" normally.
              */
             // PM> $env:MARIA_CONNECTION_STRING='user id=;password=;host=;database=;character set=utf8mb4'
-            // PM> dotnet-aspnet-codegenerator.exe
+            // PM> dotnet-aspnet-codegenerator.exe ...
             string connectionString = Environment.GetEnvironmentVariable("MARIA_CONNECTION_STRING");
 
             var optionsBuilder = new DbContextOptionsBuilder<UmaMusumeDbContext>();

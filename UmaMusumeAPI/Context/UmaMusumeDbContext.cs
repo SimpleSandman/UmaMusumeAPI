@@ -87,6 +87,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<HomeEnvSetting> HomeEnvSettings { get; set; }
         public virtual DbSet<HomePosterData> HomePosterData { get; set; }
         public virtual DbSet<HomePropSetting> HomePropSettings { get; set; }
+        public virtual DbSet<HomeStoryHipOffset> HomeStoryHipOffsets { get; set; }
         public virtual DbSet<HomeStoryTrigger> HomeStoryTriggers { get; set; }
         public virtual DbSet<HomeWalkGroup> HomeWalkGroups { get; set; }
         public virtual DbSet<HonorData> HonorData { get; set; }
@@ -3695,6 +3696,39 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.PropId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("prop_id");
+            });
+
+            modelBuilder.Entity<HomeStoryHipOffset>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("homestory_hip_offset");
+
+                entity.HasIndex(e => new { e.StoryId, e.CharaId }, "homestory_hip_offset_0_story_id_1_chara_id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.HomeEventType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("home_event_type");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Num)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("num");
+
+                entity.Property(e => e.Offset)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("offset");
+
+                entity.Property(e => e.StoryId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_id");
             });
 
             modelBuilder.Entity<HomeStoryTrigger>(entity =>
