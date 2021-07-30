@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public class StoryEventWinBonu
+    public class StoryEventWinBonus
     {
         public int Id { get; set; }
         public long StoryEventId { get; set; }

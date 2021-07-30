@@ -85,6 +85,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<HighlightInterpolate> HighlightInterpolates { get; set; }
         public virtual DbSet<HomeCharacterType> HomeCharacterTypes { get; set; }
         public virtual DbSet<HomeEnvSetting> HomeEnvSettings { get; set; }
+        public virtual DbSet<HomeEventSchedule> HomeEventSchedules { get; set; }
         public virtual DbSet<HomePosterData> HomePosterData { get; set; }
         public virtual DbSet<HomePropSetting> HomePropSettings { get; set; }
         public virtual DbSet<HomeStoryHipOffset> HomeStoryHipOffsets { get; set; }
@@ -213,7 +214,9 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<StoryEventRouletteBingo> StoryEventRouletteBingos { get; set; }
         public virtual DbSet<StoryEventStoryData> StoryEventStoryData { get; set; }
         public virtual DbSet<StoryEventTopChara> StoryEventTopCharas { get; set; }
-        public virtual DbSet<StoryEventWinBonu> StoryEventWinBonus { get; set; }
+        public virtual DbSet<StoryEventWinBonus> StoryEventWinBonus { get; set; }
+        public virtual DbSet<StoryExtraData> StoryExtraData { get; set; }
+        public virtual DbSet<StoryExtraStoryData> StoryExtraStoryData { get; set; }
         public virtual DbSet<StoryHipOffset> StoryHipOffsets { get; set; }
         public virtual DbSet<StoryLivePosition> StoryLivePositions { get; set; }
         public virtual DbSet<StoryLiveSet> StoryLiveSets { get; set; }
@@ -3617,6 +3620,28 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Weather)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("weather");
+            });
+
+            modelBuilder.Entity<HomeEventSchedule>(entity =>
+            {
+                entity.ToTable("home_event_schedule");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.EventId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("event_id");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
             });
 
             modelBuilder.Entity<HomePosterData>(entity =>
@@ -10199,7 +10224,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("story_event_id");
             });
 
-            modelBuilder.Entity<StoryEventWinBonu>(entity =>
+            modelBuilder.Entity<StoryEventWinBonus>(entity =>
             {
                 entity.ToTable("story_event_win_bonus");
 
@@ -10225,6 +10250,121 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StoryEventId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("story_event_id");
+            });
+
+            modelBuilder.Entity<StoryExtraData>(entity =>
+            {
+                entity.HasKey(e => e.StoryExtraId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("story_extra_data");
+
+                entity.Property(e => e.StoryExtraId)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("story_extra_id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<StoryExtraStoryData>(entity =>
+            {
+                entity.ToTable("story_extra_story_data");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.AddRewardCategory1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("add_reward_category_1");
+
+                entity.Property(e => e.AddRewardCategory2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("add_reward_category_2");
+
+                entity.Property(e => e.AddRewardId1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("add_reward_id_1");
+
+                entity.Property(e => e.AddRewardId2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("add_reward_id_2");
+
+                entity.Property(e => e.AddRewardNum1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("add_reward_num_1");
+
+                entity.Property(e => e.AddRewardNum2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("add_reward_num_2");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.EpisodeIndexId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("episode_index_id");
+
+                entity.Property(e => e.NoticeEndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("notice_end_date");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.StoryExtraId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_extra_id");
+
+                entity.Property(e => e.StoryId1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_id_1");
+
+                entity.Property(e => e.StoryId2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_id_2");
+
+                entity.Property(e => e.StoryId3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_id_3");
+
+                entity.Property(e => e.StoryId4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_id_4");
+
+                entity.Property(e => e.StoryId5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_id_5");
+
+                entity.Property(e => e.StoryType1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_type_1");
+
+                entity.Property(e => e.StoryType2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_type_2");
+
+                entity.Property(e => e.StoryType3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_type_3");
+
+                entity.Property(e => e.StoryType4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_type_4");
+
+                entity.Property(e => e.StoryType5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_type_5");
             });
 
             modelBuilder.Entity<StoryHipOffset>(entity =>
