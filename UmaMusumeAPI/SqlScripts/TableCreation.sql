@@ -2195,7 +2195,7 @@ CREATE TABLE story_hip_offset
 (
     category_id BIGINT(20) NOT NULL
   , chara_id BIGINT(20) NOT NULL
-  , offset BIGINT(20) NOT NULL
+  , `offset` BIGINT(20) NOT NULL
   , PRIMARY KEY (category_id, chara_id)
 )
 ENGINE = INNODB,
@@ -5764,7 +5764,7 @@ CREATE TABLE homestory_hip_offset
   , num BIGINT(20) NOT NULL
   , story_id BIGINT(20) NOT NULL
   , chara_id BIGINT(20) NOT NULL
-  , offset BIGINT(20) NOT NULL
+  , `offset` BIGINT(20) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 16384,
