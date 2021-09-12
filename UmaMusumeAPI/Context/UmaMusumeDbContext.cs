@@ -88,9 +88,9 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<HomeEventSchedule> HomeEventSchedules { get; set; }
         public virtual DbSet<HomePosterData> HomePosterData { get; set; }
         public virtual DbSet<HomePropSetting> HomePropSettings { get; set; }
-        public virtual DbSet<HomeStoryHipOffset> HomeStoryHipOffsets { get; set; }
         public virtual DbSet<HomeStoryTrigger> HomeStoryTriggers { get; set; }
         public virtual DbSet<HomeWalkGroup> HomeWalkGroups { get; set; }
+        public virtual DbSet<HomeStoryHipOffset> HomeStoryHipOffsets { get; set; }
         public virtual DbSet<HonorData> HonorData { get; set; }
         public virtual DbSet<ItemData> ItemData { get; set; }
         public virtual DbSet<ItemExchange> ItemExchanges { get; set; }
@@ -155,6 +155,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<RaceProperDistanceRate> RaceProperDistanceRates { get; set; }
         public virtual DbSet<RaceProperGroundRate> RaceProperGroundRates { get; set; }
         public virtual DbSet<RaceProperRunningstyleRate> RaceProperRunningstyleRates { get; set; }
+        public virtual DbSet<RaceSingleModeTeamStatus> RaceSingleModeTeamStatuses { get; set; }
         public virtual DbSet<RaceTrack> RaceTracks { get; set; }
         public virtual DbSet<RaceTrophy> RaceTrophies { get; set; }
         public virtual DbSet<RaceTrophyReward> RaceTrophyRewards { get; set; }
@@ -163,6 +164,11 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<ShortEpisode> ShortEpisodes { get; set; }
         public virtual DbSet<SingleModeAnalyzeMessage> SingleModeAnalyzeMessages { get; set; }
         public virtual DbSet<SingleModeAnalyzeTicket> SingleModeAnalyzeTickets { get; set; }
+        public virtual DbSet<SingleModeAoOffset> SingleModeAoOffsets { get; set; }
+        public virtual DbSet<SingleModeAoTrainingPlate> SingleModeAoTrainingPlates { get; set; }
+        public virtual DbSet<SingleModeAoharuCuttType> SingleModeAoharuCuttTypes { get; set; }
+        public virtual DbSet<SingleModeAoharuResultCutt> SingleModeAoharuResultCutts { get; set; }
+        public virtual DbSet<SingleModeAoharuSchedule> SingleModeAoharuSchedules { get; set; }
         public virtual DbSet<SingleModeCharaEffect> SingleModeCharaEffects { get; set; }
         public virtual DbSet<SingleModeCharaGrade> SingleModeCharaGrades { get; set; }
         public virtual DbSet<SingleModeCharaProgram> SingleModeCharaPrograms { get; set; }
@@ -170,9 +176,12 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeDifficultyData> SingleModeDifficultyData { get; set; }
         public virtual DbSet<SingleModeEvaluation> SingleModeEvaluations { get; set; }
         public virtual DbSet<SingleModeEventConclusion> SingleModeEventConclusions { get; set; }
+        public virtual DbSet<SingleModeEventItemDetail> SingleModeEventItemDetails { get; set; }
         public virtual DbSet<SingleModeEventProduction> SingleModeEventProductions { get; set; }
         public virtual DbSet<SingleModeFanCount> SingleModeFanCounts { get; set; }
         public virtual DbSet<SingleModeHintGain> SingleModeHintGains { get; set; }
+        public virtual DbSet<SingleModeMemberRank> SingleModeMemberRanks { get; set; }
+        public virtual DbSet<SingleModeMemberRankPoint> SingleModeMemberRankPoints { get; set; }
         public virtual DbSet<SingleModeMessage> SingleModeMessages { get; set; }
         public virtual DbSet<SingleModeNpc> SingleModeNpcs { get; set; }
         public virtual DbSet<SingleModeOuting> SingleModeOutings { get; set; }
@@ -188,10 +197,16 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeRoute> SingleModeRoutes { get; set; }
         public virtual DbSet<SingleModeRouteRace> SingleModeRouteRaces { get; set; }
         public virtual DbSet<SingleModeScenario> SingleModeScenarios { get; set; }
+        public virtual DbSet<SingleModeScenarioRecord> SingleModeScenarioRecords { get; set; }
+        public virtual DbSet<SingleModeScoutChara> SingleModeScoutCharas { get; set; }
         public virtual DbSet<SingleModeSkillNeedPoint> SingleModeSkillNeedPoints { get; set; }
+        public virtual DbSet<SingleModeSpecialChara> SingleModeSpecialCharas { get; set; }
         public virtual DbSet<SingleModeStoryData> SingleModeStoryData { get; set; }
+        public virtual DbSet<SingleModeStoryGuide> SingleModeStoryGuides { get; set; }
         public virtual DbSet<SingleModeTagCardPo> SingleModeTagCardPos { get; set; }
+        public virtual DbSet<SingleModeTeamName> SingleModeTeamNames { get; set; }
         public virtual DbSet<SingleModeTopBg> SingleModeTopBgs { get; set; }
+        public virtual DbSet<SingleModeTopBgChara> SingleModeTopBgCharas { get; set; }
         public virtual DbSet<SingleModeTraining> SingleModeTrainings { get; set; }
         public virtual DbSet<SingleModeTrainingEffect> SingleModeTrainingEffects { get; set; }
         public virtual DbSet<SingleModeTrainingSe> SingleModeTrainingSes { get; set; }
@@ -209,7 +224,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<StoryEventData> StoryEventData { get; set; }
         public virtual DbSet<StoryEventMission> StoryEventMissions { get; set; }
         public virtual DbSet<StoryEventMissionTopChara> StoryEventMissionTopCharas { get; set; }
-        public virtual DbSet<StoryEventNicknameBonu> StoryEventNicknameBonus { get; set; }
+        public virtual DbSet<StoryEventNicknameBonus> StoryEventNicknameBonus { get; set; }
         public virtual DbSet<StoryEventPointReward> StoryEventPointRewards { get; set; }
         public virtual DbSet<StoryEventRouletteBingo> StoryEventRouletteBingos { get; set; }
         public virtual DbSet<StoryEventStoryData> StoryEventStoryData { get; set; }
@@ -232,7 +247,8 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SupportCardEffectTable> SupportCardEffectTables { get; set; }
         public virtual DbSet<SupportCardLevel> SupportCardLevels { get; set; }
         public virtual DbSet<SupportCardLimit> SupportCardLimits { get; set; }
-        public virtual DbSet<SupportCardTeamScoreBonu> SupportCardTeamScoreBonus { get; set; }
+        public virtual DbSet<SupportCardLimitBreak> SupportCardLimitBreaks { get; set; }
+        public virtual DbSet<SupportCardTeamScoreBonus> SupportCardTeamScoreBonus { get; set; }
         public virtual DbSet<SupportCardUniqueEffect> SupportCardUniqueEffects { get; set; }
         public virtual DbSet<TeamStadium> TeamStadia { get; set; }
         public virtual DbSet<TeamStadiumBgm> TeamStadiumBgms { get; set; }
@@ -2208,6 +2224,10 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("text")
                     .HasColumnName("start_date")
                     .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.Type)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("type");
             });
 
             modelBuilder.Entity<CraneGameArmSwing>(entity =>
@@ -3723,39 +3743,6 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("prop_id");
             });
 
-            modelBuilder.Entity<HomeStoryHipOffset>(entity =>
-            {
-                entity.HasNoKey();
-
-                entity.ToTable("homestory_hip_offset");
-
-                entity.HasIndex(e => new { e.StoryId, e.CharaId }, "homestory_hip_offset_0_story_id_1_chara_id");
-
-                entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id");
-
-                entity.Property(e => e.HomeEventType)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("home_event_type");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("id");
-
-                entity.Property(e => e.Num)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("num");
-
-                entity.Property(e => e.Offset)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("offset");
-
-                entity.Property(e => e.StoryId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("story_id");
-            });
-
             modelBuilder.Entity<HomeStoryTrigger>(entity =>
             {
                 entity.ToTable("home_story_trigger");
@@ -3822,6 +3809,39 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.CharaId3)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("chara_id_3");
+            });
+
+            modelBuilder.Entity<HomeStoryHipOffset>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("homestory_hip_offset");
+
+                entity.HasIndex(e => new { e.StoryId, e.CharaId }, "homestory_hip_offset_0_story_id_1_chara_id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.HomeEventType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("home_event_type");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Num)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("num");
+
+                entity.Property(e => e.Offset)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("offset");
+
+                entity.Property(e => e.StoryId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("story_id");
             });
 
             modelBuilder.Entity<HonorData>(entity =>
@@ -7593,6 +7613,24 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("proper_rate");
             });
 
+            modelBuilder.Entity<RaceSingleModeTeamStatus>(entity =>
+            {
+                entity.ToTable("race_single_mode_team_status");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.AddStatus)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("add_status");
+
+                entity.Property(e => e.TeamRankThreshold)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("team_rank_threshold");
+            });
+
             modelBuilder.Entity<RaceTrack>(entity =>
             {
                 entity.ToTable("race_track");
@@ -7861,6 +7899,136 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("grade");
             });
 
+            modelBuilder.Entity<SingleModeAoOffset>(entity =>
+            {
+                entity.ToTable("single_mode_ao_offset");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Offset1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("offset_1");
+
+                entity.Property(e => e.Offset2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("offset_2");
+
+                entity.Property(e => e.Offset3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("offset_3");
+
+                entity.Property(e => e.Offset4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("offset_4");
+
+                entity.Property(e => e.Offset5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("offset_5");
+            });
+
+            modelBuilder.Entity<SingleModeAoTrainingPlate>(entity =>
+            {
+                entity.ToTable("single_mode_ao_training_plate");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ValueMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("value_max");
+
+                entity.Property(e => e.ValueMin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("value_min");
+            });
+
+            modelBuilder.Entity<SingleModeAoharuCuttType>(entity =>
+            {
+                entity.ToTable("single_mode_aoharu_cutt_type");
+
+                entity.HasIndex(e => e.CharaType, "single_mode_aoharu_cutt_type_0_chara_type");
+
+                entity.HasIndex(e => new { e.CharaType, e.CuttType }, "single_mode_aoharu_cutt_type_0_chara_type_1_cutt_type");
+
+                entity.HasIndex(e => e.CuttType, "single_mode_aoharu_cutt_type_0_cutt_type");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_type");
+
+                entity.Property(e => e.CuttId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("cutt_id");
+
+                entity.Property(e => e.CuttType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("cutt_type");
+            });
+
+            modelBuilder.Entity<SingleModeAoharuResultCutt>(entity =>
+            {
+                entity.ToTable("single_mode_aoharu_result_cutt");
+
+                entity.HasIndex(e => e.CharaId, "single_mode_aoharu_result_cutt_0_chara_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.CuttId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("cutt_id");
+            });
+
+            modelBuilder.Entity<SingleModeAoharuSchedule>(entity =>
+            {
+                entity.ToTable("single_mode_aoharu_schedule");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.NoticeTurn1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("notice_turn_1");
+
+                entity.Property(e => e.NoticeTurn2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("notice_turn_2");
+
+                entity.Property(e => e.NoticeTurn3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("notice_turn_3");
+
+                entity.Property(e => e.NoticeTurn4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("notice_turn_4");
+
+                entity.Property(e => e.NoticeTurn5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("notice_turn_5");
+
+                entity.Property(e => e.TurnNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("turn_num");
+            });
+
             modelBuilder.Entity<SingleModeCharaEffect>(entity =>
             {
                 entity.ToTable("single_mode_chara_effect");
@@ -8024,6 +8192,30 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("chara_motion_set_id");
             });
 
+            modelBuilder.Entity<SingleModeEventItemDetail>(entity =>
+            {
+                entity.ToTable("single_mode_event_item_detail");
+
+                entity.HasIndex(e => new { e.EventCategoryId, e.ItemId }, "single_mode_event_item_detail_0_event_category_id_1_item_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EventCategoryId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("event_category_id");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.NameIndex)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("name_index");
+            });
+
             modelBuilder.Entity<SingleModeEventProduction>(entity =>
             {
                 entity.HasKey(e => e.StoryId)
@@ -8104,6 +8296,50 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.SupportCardId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("support_card_id");
+            });
+
+            modelBuilder.Entity<SingleModeMemberRank>(entity =>
+            {
+                entity.ToTable("single_mode_member_rank");
+
+                entity.HasIndex(e => e.MemberRankId, "single_mode_member_rank_0_member_rank_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.MemberRankId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("member_rank_id");
+
+                entity.Property(e => e.ValueMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("value_max");
+
+                entity.Property(e => e.ValueMin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("value_min");
+            });
+
+            modelBuilder.Entity<SingleModeMemberRankPoint>(entity =>
+            {
+                entity.ToTable("single_mode_member_rank_points");
+
+                entity.HasIndex(e => e.RankId, "single_mode_member_rank_points_0_rank_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Points)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("points");
+
+                entity.Property(e => e.RankId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("rank_id");
             });
 
             modelBuilder.Entity<SingleModeMessage>(entity =>
@@ -8673,6 +8909,150 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("turn_set_id");
             });
 
+            modelBuilder.Entity<SingleModeScenarioRecord>(entity =>
+            {
+                entity.ToTable("single_mode_scenario_record");
+
+                entity.HasIndex(e => e.ScenarioId, "single_mode_scenario_record_0_scenario_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.NeedRecordMin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("need_record_min");
+
+                entity.Property(e => e.RewardItemCategory)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reward_item_category");
+
+                entity.Property(e => e.RewardItemId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reward_item_id");
+
+                entity.Property(e => e.RewardNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reward_num");
+
+                entity.Property(e => e.ScenarioId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("scenario_id");
+            });
+
+            modelBuilder.Entity<SingleModeScoutChara>(entity =>
+            {
+                entity.ToTable("single_mode_scout_chara");
+
+                entity.HasIndex(e => e.CharaId, "single_mode_scout_chara_0_chara_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.Guts)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts");
+
+                entity.Property(e => e.GutsLimit)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts_limit");
+
+                entity.Property(e => e.LiveDressId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("live_dress_id");
+
+                entity.Property(e => e.Pow)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pow");
+
+                entity.Property(e => e.PowLimit)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pow_limit");
+
+                entity.Property(e => e.ProperDistanceLong)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_distance_long");
+
+                entity.Property(e => e.ProperDistanceMiddle)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_distance_middle");
+
+                entity.Property(e => e.ProperDistanceMile)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_distance_mile");
+
+                entity.Property(e => e.ProperDistanceShort)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_distance_short");
+
+                entity.Property(e => e.ProperGroundDirt)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_ground_dirt");
+
+                entity.Property(e => e.ProperGroundTurf)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_ground_turf");
+
+                entity.Property(e => e.ProperRunningStyleNige)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_running_style_nige");
+
+                entity.Property(e => e.ProperRunningStyleOikomi)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_running_style_oikomi");
+
+                entity.Property(e => e.ProperRunningStyleSashi)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_running_style_sashi");
+
+                entity.Property(e => e.ProperRunningStyleSenko)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_running_style_senko");
+
+                entity.Property(e => e.RaceDressId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_dress_id");
+
+                entity.Property(e => e.Speed)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed");
+
+                entity.Property(e => e.SpeedLimit)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed_limit");
+
+                entity.Property(e => e.Stamina)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina");
+
+                entity.Property(e => e.StaminaLimit)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina_limit");
+
+                entity.Property(e => e.SupportCardId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("support_card_id");
+
+                entity.Property(e => e.TagSupportCardId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("tag_support_card_id");
+
+                entity.Property(e => e.Wiz)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wiz");
+
+                entity.Property(e => e.WizLimit)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wiz_limit");
+            });
+
             modelBuilder.Entity<SingleModeSkillNeedPoint>(entity =>
             {
                 entity.ToTable("single_mode_skill_need_point");
@@ -8693,6 +9073,28 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StatusValue)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("status_value");
+            });
+
+            modelBuilder.Entity<SingleModeSpecialChara>(entity =>
+            {
+                entity.ToTable("single_mode_special_chara");
+
+                entity.HasIndex(e => e.ScenarioId, "single_mode_special_chara_0_scenario_id");
+
+                entity.HasIndex(e => new { e.ScenarioId, e.CharaId }, "single_mode_special_chara_0_scenario_id_1_chara_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.ScenarioId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("scenario_id");
             });
 
             modelBuilder.Entity<SingleModeStoryData>(entity =>
@@ -8785,6 +9187,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("support_chara_id");
             });
 
+            modelBuilder.Entity<SingleModeStoryGuide>(entity =>
+            {
+                entity.HasKey(e => e.StoryId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("single_mode_story_guide");
+
+                entity.Property(e => e.StoryId)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("story_id");
+
+                entity.Property(e => e.GuideId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guide_id");
+            });
+
             modelBuilder.Entity<SingleModeTagCardPo>(entity =>
             {
                 entity.ToTable("single_mode_tag_card_pos");
@@ -8829,6 +9248,20 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("support_card_id");
             });
 
+            modelBuilder.Entity<SingleModeTeamName>(entity =>
+            {
+                entity.ToTable("single_mode_team_name");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+            });
+
             modelBuilder.Entity<SingleModeTopBg>(entity =>
             {
                 entity.ToTable("single_mode_top_bg");
@@ -8851,6 +9284,46 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Month)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("month");
+            });
+
+            modelBuilder.Entity<SingleModeTopBgChara>(entity =>
+            {
+                entity.ToTable("single_mode_top_bg_chara");
+
+                entity.HasIndex(e => new { e.BgId, e.ScenarioId }, "single_mode_top_bg_chara_0_bg_id_1_scenario_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BgId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("bg_id");
+
+                entity.Property(e => e.GroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("group_id");
+
+                entity.Property(e => e.MotionSetId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("motion_set_id");
+
+                entity.Property(e => e.PosX)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pos_x");
+
+                entity.Property(e => e.PosZ)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pos_z");
+
+                entity.Property(e => e.RotationY)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("rotation_y");
+
+                entity.Property(e => e.ScenarioId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("scenario_id");
             });
 
             modelBuilder.Entity<SingleModeTraining>(entity =>
@@ -9942,7 +10415,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("story_event_id");
             });
 
-            modelBuilder.Entity<StoryEventNicknameBonu>(entity =>
+            modelBuilder.Entity<StoryEventNicknameBonus>(entity =>
             {
                 entity.ToTable("story_event_nickname_bonus");
 
@@ -11163,7 +11636,33 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("limit_4");
             });
 
-            modelBuilder.Entity<SupportCardTeamScoreBonu>(entity =>
+            modelBuilder.Entity<SupportCardLimitBreak>(entity =>
+            {
+                entity.ToTable("support_card_limit_break");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.DispOrder)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("disp_order");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.ItemNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_num");
+
+                entity.Property(e => e.Rarity)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("rarity");
+            });
+
+            modelBuilder.Entity<SupportCardTeamScoreBonus>(entity =>
             {
                 entity.ToTable("support_card_team_score_bonus");
 

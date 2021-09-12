@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Tables
 {
-    public class SupportCardTeamScoreBonu
+    public class SupportCardTeamScoreBonus
     {
         public int Id { get; set; }
         public long Level { get; set; }

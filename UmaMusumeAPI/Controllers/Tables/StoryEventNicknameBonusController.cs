@@ -11,34 +11,34 @@ namespace UmaMusumeAPI.Controllers.Tables
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class StoryEventNicknameBonuController : ControllerBase
+    public class StoryEventNicknameBonusController : ControllerBase
     {
         private readonly UmaMusumeDbContext _context;
 
-        public StoryEventNicknameBonuController(UmaMusumeDbContext context)
+        public StoryEventNicknameBonusController(UmaMusumeDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/StoryEventNicknameBonu
+        // GET: api/StoryEventNicknameBonus
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<StoryEventNicknameBonu>>> GetStoryEventNicknameBonus()
+        public async Task<ActionResult<IEnumerable<StoryEventNicknameBonus>>> GetStoryEventNicknameBonus()
         {
             return await _context.StoryEventNicknameBonus.ToListAsync();
         }
 
-        // GET: api/StoryEventNicknameBonu/5
+        // GET: api/StoryEventNicknameBonus/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<StoryEventNicknameBonu>> GetStoryEventNicknameBonu(int id)
+        public async Task<ActionResult<StoryEventNicknameBonus>> GetStoryEventNicknameBonu(int id)
         {
-            var storyEventNicknameBonu = await _context.StoryEventNicknameBonus.FindAsync(id);
+            var storyEventNicknameBonus = await _context.StoryEventNicknameBonus.FindAsync(id);
 
-            if (storyEventNicknameBonu == null)
+            if (storyEventNicknameBonus == null)
             {
                 return NotFound();
             }
 
-            return storyEventNicknameBonu;
+            return storyEventNicknameBonus;
         }
     }
 }
