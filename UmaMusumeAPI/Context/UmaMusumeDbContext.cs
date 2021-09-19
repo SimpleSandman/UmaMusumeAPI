@@ -262,6 +262,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<TeamStadiumStandMotion> TeamStadiumStandMotions { get; set; }
         public virtual DbSet<TeamStadiumSupportText> TeamStadiumSupportTexts { get; set; }
         public virtual DbSet<TextData> TextData { get; set; }
+        public virtual DbSet<TextDataEnglish> TextDataEnglish { get; set; }
         public virtual DbSet<TimezoneData> TimezoneData { get; set; }
         public virtual DbSet<Topic> Topics { get; set; }
         public virtual DbSet<TrainedCharaTradeItem> TrainedCharaTradeItems { get; set; }
@@ -12254,6 +12255,25 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("text")
                     .HasColumnName("text")
                     .UseCollation("utf8mb4_unicode_ci");
+            });
+
+            modelBuilder.Entity<TextDataEnglish>(entity =>
+            {
+                entity.ToTable("text_data_english");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Text)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("text");
+
+                entity.Property(e => e.Translation)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("translation");
             });
 
             modelBuilder.Entity<TimezoneData>(entity =>
