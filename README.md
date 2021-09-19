@@ -3,11 +3,14 @@ This is a community REST API based on [Uma Musume: Pretty Derby](https://umamusu
 
 I've written a [loader app](https://github.com/SimpleSandman/UmaMusumeLoadSqlData) that allows you to load the `master.mdb`'s data from the [DMM version](https://dmg.umamusume.jp/) of this game into either SQL Server or MySQL/MariaDB databases. The reason for both is due to change in database specifications midway through development, but I didn't want to let my hard work go to waste.
 
+## Features
+
 This API not only has endpoints to the tables, but I've created views for basic info for frequently used tables. I've even implemented stored procedures for a few particular calculations like parent compatibility and recommendations.
 
 The overall endpoint structure is:
 - Raw table data (imported straight from the `master.mdb`)
 - Basic indexing of frequently used tables (endpoints prefixed with `Basic`)
+- Condensed data of foreign keys to allow easier reporting (endpoints prefixed with `Condensed`)
 - Nicely displayed data of frequently used info (endpoints prefixed with `Nice`)
 - Stored procedures (endpoints prefixed with `Sp`)
 
@@ -18,6 +21,10 @@ The stored procedures are:
   - This is the recommended parents based on the child
 - [SpSuccessionPointSum](https://github.com/SimpleSandman/UmaMusumeAPI/blob/master/UmaMusumeAPI/SqlScripts/StoredProcedureCreation.sql#L36)
   - This is the overall calculation based on the child's compatibility with the proposed parents and grandparents
+
+## Translation Endpoint
+
+I've created the `TextDataEnglish` endpoint by importing [FabulousCupcake's translation repo](https://github.com/FabulousCupcake/umamusume-db-translate/tree/master/src/data) that holds `.csv` files of translated data based on the original `text_data` table.
 
 # Initial Setup
 Under `UmaMusumeAPI/Properties/launchSettings.json`, set the `MARIA_CONNECTION_STRING` environment variable to your MariaDB database for "development" and on the hosting site's config variables section for "release".
@@ -45,9 +52,14 @@ Make sure the MariaDB database and all of its objects have the character set of 
 
 ## Models and DbContext
 
-This is a single-line command using the "Package Manager Console" in Visual Studio that allows you to generate all of the models and the DbContext class.
+This is a single-line command using the "Package Manager Console" in Visual Studio that allows you to generate **ALL** of the models and the DbContext class.
 ```powershell
 Scaffold-DbContext 'User Id=;Password=;Host=;Database=;Character Set=utf8mb4' Pomelo.EntityFrameworkCore.MySql -OutputDir Models -ContextDir Context
+```
+
+If you only need the model and context of a **SINGLE** table, here's the single-line command for that.
+```powershell
+Scaffold-DbContext 'User Id=;Password=;Host=;Database=;Character Set=utf8mb4' Pomelo.EntityFrameworkCore.MySql -OutputDir Models -ContextDir Context -T <TABLE_NAME_HERE>
 ```
 
 ## Controllers
