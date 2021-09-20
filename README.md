@@ -24,7 +24,7 @@ The stored procedures are:
 
 ## Translation Endpoint
 
-I've created the `TextDataEnglish` endpoint by importing [FabulousCupcake's translation repo](https://github.com/FabulousCupcake/umamusume-db-translate/tree/master/src/data) that holds `.csv` files of translated data based on the original `text_data` table.
+I've created the `TextDataEnglish` [endpoint](https://www.tracenacademy.com/api/TextDataEnglish) by importing [FabulousCupcake's translation repo](https://github.com/FabulousCupcake/umamusume-db-translate/tree/master/src/data) that holds `.csv` files of translated data based on the original `text_data` table.
 
 # Initial Setup
 Under `UmaMusumeAPI/Properties/launchSettings.json`, set the `MARIA_CONNECTION_STRING` environment variable to your MariaDB database for "development" and on the hosting site's config variables section for "release".
