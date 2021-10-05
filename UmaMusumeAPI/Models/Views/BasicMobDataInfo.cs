@@ -9,5 +9,6 @@
         public long DressId { get; set; }
         public long DressColorId { get; set; }
         public string MobName { get; set; }
+        public string MobNameEnglish { get; set; }
     }
 }

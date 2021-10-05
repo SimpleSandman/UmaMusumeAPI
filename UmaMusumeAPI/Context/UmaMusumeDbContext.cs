@@ -12253,13 +12253,15 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Text)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("text")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("text");
             });
 
             modelBuilder.Entity<TextDataEnglish>(entity =>
             {
                 entity.ToTable("text_data_english");
+
+                entity.HasIndex(e => e.Text, "text_data_english_text")
+                    .HasAnnotation("MySql:IndexPrefixLength", new[] { 768 });
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -12646,13 +12648,19 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.CardName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("card_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("card_name");
+
+                entity.Property(e => e.CardNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("card_name_english");
 
                 entity.Property(e => e.CardTitle)
                     .HasColumnType("text")
-                    .HasColumnName("card_title")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("card_title");
+
+                entity.Property(e => e.CardTitleEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("card_title_english");
 
                 entity.Property(e => e.CharaId)
                     .HasColumnType("bigint(20)")
@@ -12700,8 +12708,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.CharaCv)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("chara_cv")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("chara_cv");
+
+                entity.Property(e => e.CharaCvEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("chara_cv_english");
 
                 entity.Property(e => e.CharaId)
                     .HasColumnType("int(11)")
@@ -12710,8 +12721,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.CharaName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("chara_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("chara_name");
+
+                entity.Property(e => e.CharaNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("chara_name_english");
 
                 entity.Property(e => e.CharaStartDate)
                     .HasColumnType("datetime")
@@ -12750,8 +12764,11 @@ namespace UmaMusumeAPI.Context
 
                 entity.Property(e => e.Text)
                     .HasColumnType("text")
-                    .HasColumnName("text")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("text");
+
+                entity.Property(e => e.TextEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("text_english");
             });
 
             modelBuilder.Entity<BasicGachaDataInfo>(entity =>
@@ -12795,8 +12812,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.GachaText)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("gacha_text")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("gacha_text");
+
+                entity.Property(e => e.GachaTextEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("gacha_text_english");
 
                 entity.Property(e => e.OnlyOnceFlag)
                     .HasColumnType("bigint(20)")
@@ -12816,8 +12836,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.GiftMessage)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("gift_message")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("gift_message");
+
+                entity.Property(e => e.GiftMessageEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("gift_message_english");
 
                 entity.Property(e => e.GiftMessageId)
                     .HasColumnType("int(11)")
@@ -12838,19 +12861,22 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("group_id");
 
-                entity.Property(e => e.ItemId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("item_id");
-
                 entity.Property(e => e.ItemCategory)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("item_category");
 
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id");
+
                 entity.Property(e => e.ItemName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("item_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("item_name");
+
+                entity.Property(e => e.ItemNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("item_name_english");
 
                 entity.Property(e => e.ItemPlaceId)
                     .HasColumnType("bigint(20)")
@@ -12871,14 +12897,17 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("datetime")
                     .HasColumnName("end_date");
 
+                entity.Property(e => e.ItemExchangeCondition)
+                    .HasColumnType("text")
+                    .HasColumnName("item_exchange_condition");
+
+                entity.Property(e => e.ItemExchangeConditionEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("item_exchange_condition_english");
+
                 entity.Property(e => e.ItemExchangeId)
                     .HasColumnType("int(11)")
                     .HasColumnName("item_exchange_id");
-
-                entity.Property(e => e.ItemExchangeCondition)
-                    .HasColumnType("text")
-                    .HasColumnName("item_exchange_condition")
-                    .UseCollation("utf8mb4_unicode_ci");
 
                 entity.Property(e => e.ItemExchangeTopId)
                     .HasColumnType("bigint(20)")
@@ -12898,8 +12927,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.ItemExchangeDescription)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("item_exchange_description")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("item_exchange_description");
+
+                entity.Property(e => e.ItemExchangeDescriptionEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("item_exchange_description_english");
 
                 entity.Property(e => e.ItemExchangeDispOrder)
                     .HasColumnType("bigint(20)")
@@ -12908,8 +12940,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.ItemExchangeName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("item_exchange_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("item_exchange_name");
+
+                entity.Property(e => e.ItemExchangeNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("item_exchange_name_english");
 
                 entity.Property(e => e.ItemExchangeTopId)
                     .HasColumnType("int(11)")
@@ -12933,8 +12968,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.SongName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("song_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("song_name");
+
+                entity.Property(e => e.SongNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("song_name_english");
 
                 entity.Property(e => e.StartDate)
                     .HasColumnType("datetime")
@@ -12962,8 +13000,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.LoginBonusName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("login_bonus_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("login_bonus_name");
+
+                entity.Property(e => e.LoginBonusNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("login_bonus_name_english");
 
                 entity.Property(e => e.StartDate)
                     .HasColumnType("datetime")
@@ -12984,15 +13025,18 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("episode_index");
 
-                entity.Property(e => e.MainStoryId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("main_story_id");
-
                 entity.Property(e => e.MainStoryEpisodeTitle)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("main_story_episode_title")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("main_story_episode_title");
+
+                entity.Property(e => e.MainStoryEpisodeTitleEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("main_story_episode_title_english");
+
+                entity.Property(e => e.MainStoryId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("main_story_id");
 
                 entity.Property(e => e.PartId)
                     .HasColumnType("bigint(20)")
@@ -13020,8 +13064,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.MissionName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mission_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mission_name");
+
+                entity.Property(e => e.MissionNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("mission_name_english");
 
                 entity.Property(e => e.MissionType)
                     .HasColumnType("bigint(20)")
@@ -13065,8 +13112,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.MobName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mob_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mob_name");
+
+                entity.Property(e => e.MobNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("mob_name_english");
             });
 
             modelBuilder.Entity<BasicPieceDataInfo>(entity =>
@@ -13078,8 +13128,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.CharacterPieceName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("character_piece_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("character_piece_name");
+
+                entity.Property(e => e.CharacterPieceNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("character_piece_name_english");
 
                 entity.Property(e => e.EndDate)
                     .HasColumnType("datetime")
@@ -13115,8 +13168,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.RaceName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("race_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("race_name");
+
+                entity.Property(e => e.RaceNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("race_name_english");
             });
 
             modelBuilder.Entity<BasicRaceInstanceInfo>(entity =>
@@ -13136,8 +13192,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.RaceInstanceName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("race_instance_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("race_instance_name");
+
+                entity.Property(e => e.RaceInstanceNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("race_instance_name_english");
             });
 
             modelBuilder.Entity<BasicRaceTrackInfo>(entity =>
@@ -13153,8 +13212,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.RaceTrackName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("race_track_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("race_track_name");
+
+                entity.Property(e => e.RaceTrackNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("race_track_name_english");
             });
 
             modelBuilder.Entity<BasicSingleModeCharaGradeInfo>(entity =>
@@ -13178,8 +13240,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.SingleModeCharaGradeName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("single_mode_chara_grade_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("single_mode_chara_grade_name");
+
+                entity.Property(e => e.SingleModeCharaGradeNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("single_mode_chara_grade_name_english");
 
                 entity.Property(e => e.WinNum)
                     .HasColumnType("bigint(20)")
@@ -13216,21 +13281,27 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("skill_category");
 
+                entity.Property(e => e.SkillDesc)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("skill_desc");
+
+                entity.Property(e => e.SkillDescEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("skill_desc_english");
+
                 entity.Property(e => e.SkillId)
                     .HasColumnType("int(11)")
                     .HasColumnName("skill_id");
 
-                entity.Property(e => e.SkillDesc)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("skill_desc")
-                    .UseCollation("utf8mb4_unicode_ci");
-
                 entity.Property(e => e.SkillName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("skill_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("skill_name");
+
+                entity.Property(e => e.SkillNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("skill_name_english");
             });
 
             modelBuilder.Entity<BasicStoryEventDataInfo>(entity =>
@@ -13270,8 +13341,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StoryEventTitle)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("story_event_title")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("story_event_title");
+
+                entity.Property(e => e.StoryEventTitleEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("story_event_title_english");
             });
 
             modelBuilder.Entity<BasicStoryEventMissionInfo>(entity =>
@@ -13311,8 +13385,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StoryEventMissionName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("story_event_mission_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("story_event_mission_name");
+
+                entity.Property(e => e.StoryEventMissionNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("story_event_mission_name_english");
             });
 
             modelBuilder.Entity<BasicStoryEventStoryDataInfo>(entity =>
@@ -13325,10 +13402,6 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("episode_index_id");
 
-                entity.Property(e => e.StoryEventStoryId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("story_event_story_id");
-
                 entity.Property(e => e.NeedPoint)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("need_point");
@@ -13337,15 +13410,22 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("datetime")
                     .HasColumnName("start_date");
 
+                entity.Property(e => e.StoryEventEpisodeTitleEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("story_event_episode_title_english");
+
                 entity.Property(e => e.StoryEventEpisodeTitle)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("story_event_episode_title")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("story_event_episode_title");
 
                 entity.Property(e => e.StoryEventId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("story_event_id");
+
+                entity.Property(e => e.StoryEventStoryId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_event_story_id");
             });
 
             modelBuilder.Entity<BasicSupportCardDataInfo>(entity =>
@@ -13369,14 +13449,20 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.SupportCardName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("support_card_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("support_card_name");
+
+                entity.Property(e => e.SupportCardNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("support_card_name_english");
 
                 entity.Property(e => e.SupportCardTitle)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("support_card_title")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("support_card_title");
+
+                entity.Property(e => e.SupportCardTitleEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("support_card_title_english");
             });
 
             modelBuilder.Entity<BasicSupportCardUniqueEffectInfo>(entity =>
@@ -13392,8 +13478,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.ScoreBonusName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("score_bonus_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("score_bonus_name");
+
+                entity.Property(e => e.ScoreBonusNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("score_bonus_name_english");
 
                 entity.Property(e => e.SupportCardUniqueEffectId)
                     .HasColumnType("int(11)")
@@ -13441,8 +13530,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.ScoreBonusName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("score_bonus_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("score_bonus_name");
+
+                entity.Property(e => e.ScoreBonusNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("score_bonus_name_english");
 
                 entity.Property(e => e.ScoreRate)
                     .HasColumnType("bigint(20)")
@@ -13451,6 +13543,34 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.TeamStadiumScoreBonusId)
                     .HasColumnType("int(11)")
                     .HasColumnName("team_stadium_score_bonus_id");
+            });
+
+            modelBuilder.Entity<BasicTextDataEnglish>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToView("vw_basic_text_data_english");
+
+                entity.Property(e => e.Category)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("category");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Index)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("index");
+
+                entity.Property(e => e.Text)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("text");
+
+                entity.Property(e => e.Translation)
+                    .HasColumnType("text")
+                    .HasColumnName("translation");
             });
 
             modelBuilder.Entity<CondensedSkillDataInfo>(entity =>
@@ -13570,8 +13690,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.SkillDesc)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("skill_desc")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("skill_desc");
+
+                entity.Property(e => e.SkillDescEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("skill_desc_english");
 
                 entity.Property(e => e.SkillId)
                     .HasColumnType("int(11)")
@@ -13580,8 +13703,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.SkillName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("skill_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("skill_name");
+
+                entity.Property(e => e.SkillNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("skill_name_english");
 
                 entity.Property(e => e.SupportCardIds)
                     .HasColumnType("mediumtext")
@@ -13611,8 +13737,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.ErrorText)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("error_text")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("error_text");
+
+                entity.Property(e => e.ErrorTextEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("error_text_english");
             });
 
             modelBuilder.Entity<NiceCardDataInfo>(entity =>
@@ -13661,6 +13790,10 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("aptitude_turf");
 
+                entity.Property(e => e.CardId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("card_id");
+
                 entity.Property(e => e.CharaId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("chara_id");
@@ -13688,10 +13821,6 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Guts5)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("guts5");
-
-                entity.Property(e => e.CardId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("card_id");
 
                 entity.Property(e => e.LimitedChara)
                     .HasColumnType("bigint(20)")
@@ -13828,6 +13957,10 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("chara_category");
 
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
                 entity.Property(e => e.EarRandomTimeMax)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("ear_random_time_max");
@@ -13839,10 +13972,6 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Height)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("height");
-
-                entity.Property(e => e.CharaId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("chara_id");
 
                 entity.Property(e => e.ImageColorMain)
                     .IsRequired()
@@ -14024,13 +14153,19 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.ItemComment)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("item_comment")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("item_comment");
 
                 entity.Property(e => e.ItemComment2)
                     .HasColumnType("text")
-                    .HasColumnName("item_comment_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("item_comment_2");
+
+                entity.Property(e => e.ItemComment2English)
+                    .HasColumnType("text")
+                    .HasColumnName("item_comment_2_english");
+
+                entity.Property(e => e.ItemCommentEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("item_comment_english");
 
                 entity.Property(e => e.ItemId)
                     .HasColumnType("int(11)")
@@ -14039,8 +14174,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.ItemName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("item_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("item_name");
+
+                entity.Property(e => e.ItemNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("item_name_english");
             });
 
             modelBuilder.Entity<NiceObjectivesInfo>(entity =>
@@ -14073,10 +14211,6 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("determine_race_flag");
 
-                entity.Property(e => e.RouteId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("route_id");
-
                 entity.Property(e => e.RaceInstanceId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("race_instance_id");
@@ -14088,6 +14222,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.RaceType)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("race_type");
+
+                entity.Property(e => e.RouteId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("route_id");
 
                 entity.Property(e => e.SortId)
                     .HasColumnType("bigint(20)")
@@ -14148,10 +14286,6 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("half");
 
-                entity.Property(e => e.RouteId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("route_id");
-
                 entity.Property(e => e.Month)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("month");
@@ -14159,6 +14293,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.RaceId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("race_id");
+
+                entity.Property(e => e.RaceInstanceId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("race_instance_id");
 
                 entity.Property(e => e.RaceTrackId)
                     .HasColumnType("bigint(20)")
@@ -14290,8 +14428,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.SkillDesc)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("skill_desc")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("skill_desc");
+
+                entity.Property(e => e.SkillDescEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("skill_desc_english");
 
                 entity.Property(e => e.SkillId)
                     .HasColumnType("int(11)")
@@ -14300,8 +14441,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.SkillName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("skill_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("skill_name");
+
+                entity.Property(e => e.SkillNameEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("skill_name_english");
 
                 entity.Property(e => e.SupportCardId)
                     .HasColumnType("bigint(20)")
@@ -14354,8 +14498,11 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.TutorialText)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tutorial_text")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tutorial_text");
+
+                entity.Property(e => e.TutorialTextEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("tutorial_text_english");
             });
             #endregion
 

@@ -1315,7 +1315,7 @@ CREATE TABLE tutorial_guide_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 199,
+AVG_ROW_LENGTH = 195,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -1524,10 +1524,16 @@ CREATE TABLE text_data_english
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AUTO_INCREMENT = 8315,
-AVG_ROW_LENGTH = 312,
+AUTO_INCREMENT = 8442,
+AVG_ROW_LENGTH = 305,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
+
+--
+-- Create index `text_data_english_text` on table `text_data_english`
+--
+ALTER TABLE text_data_english
+ADD INDEX text_data_english_text (text (768));
 
 --
 -- Create table `text_data`
@@ -1537,11 +1543,11 @@ CREATE TABLE text_data
     id BIGINT(20) NOT NULL
   , category INT(11) NOT NULL
   , `index` INT(11) NOT NULL
-  , text TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL
+  , text TEXT NOT NULL
   , PRIMARY KEY (category, `index`)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 153,
+AVG_ROW_LENGTH = 168,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -1845,7 +1851,7 @@ CREATE TABLE support_card_unique_effect
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 192,
+AVG_ROW_LENGTH = 182,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -1883,6 +1889,7 @@ CREATE TABLE support_card_limit_break
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 8192,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -1953,7 +1960,7 @@ CREATE TABLE support_card_effect_table
   , PRIMARY KEY (id, type)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 156,
+AVG_ROW_LENGTH = 151,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -1985,7 +1992,7 @@ CREATE TABLE support_card_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 319,
+AVG_ROW_LENGTH = 309,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2044,7 +2051,7 @@ CREATE TABLE succession_relation_member
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 68,
+AVG_ROW_LENGTH = 66,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2111,7 +2118,7 @@ CREATE TABLE succession_factor_effect
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 93,
+AVG_ROW_LENGTH = 91,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2141,7 +2148,7 @@ CREATE TABLE succession_factor
   , PRIMARY KEY (factor_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 105,
+AVG_ROW_LENGTH = 103,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2163,7 +2170,7 @@ CREATE TABLE story_still
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 315,
+AVG_ROW_LENGTH = 309,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2312,7 +2319,7 @@ CREATE TABLE story_hip_offset
 (
     category_id BIGINT(20) NOT NULL
   , chara_id BIGINT(20) NOT NULL
-  , offset BIGINT(20) NOT NULL
+  , `offset` BIGINT(20) NOT NULL
   , PRIMARY KEY (category_id, chara_id)
 )
 ENGINE = INNODB,
@@ -2382,7 +2389,7 @@ CREATE TABLE story_event_win_bonus
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 167,
+AVG_ROW_LENGTH = 128,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2413,7 +2420,7 @@ CREATE TABLE story_event_top_chara
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 348,
+AVG_ROW_LENGTH = 273,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2450,7 +2457,7 @@ CREATE TABLE story_event_story_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 409,
+AVG_ROW_LENGTH = 341,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2483,7 +2490,7 @@ CREATE TABLE story_event_roulette_bingo
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 819,
+AVG_ROW_LENGTH = 682,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2513,7 +2520,7 @@ CREATE TABLE story_event_point_reward
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 152,
+AVG_ROW_LENGTH = 122,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2535,7 +2542,7 @@ CREATE TABLE story_event_nickname_bonus
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 1092,
+AVG_ROW_LENGTH = 910,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2570,7 +2577,7 @@ CREATE TABLE story_event_mission_top_chara
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 1638,
+AVG_ROW_LENGTH = 1365,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2604,7 +2611,7 @@ CREATE TABLE story_event_mission
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 304,
+AVG_ROW_LENGTH = 253,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2629,7 +2636,7 @@ CREATE TABLE story_event_data
   , PRIMARY KEY (story_event_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 3276,
+AVG_ROW_LENGTH = 2730,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2653,7 +2660,7 @@ CREATE TABLE story_event_bonus_support_card
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 227,
+AVG_ROW_LENGTH = 188,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2688,7 +2695,7 @@ CREATE TABLE story_event_bonus_card
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 606,
+AVG_ROW_LENGTH = 512,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2718,7 +2725,7 @@ CREATE TABLE story_event_bingo_reward
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 256,
+AVG_ROW_LENGTH = 186,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2757,7 +2764,7 @@ CREATE TABLE skill_set
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 240,
+AVG_ROW_LENGTH = 238,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -2888,7 +2895,7 @@ CREATE TABLE skill_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 658,
+AVG_ROW_LENGTH = 641,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -3167,7 +3174,7 @@ CREATE TABLE single_mode_tag_card_pos
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 106,
+AVG_ROW_LENGTH = 109,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -3217,7 +3224,7 @@ CREATE TABLE single_mode_story_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 357,
+AVG_ROW_LENGTH = 343,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -3296,7 +3303,7 @@ CREATE TABLE single_mode_skill_need_point
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 128,
+AVG_ROW_LENGTH = 125,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -3334,7 +3341,7 @@ CREATE TABLE single_mode_scout_chara
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 442,
+AVG_ROW_LENGTH = 428,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -3407,7 +3414,7 @@ CREATE TABLE single_mode_route_race
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 204,
+AVG_ROW_LENGTH = 200,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -3429,7 +3436,7 @@ CREATE TABLE single_mode_route
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 420,
+AVG_ROW_LENGTH = 409,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -3448,7 +3455,7 @@ CREATE TABLE single_mode_rival
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 113,
+AVG_ROW_LENGTH = 109,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -3684,7 +3691,7 @@ CREATE TABLE single_mode_npc
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 246,
+AVG_ROW_LENGTH = 244,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -3773,7 +3780,7 @@ CREATE TABLE single_mode_hint_gain
   , hint_value_2 BIGINT(20) NOT NULL
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 119,
+AVG_ROW_LENGTH = 115,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -3816,7 +3823,7 @@ CREATE TABLE single_mode_event_production
   , PRIMARY KEY (story_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 334,
+AVG_ROW_LENGTH = 327,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -3853,7 +3860,7 @@ CREATE TABLE single_mode_event_conclusion
   , PRIMARY KEY (id, chara_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 105,
+AVG_ROW_LENGTH = 102,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -3906,7 +3913,7 @@ CREATE TABLE single_mode_conclusion_set
   , conclusion_id BIGINT(20) NOT NULL
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 108,
+AVG_ROW_LENGTH = 105,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -4849,7 +4856,7 @@ CREATE TABLE race_bgm_cutin_extension_time
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 186,
+AVG_ROW_LENGTH = 178,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -4974,7 +4981,7 @@ CREATE TABLE piece_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 334,
+AVG_ROW_LENGTH = 315,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -5014,7 +5021,7 @@ CREATE TABLE note_profile
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 910,
+AVG_ROW_LENGTH = 819,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -5878,7 +5885,7 @@ CREATE TABLE item_place
   , transition_value BIGINT(20) NOT NULL
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 143,
+AVG_ROW_LENGTH = 137,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -5973,7 +5980,7 @@ CREATE TABLE item_exchange
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 277,
+AVG_ROW_LENGTH = 272,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -6017,7 +6024,7 @@ CREATE TABLE item_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 197,
+AVG_ROW_LENGTH = 188,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -6051,7 +6058,7 @@ CREATE TABLE honor_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 239,
+AVG_ROW_LENGTH = 234,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -6067,7 +6074,7 @@ CREATE TABLE home_walk_group
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 420,
+AVG_ROW_LENGTH = 409,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -6088,7 +6095,7 @@ CREATE TABLE home_story_trigger
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 246,
+AVG_ROW_LENGTH = 239,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -6139,7 +6146,7 @@ CREATE TABLE home_poster_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 2048,
+AVG_ROW_LENGTH = 1820,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -6220,7 +6227,7 @@ CREATE TABLE homestory_hip_offset
   , num BIGINT(20) NOT NULL
   , story_id BIGINT(20) NOT NULL
   , chara_id BIGINT(20) NOT NULL
-  , offset BIGINT(20) NOT NULL
+  , `offset` BIGINT(20) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -6275,7 +6282,7 @@ CREATE TABLE gacha_top_bg
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 327,
+AVG_ROW_LENGTH = 303,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -6377,7 +6384,7 @@ CREATE TABLE gacha_exchange
   , PRIMARY KEY (gacha_id, card_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 202,
+AVG_ROW_LENGTH = 188,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -6440,7 +6447,7 @@ CREATE TABLE gacha_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 983,
+AVG_ROW_LENGTH = 910,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -6460,7 +6467,7 @@ CREATE TABLE gacha_available
   , PRIMARY KEY (gacha_id, card_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 100,
+AVG_ROW_LENGTH = 90,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -6567,7 +6574,7 @@ CREATE TABLE event_motion_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 129,
+AVG_ROW_LENGTH = 148,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -6609,7 +6616,7 @@ CREATE TABLE dress_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 541,
+AVG_ROW_LENGTH = 520,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7008,7 +7015,7 @@ CREATE TABLE chara_story_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 240,
+AVG_ROW_LENGTH = 234,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7150,7 +7157,7 @@ CREATE TABLE chara_category_motion
   , PRIMARY KEY (chara_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 420,
+AVG_ROW_LENGTH = 409,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7175,7 +7182,7 @@ CREATE TABLE character_system_text
   , PRIMARY KEY (character_id, voice_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 734,
+AVG_ROW_LENGTH = 569,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7202,7 +7209,7 @@ CREATE TABLE character_system_lottery
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 107,
+AVG_ROW_LENGTH = 108,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7529,7 +7536,7 @@ CREATE TABLE champions_news_chara_comment
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 128,
+AVG_ROW_LENGTH = 124,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7632,7 +7639,7 @@ CREATE TABLE card_talent_upgrade
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 334,
+AVG_ROW_LENGTH = 393,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7680,7 +7687,7 @@ CREATE TABLE card_rarity_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 487,
+AVG_ROW_LENGTH = 462,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7718,7 +7725,7 @@ CREATE TABLE card_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 341,
+AVG_ROW_LENGTH = 321,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7753,7 +7760,7 @@ CREATE TABLE campaign_data
   , PRIMARY KEY (campaign_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 334,
+AVG_ROW_LENGTH = 297,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7779,7 +7786,7 @@ CREATE TABLE campaign_chara_story_schedule
   , story_id BIGINT(20) NOT NULL
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 178,
+AVG_ROW_LENGTH = 157,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7812,7 +7819,7 @@ CREATE TABLE banner_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 195,
+AVG_ROW_LENGTH = 182,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7840,7 +7847,7 @@ CREATE TABLE background_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 248,
+AVG_ROW_LENGTH = 242,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7862,7 +7869,7 @@ CREATE TABLE available_skill_set
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 148,
+AVG_ROW_LENGTH = 137,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7951,7 +7958,7 @@ CREATE TABLE announce_support_card
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 1170,
+AVG_ROW_LENGTH = 1024,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7969,7 +7976,7 @@ CREATE TABLE announce_event
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 5461,
+AVG_ROW_LENGTH = 4096,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -7987,7 +7994,7 @@ CREATE TABLE announce_data
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 496,
+AVG_ROW_LENGTH = 442,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;
 
@@ -8002,6 +8009,6 @@ CREATE TABLE announce_character
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 862,
+AVG_ROW_LENGTH = 780,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci;

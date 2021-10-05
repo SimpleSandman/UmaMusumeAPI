@@ -9,5 +9,6 @@ namespace UmaMusumeAPI.Models.Views
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string CharacterPieceName { get; set; }
+        public string CharacterPieceNameEnglish { get; set; }
     }
 }

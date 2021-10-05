@@ -9,5 +9,6 @@
         public long ConditionValue2 { get; set; }
         public long ScoreRate { get; set; }
         public string ScoreBonusName { get; set; }
+        public string ScoreBonusNameEnglish { get; set; }
     }
 }

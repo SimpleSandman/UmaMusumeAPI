@@ -9,5 +9,6 @@
         public long Type1 { get; set; }
         public long Value1 { get; set; }
         public string ScoreBonusName { get; set; }
+        public string ScoreBonusNameEnglish { get; set; }
     }
 }

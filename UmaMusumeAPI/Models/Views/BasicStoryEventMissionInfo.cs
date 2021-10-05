@@ -10,5 +10,6 @@
         public long ItemId { get; set; }
         public long ItemNum { get; set; }
         public string StoryEventMissionName { get; set; }
+        public string StoryEventMissionNameEnglish { get; set; }
     }
 }

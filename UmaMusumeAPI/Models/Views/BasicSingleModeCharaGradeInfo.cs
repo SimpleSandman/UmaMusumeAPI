@@ -7,5 +7,6 @@
         public long RunNum { get; set; }
         public long NeedFanCount { get; set; }
         public string SingleModeCharaGradeName { get; set; }
+        public string SingleModeCharaGradeNameEnglish { get; set; }
     }
 }

@@ -5,5 +5,6 @@
         public int RaceInstanceId { get; set; }
         public long RaceId { get; set; }
         public string RaceInstanceName { get; set; }
+        public string RaceInstanceNameEnglish { get; set; }
     }
 }

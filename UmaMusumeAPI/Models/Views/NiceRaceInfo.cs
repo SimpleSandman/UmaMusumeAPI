@@ -2,7 +2,7 @@
 {
     public class NiceRaceInfo
     {
-        public int RouteId { get; set; }
+        public int RaceInstanceId { get; set; }
         public long RaceId { get; set; }
         public long? Group { get; set; }
         public long? Grade { get; set; }

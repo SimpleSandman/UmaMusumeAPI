@@ -10,5 +10,6 @@ namespace UmaMusumeAPI.Models.Views
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string LoginBonusName { get; set; }
+        public string LoginBonusNameEnglish { get; set; }
     }
 }

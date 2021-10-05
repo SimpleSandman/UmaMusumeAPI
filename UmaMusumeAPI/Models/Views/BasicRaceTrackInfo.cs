@@ -4,5 +4,6 @@
     {
         public int RaceTrackId { get; set; }
         public string RaceTrackName { get; set; }
+        public string RaceTrackNameEnglish { get; set; }
     }
 }

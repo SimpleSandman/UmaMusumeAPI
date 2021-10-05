@@ -15,5 +15,6 @@ namespace UmaMusumeAPI.Models.Views
         public DateTime? FreeCampaignStartDate { get; set; }
         public DateTime? FreeCampaignEndDate { get; set; }
         public string GachaText { get; set; }
+        public string GachaTextEnglish { get; set; }
     }
 }
