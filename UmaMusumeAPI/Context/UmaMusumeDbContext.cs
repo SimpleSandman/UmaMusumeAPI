@@ -26,6 +26,8 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<BannerData> BannerData { get; set; }
         public virtual DbSet<CampaignCharaStorySchedule> CampaignCharaStorySchedules { get; set; }
         public virtual DbSet<CampaignData> CampaignData { get; set; }
+        public virtual DbSet<CampaignSingleRaceAddData> CampaignSingleRaceAddData { get; set; }
+        public virtual DbSet<CampaignSingleRaceAddReward> CampaignSingleRaceAddRewards { get; set; }
         public virtual DbSet<CardData> CardData { get; set; }
         public virtual DbSet<CardRarityData> CardRarityData { get; set; }
         public virtual DbSet<CardTalentUpgrade> CardTalentUpgrades { get; set; }
@@ -98,6 +100,12 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<ItemGroup> ItemGroups { get; set; }
         public virtual DbSet<ItemPack> ItemPacks { get; set; }
         public virtual DbSet<ItemPlace> ItemPlaces { get; set; }
+        public virtual DbSet<JukeboxCharaTagData> JukeboxCharaTagData { get; set; }
+        public virtual DbSet<JukeboxComment> JukeboxComments { get; set; }
+        public virtual DbSet<JukeboxMotionData> JukeboxMotionData { get; set; }
+        public virtual DbSet<JukeboxMusicData> JukeboxMusicData { get; set; }
+        public virtual DbSet<JukeboxReactionData> JukeboxReactionData { get; set; }
+        public virtual DbSet<JukeboxRequestData> JukeboxRequestData { get; set; }
         public virtual DbSet<LegendRace> LegendRaces { get; set; }
         public virtual DbSet<LegendRaceBilling> LegendRaceBillings { get; set; }
         public virtual DbSet<LegendRaceBossNpc> LegendRaceBossNpcs { get; set; }
@@ -173,7 +181,11 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeCharaGrade> SingleModeCharaGrades { get; set; }
         public virtual DbSet<SingleModeCharaProgram> SingleModeCharaPrograms { get; set; }
         public virtual DbSet<SingleModeConclusionSet> SingleModeConclusionSets { get; set; }
+        public virtual DbSet<SingleModeDifficultyBox> SingleModeDifficultyBoxes { get; set; }
+        public virtual DbSet<SingleModeDifficultyBoxGauge> SingleModeDifficultyBoxGauges { get; set; }
+        public virtual DbSet<SingleModeDifficultyBoxReward> SingleModeDifficultyBoxRewards { get; set; }
         public virtual DbSet<SingleModeDifficultyData> SingleModeDifficultyData { get; set; }
+        public virtual DbSet<SingleModeDifficultyMode> SingleModeDifficultyModes { get; set; }
         public virtual DbSet<SingleModeEvaluation> SingleModeEvaluations { get; set; }
         public virtual DbSet<SingleModeEventConclusion> SingleModeEventConclusions { get; set; }
         public virtual DbSet<SingleModeEventItemDetail> SingleModeEventItemDetails { get; set; }
@@ -736,6 +748,66 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.UserShow)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("user_show");
+            });
+
+            modelBuilder.Entity<CampaignSingleRaceAddData>(entity =>
+            {
+                entity.ToTable("campaign_single_race_add_data");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.RaceAdditionalId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_additional_id");
+
+                entity.Property(e => e.RaceAdditionalRewardId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_additional_reward_id");
+
+                entity.Property(e => e.RaceProgramId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_program_id");
+
+                entity.Property(e => e.RewardLimit)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reward_limit");
+            });
+
+            modelBuilder.Entity<CampaignSingleRaceAddReward>(entity =>
+            {
+                entity.ToTable("campaign_single_race_add_reward");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ItemCategory)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_category");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.RaceAdditionalRewardId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_additional_reward_id");
+
+                entity.Property(e => e.RewardRate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reward_rate");
+
+                entity.Property(e => e.RewardType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reward_type");
+
+                entity.Property(e => e.RewardValue)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reward_value");
             });
 
             modelBuilder.Entity<CardData>(entity =>
@@ -4161,6 +4233,220 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.TransitionValue)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("transition_value");
+            });
+
+            modelBuilder.Entity<JukeboxCharaTagData>(entity =>
+            {
+                entity.ToTable("jukebox_chara_tag_data");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.Tag)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("tag");
+            });
+
+            modelBuilder.Entity<JukeboxComment>(entity =>
+            {
+                entity.ToTable("jukebox_comment");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.CommentId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("comment_id");
+
+                entity.Property(e => e.CommentType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("comment_type");
+
+                entity.Property(e => e.VariationType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("variation_type");
+
+                entity.Property(e => e.VariationValue)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("variation_value");
+            });
+
+            modelBuilder.Entity<JukeboxMotionData>(entity =>
+            {
+                entity.ToTable("jukebox_motion_data");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.MotionId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("motion_id");
+
+                entity.Property(e => e.SongType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("song_type");
+            });
+
+            modelBuilder.Entity<JukeboxMusicData>(entity =>
+            {
+                entity.HasKey(e => e.MusicId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("jukebox_music_data");
+
+                entity.HasIndex(e => e.Sort, "sort")
+                    .IsUnique();
+
+                entity.Property(e => e.MusicId)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("music_id");
+
+                entity.Property(e => e.BgmCueNameGamesize)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cue_name_gamesize");
+
+                entity.Property(e => e.BgmCueNameShort)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cue_name_short");
+
+                entity.Property(e => e.BgmCuesheetNameGamesize)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cuesheet_name_gamesize");
+
+                entity.Property(e => e.BgmCuesheetNameShort)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cuesheet_name_short");
+
+                entity.Property(e => e.ConditionType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_type");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.IsHidden)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("is_hidden");
+
+                entity.Property(e => e.LampAnimation)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("lamp_animation");
+
+                entity.Property(e => e.LampColor)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("lamp_color");
+
+                entity.Property(e => e.NameTextureLength)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("name_texture_length");
+
+                entity.Property(e => e.RequestType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("request_type");
+
+                entity.Property(e => e.ShortLength)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("short_length");
+
+                entity.Property(e => e.SongType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("song_type");
+
+                entity.Property(e => e.Sort)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("sort");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.VersionType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("version_type");
+            });
+
+            modelBuilder.Entity<JukeboxReactionData>(entity =>
+            {
+                entity.ToTable("jukebox_reaction_data");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.ReactionCharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reaction_chara_id");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<JukeboxRequestData>(entity =>
+            {
+                entity.ToTable("jukebox_request_data");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.MusicId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("music_id");
+
+                entity.Property(e => e.RequestType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("request_type");
+
+                entity.Property(e => e.RequestValue)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("request_value");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
             });
 
             modelBuilder.Entity<LegendRace>(entity =>
@@ -8119,6 +8405,115 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("story_id");
             });
 
+            modelBuilder.Entity<SingleModeDifficultyBox>(entity =>
+            {
+                entity.HasKey(e => new { e.RewardSetId, e.BoxStep })
+                    .HasName("PRIMARY")
+                    .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+
+                entity.ToTable("single_mode_difficulty_box");
+
+                entity.Property(e => e.RewardSetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("reward_set_id");
+
+                entity.Property(e => e.BoxStep)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("box_step");
+
+                entity.Property(e => e.BoxId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("box_id");
+
+                entity.Property(e => e.BoxOpenCondition)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("box_open_condition");
+
+                entity.Property(e => e.BoxType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("box_type");
+
+                entity.Property(e => e.CueNameIcon)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("cue_name_icon");
+
+                entity.Property(e => e.CueNamePopout)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("cue_name_popout");
+
+                entity.Property(e => e.CuesheetNameIcon)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("cuesheet_name_icon");
+
+                entity.Property(e => e.CuesheetNamePopout)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("cuesheet_name_popout");
+            });
+
+            modelBuilder.Entity<SingleModeDifficultyBoxGauge>(entity =>
+            {
+                entity.ToTable("single_mode_difficulty_box_gauge");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.DifficultyId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("difficulty_id");
+
+                entity.Property(e => e.GaugeRate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("gauge_rate");
+
+                entity.Property(e => e.ResultMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("result_max");
+
+                entity.Property(e => e.ResultMin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("result_min");
+            });
+
+            modelBuilder.Entity<SingleModeDifficultyBoxReward>(entity =>
+            {
+                entity.ToTable("single_mode_difficulty_box_reward");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BoxId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("box_id");
+
+                entity.Property(e => e.BoxNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("box_num");
+
+                entity.Property(e => e.ItemCategory)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_category");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.ItemNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_num");
+
+                entity.Property(e => e.Rate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("rate");
+            });
+
             modelBuilder.Entity<SingleModeDifficultyData>(entity =>
             {
                 entity.HasKey(e => new { e.DifficultyId, e.Difficulty })
@@ -8150,6 +8545,85 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.MaxNum)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("max_num");
+            });
+
+            modelBuilder.Entity<SingleModeDifficultyMode>(entity =>
+            {
+                entity.HasKey(e => e.DifficultyId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("single_mode_difficulty_mode");
+
+                entity.Property(e => e.DifficultyId)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("difficulty_id");
+
+                entity.Property(e => e.BgmCueName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cue_name");
+
+                entity.Property(e => e.BgmCuesheetName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cuesheet_name");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.DressId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("dress_id");
+
+                entity.Property(e => e.GaugeMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("gauge_max");
+
+                entity.Property(e => e.GaugeMotion)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("gauge_motion");
+
+                entity.Property(e => e.GaugeMotion2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("gauge_motion2");
+
+                entity.Property(e => e.GaugeMotion3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("gauge_motion3");
+
+                entity.Property(e => e.GaugeUp)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("gauge_up");
+
+                entity.Property(e => e.GuideId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guide_id");
+
+                entity.Property(e => e.InMotion)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("in_motion");
+
+                entity.Property(e => e.PlayMotion)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("play_motion");
+
+                entity.Property(e => e.PopoutMotion)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("popout_motion");
+
+                entity.Property(e => e.RewardSetId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reward_set_id");
+
+                entity.Property(e => e.RewardType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reward_type");
+
+                entity.Property(e => e.StandMotion)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stand_motion");
             });
 
             modelBuilder.Entity<SingleModeEvaluation>(entity =>
