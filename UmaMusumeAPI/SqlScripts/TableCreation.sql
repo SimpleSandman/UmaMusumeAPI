@@ -2949,6 +2949,8 @@ CREATE TABLE skill_data
   , popularity_add_value_2 BIGINT(20) NOT NULL
   , disp_order BIGINT(20) NOT NULL
   , icon_id BIGINT(20) NOT NULL
+  , plate_type BIGINT(20) NOT NULL
+  , disable_singlemode BIGINT(20) NOT NULL
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
