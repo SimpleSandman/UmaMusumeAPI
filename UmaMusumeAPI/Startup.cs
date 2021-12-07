@@ -38,6 +38,16 @@ namespace UmaMusumeAPI
                     //.EnableDetailedErrors()       // with debugging (remove for production).
             );
 
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(30);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+                options.Cookie.Name = ".UmaMusumeAPI.Session";
+            });
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -132,6 +142,7 @@ namespace UmaMusumeAPI
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
