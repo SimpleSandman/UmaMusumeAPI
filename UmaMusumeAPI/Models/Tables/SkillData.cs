@@ -63,5 +63,7 @@
         public long PopularityAddValue2 { get; set; }
         public long DispOrder { get; set; }
         public long IconId { get; set; }
+        public long PlateType { get; set; }
+        public long DisableSinglemode { get; set; }
     }
 }

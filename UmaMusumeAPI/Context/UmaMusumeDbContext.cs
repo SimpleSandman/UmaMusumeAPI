@@ -10264,6 +10264,10 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("condition_2")
                     .UseCollation("utf8mb4_unicode_ci");
 
+                entity.Property(e => e.DisableSinglemode)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("disable_singlemode");
+
                 entity.Property(e => e.DispOrder)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("disp_order");
@@ -10331,6 +10335,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.IconId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("icon_id");
+
+                entity.Property(e => e.PlateType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("plate_type");
 
                 entity.Property(e => e.PopularityAddParam1)
                     .HasColumnType("bigint(20)")
