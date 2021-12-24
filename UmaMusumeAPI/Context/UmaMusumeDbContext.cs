@@ -23,6 +23,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<AudioStoryEffect> AudioStoryEffects { get; set; }
         public virtual DbSet<AvailableSkillSet> AvailableSkillSets { get; set; }
         public virtual DbSet<BackgroundData> BackgroundData { get; set; }
+        public virtual DbSet<BackgroundOffsetData> BackgroundOffsetData { get; set; }
         public virtual DbSet<BannerData> BannerData { get; set; }
         public virtual DbSet<CampaignCharaStorySchedule> CampaignCharaStorySchedules { get; set; }
         public virtual DbSet<CampaignData> CampaignData { get; set; }
@@ -82,6 +83,8 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<GachaFreeCampaign> GachaFreeCampaigns { get; set; }
         public virtual DbSet<GachaPiece> GachaPieces { get; set; }
         public virtual DbSet<GachaPrizeOdd> GachaPrizeOdds { get; set; }
+        public virtual DbSet<GachaStockCampaign> GachaStockCampaigns { get; set; }
+        public virtual DbSet<GachaStockDetail> GachaStockDetails { get; set; }
         public virtual DbSet<GachaTopBg> GachaTopBgs { get; set; }
         public virtual DbSet<GiftMessage> GiftMessages { get; set; }
         public virtual DbSet<HighlightInterpolate> HighlightInterpolates { get; set; }
@@ -278,6 +281,10 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<TimezoneData> TimezoneData { get; set; }
         public virtual DbSet<Topic> Topics { get; set; }
         public virtual DbSet<TrainedCharaTradeItem> TrainedCharaTradeItems { get; set; }
+        public virtual DbSet<TrainingChallengeExam> TrainingChallengeExams { get; set; }
+        public virtual DbSet<TrainingChallengeMaster> TrainingChallengeMasters { get; set; }
+        public virtual DbSet<TrainingChallengeScore> TrainingChallengeScores { get; set; }
+        public virtual DbSet<TrainingChallengeTotalScore> TrainingChallengeTotalScores { get; set; }
         public virtual DbSet<TrainingCuttCharaData> TrainingCuttCharaData { get; set; }
         public virtual DbSet<TrainingCuttData> TrainingCuttData { get; set; }
         public virtual DbSet<TransferEventData> TransferEventData { get; set; }
@@ -616,6 +623,49 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("text")
                     .HasColumnName("sheet_name")
                     .UseCollation("utf8mb4_unicode_ci");
+
+                entity.Property(e => e.Width)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("width");
+            });
+
+            modelBuilder.Entity<BackgroundOffsetData>(entity =>
+            {
+                entity.ToTable("background_offset_data");
+
+                entity.HasIndex(e => new { e.BgId, e.BgSub }, "background_offset_data_0_bg_id_1_bg_sub");
+
+                entity.HasIndex(e => new { e.BgId, e.BgSub, e.OffsetId }, "bg_id")
+                    .IsUnique();
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BgId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("bg_id");
+
+                entity.Property(e => e.BgSub)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("bg_sub");
+
+                entity.Property(e => e.Height)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("height");
+
+                entity.Property(e => e.OffsetId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("offset_id");
+
+                entity.Property(e => e.PosX)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pos_x");
+
+                entity.Property(e => e.PosY)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pos_y");
 
                 entity.Property(e => e.Width)
                     .HasColumnType("bigint(20)")
@@ -3567,6 +3617,52 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.PieceNum)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("piece_num");
+            });
+
+            modelBuilder.Entity<GachaStockCampaign>(entity =>
+            {
+                entity.ToTable("gacha_stock_campaign");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<GachaStockDetail>(entity =>
+            {
+                entity.ToTable("gacha_stock_detail");
+
+                entity.HasIndex(e => e.GachaStockId, "gacha_stock_detail_0_gacha_stock_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.GachaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("gacha_id");
+
+                entity.Property(e => e.GachaStockId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("gacha_stock_id");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
             });
 
             modelBuilder.Entity<GachaTopBg>(entity =>
@@ -12846,6 +12942,224 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.TrainedCharaRank)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("trained_chara_rank");
+            });
+
+            modelBuilder.Entity<TrainingChallengeExam>(entity =>
+            {
+                entity.ToTable("training_challenge_exam");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ExellentScore)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("exellent_score");
+
+                entity.Property(e => e.ExellentScoreRewardCoin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("exellent_score_reward_coin");
+
+                entity.Property(e => e.FeatureType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("feature_type");
+
+                entity.Property(e => e.GoodScore)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("good_score");
+
+                entity.Property(e => e.GoodScoreRewardCoin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("good_score_reward_coin");
+
+                entity.Property(e => e.GreatScore)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("great_score");
+
+                entity.Property(e => e.GreatScoreRewardCoin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("great_score_reward_coin");
+
+                entity.Property(e => e.ItemCategory1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_category_1");
+
+                entity.Property(e => e.ItemCategory2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_category_2");
+
+                entity.Property(e => e.ItemCategory3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_category_3");
+
+                entity.Property(e => e.ItemCategory4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_category_4");
+
+                entity.Property(e => e.ItemCategory5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_category_5");
+
+                entity.Property(e => e.ItemId1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id_1");
+
+                entity.Property(e => e.ItemId2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id_2");
+
+                entity.Property(e => e.ItemId3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id_3");
+
+                entity.Property(e => e.ItemId4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id_4");
+
+                entity.Property(e => e.ItemId5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id_5");
+
+                entity.Property(e => e.ItemNum1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_num_1");
+
+                entity.Property(e => e.ItemNum2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_num_2");
+
+                entity.Property(e => e.ItemNum3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_num_3");
+
+                entity.Property(e => e.ItemNum4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_num_4");
+
+                entity.Property(e => e.ItemNum5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_num_5");
+
+                entity.Property(e => e.ScoreGroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("score_group_id");
+            });
+
+            modelBuilder.Entity<TrainingChallengeMaster>(entity =>
+            {
+                entity.ToTable("training_challenge_master");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.EndResultDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_result_date");
+
+                entity.Property(e => e.ExExamId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ex_exam_id");
+
+                entity.Property(e => e.ExamId1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("exam_id_1");
+
+                entity.Property(e => e.ExamId2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("exam_id_2");
+
+                entity.Property(e => e.ExamId3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("exam_id_3");
+
+                entity.Property(e => e.ExamId4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("exam_id_4");
+
+                entity.Property(e => e.ExamId5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("exam_id_5");
+
+                entity.Property(e => e.FreeExamId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("free_exam_id");
+
+                entity.Property(e => e.ShopId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("shop_id");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.StartResultDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_result_date");
+
+                entity.Property(e => e.TargetMainScenario)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("target_main_scenario");
+            });
+
+            modelBuilder.Entity<TrainingChallengeScore>(entity =>
+            {
+                entity.ToTable("training_challenge_score");
+
+                entity.HasIndex(e => e.ScoreGroupId, "training_challenge_score_0_score_group_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BonusScore)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("bonus_score");
+
+                entity.Property(e => e.Data)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("data");
+
+                entity.Property(e => e.DispOrder)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("disp_order");
+
+                entity.Property(e => e.RewardCoin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reward_coin");
+
+                entity.Property(e => e.ScoreGroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("score_group_id");
+
+                entity.Property(e => e.ScoreType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("score_type");
+            });
+
+            modelBuilder.Entity<TrainingChallengeTotalScore>(entity =>
+            {
+                entity.ToTable("training_challenge_total_score");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.RewardCoin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("reward_coin");
+
+                entity.Property(e => e.TotalScore)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("total_score");
             });
 
             modelBuilder.Entity<TrainingCuttCharaData>(entity =>
