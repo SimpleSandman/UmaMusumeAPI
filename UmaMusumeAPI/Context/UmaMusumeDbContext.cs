@@ -32,6 +32,12 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<CardData> CardData { get; set; }
         public virtual DbSet<CardRarityData> CardRarityData { get; set; }
         public virtual DbSet<CardTalentUpgrade> CardTalentUpgrades { get; set; }
+        public virtual DbSet<ChallengeMatchBossNpc> ChallengeMatchBossNpcs { get; set; }
+        public virtual DbSet<ChallengeMatchData> ChallengeMatchData { get; set; }
+        public virtual DbSet<ChallengeMatchRace> ChallengeMatchRaces { get; set; }
+        public virtual DbSet<ChallengeMatchRaceNpc> ChallengeMatchRaceNpcs { get; set; }
+        public virtual DbSet<ChallengeMatchRawPoint> ChallengeMatchRawPoints { get; set; }
+        public virtual DbSet<ChallengeMatchRetryBonus> ChallengeMatchRetryBonus { get; set; }
         public virtual DbSet<ChampionsBgm> ChampionsBgms { get; set; }
         public virtual DbSet<ChampionsEntryReward> ChampionsEntryRewards { get; set; }
         public virtual DbSet<ChampionsEvaluationRate> ChampionsEvaluationRates { get; set; }
@@ -1147,6 +1153,477 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.TalentLevel)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("talent_level");
+            });
+
+            modelBuilder.Entity<ChallengeMatchBossNpc>(entity =>
+            {
+                entity.ToTable("challenge_match_boss_npc");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CardRarityDataId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("card_rarity_data_id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.Guts)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts");
+
+                entity.Property(e => e.NicknameId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("nickname_id");
+
+                entity.Property(e => e.Post)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("post");
+
+                entity.Property(e => e.Pow)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pow");
+
+                entity.Property(e => e.ProperDistanceLong)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_distance_long");
+
+                entity.Property(e => e.ProperDistanceMiddle)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_distance_middle");
+
+                entity.Property(e => e.ProperDistanceMile)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_distance_mile");
+
+                entity.Property(e => e.ProperDistanceShort)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_distance_short");
+
+                entity.Property(e => e.ProperGroundDirt)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_ground_dirt");
+
+                entity.Property(e => e.ProperGroundTurf)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_ground_turf");
+
+                entity.Property(e => e.ProperRunningStyleNige)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_running_style_nige");
+
+                entity.Property(e => e.ProperRunningStyleOikomi)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_running_style_oikomi");
+
+                entity.Property(e => e.ProperRunningStyleSashi)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_running_style_sashi");
+
+                entity.Property(e => e.ProperRunningStyleSenko)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_running_style_senko");
+
+                entity.Property(e => e.RaceDressId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_dress_id");
+
+                entity.Property(e => e.SkillSetId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("skill_set_id");
+
+                entity.Property(e => e.Speed)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed");
+
+                entity.Property(e => e.Stamina)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina");
+
+                entity.Property(e => e.Wiz)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wiz");
+            });
+
+            modelBuilder.Entity<ChallengeMatchData>(entity =>
+            {
+                entity.HasKey(e => e.ChallengeMatchId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("challenge_match_data");
+
+                entity.Property(e => e.ChallengeMatchId)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("challenge_match_id");
+
+                entity.Property(e => e.AnnounceId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("announce_id");
+
+                entity.Property(e => e.BonusFactorId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("bonus_factor_id");
+
+                entity.Property(e => e.BonusSkillId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("bonus_skill_id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.EndingDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ending_date");
+
+                entity.Property(e => e.ItemExchangeTopId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_exchange_top_id");
+
+                entity.Property(e => e.NoticeDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("notice_date");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<ChallengeMatchRace>(entity =>
+            {
+                entity.ToTable("challenge_match_race");
+
+                entity.HasIndex(e => e.ChallengeMatchId, "challenge_match_race_0_challenge_match_id");
+
+                entity.HasIndex(e => e.RaceInstanceId, "challenge_match_race_0_race_instance_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ChallengeMatchBgId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("challenge_match_bg_id");
+
+                entity.Property(e => e.ChallengeMatchBgSubId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("challenge_match_bg_sub_id");
+
+                entity.Property(e => e.ChallengeMatchId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("challenge_match_id");
+
+                entity.Property(e => e.ChallengeMatchRaceBossNpcId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("challenge_match_race_boss_npc_id");
+
+                entity.Property(e => e.CostRp)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("cost_rp");
+
+                entity.Property(e => e.Difficulty)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("difficulty");
+
+                entity.Property(e => e.DispOrder)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("disp_order");
+
+                entity.Property(e => e.DropRewardOddsId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("drop_reward_odds_id");
+
+                entity.Property(e => e.FirstClearItemCategory1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("first_clear_item_category_1");
+
+                entity.Property(e => e.FirstClearItemCategory2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("first_clear_item_category_2");
+
+                entity.Property(e => e.FirstClearItemCategory3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("first_clear_item_category_3");
+
+                entity.Property(e => e.FirstClearItemId1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("first_clear_item_id_1");
+
+                entity.Property(e => e.FirstClearItemId2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("first_clear_item_id_2");
+
+                entity.Property(e => e.FirstClearItemId3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("first_clear_item_id_3");
+
+                entity.Property(e => e.FirstClearItemNum1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("first_clear_item_num_1");
+
+                entity.Property(e => e.FirstClearItemNum2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("first_clear_item_num_2");
+
+                entity.Property(e => e.FirstClearItemNum3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("first_clear_item_num_3");
+
+                entity.Property(e => e.Ground)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("ground");
+
+                entity.Property(e => e.PickUpItemCategory1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_category_1");
+
+                entity.Property(e => e.PickUpItemCategory2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_category_2");
+
+                entity.Property(e => e.PickUpItemCategory3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_category_3");
+
+                entity.Property(e => e.PickUpItemCategory4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_category_4");
+
+                entity.Property(e => e.PickUpItemCategory5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_category_5");
+
+                entity.Property(e => e.PickUpItemId1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_id_1");
+
+                entity.Property(e => e.PickUpItemId2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_id_2");
+
+                entity.Property(e => e.PickUpItemId3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_id_3");
+
+                entity.Property(e => e.PickUpItemId4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_id_4");
+
+                entity.Property(e => e.PickUpItemId5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_id_5");
+
+                entity.Property(e => e.PickUpItemNum1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_num_1");
+
+                entity.Property(e => e.PickUpItemNum2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_num_2");
+
+                entity.Property(e => e.PickUpItemNum3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_num_3");
+
+                entity.Property(e => e.PickUpItemNum4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_num_4");
+
+                entity.Property(e => e.PickUpItemNum5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pick_up_item_num_5");
+
+                entity.Property(e => e.RaceAppearanceRate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_appearance_rate");
+
+                entity.Property(e => e.RaceInstanceId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_instance_id");
+
+                entity.Property(e => e.RaceType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_type");
+
+                entity.Property(e => e.Season)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("season");
+
+                entity.Property(e => e.VictoryRewardOddsId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("victory_reward_odds_id");
+
+                entity.Property(e => e.Weather)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("weather");
+            });
+
+            modelBuilder.Entity<ChallengeMatchRaceNpc>(entity =>
+            {
+                entity.ToTable("challenge_match_race_npc");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.Guts)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("guts");
+
+                entity.Property(e => e.MobId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("mob_id");
+
+                entity.Property(e => e.NpcGroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("npc_group_id");
+
+                entity.Property(e => e.Pow)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pow");
+
+                entity.Property(e => e.ProperDistanceLong)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_distance_long");
+
+                entity.Property(e => e.ProperDistanceMiddle)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_distance_middle");
+
+                entity.Property(e => e.ProperDistanceMile)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_distance_mile");
+
+                entity.Property(e => e.ProperDistanceShort)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_distance_short");
+
+                entity.Property(e => e.ProperGroundDirt)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_ground_dirt");
+
+                entity.Property(e => e.ProperGroundTurf)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_ground_turf");
+
+                entity.Property(e => e.ProperRunningStyleNige)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_running_style_nige");
+
+                entity.Property(e => e.ProperRunningStyleOikomi)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_running_style_oikomi");
+
+                entity.Property(e => e.ProperRunningStyleSashi)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_running_style_sashi");
+
+                entity.Property(e => e.ProperRunningStyleSenko)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("proper_running_style_senko");
+
+                entity.Property(e => e.RaceDressId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_dress_id");
+
+                entity.Property(e => e.RaceInstanceId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_instance_id");
+
+                entity.Property(e => e.SkillSetId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("skill_set_id");
+
+                entity.Property(e => e.Speed)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("speed");
+
+                entity.Property(e => e.Stamina)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("stamina");
+
+                entity.Property(e => e.Wiz)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("wiz");
+            });
+
+            modelBuilder.Entity<ChallengeMatchRawPoint>(entity =>
+            {
+                entity.ToTable("challenge_match_raw_point");
+
+                entity.HasIndex(e => e.ConditionType, "challenge_match_raw_point_0_condition_type");
+
+                entity.HasIndex(e => e.RacePointNameId, "challenge_match_raw_point_0_race_point_name_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ConditionType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_type");
+
+                entity.Property(e => e.ConditionValue1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_value_1");
+
+                entity.Property(e => e.ConditionValue2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_value_2");
+
+                entity.Property(e => e.Point)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("point");
+
+                entity.Property(e => e.Priority)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("priority");
+
+                entity.Property(e => e.RacePointNameId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_point_name_id");
+
+                entity.Property(e => e.SortOrder)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("sort_order");
+            });
+
+            modelBuilder.Entity<ChallengeMatchRetryBonus>(entity =>
+            {
+                entity.ToTable("challenge_match_retry_bonus");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BonusRate)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("bonus_rate");
+
+                entity.Property(e => e.ResimulateNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("resimulate_num");
+
+                entity.Property(e => e.RetryMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("retry_max");
+
+                entity.Property(e => e.RetryMin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("retry_min");
             });
 
             modelBuilder.Entity<ChampionsBgm>(entity =>
