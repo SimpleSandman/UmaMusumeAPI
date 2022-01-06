@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/ChallengeMatchData/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<ChallengeMatchData>> GetChallengeMatchData(int id)
+        [HttpGet("{challengeMatchId}")]
+        public async Task<ActionResult<ChallengeMatchData>> GetChallengeMatchData(int challengeMatchId)
         {
-            var challengeMatchData = await _context.ChallengeMatchData.FindAsync(id);
+            var challengeMatchData = await _context.ChallengeMatchData.FindAsync(challengeMatchId);
 
             if (challengeMatchData == null)
             {

@@ -31,7 +31,8 @@ namespace UmaMusumeAPI.Controllers.Tables
         [HttpGet("{storyId}")]
         public async Task<ActionResult<SingleModeConclusionSet>> GetSingleModeConclusionSet(int storyId)
         {
-            var singleModeConclusionSet = await _context.SingleModeConclusionSets.SingleOrDefaultAsync(c => c.StoryId == storyId);
+            var singleModeConclusionSet = await _context.SingleModeConclusionSets
+                .SingleOrDefaultAsync(c => c.StoryId == storyId);
 
             if (singleModeConclusionSet == null)
             {

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -29,9 +30,11 @@ namespace UmaMusumeAPI.Controllers.Tables
 
         // GET: api/TextData/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<TextData>> GetTextData(int id)
+        public async Task<ActionResult<IEnumerable<TextData>>> GetTextData(long id)
         {
-            var textData = await _context.TextData.FindAsync(id);
+            var textData = await _context.TextData
+                .Where(c => c.Id == id)
+                .ToListAsync();
 
             if (textData == null)
             {

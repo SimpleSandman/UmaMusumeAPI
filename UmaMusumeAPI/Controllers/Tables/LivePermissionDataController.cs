@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,12 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/LivePermissionData/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<LivePermissionData>> GetLivePermissionData(int id)
+        [HttpGet("{musicId}")]
+        public async Task<ActionResult<IEnumerable<LivePermissionData>>> GetLivePermissionData(int musicId)
         {
-            var livePermissionData = await _context.LivePermissionData.FindAsync(id);
+            var livePermissionData = await _context.LivePermissionData
+                .Where(c => c.MusicId == musicId)
+                .ToListAsync();
 
             if (livePermissionData == null)
             {

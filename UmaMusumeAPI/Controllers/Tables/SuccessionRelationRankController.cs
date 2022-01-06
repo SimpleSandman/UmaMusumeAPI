@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/SuccessionRelationRank/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<SuccessionRelationRank>> GetSuccessionRelationRank(int id)
+        [HttpGet("{relationRank}")]
+        public async Task<ActionResult<SuccessionRelationRank>> GetSuccessionRelationRank(int relationRank)
         {
-            var successionRelationRank = await _context.SuccessionRelationRanks.FindAsync(id);
+            var successionRelationRank = await _context.SuccessionRelationRanks.FindAsync(relationRank);
 
             if (successionRelationRank == null)
             {

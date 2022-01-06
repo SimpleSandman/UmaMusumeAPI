@@ -29,9 +29,9 @@ namespace UmaMusumeAPI.Controllers.Tables
 
         // GET: api/SuccessionRelation/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<SuccessionRelation>> GetSuccessionRelation(int id)
+        public async Task<ActionResult<SuccessionRelation>> GetSuccessionRelation(int relationType)
         {
-            var successionRelation = await _context.SuccessionRelations.FindAsync(id);
+            var successionRelation = await _context.SuccessionRelations.FindAsync(relationType);
 
             if (successionRelation == null)
             {

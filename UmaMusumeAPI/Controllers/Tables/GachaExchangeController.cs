@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,12 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/GachaExchange/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<GachaExchange>> GetGachaExchange(int id)
+        [HttpGet("{gachaId}")]
+        public async Task<ActionResult<IEnumerable<GachaExchange>>> GetGachaExchange(int gachaId)
         {
-            var gachaExchange = await _context.GachaExchanges.FindAsync(id);
+            var gachaExchange = await _context.GachaExchanges
+                .Where(c => c.GachaId == gachaId)
+                .ToListAsync();
 
             if (gachaExchange == null)
             {

@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
 using UmaMusumeAPI.Context;
+using UmaMusumeAPI.Controllers;
 
 namespace UmaMusumeAPI
 {
@@ -48,7 +49,14 @@ namespace UmaMusumeAPI
                 options.Cookie.Name = ".UmaMusumeAPI.Session";
             });
 
-            services.AddControllers();
+            // Used for generic controllers via BaseController
+            services.AddMvc(o => o.Conventions.Add(
+                    new GenericControllerRouteConvention()
+                )).
+                ConfigureApplicationPartManager(m =>
+                    m.FeatureProviders.Add(new GenericTypeControllerFeatureProvider()
+                ));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo 

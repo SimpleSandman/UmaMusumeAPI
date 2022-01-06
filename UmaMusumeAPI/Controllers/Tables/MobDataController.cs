@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/MobData/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<MobData>> GetMobData(int id)
+        [HttpGet("{mobId}")]
+        public async Task<ActionResult<MobData>> GetMobData(int mobId)
         {
-            var mobData = await _context.MobData.FindAsync(id);
+            var mobData = await _context.MobData.FindAsync(mobId);
 
             if (mobData == null)
             {

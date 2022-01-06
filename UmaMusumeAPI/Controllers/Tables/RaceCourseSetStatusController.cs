@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/RaceCourseSetStatus/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<RaceCourseSetStatus>> GetRaceCourseSetStatus(int id)
+        [HttpGet("{courseSetStatusId}")]
+        public async Task<ActionResult<RaceCourseSetStatus>> GetRaceCourseSetStatus(int courseSetStatusId)
         {
-            var raceCourseSetStatus = await _context.RaceCourseSetStatuses.FindAsync(id);
+            var raceCourseSetStatus = await _context.RaceCourseSetStatuses.FindAsync(courseSetStatusId);
 
             if (raceCourseSetStatus == null)
             {

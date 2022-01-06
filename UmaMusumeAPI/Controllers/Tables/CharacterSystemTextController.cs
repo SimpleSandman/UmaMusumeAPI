@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,12 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/CharacterSystemText/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<CharacterSystemText>> GetCharacterSystemText(int id)
+        [HttpGet("{characterId}")]
+        public async Task<ActionResult<IEnumerable<CharacterSystemText>>> GetCharacterSystemText(int characterId)
         {
-            var characterSystemText = await _context.CharacterSystemTexts.FindAsync(id);
+            var characterSystemText = await _context.CharacterSystemTexts
+                .Where(c => c.CharacterId == characterId)
+                .ToListAsync();
 
             if (characterSystemText == null)
             {

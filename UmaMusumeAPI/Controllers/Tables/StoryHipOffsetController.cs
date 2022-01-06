@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/StoryHipOffset/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<StoryHipOffset>> GetStoryHipOffset(long id)
+        [HttpGet("{categoryId}")]
+        public async Task<ActionResult<IEnumerable<StoryHipOffset>>> GetStoryHipOffset(long categoryId)
         {
-            var storyHipOffset = await _context.StoryHipOffsets.FindAsync(id);
+            var storyHipOffset = await _context.StoryHipOffsets.Where(c => c.CategoryId == categoryId).ToListAsync();
 
             if (storyHipOffset == null)
             {

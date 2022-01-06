@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/StoryEventData/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<StoryEventData>> GetStoryEventData(int id)
+        [HttpGet("{storyEventId}")]
+        public async Task<ActionResult<StoryEventData>> GetStoryEventData(int storyEventId)
         {
-            var storyEventData = await _context.StoryEventData.FindAsync(id);
+            var storyEventData = await _context.StoryEventData.FindAsync(storyEventId);
 
             if (storyEventData == null)
             {

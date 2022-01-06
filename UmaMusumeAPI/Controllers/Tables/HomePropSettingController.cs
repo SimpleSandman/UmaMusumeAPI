@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,12 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/HomePropSetting/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<HomePropSetting>> GetHomePropSetting(int id)
+        [HttpGet("{posId}")]
+        public async Task<ActionResult<IEnumerable<HomePropSetting>>> GetHomePropSetting(int posId)
         {
-            var homePropSetting = await _context.HomePropSettings.FindAsync(id);
+            var homePropSetting = await _context.HomePropSettings
+                .Where(c => c.PosId == posId)
+                .ToListAsync();
 
             if (homePropSetting == null)
             {

@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/CampaignData/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<CampaignData>> GetCampaignData(int id)
+        [HttpGet("{campaignId}")]
+        public async Task<ActionResult<CampaignData>> GetCampaignData(int campaignId)
         {
-            var campaignData = await _context.CampaignData.FindAsync(id);
+            var campaignData = await _context.CampaignData.FindAsync(campaignId);
 
             if (campaignData == null)
             {

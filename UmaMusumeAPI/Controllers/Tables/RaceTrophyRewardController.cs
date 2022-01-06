@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/RaceTrophyReward/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<RaceTrophyReward>> GetRaceTrophyReward(int id)
+        [HttpGet("{trophyId}")]
+        public async Task<ActionResult<RaceTrophyReward>> GetRaceTrophyReward(int trophyId)
         {
-            var raceTrophyReward = await _context.RaceTrophyRewards.FindAsync(id);
+            var raceTrophyReward = await _context.RaceTrophyRewards.FindAsync(trophyId);
 
             if (raceTrophyReward == null)
             {

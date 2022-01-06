@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/CraneGameProp/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<CraneGameProp>> GetCraneGameProp(int id)
+        [HttpGet("{type}")]
+        public async Task<ActionResult<CraneGameProp>> GetCraneGameProp(int type)
         {
-            var craneGameProp = await _context.CraneGameProps.FindAsync(id);
+            var craneGameProp = await _context.CraneGameProps.FindAsync(type);
 
             if (craneGameProp == null)
             {

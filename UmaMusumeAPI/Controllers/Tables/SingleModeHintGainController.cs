@@ -29,9 +29,10 @@ namespace UmaMusumeAPI.Controllers.Tables
 
         // GET: api/SingleModeHintGain/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<SingleModeHintGain>> GetSingleModeHintGain(int id)
+        public async Task<ActionResult<SingleModeHintGain>> GetSingleModeHintGain(long id)
         {
-            var singleModeHintGain = await _context.SingleModeHintGains.SingleOrDefaultAsync(c => c.Id == id);
+            var singleModeHintGain = await _context.SingleModeHintGains
+                .SingleOrDefaultAsync(c => c.Id == id);
 
             if (singleModeHintGain == null)
             {

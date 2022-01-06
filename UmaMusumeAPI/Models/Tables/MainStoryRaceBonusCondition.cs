@@ -1,6 +1,9 @@
-﻿namespace UmaMusumeAPI.Models.Tables
+﻿using UmaMusumeAPI.Controllers;
+
+namespace UmaMusumeAPI.Models.Tables
 {
-    public partial class MainStoryRaceBonusCondition
+    [GeneratedController]
+    public class MainStoryRaceBonusCondition
     {
         public int Id { get; set; }
         public long GroupId { get; set; }

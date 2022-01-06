@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/SingleModeStoryGuide/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<SingleModeStoryGuide>> GetSingleModeStoryGuide(int id)
+        [HttpGet("{storyId}")]
+        public async Task<ActionResult<SingleModeStoryGuide>> GetSingleModeStoryGuide(int storyId)
         {
-            var singleModeStoryGuide = await _context.SingleModeStoryGuides.FindAsync(id);
+            var singleModeStoryGuide = await _context.SingleModeStoryGuides.FindAsync(storyId);
 
             if (singleModeStoryGuide == null)
             {

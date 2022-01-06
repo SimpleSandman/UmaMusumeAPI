@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -29,9 +30,11 @@ namespace UmaMusumeAPI.Controllers.Tables
 
         // GET: api/SupportCardEffectTable/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<SupportCardEffectTable>> GetSupportCardEffectTable(int id)
+        public async Task<ActionResult<IEnumerable<SupportCardEffectTable>>> GetSupportCardEffectTable(int id)
         {
-            var supportCardEffectTable = await _context.SupportCardEffectTables.FindAsync(id);
+            var supportCardEffectTable = await _context.SupportCardEffectTables
+                .Where(c => c.Id == id)
+                .ToListAsync();
 
             if (supportCardEffectTable == null)
             {

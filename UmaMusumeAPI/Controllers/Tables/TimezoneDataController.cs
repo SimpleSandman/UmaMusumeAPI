@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/TimezoneData/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<TimezoneData>> GetTimezoneData(int id)
+        [HttpGet("{timezone}")]
+        public async Task<ActionResult<TimezoneData>> GetTimezoneData(int timezone)
         {
-            var timezoneData = await _context.TimezoneData.FindAsync(id);
+            var timezoneData = await _context.TimezoneData.FindAsync(timezone);
 
             if (timezoneData == null)
             {

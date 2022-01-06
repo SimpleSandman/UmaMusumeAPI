@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/TransferEventReward/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<TransferEventReward>> GetTransferEventReward(int id)
+        [HttpGet("{transferRewardId}")]
+        public async Task<ActionResult<TransferEventReward>> GetTransferEventReward(int transferRewardId)
         {
-            var transferEventReward = await _context.TransferEventRewards.FindAsync(id);
+            var transferEventReward = await _context.TransferEventRewards.FindAsync(transferRewardId);
 
             if (transferEventReward == null)
             {

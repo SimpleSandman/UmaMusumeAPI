@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,12 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/RaceBibColor/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<RaceBibColor>> GetRaceBibColor(int id)
+        [HttpGet("{grade}")]
+        public async Task<ActionResult<IEnumerable<RaceBibColor>>> GetRaceBibColor(int grade)
         {
-            var raceBibColor = await _context.RaceBibColors.FindAsync(id);
+            var raceBibColor = await _context.RaceBibColors
+                .Where(c => c.Grade == grade)
+                .ToListAsync();
 
             if (raceBibColor == null)
             {

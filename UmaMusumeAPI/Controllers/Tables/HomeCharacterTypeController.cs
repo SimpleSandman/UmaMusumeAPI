@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,12 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/HomeCharacterType/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<HomeCharacterType>> GetHomeCharacterType(int id)
+        [HttpGet("{posId}")]
+        public async Task<ActionResult<IEnumerable<HomeCharacterType>>> GetHomeCharacterType(int posId)
         {
-            var homeCharacterType = await _context.HomeCharacterTypes.FindAsync(id);
+            var homeCharacterType = await _context.HomeCharacterTypes
+                .Where(c => c.PosId == posId)
+                .ToListAsync();
 
             if (homeCharacterType == null)
             {

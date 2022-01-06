@@ -4465,29 +4465,29 @@ namespace UmaMusumeAPI.Context
 
                 entity.HasIndex(e => new { e.StoryId, e.CharaId }, "homestory_hip_offset_0_story_id_1_chara_id");
 
-                entity.Property(e => e.CharaId)
+                entity.Property(e => e.Id)
                     .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id");
+                    .HasColumnName("id");
 
                 entity.Property(e => e.HomeEventType)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("home_event_type");
 
-                entity.Property(e => e.Id)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("id");
-
                 entity.Property(e => e.Num)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("num");
 
-                entity.Property(e => e.Offset)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("offset");
-
                 entity.Property(e => e.StoryId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("story_id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.Offset)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("offset");
             });
 
             modelBuilder.Entity<HonorData>(entity =>

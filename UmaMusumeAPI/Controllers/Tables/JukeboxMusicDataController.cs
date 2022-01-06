@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/JukeboxMusicData/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<JukeboxMusicData>> GetJukeboxMusicData(int id)
+        [HttpGet("{musicId}")]
+        public async Task<ActionResult<JukeboxMusicData>> GetJukeboxMusicData(int musicId)
         {
-            var jukeboxMusicData = await _context.JukeboxMusicData.FindAsync(id);
+            var jukeboxMusicData = await _context.JukeboxMusicData.FindAsync(musicId);
 
             if (jukeboxMusicData == null)
             {

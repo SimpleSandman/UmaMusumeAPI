@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/MiniMotionSet/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<MiniMotionSet>> GetMiniMotionSet(string id)
+        [HttpGet("{label}")]
+        public async Task<ActionResult<MiniMotionSet>> GetMiniMotionSet(string label)
         {
-            var miniMotionSet = await _context.MiniMotionSets.FindAsync(id);
+            var miniMotionSet = await _context.MiniMotionSets.FindAsync(label);
 
             if (miniMotionSet == null)
             {

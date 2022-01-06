@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,12 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/GachaPrizeOdd/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<GachaPrizeOdd>> GetGachaPrizeOdd(int id)
+        [HttpGet("{prizeOddsId}")]
+        public async Task<ActionResult<IEnumerable<GachaPrizeOdd>>> GetGachaPrizeOdd(int prizeOddsId)
         {
-            var gachaPrizeOdd = await _context.GachaPrizeOdds.FindAsync(id);
+            var gachaPrizeOdd = await _context.GachaPrizeOdds
+                .Where(c => c.PrizeOddsId == prizeOddsId)
+                .ToListAsync();
 
             if (gachaPrizeOdd == null)
             {

@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/MiniFaceTypeData/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<MiniFaceTypeData>> GetMiniFaceTypeData(string id)
+        [HttpGet("{label}")]
+        public async Task<ActionResult<MiniFaceTypeData>> GetMiniFaceTypeData(string label)
         {
-            var miniFaceTypeData = await _context.MiniFaceTypeData.FindAsync(id);
+            var miniFaceTypeData = await _context.MiniFaceTypeData.FindAsync(label);
 
             if (miniFaceTypeData == null)
             {

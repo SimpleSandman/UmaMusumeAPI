@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,12 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/DailyPack/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<DailyPack>> GetDailyPack(int id)
+        [HttpGet("{shopDataId}")]
+        public async Task<ActionResult<IEnumerable<DailyPack>>> GetDailyPack(int shopDataId)
         {
-            var dailyPack = await _context.DailyPacks.FindAsync(id);
+            var dailyPack = await _context.DailyPacks
+                .Where(c => c.ShopDataId == shopDataId)
+                .ToListAsync();
 
             if (dailyPack == null)
             {

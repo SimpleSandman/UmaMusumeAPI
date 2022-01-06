@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,12 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/TeamStadiumEvaluationRate/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<TeamStadiumEvaluationRate>> GetTeamStadiumEvaluationRate(int id)
+        [HttpGet("{properType}")]
+        public async Task<ActionResult<IEnumerable<TeamStadiumEvaluationRate>>> GetTeamStadiumEvaluationRate(int properType)
         {
-            var teamStadiumEvaluationRate = await _context.TeamStadiumEvaluationRates.FindAsync(id);
+            var teamStadiumEvaluationRate = await _context.TeamStadiumEvaluationRates
+                .Where(c => c.ProperType == properType)
+                .ToListAsync();
 
             if (teamStadiumEvaluationRate == null)
             {

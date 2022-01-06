@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/CraneGameExtraOddsCondition/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<CraneGameExtraOddsCondition>> GetCraneGameExtraOddsCondition(int id)
+        [HttpGet("{credit}")]
+        public async Task<ActionResult<CraneGameExtraOddsCondition>> GetCraneGameExtraOddsCondition(int credit)
         {
-            var craneGameExtraOddsCondition = await _context.CraneGameExtraOddsConditions.FindAsync(id);
+            var craneGameExtraOddsCondition = await _context.CraneGameExtraOddsConditions.FindAsync(credit);
 
             if (craneGameExtraOddsCondition == null)
             {

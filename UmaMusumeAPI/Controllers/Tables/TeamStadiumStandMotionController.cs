@@ -30,7 +30,7 @@ namespace UmaMusumeAPI.Controllers.Tables
 
         // GET: api/TeamStadiumStandMotion/5
         [HttpGet("{characterId}")]
-        public async Task<ActionResult<IEnumerable<TeamStadiumStandMotion>>> GetTeamStadiumStandMotion(int characterId)
+        public async Task<ActionResult<IEnumerable<TeamStadiumStandMotion>>> GetTeamStadiumStandMotion(long characterId)
         {
             var teamStadiumStandMotion = await _context.TeamStadiumStandMotions
                 .Where(c => c.CharacterId == characterId)

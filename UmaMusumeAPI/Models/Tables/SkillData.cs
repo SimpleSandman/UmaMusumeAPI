@@ -1,5 +1,8 @@
-﻿namespace UmaMusumeAPI.Models.Tables
+﻿using UmaMusumeAPI.Controllers;
+
+namespace UmaMusumeAPI.Models.Tables
 {
+    [GeneratedController]
     public class SkillData
     {
         public int Id { get; set; }

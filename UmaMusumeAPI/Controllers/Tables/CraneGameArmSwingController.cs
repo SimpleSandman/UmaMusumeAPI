@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/CraneGameArmSwing/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<CraneGameArmSwing>> GetCraneGameArmSwing(int id)
+        [HttpGet("{resultType}")]
+        public async Task<ActionResult<CraneGameArmSwing>> GetCraneGameArmSwing(int resultType)
         {
-            var craneGameArmSwing = await _context.CraneGameArmSwings.FindAsync(id);
+            var craneGameArmSwing = await _context.CraneGameArmSwings.FindAsync(resultType);
 
             if (craneGameArmSwing == null)
             {

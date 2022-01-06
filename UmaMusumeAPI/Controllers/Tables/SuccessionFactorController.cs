@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/SuccessionFactor/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<SuccessionFactor>> GetSuccessionFactor(int id)
+        [HttpGet("{factorId}")]
+        public async Task<ActionResult<SuccessionFactor>> GetSuccessionFactor(int factorId)
         {
-            var successionFactor = await _context.SuccessionFactors.FindAsync(id);
+            var successionFactor = await _context.SuccessionFactors.FindAsync(factorId);
 
             if (successionFactor == null)
             {

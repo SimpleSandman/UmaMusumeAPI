@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/SingleModeEventProduction/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<SingleModeEventProduction>> GetSingleModeEventProduction(int id)
+        [HttpGet("{storyId}")]
+        public async Task<ActionResult<SingleModeEventProduction>> GetSingleModeEventProduction(int storyId)
         {
-            var singleModeEventProduction = await _context.SingleModeEventProductions.FindAsync(id);
+            var singleModeEventProduction = await _context.SingleModeEventProductions.FindAsync(storyId);
 
             if (singleModeEventProduction == null)
             {

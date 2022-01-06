@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/FaceTypeData/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<FaceTypeData>> GetFaceTypeData(string id)
+        [HttpGet("{label}")]
+        public async Task<ActionResult<FaceTypeData>> GetFaceTypeData(string label)
         {
-            var faceTypeData = await _context.FaceTypeData.FindAsync(id);
+            var faceTypeData = await _context.FaceTypeData.FindAsync(label);
 
             if (faceTypeData == null)
             {

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,12 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/SingleModeDifficultyData/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<SingleModeDifficultyData>> GetSingleModeDifficultyData(int id)
+        [HttpGet("{difficultyId}")]
+        public async Task<ActionResult<IEnumerable<SingleModeDifficultyData>>> GetSingleModeDifficultyData(int difficultyId)
         {
-            var singleModeDifficultyData = await _context.SingleModeDifficultyData.FindAsync(id);
+            var singleModeDifficultyData = await _context.SingleModeDifficultyData
+                .Where(c => c.DifficultyId == difficultyId)
+                .ToListAsync();
 
             if (singleModeDifficultyData == null)
             {

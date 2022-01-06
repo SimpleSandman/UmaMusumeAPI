@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/LiveData/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<LiveData>> GetLiveData(int id)
+        [HttpGet("{musicId}")]
+        public async Task<ActionResult<LiveData>> GetLiveData(int musicId)
         {
-            var liveData = await _context.LiveData.FindAsync(id);
+            var liveData = await _context.LiveData.FindAsync(musicId);
 
             if (liveData == null)
             {

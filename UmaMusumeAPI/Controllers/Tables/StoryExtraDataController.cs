@@ -28,10 +28,10 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/StoryExtraData/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<StoryExtraData>> GetStoryExtraData(int id)
+        [HttpGet("{storyExtraId}")]
+        public async Task<ActionResult<StoryExtraData>> GetStoryExtraData(int storyExtraId)
         {
-            var storyExtraData = await _context.StoryExtraData.FindAsync(id);
+            var storyExtraData = await _context.StoryExtraData.FindAsync(storyExtraId);
 
             if (storyExtraData == null)
             {

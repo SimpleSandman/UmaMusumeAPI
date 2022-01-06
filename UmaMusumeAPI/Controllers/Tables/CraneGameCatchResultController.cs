@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -28,10 +29,12 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/CraneGameCatchResult/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<CraneGameCatchResult>> GetCraneGameCatchResult(int id)
+        [HttpGet("{oddsId}")]
+        public async Task<ActionResult<IEnumerable<CraneGameCatchResult>>> GetCraneGameCatchResult(int oddsId)
         {
-            var craneGameCatchResult = await _context.CraneGameCatchResults.FindAsync(id);
+            var craneGameCatchResult = await _context.CraneGameCatchResults
+                .Where(c => c.OddsId == oddsId)
+                .ToListAsync();
 
             if (craneGameCatchResult == null)
             {
