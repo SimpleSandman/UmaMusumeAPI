@@ -65,7 +65,7 @@ namespace UmaMusumeAPI.Controllers.Views
         [HttpPost]
         public async Task<ActionResult<IEnumerable<BasicTextDataEnglish>>> GetBasicTextDataEnglish([FromBody] BasicTextEnglishDTO body)
         {
-            List<BasicTextDataEnglish> basicTextDataEnglish = new List<BasicTextDataEnglish>();
+            List<BasicTextDataEnglish> basicTextDataEnglish;
 
             if (body.IsEnglishQuery)
             {
