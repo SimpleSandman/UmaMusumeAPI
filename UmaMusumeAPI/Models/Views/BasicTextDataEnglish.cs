@@ -1,6 +1,6 @@
 ﻿namespace UmaMusumeAPI.Models.Views
 {
-    public partial class BasicTextDataEnglish
+    public class BasicTextDataEnglish
     {
         public long Id { get; set; }
         public int Category { get; set; }

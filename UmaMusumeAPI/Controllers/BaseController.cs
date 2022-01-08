@@ -13,13 +13,11 @@ namespace UmaMusumeAPI.Controllers
     public class BaseController<T> : Controller 
         where T : class
     {
-        private readonly UmaMusumeDbContext _context;
         private readonly DbSet<T> _dbSet;
 
         public BaseController(UmaMusumeDbContext context)
         {
-            _context = context;
-            _dbSet = _context.Set<T>();
+            _dbSet = context.Set<T>();
         }
 
         // GET: api/[genericEntity]

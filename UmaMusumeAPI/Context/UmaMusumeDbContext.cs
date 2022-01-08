@@ -325,6 +325,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<BasicSupportCardDataInfo> BasicSupportCardDataInfos { get; set; }
         public virtual DbSet<BasicSupportCardUniqueEffectInfo> BasicSupportCardUniqueEffectInfos { get; set; }
         public virtual DbSet<BasicTeamStadiumScoreBonusInfo> BasicTeamStadiumScoreBonusInfos { get; set; }
+        public virtual DbSet<BasicTextDataEnglish> BasicTextDataEnglish { get; set; }
         public virtual DbSet<CondensedSkillDataInfo> CondensedSkillDataInfos { get; set; }
         public virtual DbSet<NiceErrorMessage> NiceErrorMessages { get; set; }
         public virtual DbSet<NiceCharaBioInfo> NiceCharaBioInfos { get; set; }
