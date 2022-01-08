@@ -26,7 +26,7 @@ The stored procedures are:
 
 I've created the `TextDataEnglish` [endpoint](https://www.tracenacademy.com/api/TextDataEnglish) by importing [FabulousCupcake's translation repo](https://github.com/FabulousCupcake/umamusume-db-translate/tree/master/src/data) that holds `.csv` files of translated data based on the original `text_data` table.
 
-In addition, I've created multiple `Basic` endpoints for `TextDataEnglish` that could help with indexing or basic text searching. The most interesting endpoint is the POST query that searches Japanese AND English text.
+In addition, I've created multiple `Basic` endpoints for `TextDataEnglish` that could help with indexing or basic text searching. The most interesting endpoint is the POST request that searches Japanese AND English text.
 
 ```bash
 curl -X 'POST' \
@@ -36,6 +36,17 @@ curl -X 'POST' \
   -d '{
   "searchQuery": "Special Week",
   "isEnglishQuery": true
+}'
+```
+
+```bash
+curl -X 'POST' \
+  'https://www.tracenacademy.com/api/BasicTextDataEnglish' \
+  -H 'accept: text/plain' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "searchQuery": "スペシャルウィーク",
+  "isEnglishQuery": false
 }'
 ```
 
