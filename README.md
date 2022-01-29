@@ -26,6 +26,30 @@ The stored procedures are:
 
 I've created the `TextDataEnglish` [endpoint](https://www.tracenacademy.com/api/TextDataEnglish) by importing [FabulousCupcake's translation repo](https://github.com/FabulousCupcake/umamusume-db-translate/tree/master/src/data) that holds `.csv` files of translated data based on the original `text_data` table.
 
+In addition, I've created multiple `Basic` endpoints for `TextDataEnglish` that could help with indexing or basic text searching. The most interesting endpoint is the POST request that searches Japanese AND English text.
+
+```bash
+curl -X 'POST' \
+  'https://www.tracenacademy.com/api/BasicTextDataEnglish' \
+  -H 'accept: text/plain' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "searchQuery": "Special Week",
+  "isEnglishQuery": true
+}'
+```
+
+```bash
+curl -X 'POST' \
+  'https://www.tracenacademy.com/api/BasicTextDataEnglish' \
+  -H 'accept: text/plain' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "searchQuery": "スペシャルウィーク",
+  "isEnglishQuery": false
+}'
+```
+
 # Initial Setup
 Under `UmaMusumeAPI/Properties/launchSettings.json`, set the `MARIA_CONNECTION_STRING` environment variable to your MariaDB database for "development" and on the hosting site's config variables section for "release".
 
@@ -43,7 +67,7 @@ Simplified `launchSettings.json` Example:
 ```
 
 # Database Setup
-Use the scripts in `UmaMusumeAPI/SqlScripts` to generate everything you need for the database. As mentioned before, if you want to load all of the data from the DMM version of this game, use my [loader app](https://github.com/SimpleSandman/UmaMusumeLoadSqlData) and point the connection string to your new database.
+Use the scripts in [`UmaMusumeAPI/SqlScripts`](https://github.com/SimpleSandman/UmaMusumeAPI/tree/master/UmaMusumeAPI/SqlScripts) to generate everything you need for the database. As mentioned before, if you want to load all of the data from the DMM version of this game, use my [loader app](https://github.com/SimpleSandman/UmaMusumeLoadSqlData) and point the connection string to your new database.
 
 Make sure the MariaDB database and all of its objects have the character set of `utf8mb4` and collation of `utf8mb4_general_ci` as that is the official UTF-8 specification. There are not only so many articles on this topic, but the devs from the [Pomelo.EntityFrameworkCore.MySql](https://github.com/PomeloFoundation/Pomelo.EntityFrameworkCore.MySql) project recommends this personally and [in this issue](https://github.com/PomeloFoundation/Pomelo.EntityFrameworkCore.MySql/issues/1427). I'm using their EF Core library to help scaffold the models and controllers since it's far more active and stable than the Oracle equivalent.
 
