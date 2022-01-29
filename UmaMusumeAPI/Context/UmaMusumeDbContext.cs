@@ -27,6 +27,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<BannerData> BannerData { get; set; }
         public virtual DbSet<CampaignCharaStorySchedule> CampaignCharaStorySchedules { get; set; }
         public virtual DbSet<CampaignData> CampaignData { get; set; }
+        public virtual DbSet<CampaignPresentBonusDetail> CampaignPresentBonusDetails { get; set; }
         public virtual DbSet<CampaignSingleRaceAddData> CampaignSingleRaceAddData { get; set; }
         public virtual DbSet<CampaignSingleRaceAddReward> CampaignSingleRaceAddRewards { get; set; }
         public virtual DbSet<CardData> CardData { get; set; }
@@ -805,6 +806,60 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.UserShow)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("user_show");
+            });
+
+            modelBuilder.Entity<CampaignPresentBonusDetail>(entity =>
+            {
+                entity.ToTable("campaign_present_bonus_detail");
+
+                entity.HasIndex(e => new { e.CampaignId, e.CardId }, "campaign_id")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.CardId, "campaign_present_bonus_detail_0_card_id");
+
+                entity.HasIndex(e => e.ItemId1, "item_id_1")
+                    .IsUnique();
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CampaignId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("campaign_id");
+
+                entity.Property(e => e.CardId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("card_id");
+
+                entity.Property(e => e.Count)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("count");
+
+                entity.Property(e => e.ItemCategory1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category_1");
+
+                entity.Property(e => e.ItemCategory2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category_2");
+
+                entity.Property(e => e.ItemId1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id_1");
+
+                entity.Property(e => e.ItemId2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id_2");
+
+                entity.Property(e => e.ItemNum1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num_1");
+
+                entity.Property(e => e.ItemNum2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num_2");
             });
 
             modelBuilder.Entity<CampaignSingleRaceAddData>(entity =>
