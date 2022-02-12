@@ -18,6 +18,12 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<AnnounceData> AnnounceData { get; set; }
         public virtual DbSet<AnnounceEvent> AnnounceEvents { get; set; }
         public virtual DbSet<AnnounceSupportCard> AnnounceSupportCards { get; set; }
+        public virtual DbSet<AudienceData> AudienceData { get; set; }
+        public virtual DbSet<AudienceDressColorSet> AudienceDressColorSets { get; set; }
+        public virtual DbSet<AudienceHairColorSet> AudienceHairColorSets { get; set; }
+        public virtual DbSet<AudienceImpostor> AudienceImpostors { get; set; }
+        public virtual DbSet<AudienceImpostorColorSet> AudienceImpostorColorSets { get; set; }
+        public virtual DbSet<AudienceImpostorLottery> AudienceImpostorLotteries { get; set; }
         public virtual DbSet<AudioCuesheet> AudioCuesheets { get; set; }
         public virtual DbSet<AudioIgnoredCueOnHighspeed> AudioIgnoredCueOnHighspeeds { get; set; }
         public virtual DbSet<AudioStoryEffect> AudioStoryEffects { get; set; }
@@ -96,6 +102,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<GiftMessage> GiftMessages { get; set; }
         public virtual DbSet<HighlightInterpolate> HighlightInterpolates { get; set; }
         public virtual DbSet<HomeCharacterType> HomeCharacterTypes { get; set; }
+        public virtual DbSet<HomeEat> HomeEats { get; set; }
         public virtual DbSet<HomeEnvSetting> HomeEnvSettings { get; set; }
         public virtual DbSet<HomeEventSchedule> HomeEventSchedules { get; set; }
         public virtual DbSet<HomePosterData> HomePosterData { get; set; }
@@ -187,6 +194,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeAoharuCuttType> SingleModeAoharuCuttTypes { get; set; }
         public virtual DbSet<SingleModeAoharuResultCutt> SingleModeAoharuResultCutts { get; set; }
         public virtual DbSet<SingleModeAoharuSchedule> SingleModeAoharuSchedules { get; set; }
+        public virtual DbSet<SingleModeChangeCharaRoute> SingleModeChangeCharaRoutes { get; set; }
         public virtual DbSet<SingleModeCharaEffect> SingleModeCharaEffects { get; set; }
         public virtual DbSet<SingleModeCharaGrade> SingleModeCharaGrades { get; set; }
         public virtual DbSet<SingleModeCharaProgram> SingleModeCharaPrograms { get; set; }
@@ -201,6 +209,13 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeEventItemDetail> SingleModeEventItemDetails { get; set; }
         public virtual DbSet<SingleModeEventProduction> SingleModeEventProductions { get; set; }
         public virtual DbSet<SingleModeFanCount> SingleModeFanCounts { get; set; }
+        public virtual DbSet<SingleModeFreeCoinRace> SingleModeFreeCoinRaces { get; set; }
+        public virtual DbSet<SingleModeFreeShop> SingleModeFreeShops { get; set; }
+        public virtual DbSet<SingleModeFreeShopBg> SingleModeFreeShopBgs { get; set; }
+        public virtual DbSet<SingleModeFreeShopEffect> SingleModeFreeShopEffects { get; set; }
+        public virtual DbSet<SingleModeFreeShopItem> SingleModeFreeShopItems { get; set; }
+        public virtual DbSet<SingleModeFreeTrainingPlate> SingleModeFreeTrainingPlates { get; set; }
+        public virtual DbSet<SingleModeFreeWinPoint> SingleModeFreeWinPoints { get; set; }
         public virtual DbSet<SingleModeHintGain> SingleModeHintGains { get; set; }
         public virtual DbSet<SingleModeMemberRank> SingleModeMemberRanks { get; set; }
         public virtual DbSet<SingleModeMemberRankPoint> SingleModeMemberRankPoints { get; set; }
@@ -217,6 +232,8 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeRewardSet> SingleModeRewardSets { get; set; }
         public virtual DbSet<SingleModeRival> SingleModeRivals { get; set; }
         public virtual DbSet<SingleModeRoute> SingleModeRoutes { get; set; }
+        public virtual DbSet<SingleModeRouteAnnounce> SingleModeRouteAnnounces { get; set; }
+        public virtual DbSet<SingleModeRouteCondition> SingleModeRouteConditions { get; set; }
         public virtual DbSet<SingleModeRouteRace> SingleModeRouteRaces { get; set; }
         public virtual DbSet<SingleModeScenario> SingleModeScenarios { get; set; }
         public virtual DbSet<SingleModeScenarioRecord> SingleModeScenarioRecords { get; set; }
@@ -478,6 +495,413 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Type)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("type");
+            });
+
+            modelBuilder.Entity<AudienceData>(entity =>
+            {
+                entity.HasKey(e => e.AudienceId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("audience_data");
+
+                entity.Property(e => e.AudienceId)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("audience_id");
+
+                entity.Property(e => e.CharaBustSize)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_bust_size");
+
+                entity.Property(e => e.CharaFaceModel)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_face_model");
+
+                entity.Property(e => e.CharaHairColor)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_hair_color");
+
+                entity.Property(e => e.CharaHairModel)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_hair_model");
+
+                entity.Property(e => e.CharaHeight)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_height");
+
+                entity.Property(e => e.CharaSkinColor)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_skin_color");
+
+                entity.Property(e => e.DressColorId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("dress_color_id");
+
+                entity.Property(e => e.DressId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("dress_id");
+
+                entity.Property(e => e.PropAttachNodeNameType1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("prop_attach_node_name_type_1");
+
+                entity.Property(e => e.PropAttachNodeNameType2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("prop_attach_node_name_type_2");
+
+                entity.Property(e => e.PropId1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("prop_id_1");
+
+                entity.Property(e => e.PropId2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("prop_id_2");
+
+                entity.Property(e => e.Shape)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("shape");
+            });
+
+            modelBuilder.Entity<AudienceDressColorSet>(entity =>
+            {
+                entity.ToTable("audience_dress_color_set");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ColorB1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("color_b1");
+
+                entity.Property(e => e.ColorB2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("color_b2");
+
+                entity.Property(e => e.ColorG1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("color_g1");
+
+                entity.Property(e => e.ColorG2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("color_g2");
+
+                entity.Property(e => e.ColorR1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("color_r1");
+
+                entity.Property(e => e.ColorR2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("color_r2");
+
+                entity.Property(e => e.ToonColorB1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("toon_color_b1");
+
+                entity.Property(e => e.ToonColorB2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("toon_color_b2");
+
+                entity.Property(e => e.ToonColorG1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("toon_color_g1");
+
+                entity.Property(e => e.ToonColorG2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("toon_color_g2");
+
+                entity.Property(e => e.ToonColorR1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("toon_color_r1");
+
+                entity.Property(e => e.ToonColorR2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("toon_color_r2");
+            });
+
+            modelBuilder.Entity<AudienceHairColorSet>(entity =>
+            {
+                entity.ToTable("audience_hair_color_set");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EyeColorB1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("eye_color_b1");
+
+                entity.Property(e => e.EyeColorB2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("eye_color_b2");
+
+                entity.Property(e => e.EyeColorG1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("eye_color_g1");
+
+                entity.Property(e => e.EyeColorG2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("eye_color_g2");
+
+                entity.Property(e => e.EyeColorR1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("eye_color_r1");
+
+                entity.Property(e => e.EyeColorR2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("eye_color_r2");
+
+                entity.Property(e => e.HairColorB1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("hair_color_b1");
+
+                entity.Property(e => e.HairColorB2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("hair_color_b2");
+
+                entity.Property(e => e.HairColorG1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("hair_color_g1");
+
+                entity.Property(e => e.HairColorG2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("hair_color_g2");
+
+                entity.Property(e => e.HairColorR1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("hair_color_r1");
+
+                entity.Property(e => e.HairColorR2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("hair_color_r2");
+
+                entity.Property(e => e.HairToonColorB1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("hair_toon_color_b1");
+
+                entity.Property(e => e.HairToonColorB2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("hair_toon_color_b2");
+
+                entity.Property(e => e.HairToonColorG1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("hair_toon_color_g1");
+
+                entity.Property(e => e.HairToonColorG2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("hair_toon_color_g2");
+
+                entity.Property(e => e.HairToonColorR1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("hair_toon_color_r1");
+
+                entity.Property(e => e.HairToonColorR2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("hair_toon_color_r2");
+
+                entity.Property(e => e.MayuColorB1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mayu_color_b1");
+
+                entity.Property(e => e.MayuColorB2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mayu_color_b2");
+
+                entity.Property(e => e.MayuColorG1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mayu_color_g1");
+
+                entity.Property(e => e.MayuColorG2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mayu_color_g2");
+
+                entity.Property(e => e.MayuColorR1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mayu_color_r1");
+
+                entity.Property(e => e.MayuColorR2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mayu_color_r2");
+
+                entity.Property(e => e.MayuToonColorB1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mayu_toon_color_b1");
+
+                entity.Property(e => e.MayuToonColorB2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mayu_toon_color_b2");
+
+                entity.Property(e => e.MayuToonColorG1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mayu_toon_color_g1");
+
+                entity.Property(e => e.MayuToonColorG2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mayu_toon_color_g2");
+
+                entity.Property(e => e.MayuToonColorR1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mayu_toon_color_r1");
+
+                entity.Property(e => e.MayuToonColorR2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("mayu_toon_color_r2");
+            });
+
+            modelBuilder.Entity<AudienceImpostor>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("audience_impostor");
+
+                entity.HasIndex(e => new { e.Season, e.Weather }, "audience_impostor_0_season_1_weather");
+
+                entity.Property(e => e.GroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("group_id");
+
+                entity.Property(e => e.Pattern1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pattern_1");
+
+                entity.Property(e => e.Pattern10)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pattern_10");
+
+                entity.Property(e => e.Pattern2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pattern_2");
+
+                entity.Property(e => e.Pattern3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pattern_3");
+
+                entity.Property(e => e.Pattern4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pattern_4");
+
+                entity.Property(e => e.Pattern5)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pattern_5");
+
+                entity.Property(e => e.Pattern6)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pattern_6");
+
+                entity.Property(e => e.Pattern7)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pattern_7");
+
+                entity.Property(e => e.Pattern8)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pattern_8");
+
+                entity.Property(e => e.Pattern9)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pattern_9");
+
+                entity.Property(e => e.SceneType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("scene_type");
+
+                entity.Property(e => e.Season)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("season");
+
+                entity.Property(e => e.Weather)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("weather");
+            });
+
+            modelBuilder.Entity<AudienceImpostorColorSet>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("audience_impostor_color_set");
+
+                entity.HasIndex(e => e.ColorGroupId, "audience_impostor_color_set_0_color_group_id");
+
+                entity.Property(e => e.Color)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("color");
+
+                entity.Property(e => e.ColorGroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("color_group_id");
+
+                entity.Property(e => e.Odds)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("odds");
+            });
+
+            modelBuilder.Entity<AudienceImpostorLottery>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("audience_impostor_lottery");
+
+                entity.HasIndex(e => new { e.GroupId, e.Pattern }, "audience_impostor_lottery_0_group_id_1_pattern");
+
+                entity.Property(e => e.AssetId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("asset_id");
+
+                entity.Property(e => e.GroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("group_id");
+
+                entity.Property(e => e.Odds)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("odds");
+
+                entity.Property(e => e.Pattern)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("pattern");
             });
 
             modelBuilder.Entity<AudioCuesheet>(entity =>
@@ -4277,6 +4701,75 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.ChangePersonality)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("change_personality");
+            });
+
+            modelBuilder.Entity<HomeEat>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("home_eat");
+
+                entity.HasIndex(e => e.CharaId, "home_eat_0_chara_id");
+
+                entity.Property(e => e.BodyShape)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("body_shape");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.EatFacialMotion)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("eat_facial_motion");
+
+                entity.Property(e => e.EatMotion)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("eat_motion");
+
+                entity.Property(e => e.Odds)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("odds");
+
+                entity.Property(e => e.OverrideMotionLeft)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("override_motion_left");
+
+                entity.Property(e => e.OverrideMotionRight)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("override_motion_right");
+
+                entity.Property(e => e.PropEatAnimationLeft)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("prop_eat_animation_left");
+
+                entity.Property(e => e.PropEatAnimationRight)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("prop_eat_animation_right");
+
+                entity.Property(e => e.PropIdLeft)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("prop_id_left");
+
+                entity.Property(e => e.PropIdRight)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("prop_id_right");
+
+                entity.Property(e => e.WalkCharaFaceType)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("walk_chara_face_type");
+
+                entity.Property(e => e.WalkMotion)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("walk_motion");
             });
 
             modelBuilder.Entity<HomeEnvSetting>(entity =>
@@ -8945,6 +9438,30 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("turn_num");
             });
 
+            modelBuilder.Entity<SingleModeChangeCharaRoute>(entity =>
+            {
+                entity.ToTable("single_mode_change_chara_route");
+
+                entity.HasIndex(e => new { e.RouteRaceGroupId, e.CharaId }, "single_mode_change_chara_route_0_route_race_group_id_1_chara_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.RouteRaceGroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("route_race_group_id");
+
+                entity.Property(e => e.RouteRaceId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("route_race_id");
+            });
+
             modelBuilder.Entity<SingleModeCharaEffect>(entity =>
             {
                 entity.ToTable("single_mode_chara_effect");
@@ -9363,6 +9880,224 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Order)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("order");
+            });
+
+            modelBuilder.Entity<SingleModeFreeCoinRace>(entity =>
+            {
+                entity.ToTable("single_mode_free_coin_race");
+
+                entity.HasIndex(e => e.Grade, "single_mode_free_coin_race_0_grade");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CoinNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("coin_num");
+
+                entity.Property(e => e.Grade)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("grade");
+
+                entity.Property(e => e.OrderMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("order_max");
+
+                entity.Property(e => e.OrderMin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("order_min");
+            });
+
+            modelBuilder.Entity<SingleModeFreeShop>(entity =>
+            {
+                entity.ToTable("single_mode_free_shop");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EndTurn)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_turn");
+
+                entity.Property(e => e.LineupGroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("lineup_group_id");
+
+                entity.Property(e => e.MaxLineupNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("max_lineup_num");
+
+                entity.Property(e => e.StartTurn)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_turn");
+            });
+
+            modelBuilder.Entity<SingleModeFreeShopBg>(entity =>
+            {
+                entity.ToTable("single_mode_free_shop_bg");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BgId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("bg_id");
+
+                entity.Property(e => e.BgSubId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("bg_sub_id");
+
+                entity.Property(e => e.EndTurn)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("end_turn");
+
+                entity.Property(e => e.StartTurn)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("start_turn");
+            });
+
+            modelBuilder.Entity<SingleModeFreeShopEffect>(entity =>
+            {
+                entity.ToTable("single_mode_free_shop_effect");
+
+                entity.HasIndex(e => e.EffectGroupId, "single_mode_free_shop_effect_0_effect_group_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EffectGroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("effect_group_id");
+
+                entity.Property(e => e.EffectType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("effect_type");
+
+                entity.Property(e => e.EffectValue1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("effect_value_1");
+
+                entity.Property(e => e.EffectValue2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("effect_value_2");
+
+                entity.Property(e => e.EffectValue3)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("effect_value_3");
+
+                entity.Property(e => e.EffectValue4)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("effect_value_4");
+
+                entity.Property(e => e.Turn)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("turn");
+            });
+
+            modelBuilder.Entity<SingleModeFreeShopItem>(entity =>
+            {
+                entity.ToTable("single_mode_free_shop_item");
+
+                entity.HasIndex(e => e.ItemId, "single_mode_free_shop_item_0_item_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CoinNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("coin_num");
+
+                entity.Property(e => e.EffectGroup)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("effect_group");
+
+                entity.Property(e => e.EffectGroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("effect_group_id");
+
+                entity.Property(e => e.EffectPriority)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("effect_priority");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.LimitNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("limit_num");
+
+                entity.Property(e => e.MotionId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("motion_id");
+            });
+
+            modelBuilder.Entity<SingleModeFreeTrainingPlate>(entity =>
+            {
+                entity.ToTable("single_mode_free_training_plate");
+
+                entity.HasIndex(e => e.ConditionType, "single_mode_free_training_plate_0_condition_type");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ConditionType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_type");
+
+                entity.Property(e => e.ValueMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("value_max");
+
+                entity.Property(e => e.ValueMin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("value_min");
+            });
+
+            modelBuilder.Entity<SingleModeFreeWinPoint>(entity =>
+            {
+                entity.ToTable("single_mode_free_win_point");
+
+                entity.HasIndex(e => e.Grade, "single_mode_free_win_point_0_grade");
+
+                entity.HasIndex(e => e.RaceGroupId, "single_mode_free_win_point_0_race_group_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Grade)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("grade");
+
+                entity.Property(e => e.OrderMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("order_max");
+
+                entity.Property(e => e.OrderMin)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("order_min");
+
+                entity.Property(e => e.PointNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("point_num");
+
+                entity.Property(e => e.RaceGroupId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("race_group_id");
             });
 
             modelBuilder.Entity<SingleModeHintGain>(entity =>
@@ -9884,6 +10619,10 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("bigint(20)")
                     .HasColumnName("condition_type");
 
+                entity.Property(e => e.FrameOrder)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("frame_order");
+
                 entity.Property(e => e.RaceProgramId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("race_program_id");
@@ -9891,6 +10630,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.RivalCharaId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("rival_chara_id");
+
+                entity.Property(e => e.RivalFlagId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("rival_flag_id");
 
                 entity.Property(e => e.SingleModeNpcId)
                     .HasColumnType("bigint(20)")
@@ -9921,6 +10664,66 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.ScenarioId)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("scenario_id");
+            });
+
+            modelBuilder.Entity<SingleModeRouteAnnounce>(entity =>
+            {
+                entity.ToTable("single_mode_route_announce");
+
+                entity.HasIndex(e => new { e.RouteRaceType, e.RouteRaceId }, "single_mode_route_announce_0_route_race_type_1_route_race_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.RouteRaceId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("route_race_id");
+
+                entity.Property(e => e.RouteRaceType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("route_race_type");
+
+                entity.Property(e => e.TargetType)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("target_type");
+
+                entity.Property(e => e.TargetValue)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("target_value");
+
+                entity.Property(e => e.Turn)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("turn");
+            });
+
+            modelBuilder.Entity<SingleModeRouteCondition>(entity =>
+            {
+                entity.ToTable("single_mode_route_condition");
+
+                entity.HasIndex(e => e.ConditionSetId, "single_mode_route_condition_0_condition_set_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ConditionSetId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_set_id");
+
+                entity.Property(e => e.ConditionType1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_type_1");
+
+                entity.Property(e => e.ConditionValue1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_value_1");
+
+                entity.Property(e => e.ConditionValue2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("condition_value_2");
             });
 
             modelBuilder.Entity<SingleModeRouteRace>(entity =>
