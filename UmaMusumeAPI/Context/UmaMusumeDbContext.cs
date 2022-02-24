@@ -38,6 +38,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<CampaignSingleRaceAddReward> CampaignSingleRaceAddRewards { get; set; }
         public virtual DbSet<CardData> CardData { get; set; }
         public virtual DbSet<CardRarityData> CardRarityData { get; set; }
+        public virtual DbSet<CardTalentHintUpgrade> CardTalentHintUpgrades { get; set; }
         public virtual DbSet<CardTalentUpgrade> CardTalentUpgrades { get; set; }
         public virtual DbSet<ChallengeMatchBossNpc> ChallengeMatchBossNpcs { get; set; }
         public virtual DbSet<ChallengeMatchData> ChallengeMatchData { get; set; }
@@ -229,6 +230,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeRank> SingleModeRanks { get; set; }
         public virtual DbSet<SingleModeRecommend> SingleModeRecommends { get; set; }
         public virtual DbSet<SingleModeRecommendSetting> SingleModeRecommendSettings { get; set; }
+        public virtual DbSet<SingleModeRestrictSupport> SingleModeRestrictSupports { get; set; }
         public virtual DbSet<SingleModeRewardSet> SingleModeRewardSets { get; set; }
         public virtual DbSet<SingleModeRival> SingleModeRivals { get; set; }
         public virtual DbSet<SingleModeRoute> SingleModeRoutes { get; set; }
@@ -284,6 +286,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SuccessionRental> SuccessionRentals { get; set; }
         public virtual DbSet<SupportCardData> SupportCardData { get; set; }
         public virtual DbSet<SupportCardEffectTable> SupportCardEffectTables { get; set; }
+        public virtual DbSet<SupportCardGroup> SupportCardGroups { get; set; }
         public virtual DbSet<SupportCardLevel> SupportCardLevels { get; set; }
         public virtual DbSet<SupportCardLimit> SupportCardLimits { get; set; }
         public virtual DbSet<SupportCardLimitBreak> SupportCardLimitBreaks { get; set; }
@@ -1541,6 +1544,62 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Wiz)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("wiz");
+            });
+
+            modelBuilder.Entity<CardTalentHintUpgrade>(entity =>
+            {
+                entity.ToTable("card_talent_hint_upgrade");
+
+                entity.HasIndex(e => new { e.Rarity, e.TalentLevel }, "card_talent_hint_upgrade_0_rarity_1_talent_level");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ItemCategory1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_category_1");
+
+                entity.Property(e => e.ItemCategory2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_category_2");
+
+                entity.Property(e => e.ItemDispOrder1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_disp_order_1");
+
+                entity.Property(e => e.ItemDispOrder2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_disp_order_2");
+
+                entity.Property(e => e.ItemId1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id_1");
+
+                entity.Property(e => e.ItemId2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_id_2");
+
+                entity.Property(e => e.ItemNum1)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_num_1");
+
+                entity.Property(e => e.ItemNum2)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("item_num_2");
+
+                entity.Property(e => e.MoneyNum)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("money_num");
+
+                entity.Property(e => e.Rarity)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("rarity");
+
+                entity.Property(e => e.TalentLevel)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("talent_level");
             });
 
             modelBuilder.Entity<CardTalentUpgrade>(entity =>
@@ -10549,6 +10608,28 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("recommend_course_id");
             });
 
+            modelBuilder.Entity<SingleModeRestrictSupport>(entity =>
+            {
+                entity.ToTable("single_mode_restrict_support");
+
+                entity.HasIndex(e => e.ScenarioId, "single_mode_restrict_support_0_scenario_id");
+
+                entity.HasIndex(e => e.SupportCardId, "single_mode_restrict_support_0_support_card_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ScenarioId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("scenario_id");
+
+                entity.Property(e => e.SupportCardId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("support_card_id");
+            });
+
             modelBuilder.Entity<SingleModeRewardSet>(entity =>
             {
                 entity.ToTable("single_mode_reward_set");
@@ -13489,6 +13570,32 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.LimitLv50)
                     .HasColumnType("bigint(20)")
                     .HasColumnName("limit_lv50");
+            });
+
+            modelBuilder.Entity<SupportCardGroup>(entity =>
+            {
+                entity.ToTable("support_card_group");
+
+                entity.HasIndex(e => e.CharaId, "support_card_group_0_chara_id");
+
+                entity.HasIndex(e => e.SupportCardId, "support_card_group_0_support_card_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.OutingMax)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("outing_max");
+
+                entity.Property(e => e.SupportCardId)
+                    .HasColumnType("bigint(20)")
+                    .HasColumnName("support_card_id");
             });
 
             modelBuilder.Entity<SupportCardLevel>(entity =>
