@@ -3,8 +3,8 @@
     public class ChampionsEntryReward
     {
         public int ChampionsId { get; set; }
-        public long ItemCategory { get; set; }
+        public int ItemCategory { get; set; }
         public int ItemId { get; set; }
-        public long ItemNum { get; set; }
+        public int ItemNum { get; set; }
     }
 }

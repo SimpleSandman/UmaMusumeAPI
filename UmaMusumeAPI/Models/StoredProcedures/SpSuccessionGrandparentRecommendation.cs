@@ -3,6 +3,6 @@
     public class SpSuccessionGrandparentRecommendation
     {
         public int GrandparentRecommendationId { get; set; }
-        public long GrandparentCompatibility { get; set; }
+        public int GrandparentCompatibility { get; set; }
     }
 }

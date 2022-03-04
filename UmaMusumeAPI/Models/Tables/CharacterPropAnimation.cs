@@ -6,10 +6,10 @@ namespace UmaMusumeAPI.Models.Tables
     public class CharacterPropAnimation
     {
         public int Id { get; set; }
-        public long PropId { get; set; }
-        public long PropAnimId { get; set; }
-        public long LayerIndex { get; set; }
+        public int PropId { get; set; }
+        public int PropAnimId { get; set; }
+        public int LayerIndex { get; set; }
         public string UseStateName { get; set; }
-        public long SceneType { get; set; }
+        public int SceneType { get; set; }
     }
 }

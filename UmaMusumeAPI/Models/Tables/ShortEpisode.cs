@@ -6,10 +6,10 @@ namespace UmaMusumeAPI.Models.Tables
     public class ShortEpisode
     {
         public int Id { get; set; }
-        public long Scene { get; set; }
-        public long Sort { get; set; }
-        public long ConditionType { get; set; }
-        public long ConditionValue1 { get; set; }
-        public long StoryId { get; set; }
+        public int Scene { get; set; }
+        public int Sort { get; set; }
+        public int ConditionType { get; set; }
+        public int ConditionValue1 { get; set; }
+        public int StoryId { get; set; }
     }
 }

@@ -6,17 +6,17 @@ namespace UmaMusumeAPI.Models.Tables
     public class RaceCourseSet
     {
         public int Id { get; set; }
-        public long RaceTrackId { get; set; }
-        public long Distance { get; set; }
-        public long Ground { get; set; }
-        public long Inout { get; set; }
-        public long Turn { get; set; }
-        public long FenceSet { get; set; }
-        public long FloatLaneMax { get; set; }
-        public long CourseSetStatusId { get; set; }
-        public long FinishTimeMin { get; set; }
-        public long FinishTimeMinRandomRange { get; set; }
-        public long FinishTimeMax { get; set; }
-        public long FinishTimeMaxRandomRange { get; set; }
+        public int RaceTrackId { get; set; }
+        public int Distance { get; set; }
+        public int Ground { get; set; }
+        public int Inout { get; set; }
+        public int Turn { get; set; }
+        public int FenceSet { get; set; }
+        public int FloatLaneMax { get; set; }
+        public int CourseSetStatusId { get; set; }
+        public int FinishTimeMin { get; set; }
+        public int FinishTimeMinRandomRange { get; set; }
+        public int FinishTimeMax { get; set; }
+        public int FinishTimeMaxRandomRange { get; set; }
     }
 }

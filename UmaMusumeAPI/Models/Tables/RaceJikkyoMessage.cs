@@ -6,11 +6,11 @@ namespace UmaMusumeAPI.Models.Tables
     public class RaceJikkyoMessage
     {
         public int Id { get; set; }
-        public long GroupId { get; set; }
+        public int GroupId { get; set; }
         public string Message { get; set; }
         public string Voice { get; set; }
-        public long Per { get; set; }
-        public long CommentGroup { get; set; }
-        public long Reuse { get; set; }
+        public int Per { get; set; }
+        public int CommentGroup { get; set; }
+        public int Reuse { get; set; }
     }
 }

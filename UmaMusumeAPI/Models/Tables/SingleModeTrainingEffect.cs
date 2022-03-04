@@ -6,11 +6,11 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeTrainingEffect
     {
         public int Id { get; set; }
-        public long CommandId { get; set; }
-        public long SubId { get; set; }
-        public long ResultState { get; set; }
-        public long TargetType { get; set; }
-        public long EffectValue { get; set; }
-        public long ScenarioId { get; set; }
+        public int CommandId { get; set; }
+        public int SubId { get; set; }
+        public int ResultState { get; set; }
+        public int TargetType { get; set; }
+        public int EffectValue { get; set; }
+        public int ScenarioId { get; set; }
     }
 }

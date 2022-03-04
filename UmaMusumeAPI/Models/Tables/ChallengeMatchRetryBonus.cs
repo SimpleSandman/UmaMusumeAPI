@@ -6,9 +6,9 @@ namespace UmaMusumeAPI.Models.Tables
     public class ChallengeMatchRetryBonus
     {
         public int Id { get; set; }
-        public long RetryMin { get; set; }
-        public long RetryMax { get; set; }
-        public long BonusRate { get; set; }
-        public long ResimulateNum { get; set; }
+        public int RetryMin { get; set; }
+        public int RetryMax { get; set; }
+        public int BonusRate { get; set; }
+        public int ResimulateNum { get; set; }
     }
 }

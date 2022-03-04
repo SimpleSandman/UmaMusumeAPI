@@ -6,12 +6,12 @@ namespace UmaMusumeAPI.Models.Tables
     public class TeamStadiumRank
     {
         public int Id { get; set; }
-        public long TeamRank { get; set; }
-        public long TeamRankGroup { get; set; }
-        public long TeamMinValue { get; set; }
-        public long TeamMaxValue { get; set; }
-        public long ItemCategory { get; set; }
-        public long ItemId { get; set; }
-        public long ItemNum { get; set; }
+        public int TeamRank { get; set; }
+        public int TeamRankGroup { get; set; }
+        public int TeamMinValue { get; set; }
+        public int TeamMaxValue { get; set; }
+        public int ItemCategory { get; set; }
+        public int ItemId { get; set; }
+        public int ItemNum { get; set; }
     }
 }

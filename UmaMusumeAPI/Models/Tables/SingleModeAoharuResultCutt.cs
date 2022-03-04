@@ -6,7 +6,7 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeAoharuResultCutt
     {
         public int Id { get; set; }
-        public long CharaId { get; set; }
-        public long CuttId { get; set; }
+        public int CharaId { get; set; }
+        public int CuttId { get; set; }
     }
 }

@@ -6,11 +6,11 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeDifficultyBoxReward
     {
         public int Id { get; set; }
-        public long BoxId { get; set; }
-        public long BoxNum { get; set; }
-        public long ItemCategory { get; set; }
-        public long ItemId { get; set; }
-        public long ItemNum { get; set; }
-        public long Rate { get; set; }
+        public int BoxId { get; set; }
+        public int BoxNum { get; set; }
+        public int ItemCategory { get; set; }
+        public int ItemId { get; set; }
+        public int ItemNum { get; set; }
+        public int Rate { get; set; }
     }
 }

@@ -6,11 +6,11 @@ namespace UmaMusumeAPI.Models.Tables
     public class RaceOverrunPattern
     {
         public int Id { get; set; }
-        public long FinishOrder0Type { get; set; }
-        public long FinishOrder1Type { get; set; }
-        public long FinishOrder2Type { get; set; }
-        public long FinishOrder3Type { get; set; }
-        public long FinishOrder4Type { get; set; }
-        public long FinishOrderLoseType { get; set; }
+        public int FinishOrder0Type { get; set; }
+        public int FinishOrder1Type { get; set; }
+        public int FinishOrder2Type { get; set; }
+        public int FinishOrder3Type { get; set; }
+        public int FinishOrder4Type { get; set; }
+        public int FinishOrderLoseType { get; set; }
     }
 }

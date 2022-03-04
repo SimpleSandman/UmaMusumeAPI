@@ -6,15 +6,15 @@ namespace UmaMusumeAPI.Models.Tables
     public class HomePosterData
     {
         public int Id { get; set; }
-        public long Priority { get; set; }
-        public long Height { get; set; }
-        public long Width { get; set; }
-        public long PosiVertical { get; set; }
-        public long PosiHorizontal { get; set; }
-        public long DetailValue { get; set; }
-        public long UrlValue { get; set; }
+        public int Priority { get; set; }
+        public int Height { get; set; }
+        public int Width { get; set; }
+        public int PosiVertical { get; set; }
+        public int PosiHorizontal { get; set; }
+        public int DetailValue { get; set; }
+        public int UrlValue { get; set; }
         public string Url { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
+        public int StartDate { get; set; }
+        public int EndDate { get; set; }
     }
 }

@@ -6,26 +6,26 @@ namespace UmaMusumeAPI.Models.Tables
     public class DailyRaceNpc
     {
         public int Id { get; set; }
-        public long NpcGroupId { get; set; }
-        public long CharaId { get; set; }
-        public long MobId { get; set; }
-        public long RaceDressId { get; set; }
-        public long RaceInstanceId { get; set; }
-        public long Speed { get; set; }
-        public long Stamina { get; set; }
-        public long Pow { get; set; }
-        public long Guts { get; set; }
-        public long Wiz { get; set; }
-        public long ProperDistanceShort { get; set; }
-        public long ProperDistanceMile { get; set; }
-        public long ProperDistanceMiddle { get; set; }
-        public long ProperDistanceLong { get; set; }
-        public long ProperRunningStyleNige { get; set; }
-        public long ProperRunningStyleSenko { get; set; }
-        public long ProperRunningStyleSashi { get; set; }
-        public long ProperRunningStyleOikomi { get; set; }
-        public long ProperGroundTurf { get; set; }
-        public long ProperGroundDirt { get; set; }
-        public long SkillSetId { get; set; }
+        public int NpcGroupId { get; set; }
+        public int CharaId { get; set; }
+        public int MobId { get; set; }
+        public int RaceDressId { get; set; }
+        public int RaceInstanceId { get; set; }
+        public int Speed { get; set; }
+        public int Stamina { get; set; }
+        public int Pow { get; set; }
+        public int Guts { get; set; }
+        public int Wiz { get; set; }
+        public int ProperDistanceShort { get; set; }
+        public int ProperDistanceMile { get; set; }
+        public int ProperDistanceMiddle { get; set; }
+        public int ProperDistanceLong { get; set; }
+        public int ProperRunningStyleNige { get; set; }
+        public int ProperRunningStyleSenko { get; set; }
+        public int ProperRunningStyleSashi { get; set; }
+        public int ProperRunningStyleOikomi { get; set; }
+        public int ProperGroundTurf { get; set; }
+        public int ProperGroundDirt { get; set; }
+        public int SkillSetId { get; set; }
     }
 }

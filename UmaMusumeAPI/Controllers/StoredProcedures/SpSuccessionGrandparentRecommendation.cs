@@ -53,7 +53,7 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
                             grandparentRecommendations.Add(new SpSuccessionGrandparentRecommendation 
                             {
                                 GrandparentRecommendationId = (int)dr["grandparent_recommendation_id"],
-                                GrandparentCompatibility = (long)dr["grandparent_compatibility"]
+                                GrandparentCompatibility = (int)dr["grandparent_compatibility"]
                             });
                         }
 

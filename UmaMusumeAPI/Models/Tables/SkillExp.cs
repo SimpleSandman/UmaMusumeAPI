@@ -6,8 +6,8 @@ namespace UmaMusumeAPI.Models.Tables
     public class SkillExp
     {
         public int Id { get; set; }
-        public long Type { get; set; }
-        public long Level { get; set; }
-        public long Scale { get; set; }
+        public int Type { get; set; }
+        public int Level { get; set; }
+        public int Scale { get; set; }
     }
 }

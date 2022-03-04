@@ -2,8 +2,8 @@
 {
     public class StoryHipOffset
     {
-        public long CategoryId { get; set; }
-        public long CharaId { get; set; }
-        public long Offset { get; set; }
+        public int CategoryId { get; set; }
+        public int CharaId { get; set; }
+        public int Offset { get; set; }
     }
 }

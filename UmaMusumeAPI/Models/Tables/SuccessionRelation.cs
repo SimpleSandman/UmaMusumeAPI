@@ -3,6 +3,6 @@
     public class SuccessionRelation
     {
         public int RelationType { get; set; }
-        public long RelationPoint { get; set; }
+        public int RelationPoint { get; set; }
     }
 }

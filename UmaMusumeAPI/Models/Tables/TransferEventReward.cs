@@ -3,11 +3,11 @@
     public class TransferEventReward
     {
         public int TransferRewardId { get; set; }
-        public long TransferDetailId { get; set; }
-        public long RewardRank { get; set; }
-        public long ItemCategory { get; set; }
-        public long ItemId { get; set; }
-        public long ItemNum { get; set; }
-        public long Odds { get; set; }
+        public int TransferDetailId { get; set; }
+        public int RewardRank { get; set; }
+        public int ItemCategory { get; set; }
+        public int ItemId { get; set; }
+        public int ItemNum { get; set; }
+        public int Odds { get; set; }
     }
 }

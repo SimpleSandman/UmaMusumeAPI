@@ -6,7 +6,7 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeRank
     {
         public int Id { get; set; }
-        public long MinValue { get; set; }
-        public long MaxValue { get; set; }
+        public int MinValue { get; set; }
+        public int MaxValue { get; set; }
     }
 }

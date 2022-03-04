@@ -3,17 +3,17 @@
     public class NiceObjectivesInfo
     {
         public int RouteId { get; set; }
-        public long RaceSetId { get; set; }
-        public long TargetType { get; set; }
-        public long SortId { get; set; }
-        public long Turn { get; set; }
-        public long RaceType { get; set; }
-        public long ConditionType { get; set; }
-        public long ConditionId { get; set; }
-        public long ConditionValue1 { get; set; }
-        public long ConditionValue2 { get; set; }
-        public long DetermineRace { get; set; }
-        public long DetermineRaceFlag { get; set; }
+        public int RaceSetId { get; set; }
+        public int TargetType { get; set; }
+        public int SortId { get; set; }
+        public int Turn { get; set; }
+        public int RaceType { get; set; }
+        public int ConditionType { get; set; }
+        public int ConditionId { get; set; }
+        public int ConditionValue1 { get; set; }
+        public int ConditionValue2 { get; set; }
+        public int DetermineRace { get; set; }
+        public int DetermineRaceFlag { get; set; }
         public long? RaceInstanceId { get; set; }
     }
 }

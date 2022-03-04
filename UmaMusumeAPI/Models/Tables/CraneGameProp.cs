@@ -3,6 +3,6 @@
     public class CraneGameProp
     {
         public int Type { get; set; }
-        public long Num { get; set; }
+        public int Num { get; set; }
     }
 }

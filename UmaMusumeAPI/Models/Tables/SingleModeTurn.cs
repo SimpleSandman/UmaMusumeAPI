@@ -6,26 +6,26 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeTurn
     {
         public int Id { get; set; }
-        public long TurnSetId { get; set; }
-        public long Turn { get; set; }
-        public long Year { get; set; }
-        public long Month { get; set; }
-        public long Half { get; set; }
-        public long Period { get; set; }
-        public long UniqueCommand { get; set; }
-        public long TrainingSetId { get; set; }
-        public long OutingSetId { get; set; }
-        public long TopClothId { get; set; }
-        public long TopBgId { get; set; }
+        public int TurnSetId { get; set; }
+        public int Turn { get; set; }
+        public int Year { get; set; }
+        public int Month { get; set; }
+        public int Half { get; set; }
+        public int Period { get; set; }
+        public int UniqueCommand { get; set; }
+        public int TrainingSetId { get; set; }
+        public int OutingSetId { get; set; }
+        public int TopClothId { get; set; }
+        public int TopBgId { get; set; }
         public string BgmCueName { get; set; }
         public string BgmCuesheetName { get; set; }
         public string EnvCueName { get; set; }
         public string EnvCuesheetName { get; set; }
-        public long RestType { get; set; }
-        public long HealthRoomType { get; set; }
-        public long RaceEntryType { get; set; }
-        public long StoryClothId { get; set; }
-        public long StoryBgId { get; set; }
-        public long StoryBgSubId { get; set; }
+        public int RestType { get; set; }
+        public int HealthRoomType { get; set; }
+        public int RaceEntryType { get; set; }
+        public int StoryClothId { get; set; }
+        public int StoryBgId { get; set; }
+        public int StoryBgSubId { get; set; }
     }
 }

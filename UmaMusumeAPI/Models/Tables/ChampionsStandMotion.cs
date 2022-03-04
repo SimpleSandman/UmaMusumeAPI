@@ -4,7 +4,7 @@
     {
         public int CharaId { get; set; }
         public int Type { get; set; }
-        public long RaceDressId { get; set; }
-        public long MotionSet { get; set; }
+        public int RaceDressId { get; set; }
+        public int MotionSet { get; set; }
     }
 }

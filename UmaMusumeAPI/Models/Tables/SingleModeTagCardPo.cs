@@ -6,13 +6,13 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeTagCardPo
     {
         public int Id { get; set; }
-        public long SupportCardId { get; set; }
-        public long Pattern { get; set; }
-        public long PosIndex { get; set; }
-        public long PosX { get; set; }
-        public long PosY { get; set; }
-        public long ScaleX { get; set; }
-        public long ScaleY { get; set; }
-        public long RotZ { get; set; }
+        public int SupportCardId { get; set; }
+        public int Pattern { get; set; }
+        public int PosIndex { get; set; }
+        public int PosX { get; set; }
+        public int PosY { get; set; }
+        public int ScaleX { get; set; }
+        public int ScaleY { get; set; }
+        public int RotZ { get; set; }
     }
 }

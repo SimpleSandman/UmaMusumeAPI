@@ -6,12 +6,12 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeFreeShopItem
     {
         public int Id { get; set; }
-        public long ItemId { get; set; }
-        public long EffectGroupId { get; set; }
-        public long CoinNum { get; set; }
-        public long LimitNum { get; set; }
-        public long EffectGroup { get; set; }
-        public long EffectPriority { get; set; }
-        public long MotionId { get; set; }
+        public int ItemId { get; set; }
+        public int EffectGroupId { get; set; }
+        public int CoinNum { get; set; }
+        public int LimitNum { get; set; }
+        public int EffectGroup { get; set; }
+        public int EffectPriority { get; set; }
+        public int MotionId { get; set; }
     }
 }

@@ -4,10 +4,10 @@
     {
         public int ShopDataId { get; set; }
         public int PlatformId { get; set; }
-        public long Term { get; set; }
-        public long RepurchaseDay { get; set; }
-        public long GroupId { get; set; }
-        public long DailyFreeNum { get; set; }
+        public int Term { get; set; }
+        public int RepurchaseDay { get; set; }
+        public int GroupId { get; set; }
+        public int DailyFreeNum { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
     }

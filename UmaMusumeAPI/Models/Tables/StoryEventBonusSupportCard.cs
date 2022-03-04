@@ -6,16 +6,16 @@ namespace UmaMusumeAPI.Models.Tables
     public class StoryEventBonusSupportCard
     {
         public int Id { get; set; }
-        public long StoryEventId { get; set; }
-        public long CharaId { get; set; }
-        public long Rarity { get; set; }
-        public long SupportCardId { get; set; }
-        public long Limit0 { get; set; }
-        public long Limit1 { get; set; }
-        public long Limit2 { get; set; }
-        public long Limit3 { get; set; }
-        public long Limit4 { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
+        public int StoryEventId { get; set; }
+        public int CharaId { get; set; }
+        public int Rarity { get; set; }
+        public int SupportCardId { get; set; }
+        public int Limit0 { get; set; }
+        public int Limit1 { get; set; }
+        public int Limit2 { get; set; }
+        public int Limit3 { get; set; }
+        public int Limit4 { get; set; }
+        public int StartDate { get; set; }
+        public int EndDate { get; set; }
     }
 }

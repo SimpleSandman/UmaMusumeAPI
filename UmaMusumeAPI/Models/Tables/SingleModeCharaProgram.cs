@@ -6,7 +6,8 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeCharaProgram
     {
         public int Id { get; set; }
-        public long CharaId { get; set; }
-        public long ProgramGroup { get; set; }
+        public int CharaId { get; set; }
+        public int ProgramGroup { get; set; }
+        public int ProgramGroup2 { get; set; }
     }
 }

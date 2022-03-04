@@ -3,11 +3,11 @@
     public class MiniFaceTypeData
     {
         public string Label { get; set; }
-        public long EyebrowL { get; set; }
-        public long EyebrowR { get; set; }
-        public long EyeL { get; set; }
-        public long EyeR { get; set; }
-        public long Mouth { get; set; }
-        public long Cheek { get; set; }
+        public int EyebrowL { get; set; }
+        public int EyebrowR { get; set; }
+        public int EyeL { get; set; }
+        public int EyeR { get; set; }
+        public int Mouth { get; set; }
+        public int Cheek { get; set; }
     }
 }

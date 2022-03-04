@@ -6,10 +6,10 @@ namespace UmaMusumeAPI.Models.Tables
     public class StoryEventPointReward
     {
         public int Id { get; set; }
-        public long StoryEventId { get; set; }
-        public long ItemCategory { get; set; }
-        public long ItemId { get; set; }
-        public long ItemNum { get; set; }
-        public long Point { get; set; }
+        public int StoryEventId { get; set; }
+        public int ItemCategory { get; set; }
+        public int ItemId { get; set; }
+        public int ItemNum { get; set; }
+        public int Point { get; set; }
     }
 }

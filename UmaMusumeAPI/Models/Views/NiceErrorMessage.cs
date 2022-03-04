@@ -2,7 +2,7 @@
 {
     public class NiceErrorMessage
     {
-        public long ErrorId { get; set; }
+        public int ErrorId { get; set; }
         public int ErrorIndex { get; set; }
         public string ErrorText { get; set; }
         public string ErrorTextEnglish { get; set; }

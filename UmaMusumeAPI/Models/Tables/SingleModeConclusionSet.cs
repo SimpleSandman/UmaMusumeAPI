@@ -2,8 +2,8 @@
 {
     public class SingleModeConclusionSet
     {
-        public long StoryId { get; set; }
-        public long RootId { get; set; }
-        public long ConclusionId { get; set; }
+        public int StoryId { get; set; }
+        public int RootId { get; set; }
+        public int ConclusionId { get; set; }
     }
 }

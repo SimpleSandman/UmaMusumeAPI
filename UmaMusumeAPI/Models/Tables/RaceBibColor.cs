@@ -4,7 +4,7 @@
     {
         public int Grade { get; set; }
         public int RaceId { get; set; }
-        public long BibColor { get; set; }
-        public long FontColor { get; set; }
+        public int BibColor { get; set; }
+        public int FontColor { get; set; }
     }
 }

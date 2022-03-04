@@ -6,10 +6,10 @@ namespace UmaMusumeAPI.Models.Tables
     public class NoteProfile
     {
         public int Id { get; set; }
-        public long CharaId { get; set; }
-        public long TextType { get; set; }
-        public long LockType { get; set; }
-        public long LockValue { get; set; }
-        public long Sort { get; set; }
+        public int CharaId { get; set; }
+        public int TextType { get; set; }
+        public int LockType { get; set; }
+        public int LockValue { get; set; }
+        public int Sort { get; set; }
     }
 }

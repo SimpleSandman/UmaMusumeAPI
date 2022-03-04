@@ -6,6 +6,6 @@ namespace UmaMusumeAPI.Models.Tables
     public class RaceJikkyoRace
     {
         public int Id { get; set; }
-        public long CueId { get; set; }
+        public int CueId { get; set; }
     }
 }

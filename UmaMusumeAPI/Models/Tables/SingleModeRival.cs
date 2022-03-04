@@ -6,13 +6,13 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeRival
     {
         public int Id { get; set; }
-        public long CharaId { get; set; }
-        public long Turn { get; set; }
-        public long RaceProgramId { get; set; }
-        public long RivalFlagId { get; set; }
-        public long ConditionType { get; set; }
-        public long RivalCharaId { get; set; }
-        public long SingleModeNpcId { get; set; }
-        public long FrameOrder { get; set; }
+        public int CharaId { get; set; }
+        public int Turn { get; set; }
+        public int RaceProgramId { get; set; }
+        public int RivalFlagId { get; set; }
+        public int ConditionType { get; set; }
+        public int RivalCharaId { get; set; }
+        public int SingleModeNpcId { get; set; }
+        public int FrameOrder { get; set; }
     }
 }

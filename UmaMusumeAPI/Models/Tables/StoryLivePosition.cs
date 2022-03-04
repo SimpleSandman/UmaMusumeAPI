@@ -6,15 +6,15 @@ namespace UmaMusumeAPI.Models.Tables
     public class StoryLivePosition
     {
         public int Id { get; set; }
-        public long SetId { get; set; }
-        public long MusicId { get; set; }
-        public long PositionId { get; set; }
-        public long CharaType { get; set; }
-        public long CharaId { get; set; }
-        public long DressId { get; set; }
-        public long DressColor { get; set; }
-        public long SecondDressId { get; set; }
-        public long SecondDressColor { get; set; }
-        public long VocalCharaId { get; set; }
+        public int SetId { get; set; }
+        public int MusicId { get; set; }
+        public int PositionId { get; set; }
+        public int CharaType { get; set; }
+        public int CharaId { get; set; }
+        public int DressId { get; set; }
+        public int DressColor { get; set; }
+        public int SecondDressId { get; set; }
+        public int SecondDressColor { get; set; }
+        public int VocalCharaId { get; set; }
     }
 }

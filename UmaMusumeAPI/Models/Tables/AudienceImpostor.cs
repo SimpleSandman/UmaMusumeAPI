@@ -2,19 +2,19 @@
 {
     public class AudienceImpostor
     {
-        public long SceneType { get; set; }
-        public long Season { get; set; }
-        public long Weather { get; set; }
-        public long GroupId { get; set; }
-        public long Pattern1 { get; set; }
-        public long Pattern2 { get; set; }
-        public long Pattern3 { get; set; }
-        public long Pattern4 { get; set; }
-        public long Pattern5 { get; set; }
-        public long Pattern6 { get; set; }
-        public long Pattern7 { get; set; }
-        public long Pattern8 { get; set; }
-        public long Pattern9 { get; set; }
-        public long Pattern10 { get; set; }
+        public int SceneType { get; set; }
+        public int Season { get; set; }
+        public int Weather { get; set; }
+        public int GroupId { get; set; }
+        public int Pattern1 { get; set; }
+        public int Pattern2 { get; set; }
+        public int Pattern3 { get; set; }
+        public int Pattern4 { get; set; }
+        public int Pattern5 { get; set; }
+        public int Pattern6 { get; set; }
+        public int Pattern7 { get; set; }
+        public int Pattern8 { get; set; }
+        public int Pattern9 { get; set; }
+        public int Pattern10 { get; set; }
     }
 }

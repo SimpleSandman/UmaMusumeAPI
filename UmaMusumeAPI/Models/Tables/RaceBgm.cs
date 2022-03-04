@@ -6,17 +6,17 @@ namespace UmaMusumeAPI.Models.Tables
     public class RaceBgm
     {
         public int Id { get; set; }
-        public long RaceType { get; set; }
-        public long RaceInstanceId { get; set; }
-        public long Grade { get; set; }
-        public long SingleModeRouteRaceId { get; set; }
-        public long SingleModeProgramId { get; set; }
+        public int RaceType { get; set; }
+        public int RaceInstanceId { get; set; }
+        public int Grade { get; set; }
+        public int SingleModeRouteRaceId { get; set; }
+        public int SingleModeProgramId { get; set; }
         public string PaddockBgmCueName { get; set; }
         public string PaddockBgmCuesheetName { get; set; }
         public string EntrytableBgmCueName { get; set; }
         public string EntrytableBgmCuesheetName { get; set; }
-        public long FirstBgmPattern { get; set; }
-        public long SecondBgmPattern { get; set; }
+        public int FirstBgmPattern { get; set; }
+        public int SecondBgmPattern { get; set; }
         public string ResultCutinBgmCueName1 { get; set; }
         public string ResultCutinBgmCuesheetName1 { get; set; }
         public string ResultCutinBgmCueName2 { get; set; }

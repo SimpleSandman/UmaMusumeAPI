@@ -6,19 +6,19 @@ namespace UmaMusumeAPI.Models.Tables
     public class ChampionsSchedule
     {
         public int Id { get; set; }
-        public long ResourceId { get; set; }
-        public long InfoDetail1 { get; set; }
-        public long InfoDetail2 { get; set; }
-        public long ChampionsBgId { get; set; }
-        public long ChampionsLeagueSelectBgSubId { get; set; }
-        public long ChampionsBgSubId { get; set; }
-        public long ChampionsFinishBgSubId { get; set; }
-        public long ChampionsBgPositionX { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
-        public long InfoDetail { get; set; }
-        public long ChampionsFinishBgId { get; set; }
-        public long ChampionsFinishBgPositionX { get; set; }
-        public long NoticeDate { get; set; }
+        public int ResourceId { get; set; }
+        public int InfoDetail1 { get; set; }
+        public int InfoDetail2 { get; set; }
+        public int ChampionsBgId { get; set; }
+        public int ChampionsLeagueSelectBgSubId { get; set; }
+        public int ChampionsBgSubId { get; set; }
+        public int ChampionsFinishBgSubId { get; set; }
+        public int ChampionsBgPositionX { get; set; }
+        public int StartDate { get; set; }
+        public int EndDate { get; set; }
+        public int InfoDetail { get; set; }
+        public int ChampionsFinishBgId { get; set; }
+        public int ChampionsFinishBgPositionX { get; set; }
+        public int NoticeDate { get; set; }
     }
 }

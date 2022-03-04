@@ -6,22 +6,27 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeStoryData
     {
         public int Id { get; set; }
-        public long StoryId { get; set; }
-        public long ShortStoryId { get; set; }
-        public long CardId { get; set; }
-        public long CardCharaId { get; set; }
-        public long SupportCardId { get; set; }
-        public long SupportCharaId { get; set; }
-        public long ShowProgress1 { get; set; }
-        public long ShowProgress2 { get; set; }
-        public long ShowClear { get; set; }
-        public long ShowSuccession { get; set; }
-        public long EventTitleStyle { get; set; }
-        public long EventTitleDressIcon { get; set; }
-        public long EventTitleCharaIcon { get; set; }
-        public long SeChange { get; set; }
-        public long EndingType { get; set; }
-        public long RaceEventFlag { get; set; }
-        public long MiniGameResult { get; set; }
+        public int StoryId { get; set; }
+        public int ShortStoryId { get; set; }
+        public int CardId { get; set; }
+        public int CardCharaId { get; set; }
+        public int SupportCardId { get; set; }
+        public int SupportCharaId { get; set; }
+        public int ShowProgress1 { get; set; }
+        public int ShowProgress2 { get; set; }
+        public int ShowProgress3 { get; set; }
+        public int ShowClear { get; set; }
+        public int ShowSuccession { get; set; }
+        public int EventTitleStyle { get; set; }
+        public int EventTitleDressIcon { get; set; }
+        public int EventTitleCharaIcon { get; set; }
+        public int SeChange { get; set; }
+        public int EndingType { get; set; }
+        public int RaceEventFlag { get; set; }
+        public int MiniGameResult { get; set; }
+        public int GalleryMainScenario { get; set; }
+        public int GalleryFlag { get; set; }
+        public int GalleryListId { get; set; }
+        public int PastRaceId { get; set; }
     }
 }

@@ -6,22 +6,22 @@ namespace UmaMusumeAPI.Models.Tables
     public class ItemExchange
     {
         public int Id { get; set; }
-        public long ItemExchangeTopId { get; set; }
-        public long DispOrder { get; set; }
-        public long ConditionType { get; set; }
-        public long ConditionValue1 { get; set; }
-        public long ConditionValue2 { get; set; }
-        public long ChangeItemLimitType { get; set; }
-        public long ChangeItemLimitNum { get; set; }
-        public long ChangeItemCategory { get; set; }
-        public long ChangeItemId { get; set; }
-        public long ChangeItemNum { get; set; }
-        public long AdditionalPieceNum { get; set; }
-        public long PayItemCategory { get; set; }
-        public long PayItemId { get; set; }
-        public long PayItemNum { get; set; }
-        public long PriceChangeGroupId { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
+        public int ItemExchangeTopId { get; set; }
+        public int DispOrder { get; set; }
+        public int ConditionType { get; set; }
+        public int ConditionValue1 { get; set; }
+        public int ConditionValue2 { get; set; }
+        public int ChangeItemLimitType { get; set; }
+        public int ChangeItemLimitNum { get; set; }
+        public int ChangeItemCategory { get; set; }
+        public int ChangeItemId { get; set; }
+        public int ChangeItemNum { get; set; }
+        public int AdditionalPieceNum { get; set; }
+        public int PayItemCategory { get; set; }
+        public int PayItemId { get; set; }
+        public int PayItemNum { get; set; }
+        public int PriceChangeGroupId { get; set; }
+        public int StartDate { get; set; }
+        public int EndDate { get; set; }
     }
 }

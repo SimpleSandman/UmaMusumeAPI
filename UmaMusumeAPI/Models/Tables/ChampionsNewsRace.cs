@@ -6,9 +6,9 @@ namespace UmaMusumeAPI.Models.Tables
     public class ChampionsNewsRace
     {
         public int Id { get; set; }
-        public long RoundId { get; set; }
-        public long WinPercentType { get; set; }
-        public long TextNumber { get; set; }
-        public long ResourceId { get; set; }
+        public int RoundId { get; set; }
+        public int WinPercentType { get; set; }
+        public int TextNumber { get; set; }
+        public int ResourceId { get; set; }
     }
 }

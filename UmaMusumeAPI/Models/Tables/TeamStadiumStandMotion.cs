@@ -2,12 +2,12 @@
 {
     public class TeamStadiumStandMotion
     {
-        public long CharacterId { get; set; }
-        public long Type { get; set; }
-        public long RaceDressId { get; set; }
-        public long Position { get; set; }
-        public long MotionSet { get; set; }
-        public long Rotation { get; set; }
-        public long PositionX { get; set; }
+        public int CharacterId { get; set; }
+        public int Type { get; set; }
+        public int RaceDressId { get; set; }
+        public int Position { get; set; }
+        public int MotionSet { get; set; }
+        public int Rotation { get; set; }
+        public int PositionX { get; set; }
     }
 }

@@ -6,8 +6,8 @@ namespace UmaMusumeAPI.Models.Tables
     public class ChampionsNewsCharaComment
     {
         public int Id { get; set; }
-        public long RoundId { get; set; }
-        public long CharaId { get; set; }
-        public long BigFlag { get; set; }
+        public int RoundId { get; set; }
+        public int CharaId { get; set; }
+        public int BigFlag { get; set; }
     }
 }

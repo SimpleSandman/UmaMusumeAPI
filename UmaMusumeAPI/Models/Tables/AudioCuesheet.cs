@@ -7,6 +7,6 @@ namespace UmaMusumeAPI.Models.Tables
     {
         public int Id { get; set; }
         public string CueSheet { get; set; }
-        public long Attribute { get; set; }
+        public int Attribute { get; set; }
     }
 }

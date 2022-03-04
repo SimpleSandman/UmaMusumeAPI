@@ -6,10 +6,10 @@ namespace UmaMusumeAPI.Models.Tables
     public class RaceInstance
     {
         public int Id { get; set; }
-        public long RaceId { get; set; }
-        public long NpcGroupId { get; set; }
-        public long Date { get; set; }
-        public long Time { get; set; }
-        public long RaceNumber { get; set; }
+        public int RaceId { get; set; }
+        public int NpcGroupId { get; set; }
+        public int Date { get; set; }
+        public int Time { get; set; }
+        public int RaceNumber { get; set; }
     }
 }

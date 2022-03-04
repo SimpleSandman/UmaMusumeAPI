@@ -6,10 +6,10 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeRouteAnnounce
     {
         public int Id { get; set; }
-        public long RouteRaceType { get; set; }
-        public long RouteRaceId { get; set; }
-        public long Turn { get; set; }
-        public long TargetType { get; set; }
-        public long TargetValue { get; set; }
+        public int RouteRaceType { get; set; }
+        public int RouteRaceId { get; set; }
+        public int Turn { get; set; }
+        public int TargetType { get; set; }
+        public int TargetValue { get; set; }
     }
 }

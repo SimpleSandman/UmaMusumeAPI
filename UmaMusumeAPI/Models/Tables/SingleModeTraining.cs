@@ -6,20 +6,20 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeTraining
     {
         public int Id { get; set; }
-        public long CommandId { get; set; }
-        public long BaseCommandId { get; set; }
-        public long CommandLevel { get; set; }
-        public long CommandType { get; set; }
-        public long CutinFileId { get; set; }
-        public long MaxCharaNum { get; set; }
-        public long FailureRate { get; set; }
-        public long MenuBgId { get; set; }
-        public long MenuBgSubId { get; set; }
+        public int CommandId { get; set; }
+        public int BaseCommandId { get; set; }
+        public int CommandLevel { get; set; }
+        public int CommandType { get; set; }
+        public int CutinFileId { get; set; }
+        public int MaxCharaNum { get; set; }
+        public int FailureRate { get; set; }
+        public int MenuBgId { get; set; }
+        public int MenuBgSubId { get; set; }
         public string EnvCueName { get; set; }
         public string EnvCuesheetName { get; set; }
-        public long MotionSet { get; set; }
-        public long SaboriType { get; set; }
-        public long DressType { get; set; }
-        public long DressId { get; set; }
+        public int MotionSet { get; set; }
+        public int SaboriType { get; set; }
+        public int DressType { get; set; }
+        public int DressId { get; set; }
     }
 }

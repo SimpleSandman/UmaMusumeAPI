@@ -6,8 +6,8 @@ namespace UmaMusumeAPI.Models.Tables
     public class SupportCardGroup
     {
         public int Id { get; set; }
-        public long SupportCardId { get; set; }
-        public long CharaId { get; set; }
-        public long OutingMax { get; set; }
+        public int SupportCardId { get; set; }
+        public int CharaId { get; set; }
+        public int OutingMax { get; set; }
     }
 }

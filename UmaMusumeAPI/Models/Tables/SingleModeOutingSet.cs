@@ -6,10 +6,10 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeOutingSet
     {
         public int Id { get; set; }
-        public long CommandGroupId1 { get; set; }
-        public long CommandGroupId2 { get; set; }
-        public long CommandGroupId3 { get; set; }
-        public long CommandGroupId4 { get; set; }
-        public long CommandGroupId5 { get; set; }
+        public int CommandGroupId1 { get; set; }
+        public int CommandGroupId2 { get; set; }
+        public int CommandGroupId3 { get; set; }
+        public int CommandGroupId4 { get; set; }
+        public int CommandGroupId5 { get; set; }
     }
 }

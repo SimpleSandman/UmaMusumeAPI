@@ -6,9 +6,9 @@ namespace UmaMusumeAPI.Models.Tables
     public class MainStoryRaceBonusCondition
     {
         public int Id { get; set; }
-        public long GroupId { get; set; }
-        public long ConditionType { get; set; }
-        public long ConditionValue1 { get; set; }
-        public long ConditionValue2 { get; set; }
+        public int GroupId { get; set; }
+        public int ConditionType { get; set; }
+        public int ConditionValue1 { get; set; }
+        public int ConditionValue2 { get; set; }
     }
 }

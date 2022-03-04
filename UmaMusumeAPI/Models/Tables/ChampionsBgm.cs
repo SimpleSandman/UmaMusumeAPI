@@ -6,12 +6,12 @@ namespace UmaMusumeAPI.Models.Tables
     public class ChampionsBgm
     {
         public int Id { get; set; }
-        public long RoundId { get; set; }
-        public long SceneType { get; set; }
-        public long RaceNumber { get; set; }
+        public int RoundId { get; set; }
+        public int SceneType { get; set; }
+        public int RaceNumber { get; set; }
         public string CueName { get; set; }
         public string CuesheetName { get; set; }
-        public long FirstBgmPattern { get; set; }
-        public long SecondBgmPattern { get; set; }
+        public int FirstBgmPattern { get; set; }
+        public int SecondBgmPattern { get; set; }
     }
 }

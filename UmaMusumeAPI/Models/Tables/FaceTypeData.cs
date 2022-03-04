@@ -8,8 +8,8 @@
         public string EyeL { get; set; }
         public string EyeR { get; set; }
         public string Mouth { get; set; }
-        public long MouthShapeType { get; set; }
+        public int MouthShapeType { get; set; }
         public string InverceFaceType { get; set; }
-        public long SetFaceGroup { get; set; }
+        public int SetFaceGroup { get; set; }
     }
 }

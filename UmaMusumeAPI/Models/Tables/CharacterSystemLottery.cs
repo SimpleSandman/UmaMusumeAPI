@@ -6,13 +6,13 @@ namespace UmaMusumeAPI.Models.Tables
     public class CharacterSystemLottery
     {
         public int Id { get; set; }
-        public long CharaId { get; set; }
-        public long CardId { get; set; }
-        public long CardRarityId { get; set; }
-        public long Trigger { get; set; }
-        public long Param1 { get; set; }
-        public long Per { get; set; }
-        public long Priority { get; set; }
-        public long SysTextId { get; set; }
+        public int CharaId { get; set; }
+        public int CardId { get; set; }
+        public int CardRarityId { get; set; }
+        public int Trigger { get; set; }
+        public int Param1 { get; set; }
+        public int Per { get; set; }
+        public int Priority { get; set; }
+        public int SysTextId { get; set; }
     }
 }

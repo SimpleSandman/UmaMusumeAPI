@@ -6,19 +6,19 @@ namespace UmaMusumeAPI.Models.Tables
     public class CraneGameHiddenOdd
     {
         public int Id { get; set; }
-        public long AnimationId { get; set; }
-        public long CraneAnimationId { get; set; }
-        public long TypeId { get; set; }
-        public long Num { get; set; }
-        public long Big { get; set; }
-        public long BigIndex { get; set; }
-        public long Odds1 { get; set; }
-        public long Odds2 { get; set; }
-        public long Odds3 { get; set; }
-        public long OddsExtra { get; set; }
-        public long RareEffectOdds { get; set; }
-        public long JointType { get; set; }
-        public long LiftType { get; set; }
-        public long PushType { get; set; }
+        public int AnimationId { get; set; }
+        public int CraneAnimationId { get; set; }
+        public int TypeId { get; set; }
+        public int Num { get; set; }
+        public int Big { get; set; }
+        public int BigIndex { get; set; }
+        public int Odds1 { get; set; }
+        public int Odds2 { get; set; }
+        public int Odds3 { get; set; }
+        public int OddsExtra { get; set; }
+        public int RareEffectOdds { get; set; }
+        public int JointType { get; set; }
+        public int LiftType { get; set; }
+        public int PushType { get; set; }
     }
 }

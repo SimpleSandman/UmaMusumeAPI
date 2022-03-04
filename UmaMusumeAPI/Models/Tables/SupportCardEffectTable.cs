@@ -4,16 +4,16 @@
     {
         public int Id { get; set; }
         public int Type { get; set; }
-        public long Init { get; set; }
-        public long LimitLv5 { get; set; }
-        public long LimitLv10 { get; set; }
-        public long LimitLv15 { get; set; }
-        public long LimitLv20 { get; set; }
-        public long LimitLv25 { get; set; }
-        public long LimitLv30 { get; set; }
-        public long LimitLv35 { get; set; }
-        public long LimitLv40 { get; set; }
-        public long LimitLv45 { get; set; }
-        public long LimitLv50 { get; set; }
+        public int Init { get; set; }
+        public int LimitLv5 { get; set; }
+        public int LimitLv10 { get; set; }
+        public int LimitLv15 { get; set; }
+        public int LimitLv20 { get; set; }
+        public int LimitLv25 { get; set; }
+        public int LimitLv30 { get; set; }
+        public int LimitLv35 { get; set; }
+        public int LimitLv40 { get; set; }
+        public int LimitLv45 { get; set; }
+        public int LimitLv50 { get; set; }
     }
 }

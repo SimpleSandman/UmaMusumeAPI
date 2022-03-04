@@ -6,34 +6,31 @@ namespace UmaMusumeAPI.Models.Tables
     public class CardRarityData
     {
         public int Id { get; set; }
-        public long CardId { get; set; }
-        public long Rarity { get; set; }
-        public long RaceDressId { get; set; }
-        public long LiveDressId { get; set; }
-        public long OutgameDressId { get; set; }
-        public long MiniDressId { get; set; }
-        public long SkillSet { get; set; }
-        public long Speed { get; set; }
-        public long Stamina { get; set; }
-        public long Pow { get; set; }
-        public long Guts { get; set; }
-        public long Wiz { get; set; }
-        public long MaxSpeed { get; set; }
-        public long MaxStamina { get; set; }
-        public long MaxPow { get; set; }
-        public long MaxGuts { get; set; }
-        public long MaxWiz { get; set; }
-        public long ProperDistanceShort { get; set; }
-        public long ProperDistanceMile { get; set; }
-        public long ProperDistanceMiddle { get; set; }
-        public long ProperDistanceLong { get; set; }
-        public long ProperRunningStyleNige { get; set; }
-        public long ProperRunningStyleSenko { get; set; }
-        public long ProperRunningStyleSashi { get; set; }
-        public long ProperRunningStyleOikomi { get; set; }
-        public long ProperGroundTurf { get; set; }
-        public long ProperGroundDirt { get; set; }
-        public long GetDressId1 { get; set; }
-        public long GetDressId2 { get; set; }
+        public int CardId { get; set; }
+        public int Rarity { get; set; }
+        public int RaceDressId { get; set; }
+        public int SkillSet { get; set; }
+        public int Speed { get; set; }
+        public int Stamina { get; set; }
+        public int Pow { get; set; }
+        public int Guts { get; set; }
+        public int Wiz { get; set; }
+        public int MaxSpeed { get; set; }
+        public int MaxStamina { get; set; }
+        public int MaxPow { get; set; }
+        public int MaxGuts { get; set; }
+        public int MaxWiz { get; set; }
+        public int ProperDistanceShort { get; set; }
+        public int ProperDistanceMile { get; set; }
+        public int ProperDistanceMiddle { get; set; }
+        public int ProperDistanceLong { get; set; }
+        public int ProperRunningStyleNige { get; set; }
+        public int ProperRunningStyleSenko { get; set; }
+        public int ProperRunningStyleSashi { get; set; }
+        public int ProperRunningStyleOikomi { get; set; }
+        public int ProperGroundTurf { get; set; }
+        public int ProperGroundDirt { get; set; }
+        public int GetDressId1 { get; set; }
+        public int GetDressId2 { get; set; }
     }
 }

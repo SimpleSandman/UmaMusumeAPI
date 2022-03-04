@@ -33,13 +33,13 @@ DELIMITER $$
 --
 -- Create procedure `sp_succession_point_sum`
 --
-CREATE PROCEDURE sp_succession_point_sum (IN child BIGINT
-                                        , IN parent1 BIGINT
-                                        , IN grand_parent_1a BIGINT
-                                        , IN grand_parent_1b BIGINT
-                                        , IN parent2 BIGINT
-                                        , IN grand_parent_2a BIGINT
-                                        , IN grand_parent_2b BIGINT)
+CREATE PROCEDURE sp_succession_point_sum (IN child INT
+                                        , IN parent1 INT
+                                        , IN grand_parent_1a INT
+                                        , IN grand_parent_1b INT
+                                        , IN parent2 INT
+                                        , IN grand_parent_2a INT
+                                        , IN grand_parent_2b INT)
 BEGIN
     DROP TEMPORARY TABLE IF EXISTS p1_c_relationship;
     DROP TEMPORARY TABLE IF EXISTS gpA_p1_c_relationship;
@@ -210,7 +210,7 @@ $$
 --
 -- Create procedure `sp_succession_parent_recommendation`
 --
-CREATE PROCEDURE sp_succession_parent_recommendation (IN child BIGINT)
+CREATE PROCEDURE sp_succession_parent_recommendation (IN child INT)
 BEGIN
     SELECT cd.id AS parent_recommendation_id
          , CONVERT(SUM(parent.relation_point), INT) AS parent_compatibility
@@ -229,8 +229,8 @@ $$
 --
 -- Create procedure `sp_succession_grandparent_recommendation`
 --
-CREATE PROCEDURE sp_succession_grandparent_recommendation (IN child BIGINT
-                                                         , IN parent BIGINT)
+CREATE PROCEDURE sp_succession_grandparent_recommendation (IN child INT
+                                                         , IN parent INT)
 BEGIN
     DROP TEMPORARY TABLE IF EXISTS p_c_relationship;
 

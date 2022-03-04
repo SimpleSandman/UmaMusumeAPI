@@ -6,9 +6,9 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeFreeCoinRace
     {
         public int Id { get; set; }
-        public long Grade { get; set; }
-        public long OrderMin { get; set; }
-        public long OrderMax { get; set; }
-        public long CoinNum { get; set; }
+        public int Grade { get; set; }
+        public int OrderMin { get; set; }
+        public int OrderMax { get; set; }
+        public int CoinNum { get; set; }
     }
 }

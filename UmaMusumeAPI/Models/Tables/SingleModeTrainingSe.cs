@@ -11,7 +11,7 @@ namespace UmaMusumeAPI.Models.Tables
         public string SeCuesheetName { get; set; }
         public string SkipSeCueName { get; set; }
         public string SkipSeCuesheetName { get; set; }
-        public long CharaIndex { get; set; }
-        public long VoiceTriggerId { get; set; }
+        public int CharaIndex { get; set; }
+        public int VoiceTriggerId { get; set; }
     }
 }

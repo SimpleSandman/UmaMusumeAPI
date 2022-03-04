@@ -52,7 +52,7 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
                             parentRecommendations.Add(new SpSuccessionParentRecommendation
                             {
                                 ParentRecommendationId = (int)dr["parent_recommendation_id"],
-                                ParentCompatibility = (long)dr["parent_compatibility"]
+                                ParentCompatibility = (int)dr["parent_compatibility"]
                             });
                         }
 

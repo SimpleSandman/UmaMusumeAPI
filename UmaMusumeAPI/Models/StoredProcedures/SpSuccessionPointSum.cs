@@ -2,13 +2,13 @@
 {
     public class SpSuccessionPointSum
     {
-        public long Parent1Child { get; set; }
-        public long GrandparentAParent1 { get; set; }
-        public long GrandparentBParent1 { get; set; }
-        public long Parent2Child { get; set; }
-        public long GrandparentAParent2 { get; set; }
-        public long GrandparentBParent2 { get; set; }
-        public long Parent1Parent2 { get; set; }
-        public long PointSum { get; set; }
+        public int Parent1Child { get; set; }
+        public int GrandparentAParent1 { get; set; }
+        public int GrandparentBParent1 { get; set; }
+        public int Parent2Child { get; set; }
+        public int GrandparentAParent2 { get; set; }
+        public int GrandparentBParent2 { get; set; }
+        public int Parent1Parent2 { get; set; }
+        public int PointSum { get; set; }
     }
 }

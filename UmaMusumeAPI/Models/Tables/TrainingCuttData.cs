@@ -2,12 +2,12 @@
 {
     public class TrainingCuttData
     {
-        public long CommandId { get; set; }
-        public long SubId { get; set; }
-        public long CharaNum { get; set; }
-        public long TargetCharaIndex { get; set; }
-        public long TargetValue { get; set; }
-        public long CuttIndex { get; set; }
-        public long SuccessFlg { get; set; }
+        public int CommandId { get; set; }
+        public int SubId { get; set; }
+        public int CharaNum { get; set; }
+        public int TargetCharaIndex { get; set; }
+        public int TargetValue { get; set; }
+        public int CuttIndex { get; set; }
+        public int SuccessFlg { get; set; }
     }
 }

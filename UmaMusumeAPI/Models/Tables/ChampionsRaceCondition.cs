@@ -4,7 +4,7 @@
     {
         public int ChampionsId { get; set; }
         public int RoundId { get; set; }
-        public long RaceInstanceId { get; set; }
-        public long RaceConditionId { get; set; }
+        public int RaceInstanceId { get; set; }
+        public int RaceConditionId { get; set; }
     }
 }

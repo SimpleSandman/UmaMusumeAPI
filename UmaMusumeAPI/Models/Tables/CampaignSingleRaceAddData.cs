@@ -6,9 +6,9 @@ namespace UmaMusumeAPI.Models.Tables
     public class CampaignSingleRaceAddData
     {
         public int Id { get; set; }
-        public long RaceAdditionalId { get; set; }
-        public long RaceProgramId { get; set; }
-        public long RaceAdditionalRewardId { get; set; }
-        public long RewardLimit { get; set; }
+        public int RaceAdditionalId { get; set; }
+        public int RaceProgramId { get; set; }
+        public int RaceAdditionalRewardId { get; set; }
+        public int RewardLimit { get; set; }
     }
 }

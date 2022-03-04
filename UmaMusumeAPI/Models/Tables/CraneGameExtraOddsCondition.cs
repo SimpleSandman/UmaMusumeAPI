@@ -3,6 +3,6 @@
     public class CraneGameExtraOddsCondition
     {
         public int Credit { get; set; }
-        public long GetNum { get; set; }
+        public int GetNum { get; set; }
     }
 }

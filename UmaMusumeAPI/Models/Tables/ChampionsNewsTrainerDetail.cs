@@ -6,8 +6,8 @@ namespace UmaMusumeAPI.Models.Tables
     public class ChampionsNewsTrainerDetail
     {
         public int Id { get; set; }
-        public long TrainerTextGroup { get; set; }
-        public long TextNumber { get; set; }
-        public long ResourceId { get; set; }
+        public int TrainerTextGroup { get; set; }
+        public int TextNumber { get; set; }
+        public int ResourceId { get; set; }
     }
 }

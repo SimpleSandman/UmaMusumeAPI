@@ -6,12 +6,12 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeTopBgChara
     {
         public int Id { get; set; }
-        public long ScenarioId { get; set; }
-        public long BgId { get; set; }
-        public long GroupId { get; set; }
-        public long PosX { get; set; }
-        public long PosZ { get; set; }
-        public long RotationY { get; set; }
-        public long MotionSetId { get; set; }
+        public int ScenarioId { get; set; }
+        public int BgId { get; set; }
+        public int GroupId { get; set; }
+        public int PosX { get; set; }
+        public int PosZ { get; set; }
+        public int RotationY { get; set; }
+        public int MotionSetId { get; set; }
     }
 }

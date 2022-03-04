@@ -6,10 +6,10 @@ namespace UmaMusumeAPI.Models.Tables
     public class AnnounceData
     {
         public int Id { get; set; }
-        public long AnnounceType { get; set; }
-        public long AnnounceId { get; set; }
-        public long Priority { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
+        public int AnnounceType { get; set; }
+        public int AnnounceId { get; set; }
+        public int Priority { get; set; }
+        public int StartDate { get; set; }
+        public int EndDate { get; set; }
     }
 }

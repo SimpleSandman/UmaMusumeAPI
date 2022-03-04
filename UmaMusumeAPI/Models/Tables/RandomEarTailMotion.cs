@@ -6,9 +6,9 @@ namespace UmaMusumeAPI.Models.Tables
     public class RandomEarTailMotion
     {
         public int Id { get; set; }
-        public long PartsType { get; set; }
+        public int PartsType { get; set; }
         public string MotionName { get; set; }
-        public long EarType { get; set; }
-        public long UseStory { get; set; }
+        public int EarType { get; set; }
+        public int UseStory { get; set; }
     }
 }

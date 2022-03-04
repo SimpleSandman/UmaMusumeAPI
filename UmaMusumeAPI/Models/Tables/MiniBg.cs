@@ -6,13 +6,13 @@ namespace UmaMusumeAPI.Models.Tables
     public class MiniBg
     {
         public int Id { get; set; }
-        public long SceneType { get; set; }
-        public long ReleaseNum { get; set; }
-        public long SizeX { get; set; }
-        public long SizeY { get; set; }
+        public int SceneType { get; set; }
+        public int ReleaseNum { get; set; }
+        public int SizeX { get; set; }
+        public int SizeY { get; set; }
         public string GridOffsetX { get; set; }
         public string GridOffsetY { get; set; }
-        public long DressId { get; set; }
+        public int DressId { get; set; }
         public string Position { get; set; }
     }
 }

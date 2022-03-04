@@ -6,14 +6,14 @@ namespace UmaMusumeAPI.Models.Tables
     public class HonorData
     {
         public int Id { get; set; }
-        public long Rank { get; set; }
-        public long Category { get; set; }
+        public int Rank { get; set; }
+        public int Category { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
-        public long ConditionType { get; set; }
-        public long ConditionValue { get; set; }
-        public long ConditionValue2 { get; set; }
-        public long StepGroupId { get; set; }
-        public long StepOrder { get; set; }
+        public int ConditionType { get; set; }
+        public int ConditionValue { get; set; }
+        public int ConditionValue2 { get; set; }
+        public int StepGroupId { get; set; }
+        public int StepOrder { get; set; }
     }
 }

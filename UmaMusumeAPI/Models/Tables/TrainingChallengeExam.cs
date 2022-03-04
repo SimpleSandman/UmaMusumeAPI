@@ -6,28 +6,28 @@ namespace UmaMusumeAPI.Models.Tables
     public class TrainingChallengeExam
     {
         public int Id { get; set; }
-        public long FeatureType { get; set; }
-        public long GoodScore { get; set; }
-        public long GoodScoreRewardCoin { get; set; }
-        public long GreatScore { get; set; }
-        public long GreatScoreRewardCoin { get; set; }
-        public long ExellentScore { get; set; }
-        public long ExellentScoreRewardCoin { get; set; }
-        public long ScoreGroupId { get; set; }
-        public long ItemCategory1 { get; set; }
-        public long ItemId1 { get; set; }
-        public long ItemNum1 { get; set; }
-        public long ItemCategory2 { get; set; }
-        public long ItemId2 { get; set; }
-        public long ItemNum2 { get; set; }
-        public long ItemCategory3 { get; set; }
-        public long ItemId3 { get; set; }
-        public long ItemNum3 { get; set; }
-        public long ItemCategory4 { get; set; }
-        public long ItemId4 { get; set; }
-        public long ItemNum4 { get; set; }
-        public long ItemCategory5 { get; set; }
-        public long ItemId5 { get; set; }
-        public long ItemNum5 { get; set; }
+        public int FeatureType { get; set; }
+        public int GoodScore { get; set; }
+        public int GoodScoreRewardCoin { get; set; }
+        public int GreatScore { get; set; }
+        public int GreatScoreRewardCoin { get; set; }
+        public int ExellentScore { get; set; }
+        public int ExellentScoreRewardCoin { get; set; }
+        public int ScoreGroupId { get; set; }
+        public int ItemCategory1 { get; set; }
+        public int ItemId1 { get; set; }
+        public int ItemNum1 { get; set; }
+        public int ItemCategory2 { get; set; }
+        public int ItemId2 { get; set; }
+        public int ItemNum2 { get; set; }
+        public int ItemCategory3 { get; set; }
+        public int ItemId3 { get; set; }
+        public int ItemNum3 { get; set; }
+        public int ItemCategory4 { get; set; }
+        public int ItemId4 { get; set; }
+        public int ItemNum4 { get; set; }
+        public int ItemCategory5 { get; set; }
+        public int ItemId5 { get; set; }
+        public int ItemNum5 { get; set; }
     }
 }

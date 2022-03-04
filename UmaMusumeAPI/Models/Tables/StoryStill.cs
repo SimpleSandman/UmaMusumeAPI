@@ -6,8 +6,8 @@ namespace UmaMusumeAPI.Models.Tables
     public class StoryStill
     {
         public int Id { get; set; }
-        public long StillId { get; set; }
-        public long PageId { get; set; }
-        public long OrderId { get; set; }
+        public int StillId { get; set; }
+        public int PageId { get; set; }
+        public int OrderId { get; set; }
     }
 }

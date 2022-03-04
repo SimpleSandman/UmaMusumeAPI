@@ -3,18 +3,18 @@
     public class AudienceData
     {
         public int AudienceId { get; set; }
-        public long CharaFaceModel { get; set; }
-        public long CharaSkinColor { get; set; }
-        public long CharaHairModel { get; set; }
-        public long CharaHairColor { get; set; }
-        public long PropId1 { get; set; }
-        public long PropAttachNodeNameType1 { get; set; }
-        public long PropId2 { get; set; }
-        public long PropAttachNodeNameType2 { get; set; }
-        public long CharaHeight { get; set; }
-        public long Shape { get; set; }
-        public long CharaBustSize { get; set; }
-        public long DressId { get; set; }
-        public long DressColorId { get; set; }
+        public int CharaFaceModel { get; set; }
+        public int CharaSkinColor { get; set; }
+        public int CharaHairModel { get; set; }
+        public int CharaHairColor { get; set; }
+        public int PropId1 { get; set; }
+        public int PropAttachNodeNameType1 { get; set; }
+        public int PropId2 { get; set; }
+        public int PropAttachNodeNameType2 { get; set; }
+        public int CharaHeight { get; set; }
+        public int Shape { get; set; }
+        public int CharaBustSize { get; set; }
+        public int DressId { get; set; }
+        public int DressColorId { get; set; }
     }
 }

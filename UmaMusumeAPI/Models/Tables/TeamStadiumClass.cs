@@ -6,10 +6,10 @@ namespace UmaMusumeAPI.Models.Tables
     public class TeamStadiumClass
     {
         public int Id { get; set; }
-        public long TeamStadiumId { get; set; }
-        public long TeamClass { get; set; }
-        public long UnitMaxNum { get; set; }
-        public long ClassUpRange { get; set; }
-        public long ClassDownRange { get; set; }
+        public int TeamStadiumId { get; set; }
+        public int TeamClass { get; set; }
+        public int UnitMaxNum { get; set; }
+        public int ClassUpRange { get; set; }
+        public int ClassDownRange { get; set; }
     }
 }

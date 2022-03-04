@@ -6,9 +6,9 @@ namespace UmaMusumeAPI.Models.Tables
     public class LimitedExchangeRewardOdd
     {
         public int Id { get; set; }
-        public long OddsId { get; set; }
-        public long GroupId { get; set; }
-        public long DispOrder { get; set; }
-        public long Odds { get; set; }
+        public int OddsId { get; set; }
+        public int GroupId { get; set; }
+        public int DispOrder { get; set; }
+        public int Odds { get; set; }
     }
 }

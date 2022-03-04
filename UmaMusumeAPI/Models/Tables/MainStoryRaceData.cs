@@ -6,12 +6,13 @@ namespace UmaMusumeAPI.Models.Tables
     public class MainStoryRaceData
     {
         public int Id { get; set; }
-        public long RaceInstanceId { get; set; }
-        public long GroupId { get; set; }
-        public long RaceConditionId { get; set; }
-        public long ClearRank { get; set; }
-        public long BonusChara1 { get; set; }
-        public long BonusChara2 { get; set; }
-        public long BonusChara3 { get; set; }
+        public int RaceInstanceId { get; set; }
+        public int GroupId { get; set; }
+        public int RaceConditionId { get; set; }
+        public int ClearRank { get; set; }
+        public int BonusGroupId { get; set; }
+        public int BonusChara1 { get; set; }
+        public int BonusChara2 { get; set; }
+        public int BonusChara3 { get; set; }
     }
 }

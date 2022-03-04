@@ -6,19 +6,19 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeProgram
     {
         public int Id { get; set; }
-        public long BaseProgramId { get; set; }
-        public long ProgramGroup { get; set; }
-        public long RaceInstanceId { get; set; }
-        public long RacePermission { get; set; }
-        public long Month { get; set; }
-        public long Half { get; set; }
-        public long GradeRateId { get; set; }
-        public long EntryDecrease { get; set; }
-        public long EntryDecreaseFlag { get; set; }
-        public long RecommendClassId { get; set; }
-        public long FillyOnlyFlag { get; set; }
-        public long NeedFanCount { get; set; }
-        public long FanSetId { get; set; }
-        public long RewardSetId { get; set; }
+        public int BaseProgramId { get; set; }
+        public int ProgramGroup { get; set; }
+        public int RaceInstanceId { get; set; }
+        public int RacePermission { get; set; }
+        public int Month { get; set; }
+        public int Half { get; set; }
+        public int GradeRateId { get; set; }
+        public int EntryDecrease { get; set; }
+        public int EntryDecreaseFlag { get; set; }
+        public int RecommendClassId { get; set; }
+        public int FillyOnlyFlag { get; set; }
+        public int NeedFanCount { get; set; }
+        public int FanSetId { get; set; }
+        public int RewardSetId { get; set; }
     }
 }

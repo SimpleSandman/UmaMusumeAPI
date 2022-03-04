@@ -6,6 +6,8 @@ namespace UmaMusumeAPI.Models.Tables
     public class GachaTopBg
     {
         public int Id { get; set; }
-        public long GachaId { get; set; }
+        public int GachaId { get; set; }
+        public int LogoSizeX { get; set; }
+        public int LogoSizeY { get; set; }
     }
 }

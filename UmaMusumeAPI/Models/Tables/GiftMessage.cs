@@ -6,9 +6,9 @@ namespace UmaMusumeAPI.Models.Tables
     public class GiftMessage
     {
         public int Id { get; set; }
-        public long Type1 { get; set; }
-        public long Type2 { get; set; }
-        public long Type3 { get; set; }
-        public long Type4 { get; set; }
+        public int Type1 { get; set; }
+        public int Type2 { get; set; }
+        public int Type3 { get; set; }
+        public int Type4 { get; set; }
     }
 }

@@ -6,7 +6,7 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeAoTrainingPlate
     {
         public int Id { get; set; }
-        public long ValueMin { get; set; }
-        public long ValueMax { get; set; }
+        public int ValueMin { get; set; }
+        public int ValueMax { get; set; }
     }
 }

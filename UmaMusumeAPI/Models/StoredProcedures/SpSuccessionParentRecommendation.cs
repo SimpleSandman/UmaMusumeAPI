@@ -3,6 +3,6 @@
     public class SpSuccessionParentRecommendation
     {
         public int ParentRecommendationId { get; set; }
-        public long ParentCompatibility { get; set; }
+        public int ParentCompatibility { get; set; }
     }
 }

@@ -6,12 +6,12 @@ namespace UmaMusumeAPI.Models.Tables
     public class ChampionsRoundSchedule
     {
         public int Id { get; set; }
-        public long ChampionsId { get; set; }
-        public long Round { get; set; }
-        public long RoundDetail { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
-        public long IntervalStartTime { get; set; }
-        public long IntervalEndTime { get; set; }
+        public int ChampionsId { get; set; }
+        public int Round { get; set; }
+        public int RoundDetail { get; set; }
+        public int StartDate { get; set; }
+        public int EndDate { get; set; }
+        public int IntervalStartTime { get; set; }
+        public int IntervalEndTime { get; set; }
     }
 }

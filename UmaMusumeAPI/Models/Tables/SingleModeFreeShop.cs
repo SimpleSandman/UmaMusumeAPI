@@ -6,9 +6,9 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeFreeShop
     {
         public int Id { get; set; }
-        public long StartTurn { get; set; }
-        public long EndTurn { get; set; }
-        public long LineupGroupId { get; set; }
-        public long MaxLineupNum { get; set; }
+        public int StartTurn { get; set; }
+        public int EndTurn { get; set; }
+        public int LineupGroupId { get; set; }
+        public int MaxLineupNum { get; set; }
     }
 }

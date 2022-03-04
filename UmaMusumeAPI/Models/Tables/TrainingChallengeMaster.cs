@@ -3,18 +3,18 @@
     public class TrainingChallengeMaster
     {
         public int Id { get; set; }
-        public long TargetMainScenario { get; set; }
-        public long ExamId1 { get; set; }
-        public long ExamId2 { get; set; }
-        public long ExamId3 { get; set; }
-        public long ExamId4 { get; set; }
-        public long ExamId5 { get; set; }
-        public long ExExamId { get; set; }
-        public long FreeExamId { get; set; }
-        public long ShopId { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
-        public long StartResultDate { get; set; }
-        public long EndResultDate { get; set; }
+        public int TargetMainScenario { get; set; }
+        public int ExamId1 { get; set; }
+        public int ExamId2 { get; set; }
+        public int ExamId3 { get; set; }
+        public int ExamId4 { get; set; }
+        public int ExamId5 { get; set; }
+        public int ExExamId { get; set; }
+        public int FreeExamId { get; set; }
+        public int ShopId { get; set; }
+        public int StartDate { get; set; }
+        public int EndDate { get; set; }
+        public int StartResultDate { get; set; }
+        public int EndResultDate { get; set; }
     }
 }

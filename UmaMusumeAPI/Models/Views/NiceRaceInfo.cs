@@ -3,7 +3,7 @@
     public class NiceRaceInfo
     {
         public int RaceInstanceId { get; set; }
-        public long RaceId { get; set; }
+        public int RaceId { get; set; }
         public long? Group { get; set; }
         public long? Grade { get; set; }
         public long? CourseSet { get; set; }

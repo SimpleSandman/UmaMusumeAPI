@@ -6,10 +6,10 @@ namespace UmaMusumeAPI.Models.Tables
     public class RaceBgmCutinExtensionTime
     {
         public int Id { get; set; }
-        public long CutinCategory { get; set; }
-        public long CardId { get; set; }
-        public long CharaId { get; set; }
-        public long ExtensionSec { get; set; }
-        public long ExtensionSecLong { get; set; }
+        public int CutinCategory { get; set; }
+        public int CardId { get; set; }
+        public int CharaId { get; set; }
+        public int ExtensionSec { get; set; }
+        public int ExtensionSecLong { get; set; }
     }
 }

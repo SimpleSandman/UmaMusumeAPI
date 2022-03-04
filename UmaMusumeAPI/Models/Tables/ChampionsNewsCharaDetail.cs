@@ -6,15 +6,15 @@ namespace UmaMusumeAPI.Models.Tables
     public class ChampionsNewsCharaDetail
     {
         public int Id { get; set; }
-        public long CharaTextGroup { get; set; }
-        public long TextNumber { get; set; }
-        public long ResourceId { get; set; }
-        public long CharaId { get; set; }
-        public long SingleWin { get; set; }
-        public long NicknameId { get; set; }
-        public long ParameterType { get; set; }
-        public long ParameterMin { get; set; }
-        public long RunningStyle { get; set; }
-        public long ProperRunningStyleMin { get; set; }
+        public int CharaTextGroup { get; set; }
+        public int TextNumber { get; set; }
+        public int ResourceId { get; set; }
+        public int CharaId { get; set; }
+        public int SingleWin { get; set; }
+        public int NicknameId { get; set; }
+        public int ParameterType { get; set; }
+        public int ParameterMin { get; set; }
+        public int RunningStyle { get; set; }
+        public int ProperRunningStyleMin { get; set; }
     }
 }

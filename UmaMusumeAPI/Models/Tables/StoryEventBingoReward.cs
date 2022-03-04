@@ -6,10 +6,10 @@ namespace UmaMusumeAPI.Models.Tables
     public class StoryEventBingoReward
     {
         public int Id { get; set; }
-        public long RewardSetId { get; set; }
-        public long LineNum { get; set; }
-        public long ItemCategory { get; set; }
-        public long ItemId { get; set; }
-        public long ItemNum { get; set; }
+        public int RewardSetId { get; set; }
+        public int LineNum { get; set; }
+        public int ItemCategory { get; set; }
+        public int ItemId { get; set; }
+        public int ItemNum { get; set; }
     }
 }

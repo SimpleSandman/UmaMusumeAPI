@@ -8,8 +8,8 @@ namespace UmaMusumeAPI.Models.Tables
         public int Id { get; set; }
         public string CueName { get; set; }
         public string CueSheetName { get; set; }
-        public long VoiceTextAsset { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
+        public int VoiceTextAsset { get; set; }
+        public int StartDate { get; set; }
+        public int EndDate { get; set; }
     }
 }

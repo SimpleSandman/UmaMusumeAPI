@@ -4,11 +4,11 @@
     {
         public int GachaId { get; set; }
         public int CardId { get; set; }
-        public long CardType { get; set; }
-        public long Rarity { get; set; }
-        public long Odds { get; set; }
-        public long IsPickup { get; set; }
-        public long RecommendOrder { get; set; }
-        public long IsPrizeSelectable { get; set; }
+        public int CardType { get; set; }
+        public int Rarity { get; set; }
+        public int Odds { get; set; }
+        public int IsPickup { get; set; }
+        public int RecommendOrder { get; set; }
+        public int IsPrizeSelectable { get; set; }
     }
 }

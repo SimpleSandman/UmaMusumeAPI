@@ -6,14 +6,14 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeRewardSet
     {
         public int Id { get; set; }
-        public long RewardSetId { get; set; }
-        public long OrderMin { get; set; }
-        public long OrderMax { get; set; }
-        public long RewardType { get; set; }
-        public long Bonus { get; set; }
-        public long Odds { get; set; }
-        public long ItemCategory { get; set; }
-        public long ItemId { get; set; }
-        public long ItemNum { get; set; }
+        public int RewardSetId { get; set; }
+        public int OrderMin { get; set; }
+        public int OrderMax { get; set; }
+        public int RewardType { get; set; }
+        public int Bonus { get; set; }
+        public int Odds { get; set; }
+        public int ItemCategory { get; set; }
+        public int ItemId { get; set; }
+        public int ItemNum { get; set; }
     }
 }

@@ -4,7 +4,8 @@
     {
         public int GachaId { get; set; }
         public int CardId { get; set; }
-        public long CardType { get; set; }
-        public long PayItemNum { get; set; }
+        public int CardType { get; set; }
+        public int PayItemNum { get; set; }
+        public int DispOrder { get; set; }
     }
 }

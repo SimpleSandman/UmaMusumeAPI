@@ -3,13 +3,13 @@
     public class ChallengeMatchData
     {
         public int ChallengeMatchId { get; set; }
-        public long AnnounceId { get; set; }
-        public long BonusSkillId { get; set; }
-        public long BonusFactorId { get; set; }
-        public long ItemExchangeTopId { get; set; }
-        public long NoticeDate { get; set; }
-        public long StartDate { get; set; }
-        public long EndingDate { get; set; }
-        public long EndDate { get; set; }
+        public int AnnounceId { get; set; }
+        public int BonusSkillId { get; set; }
+        public int BonusFactorId { get; set; }
+        public int ItemExchangeTopId { get; set; }
+        public int NoticeDate { get; set; }
+        public int StartDate { get; set; }
+        public int EndingDate { get; set; }
+        public int EndDate { get; set; }
     }
 }

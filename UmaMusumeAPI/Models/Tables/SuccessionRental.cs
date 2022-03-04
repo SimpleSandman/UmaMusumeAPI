@@ -6,9 +6,9 @@ namespace UmaMusumeAPI.Models.Tables
     public class SuccessionRental
     {
         public int Id { get; set; }
-        public long RentalRank { get; set; }
-        public long RentalNum { get; set; }
-        public long UseValue1 { get; set; }
-        public long UseValue2 { get; set; }
+        public int RentalRank { get; set; }
+        public int RentalNum { get; set; }
+        public int UseValue1 { get; set; }
+        public int UseValue2 { get; set; }
     }
 }

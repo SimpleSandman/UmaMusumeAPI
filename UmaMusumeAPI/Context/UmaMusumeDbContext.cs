@@ -389,7 +389,6 @@ namespace UmaMusumeAPI.Context
                 .HasNoKey();
             #endregion
 
-            #region Tables
             modelBuilder.Entity<AnnounceCharacter>(entity =>
             {
                 entity.ToTable("announce_character");
@@ -400,11 +399,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CanEndSecond)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("can_end_second");
 
                 entity.Property(e => e.MovieId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("movie_id");
             });
 
@@ -418,23 +417,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AnnounceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("announce_id");
 
                 entity.Property(e => e.AnnounceType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("announce_type");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -458,15 +457,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("cue_sheet_name");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.VoiceTextAsset)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("voice_text_asset");
             });
 
@@ -480,23 +479,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CutsPattern)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cuts_pattern");
 
                 entity.Property(e => e.SupportCardIdA)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_card_id_a");
 
                 entity.Property(e => e.SupportCardIdB)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_card_id_b");
 
                 entity.Property(e => e.SupportCardIdC)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_card_id_c");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
             });
 
@@ -513,55 +512,55 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("audience_id");
 
                 entity.Property(e => e.CharaBustSize)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_bust_size");
 
                 entity.Property(e => e.CharaFaceModel)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_face_model");
 
                 entity.Property(e => e.CharaHairColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_hair_color");
 
                 entity.Property(e => e.CharaHairModel)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_hair_model");
 
                 entity.Property(e => e.CharaHeight)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_height");
 
                 entity.Property(e => e.CharaSkinColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_skin_color");
 
                 entity.Property(e => e.DressColorId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_color_id");
 
                 entity.Property(e => e.DressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_id");
 
                 entity.Property(e => e.PropAttachNodeNameType1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_attach_node_name_type_1");
 
                 entity.Property(e => e.PropAttachNodeNameType2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_attach_node_name_type_2");
 
                 entity.Property(e => e.PropId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_id_1");
 
                 entity.Property(e => e.PropId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_id_2");
 
                 entity.Property(e => e.Shape)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("shape");
             });
 
@@ -804,59 +803,59 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => new { e.Season, e.Weather }, "audience_impostor_0_season_1_weather");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.Pattern1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pattern_1");
 
                 entity.Property(e => e.Pattern10)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pattern_10");
 
                 entity.Property(e => e.Pattern2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pattern_2");
 
                 entity.Property(e => e.Pattern3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pattern_3");
 
                 entity.Property(e => e.Pattern4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pattern_4");
 
                 entity.Property(e => e.Pattern5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pattern_5");
 
                 entity.Property(e => e.Pattern6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pattern_6");
 
                 entity.Property(e => e.Pattern7)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pattern_7");
 
                 entity.Property(e => e.Pattern8)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pattern_8");
 
                 entity.Property(e => e.Pattern9)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pattern_9");
 
                 entity.Property(e => e.SceneType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scene_type");
 
                 entity.Property(e => e.Season)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("season");
 
                 entity.Property(e => e.Weather)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("weather");
             });
 
@@ -874,11 +873,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("color");
 
                 entity.Property(e => e.ColorGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("color_group_id");
 
                 entity.Property(e => e.Odds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds");
             });
 
@@ -891,19 +890,19 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => new { e.GroupId, e.Pattern }, "audience_impostor_lottery_0_group_id_1_pattern");
 
                 entity.Property(e => e.AssetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("asset_id");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.Odds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds");
 
                 entity.Property(e => e.Pattern)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pattern");
             });
 
@@ -919,14 +918,13 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Attribute)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("attribute");
 
                 entity.Property(e => e.CueSheet)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("cue_sheet")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("cue_sheet");
             });
 
             modelBuilder.Entity<AudioIgnoredCueOnHighspeed>(entity =>
@@ -943,21 +941,19 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.CueName)
                     .IsRequired()
                     .HasMaxLength(300)
-                    .HasColumnName("cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("cue_name");
 
                 entity.Property(e => e.CueSheet)
                     .IsRequired()
                     .HasMaxLength(300)
-                    .HasColumnName("cue_sheet")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("cue_sheet");
             });
 
             modelBuilder.Entity<AudioStoryEffect>(entity =>
             {
                 entity.ToTable("audio_story_effect");
 
-                entity.HasIndex(e => e.EffectName, "audio_story_effect_audio_story_effect_0_effect_name")
+                entity.HasIndex(e => e.EffectName, "audio_story_effect_0_effect_name")
                     .IsUnique();
 
                 entity.Property(e => e.Id)
@@ -977,11 +973,11 @@ namespace UmaMusumeAPI.Context
 
                 entity.Property(e => e.EffectName)
                     .IsRequired()
-                    .HasMaxLength(600)
+                    .HasColumnType("text")
                     .HasColumnName("effect_name");
 
                 entity.Property(e => e.LoopSet)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("loop_set");
             });
 
@@ -997,15 +993,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AvailableSkillSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("available_skill_set_id");
 
                 entity.Property(e => e.NeedRank)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("need_rank");
 
                 entity.Property(e => e.SkillId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_id");
             });
 
@@ -1022,45 +1018,42 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bg_id");
 
                 entity.Property(e => e.BgSub)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bg_sub");
 
                 entity.Property(e => e.BusParamSetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bus_param_set_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bus_param_set_name");
 
                 entity.Property(e => e.CueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("cue_name");
 
                 entity.Property(e => e.Height)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("height");
 
                 entity.Property(e => e.PosX)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pos_x");
 
                 entity.Property(e => e.PosY)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pos_y");
 
                 entity.Property(e => e.SheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("sheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("sheet_name");
 
                 entity.Property(e => e.Width)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("width");
             });
 
@@ -1079,31 +1072,31 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bg_id");
 
                 entity.Property(e => e.BgSub)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bg_sub");
 
                 entity.Property(e => e.Height)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("height");
 
                 entity.Property(e => e.OffsetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("offset_id");
 
                 entity.Property(e => e.PosX)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pos_x");
 
                 entity.Property(e => e.PosY)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pos_y");
 
                 entity.Property(e => e.Width)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("width");
             });
 
@@ -1119,39 +1112,37 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BannerId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("banner_id");
 
                 entity.Property(e => e.ConditionValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value");
 
                 entity.Property(e => e.EndDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("end_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("end_date");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
 
                 entity.Property(e => e.Transition)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("transition");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
             });
 
@@ -1166,15 +1157,15 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => e.CharaId, "campaign_chara_story_schedule_0_chara_id");
 
                 entity.Property(e => e.CampaignId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("campaign_id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.StoryId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id");
             });
 
@@ -1194,44 +1185,52 @@ namespace UmaMusumeAPI.Context
                     .ValueGeneratedNever()
                     .HasColumnName("campaign_id");
 
+                entity.Property(e => e.DispOrder)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("disp_order");
+
                 entity.Property(e => e.EffectType1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_type_1");
 
                 entity.Property(e => e.EffectValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_value_1");
 
                 entity.Property(e => e.EndTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_time");
 
                 entity.Property(e => e.ImageChange)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("image_change");
 
                 entity.Property(e => e.ImageIconId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("image_icon_id");
 
+                entity.Property(e => e.LogoType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("logo_type");
+
                 entity.Property(e => e.StartTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_time");
 
                 entity.Property(e => e.TargetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_id");
 
                 entity.Property(e => e.TargetType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type");
 
                 entity.Property(e => e.TransitionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("transition_type");
 
                 entity.Property(e => e.UserShow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("user_show");
             });
 
@@ -1293,25 +1292,27 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("campaign_single_race_add_data");
 
+                entity.HasIndex(e => e.RaceAdditionalId, "campaign_single_race_add_data_0_race_additional_id");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.RaceAdditionalId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_additional_id");
 
                 entity.Property(e => e.RaceAdditionalRewardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_additional_reward_id");
 
                 entity.Property(e => e.RaceProgramId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_program_id");
 
                 entity.Property(e => e.RewardLimit)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_limit");
             });
 
@@ -1319,33 +1320,35 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("campaign_single_race_add_reward");
 
+                entity.HasIndex(e => e.RaceAdditionalRewardId, "campaign_single_race_add_reward_0_race_additional_reward_id");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.RaceAdditionalRewardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_additional_reward_id");
 
                 entity.Property(e => e.RewardRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_rate");
 
                 entity.Property(e => e.RewardType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_type");
 
                 entity.Property(e => e.RewardValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_value");
             });
 
@@ -1363,55 +1366,55 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AvailableSkillSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("available_skill_set_id");
 
                 entity.Property(e => e.BgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bg_id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.DefaultRarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("default_rarity");
 
                 entity.Property(e => e.GetPieceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("get_piece_id");
 
                 entity.Property(e => e.LimitedChara)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limited_chara");
 
                 entity.Property(e => e.RunningStyle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("running_style");
 
                 entity.Property(e => e.TalentGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_group_id");
 
                 entity.Property(e => e.TalentGuts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_guts");
 
                 entity.Property(e => e.TalentPow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_pow");
 
                 entity.Property(e => e.TalentSpeed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_speed");
 
                 entity.Property(e => e.TalentStamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_stamina");
 
                 entity.Property(e => e.TalentWiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_wiz");
             });
 
@@ -1424,125 +1427,115 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => new { e.CardId, e.Rarity }, "card_rarity_data_0_card_id_1_rarity")
                     .IsUnique();
 
+                entity.HasIndex(e => e.RaceDressId, "card_rarity_data_0_race_dress_id");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.CardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_id");
 
                 entity.Property(e => e.GetDressId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("get_dress_id_1");
 
                 entity.Property(e => e.GetDressId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("get_dress_id_2");
 
                 entity.Property(e => e.Guts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts");
 
-                entity.Property(e => e.LiveDressId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("live_dress_id");
-
                 entity.Property(e => e.MaxGuts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_guts");
 
                 entity.Property(e => e.MaxPow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_pow");
 
                 entity.Property(e => e.MaxSpeed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_speed");
 
                 entity.Property(e => e.MaxStamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_stamina");
 
                 entity.Property(e => e.MaxWiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_wiz");
 
-                entity.Property(e => e.MiniDressId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("mini_dress_id");
-
-                entity.Property(e => e.OutgameDressId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("outgame_dress_id");
-
                 entity.Property(e => e.Pow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pow");
 
                 entity.Property(e => e.ProperDistanceLong)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_long");
 
                 entity.Property(e => e.ProperDistanceMiddle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_middle");
 
                 entity.Property(e => e.ProperDistanceMile)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_mile");
 
                 entity.Property(e => e.ProperDistanceShort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_short");
 
                 entity.Property(e => e.ProperGroundDirt)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_dirt");
 
                 entity.Property(e => e.ProperGroundTurf)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_turf");
 
                 entity.Property(e => e.ProperRunningStyleNige)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_nige");
 
                 entity.Property(e => e.ProperRunningStyleOikomi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_oikomi");
 
                 entity.Property(e => e.ProperRunningStyleSashi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_sashi");
 
                 entity.Property(e => e.ProperRunningStyleSenko)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_senko");
 
                 entity.Property(e => e.RaceDressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_dress_id");
 
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
 
                 entity.Property(e => e.SkillSet)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_set");
 
                 entity.Property(e => e.Speed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed");
 
                 entity.Property(e => e.Stamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina");
 
                 entity.Property(e => e.Wiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wiz");
             });
 
@@ -1558,39 +1551,39 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_1");
 
                 entity.Property(e => e.ItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_2");
 
                 entity.Property(e => e.ItemDispOrder1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_disp_order_1");
 
                 entity.Property(e => e.ItemDispOrder2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_disp_order_2");
 
                 entity.Property(e => e.ItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_1");
 
                 entity.Property(e => e.ItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_2");
 
                 entity.Property(e => e.ItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_1");
 
                 entity.Property(e => e.ItemNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_2");
 
                 entity.Property(e => e.MoneyNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("money_num");
 
                 entity.Property(e => e.Rarity)
@@ -1598,7 +1591,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("rarity");
 
                 entity.Property(e => e.TalentLevel)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_level");
             });
 
@@ -1614,83 +1607,83 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_1");
 
                 entity.Property(e => e.ItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_2");
 
                 entity.Property(e => e.ItemCategory3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_3");
 
                 entity.Property(e => e.ItemCategory4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_4");
 
                 entity.Property(e => e.ItemCategory5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_5");
 
                 entity.Property(e => e.ItemCategory6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_6");
 
                 entity.Property(e => e.ItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_1");
 
                 entity.Property(e => e.ItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_2");
 
                 entity.Property(e => e.ItemId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_3");
 
                 entity.Property(e => e.ItemId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_4");
 
                 entity.Property(e => e.ItemId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_5");
 
                 entity.Property(e => e.ItemId6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_6");
 
                 entity.Property(e => e.ItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_1");
 
                 entity.Property(e => e.ItemNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_2");
 
                 entity.Property(e => e.ItemNum3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_3");
 
                 entity.Property(e => e.ItemNum4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_4");
 
                 entity.Property(e => e.ItemNum5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_5");
 
                 entity.Property(e => e.ItemNum6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_6");
 
                 entity.Property(e => e.TalentGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_group_id");
 
                 entity.Property(e => e.TalentLevel)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_level");
             });
 
@@ -1704,87 +1697,87 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CardRarityDataId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_rarity_data_id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.Guts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts");
 
                 entity.Property(e => e.NicknameId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("nickname_id");
 
                 entity.Property(e => e.Post)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("post");
 
                 entity.Property(e => e.Pow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pow");
 
                 entity.Property(e => e.ProperDistanceLong)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_long");
 
                 entity.Property(e => e.ProperDistanceMiddle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_middle");
 
                 entity.Property(e => e.ProperDistanceMile)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_mile");
 
                 entity.Property(e => e.ProperDistanceShort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_short");
 
                 entity.Property(e => e.ProperGroundDirt)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_dirt");
 
                 entity.Property(e => e.ProperGroundTurf)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_turf");
 
                 entity.Property(e => e.ProperRunningStyleNige)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_nige");
 
                 entity.Property(e => e.ProperRunningStyleOikomi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_oikomi");
 
                 entity.Property(e => e.ProperRunningStyleSashi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_sashi");
 
                 entity.Property(e => e.ProperRunningStyleSenko)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_senko");
 
                 entity.Property(e => e.RaceDressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_dress_id");
 
                 entity.Property(e => e.SkillSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_set_id");
 
                 entity.Property(e => e.Speed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed");
 
                 entity.Property(e => e.Stamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina");
 
                 entity.Property(e => e.Wiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wiz");
             });
 
@@ -1801,35 +1794,35 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("challenge_match_id");
 
                 entity.Property(e => e.AnnounceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("announce_id");
 
                 entity.Property(e => e.BonusFactorId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_factor_id");
 
                 entity.Property(e => e.BonusSkillId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_skill_id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.EndingDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ending_date");
 
                 entity.Property(e => e.ItemExchangeTopId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_exchange_top_id");
 
                 entity.Property(e => e.NoticeDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("notice_date");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -1847,159 +1840,159 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ChallengeMatchBgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("challenge_match_bg_id");
 
                 entity.Property(e => e.ChallengeMatchBgSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("challenge_match_bg_sub_id");
 
                 entity.Property(e => e.ChallengeMatchId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("challenge_match_id");
 
                 entity.Property(e => e.ChallengeMatchRaceBossNpcId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("challenge_match_race_boss_npc_id");
 
                 entity.Property(e => e.CostRp)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cost_rp");
 
                 entity.Property(e => e.Difficulty)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("difficulty");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.DropRewardOddsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("drop_reward_odds_id");
 
                 entity.Property(e => e.FirstClearItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_category_1");
 
                 entity.Property(e => e.FirstClearItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_category_2");
 
                 entity.Property(e => e.FirstClearItemCategory3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_category_3");
 
                 entity.Property(e => e.FirstClearItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_id_1");
 
                 entity.Property(e => e.FirstClearItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_id_2");
 
                 entity.Property(e => e.FirstClearItemId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_id_3");
 
                 entity.Property(e => e.FirstClearItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_num_1");
 
                 entity.Property(e => e.FirstClearItemNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_num_2");
 
                 entity.Property(e => e.FirstClearItemNum3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_num_3");
 
                 entity.Property(e => e.Ground)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ground");
 
                 entity.Property(e => e.PickUpItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_category_1");
 
                 entity.Property(e => e.PickUpItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_category_2");
 
                 entity.Property(e => e.PickUpItemCategory3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_category_3");
 
                 entity.Property(e => e.PickUpItemCategory4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_category_4");
 
                 entity.Property(e => e.PickUpItemCategory5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_category_5");
 
                 entity.Property(e => e.PickUpItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_id_1");
 
                 entity.Property(e => e.PickUpItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_id_2");
 
                 entity.Property(e => e.PickUpItemId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_id_3");
 
                 entity.Property(e => e.PickUpItemId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_id_4");
 
                 entity.Property(e => e.PickUpItemId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_id_5");
 
                 entity.Property(e => e.PickUpItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_num_1");
 
                 entity.Property(e => e.PickUpItemNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_num_2");
 
                 entity.Property(e => e.PickUpItemNum3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_num_3");
 
                 entity.Property(e => e.PickUpItemNum4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_num_4");
 
                 entity.Property(e => e.PickUpItemNum5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_num_5");
 
                 entity.Property(e => e.RaceAppearanceRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_appearance_rate");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
 
                 entity.Property(e => e.RaceType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_type");
 
                 entity.Property(e => e.Season)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("season");
 
                 entity.Property(e => e.VictoryRewardOddsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("victory_reward_odds_id");
 
                 entity.Property(e => e.Weather)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("weather");
             });
 
@@ -2013,87 +2006,87 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.Guts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts");
 
                 entity.Property(e => e.MobId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mob_id");
 
                 entity.Property(e => e.NpcGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("npc_group_id");
 
                 entity.Property(e => e.Pow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pow");
 
                 entity.Property(e => e.ProperDistanceLong)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_long");
 
                 entity.Property(e => e.ProperDistanceMiddle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_middle");
 
                 entity.Property(e => e.ProperDistanceMile)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_mile");
 
                 entity.Property(e => e.ProperDistanceShort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_short");
 
                 entity.Property(e => e.ProperGroundDirt)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_dirt");
 
                 entity.Property(e => e.ProperGroundTurf)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_turf");
 
                 entity.Property(e => e.ProperRunningStyleNige)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_nige");
 
                 entity.Property(e => e.ProperRunningStyleOikomi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_oikomi");
 
                 entity.Property(e => e.ProperRunningStyleSashi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_sashi");
 
                 entity.Property(e => e.ProperRunningStyleSenko)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_senko");
 
                 entity.Property(e => e.RaceDressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_dress_id");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
 
                 entity.Property(e => e.SkillSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_set_id");
 
                 entity.Property(e => e.Speed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed");
 
                 entity.Property(e => e.Stamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina");
 
                 entity.Property(e => e.Wiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wiz");
             });
 
@@ -2111,31 +2104,31 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_1");
 
                 entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_2");
 
                 entity.Property(e => e.Point)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("point");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.RacePointNameId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_point_name_id");
 
                 entity.Property(e => e.SortOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sort_order");
             });
 
@@ -2149,19 +2142,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BonusRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_rate");
 
                 entity.Property(e => e.ResimulateNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("resimulate_num");
 
                 entity.Property(e => e.RetryMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("retry_max");
 
                 entity.Property(e => e.RetryMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("retry_min");
             });
 
@@ -2179,33 +2172,31 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.CueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("cue_name");
 
                 entity.Property(e => e.CuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("cuesheet_name");
 
                 entity.Property(e => e.FirstBgmPattern)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_bgm_pattern");
 
                 entity.Property(e => e.RaceNumber)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_number");
 
                 entity.Property(e => e.RoundId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("round_id");
 
                 entity.Property(e => e.SceneType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scene_type");
 
                 entity.Property(e => e.SecondBgmPattern)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("second_bgm_pattern");
             });
 
@@ -2228,11 +2219,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
             });
 
@@ -2246,15 +2237,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ProperRank)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_rank");
 
                 entity.Property(e => e.ProperType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_type");
 
                 entity.Property(e => e.Rate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rate");
             });
 
@@ -2270,15 +2261,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BigFlag)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("big_flag");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.RoundId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("round_id");
             });
 
@@ -2292,43 +2283,43 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.CharaTextGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_text_group");
 
                 entity.Property(e => e.NicknameId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("nickname_id");
 
                 entity.Property(e => e.ParameterMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("parameter_min");
 
                 entity.Property(e => e.ParameterType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("parameter_type");
 
                 entity.Property(e => e.ProperRunningStyleMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_min");
 
                 entity.Property(e => e.ResourceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("resource_id");
 
                 entity.Property(e => e.RunningStyle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("running_style");
 
                 entity.Property(e => e.SingleWin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("single_win");
 
                 entity.Property(e => e.TextNumber)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("text_number");
             });
 
@@ -2342,23 +2333,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaTextGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_text_group");
 
                 entity.Property(e => e.RaceCountType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_count_type");
 
                 entity.Property(e => e.RoundId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("round_id");
 
                 entity.Property(e => e.WinMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_max");
 
                 entity.Property(e => e.WinMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_min");
             });
 
@@ -2374,19 +2365,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ResourceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("resource_id");
 
                 entity.Property(e => e.RoundId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("round_id");
 
                 entity.Property(e => e.TextNumber)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("text_number");
 
                 entity.Property(e => e.WinPercentType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_percent_type");
             });
 
@@ -2402,23 +2393,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ResourceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("resource_id");
 
                 entity.Property(e => e.RoundId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("round_id");
 
                 entity.Property(e => e.SubTitle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sub_title");
 
                 entity.Property(e => e.Title)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("title");
 
                 entity.Property(e => e.WinPercentType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_percent_type");
             });
 
@@ -2432,15 +2423,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ResourceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("resource_id");
 
                 entity.Property(e => e.TextNumber)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("text_number");
 
                 entity.Property(e => e.TrainerTextGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trainer_text_group");
             });
 
@@ -2456,23 +2447,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.RaceCountType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_count_type");
 
                 entity.Property(e => e.RoundId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("round_id");
 
                 entity.Property(e => e.TrainerTextGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trainer_text_group");
 
                 entity.Property(e => e.WinMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_max");
 
                 entity.Property(e => e.WinMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_min");
             });
 
@@ -2493,11 +2484,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("round_id");
 
                 entity.Property(e => e.RaceConditionId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_condition_id");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
             });
 
@@ -2513,35 +2504,35 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BoxGrade)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("box_grade");
 
                 entity.Property(e => e.ChampionsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("champions_id");
 
                 entity.Property(e => e.LeagueType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("league_type");
 
                 entity.Property(e => e.Ranking)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ranking");
 
                 entity.Property(e => e.Rate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rate");
 
                 entity.Property(e => e.RewardSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_set_id");
 
                 entity.Property(e => e.RoundId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("round_id");
 
                 entity.Property(e => e.WinCount)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_count");
             });
 
@@ -2557,43 +2548,43 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BreakthroughNumber1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("breakthrough_number_1");
 
                 entity.Property(e => e.BreakthroughNumber2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("breakthrough_number_2");
 
                 entity.Property(e => e.ChampionsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("champions_id");
 
                 entity.Property(e => e.EntryNumber)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("entry_number");
 
                 entity.Property(e => e.FreeEntryNumber)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("free_entry_number");
 
                 entity.Property(e => e.LeagueType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("league_type");
 
                 entity.Property(e => e.Round)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("round");
 
                 entity.Property(e => e.RoundId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("round_id");
 
                 entity.Property(e => e.RoundNumber)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("round_number");
 
                 entity.Property(e => e.Tier)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tier");
             });
 
@@ -2609,31 +2600,31 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ChampionsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("champions_id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.IntervalEndTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("interval_end_time");
 
                 entity.Property(e => e.IntervalStartTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("interval_start_time");
 
                 entity.Property(e => e.Round)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("round");
 
                 entity.Property(e => e.RoundDetail)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("round_detail");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -2647,59 +2638,59 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ChampionsBgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("champions_bg_id");
 
                 entity.Property(e => e.ChampionsBgPositionX)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("champions_bg_position_x");
 
                 entity.Property(e => e.ChampionsBgSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("champions_bg_sub_id");
 
                 entity.Property(e => e.ChampionsFinishBgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("champions_finish_bg_id");
 
                 entity.Property(e => e.ChampionsFinishBgPositionX)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("champions_finish_bg_position_x");
 
                 entity.Property(e => e.ChampionsFinishBgSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("champions_finish_bg_sub_id");
 
                 entity.Property(e => e.ChampionsLeagueSelectBgSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("champions_league_select_bg_sub_id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.InfoDetail)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("info_detail");
 
                 entity.Property(e => e.InfoDetail1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("info_detail_1");
 
                 entity.Property(e => e.InfoDetail2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("info_detail_2");
 
                 entity.Property(e => e.NoticeDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("notice_date");
 
                 entity.Property(e => e.ResourceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("resource_id");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -2720,11 +2711,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("type");
 
                 entity.Property(e => e.MotionSet)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motion_set");
 
                 entity.Property(e => e.RaceDressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_dress_id");
             });
 
@@ -2741,27 +2732,27 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.StandbyMotion1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("standby_motion_1");
 
                 entity.Property(e => e.StandbyMotion2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("standby_motion_2");
 
                 entity.Property(e => e.StandbyMotion3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("standby_motion_3");
 
                 entity.Property(e => e.StandbyMotion4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("standby_motion_4");
 
                 entity.Property(e => e.StandbyMotion5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("standby_motion_5");
 
                 entity.Property(e => e.StandbyMotion6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("standby_motion_6");
             });
 
@@ -2775,206 +2766,189 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AttachmentModelId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("attachment_model_id");
 
                 entity.Property(e => e.BirthDay)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("birth_day");
 
                 entity.Property(e => e.BirthMonth)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("birth_month");
 
                 entity.Property(e => e.BirthYear)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("birth_year");
 
                 entity.Property(e => e.Bust)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bust");
 
                 entity.Property(e => e.CharaCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_category");
 
                 entity.Property(e => e.EarRandomTimeMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ear_random_time_max");
 
                 entity.Property(e => e.EarRandomTimeMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ear_random_time_min");
 
                 entity.Property(e => e.Height)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("height");
 
                 entity.Property(e => e.ImageColorMain)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("image_color_main")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("image_color_main");
 
                 entity.Property(e => e.ImageColorSub)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("image_color_sub")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("image_color_sub");
 
                 entity.Property(e => e.MiniMayuShaderType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mini_mayu_shader_type");
 
                 entity.Property(e => e.PersonalDress)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("personal_dress");
 
                 entity.Property(e => e.RaceRunningType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_running_type");
 
                 entity.Property(e => e.Scale)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scale");
 
                 entity.Property(e => e.Sex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sex");
 
                 entity.Property(e => e.Shape)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("shape");
 
                 entity.Property(e => e.Skin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skin");
 
                 entity.Property(e => e.Socks)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("socks");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.StoryEarRandomTimeMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_ear_random_time_max");
 
                 entity.Property(e => e.StoryEarRandomTimeMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_ear_random_time_min");
 
                 entity.Property(e => e.StoryTailRandomTimeMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_tail_random_time_max");
 
                 entity.Property(e => e.StoryTailRandomTimeMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_tail_random_time_min");
 
                 entity.Property(e => e.TailModelId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tail_model_id");
 
                 entity.Property(e => e.TailRandomTimeMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tail_random_time_max");
 
                 entity.Property(e => e.TailRandomTimeMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tail_random_time_min");
 
                 entity.Property(e => e.UiBorderColor)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_border_color")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_border_color");
 
                 entity.Property(e => e.UiColorMain)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_color_main")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_color_main");
 
                 entity.Property(e => e.UiColorSub)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_color_sub")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_color_sub");
 
                 entity.Property(e => e.UiNameplateColor1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_nameplate_color_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_nameplate_color_1");
 
                 entity.Property(e => e.UiNameplateColor2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_nameplate_color_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_nameplate_color_2");
 
                 entity.Property(e => e.UiNumColor1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_num_color_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_num_color_1");
 
                 entity.Property(e => e.UiNumColor2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_num_color_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_num_color_2");
 
                 entity.Property(e => e.UiSpeechColor1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_speech_color_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_speech_color_1");
 
                 entity.Property(e => e.UiSpeechColor2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_speech_color_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_speech_color_2");
 
                 entity.Property(e => e.UiTrainingColor1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_training_color_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_training_color_1");
 
                 entity.Property(e => e.UiTrainingColor2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_training_color_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_training_color_2");
 
                 entity.Property(e => e.UiTurnColor)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_turn_color")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_turn_color");
 
                 entity.Property(e => e.UiWipeColor1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_wipe_color_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_wipe_color_1");
 
                 entity.Property(e => e.UiWipeColor2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_wipe_color_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_wipe_color_2");
 
                 entity.Property(e => e.UiWipeColor3)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_wipe_color_3")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_wipe_color_3");
             });
 
             modelBuilder.Entity<CharaMotionAct>(entity =>
@@ -2992,17 +2966,16 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.CommandName)
                     .IsRequired()
-                    .HasMaxLength(900)
-                    .HasColumnName("command_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnType("text")
+                    .HasColumnName("command_name");
 
                 entity.Property(e => e.TargetMotion)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_motion");
             });
 
@@ -3018,45 +2991,41 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.BodyMotion)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("body_motion")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("body_motion");
 
                 entity.Property(e => e.BodyMotionPlayType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("body_motion_play_type");
 
                 entity.Property(e => e.BodyMotionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("body_motion_type");
 
                 entity.Property(e => e.Cheek)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cheek");
 
                 entity.Property(e => e.EarMotion)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ear_motion")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ear_motion");
 
                 entity.Property(e => e.EyeDefault)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("eye_default");
 
                 entity.Property(e => e.FaceType)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("face_type")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("face_type");
 
                 entity.Property(e => e.TailMotion)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_motion")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_motion");
 
                 entity.Property(e => e.TailMotionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tail_motion_type");
             });
 
@@ -3077,43 +3046,43 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AddRewardCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_category_1");
 
                 entity.Property(e => e.AddRewardId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_id_1");
 
                 entity.Property(e => e.AddRewardNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_num_1");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.EpisodeIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("episode_index");
 
                 entity.Property(e => e.ExpType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("exp_type");
 
                 entity.Property(e => e.LockType1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_type_1");
 
                 entity.Property(e => e.LockValue11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_value_1_1");
 
                 entity.Property(e => e.LockValue12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_value_1_2");
 
                 entity.Property(e => e.StoryId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id");
             });
 
@@ -3124,28 +3093,27 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => new { e.TargetScene, e.TargetCut }, "chara_type_0_target_scene_1_target_cut");
 
                 entity.Property(e => e.Id)
-                    .HasMaxLength(450)
-                    .HasColumnName("id")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasMaxLength(20)
+                    .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.TargetCut)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_cut");
 
                 entity.Property(e => e.TargetScene)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_scene");
 
                 entity.Property(e => e.TargetType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type");
 
                 entity.Property(e => e.Value)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value");
             });
 
@@ -3161,26 +3129,25 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.LayerIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("layer_index");
 
                 entity.Property(e => e.PropAnimId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_anim_id");
 
                 entity.Property(e => e.PropId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_id");
 
                 entity.Property(e => e.SceneType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scene_type");
 
                 entity.Property(e => e.UseStateName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("use_state_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("use_state_name");
             });
 
             modelBuilder.Entity<CharacterSystemLottery>(entity =>
@@ -3199,35 +3166,35 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_id");
 
                 entity.Property(e => e.CardRarityId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_rarity_id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.Param1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("param1");
 
                 entity.Property(e => e.Per)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("per");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.SysTextId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sys_text_id");
 
                 entity.Property(e => e.Trigger)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trigger");
             });
 
@@ -3250,53 +3217,54 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("voice_id");
 
                 entity.Property(e => e.CardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_id");
 
                 entity.Property(e => e.CueId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cue_id");
 
                 entity.Property(e => e.CueSheet)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("cue_sheet")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("cue_sheet");
 
                 entity.Property(e => e.Gender)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("gender");
 
                 entity.Property(e => e.LipSyncData)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("lip_sync_data")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("lip_sync_data");
 
                 entity.Property(e => e.MotionSecondSet)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motion_second_set");
 
                 entity.Property(e => e.MotionSecondStart)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motion_second_start");
 
                 entity.Property(e => e.MotionSet)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motion_set");
 
                 entity.Property(e => e.Scene)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scene");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
 
                 entity.Property(e => e.Text)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("text")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("text");
 
                 entity.Property(e => e.UseGallery)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_gallery");
             });
 
@@ -3310,35 +3278,35 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.NeedRankingMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("need_ranking_max");
 
                 entity.Property(e => e.NeedRankingMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("need_ranking_min");
 
                 entity.Property(e => e.RewardItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_item_category_1");
 
                 entity.Property(e => e.RewardItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_item_category_2");
 
                 entity.Property(e => e.RewardItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_item_id_1");
 
                 entity.Property(e => e.RewardItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_item_id_2");
 
                 entity.Property(e => e.RewardNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_num_1");
 
                 entity.Property(e => e.RewardNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_num_2");
             });
 
@@ -3346,7 +3314,7 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("circle_stamp_data");
 
-                entity.HasIndex(e => e.DispOrder, "circle_stamp_data_sqlite_autoindex_1")
+                entity.HasIndex(e => e.DispOrder, "disp_order")
                     .IsUnique();
 
                 entity.Property(e => e.Id)
@@ -3355,17 +3323,16 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
             });
 
@@ -3382,15 +3349,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("result_type");
 
                 entity.Property(e => e.Odds1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds_1");
 
                 entity.Property(e => e.Odds2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds_2");
 
                 entity.Property(e => e.Odds3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds_3");
             });
 
@@ -3411,35 +3378,35 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("get_num");
 
                 entity.Property(e => e.LotteryWeight11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lottery_weight_1_1");
 
                 entity.Property(e => e.LotteryWeight12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lottery_weight_1_2");
 
                 entity.Property(e => e.LotteryWeight21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lottery_weight_2_1");
 
                 entity.Property(e => e.LotteryWeight22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lottery_weight_2_2");
 
                 entity.Property(e => e.LotteryWeight31)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lottery_weight_3_1");
 
                 entity.Property(e => e.LotteryWeight32)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lottery_weight_3_2");
 
                 entity.Property(e => e.LotteryWeightExtra1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lottery_weight_extra_1");
 
                 entity.Property(e => e.LotteryWeightExtra2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lottery_weight_extra_2");
             });
 
@@ -3455,32 +3422,27 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Distance1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("distance1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("distance1");
 
                 entity.Property(e => e.Distance2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("distance2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("distance2");
 
                 entity.Property(e => e.MoveSpeed1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("move_speed_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("move_speed_1");
 
                 entity.Property(e => e.MoveSpeed2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("move_speed_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("move_speed_2");
 
                 entity.Property(e => e.MoveSpeed3)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("move_speed_3")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("move_speed_3");
             });
 
             modelBuilder.Entity<CraneGameExtraOddsCondition>(entity =>
@@ -3496,7 +3458,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("credit");
 
                 entity.Property(e => e.GetNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("get_num");
             });
 
@@ -3510,59 +3472,59 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AnimationId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("animation_id");
 
                 entity.Property(e => e.Big)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("big");
 
                 entity.Property(e => e.BigIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("big_index");
 
                 entity.Property(e => e.CraneAnimationId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("crane_animation_id");
 
                 entity.Property(e => e.JointType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("joint_type");
 
                 entity.Property(e => e.LiftType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lift_type");
 
                 entity.Property(e => e.Num)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("num");
 
                 entity.Property(e => e.Odds1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds_1");
 
                 entity.Property(e => e.Odds2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds_2");
 
                 entity.Property(e => e.Odds3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds_3");
 
                 entity.Property(e => e.OddsExtra)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds_extra");
 
                 entity.Property(e => e.PushType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("push_type");
 
                 entity.Property(e => e.RareEffectOdds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rare_effect_odds");
 
                 entity.Property(e => e.TypeId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type_id");
             });
 
@@ -3578,8 +3540,7 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.FaceType)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("face_type")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("face_type");
             });
 
             modelBuilder.Entity<CraneGamePrizePattern>(entity =>
@@ -3592,7 +3553,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.PropPatternId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_pattern_id");
             });
 
@@ -3609,7 +3570,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("type");
 
                 entity.Property(e => e.Num)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("num");
             });
 
@@ -3632,31 +3593,29 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("platform_id");
 
                 entity.Property(e => e.DailyFreeNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("daily_free_num");
 
                 entity.Property(e => e.EndDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("end_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("end_date");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.RepurchaseDay)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("repurchase_day");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
 
                 entity.Property(e => e.Term)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("term");
             });
 
@@ -3671,116 +3630,120 @@ namespace UmaMusumeAPI.Context
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
+                entity.Property(e => e.BonusRewardsOddsId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bonus_rewards_odds_id");
+
                 entity.Property(e => e.CostNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cost_num");
 
                 entity.Property(e => e.Difficulty)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("difficulty");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.FirstClearItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_category_1");
 
                 entity.Property(e => e.FirstClearItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_category_2");
 
                 entity.Property(e => e.FirstClearItemCategory3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_category_3");
 
                 entity.Property(e => e.FirstClearItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_id_1");
 
                 entity.Property(e => e.FirstClearItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_id_2");
 
                 entity.Property(e => e.FirstClearItemId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_id_3");
 
                 entity.Property(e => e.FirstClearItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_num_1");
 
                 entity.Property(e => e.FirstClearItemNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_num_2");
 
                 entity.Property(e => e.FirstClearItemNum3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_num_3");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.NormalRewardsOddsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("normal_rewards_odds_id");
 
                 entity.Property(e => e.PickUpItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_category_1");
 
                 entity.Property(e => e.PickUpItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_category_2");
 
                 entity.Property(e => e.PickUpItemCategory3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_category_3");
 
                 entity.Property(e => e.PickUpItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_id_1");
 
                 entity.Property(e => e.PickUpItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_id_2");
 
                 entity.Property(e => e.PickUpItemId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_id_3");
 
                 entity.Property(e => e.PickUpItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_num_1");
 
                 entity.Property(e => e.PickUpItemNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_num_2");
 
                 entity.Property(e => e.PickUpItemNum3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_num_3");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
 
                 entity.Property(e => e.RareRewardOddsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rare_reward_odds_id");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.UniqueCharaNpcMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("unique_chara_npc_max");
 
                 entity.Property(e => e.UniqueCharaNpcMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("unique_chara_npc_min");
             });
 
@@ -3794,11 +3757,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Frequency)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("frequency");
 
                 entity.Property(e => e.PayCost)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pay_cost");
             });
 
@@ -3812,87 +3775,87 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.Guts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts");
 
                 entity.Property(e => e.MobId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mob_id");
 
                 entity.Property(e => e.NpcGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("npc_group_id");
 
                 entity.Property(e => e.Pow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pow");
 
                 entity.Property(e => e.ProperDistanceLong)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_long");
 
                 entity.Property(e => e.ProperDistanceMiddle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_middle");
 
                 entity.Property(e => e.ProperDistanceMile)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_mile");
 
                 entity.Property(e => e.ProperDistanceShort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_short");
 
                 entity.Property(e => e.ProperGroundDirt)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_dirt");
 
                 entity.Property(e => e.ProperGroundTurf)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_turf");
 
                 entity.Property(e => e.ProperRunningStyleNige)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_nige");
 
                 entity.Property(e => e.ProperRunningStyleOikomi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_oikomi");
 
                 entity.Property(e => e.ProperRunningStyleSashi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_sashi");
 
                 entity.Property(e => e.ProperRunningStyleSenko)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_senko");
 
                 entity.Property(e => e.RaceDressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_dress_id");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
 
                 entity.Property(e => e.SkillSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_set_id");
 
                 entity.Property(e => e.Speed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed");
 
                 entity.Property(e => e.Stamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina");
 
                 entity.Property(e => e.Wiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wiz");
             });
 
@@ -3911,23 +3874,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_1");
 
                 entity.Property(e => e.ItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_1");
 
                 entity.Property(e => e.ItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_1");
 
                 entity.Property(e => e.RankLevel)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rank_level");
 
                 entity.Property(e => e.RequiredPoint)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("required_point");
             });
 
@@ -3947,105 +3910,114 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BodySetting)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("body_setting");
 
+                entity.Property(e => e.BodyShape)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("body_shape");
+
                 entity.Property(e => e.BodyType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("body_type");
 
                 entity.Property(e => e.BodyTypeSub)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("body_type_sub");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.ColorNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("color_num");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.DressColorMain)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("dress_color_main")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("dress_color_main");
 
                 entity.Property(e => e.DressColorSub)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("dress_color_sub")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("dress_color_sub");
 
                 entity.Property(e => e.EndTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_time");
 
+                entity.Property(e => e.GeneralPurpose)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("general_purpose");
+
                 entity.Property(e => e.HaveMini)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("have_mini");
 
                 entity.Property(e => e.HeadSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("head_sub_id");
 
                 entity.Property(e => e.IsDirt)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("is_dirt");
 
                 entity.Property(e => e.IsWet)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("is_wet");
 
                 entity.Property(e => e.StartTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_time");
 
                 entity.Property(e => e.TailModelId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tail_model_id");
 
                 entity.Property(e => e.TailModelSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tail_model_sub_id");
 
                 entity.Property(e => e.UseGender)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_gender");
 
                 entity.Property(e => e.UseHome)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_home");
 
                 entity.Property(e => e.UseLive)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_live");
 
                 entity.Property(e => e.UseLiveTheater)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_live_theater");
 
                 entity.Property(e => e.UseRace)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_race");
 
                 entity.Property(e => e.UseSeason)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_season");
             });
 
             modelBuilder.Entity<EventMotionData>(entity =>
             {
                 entity.ToTable("event_motion_data");
+
+                entity.HasIndex(e => e.CommandName, "command_name")
+                    .IsUnique();
 
                 entity.HasIndex(e => e.Type, "event_motion_data_0_type");
 
@@ -4057,37 +4029,35 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.BaseStateName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("base_state_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("base_state_name");
 
                 entity.Property(e => e.Category)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("category");
 
                 entity.Property(e => e.CommandName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("command_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("command_name");
 
                 entity.Property(e => e.EndBlendTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_blend_time");
 
                 entity.Property(e => e.PoseBlend)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pose_blend");
 
                 entity.Property(e => e.StartBlendTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_blend_time");
 
                 entity.Property(e => e.StateGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("state_group");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
             });
 
@@ -4095,8 +4065,7 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("event_motion_plus_data");
 
-                entity.HasIndex(e => e.BaseStateName, "event_motion_plus_data_0_base_state_name")
-                    .HasAnnotation("MySql:IndexPrefixLength", new[] { 768 });
+                entity.HasIndex(e => e.BaseStateName, "event_motion_plus_data_0_base_state_name");
 
                 entity.HasIndex(e => e.LayerIndex, "event_motion_plus_data_0_layer_index");
 
@@ -4107,30 +4076,28 @@ namespace UmaMusumeAPI.Context
 
                 entity.Property(e => e.BaseStateName)
                     .IsRequired()
-                    .HasMaxLength(900)
-                    .HasColumnName("base_state_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasMaxLength(750)
+                    .HasColumnName("base_state_name");
 
                 entity.Property(e => e.CommandName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("command_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("command_name");
 
                 entity.Property(e => e.EndBlendTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_blend_time");
 
                 entity.Property(e => e.LayerIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("layer_index");
 
                 entity.Property(e => e.StartBlendTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_blend_time");
 
                 entity.Property(e => e.TailMotionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tail_motion_type");
             });
 
@@ -4142,52 +4109,45 @@ namespace UmaMusumeAPI.Context
                 entity.ToTable("face_type_data");
 
                 entity.Property(e => e.Label)
-                    .HasMaxLength(450)
-                    .HasColumnName("label")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasMaxLength(300)
+                    .HasColumnName("label");
 
                 entity.Property(e => e.EyeL)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("eye_l")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("eye_l");
 
                 entity.Property(e => e.EyeR)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("eye_r")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("eye_r");
 
                 entity.Property(e => e.EyebrowL)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("eyebrow_l")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("eyebrow_l");
 
                 entity.Property(e => e.EyebrowR)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("eyebrow_r")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("eyebrow_r");
 
                 entity.Property(e => e.InverceFaceType)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("inverce_face_type")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("inverce_face_type");
 
                 entity.Property(e => e.Mouth)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mouth")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mouth");
 
                 entity.Property(e => e.MouthShapeType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mouth_shape_type");
 
                 entity.Property(e => e.SetFaceGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("set_face_group");
             });
 
@@ -4208,17 +4168,15 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.AfterFacialname)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("after_facialname")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("after_facialname");
 
                 entity.Property(e => e.BeforeFacialname)
                     .IsRequired()
-                    .HasMaxLength(900)
-                    .HasColumnName("before_facialname")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnType("text")
+                    .HasColumnName("before_facialname");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
             });
 
@@ -4241,27 +4199,27 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("card_id");
 
                 entity.Property(e => e.CardType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_type");
 
                 entity.Property(e => e.IsPickup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("is_pickup");
 
                 entity.Property(e => e.IsPrizeSelectable)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("is_prize_selectable");
 
                 entity.Property(e => e.Odds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds");
 
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
 
                 entity.Property(e => e.RecommendOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("recommend_order");
             });
 
@@ -4275,179 +4233,179 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AdditionalPieceNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_num_1");
 
                 entity.Property(e => e.AdditionalPieceNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_num_2");
 
                 entity.Property(e => e.AdditionalPieceNum3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_num_3");
 
                 entity.Property(e => e.AdditionalPieceNum4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_num_4");
 
                 entity.Property(e => e.AdditionalPieceNum5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_num_5");
 
                 entity.Property(e => e.AdditionalPieceNum6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_num_6");
 
                 entity.Property(e => e.AdditionalPieceTargetCardId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_card_id_1");
 
                 entity.Property(e => e.AdditionalPieceTargetCardId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_card_id_2");
 
                 entity.Property(e => e.AdditionalPieceTargetCardId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_card_id_3");
 
                 entity.Property(e => e.AdditionalPieceTargetCardId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_card_id_4");
 
                 entity.Property(e => e.AdditionalPieceTargetCardId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_card_id_5");
 
                 entity.Property(e => e.AdditionalPieceTargetCardId6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_card_id_6");
 
                 entity.Property(e => e.AdditionalPieceTargetCardType1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_card_type_1");
 
                 entity.Property(e => e.AdditionalPieceTargetCardType2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_card_type_2");
 
                 entity.Property(e => e.AdditionalPieceTargetCardType3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_card_type_3");
 
                 entity.Property(e => e.AdditionalPieceTargetCardType4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_card_type_4");
 
                 entity.Property(e => e.AdditionalPieceTargetCardType5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_card_type_5");
 
                 entity.Property(e => e.AdditionalPieceTargetCardType6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_card_type_6");
 
                 entity.Property(e => e.AdditionalPieceTargetRarity1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_rarity_1");
 
                 entity.Property(e => e.AdditionalPieceTargetRarity2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_rarity_2");
 
                 entity.Property(e => e.AdditionalPieceTargetRarity3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_rarity_3");
 
                 entity.Property(e => e.AdditionalPieceTargetRarity4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_rarity_4");
 
                 entity.Property(e => e.AdditionalPieceTargetRarity5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_rarity_5");
 
                 entity.Property(e => e.AdditionalPieceTargetRarity6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_target_rarity_6");
 
                 entity.Property(e => e.BonusItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_item_category_1");
 
                 entity.Property(e => e.BonusItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_item_category_2");
 
                 entity.Property(e => e.BonusItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_item_id_1");
 
                 entity.Property(e => e.BonusItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_item_id_2");
 
                 entity.Property(e => e.BonusItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_item_num_1");
 
                 entity.Property(e => e.BonusItemNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_item_num_2");
 
                 entity.Property(e => e.BonusTargetDrawNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_target_draw_num");
 
                 entity.Property(e => e.CardType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_type");
 
                 entity.Property(e => e.CostSingle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cost_single");
 
                 entity.Property(e => e.CostType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cost_type");
 
                 entity.Property(e => e.DailyPayCost)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("daily_pay_cost");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.DrawGuaranteeNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("draw_guarantee_num");
 
                 entity.Property(e => e.DrawGuaranteeRarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("draw_guarantee_rarity");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.OnlyOnceFlag)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("only_once_flag");
 
                 entity.Property(e => e.PrizeOddsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prize_odds_id");
 
                 entity.Property(e => e.RarityOddsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity_odds_id");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
             });
 
@@ -4470,11 +4428,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("card_id");
 
                 entity.Property(e => e.CardType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_type");
 
+                entity.Property(e => e.DispOrder)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("disp_order");
+
                 entity.Property(e => e.PayItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pay_item_num");
             });
 
@@ -4488,19 +4450,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.GachaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("gacha_id");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.TargetDrawType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_draw_type");
             });
 
@@ -4516,23 +4478,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.PieceNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("piece_num");
 
                 entity.Property(e => e.PieceType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("piece_type");
 
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
             });
 
@@ -4555,83 +4517,83 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("place");
 
                 entity.Property(e => e.ItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_1");
 
                 entity.Property(e => e.ItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_2");
 
                 entity.Property(e => e.ItemCategory3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_3");
 
                 entity.Property(e => e.ItemCategory4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_4");
 
                 entity.Property(e => e.ItemCategory5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_5");
 
                 entity.Property(e => e.ItemCategory6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_6");
 
                 entity.Property(e => e.ItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_1");
 
                 entity.Property(e => e.ItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_2");
 
                 entity.Property(e => e.ItemId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_3");
 
                 entity.Property(e => e.ItemId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_4");
 
                 entity.Property(e => e.ItemId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_5");
 
                 entity.Property(e => e.ItemId6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_6");
 
                 entity.Property(e => e.ItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_1");
 
                 entity.Property(e => e.ItemNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_2");
 
                 entity.Property(e => e.ItemNum3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_3");
 
                 entity.Property(e => e.ItemNum4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_4");
 
                 entity.Property(e => e.ItemNum5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_5");
 
                 entity.Property(e => e.ItemNum6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_6");
 
                 entity.Property(e => e.Odds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds");
 
                 entity.Property(e => e.PieceNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("piece_num");
             });
 
@@ -4645,11 +4607,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -4665,19 +4627,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.GachaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("gacha_id");
 
                 entity.Property(e => e.GachaStockId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("gacha_stock_id");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -4693,8 +4655,16 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.GachaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("gacha_id");
+
+                entity.Property(e => e.LogoSizeX)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("logo_size_x");
+
+                entity.Property(e => e.LogoSizeY)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("logo_size_y");
             });
 
             modelBuilder.Entity<GiftMessage>(entity =>
@@ -4707,19 +4677,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Type1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type_1");
 
                 entity.Property(e => e.Type2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type_2");
 
                 entity.Property(e => e.Type3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type_3");
 
                 entity.Property(e => e.Type4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type_4");
             });
 
@@ -4733,11 +4703,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.InTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("in_time");
 
                 entity.Property(e => e.OutTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("out_time");
             });
 
@@ -4758,7 +4728,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("original_personality");
 
                 entity.Property(e => e.ChangePersonality)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("change_personality");
             });
 
@@ -4771,11 +4741,11 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => e.CharaId, "home_eat_0_chara_id");
 
                 entity.Property(e => e.BodyShape)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("body_shape");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.EatFacialMotion)
@@ -4789,7 +4759,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("eat_motion");
 
                 entity.Property(e => e.Odds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds");
 
                 entity.Property(e => e.OverrideMotionLeft)
@@ -4813,11 +4783,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("prop_eat_animation_right");
 
                 entity.Property(e => e.PropIdLeft)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_id_left");
 
                 entity.Property(e => e.PropIdRight)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_id_right");
 
                 entity.Property(e => e.WalkCharaFaceType)
@@ -4835,7 +4805,7 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("home_env_setting");
 
-                entity.HasIndex(e => new { e.HomeSetId, e.HomeEventType, e.Season, e.Weather, e.Timezone }, "home_env_setting_0")
+                entity.HasIndex(e => new { e.HomeSetId, e.HomeEventType, e.Season, e.Weather, e.Timezone }, "home_env_setting_index")
                     .IsUnique();
 
                 entity.Property(e => e.Id)
@@ -4846,53 +4816,49 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.BgmCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name");
 
                 entity.Property(e => e.BgmCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name");
 
                 entity.Property(e => e.EnvCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("env_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("env_cue_name");
 
                 entity.Property(e => e.EnvCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("env_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("env_cuesheet_name");
 
                 entity.Property(e => e.HomeEventType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("home_event_type");
 
                 entity.Property(e => e.HomeSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("home_set_id");
 
                 entity.Property(e => e.Resource)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("resource");
 
                 entity.Property(e => e.ResourceEventCheck)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("resource_event_check");
 
                 entity.Property(e => e.Season)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("season");
 
                 entity.Property(e => e.Timezone)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("timezone");
 
                 entity.Property(e => e.Weather)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("weather");
             });
 
@@ -4906,15 +4872,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.EventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("event_id");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -4930,45 +4896,44 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.DetailValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("detail_value");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.Height)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("height");
 
                 entity.Property(e => e.PosiHorizontal)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("posi_horizontal");
 
                 entity.Property(e => e.PosiVertical)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("posi_vertical");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.Url)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("url")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("url");
 
                 entity.Property(e => e.UrlValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("url_value");
 
                 entity.Property(e => e.Width)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("width");
             });
 
@@ -4989,17 +4954,22 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("personality");
 
                 entity.Property(e => e.AttachNode)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("attach_node");
 
                 entity.Property(e => e.PropId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_id");
             });
 
             modelBuilder.Entity<HomeStoryTrigger>(entity =>
             {
                 entity.ToTable("home_story_trigger");
+
+                entity.HasIndex(e => new { e.GalleryCharaId, e.DispOrder }, "gallery_chara_id")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.GalleryCharaId, "home_story_trigger_0_gallery_chara_id");
 
                 entity.HasIndex(e => new { e.HomeEventType, e.StoryId }, "home_story_trigger_0_home_event_type_1_story_id");
 
@@ -5011,35 +4981,43 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id_1");
 
                 entity.Property(e => e.CharaId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id_2");
 
                 entity.Property(e => e.CharaId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id_3");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
+                entity.Property(e => e.DispOrder)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("disp_order");
+
+                entity.Property(e => e.GalleryCharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gallery_chara_id");
+
                 entity.Property(e => e.HomeEventType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("home_event_type");
 
                 entity.Property(e => e.Num)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("num");
 
                 entity.Property(e => e.PosId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pos_id");
 
                 entity.Property(e => e.StoryId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id");
             });
 
@@ -5053,16 +5031,28 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id_1");
 
                 entity.Property(e => e.CharaId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id_2");
 
                 entity.Property(e => e.CharaId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id_3");
+
+                entity.Property(e => e.EnableEat1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("enable_eat_1");
+
+                entity.Property(e => e.EnableEat2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("enable_eat_2");
+
+                entity.Property(e => e.EnableEat3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("enable_eat_3");
             });
 
             modelBuilder.Entity<HomeStoryHipOffset>(entity =>
@@ -5073,29 +5063,29 @@ namespace UmaMusumeAPI.Context
 
                 entity.HasIndex(e => new { e.StoryId, e.CharaId }, "homestory_hip_offset_0_story_id_1_chara_id");
 
-                entity.Property(e => e.Id)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("id");
-
-                entity.Property(e => e.HomeEventType)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("home_event_type");
-
-                entity.Property(e => e.Num)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("num");
-
-                entity.Property(e => e.StoryId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("story_id");
-
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
+                entity.Property(e => e.HomeEventType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("home_event_type");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Num)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("num");
+
                 entity.Property(e => e.Offset)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("offset");
+
+                entity.Property(e => e.StoryId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_id");
             });
 
             modelBuilder.Entity<HonorData>(entity =>
@@ -5108,43 +5098,41 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Category)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("category");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ConditionValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value");
 
                 entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_2");
 
                 entity.Property(e => e.EndDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("end_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("end_date");
 
                 entity.Property(e => e.Rank)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rank");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
 
                 entity.Property(e => e.StepGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("step_group_id");
 
                 entity.Property(e => e.StepOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("step_order");
             });
 
@@ -5162,84 +5150,90 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AddValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_value_1");
 
                 entity.Property(e => e.AddValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_value_2");
 
                 entity.Property(e => e.AddValue3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_value_3");
 
                 entity.Property(e => e.EffectTarget1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_target_1");
 
                 entity.Property(e => e.EffectTarget2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_target_2");
 
                 entity.Property(e => e.EffectType1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_type_1");
 
                 entity.Property(e => e.EffectType2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_type_2");
 
                 entity.Property(e => e.EffectValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_value_1");
 
                 entity.Property(e => e.EffectValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_value_2");
 
                 entity.Property(e => e.EnableRequest)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("enable_request");
 
                 entity.Property(e => e.EndDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("end_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("end_date");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemPlaceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_place_id");
 
                 entity.Property(e => e.LimitNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_num");
 
                 entity.Property(e => e.Rare)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rare");
 
                 entity.Property(e => e.RequestReward)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("request_reward");
 
+                entity.Property(e => e.SellItemId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("sell_item_id");
+
+                entity.Property(e => e.SellPrice)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("sell_price");
+
                 entity.Property(e => e.Sort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sort");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
             });
 
             modelBuilder.Entity<ItemExchange>(entity =>
@@ -5256,71 +5250,71 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AdditionalPieceNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("additional_piece_num");
 
                 entity.Property(e => e.ChangeItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("change_item_category");
 
                 entity.Property(e => e.ChangeItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("change_item_id");
 
                 entity.Property(e => e.ChangeItemLimitNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("change_item_limit_num");
 
                 entity.Property(e => e.ChangeItemLimitType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("change_item_limit_type");
 
                 entity.Property(e => e.ChangeItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("change_item_num");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_1");
 
                 entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_2");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.ItemExchangeTopId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_exchange_top_id");
 
                 entity.Property(e => e.PayItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pay_item_category");
 
                 entity.Property(e => e.PayItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pay_item_id");
 
                 entity.Property(e => e.PayItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pay_item_num");
 
                 entity.Property(e => e.PriceChangeGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("price_change_group_id");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -5328,14 +5322,32 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("item_exchange_top");
 
+                entity.HasIndex(e => e.ItemTopCategory, "item_exchange_top_0_item_top_category");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("end_date");
+
                 entity.Property(e => e.ItemExchangeDispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_exchange_disp_order");
+
+                entity.Property(e => e.ItemExchangeType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_exchange_type");
+
+                entity.Property(e => e.ItemTopCategory)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_top_category");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
             });
 
             modelBuilder.Entity<ItemGroup>(entity =>
@@ -5350,7 +5362,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
             });
 
@@ -5366,30 +5378,28 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.EndDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("end_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("end_date");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
                 entity.Property(e => e.ItemPackId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_pack_id");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
             });
 
             modelBuilder.Entity<ItemPlace>(entity =>
@@ -5398,21 +5408,21 @@ namespace UmaMusumeAPI.Context
 
                 entity.ToTable("item_place");
 
-                entity.HasIndex(e => e.Id, "item_place_0_id");
-
-                entity.HasIndex(e => new { e.Id, e.TransitionType, e.TransitionValue }, "item_place_sqlite_autoindex_1")
+                entity.HasIndex(e => new { e.Id, e.TransitionType, e.TransitionValue }, "id")
                     .IsUnique();
 
+                entity.HasIndex(e => e.Id, "item_place_0_id");
+
                 entity.Property(e => e.Id)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("id");
 
                 entity.Property(e => e.TransitionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("transition_type");
 
                 entity.Property(e => e.TransitionValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("transition_value");
             });
 
@@ -5426,19 +5436,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.Tag)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tag");
             });
 
@@ -5446,29 +5456,33 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("jukebox_comment");
 
+                entity.HasIndex(e => new { e.CharaId, e.CommentType }, "jukebox_comment_0_chara_id_1_comment_type");
+
+                entity.HasIndex(e => e.CommentId, "jukebox_comment_0_comment_id");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.CommentId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("comment_id");
 
                 entity.Property(e => e.CommentType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("comment_type");
 
                 entity.Property(e => e.VariationType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("variation_type");
 
                 entity.Property(e => e.VariationValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("variation_value");
             });
 
@@ -5476,17 +5490,19 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("jukebox_motion_data");
 
+                entity.HasIndex(e => e.SongType, "jukebox_motion_data_0_song_type");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.MotionId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motion_id");
 
                 entity.Property(e => e.SongType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("song_type");
             });
 
@@ -5496,6 +5512,8 @@ namespace UmaMusumeAPI.Context
                     .HasName("PRIMARY");
 
                 entity.ToTable("jukebox_music_data");
+
+                entity.HasIndex(e => e.VersionType, "jukebox_music_data_0_version_type");
 
                 entity.HasIndex(e => e.Sort, "sort")
                     .IsUnique();
@@ -5526,51 +5544,51 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("bgm_cuesheet_name_short");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.IsHidden)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("is_hidden");
 
                 entity.Property(e => e.LampAnimation)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lamp_animation");
 
                 entity.Property(e => e.LampColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lamp_color");
 
                 entity.Property(e => e.NameTextureLength)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("name_texture_length");
 
                 entity.Property(e => e.RequestType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("request_type");
 
                 entity.Property(e => e.ShortLength)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("short_length");
 
                 entity.Property(e => e.SongType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("song_type");
 
                 entity.Property(e => e.Sort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sort");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.VersionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("version_type");
             });
 
@@ -5584,19 +5602,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.ReactionCharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reaction_chara_id");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -5610,23 +5628,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.MusicId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("music_id");
 
                 entity.Property(e => e.RequestType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("request_type");
 
                 entity.Property(e => e.RequestValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("request_value");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -5644,139 +5662,139 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CostNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cost_num");
 
                 entity.Property(e => e.Difficulty)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("difficulty");
 
                 entity.Property(e => e.DropRewardOddsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("drop_reward_odds_id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.FirstClearItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_category_1");
 
                 entity.Property(e => e.FirstClearItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_category_2");
 
                 entity.Property(e => e.FirstClearItemCategory3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_category_3");
 
                 entity.Property(e => e.FirstClearItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_id_1");
 
                 entity.Property(e => e.FirstClearItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_id_2");
 
                 entity.Property(e => e.FirstClearItemId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_id_3");
 
                 entity.Property(e => e.FirstClearItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_num_1");
 
                 entity.Property(e => e.FirstClearItemNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_num_2");
 
                 entity.Property(e => e.FirstClearItemNum3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_clear_item_num_3");
 
                 entity.Property(e => e.Ground)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ground");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.ImageId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("image_id");
 
                 entity.Property(e => e.LegendBgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("legend_bg_id");
 
                 entity.Property(e => e.LegendBgSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("legend_bg_sub_id");
 
                 entity.Property(e => e.LegendRaceBossNpcId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("legend_race_boss_npc_id");
 
                 entity.Property(e => e.NoticeDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("notice_date");
 
                 entity.Property(e => e.PickUpItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_category_1");
 
                 entity.Property(e => e.PickUpItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_category_2");
 
                 entity.Property(e => e.PickUpItemCategory3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_category_3");
 
                 entity.Property(e => e.PickUpItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_id_1");
 
                 entity.Property(e => e.PickUpItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_id_2");
 
                 entity.Property(e => e.PickUpItemId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_id_3");
 
                 entity.Property(e => e.PickUpItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_num_1");
 
                 entity.Property(e => e.PickUpItemNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_num_2");
 
                 entity.Property(e => e.PickUpItemNum3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pick_up_item_num_3");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
 
                 entity.Property(e => e.Season)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("season");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.VictoryRewardOddsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("victory_reward_odds_id");
 
                 entity.Property(e => e.Weather)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("weather");
             });
 
@@ -5790,11 +5808,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Frequency)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("frequency");
 
                 entity.Property(e => e.PayCost)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pay_cost");
             });
 
@@ -5808,87 +5826,87 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CardRarityDataId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_rarity_data_id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.Guts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts");
 
                 entity.Property(e => e.NicknameId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("nickname_id");
 
                 entity.Property(e => e.Post)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("post");
 
                 entity.Property(e => e.Pow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pow");
 
                 entity.Property(e => e.ProperDistanceLong)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_long");
 
                 entity.Property(e => e.ProperDistanceMiddle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_middle");
 
                 entity.Property(e => e.ProperDistanceMile)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_mile");
 
                 entity.Property(e => e.ProperDistanceShort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_short");
 
                 entity.Property(e => e.ProperGroundDirt)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_dirt");
 
                 entity.Property(e => e.ProperGroundTurf)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_turf");
 
                 entity.Property(e => e.ProperRunningStyleNige)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_nige");
 
                 entity.Property(e => e.ProperRunningStyleOikomi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_oikomi");
 
                 entity.Property(e => e.ProperRunningStyleSashi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_sashi");
 
                 entity.Property(e => e.ProperRunningStyleSenko)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_senko");
 
                 entity.Property(e => e.RaceDressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_dress_id");
 
                 entity.Property(e => e.SkillSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_set_id");
 
                 entity.Property(e => e.Speed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed");
 
                 entity.Property(e => e.Stamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina");
 
                 entity.Property(e => e.Wiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wiz");
             });
 
@@ -5902,87 +5920,87 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.Guts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts");
 
                 entity.Property(e => e.MobId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mob_id");
 
                 entity.Property(e => e.NpcGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("npc_group_id");
 
                 entity.Property(e => e.Pow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pow");
 
                 entity.Property(e => e.ProperDistanceLong)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_long");
 
                 entity.Property(e => e.ProperDistanceMiddle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_middle");
 
                 entity.Property(e => e.ProperDistanceMile)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_mile");
 
                 entity.Property(e => e.ProperDistanceShort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_short");
 
                 entity.Property(e => e.ProperGroundDirt)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_dirt");
 
                 entity.Property(e => e.ProperGroundTurf)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_turf");
 
                 entity.Property(e => e.ProperRunningStyleNige)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_nige");
 
                 entity.Property(e => e.ProperRunningStyleOikomi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_oikomi");
 
                 entity.Property(e => e.ProperRunningStyleSashi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_sashi");
 
                 entity.Property(e => e.ProperRunningStyleSenko)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_senko");
 
                 entity.Property(e => e.RaceDressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_dress_id");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
 
                 entity.Property(e => e.SkillSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_set_id");
 
                 entity.Property(e => e.Speed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed");
 
                 entity.Property(e => e.Stamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina");
 
                 entity.Property(e => e.Wiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wiz");
             });
 
@@ -5996,59 +6014,59 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.DailyRaceCeiling)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("daily_race_ceiling");
 
                 entity.Property(e => e.DailyRaceOdds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("daily_race_odds");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.ItemExchangeTopId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_exchange_top_id");
 
                 entity.Property(e => e.ItemLineupValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_lineup_value");
 
                 entity.Property(e => e.LegendRaceCeiling)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("legend_race_ceiling");
 
                 entity.Property(e => e.LegendRaceOdds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("legend_race_odds");
 
                 entity.Property(e => e.OddsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds_id");
 
                 entity.Property(e => e.OpenValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("open_value");
 
                 entity.Property(e => e.SingleModeCeiling)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("single_mode_ceiling");
 
                 entity.Property(e => e.SingleModeOdds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("single_mode_odds");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.TeamStadiumCeiling)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("team_stadium_ceiling");
 
                 entity.Property(e => e.TeamStadiumOdds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("team_stadium_odds");
             });
 
@@ -6062,19 +6080,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.ItemExchangeId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_exchange_id");
 
                 entity.Property(e => e.Odds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds");
 
                 entity.Property(e => e.RibbonValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ribbon_value");
             });
 
@@ -6088,19 +6106,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.Odds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds");
 
                 entity.Property(e => e.OddsId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds_id");
             });
 
@@ -6111,7 +6129,7 @@ namespace UmaMusumeAPI.Context
 
                 entity.ToTable("live_data");
 
-                entity.HasIndex(e => e.Sort, "live_data_sqlite_autoindex_1")
+                entity.HasIndex(e => e.Sort, "sort")
                     .IsUnique();
 
                 entity.Property(e => e.MusicId)
@@ -6120,72 +6138,74 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("music_id");
 
                 entity.Property(e => e.BackdancerDress)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("backdancer_dress");
 
                 entity.Property(e => e.BackdancerDressColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("backdancer_dress_color");
 
                 entity.Property(e => e.BackdancerOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("backdancer_order");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.DefaultMainDress)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("default_main_dress");
 
                 entity.Property(e => e.DefaultMainDressColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("default_main_dress_color");
 
                 entity.Property(e => e.DefaultMobDress)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("default_mob_dress");
 
                 entity.Property(e => e.DefaultMobDressColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("default_mob_dress_color");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
+                entity.Property(e => e.HasLive)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("has_live");
+
                 entity.Property(e => e.LiveMemberNumber)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("live_member_number");
 
                 entity.Property(e => e.MusicType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("music_type");
 
                 entity.Property(e => e.SongCharaType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("song_chara_type");
 
                 entity.Property(e => e.Sort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sort");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.TitleColorBottom)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("title_color_bottom")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("title_color_bottom");
 
                 entity.Property(e => e.TitleColorTop)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("title_color_top")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("title_color_top");
             });
 
             modelBuilder.Entity<LivePermissionData>(entity =>
@@ -6211,10 +6231,10 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("login_bonus_data");
 
-                entity.HasIndex(e => e.Type, "login_bonus_data_0_type");
-
-                entity.HasIndex(e => e.DispOrder, "login_bonus_data_sqlite_autoindex_1")
+                entity.HasIndex(e => e.DispOrder, "disp_order")
                     .IsUnique();
+
+                entity.HasIndex(e => e.Type, "login_bonus_data_0_type");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -6222,27 +6242,25 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CountNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("count_num");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.EndDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("end_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("end_date");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
             });
 
@@ -6252,7 +6270,7 @@ namespace UmaMusumeAPI.Context
 
                 entity.HasIndex(e => e.LoginBonusId, "login_bonus_detail_0_login_bonus_id");
 
-                entity.HasIndex(e => new { e.LoginBonusId, e.Count }, "login_bonus_detail_sqlite_autoindex_1")
+                entity.HasIndex(e => new { e.LoginBonusId, e.Count }, "login_bonus_id")
                     .IsUnique();
 
                 entity.Property(e => e.Id)
@@ -6261,23 +6279,71 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Count)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("count");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
+                entity.Property(e => e.ItemCategory2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category_2");
+
+                entity.Property(e => e.ItemCategory3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category_3");
+
+                entity.Property(e => e.ItemCategory4)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category_4");
+
+                entity.Property(e => e.ItemCategory5)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category_5");
+
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
+                entity.Property(e => e.ItemId2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id_2");
+
+                entity.Property(e => e.ItemId3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id_3");
+
+                entity.Property(e => e.ItemId4)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id_4");
+
+                entity.Property(e => e.ItemId5)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id_5");
+
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
+                entity.Property(e => e.ItemNum2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num_2");
+
+                entity.Property(e => e.ItemNum3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num_3");
+
+                entity.Property(e => e.ItemNum4)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num_4");
+
+                entity.Property(e => e.ItemNum5)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num_5");
+
                 entity.Property(e => e.LoginBonusId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("login_bonus_id");
             });
 
@@ -6294,11 +6360,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Rank)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rank");
 
                 entity.Property(e => e.TotalPoint)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("total_point");
             });
 
@@ -6308,7 +6374,7 @@ namespace UmaMusumeAPI.Context
 
                 entity.HasIndex(e => e.PartId, "main_story_data_0_part_id");
 
-                entity.HasIndex(e => e.StoryId1, "main_story_data_0_story_id_1")
+                entity.HasIndex(e => e.StoryId1, "story_id_1")
                     .IsUnique();
 
                 entity.Property(e => e.Id)
@@ -6317,103 +6383,103 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AddRewardCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_category_1");
 
                 entity.Property(e => e.AddRewardId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_id_1");
 
                 entity.Property(e => e.AddRewardNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_num_1");
 
                 entity.Property(e => e.EpisodeIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("episode_index");
 
                 entity.Property(e => e.LockType1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_type_1");
 
                 entity.Property(e => e.LockType2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_type_2");
 
                 entity.Property(e => e.LockType3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_type_3");
 
                 entity.Property(e => e.LockValue11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_value_1_1");
 
                 entity.Property(e => e.LockValue12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_value_1_2");
 
                 entity.Property(e => e.LockValue21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_value_2_1");
 
                 entity.Property(e => e.LockValue22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_value_2_2");
 
                 entity.Property(e => e.LockValue31)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_value_3_1");
 
                 entity.Property(e => e.LockValue32)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_value_3_2");
 
                 entity.Property(e => e.PartId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("part_id");
 
                 entity.Property(e => e.StoryId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_1");
 
                 entity.Property(e => e.StoryId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_2");
 
                 entity.Property(e => e.StoryId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_3");
 
                 entity.Property(e => e.StoryId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_4");
 
                 entity.Property(e => e.StoryId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_5");
 
                 entity.Property(e => e.StoryNumber)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_number");
 
                 entity.Property(e => e.StoryType1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_1");
 
                 entity.Property(e => e.StoryType2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_2");
 
                 entity.Property(e => e.StoryType3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_3");
 
                 entity.Property(e => e.StoryType4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_4");
 
                 entity.Property(e => e.StoryType5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_5");
             });
 
@@ -6427,23 +6493,24 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.MainStoryLastChapter)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("main_story_last_chapter");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.UiColor)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_color")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_color");
             });
 
             modelBuilder.Entity<MainStoryRaceBonus>(entity =>
             {
                 entity.ToTable("main_story_race_bonus");
+
+                entity.HasIndex(e => e.GroupId, "main_story_race_bonus_0_group_id");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -6451,19 +6518,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BonusType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_type");
 
                 entity.Property(e => e.BonusValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_value");
 
                 entity.Property(e => e.ConditionGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_group");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
             });
 
@@ -6471,25 +6538,27 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("main_story_race_bonus_condition");
 
+                entity.HasIndex(e => e.GroupId, "main_story_race_bonus_condition_0_group_id");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_1");
 
                 entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_2");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
             });
 
@@ -6499,101 +6568,107 @@ namespace UmaMusumeAPI.Context
 
                 entity.HasIndex(e => e.GroupId, "main_story_race_chara_data_0_group_id");
 
+                entity.HasIndex(e => e.RunningStyle, "main_story_race_chara_data_0_running_style");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.BracketNumber)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bracket_number");
 
+                entity.Property(e => e.CharaColorType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_color_type");
+
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.DressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_id");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.Guts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts");
 
                 entity.Property(e => e.MobId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mob_id");
 
                 entity.Property(e => e.Motivation)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motivation");
 
                 entity.Property(e => e.Pow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pow");
 
                 entity.Property(e => e.ProperDistanceLong)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_long");
 
                 entity.Property(e => e.ProperDistanceMiddle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_middle");
 
                 entity.Property(e => e.ProperDistanceMile)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_mile");
 
                 entity.Property(e => e.ProperDistanceShort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_short");
 
                 entity.Property(e => e.ProperGroundDirt)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_dirt");
 
                 entity.Property(e => e.ProperGroundTurf)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_turf");
 
                 entity.Property(e => e.ProperRunningStyleNige)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_nige");
 
                 entity.Property(e => e.ProperRunningStyleOikomi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_oikomi");
 
                 entity.Property(e => e.ProperRunningStyleSashi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_sashi");
 
                 entity.Property(e => e.ProperRunningStyleSenko)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_senko");
 
                 entity.Property(e => e.RunningStyle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("running_style");
 
                 entity.Property(e => e.SkillSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_set_id");
 
                 entity.Property(e => e.Speed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed");
 
                 entity.Property(e => e.Stamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina");
 
                 entity.Property(e => e.Wiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wiz");
             });
 
@@ -6607,31 +6682,35 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BonusChara1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_chara_1");
 
                 entity.Property(e => e.BonusChara2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_chara_2");
 
                 entity.Property(e => e.BonusChara3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_chara_3");
 
+                entity.Property(e => e.BonusGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bonus_group_id");
+
                 entity.Property(e => e.ClearRank)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("clear_rank");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.RaceConditionId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_condition_id");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
             });
 
@@ -6647,41 +6726,38 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.DressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_id");
 
                 entity.Property(e => e.GridOffsetX)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("grid_offset_x")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("grid_offset_x");
 
                 entity.Property(e => e.GridOffsetY)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("grid_offset_y")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("grid_offset_y");
 
                 entity.Property(e => e.Position)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("position")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("position");
 
                 entity.Property(e => e.ReleaseNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("release_num");
 
                 entity.Property(e => e.SceneType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scene_type");
 
                 entity.Property(e => e.SizeX)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("size_x");
 
                 entity.Property(e => e.SizeY)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("size_y");
             });
 
@@ -6697,135 +6773,123 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bg_id");
 
                 entity.Property(e => e.CharaPosY)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("chara_pos_y")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("chara_pos_y");
 
                 entity.Property(e => e.CharaShadow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_shadow");
 
                 entity.Property(e => e.Direction)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("direction");
 
                 entity.Property(e => e.EffectId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_id");
 
                 entity.Property(e => e.EffectStartSec)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("effect_start_sec")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("effect_start_sec");
 
                 entity.Property(e => e.FixedRenderOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fixed_render_order");
 
                 entity.Property(e => e.GridPosX)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grid_pos_x");
 
                 entity.Property(e => e.GridPosY)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grid_pos_y");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.IsMob)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("is_mob");
 
                 entity.Property(e => e.MainCharaNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("main_chara_num");
 
                 entity.Property(e => e.MotionName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("motion_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("motion_name");
 
                 entity.Property(e => e.PosObj)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("pos_obj")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("pos_obj");
 
                 entity.Property(e => e.PositionAnim)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("position_anim")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("position_anim");
 
                 entity.Property(e => e.PositionFile)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("position_file")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("position_file");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.SeCueName01)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("se_cue_name01")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("se_cue_name01");
 
                 entity.Property(e => e.SeCueName02)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("se_cue_name02")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("se_cue_name02");
 
                 entity.Property(e => e.SeCueSheet01)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("se_cue_sheet01")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("se_cue_sheet01");
 
                 entity.Property(e => e.SeCueSheet02)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("se_cue_sheet02")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("se_cue_sheet02");
 
                 entity.Property(e => e.SeStartFrame01)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("se_start_frame01");
 
                 entity.Property(e => e.SeStartFrame02)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("se_start_frame02");
 
                 entity.Property(e => e.SubGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sub_group_id");
 
                 entity.Property(e => e.Timeline)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("timeline")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("timeline");
 
                 entity.Property(e => e.TimelineActor)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("timeline_actor")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("timeline_actor");
 
                 entity.Property(e => e.UseGridPosJobSelect)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_grid_pos_job_select");
             });
 
@@ -6837,32 +6901,31 @@ namespace UmaMusumeAPI.Context
                 entity.ToTable("mini_face_type_data");
 
                 entity.Property(e => e.Label)
-                    .HasMaxLength(450)
-                    .HasColumnName("label")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasMaxLength(300)
+                    .HasColumnName("label");
 
                 entity.Property(e => e.Cheek)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cheek");
 
                 entity.Property(e => e.EyeL)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("eye_l");
 
                 entity.Property(e => e.EyeR)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("eye_r");
 
                 entity.Property(e => e.EyebrowL)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("eyebrow_l");
 
                 entity.Property(e => e.EyebrowR)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("eyebrow_r");
 
                 entity.Property(e => e.Mouth)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mouth");
             });
 
@@ -6876,110 +6939,102 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => e.Id, "mini_motion_set_0_id");
 
                 entity.Property(e => e.Label)
-                    .HasMaxLength(450)
-                    .HasColumnName("label")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasMaxLength(300)
+                    .HasColumnName("label");
 
                 entity.Property(e => e.AddLayerIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_layer_index");
 
                 entity.Property(e => e.BodyMotion)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("body_motion")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("body_motion");
 
                 entity.Property(e => e.BodyMotionPlayType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("body_motion_play_type");
 
                 entity.Property(e => e.BodyMotionSceneType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("body_motion_scene_type");
 
                 entity.Property(e => e.BodyMotionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("body_motion_type");
 
                 entity.Property(e => e.CharaFaceType)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("chara_face_type")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("chara_face_type");
 
                 entity.Property(e => e.CharaTypeTarget)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_type_target");
 
                 entity.Property(e => e.EarMotion)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ear_motion")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ear_motion");
 
                 entity.Property(e => e.FacialMotion)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("facial_motion")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("facial_motion");
 
                 entity.Property(e => e.Id)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("id");
 
                 entity.Property(e => e.IsEnableRandomeEar)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("is_enable_randome_ear");
 
                 entity.Property(e => e.IsEnableRandomeTail)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("is_enable_randome_tail");
 
                 entity.Property(e => e.IsMirror)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("is_mirror");
 
                 entity.Property(e => e.IsPropRequireMotionEnd)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("is_prop_require_motion_end");
 
                 entity.Property(e => e.PropAttachNodeNameType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_attach_node_name_type");
 
                 entity.Property(e => e.PropId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_id");
 
                 entity.Property(e => e.PropMotion)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("prop_motion")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("prop_motion");
 
                 entity.Property(e => e.PropMotionSceneType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_motion_scene_type");
 
                 entity.Property(e => e.SceneSubFolder)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("scene_sub_folder")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("scene_sub_folder");
 
                 entity.Property(e => e.TailMotion)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_motion")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_motion");
 
                 entity.Property(e => e.TailMotionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tail_motion_type");
 
                 entity.Property(e => e.TransitionTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("transition_time");
             });
 
@@ -6993,11 +7048,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ReverseMouthId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reverse_mouth_id");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
             });
 
@@ -7013,80 +7068,82 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ConditionNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_num");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_1");
 
                 entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_2");
 
                 entity.Property(e => e.ConditionValue3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_3");
 
                 entity.Property(e => e.ConditionValue4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_4");
 
                 entity.Property(e => e.DateCheckFlg)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("date_check_flg");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.EndDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("end_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("end_date");
 
                 entity.Property(e => e.EventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("event_id");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
                 entity.Property(e => e.MissionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mission_type");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
 
                 entity.Property(e => e.StepGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("step_group_id");
 
                 entity.Property(e => e.StepOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("step_order");
 
                 entity.Property(e => e.TransitionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("transition_type");
+
+                entity.Property(e => e.UserShow)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("user_show");
             });
 
             modelBuilder.Entity<MobData>(entity =>
@@ -7102,71 +7159,71 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("mob_id");
 
                 entity.Property(e => e.AttachmentModelId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("attachment_model_id");
 
                 entity.Property(e => e.CaptureType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("capture_type");
 
                 entity.Property(e => e.CharaBustSize)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_bust_size");
 
                 entity.Property(e => e.CharaFaceModel)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_face_model");
 
                 entity.Property(e => e.CharaHairColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_hair_color");
 
                 entity.Property(e => e.CharaHairModel)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_hair_model");
 
                 entity.Property(e => e.CharaHeight)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_height");
 
                 entity.Property(e => e.CharaSkinColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_skin_color");
 
                 entity.Property(e => e.DefaultPersonality)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("default_personality");
 
                 entity.Property(e => e.DressColorId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_color_id");
 
                 entity.Property(e => e.DressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_id");
 
                 entity.Property(e => e.HairCutoff)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("hair_cutoff");
 
                 entity.Property(e => e.RacePersonality)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_personality");
 
                 entity.Property(e => e.RaceRunningType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_running_type");
 
                 entity.Property(e => e.Sex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sex");
 
                 entity.Property(e => e.Socks)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("socks");
 
                 entity.Property(e => e.UseLive)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_live");
             });
 
@@ -7182,74 +7239,62 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.ColorB1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("color_b1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("color_b1");
 
                 entity.Property(e => e.ColorB2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("color_b2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("color_b2");
 
                 entity.Property(e => e.ColorG1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("color_g1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("color_g1");
 
                 entity.Property(e => e.ColorG2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("color_g2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("color_g2");
 
                 entity.Property(e => e.ColorR1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("color_r1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("color_r1");
 
                 entity.Property(e => e.ColorR2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("color_r2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("color_r2");
 
                 entity.Property(e => e.ToonColorB1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("toon_color_b1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("toon_color_b1");
 
                 entity.Property(e => e.ToonColorB2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("toon_color_b2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("toon_color_b2");
 
                 entity.Property(e => e.ToonColorG1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("toon_color_g1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("toon_color_g1");
 
                 entity.Property(e => e.ToonColorG2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("toon_color_g2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("toon_color_g2");
 
                 entity.Property(e => e.ToonColorR1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("toon_color_r1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("toon_color_r1");
 
                 entity.Property(e => e.ToonColorR2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("toon_color_r2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("toon_color_r2");
             });
 
             modelBuilder.Entity<MobHairColorSet>(entity =>
@@ -7264,254 +7309,212 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.EyeColorB1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("eye_color_b1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("eye_color_b1");
 
                 entity.Property(e => e.EyeColorB2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("eye_color_b2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("eye_color_b2");
 
                 entity.Property(e => e.EyeColorG1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("eye_color_g1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("eye_color_g1");
 
                 entity.Property(e => e.EyeColorG2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("eye_color_g2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("eye_color_g2");
 
                 entity.Property(e => e.EyeColorR1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("eye_color_r1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("eye_color_r1");
 
                 entity.Property(e => e.EyeColorR2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("eye_color_r2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("eye_color_r2");
 
                 entity.Property(e => e.HairColorB1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("hair_color_b1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("hair_color_b1");
 
                 entity.Property(e => e.HairColorB2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("hair_color_b2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("hair_color_b2");
 
                 entity.Property(e => e.HairColorG1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("hair_color_g1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("hair_color_g1");
 
                 entity.Property(e => e.HairColorG2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("hair_color_g2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("hair_color_g2");
 
                 entity.Property(e => e.HairColorR1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("hair_color_r1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("hair_color_r1");
 
                 entity.Property(e => e.HairColorR2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("hair_color_r2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("hair_color_r2");
 
                 entity.Property(e => e.HairToonColorB1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("hair_toon_color_b1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("hair_toon_color_b1");
 
                 entity.Property(e => e.HairToonColorB2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("hair_toon_color_b2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("hair_toon_color_b2");
 
                 entity.Property(e => e.HairToonColorG1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("hair_toon_color_g1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("hair_toon_color_g1");
 
                 entity.Property(e => e.HairToonColorG2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("hair_toon_color_g2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("hair_toon_color_g2");
 
                 entity.Property(e => e.HairToonColorR1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("hair_toon_color_r1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("hair_toon_color_r1");
 
                 entity.Property(e => e.HairToonColorR2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("hair_toon_color_r2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("hair_toon_color_r2");
 
                 entity.Property(e => e.MayuColorB1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mayu_color_b1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mayu_color_b1");
 
                 entity.Property(e => e.MayuColorB2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mayu_color_b2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mayu_color_b2");
 
                 entity.Property(e => e.MayuColorG1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mayu_color_g1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mayu_color_g1");
 
                 entity.Property(e => e.MayuColorG2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mayu_color_g2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mayu_color_g2");
 
                 entity.Property(e => e.MayuColorR1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mayu_color_r1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mayu_color_r1");
 
                 entity.Property(e => e.MayuColorR2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mayu_color_r2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mayu_color_r2");
 
                 entity.Property(e => e.MayuToonColorB1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mayu_toon_color_b1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mayu_toon_color_b1");
 
                 entity.Property(e => e.MayuToonColorB2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mayu_toon_color_b2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mayu_toon_color_b2");
 
                 entity.Property(e => e.MayuToonColorG1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mayu_toon_color_g1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mayu_toon_color_g1");
 
                 entity.Property(e => e.MayuToonColorG2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mayu_toon_color_g2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mayu_toon_color_g2");
 
                 entity.Property(e => e.MayuToonColorR1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mayu_toon_color_r1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mayu_toon_color_r1");
 
                 entity.Property(e => e.MayuToonColorR2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("mayu_toon_color_r2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("mayu_toon_color_r2");
 
                 entity.Property(e => e.TailColorB1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_color_b1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_color_b1");
 
                 entity.Property(e => e.TailColorB2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_color_b2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_color_b2");
 
                 entity.Property(e => e.TailColorG1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_color_g1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_color_g1");
 
                 entity.Property(e => e.TailColorG2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_color_g2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_color_g2");
 
                 entity.Property(e => e.TailColorR1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_color_r1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_color_r1");
 
                 entity.Property(e => e.TailColorR2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_color_r2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_color_r2");
 
                 entity.Property(e => e.TailToonColorB1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_toon_color_b1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_toon_color_b1");
 
                 entity.Property(e => e.TailToonColorB2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_toon_color_b2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_toon_color_b2");
 
                 entity.Property(e => e.TailToonColorG1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_toon_color_g1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_toon_color_g1");
 
                 entity.Property(e => e.TailToonColorG2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_toon_color_g2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_toon_color_g2");
 
                 entity.Property(e => e.TailToonColorR1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_toon_color_r1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_toon_color_r1");
 
                 entity.Property(e => e.TailToonColorR2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tail_toon_color_r2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tail_toon_color_r2");
             });
 
             modelBuilder.Entity<NeedPieceNumData>(entity =>
@@ -7527,11 +7530,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.PieceNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("piece_num");
 
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
             });
 
@@ -7547,35 +7550,39 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaDataId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_data_id");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.Rank)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rank");
 
                 entity.Property(e => e.ReceiveConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("receive_condition_type");
 
+                entity.Property(e => e.ScenarioId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("scenario_id");
+
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.UserShow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("user_show");
             });
 
@@ -7591,23 +7598,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.LockType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_type");
 
                 entity.Property(e => e.LockValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lock_value");
 
                 entity.Property(e => e.Sort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sort");
 
                 entity.Property(e => e.TextType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("text_type");
             });
 
@@ -7623,15 +7630,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Sort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sort");
 
                 entity.Property(e => e.TextCategoryId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("text_category_id");
 
                 entity.Property(e => e.TextType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("text_type");
             });
 
@@ -7647,18 +7654,16 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.EndDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("end_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("end_date");
 
                 entity.Property(e => e.ItemPlaceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_place_id");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
             });
 
             modelBuilder.Entity<PriceChange>(entity =>
@@ -7673,19 +7678,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.MaxNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_num");
 
                 entity.Property(e => e.MinNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("min_num");
 
                 entity.Property(e => e.PayItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pay_item_num");
             });
 
@@ -7693,69 +7698,71 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("race");
 
-                entity.HasIndex(e => e.CourseSet, "race_race_0_course_set");
+                entity.HasIndex(e => e.CourseSet, "race_0_course_set");
 
-                entity.HasIndex(e => e.Group, "race_race_0_group");
+                entity.HasIndex(e => e.Group, "race_0_group");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
+                entity.Property(e => e.Audience)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("audience");
+
                 entity.Property(e => e.CourseSet)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("course_set");
 
                 entity.Property(e => e.EntryNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("entry_num");
 
                 entity.Property(e => e.FfAnim)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ff_anim");
 
                 entity.Property(e => e.FfCamera)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ff_camera");
 
                 entity.Property(e => e.FfCameraSub)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ff_camera_sub");
 
                 entity.Property(e => e.FfCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ff_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ff_cue_name");
 
                 entity.Property(e => e.FfCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ff_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ff_cuesheet_name");
 
                 entity.Property(e => e.FfSub)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ff_sub");
 
                 entity.Property(e => e.GoalFlower)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("goal_flower");
 
                 entity.Property(e => e.GoalGate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("goal_gate");
 
                 entity.Property(e => e.Grade)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade");
 
                 entity.Property(e => e.Group)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group");
 
                 entity.Property(e => e.ThumbnailId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("thumbnail_id");
             });
 
@@ -7773,125 +7780,109 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.EntrytableBgmCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("entrytable_bgm_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("entrytable_bgm_cue_name");
 
                 entity.Property(e => e.EntrytableBgmCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("entrytable_bgm_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("entrytable_bgm_cuesheet_name");
 
                 entity.Property(e => e.FirstBgmPattern)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("first_bgm_pattern");
 
                 entity.Property(e => e.Grade)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade");
 
                 entity.Property(e => e.PaddockBgmCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("paddock_bgm_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("paddock_bgm_cue_name");
 
                 entity.Property(e => e.PaddockBgmCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("paddock_bgm_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("paddock_bgm_cuesheet_name");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
 
                 entity.Property(e => e.RaceType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_type");
 
                 entity.Property(e => e.ResultCutinBgmCueName1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("result_cutin_bgm_cue_name_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("result_cutin_bgm_cue_name_1");
 
                 entity.Property(e => e.ResultCutinBgmCueName2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("result_cutin_bgm_cue_name_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("result_cutin_bgm_cue_name_2");
 
                 entity.Property(e => e.ResultCutinBgmCueName3)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("result_cutin_bgm_cue_name_3")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("result_cutin_bgm_cue_name_3");
 
                 entity.Property(e => e.ResultCutinBgmCuesheetName1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("result_cutin_bgm_cuesheet_name_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("result_cutin_bgm_cuesheet_name_1");
 
                 entity.Property(e => e.ResultCutinBgmCuesheetName2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("result_cutin_bgm_cuesheet_name_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("result_cutin_bgm_cuesheet_name_2");
 
                 entity.Property(e => e.ResultCutinBgmCuesheetName3)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("result_cutin_bgm_cuesheet_name_3")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("result_cutin_bgm_cuesheet_name_3");
 
                 entity.Property(e => e.ResultListBgmCueName1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("result_list_bgm_cue_name_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("result_list_bgm_cue_name_1");
 
                 entity.Property(e => e.ResultListBgmCueName2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("result_list_bgm_cue_name_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("result_list_bgm_cue_name_2");
 
                 entity.Property(e => e.ResultListBgmCueName3)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("result_list_bgm_cue_name_3")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("result_list_bgm_cue_name_3");
 
                 entity.Property(e => e.ResultListBgmCuesheetName1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("result_list_bgm_cuesheet_name_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("result_list_bgm_cuesheet_name_1");
 
                 entity.Property(e => e.ResultListBgmCuesheetName2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("result_list_bgm_cuesheet_name_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("result_list_bgm_cuesheet_name_2");
 
                 entity.Property(e => e.ResultListBgmCuesheetName3)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("result_list_bgm_cuesheet_name_3")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("result_list_bgm_cuesheet_name_3");
 
                 entity.Property(e => e.SecondBgmPattern)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("second_bgm_pattern");
 
                 entity.Property(e => e.SingleModeProgramId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("single_mode_program_id");
 
                 entity.Property(e => e.SingleModeRouteRaceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("single_mode_route_race_id");
             });
 
@@ -7907,23 +7898,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.CutinCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cutin_category");
 
                 entity.Property(e => e.ExtensionSec)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("extension_sec");
 
                 entity.Property(e => e.ExtensionSecLong)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("extension_sec_long");
             });
 
@@ -7939,481 +7930,421 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.BgmCueName1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_1");
 
                 entity.Property(e => e.BgmCueName10)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_10")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_10");
 
                 entity.Property(e => e.BgmCueName11)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_11")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_11");
 
                 entity.Property(e => e.BgmCueName12)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_12")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_12");
 
                 entity.Property(e => e.BgmCueName13)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_13")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_13");
 
                 entity.Property(e => e.BgmCueName14)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_14")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_14");
 
                 entity.Property(e => e.BgmCueName15)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_15")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_15");
 
                 entity.Property(e => e.BgmCueName16)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_16")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_16");
 
                 entity.Property(e => e.BgmCueName17)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_17")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_17");
 
                 entity.Property(e => e.BgmCueName18)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_18")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_18");
 
                 entity.Property(e => e.BgmCueName19)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_19")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_19");
 
                 entity.Property(e => e.BgmCueName2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_2");
 
                 entity.Property(e => e.BgmCueName20)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_20")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_20");
 
                 entity.Property(e => e.BgmCueName21)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_21")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_21");
 
                 entity.Property(e => e.BgmCueName22)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_22")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_22");
 
                 entity.Property(e => e.BgmCueName23)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_23")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_23");
 
                 entity.Property(e => e.BgmCueName24)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_24")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_24");
 
                 entity.Property(e => e.BgmCueName25)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_25")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_25");
 
                 entity.Property(e => e.BgmCueName26)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_26")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_26");
 
                 entity.Property(e => e.BgmCueName27)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_27")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_27");
 
                 entity.Property(e => e.BgmCueName28)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_28")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_28");
 
                 entity.Property(e => e.BgmCueName29)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_29")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_29");
 
                 entity.Property(e => e.BgmCueName3)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_3")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_3");
 
                 entity.Property(e => e.BgmCueName30)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_30")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_30");
 
                 entity.Property(e => e.BgmCueName4)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_4")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_4");
 
                 entity.Property(e => e.BgmCueName5)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_5")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_5");
 
                 entity.Property(e => e.BgmCueName6)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_6")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_6");
 
                 entity.Property(e => e.BgmCueName7)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_7")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_7");
 
                 entity.Property(e => e.BgmCueName8)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_8")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_8");
 
                 entity.Property(e => e.BgmCueName9)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name_9")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name_9");
 
                 entity.Property(e => e.BgmCuesheetName1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_1");
 
                 entity.Property(e => e.BgmCuesheetName10)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_10")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_10");
 
                 entity.Property(e => e.BgmCuesheetName11)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_11")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_11");
 
                 entity.Property(e => e.BgmCuesheetName12)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_12")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_12");
 
                 entity.Property(e => e.BgmCuesheetName13)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_13")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_13");
 
                 entity.Property(e => e.BgmCuesheetName14)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_14")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_14");
 
                 entity.Property(e => e.BgmCuesheetName15)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_15")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_15");
 
                 entity.Property(e => e.BgmCuesheetName16)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_16")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_16");
 
                 entity.Property(e => e.BgmCuesheetName17)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_17")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_17");
 
                 entity.Property(e => e.BgmCuesheetName18)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_18")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_18");
 
                 entity.Property(e => e.BgmCuesheetName19)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_19")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_19");
 
                 entity.Property(e => e.BgmCuesheetName2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_2");
 
                 entity.Property(e => e.BgmCuesheetName20)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_20")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_20");
 
                 entity.Property(e => e.BgmCuesheetName21)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_21")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_21");
 
                 entity.Property(e => e.BgmCuesheetName22)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_22")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_22");
 
                 entity.Property(e => e.BgmCuesheetName23)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_23")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_23");
 
                 entity.Property(e => e.BgmCuesheetName24)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_24")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_24");
 
                 entity.Property(e => e.BgmCuesheetName25)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_25")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_25");
 
                 entity.Property(e => e.BgmCuesheetName26)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_26")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_26");
 
                 entity.Property(e => e.BgmCuesheetName27)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_27")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_27");
 
                 entity.Property(e => e.BgmCuesheetName28)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_28")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_28");
 
                 entity.Property(e => e.BgmCuesheetName29)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_29")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_29");
 
                 entity.Property(e => e.BgmCuesheetName3)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_3")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_3");
 
                 entity.Property(e => e.BgmCuesheetName30)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_30")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_30");
 
                 entity.Property(e => e.BgmCuesheetName4)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_4")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_4");
 
                 entity.Property(e => e.BgmCuesheetName5)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_5")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_5");
 
                 entity.Property(e => e.BgmCuesheetName6)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_6")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_6");
 
                 entity.Property(e => e.BgmCuesheetName7)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_7")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_7");
 
                 entity.Property(e => e.BgmCuesheetName8)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_8")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_8");
 
                 entity.Property(e => e.BgmCuesheetName9)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name_9")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name_9");
 
                 entity.Property(e => e.BgmTime1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_1");
 
                 entity.Property(e => e.BgmTime10)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_10");
 
                 entity.Property(e => e.BgmTime11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_11");
 
                 entity.Property(e => e.BgmTime12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_12");
 
                 entity.Property(e => e.BgmTime13)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_13");
 
                 entity.Property(e => e.BgmTime14)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_14");
 
                 entity.Property(e => e.BgmTime15)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_15");
 
                 entity.Property(e => e.BgmTime16)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_16");
 
                 entity.Property(e => e.BgmTime17)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_17");
 
                 entity.Property(e => e.BgmTime18)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_18");
 
                 entity.Property(e => e.BgmTime19)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_19");
 
                 entity.Property(e => e.BgmTime2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_2");
 
                 entity.Property(e => e.BgmTime20)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_20");
 
                 entity.Property(e => e.BgmTime21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_21");
 
                 entity.Property(e => e.BgmTime22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_22");
 
                 entity.Property(e => e.BgmTime23)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_23");
 
                 entity.Property(e => e.BgmTime24)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_24");
 
                 entity.Property(e => e.BgmTime25)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_25");
 
                 entity.Property(e => e.BgmTime26)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_26");
 
                 entity.Property(e => e.BgmTime27)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_27");
 
                 entity.Property(e => e.BgmTime28)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_28");
 
                 entity.Property(e => e.BgmTime29)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_29");
 
                 entity.Property(e => e.BgmTime3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_3");
 
                 entity.Property(e => e.BgmTime30)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_30");
 
                 entity.Property(e => e.BgmTime4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_4");
 
                 entity.Property(e => e.BgmTime5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_5");
 
                 entity.Property(e => e.BgmTime6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_6");
 
                 entity.Property(e => e.BgmTime7)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_7");
 
                 entity.Property(e => e.BgmTime8)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_8");
 
                 entity.Property(e => e.BgmTime9)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bgm_time_9");
             });
 
@@ -8434,11 +8365,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("race_id");
 
                 entity.Property(e => e.BibColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bib_color");
 
                 entity.Property(e => e.FontColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("font_color");
             });
 
@@ -8458,19 +8389,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Ground)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ground");
 
                 entity.Property(e => e.Rate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rate");
 
                 entity.Property(e => e.Season)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("season");
 
                 entity.Property(e => e.Weather)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("weather");
             });
 
@@ -8486,51 +8417,51 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CourseSetStatusId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("course_set_status_id");
 
                 entity.Property(e => e.Distance)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("distance");
 
                 entity.Property(e => e.FenceSet)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fence_set");
 
                 entity.Property(e => e.FinishTimeMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("finish_time_max");
 
                 entity.Property(e => e.FinishTimeMaxRandomRange)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("finish_time_max_random_range");
 
                 entity.Property(e => e.FinishTimeMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("finish_time_min");
 
                 entity.Property(e => e.FinishTimeMinRandomRange)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("finish_time_min_random_range");
 
                 entity.Property(e => e.FloatLaneMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_lane_max");
 
                 entity.Property(e => e.Ground)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ground");
 
                 entity.Property(e => e.Inout)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("inout");
 
                 entity.Property(e => e.RaceTrackId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_track_id");
 
                 entity.Property(e => e.Turn)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("turn");
             });
 
@@ -8547,11 +8478,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("course_set_status_id");
 
                 entity.Property(e => e.TargetStatus1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_status_1");
 
                 entity.Property(e => e.TargetStatus2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_status_2");
             });
 
@@ -8567,23 +8498,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.RaceTrackId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_track_id");
 
                 entity.Property(e => e.Resource)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("resource");
 
                 entity.Property(e => e.Season)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("season");
 
                 entity.Property(e => e.Timezone)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("timezone");
 
                 entity.Property(e => e.Weather)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("weather");
             });
 
@@ -8597,35 +8528,35 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Fence1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fence_1");
 
                 entity.Property(e => e.Fence2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fence_2");
 
                 entity.Property(e => e.Fence3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fence_3");
 
                 entity.Property(e => e.Fence4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fence_4");
 
                 entity.Property(e => e.Fence5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fence_5");
 
                 entity.Property(e => e.Fence6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fence_6");
 
                 entity.Property(e => e.Fence7)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fence_7");
 
                 entity.Property(e => e.Fence8)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fence_8");
             });
 
@@ -8641,23 +8572,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Date)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("date");
 
                 entity.Property(e => e.NpcGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("npc_group_id");
 
                 entity.Property(e => e.RaceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_id");
 
                 entity.Property(e => e.RaceNumber)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_number");
 
                 entity.Property(e => e.Time)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("time");
             });
 
@@ -8673,115 +8604,115 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CameraHorse1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("camera_horse1");
 
                 entity.Property(e => e.CameraHorse2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("camera_horse2");
 
                 entity.Property(e => e.CameraId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("camera_id");
 
                 entity.Property(e => e.CommentGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("comment_group");
 
                 entity.Property(e => e.DisableReentrySituation)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disable_reentry_situation");
 
                 entity.Property(e => e.DisableReuse)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disable_reuse");
 
                 entity.Property(e => e.Discard)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("discard");
 
                 entity.Property(e => e.Immediate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("immediate");
 
                 entity.Property(e => e.MessageGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("message_group");
 
                 entity.Property(e => e.Mode)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mode");
 
                 entity.Property(e => e.Per)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("per");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.Situation)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("situation");
 
                 entity.Property(e => e.SituationEnd)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("situation_end");
 
                 entity.Property(e => e.SubMode)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sub_mode");
 
                 entity.Property(e => e.SubModeJump)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sub_mode_jump");
 
                 entity.Property(e => e.SubSituation)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sub_situation");
 
                 entity.Property(e => e.Tension)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tension");
 
                 entity.Property(e => e.Trigger0)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trigger0");
 
                 entity.Property(e => e.Trigger1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trigger1");
 
                 entity.Property(e => e.Trigger2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trigger2");
 
                 entity.Property(e => e.Trigger3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trigger3");
 
                 entity.Property(e => e.Trigger4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trigger4");
 
                 entity.Property(e => e.Trigger5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trigger5");
 
                 entity.Property(e => e.Trigger6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trigger6");
 
                 entity.Property(e => e.Trigger7)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trigger7");
 
                 entity.Property(e => e.Trigger8)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trigger8");
 
                 entity.Property(e => e.Trigger9)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trigger9");
             });
 
@@ -8797,28 +8728,26 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.Message)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("message")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("message");
 
                 entity.Property(e => e.MessageGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("message_group");
 
                 entity.Property(e => e.Per)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("per");
 
                 entity.Property(e => e.Voice)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("voice")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("voice");
             });
 
             modelBuilder.Entity<RaceJikkyoCue>(entity =>
@@ -8840,7 +8769,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("cuesheet_type");
 
                 entity.Property(e => e.CuesheetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cuesheet_id");
             });
 
@@ -8858,32 +8787,30 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CommentGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("comment_group");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.Message)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("message")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("message");
 
                 entity.Property(e => e.Per)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("per");
 
                 entity.Property(e => e.Reuse)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reuse");
 
                 entity.Property(e => e.Voice)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("voice")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("voice");
             });
 
             modelBuilder.Entity<RaceJikkyoRace>(entity =>
@@ -8896,7 +8823,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CueId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cue_id");
             });
 
@@ -8910,27 +8837,27 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Command)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command");
 
                 entity.Property(e => e.Horse1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("horse1");
 
                 entity.Property(e => e.Horse2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("horse2");
 
                 entity.Property(e => e.Inequality)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("inequality");
 
                 entity.Property(e => e.Param1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("param1");
 
                 entity.Property(e => e.Param2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("param2");
             });
 
@@ -8944,7 +8871,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.MotivationRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motivation_rate");
             });
 
@@ -8958,27 +8885,27 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.FinishOrder0Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("finish_order_0_type");
 
                 entity.Property(e => e.FinishOrder1Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("finish_order_1_type");
 
                 entity.Property(e => e.FinishOrder2Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("finish_order_2_type");
 
                 entity.Property(e => e.FinishOrder3Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("finish_order_3_type");
 
                 entity.Property(e => e.FinishOrder4Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("finish_order_4_type");
 
                 entity.Property(e => e.FinishOrderLoseType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("finish_order_lose_type");
             });
 
@@ -8988,8 +8915,7 @@ namespace UmaMusumeAPI.Context
 
                 entity.HasIndex(e => e.Category, "race_player_camera_0_category");
 
-                entity.HasIndex(e => e.PrefabName, "race_player_camera_0_prefab_name")
-                    .HasAnnotation("MySql:IndexPrefixLength", new[] { 768 });
+                entity.HasIndex(e => e.PrefabName, "race_player_camera_0_prefab_name");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -8997,17 +8923,16 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Category)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("category");
 
                 entity.Property(e => e.PrefabName)
                     .IsRequired()
-                    .HasMaxLength(900)
-                    .HasColumnName("prefab_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasMaxLength(750)
+                    .HasColumnName("prefab_name");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
             });
 
@@ -9023,15 +8948,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ProperGrade)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_grade");
 
                 entity.Property(e => e.ProperType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_type");
 
                 entity.Property(e => e.Value)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value");
             });
 
@@ -9045,11 +8970,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ProperRatePower)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_rate_power");
 
                 entity.Property(e => e.ProperRateSpeed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_rate_speed");
             });
 
@@ -9063,7 +8988,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ProperRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_rate");
             });
 
@@ -9077,7 +9002,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ProperRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_rate");
             });
 
@@ -9091,11 +9016,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AddStatus)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_status");
 
                 entity.Property(e => e.TeamRankThreshold)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("team_rank_threshold");
             });
 
@@ -9108,24 +9033,28 @@ namespace UmaMusumeAPI.Context
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
+                entity.Property(e => e.Area)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("area");
+
                 entity.Property(e => e.EnableHalfGate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("enable_half_gate");
 
                 entity.Property(e => e.FootsmokeColorType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("footsmoke_color_type");
 
                 entity.Property(e => e.HorseNumGateVariation)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("horse_num_gate_variation");
 
                 entity.Property(e => e.InitialLaneType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("initial_lane_type");
 
                 entity.Property(e => e.TurfVisionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("turf_vision_type");
             });
 
@@ -9144,39 +9073,37 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.DisplayEndDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("display_end_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("display_end_date");
 
                 entity.Property(e => e.EventType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("event_type");
 
                 entity.Property(e => e.OriginalFlag)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("original_flag");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
 
                 entity.Property(e => e.Size)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("size");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
 
                 entity.Property(e => e.TrophyId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trophy_id");
             });
 
@@ -9193,15 +9120,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("trophy_id");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
             });
 
@@ -9217,21 +9144,20 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.EarType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ear_type");
 
                 entity.Property(e => e.MotionName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("motion_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("motion_name");
 
                 entity.Property(e => e.PartsType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("parts_type");
 
                 entity.Property(e => e.UseStory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_story");
             });
 
@@ -9249,25 +9175,23 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.EndDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("end_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("end_date");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.Season)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("season");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
             });
 
@@ -9283,23 +9207,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_1");
 
                 entity.Property(e => e.Scene)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scene");
 
                 entity.Property(e => e.Sort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sort");
 
                 entity.Property(e => e.StoryId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id");
             });
 
@@ -9315,35 +9239,35 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharacterType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("character_type");
 
                 entity.Property(e => e.MotionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motion_type");
 
                 entity.Property(e => e.Popularity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.ProperDistance)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance");
 
                 entity.Property(e => e.ProperGround)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground");
 
                 entity.Property(e => e.Rate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rate");
 
                 entity.Property(e => e.Year)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("year");
             });
 
@@ -9359,11 +9283,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CostTicket)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cost_ticket");
 
                 entity.Property(e => e.Grade)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade");
             });
 
@@ -9377,23 +9301,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Offset1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("offset_1");
 
                 entity.Property(e => e.Offset2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("offset_2");
 
                 entity.Property(e => e.Offset3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("offset_3");
 
                 entity.Property(e => e.Offset4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("offset_4");
 
                 entity.Property(e => e.Offset5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("offset_5");
             });
 
@@ -9407,11 +9331,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ValueMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_max");
 
                 entity.Property(e => e.ValueMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_min");
             });
 
@@ -9431,15 +9355,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_type");
 
                 entity.Property(e => e.CuttId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cutt_id");
 
                 entity.Property(e => e.CuttType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cutt_type");
             });
 
@@ -9455,11 +9379,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.CuttId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cutt_id");
             });
 
@@ -9473,27 +9397,27 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.NoticeTurn1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("notice_turn_1");
 
                 entity.Property(e => e.NoticeTurn2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("notice_turn_2");
 
                 entity.Property(e => e.NoticeTurn3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("notice_turn_3");
 
                 entity.Property(e => e.NoticeTurn4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("notice_turn_4");
 
                 entity.Property(e => e.NoticeTurn5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("notice_turn_5");
 
                 entity.Property(e => e.TurnNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("turn_num");
             });
 
@@ -9509,15 +9433,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.RouteRaceGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("route_race_group_id");
 
                 entity.Property(e => e.RouteRaceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("route_race_id");
             });
 
@@ -9531,19 +9455,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.EffectCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_category");
 
                 entity.Property(e => e.EffectGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_group_id");
 
                 entity.Property(e => e.EffectType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_type");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
             });
 
@@ -9557,15 +9481,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.NeedFanCount)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("need_fan_count");
 
                 entity.Property(e => e.RunNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("run_num");
 
                 entity.Property(e => e.WinNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_num");
             });
 
@@ -9581,12 +9505,16 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.ProgramGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("program_group");
+
+                entity.Property(e => e.ProgramGroup2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("program_group_2");
             });
 
             modelBuilder.Entity<SingleModeConclusionSet>(entity =>
@@ -9598,15 +9526,15 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => e.StoryId, "single_mode_conclusion_set_0_story_id");
 
                 entity.Property(e => e.ConclusionId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("conclusion_id");
 
                 entity.Property(e => e.RootId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("root_id");
 
                 entity.Property(e => e.StoryId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id");
             });
 
@@ -9618,6 +9546,12 @@ namespace UmaMusumeAPI.Context
 
                 entity.ToTable("single_mode_difficulty_box");
 
+                entity.HasIndex(e => e.BoxId, "single_mode_difficulty_box_0_box_id");
+
+                entity.HasIndex(e => e.BoxStep, "single_mode_difficulty_box_0_box_step");
+
+                entity.HasIndex(e => e.RewardSetId, "single_mode_difficulty_box_0_reward_set_id");
+
                 entity.Property(e => e.RewardSetId)
                     .HasColumnType("int(11)")
                     .HasColumnName("reward_set_id");
@@ -9627,15 +9561,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("box_step");
 
                 entity.Property(e => e.BoxId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("box_id");
 
                 entity.Property(e => e.BoxOpenCondition)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("box_open_condition");
 
                 entity.Property(e => e.BoxType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("box_type");
 
                 entity.Property(e => e.CueNameIcon)
@@ -9663,25 +9597,27 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("single_mode_difficulty_box_gauge");
 
+                entity.HasIndex(e => e.DifficultyId, "single_mode_difficulty_box_gauge_0_difficulty_id");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.DifficultyId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("difficulty_id");
 
                 entity.Property(e => e.GaugeRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("gauge_rate");
 
                 entity.Property(e => e.ResultMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("result_max");
 
                 entity.Property(e => e.ResultMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("result_min");
             });
 
@@ -9689,33 +9625,35 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("single_mode_difficulty_box_reward");
 
+                entity.HasIndex(e => e.BoxId, "single_mode_difficulty_box_reward_0_box_id");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.BoxId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("box_id");
 
                 entity.Property(e => e.BoxNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("box_num");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
                 entity.Property(e => e.Rate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rate");
             });
 
@@ -9727,6 +9665,8 @@ namespace UmaMusumeAPI.Context
 
                 entity.ToTable("single_mode_difficulty_data");
 
+                entity.HasIndex(e => new { e.DifficultyId, e.DifficultyIndex }, "single_mode_difficulty_data_0_difficulty_id_1_difficulty_index");
+
                 entity.Property(e => e.DifficultyId)
                     .HasColumnType("int(11)")
                     .HasColumnName("difficulty_id");
@@ -9735,21 +9675,57 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("int(11)")
                     .HasColumnName("difficulty");
 
+                entity.Property(e => e.ConditionType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_type");
+
+                entity.Property(e => e.ConditionType2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_type_2");
+
+                entity.Property(e => e.ConditionValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_value");
+
+                entity.Property(e => e.ConditionValue2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_value_2");
+
+                entity.Property(e => e.ContinueFlag)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("continue_flag");
+
+                entity.Property(e => e.DifficultyIndex)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("difficulty_index");
+
+                entity.Property(e => e.DifficultyMotivation)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("difficulty_motivation");
+
                 entity.Property(e => e.DifficultyRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("difficulty_rate");
 
+                entity.Property(e => e.GaugeRate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gauge_rate");
+
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.MaxNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_num");
+
+                entity.Property(e => e.SpecialFlag)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("special_flag");
             });
 
             modelBuilder.Entity<SingleModeDifficultyMode>(entity =>
@@ -9775,59 +9751,59 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("bgm_cuesheet_name");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.DressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_id");
 
                 entity.Property(e => e.GaugeMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("gauge_max");
 
                 entity.Property(e => e.GaugeMotion)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("gauge_motion");
 
                 entity.Property(e => e.GaugeMotion2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("gauge_motion2");
 
                 entity.Property(e => e.GaugeMotion3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("gauge_motion3");
 
                 entity.Property(e => e.GaugeUp)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("gauge_up");
 
                 entity.Property(e => e.GuideId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guide_id");
 
                 entity.Property(e => e.InMotion)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("in_motion");
 
                 entity.Property(e => e.PlayMotion)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("play_motion");
 
                 entity.Property(e => e.PopoutMotion)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popout_motion");
 
                 entity.Property(e => e.RewardSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_set_id");
 
                 entity.Property(e => e.RewardType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_type");
 
                 entity.Property(e => e.StandMotion)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stand_motion");
             });
 
@@ -9843,11 +9819,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.Evaluation)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("evaluation");
             });
 
@@ -9868,7 +9844,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.CharaMotionSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_motion_set_id");
             });
 
@@ -9884,15 +9860,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.EventCategoryId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("event_category_id");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.NameIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("name_index");
             });
 
@@ -9909,11 +9885,21 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("story_id");
 
                 entity.Property(e => e.EventCategoryId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("event_category_id");
 
+                entity.Property(e => e.ItemDir)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("item_dir");
+
+                entity.Property(e => e.ItemName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("item_name");
+
                 entity.Property(e => e.MaxItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_item_id");
             });
 
@@ -9929,15 +9915,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.FanCount)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fan_count");
 
                 entity.Property(e => e.FanSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fan_set_id");
 
                 entity.Property(e => e.Order)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("order");
             });
 
@@ -9953,19 +9939,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CoinNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("coin_num");
 
                 entity.Property(e => e.Grade)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade");
 
                 entity.Property(e => e.OrderMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("order_max");
 
                 entity.Property(e => e.OrderMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("order_min");
             });
 
@@ -9979,19 +9965,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.EndTurn)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_turn");
 
                 entity.Property(e => e.LineupGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lineup_group_id");
 
                 entity.Property(e => e.MaxLineupNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_lineup_num");
 
                 entity.Property(e => e.StartTurn)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_turn");
             });
 
@@ -10005,19 +9991,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bg_id");
 
                 entity.Property(e => e.BgSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bg_sub_id");
 
                 entity.Property(e => e.EndTurn)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_turn");
 
                 entity.Property(e => e.StartTurn)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_turn");
             });
 
@@ -10033,31 +10019,31 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.EffectGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_group_id");
 
                 entity.Property(e => e.EffectType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_type");
 
                 entity.Property(e => e.EffectValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_value_1");
 
                 entity.Property(e => e.EffectValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_value_2");
 
                 entity.Property(e => e.EffectValue3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_value_3");
 
                 entity.Property(e => e.EffectValue4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_value_4");
 
                 entity.Property(e => e.Turn)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("turn");
             });
 
@@ -10073,31 +10059,31 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CoinNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("coin_num");
 
                 entity.Property(e => e.EffectGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_group");
 
                 entity.Property(e => e.EffectGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_group_id");
 
                 entity.Property(e => e.EffectPriority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_priority");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.LimitNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_num");
 
                 entity.Property(e => e.MotionId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motion_id");
             });
 
@@ -10113,15 +10099,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ValueMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_max");
 
                 entity.Property(e => e.ValueMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_min");
             });
 
@@ -10139,23 +10125,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Grade)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade");
 
                 entity.Property(e => e.OrderMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("order_max");
 
                 entity.Property(e => e.OrderMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("order_min");
 
                 entity.Property(e => e.PointNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("point_num");
 
                 entity.Property(e => e.RaceGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_group_id");
             });
 
@@ -10168,31 +10154,31 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => e.HintId, "single_mode_hint_gain_0_hint_id");
 
                 entity.Property(e => e.HintGainType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("hint_gain_type");
 
                 entity.Property(e => e.HintGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("hint_group");
 
                 entity.Property(e => e.HintId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("hint_id");
 
                 entity.Property(e => e.HintValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("hint_value_1");
 
                 entity.Property(e => e.HintValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("hint_value_2");
 
                 entity.Property(e => e.Id)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("id");
 
                 entity.Property(e => e.SupportCardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_card_id");
             });
 
@@ -10208,15 +10194,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.MemberRankId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("member_rank_id");
 
                 entity.Property(e => e.ValueMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_max");
 
                 entity.Property(e => e.ValueMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_min");
             });
 
@@ -10232,11 +10218,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Points)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("points");
 
                 entity.Property(e => e.RankId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rank_id");
             });
 
@@ -10250,39 +10236,39 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharacterType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("character_type");
 
                 entity.Property(e => e.Emergent)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("emergent");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.StatusType1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("status_type_1");
 
                 entity.Property(e => e.StatusType2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("status_type_2");
 
                 entity.Property(e => e.StatusValue11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("status_value_1_1");
 
                 entity.Property(e => e.StatusValue12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("status_value_1_2");
 
                 entity.Property(e => e.StatusValue21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("status_value_2_1");
 
                 entity.Property(e => e.StatusValue22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("status_value_2_2");
             });
 
@@ -10298,91 +10284,91 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.Guts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts");
 
                 entity.Property(e => e.MobId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mob_id");
 
                 entity.Property(e => e.MotivationMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motivation_max");
 
                 entity.Property(e => e.MotivationMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motivation_min");
 
                 entity.Property(e => e.NpcGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("npc_group_id");
 
                 entity.Property(e => e.Pow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pow");
 
                 entity.Property(e => e.ProperDistanceLong)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_long");
 
                 entity.Property(e => e.ProperDistanceMiddle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_middle");
 
                 entity.Property(e => e.ProperDistanceMile)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_mile");
 
                 entity.Property(e => e.ProperDistanceShort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_short");
 
                 entity.Property(e => e.ProperGroundDirt)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_dirt");
 
                 entity.Property(e => e.ProperGroundTurf)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_turf");
 
                 entity.Property(e => e.ProperRunningStyleNige)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_nige");
 
                 entity.Property(e => e.ProperRunningStyleOikomi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_oikomi");
 
                 entity.Property(e => e.ProperRunningStyleSashi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_sashi");
 
                 entity.Property(e => e.ProperRunningStyleSenko)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_senko");
 
                 entity.Property(e => e.RaceDressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_dress_id");
 
                 entity.Property(e => e.SkillSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_set_id");
 
                 entity.Property(e => e.Speed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed");
 
                 entity.Property(e => e.Stamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina");
 
                 entity.Property(e => e.Wiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wiz");
             });
 
@@ -10398,15 +10384,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CommandGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_group_id");
 
                 entity.Property(e => e.Condition)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition");
 
                 entity.Property(e => e.IsPlayCutt)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("is_play_cutt");
             });
 
@@ -10420,23 +10406,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CommandGroupId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_group_id_1");
 
                 entity.Property(e => e.CommandGroupId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_group_id_2");
 
                 entity.Property(e => e.CommandGroupId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_group_id_3");
 
                 entity.Property(e => e.CommandGroupId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_group_id_4");
 
                 entity.Property(e => e.CommandGroupId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_group_id_5");
             });
 
@@ -10452,59 +10438,59 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BaseProgramId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("base_program_id");
 
                 entity.Property(e => e.EntryDecrease)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("entry_decrease");
 
                 entity.Property(e => e.EntryDecreaseFlag)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("entry_decrease_flag");
 
                 entity.Property(e => e.FanSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fan_set_id");
 
                 entity.Property(e => e.FillyOnlyFlag)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("filly_only_flag");
 
                 entity.Property(e => e.GradeRateId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade_rate_id");
 
                 entity.Property(e => e.Half)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("half");
 
                 entity.Property(e => e.Month)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("month");
 
                 entity.Property(e => e.NeedFanCount)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("need_fan_count");
 
                 entity.Property(e => e.ProgramGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("program_group");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
 
                 entity.Property(e => e.RacePermission)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_permission");
 
                 entity.Property(e => e.RecommendClassId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("recommend_class_id");
 
                 entity.Property(e => e.RewardSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_set_id");
             });
 
@@ -10514,17 +10500,19 @@ namespace UmaMusumeAPI.Context
 
                 entity.HasIndex(e => e.RaceGroupId, "single_mode_race_group_0_race_group_id");
 
+                entity.HasIndex(e => e.RaceProgramId, "single_mode_race_group_0_race_program_id");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.RaceGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_group_id");
 
                 entity.Property(e => e.RaceProgramId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_program_id");
             });
 
@@ -10538,15 +10526,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Grade)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade");
 
                 entity.Property(e => e.MusicId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("music_id");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
             });
 
@@ -10560,11 +10548,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.MaxValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_value");
 
                 entity.Property(e => e.MinValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("min_value");
             });
 
@@ -10578,11 +10566,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.GradeLowerLimit)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade_lower_limit");
 
                 entity.Property(e => e.GradeUpperLimit)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade_upper_limit");
             });
 
@@ -10600,11 +10588,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.HeaderFontColor)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("header_font_color")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("header_font_color");
 
                 entity.Property(e => e.RecommendCourseId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("recommend_course_id");
             });
 
@@ -10622,11 +10609,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ScenarioId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scenario_id");
 
                 entity.Property(e => e.SupportCardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_card_id");
             });
 
@@ -10642,39 +10629,39 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Bonus)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
                 entity.Property(e => e.Odds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds");
 
                 entity.Property(e => e.OrderMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("order_max");
 
                 entity.Property(e => e.OrderMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("order_min");
 
                 entity.Property(e => e.RewardSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_set_id");
 
                 entity.Property(e => e.RewardType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_type");
             });
 
@@ -10682,10 +10669,10 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("single_mode_rival");
 
-                entity.HasIndex(e => e.RaceProgramId, "single_mode_rival_0_race_program_id");
-
-                entity.HasIndex(e => new { e.CharaId, e.Turn, e.RaceProgramId, e.RivalCharaId }, "single_mode_rival_sqlite_autoindex_1")
+                entity.HasIndex(e => new { e.CharaId, e.Turn, e.RaceProgramId, e.RivalCharaId }, "chara_id")
                     .IsUnique();
+
+                entity.HasIndex(e => e.RaceProgramId, "single_mode_rival_0_race_program_id");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -10693,35 +10680,35 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.FrameOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("frame_order");
 
                 entity.Property(e => e.RaceProgramId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_program_id");
 
                 entity.Property(e => e.RivalCharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rival_chara_id");
 
                 entity.Property(e => e.RivalFlagId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rival_flag_id");
 
                 entity.Property(e => e.SingleModeNpcId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("single_mode_npc_id");
 
                 entity.Property(e => e.Turn)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("turn");
             });
 
@@ -10729,21 +10716,33 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("single_mode_route");
 
+                entity.HasIndex(e => e.ScenarioId, "single_mode_route_0_scenario_id");
+
+                entity.HasIndex(e => new { e.ScenarioId, e.CharaId }, "single_mode_route_0_scenario_id_1_chara_id");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
+                entity.Property(e => e.ConditionSetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_set_id");
+
+                entity.Property(e => e.Priority)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("priority");
+
                 entity.Property(e => e.RaceSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_set_id");
 
                 entity.Property(e => e.ScenarioId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scenario_id");
             });
 
@@ -10759,23 +10758,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.RouteRaceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("route_race_id");
 
                 entity.Property(e => e.RouteRaceType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("route_race_type");
 
                 entity.Property(e => e.TargetType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type");
 
                 entity.Property(e => e.TargetValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_value");
 
                 entity.Property(e => e.Turn)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("turn");
             });
 
@@ -10791,19 +10790,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ConditionSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_set_id");
 
                 entity.Property(e => e.ConditionType1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type_1");
 
                 entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_1");
 
                 entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_2");
             });
 
@@ -10819,47 +10818,47 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ConditionId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_id");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_1");
 
                 entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_2");
 
                 entity.Property(e => e.DetermineRace)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("determine_race");
 
                 entity.Property(e => e.DetermineRaceFlag)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("determine_race_flag");
 
                 entity.Property(e => e.RaceSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_set_id");
 
                 entity.Property(e => e.RaceType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_type");
 
                 entity.Property(e => e.SortId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sort_id");
 
                 entity.Property(e => e.TargetType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type");
 
                 entity.Property(e => e.Turn)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("turn");
             });
 
@@ -10872,28 +10871,66 @@ namespace UmaMusumeAPI.Context
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
+                entity.Property(e => e.BgId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_id");
+
+                entity.Property(e => e.BgOffsetX)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_offset_x");
+
+                entity.Property(e => e.BgSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_sub_id");
+
+                entity.Property(e => e.CharaProgramChangeFlag)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_program_change_flag");
+
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
+                entity.Property(e => e.HintRate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("hint_rate");
+
+                entity.Property(e => e.LabelBgColor)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("label_bg_color");
+
+                entity.Property(e => e.LabelFontColor)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("label_font_color");
+
                 entity.Property(e => e.PrologueId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prologue_id");
 
                 entity.Property(e => e.ScenarioImageId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scenario_image_id");
 
+                entity.Property(e => e.SecBgId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("sec_bg_id");
+
+                entity.Property(e => e.SecBgSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("sec_bg_sub_id");
+
                 entity.Property(e => e.SortId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sort_id");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.TurnSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("turn_set_id");
             });
 
@@ -10909,23 +10946,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.NeedRecordMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("need_record_min");
 
                 entity.Property(e => e.RewardItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_item_category");
 
                 entity.Property(e => e.RewardItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_item_id");
 
                 entity.Property(e => e.RewardNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_num");
 
                 entity.Property(e => e.ScenarioId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scenario_id");
             });
 
@@ -10941,103 +10978,103 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.Guts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts");
 
                 entity.Property(e => e.GutsLimit)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts_limit");
 
                 entity.Property(e => e.LiveDressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("live_dress_id");
 
                 entity.Property(e => e.Pow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pow");
 
                 entity.Property(e => e.PowLimit)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pow_limit");
 
                 entity.Property(e => e.ProperDistanceLong)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_long");
 
                 entity.Property(e => e.ProperDistanceMiddle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_middle");
 
                 entity.Property(e => e.ProperDistanceMile)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_mile");
 
                 entity.Property(e => e.ProperDistanceShort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_distance_short");
 
                 entity.Property(e => e.ProperGroundDirt)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_dirt");
 
                 entity.Property(e => e.ProperGroundTurf)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_ground_turf");
 
                 entity.Property(e => e.ProperRunningStyleNige)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_nige");
 
                 entity.Property(e => e.ProperRunningStyleOikomi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_oikomi");
 
                 entity.Property(e => e.ProperRunningStyleSashi)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_sashi");
 
                 entity.Property(e => e.ProperRunningStyleSenko)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("proper_running_style_senko");
 
                 entity.Property(e => e.RaceDressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_dress_id");
 
                 entity.Property(e => e.Speed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed");
 
                 entity.Property(e => e.SpeedLimit)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed_limit");
 
                 entity.Property(e => e.Stamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina");
 
                 entity.Property(e => e.StaminaLimit)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina_limit");
 
                 entity.Property(e => e.SupportCardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_card_id");
 
                 entity.Property(e => e.TagSupportCardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tag_support_card_id");
 
                 entity.Property(e => e.Wiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wiz");
 
                 entity.Property(e => e.WizLimit)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wiz_limit");
             });
 
@@ -11051,15 +11088,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.NeedSkillPoint)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("need_skill_point");
 
                 entity.Property(e => e.StatusType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("status_type");
 
                 entity.Property(e => e.StatusValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("status_value");
             });
 
@@ -11077,11 +11114,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.ScenarioId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scenario_id");
             });
 
@@ -11092,6 +11129,8 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => e.CardCharaId, "single_mode_story_data_0_card_chara_id");
 
                 entity.HasIndex(e => e.CardId, "single_mode_story_data_0_card_id");
+
+                entity.HasIndex(e => e.GalleryMainScenario, "single_mode_story_data_0_gallery_main_scenario");
 
                 entity.HasIndex(e => e.ShortStoryId, "single_mode_story_data_0_short_story_id");
 
@@ -11107,71 +11146,91 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CardCharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_chara_id");
 
                 entity.Property(e => e.CardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_id");
 
                 entity.Property(e => e.EndingType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ending_type");
 
                 entity.Property(e => e.EventTitleCharaIcon)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("event_title_chara_icon");
 
                 entity.Property(e => e.EventTitleDressIcon)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("event_title_dress_icon");
 
                 entity.Property(e => e.EventTitleStyle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("event_title_style");
 
+                entity.Property(e => e.GalleryFlag)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gallery_flag");
+
+                entity.Property(e => e.GalleryListId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gallery_list_id");
+
+                entity.Property(e => e.GalleryMainScenario)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gallery_main_scenario");
+
                 entity.Property(e => e.MiniGameResult)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mini_game_result");
 
+                entity.Property(e => e.PastRaceId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("past_race_id");
+
                 entity.Property(e => e.RaceEventFlag)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_event_flag");
 
                 entity.Property(e => e.SeChange)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("se_change");
 
                 entity.Property(e => e.ShortStoryId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("short_story_id");
 
                 entity.Property(e => e.ShowClear)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("show_clear");
 
                 entity.Property(e => e.ShowProgress1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("show_progress_1");
 
                 entity.Property(e => e.ShowProgress2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("show_progress_2");
 
+                entity.Property(e => e.ShowProgress3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("show_progress_3");
+
                 entity.Property(e => e.ShowSuccession)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("show_succession");
 
                 entity.Property(e => e.StoryId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id");
 
                 entity.Property(e => e.SupportCardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_card_id");
 
                 entity.Property(e => e.SupportCharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_chara_id");
             });
 
@@ -11188,7 +11247,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("story_id");
 
                 entity.Property(e => e.GuideId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guide_id");
             });
 
@@ -11204,35 +11263,35 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Pattern)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pattern");
 
                 entity.Property(e => e.PosIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pos_index");
 
                 entity.Property(e => e.PosX)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pos_x");
 
                 entity.Property(e => e.PosY)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pos_y");
 
                 entity.Property(e => e.RotZ)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rot_z");
 
                 entity.Property(e => e.ScaleX)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scale_x");
 
                 entity.Property(e => e.ScaleY)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scale_y");
 
                 entity.Property(e => e.SupportCardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_card_id");
             });
 
@@ -11246,7 +11305,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
             });
 
@@ -11254,24 +11313,63 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("single_mode_top_bg");
 
-                entity.HasIndex(e => e.Month, "single_mode_top_bg_0_month");
+                entity.HasIndex(e => new { e.Month, e.ScenarioId }, "single_mode_top_bg_0_month_1_scenario_id");
+
+                entity.HasIndex(e => e.ScenarioId, "single_mode_top_bg_0_scenario_id");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
+                entity.Property(e => e.BgEffect)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bg_effect");
+
                 entity.Property(e => e.BgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bg_id");
 
+                entity.Property(e => e.BgProgress)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_progress");
+
                 entity.Property(e => e.BgSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bg_sub_id");
 
+                entity.Property(e => e.BgmCueName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cue_name");
+
+                entity.Property(e => e.BgmCuesheet)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cuesheet");
+
+                entity.Property(e => e.EnvCueName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("env_cue_name");
+
+                entity.Property(e => e.EnvCuesheetName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("env_cuesheet_name");
+
+                entity.Property(e => e.MaxPlacement)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("max_placement");
+
                 entity.Property(e => e.Month)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("month");
+
+                entity.Property(e => e.ScenarioId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("scenario_id");
             });
 
             modelBuilder.Entity<SingleModeTopBgChara>(entity =>
@@ -11286,31 +11384,31 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bg_id");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.MotionSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motion_set_id");
 
                 entity.Property(e => e.PosX)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pos_x");
 
                 entity.Property(e => e.PosZ)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pos_z");
 
                 entity.Property(e => e.RotationY)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rotation_y");
 
                 entity.Property(e => e.ScenarioId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scenario_id");
             });
 
@@ -11333,67 +11431,65 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BaseCommandId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("base_command_id");
 
                 entity.Property(e => e.CommandId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_id");
 
                 entity.Property(e => e.CommandLevel)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_level");
 
                 entity.Property(e => e.CommandType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_type");
 
                 entity.Property(e => e.CutinFileId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cutin_file_id");
 
                 entity.Property(e => e.DressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_id");
 
                 entity.Property(e => e.DressType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_type");
 
                 entity.Property(e => e.EnvCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("env_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("env_cue_name");
 
                 entity.Property(e => e.EnvCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("env_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("env_cuesheet_name");
 
                 entity.Property(e => e.FailureRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("failure_rate");
 
                 entity.Property(e => e.MaxCharaNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_chara_num");
 
                 entity.Property(e => e.MenuBgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("menu_bg_id");
 
                 entity.Property(e => e.MenuBgSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("menu_bg_sub_id");
 
                 entity.Property(e => e.MotionSet)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motion_set");
 
                 entity.Property(e => e.SaboriType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sabori_type");
             });
 
@@ -11409,27 +11505,27 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CommandId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_id");
 
                 entity.Property(e => e.EffectValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_value");
 
                 entity.Property(e => e.ResultState)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("result_state");
 
                 entity.Property(e => e.ScenarioId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scenario_id");
 
                 entity.Property(e => e.SubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sub_id");
 
                 entity.Property(e => e.TargetType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type");
             });
 
@@ -11437,8 +11533,7 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("single_mode_training_se");
 
-                entity.HasIndex(e => e.SheetId, "single_mode_training_se_0_sheet_id")
-                    .HasAnnotation("MySql:IndexPrefixLength", new[] { 768 });
+                entity.HasIndex(e => e.SheetId, "single_mode_training_se_0_sheet_id");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -11446,41 +11541,36 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_index");
 
                 entity.Property(e => e.SeCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("se_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("se_cue_name");
 
                 entity.Property(e => e.SeCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("se_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("se_cuesheet_name");
 
                 entity.Property(e => e.SheetId)
                     .IsRequired()
-                    .HasMaxLength(900)
-                    .HasColumnName("sheet_id")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasMaxLength(750)
+                    .HasColumnName("sheet_id");
 
                 entity.Property(e => e.SkipSeCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("skip_se_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("skip_se_cue_name");
 
                 entity.Property(e => e.SkipSeCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("skip_se_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("skip_se_cuesheet_name");
 
                 entity.Property(e => e.VoiceTriggerId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("voice_trigger_id");
             });
 
@@ -11498,93 +11588,89 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.BgmCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name");
 
                 entity.Property(e => e.BgmCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name");
 
                 entity.Property(e => e.EnvCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("env_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("env_cue_name");
 
                 entity.Property(e => e.EnvCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("env_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("env_cuesheet_name");
 
                 entity.Property(e => e.Half)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("half");
 
                 entity.Property(e => e.HealthRoomType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("health_room_type");
 
                 entity.Property(e => e.Month)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("month");
 
                 entity.Property(e => e.OutingSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("outing_set_id");
 
                 entity.Property(e => e.Period)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("period");
 
                 entity.Property(e => e.RaceEntryType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_entry_type");
 
                 entity.Property(e => e.RestType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rest_type");
 
                 entity.Property(e => e.StoryBgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_bg_id");
 
                 entity.Property(e => e.StoryBgSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_bg_sub_id");
 
                 entity.Property(e => e.StoryClothId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_cloth_id");
 
                 entity.Property(e => e.TopBgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("top_bg_id");
 
                 entity.Property(e => e.TopClothId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("top_cloth_id");
 
                 entity.Property(e => e.TrainingSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("training_set_id");
 
                 entity.Property(e => e.Turn)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("turn");
 
                 entity.Property(e => e.TurnSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("turn_set_id");
 
                 entity.Property(e => e.UniqueCommand)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("unique_command");
 
                 entity.Property(e => e.Year)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("year");
             });
 
@@ -11600,23 +11686,35 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
+                entity.Property(e => e.GainFlagId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gain_flag_id");
+
+                entity.Property(e => e.GainRoleId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gain_role_id");
+
+                entity.Property(e => e.IsSupportFeaturedStock)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("is_support_featured_stock");
+
                 entity.Property(e => e.PartnerId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("partner_id");
 
                 entity.Property(e => e.Period)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("period");
 
                 entity.Property(e => e.ScenarioId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scenario_id");
 
                 entity.Property(e => e.TrainingPlacement)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("training_placement");
             });
 
@@ -11630,51 +11728,51 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Condition)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.RaceInstanceId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id_1");
 
                 entity.Property(e => e.RaceInstanceId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id_2");
 
                 entity.Property(e => e.RaceInstanceId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id_3");
 
                 entity.Property(e => e.RaceInstanceId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id_4");
 
                 entity.Property(e => e.RaceInstanceId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id_5");
 
                 entity.Property(e => e.RaceInstanceId6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id_6");
 
                 entity.Property(e => e.RaceInstanceId7)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id_7");
 
                 entity.Property(e => e.RaceInstanceId8)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id_8");
 
                 entity.Property(e => e.WinSaddleType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_saddle_type");
             });
 
@@ -11689,258 +11787,281 @@ namespace UmaMusumeAPI.Context
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
+                entity.Property(e => e.AbilityTimeUsage1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("ability_time_usage_1");
+
+                entity.Property(e => e.AbilityTimeUsage2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("ability_time_usage_2");
+
                 entity.Property(e => e.AbilityType11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_1_1");
 
                 entity.Property(e => e.AbilityType12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_1_2");
 
                 entity.Property(e => e.AbilityType13)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_1_3");
 
                 entity.Property(e => e.AbilityType21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_2_1");
 
                 entity.Property(e => e.AbilityType22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_2_2");
 
                 entity.Property(e => e.AbilityType23)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_2_3");
 
                 entity.Property(e => e.AbilityValueLevelUsage11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_value_level_usage_1_1");
 
                 entity.Property(e => e.AbilityValueLevelUsage12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_value_level_usage_1_2");
 
                 entity.Property(e => e.AbilityValueLevelUsage13)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_value_level_usage_1_3");
 
                 entity.Property(e => e.AbilityValueLevelUsage21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_value_level_usage_2_1");
 
                 entity.Property(e => e.AbilityValueLevelUsage22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_value_level_usage_2_2");
 
                 entity.Property(e => e.AbilityValueLevelUsage23)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_value_level_usage_2_3");
 
                 entity.Property(e => e.AbilityValueUsage11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_value_usage_1_1");
 
                 entity.Property(e => e.AbilityValueUsage12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_value_usage_1_2");
 
                 entity.Property(e => e.AbilityValueUsage13)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_value_usage_1_3");
 
                 entity.Property(e => e.AbilityValueUsage21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_value_usage_2_1");
 
                 entity.Property(e => e.AbilityValueUsage22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_value_usage_2_2");
 
                 entity.Property(e => e.AbilityValueUsage23)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_value_usage_2_3");
 
                 entity.Property(e => e.ActivateLot)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("activate_lot");
 
                 entity.Property(e => e.Condition1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("condition_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("condition_1");
 
                 entity.Property(e => e.Condition2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("condition_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("condition_2");
 
                 entity.Property(e => e.DisableSinglemode)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disable_singlemode");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("end_date");
+
                 entity.Property(e => e.ExpType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("exp_type");
 
                 entity.Property(e => e.FilterSwitch)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("filter_switch");
 
                 entity.Property(e => e.FloatAbilityTime1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_time_1");
 
                 entity.Property(e => e.FloatAbilityTime2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_time_2");
 
                 entity.Property(e => e.FloatAbilityValue11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_1_1");
 
                 entity.Property(e => e.FloatAbilityValue12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_1_2");
 
                 entity.Property(e => e.FloatAbilityValue13)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_1_3");
 
                 entity.Property(e => e.FloatAbilityValue21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_2_1");
 
                 entity.Property(e => e.FloatAbilityValue22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_2_2");
 
                 entity.Property(e => e.FloatAbilityValue23)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_2_3");
 
                 entity.Property(e => e.FloatCooldownTime1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_cooldown_time_1");
 
                 entity.Property(e => e.FloatCooldownTime2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_cooldown_time_2");
 
                 entity.Property(e => e.GradeValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade_value");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.GroupRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_rate");
 
                 entity.Property(e => e.IconId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("icon_id");
 
                 entity.Property(e => e.PlateType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("plate_type");
 
                 entity.Property(e => e.PopularityAddParam1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity_add_param_1");
 
                 entity.Property(e => e.PopularityAddParam2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity_add_param_2");
 
                 entity.Property(e => e.PopularityAddValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity_add_value_1");
 
                 entity.Property(e => e.PopularityAddValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity_add_value_2");
 
                 entity.Property(e => e.PotentialPerDefault)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("potential_per_default");
 
+                entity.Property(e => e.Precondition1)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("precondition_1");
+
+                entity.Property(e => e.Precondition2)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("precondition_2");
+
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
 
                 entity.Property(e => e.SkillCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_category");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
 
                 entity.Property(e => e.TagId)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tag_id")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tag_id");
 
                 entity.Property(e => e.TargetType11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type_1_1");
 
                 entity.Property(e => e.TargetType12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type_1_2");
 
                 entity.Property(e => e.TargetType13)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type_1_3");
 
                 entity.Property(e => e.TargetType21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type_2_1");
 
                 entity.Property(e => e.TargetType22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type_2_2");
 
                 entity.Property(e => e.TargetType23)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type_2_3");
 
                 entity.Property(e => e.TargetValue11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_value_1_1");
 
                 entity.Property(e => e.TargetValue12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_value_1_2");
 
                 entity.Property(e => e.TargetValue13)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_value_1_3");
 
                 entity.Property(e => e.TargetValue21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_value_2_1");
 
                 entity.Property(e => e.TargetValue22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_value_2_2");
 
                 entity.Property(e => e.TargetValue23)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_value_2_3");
 
                 entity.Property(e => e.UniqueSkillId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("unique_skill_id_1");
 
                 entity.Property(e => e.UniqueSkillId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("unique_skill_id_2");
             });
 
@@ -11956,15 +12077,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Level)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("level");
 
                 entity.Property(e => e.Scale)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scale");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
             });
 
@@ -11980,15 +12101,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AbilityType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type");
 
                 entity.Property(e => e.FloatAbilityValueCoef)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_coef");
 
                 entity.Property(e => e.Level)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("level");
             });
 
@@ -12002,7 +12123,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Value)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value");
             });
 
@@ -12016,83 +12137,83 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.SkillId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_id1");
 
                 entity.Property(e => e.SkillId10)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_id10");
 
                 entity.Property(e => e.SkillId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_id2");
 
                 entity.Property(e => e.SkillId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_id3");
 
                 entity.Property(e => e.SkillId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_id4");
 
                 entity.Property(e => e.SkillId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_id5");
 
                 entity.Property(e => e.SkillId6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_id6");
 
                 entity.Property(e => e.SkillId7)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_id7");
 
                 entity.Property(e => e.SkillId8)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_id8");
 
                 entity.Property(e => e.SkillId9)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_id9");
 
                 entity.Property(e => e.SkillLevel1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_level1");
 
                 entity.Property(e => e.SkillLevel10)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_level10");
 
                 entity.Property(e => e.SkillLevel2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_level2");
 
                 entity.Property(e => e.SkillLevel3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_level3");
 
                 entity.Property(e => e.SkillLevel4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_level4");
 
                 entity.Property(e => e.SkillLevel5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_level5");
 
                 entity.Property(e => e.SkillLevel6)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_level6");
 
                 entity.Property(e => e.SkillLevel7)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_level7");
 
                 entity.Property(e => e.SkillLevel8)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_level8");
 
                 entity.Property(e => e.SkillLevel9)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_level9");
             });
 
@@ -12108,23 +12229,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
                 entity.Property(e => e.LineNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("line_num");
 
                 entity.Property(e => e.RewardSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_set_id");
             });
 
@@ -12134,7 +12255,7 @@ namespace UmaMusumeAPI.Context
 
                 entity.HasIndex(e => e.StoryEventId, "story_event_bonus_card_0_story_event_id");
 
-                entity.HasIndex(e => new { e.StoryEventId, e.CharaId, e.CardId }, "story_event_bonus_card_sqlite_autoindex_1")
+                entity.HasIndex(e => new { e.StoryEventId, e.CharaId, e.CardId }, "story_event_id")
                     .IsUnique();
 
                 entity.Property(e => e.Id)
@@ -12143,43 +12264,43 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.Rarity1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity_1");
 
                 entity.Property(e => e.Rarity2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity_2");
 
                 entity.Property(e => e.Rarity3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity_3");
 
                 entity.Property(e => e.Rarity4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity_4");
 
                 entity.Property(e => e.Rarity5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity_5");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
             });
 
@@ -12189,7 +12310,7 @@ namespace UmaMusumeAPI.Context
 
                 entity.HasIndex(e => e.StoryEventId, "story_event_bonus_support_card_0_story_event_id");
 
-                entity.HasIndex(e => new { e.StoryEventId, e.CharaId, e.Rarity, e.SupportCardId }, "story_event_bonus_support_card_sqlite_autoindex_1")
+                entity.HasIndex(e => new { e.StoryEventId, e.CharaId, e.Rarity, e.SupportCardId }, "story_event_id")
                     .IsUnique();
 
                 entity.Property(e => e.Id)
@@ -12198,47 +12319,47 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.Limit0)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_0");
 
                 entity.Property(e => e.Limit1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_1");
 
                 entity.Property(e => e.Limit2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_2");
 
                 entity.Property(e => e.Limit3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_3");
 
                 entity.Property(e => e.Limit4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_4");
 
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
 
                 entity.Property(e => e.SupportCardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_card_id");
             });
 
@@ -12254,28 +12375,40 @@ namespace UmaMusumeAPI.Context
                     .ValueGeneratedNever()
                     .HasColumnName("story_event_id");
 
+                entity.Property(e => e.AnnounceId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("announce_id");
+
+                entity.Property(e => e.BonusRewardRatio)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bonus_reward_ratio");
+
+                entity.Property(e => e.ConsumeTpRatio)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("consume_tp_ratio");
+
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.EndingDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ending_date");
 
                 entity.Property(e => e.MiddleDate01)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("middle_date_01");
 
                 entity.Property(e => e.MiddleDate02)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("middle_date_02");
 
                 entity.Property(e => e.NoticeDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("notice_date");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -12291,63 +12424,71 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ConditionNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_num");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_1");
 
                 entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_2");
 
                 entity.Property(e => e.ConditionValue3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_3");
 
                 entity.Property(e => e.ConditionValue4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_4");
 
+                entity.Property(e => e.DateCheckFlg)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("date_check_flg");
+
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
                 entity.Property(e => e.MissionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mission_type");
 
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
+
                 entity.Property(e => e.StepGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("step_group_id");
 
                 entity.Property(e => e.StepOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("step_order");
 
                 entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
 
                 entity.Property(e => e.TransitionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("transition_type");
             });
 
@@ -12365,49 +12506,45 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.BgmCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name");
 
                 entity.Property(e => e.BgmCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name");
 
                 entity.Property(e => e.CharacterId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("character_id");
 
                 entity.Property(e => e.DressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_id");
 
                 entity.Property(e => e.EndingFlag)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ending_flag");
 
                 entity.Property(e => e.EnvCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("env_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("env_cue_name");
 
                 entity.Property(e => e.EnvCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("env_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("env_cuesheet_name");
 
                 entity.Property(e => e.MenuBgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("menu_bg_id");
 
                 entity.Property(e => e.MenuBgSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("menu_bg_sub_id");
 
                 entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
             });
 
@@ -12415,10 +12552,10 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("story_event_nickname_bonus");
 
-                entity.HasIndex(e => e.StoryEventId, "story_event_nickname_bonus_0_story_event_id");
-
-                entity.HasIndex(e => new { e.StoryEventId, e.NicknameRank }, "story_event_nickname_bonus_sqlite_autoindex_1")
+                entity.HasIndex(e => new { e.StoryEventId, e.NicknameRank }, "story_event_id")
                     .IsUnique();
+
+                entity.HasIndex(e => e.StoryEventId, "story_event_nickname_bonus_0_story_event_id");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -12426,15 +12563,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BonusPoint)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_point");
 
                 entity.Property(e => e.NicknameRank)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("nickname_rank");
 
                 entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
             });
 
@@ -12450,23 +12587,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
                 entity.Property(e => e.Point)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("point");
 
                 entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
             });
 
@@ -12474,10 +12611,10 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("story_event_roulette_bingo");
 
-                entity.HasIndex(e => e.StoryEventId, "story_event_roulette_bingo_0_story_event_id");
-
-                entity.HasIndex(e => new { e.RouletteId, e.StoryEventId, e.SheetNum }, "story_event_roulette_bingo_sqlite_autoindex_1")
+                entity.HasIndex(e => new { e.RouletteId, e.StoryEventId, e.SheetNum }, "roulette_id")
                     .IsUnique();
+
+                entity.HasIndex(e => e.StoryEventId, "story_event_roulette_bingo_0_story_event_id");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -12485,59 +12622,59 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CanLoop)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("can_loop");
 
                 entity.Property(e => e.CharacterId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("character_id");
 
                 entity.Property(e => e.DressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.ResetLine)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reset_line");
 
                 entity.Property(e => e.RewardSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_set_id");
 
                 entity.Property(e => e.RouletteId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("roulette_id");
 
                 entity.Property(e => e.RouletteMaxNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("roulette_max_num");
 
                 entity.Property(e => e.SheetNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sheet_num");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
 
                 entity.Property(e => e.UseItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_item_category");
 
                 entity.Property(e => e.UseItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_item_id");
 
                 entity.Property(e => e.UseItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_item_num");
             });
 
@@ -12547,81 +12684,96 @@ namespace UmaMusumeAPI.Context
 
                 entity.HasIndex(e => e.StoryEventId, "story_event_story_data_0_story_event_id");
 
+                entity.HasIndex(e => new { e.StoryEventId, e.EpisodeIndexId }, "story_event_story_data_0_story_event_id_1_episode_index_id")
+                    .IsUnique();
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.AddRewardCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_category_1");
 
+                entity.Property(e => e.AddRewardCategory2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("add_reward_category_2");
+
                 entity.Property(e => e.AddRewardId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_id_1");
 
+                entity.Property(e => e.AddRewardId2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("add_reward_id_2");
+
                 entity.Property(e => e.AddRewardNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_num_1");
 
+                entity.Property(e => e.AddRewardNum2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("add_reward_num_2");
+
                 entity.Property(e => e.EpisodeIndexId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("episode_index_id");
 
                 entity.Property(e => e.NeedPoint)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("need_point");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.StoryConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_condition_type");
 
                 entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
 
                 entity.Property(e => e.StoryId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_1");
 
                 entity.Property(e => e.StoryId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_2");
 
                 entity.Property(e => e.StoryId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_3");
 
                 entity.Property(e => e.StoryId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_4");
 
                 entity.Property(e => e.StoryId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_5");
 
                 entity.Property(e => e.StoryType1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_1");
 
                 entity.Property(e => e.StoryType2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_2");
 
                 entity.Property(e => e.StoryType3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_3");
 
                 entity.Property(e => e.StoryType4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_4");
 
                 entity.Property(e => e.StoryType5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_5");
             });
 
@@ -12639,57 +12791,53 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.BgmCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cue_name");
 
                 entity.Property(e => e.BgmCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("bgm_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("bgm_cuesheet_name");
 
                 entity.Property(e => e.CharacterId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("character_id");
 
                 entity.Property(e => e.DressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_id");
 
                 entity.Property(e => e.EndingFlag)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ending_flag");
 
                 entity.Property(e => e.EnvCueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("env_cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("env_cue_name");
 
                 entity.Property(e => e.EnvCuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("env_cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("env_cuesheet_name");
 
                 entity.Property(e => e.MaxEpisodeIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_episode_index");
 
                 entity.Property(e => e.MenuBgId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("menu_bg_id");
 
                 entity.Property(e => e.MenuBgSubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("menu_bg_sub_id");
 
                 entity.Property(e => e.MinEpisodeIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("min_episode_index");
 
                 entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
             });
 
@@ -12705,19 +12853,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BonusPoint)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_point");
 
                 entity.Property(e => e.MaxWinCount)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_win_count");
 
                 entity.Property(e => e.MinWinCount)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("min_win_count");
 
                 entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
             });
 
@@ -12734,11 +12882,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("story_extra_id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -12746,93 +12894,95 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("story_extra_story_data");
 
+                entity.HasIndex(e => e.StoryExtraId, "story_extra_story_data_0_story_extra_id");
+
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
                 entity.Property(e => e.AddRewardCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_category_1");
 
                 entity.Property(e => e.AddRewardCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_category_2");
 
                 entity.Property(e => e.AddRewardId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_id_1");
 
                 entity.Property(e => e.AddRewardId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_id_2");
 
                 entity.Property(e => e.AddRewardNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_num_1");
 
                 entity.Property(e => e.AddRewardNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_reward_num_2");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.EpisodeIndexId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("episode_index_id");
 
                 entity.Property(e => e.NoticeEndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("notice_end_date");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.StoryExtraId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_extra_id");
 
                 entity.Property(e => e.StoryId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_1");
 
                 entity.Property(e => e.StoryId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_2");
 
                 entity.Property(e => e.StoryId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_3");
 
                 entity.Property(e => e.StoryId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_4");
 
                 entity.Property(e => e.StoryId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_id_5");
 
                 entity.Property(e => e.StoryType1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_1");
 
                 entity.Property(e => e.StoryType2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_2");
 
                 entity.Property(e => e.StoryType3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_3");
 
                 entity.Property(e => e.StoryType4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_4");
 
                 entity.Property(e => e.StoryType5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_type_5");
             });
 
@@ -12845,15 +12995,15 @@ namespace UmaMusumeAPI.Context
                 entity.ToTable("story_hip_offset");
 
                 entity.Property(e => e.CategoryId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("category_id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.Offset)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("offset");
             });
 
@@ -12871,368 +13021,44 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.CharaType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_type");
 
                 entity.Property(e => e.DressColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_color");
 
                 entity.Property(e => e.DressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_id");
 
                 entity.Property(e => e.MusicId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("music_id");
 
                 entity.Property(e => e.PositionId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("position_id");
 
                 entity.Property(e => e.SecondDressColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("second_dress_color");
 
                 entity.Property(e => e.SecondDressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("second_dress_id");
 
                 entity.Property(e => e.SetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("set_id");
 
                 entity.Property(e => e.VocalCharaId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("vocal_chara_id");
-            });
-
-            modelBuilder.Entity<StoryLiveSet>(entity =>
-            {
-                entity.ToTable("story_live_set");
-
-                entity.HasIndex(e => e.MusicId, "story_live_set_0_music_id");
-
-                entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
-
-                entity.Property(e => e.CharaId1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_1");
-
-                entity.Property(e => e.CharaId10)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_10");
-
-                entity.Property(e => e.CharaId11)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_11");
-
-                entity.Property(e => e.CharaId12)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_12");
-
-                entity.Property(e => e.CharaId13)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_13");
-
-                entity.Property(e => e.CharaId14)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_14");
-
-                entity.Property(e => e.CharaId15)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_15");
-
-                entity.Property(e => e.CharaId16)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_16");
-
-                entity.Property(e => e.CharaId17)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_17");
-
-                entity.Property(e => e.CharaId18)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_18");
-
-                entity.Property(e => e.CharaId2)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_2");
-
-                entity.Property(e => e.CharaId3)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_3");
-
-                entity.Property(e => e.CharaId4)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_4");
-
-                entity.Property(e => e.CharaId5)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_5");
-
-                entity.Property(e => e.CharaId6)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_6");
-
-                entity.Property(e => e.CharaId7)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_7");
-
-                entity.Property(e => e.CharaId8)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_8");
-
-                entity.Property(e => e.CharaId9)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_id_9");
-
-                entity.Property(e => e.CharaType1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_1");
-
-                entity.Property(e => e.CharaType10)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_10");
-
-                entity.Property(e => e.CharaType11)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_11");
-
-                entity.Property(e => e.CharaType12)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_12");
-
-                entity.Property(e => e.CharaType13)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_13");
-
-                entity.Property(e => e.CharaType14)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_14");
-
-                entity.Property(e => e.CharaType15)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_15");
-
-                entity.Property(e => e.CharaType16)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_16");
-
-                entity.Property(e => e.CharaType17)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_17");
-
-                entity.Property(e => e.CharaType18)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_18");
-
-                entity.Property(e => e.CharaType2)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_2");
-
-                entity.Property(e => e.CharaType3)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_3");
-
-                entity.Property(e => e.CharaType4)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_4");
-
-                entity.Property(e => e.CharaType5)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_5");
-
-                entity.Property(e => e.CharaType6)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_6");
-
-                entity.Property(e => e.CharaType7)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_7");
-
-                entity.Property(e => e.CharaType8)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_8");
-
-                entity.Property(e => e.CharaType9)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("chara_type_9");
-
-                entity.Property(e => e.DressColor1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_1");
-
-                entity.Property(e => e.DressColor10)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_10");
-
-                entity.Property(e => e.DressColor11)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_11");
-
-                entity.Property(e => e.DressColor12)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_12");
-
-                entity.Property(e => e.DressColor13)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_13");
-
-                entity.Property(e => e.DressColor14)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_14");
-
-                entity.Property(e => e.DressColor15)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_15");
-
-                entity.Property(e => e.DressColor16)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_16");
-
-                entity.Property(e => e.DressColor17)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_17");
-
-                entity.Property(e => e.DressColor18)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_18");
-
-                entity.Property(e => e.DressColor2)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_2");
-
-                entity.Property(e => e.DressColor3)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_3");
-
-                entity.Property(e => e.DressColor4)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_4");
-
-                entity.Property(e => e.DressColor5)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_5");
-
-                entity.Property(e => e.DressColor6)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_6");
-
-                entity.Property(e => e.DressColor7)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_7");
-
-                entity.Property(e => e.DressColor8)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_8");
-
-                entity.Property(e => e.DressColor9)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_color_9");
-
-                entity.Property(e => e.DressId1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_1");
-
-                entity.Property(e => e.DressId10)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_10");
-
-                entity.Property(e => e.DressId11)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_11");
-
-                entity.Property(e => e.DressId12)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_12");
-
-                entity.Property(e => e.DressId13)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_13");
-
-                entity.Property(e => e.DressId14)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_14");
-
-                entity.Property(e => e.DressId15)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_15");
-
-                entity.Property(e => e.DressId16)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_16");
-
-                entity.Property(e => e.DressId17)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_17");
-
-                entity.Property(e => e.DressId18)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_18");
-
-                entity.Property(e => e.DressId2)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_2");
-
-                entity.Property(e => e.DressId3)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_3");
-
-                entity.Property(e => e.DressId4)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_4");
-
-                entity.Property(e => e.DressId5)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_5");
-
-                entity.Property(e => e.DressId6)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_6");
-
-                entity.Property(e => e.DressId7)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_7");
-
-                entity.Property(e => e.DressId8)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_8");
-
-                entity.Property(e => e.DressId9)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("dress_id_9");
-
-                entity.Property(e => e.MusicId)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("music_id");
-
-                entity.Property(e => e.VocalCharaId1)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("vocal_chara_id_1");
-
-                entity.Property(e => e.VocalCharaId2)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("vocal_chara_id_2");
-
-                entity.Property(e => e.VocalCharaId3)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("vocal_chara_id_3");
-
-                entity.Property(e => e.VocalCharaId4)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("vocal_chara_id_4");
-
-                entity.Property(e => e.VocalCharaId5)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("vocal_chara_id_5");
+                    .HasColumnName("vocal_chara_id");
             });
 
             modelBuilder.Entity<StoryStill>(entity =>
@@ -13247,15 +13073,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.OrderId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("order_id");
 
                 entity.Property(e => e.PageId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("page_id");
 
                 entity.Property(e => e.StillId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("still_id");
             });
 
@@ -13275,24 +13101,32 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("factor_id");
 
                 entity.Property(e => e.EffectGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_group_id");
 
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("end_date");
+
                 entity.Property(e => e.FactorGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("factor_group_id");
 
                 entity.Property(e => e.FactorType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("factor_type");
 
                 entity.Property(e => e.Grade)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade");
 
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
             });
 
             modelBuilder.Entity<SuccessionFactorEffect>(entity =>
@@ -13309,23 +13143,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.EffectId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_id");
 
                 entity.Property(e => e.FactorGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("factor_group_id");
 
                 entity.Property(e => e.TargetType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type");
 
                 entity.Property(e => e.Value1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_1");
 
                 entity.Property(e => e.Value2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_2");
             });
 
@@ -13343,19 +13177,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.AddPoint)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("add_point");
 
                 entity.Property(e => e.FactorType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("factor_type");
 
                 entity.Property(e => e.Value1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_1");
 
                 entity.Property(e => e.Value2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_2");
             });
 
@@ -13372,7 +13206,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("relation_type");
 
                 entity.Property(e => e.RelationPoint)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("relation_point");
             });
 
@@ -13388,11 +13222,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.RelationType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("relation_type");
             });
 
@@ -13409,11 +13243,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("relation_rank");
 
                 entity.Property(e => e.RankValueMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rank_value_max");
 
                 entity.Property(e => e.RankValueMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rank_value_min");
             });
 
@@ -13429,19 +13263,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.RentalNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rental_num");
 
                 entity.Property(e => e.RentalRank)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rental_rank");
 
                 entity.Property(e => e.UseValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_value1");
 
                 entity.Property(e => e.UseValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("use_value2");
             });
 
@@ -13457,55 +13291,67 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.CommandId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_id");
 
                 entity.Property(e => e.CommandType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_type");
 
                 entity.Property(e => e.DetailPosX)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("detail_pos_x");
 
                 entity.Property(e => e.DetailPosY)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("detail_pos_y");
 
                 entity.Property(e => e.DetailRotZ)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("detail_rot_z");
 
                 entity.Property(e => e.DetailScale)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("detail_scale");
 
+                entity.Property(e => e.EffectId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("effect_id");
+
                 entity.Property(e => e.EffectTableId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("effect_table_id");
 
                 entity.Property(e => e.ExchangeItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("exchange_item_id");
 
+                entity.Property(e => e.OutingMax)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("outing_max");
+
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
 
                 entity.Property(e => e.SkillSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_set_id");
 
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
+
                 entity.Property(e => e.SupportCardType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_card_type");
 
                 entity.Property(e => e.UniqueEffectId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("unique_effect_id");
             });
 
@@ -13528,47 +13374,47 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("type");
 
                 entity.Property(e => e.Init)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("init");
 
                 entity.Property(e => e.LimitLv10)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_lv10");
 
                 entity.Property(e => e.LimitLv15)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_lv15");
 
                 entity.Property(e => e.LimitLv20)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_lv20");
 
                 entity.Property(e => e.LimitLv25)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_lv25");
 
                 entity.Property(e => e.LimitLv30)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_lv30");
 
                 entity.Property(e => e.LimitLv35)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_lv35");
 
                 entity.Property(e => e.LimitLv40)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_lv40");
 
                 entity.Property(e => e.LimitLv45)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_lv45");
 
                 entity.Property(e => e.LimitLv5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_lv5");
 
                 entity.Property(e => e.LimitLv50)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_lv50");
             });
 
@@ -13586,15 +13432,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.OutingMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("outing_max");
 
                 entity.Property(e => e.SupportCardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_card_id");
             });
 
@@ -13602,10 +13448,10 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("support_card_level");
 
-                entity.HasIndex(e => e.Rarity, "support_card_level_0_rarity");
-
-                entity.HasIndex(e => new { e.Rarity, e.Level }, "support_card_level_sqlite_autoindex_1")
+                entity.HasIndex(e => new { e.Rarity, e.Level }, "rarity")
                     .IsUnique();
+
+                entity.HasIndex(e => e.Rarity, "support_card_level_0_rarity");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -13613,15 +13459,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Level)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("level");
 
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
 
                 entity.Property(e => e.TotalExp)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("total_exp");
             });
 
@@ -13638,23 +13484,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("rarity");
 
                 entity.Property(e => e.Limit0)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_0");
 
                 entity.Property(e => e.Limit1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_1");
 
                 entity.Property(e => e.Limit2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_2");
 
                 entity.Property(e => e.Limit3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_3");
 
                 entity.Property(e => e.Limit4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limit_4");
             });
 
@@ -13668,19 +13514,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
             });
 
@@ -13696,11 +13542,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Level)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("level");
 
                 entity.Property(e => e.ScoreRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("score_rate");
             });
 
@@ -13714,24 +13560,56 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Lv)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lv");
 
                 entity.Property(e => e.Type0)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type_0");
 
                 entity.Property(e => e.Type1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type_1");
 
                 entity.Property(e => e.Value0)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_0");
 
+                entity.Property(e => e.Value01)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("value_0_1");
+
+                entity.Property(e => e.Value02)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("value_0_2");
+
+                entity.Property(e => e.Value03)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("value_0_3");
+
+                entity.Property(e => e.Value04)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("value_0_4");
+
                 entity.Property(e => e.Value1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_1");
+
+                entity.Property(e => e.Value11)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("value_1_1");
+
+                entity.Property(e => e.Value12)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("value_1_2");
+
+                entity.Property(e => e.Value13)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("value_1_3");
+
+                entity.Property(e => e.Value14)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("value_1_4");
             });
 
             modelBuilder.Entity<TeamStadium>(entity =>
@@ -13744,76 +13622,68 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CalcEndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("calc_end_date");
 
                 entity.Property(e => e.CalcEndTime)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("calc_end_time")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("calc_end_time");
 
                 entity.Property(e => e.CalcStartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("calc_start_date");
 
                 entity.Property(e => e.CalcStartTime)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("calc_start_time")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("calc_start_time");
 
                 entity.Property(e => e.EndDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("end_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("end_date");
 
                 entity.Property(e => e.IntervalEndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("interval_end_date");
 
                 entity.Property(e => e.IntervalEndTime)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("interval_end_time")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("interval_end_time");
 
                 entity.Property(e => e.IntervalStartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("interval_start_date");
 
                 entity.Property(e => e.IntervalStartTime)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("interval_start_time")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("interval_start_time");
 
                 entity.Property(e => e.RaceEndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_end_date");
 
                 entity.Property(e => e.RaceEndTime)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("race_end_time")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("race_end_time");
 
                 entity.Property(e => e.RaceStartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_start_date");
 
                 entity.Property(e => e.RaceStartTime)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("race_start_time")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("race_start_time");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
             });
 
             modelBuilder.Entity<TeamStadiumBgm>(entity =>
@@ -13830,21 +13700,19 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.CueName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("cue_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("cue_name");
 
                 entity.Property(e => e.CuesheetName)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("cuesheet_name")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("cuesheet_name");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.SceneType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scene_type");
             });
 
@@ -13860,23 +13728,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ClassDownRange)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("class_down_range");
 
                 entity.Property(e => e.ClassUpRange)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("class_up_range");
 
                 entity.Property(e => e.TeamClass)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("team_class");
 
                 entity.Property(e => e.TeamStadiumId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("team_stadium_id");
 
                 entity.Property(e => e.UnitMaxNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("unit_max_num");
             });
 
@@ -13892,75 +13760,75 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ClassRewardType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("class_reward_type");
 
                 entity.Property(e => e.ItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_1");
 
                 entity.Property(e => e.ItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_2");
 
                 entity.Property(e => e.ItemCategory3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_3");
 
                 entity.Property(e => e.ItemCategory4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_4");
 
                 entity.Property(e => e.ItemCategory5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_5");
 
                 entity.Property(e => e.ItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_1");
 
                 entity.Property(e => e.ItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_2");
 
                 entity.Property(e => e.ItemId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_3");
 
                 entity.Property(e => e.ItemId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_4");
 
                 entity.Property(e => e.ItemId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_5");
 
                 entity.Property(e => e.ItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_1");
 
                 entity.Property(e => e.ItemNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_2");
 
                 entity.Property(e => e.ItemNum3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_3");
 
                 entity.Property(e => e.ItemNum4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_4");
 
                 entity.Property(e => e.ItemNum5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_5");
 
                 entity.Property(e => e.TeamClass)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("team_class");
 
                 entity.Property(e => e.TeamStadiumId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("team_stadium_id");
             });
 
@@ -13981,11 +13849,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("proper_rank");
 
                 entity.Property(e => e.Id)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("id");
 
                 entity.Property(e => e.Rate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rate");
             });
 
@@ -13998,83 +13866,83 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => e.CharacterId, "team_stadium_race_result_motion_0_character_id");
 
                 entity.Property(e => e.CharacterId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("character_id");
 
                 entity.Property(e => e.Draw1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("draw_1");
 
                 entity.Property(e => e.Draw2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("draw_2");
 
                 entity.Property(e => e.Draw3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("draw_3");
 
                 entity.Property(e => e.Draw4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("draw_4");
 
                 entity.Property(e => e.Draw5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("draw_5");
 
                 entity.Property(e => e.Lose1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lose_1");
 
                 entity.Property(e => e.Lose2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lose_2");
 
                 entity.Property(e => e.Lose3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lose_3");
 
                 entity.Property(e => e.Lose4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lose_4");
 
                 entity.Property(e => e.Lose5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lose_5");
 
                 entity.Property(e => e.PositionY)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("position_y");
 
                 entity.Property(e => e.Win1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_1");
 
                 entity.Property(e => e.Win2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_2");
 
                 entity.Property(e => e.Win2PositionY)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_2_position_y");
 
                 entity.Property(e => e.Win3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_3");
 
                 entity.Property(e => e.Win3PositionY)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_3_position_y");
 
                 entity.Property(e => e.Win4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_4");
 
                 entity.Property(e => e.Win4PositionY)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_4_position_y");
 
                 entity.Property(e => e.Win5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_5");
             });
 
@@ -14088,31 +13956,31 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
                 entity.Property(e => e.TeamMaxValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("team_max_value");
 
                 entity.Property(e => e.TeamMinValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("team_min_value");
 
                 entity.Property(e => e.TeamRank)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("team_rank");
 
                 entity.Property(e => e.TeamRankGroup)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("team_rank_group");
             });
 
@@ -14120,9 +13988,9 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("team_stadium_raw_score");
 
-                entity.HasIndex(e => e.RaceScoreNameId, "team_stadium_raw_score_0_race_score_name_id");
+                entity.HasIndex(e => e.ConditionType, "team_stadium_raw_score_0_condition_type");
 
-                entity.HasIndex(e => e.ConditionType, "team_stadium_raw_score_team_stadium_raw_score_0_condition_type");
+                entity.HasIndex(e => e.RaceScoreNameId, "team_stadium_raw_score_0_race_score_name_id");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -14130,31 +13998,31 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_1");
 
                 entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_2");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.RaceScoreNameId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_score_name_id");
 
                 entity.Property(e => e.Score)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("score");
 
                 entity.Property(e => e.SortOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sort_order");
             });
 
@@ -14170,23 +14038,23 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_1");
 
                 entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_2");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.ScoreRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("score_rate");
             });
 
@@ -14199,31 +14067,31 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => new { e.CharacterId, e.Type }, "team_stadium_stand_motion_0_character_id_1_type");
 
                 entity.Property(e => e.CharacterId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("character_id");
 
                 entity.Property(e => e.MotionSet)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("motion_set");
 
                 entity.Property(e => e.Position)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("position");
 
                 entity.Property(e => e.PositionX)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("position_x");
 
                 entity.Property(e => e.RaceDressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_dress_id");
 
                 entity.Property(e => e.Rotation)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rotation");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
             });
 
@@ -14239,42 +14107,16 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.MaxBonus)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("max_bonus");
 
                 entity.Property(e => e.MinBonus)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("min_bonus");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
-            });
-
-            modelBuilder.Entity<TextData>(entity =>
-            {
-                entity.HasKey(e => new { e.Category, e.Index })
-                    .HasName("PRIMARY")
-                    .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
-
-                entity.ToTable("text_data");
-
-                entity.Property(e => e.Category)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("category");
-
-                entity.Property(e => e.Index)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("index");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("bigint(20)")
-                    .HasColumnName("id");
-
-                entity.Property(e => e.Text)
-                    .IsRequired()
-                    .HasColumnType("text")
-                    .HasColumnName("text");
             });
 
             modelBuilder.Entity<TextDataEnglish>(entity =>
@@ -14299,6 +14141,32 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("translation");
             });
 
+            modelBuilder.Entity<TextData>(entity =>
+            {
+                entity.HasKey(e => new { e.Category, e.Index })
+                    .HasName("PRIMARY")
+                    .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+
+                entity.ToTable("text_data");
+
+                entity.Property(e => e.Category)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("category");
+
+                entity.Property(e => e.Index)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("index");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Text)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("text");
+            });
+
             modelBuilder.Entity<TimezoneData>(entity =>
             {
                 entity.HasKey(e => e.Timezone)
@@ -14314,18 +14182,16 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.EndHour)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("end_hour")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("end_hour");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.StartHour)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_hour")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_hour");
             });
 
             modelBuilder.Entity<Topic>(entity =>
@@ -14340,21 +14206,20 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.Index)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("index");
 
                 entity.Property(e => e.StartDate)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("start_date")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("start_date");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
 
                 entity.Property(e => e.Value)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value");
             });
 
@@ -14371,19 +14236,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.TradeItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trade_item_category");
 
                 entity.Property(e => e.TradeItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trade_item_id");
 
                 entity.Property(e => e.TradeItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trade_item_num");
 
                 entity.Property(e => e.TrainedCharaRank)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trained_chara_rank");
             });
 
@@ -14397,95 +14262,95 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.ExellentScore)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("exellent_score");
 
                 entity.Property(e => e.ExellentScoreRewardCoin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("exellent_score_reward_coin");
 
                 entity.Property(e => e.FeatureType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("feature_type");
 
                 entity.Property(e => e.GoodScore)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("good_score");
 
                 entity.Property(e => e.GoodScoreRewardCoin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("good_score_reward_coin");
 
                 entity.Property(e => e.GreatScore)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("great_score");
 
                 entity.Property(e => e.GreatScoreRewardCoin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("great_score_reward_coin");
 
                 entity.Property(e => e.ItemCategory1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_1");
 
                 entity.Property(e => e.ItemCategory2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_2");
 
                 entity.Property(e => e.ItemCategory3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_3");
 
                 entity.Property(e => e.ItemCategory4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_4");
 
                 entity.Property(e => e.ItemCategory5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category_5");
 
                 entity.Property(e => e.ItemId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_1");
 
                 entity.Property(e => e.ItemId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_2");
 
                 entity.Property(e => e.ItemId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_3");
 
                 entity.Property(e => e.ItemId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_4");
 
                 entity.Property(e => e.ItemId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id_5");
 
                 entity.Property(e => e.ItemNum1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_1");
 
                 entity.Property(e => e.ItemNum2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_2");
 
                 entity.Property(e => e.ItemNum3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_3");
 
                 entity.Property(e => e.ItemNum4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_4");
 
                 entity.Property(e => e.ItemNum5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num_5");
 
                 entity.Property(e => e.ScoreGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("score_group_id");
             });
 
@@ -14499,55 +14364,55 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.EndResultDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_result_date");
 
                 entity.Property(e => e.ExExamId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ex_exam_id");
 
                 entity.Property(e => e.ExamId1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("exam_id_1");
 
                 entity.Property(e => e.ExamId2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("exam_id_2");
 
                 entity.Property(e => e.ExamId3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("exam_id_3");
 
                 entity.Property(e => e.ExamId4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("exam_id_4");
 
                 entity.Property(e => e.ExamId5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("exam_id_5");
 
                 entity.Property(e => e.FreeExamId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("free_exam_id");
 
                 entity.Property(e => e.ShopId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("shop_id");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.StartResultDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_result_date");
 
                 entity.Property(e => e.TargetMainScenario)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_main_scenario");
             });
 
@@ -14563,27 +14428,27 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.BonusScore)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bonus_score");
 
                 entity.Property(e => e.Data)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("data");
 
                 entity.Property(e => e.DispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("disp_order");
 
                 entity.Property(e => e.RewardCoin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_coin");
 
                 entity.Property(e => e.ScoreGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("score_group_id");
 
                 entity.Property(e => e.ScoreType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("score_type");
             });
 
@@ -14597,11 +14462,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.RewardCoin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_coin");
 
                 entity.Property(e => e.TotalScore)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("total_score");
             });
 
@@ -14617,31 +14482,31 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.CharaNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_num");
 
                 entity.Property(e => e.CommandId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_id");
 
                 entity.Property(e => e.PropTarget)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("prop_target");
 
                 entity.Property(e => e.SubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sub_id");
 
                 entity.Property(e => e.TargetListIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_list_index");
 
                 entity.Property(e => e.TargetTimeline)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_timeline");
             });
 
@@ -14654,31 +14519,31 @@ namespace UmaMusumeAPI.Context
                 entity.HasIndex(e => new { e.CommandId, e.SubId }, "training_cutt_data_0_command_id_1_sub_id");
 
                 entity.Property(e => e.CharaNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_num");
 
                 entity.Property(e => e.CommandId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("command_id");
 
                 entity.Property(e => e.CuttIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cutt_index");
 
                 entity.Property(e => e.SubId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sub_id");
 
                 entity.Property(e => e.SuccessFlg)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("success_flg");
 
                 entity.Property(e => e.TargetCharaIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_chara_index");
 
                 entity.Property(e => e.TargetValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_value");
             });
 
@@ -14695,15 +14560,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("transfer_event_id");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.PreStartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("pre_start_date");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
             });
 
@@ -14714,97 +14579,99 @@ namespace UmaMusumeAPI.Context
 
                 entity.ToTable("transfer_event_detail");
 
+                entity.HasIndex(e => e.TransferEventId, "transfer_event_detail_0_transfer_event_id");
+
                 entity.Property(e => e.TransferDetailId)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("transfer_detail_id");
 
                 entity.Property(e => e.Condition1Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition1_type");
 
                 entity.Property(e => e.Condition1Value1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition1_value1");
 
                 entity.Property(e => e.Condition1Value2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition1_value2");
 
                 entity.Property(e => e.Condition2Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition2_type");
 
                 entity.Property(e => e.Condition2Value1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition2_value1");
 
                 entity.Property(e => e.Condition2Value2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition2_value2");
 
                 entity.Property(e => e.Condition3Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition3_type");
 
                 entity.Property(e => e.Condition3Value1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition3_value1");
 
                 entity.Property(e => e.Condition3Value2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition3_value2");
 
                 entity.Property(e => e.Condition4Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition4_type");
 
                 entity.Property(e => e.Condition4Value1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition4_value1");
 
                 entity.Property(e => e.Condition4Value2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition4_value2");
 
                 entity.Property(e => e.Condition5Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition5_type");
 
                 entity.Property(e => e.Condition5Value1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition5_value1");
 
                 entity.Property(e => e.Condition5Value2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition5_value2");
 
                 entity.Property(e => e.CoolTime)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cool_time");
 
                 entity.Property(e => e.Difficulty)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("difficulty");
 
                 entity.Property(e => e.EndDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.LimitedType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limited_type");
 
                 entity.Property(e => e.StartDate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.TrainerType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("trainer_type");
 
                 entity.Property(e => e.TransferEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("transfer_event_id");
             });
 
@@ -14815,33 +14682,35 @@ namespace UmaMusumeAPI.Context
 
                 entity.ToTable("transfer_event_reward");
 
+                entity.HasIndex(e => e.TransferDetailId, "transfer_event_reward_0_transfer_detail_id");
+
                 entity.Property(e => e.TransferRewardId)
                     .HasColumnType("int(11)")
                     .ValueGeneratedNever()
                     .HasColumnName("transfer_reward_id");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
                 entity.Property(e => e.Odds)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("odds");
 
                 entity.Property(e => e.RewardRank)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("reward_rank");
 
                 entity.Property(e => e.TransferDetailId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("transfer_detail_id");
             });
 
@@ -14860,20 +14729,18 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("id");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.ImageIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("image_index");
 
                 entity.Property(e => e.PageIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("page_index");
             });
-            #endregion
 
-            #region Views
             modelBuilder.Entity<BasicCardDataInfo>(entity =>
             {
                 entity.HasNoKey();
@@ -14902,35 +14769,35 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("card_title_english");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.DefaultRarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("default_rarity");
 
                 entity.Property(e => e.LimitedChara)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limited_chara");
 
                 entity.Property(e => e.TalentGuts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_guts");
 
                 entity.Property(e => e.TalentPow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_pow");
 
                 entity.Property(e => e.TalentSpeed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_speed");
 
                 entity.Property(e => e.TalentStamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_stamina");
 
                 entity.Property(e => e.TalentWiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_wiz");
             });
 
@@ -14982,20 +14849,18 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_dress_data_info");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.DressColorMain)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("dress_color_main")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("dress_color_main");
 
                 entity.Property(e => e.DressColorSub)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("dress_color_sub")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("dress_color_sub");
 
                 entity.Property(e => e.DressId)
                     .HasColumnType("int(11)")
@@ -15017,19 +14882,19 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_gacha_data_info");
 
                 entity.Property(e => e.CardType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_type");
 
                 entity.Property(e => e.CostSingle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cost_single");
 
                 entity.Property(e => e.CostType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("cost_type");
 
                 entity.Property(e => e.DailyPayCost)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("daily_pay_cost");
 
                 entity.Property(e => e.EndDate)
@@ -15058,7 +14923,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("gacha_text_english");
 
                 entity.Property(e => e.OnlyOnceFlag)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("only_once_flag");
 
                 entity.Property(e => e.StartDate)
@@ -15097,11 +14962,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
@@ -15118,7 +14983,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("item_name_english");
 
                 entity.Property(e => e.ItemPlaceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_place_id");
 
                 entity.Property(e => e.StartDate)
@@ -15149,7 +15014,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("item_exchange_id");
 
                 entity.Property(e => e.ItemExchangeTopId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_exchange_top_id");
 
                 entity.Property(e => e.StartDate)
@@ -15173,7 +15038,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("item_exchange_description_english");
 
                 entity.Property(e => e.ItemExchangeDispOrder)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_exchange_disp_order");
 
                 entity.Property(e => e.ItemExchangeName)
@@ -15225,7 +15090,7 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_login_bonus_data_info");
 
                 entity.Property(e => e.CountNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("count_num");
 
                 entity.Property(e => e.EndDate)
@@ -15250,7 +15115,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.Type)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type");
             });
 
@@ -15261,7 +15126,7 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_main_story_data_info");
 
                 entity.Property(e => e.EpisodeIndex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("episode_index");
 
                 entity.Property(e => e.MainStoryEpisodeTitle)
@@ -15278,11 +15143,11 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("main_story_id");
 
                 entity.Property(e => e.PartId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("part_id");
 
                 entity.Property(e => e.StoryNumber)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_number");
             });
 
@@ -15310,7 +15175,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("mission_name_english");
 
                 entity.Property(e => e.MissionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mission_type");
 
                 entity.Property(e => e.StartDate)
@@ -15325,23 +15190,23 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_mob_data_info");
 
                 entity.Property(e => e.CharaFaceModel)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_face_model");
 
                 entity.Property(e => e.CharaHairColor)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_hair_color");
 
                 entity.Property(e => e.CharaHairModel)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_hair_model");
 
                 entity.Property(e => e.DressColorId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_color_id");
 
                 entity.Property(e => e.DressId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("dress_id");
 
                 entity.Property(e => e.MobId)
@@ -15378,7 +15243,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("end_date");
 
                 entity.Property(e => e.ItemPlaceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_place_id");
 
                 entity.Property(e => e.PieceId)
@@ -15397,7 +15262,7 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_race_info");
 
                 entity.Property(e => e.RaceCourseSet)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_course_set");
 
                 entity.Property(e => e.RaceId)
@@ -15421,7 +15286,7 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_race_instance_info");
 
                 entity.Property(e => e.RaceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_id");
 
                 entity.Property(e => e.RaceInstanceId)
@@ -15465,11 +15330,11 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_single_mode_chara_grade_info");
 
                 entity.Property(e => e.NeedFanCount)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("need_fan_count");
 
                 entity.Property(e => e.RunNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("run_num");
 
                 entity.Property(e => e.SingleModeCharaGradeId)
@@ -15486,7 +15351,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("single_mode_chara_grade_name_english");
 
                 entity.Property(e => e.WinNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("win_num");
             });
 
@@ -15499,25 +15364,23 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Condition1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("condition_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("condition_1");
 
                 entity.Property(e => e.Condition2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("condition_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("condition_2");
 
                 entity.Property(e => e.GroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group_id");
 
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
 
                 entity.Property(e => e.SkillCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_category");
 
                 entity.Property(e => e.SkillDesc)
@@ -15594,27 +15457,27 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_story_event_mission_info");
 
                 entity.Property(e => e.ItemCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_category");
 
                 entity.Property(e => e.ItemId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_id");
 
                 entity.Property(e => e.ItemNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
                 entity.Property(e => e.MissionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mission_type");
 
                 entity.Property(e => e.StepGroupId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("step_group_id");
 
                 entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
 
                 entity.Property(e => e.StoryEventMissionId)
@@ -15638,28 +15501,28 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_story_event_story_data_info");
 
                 entity.Property(e => e.EpisodeIndexId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("episode_index_id");
 
                 entity.Property(e => e.NeedPoint)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("need_point");
 
                 entity.Property(e => e.StartDate)
                     .HasColumnType("datetime")
                     .HasColumnName("start_date");
 
-                entity.Property(e => e.StoryEventEpisodeTitleEnglish)
-                    .HasColumnType("text")
-                    .HasColumnName("story_event_episode_title_english");
-
                 entity.Property(e => e.StoryEventEpisodeTitle)
                     .IsRequired()
                     .HasColumnType("text")
                     .HasColumnName("story_event_episode_title");
 
+                entity.Property(e => e.StoryEventEpisodeTitleEnglish)
+                    .HasColumnType("text")
+                    .HasColumnName("story_event_episode_title_english");
+
                 entity.Property(e => e.StoryEventId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
 
                 entity.Property(e => e.StoryEventStoryId)
@@ -15674,11 +15537,11 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_support_card_data_info");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
 
                 entity.Property(e => e.SupportCardId)
@@ -15711,7 +15574,7 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_support_card_unique_effect_info");
 
                 entity.Property(e => e.Lv)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("lv");
 
                 entity.Property(e => e.ScoreBonusName)
@@ -15728,19 +15591,19 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("support_card_unique_effect_id");
 
                 entity.Property(e => e.Type0)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type_0");
 
                 entity.Property(e => e.Type1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("type_1");
 
                 entity.Property(e => e.Value0)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_0");
 
                 entity.Property(e => e.Value1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("value_1");
             });
 
@@ -15751,19 +15614,19 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_basic_team_stadium_score_bonus_info");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_1");
 
                 entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_2");
 
                 entity.Property(e => e.Priority)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("priority");
 
                 entity.Property(e => e.ScoreBonusName)
@@ -15776,7 +15639,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("score_bonus_name_english");
 
                 entity.Property(e => e.ScoreRate)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("score_rate");
 
                 entity.Property(e => e.TeamStadiumScoreBonusId)
@@ -15795,7 +15658,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("category");
 
                 entity.Property(e => e.Id)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("id");
 
                 entity.Property(e => e.Index)
@@ -15819,27 +15682,27 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_condensed_skill_data_info");
 
                 entity.Property(e => e.AbilityType11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_1_1");
 
                 entity.Property(e => e.AbilityType12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_1_2");
 
                 entity.Property(e => e.AbilityType13)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_1_3");
 
                 entity.Property(e => e.AbilityType21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_2_1");
 
                 entity.Property(e => e.AbilityType22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_2_2");
 
                 entity.Property(e => e.AbilityType23)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_2_3");
 
                 entity.Property(e => e.CardIds)
@@ -15849,81 +15712,79 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Condition1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("condition_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("condition_1");
 
                 entity.Property(e => e.Condition2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("condition_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("condition_2");
 
                 entity.Property(e => e.FloatAbilityTime1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_time_1");
 
                 entity.Property(e => e.FloatAbilityTime2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_time_2");
 
                 entity.Property(e => e.FloatAbilityValue11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_1_1");
 
                 entity.Property(e => e.FloatAbilityValue12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_1_2");
 
                 entity.Property(e => e.FloatAbilityValue13)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_1_3");
 
                 entity.Property(e => e.FloatAbilityValue21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_2_1");
 
                 entity.Property(e => e.FloatAbilityValue22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_2_2");
 
                 entity.Property(e => e.FloatAbilityValue23)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_2_3");
 
                 entity.Property(e => e.GradeValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade_value");
 
                 entity.Property(e => e.IconId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("icon_id");
 
                 entity.Property(e => e.NeedSkillPoint)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("need_skill_point");
 
                 entity.Property(e => e.PopularityAddParam1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity_add_param_1");
 
                 entity.Property(e => e.PopularityAddParam2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity_add_param_2");
 
                 entity.Property(e => e.PopularityAddValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity_add_value_1");
 
                 entity.Property(e => e.PopularityAddValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity_add_value_2");
 
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
 
                 entity.Property(e => e.SkillCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_category");
 
                 entity.Property(e => e.SkillDesc)
@@ -15955,8 +15816,7 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.TagId)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tag_id")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tag_id");
             });
 
             modelBuilder.Entity<NiceErrorMessage>(entity =>
@@ -15966,7 +15826,7 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_error_messages");
 
                 entity.Property(e => e.ErrorId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("error_id");
 
                 entity.Property(e => e.ErrorIndex)
@@ -15990,43 +15850,43 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_nice_card_data_info");
 
                 entity.Property(e => e.AptitudeBetweener)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("aptitude_betweener");
 
                 entity.Property(e => e.AptitudeChaser)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("aptitude_chaser");
 
                 entity.Property(e => e.AptitudeDirt)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("aptitude_dirt");
 
                 entity.Property(e => e.AptitudeLeader)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("aptitude_leader");
 
                 entity.Property(e => e.AptitudeLong)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("aptitude_long");
 
                 entity.Property(e => e.AptitudeMiddle)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("aptitude_middle");
 
                 entity.Property(e => e.AptitudeMile)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("aptitude_mile");
 
                 entity.Property(e => e.AptitudeRunner)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("aptitude_runner");
 
                 entity.Property(e => e.AptitudeShort)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("aptitude_short");
 
                 entity.Property(e => e.AptitudeTurf)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("aptitude_turf");
 
                 entity.Property(e => e.CardId)
@@ -16034,135 +15894,135 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("card_id");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.DefaultRarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("default_rarity");
 
                 entity.Property(e => e.Guts1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts1");
 
                 entity.Property(e => e.Guts2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts2");
 
                 entity.Property(e => e.Guts3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts3");
 
                 entity.Property(e => e.Guts4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts4");
 
                 entity.Property(e => e.Guts5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("guts5");
 
                 entity.Property(e => e.LimitedChara)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("limited_chara");
 
                 entity.Property(e => e.Power1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("power1");
 
                 entity.Property(e => e.Power2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("power2");
 
                 entity.Property(e => e.Power3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("power3");
 
                 entity.Property(e => e.Power4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("power4");
 
                 entity.Property(e => e.Power5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("power5");
 
                 entity.Property(e => e.Speed1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed1");
 
                 entity.Property(e => e.Speed2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed2");
 
                 entity.Property(e => e.Speed3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed3");
 
                 entity.Property(e => e.Speed4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed4");
 
                 entity.Property(e => e.Speed5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("speed5");
 
                 entity.Property(e => e.Stamina1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina1");
 
                 entity.Property(e => e.Stamina2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina2");
 
                 entity.Property(e => e.Stamina3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina3");
 
                 entity.Property(e => e.Stamina4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina4");
 
                 entity.Property(e => e.Stamina5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("stamina5");
 
                 entity.Property(e => e.TalentGuts)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_guts");
 
                 entity.Property(e => e.TalentPow)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_pow");
 
                 entity.Property(e => e.TalentSpeed)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_speed");
 
                 entity.Property(e => e.TalentStamina)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_stamina");
 
                 entity.Property(e => e.TalentWiz)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("talent_wiz");
 
                 entity.Property(e => e.Wisdom1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wisdom1");
 
                 entity.Property(e => e.Wisdom2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wisdom2");
 
                 entity.Property(e => e.Wisdom3)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wisdom3");
 
                 entity.Property(e => e.Wisdom4)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wisdom4");
 
                 entity.Property(e => e.Wisdom5)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("wisdom5");
             });
 
@@ -16173,27 +16033,27 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_nice_chara_bio_info");
 
                 entity.Property(e => e.AttachmentModelId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("attachment_model_id");
 
                 entity.Property(e => e.BirthDay)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("birth_day");
 
                 entity.Property(e => e.BirthMonth)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("birth_month");
 
                 entity.Property(e => e.BirthYear)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("birth_year");
 
                 entity.Property(e => e.Bust)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("bust");
 
                 entity.Property(e => e.CharaCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_category");
 
                 entity.Property(e => e.CharaId)
@@ -16201,59 +16061,57 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.EarRandomTimeMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ear_random_time_max");
 
                 entity.Property(e => e.EarRandomTimeMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ear_random_time_min");
 
                 entity.Property(e => e.Height)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("height");
 
                 entity.Property(e => e.ImageColorMain)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("image_color_main")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("image_color_main");
 
                 entity.Property(e => e.ImageColorSub)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("image_color_sub")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("image_color_sub");
 
                 entity.Property(e => e.MiniMayuShaderType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("mini_mayu_shader_type");
 
                 entity.Property(e => e.PersonalDress)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("personal_dress");
 
                 entity.Property(e => e.RaceRunningType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_running_type");
 
                 entity.Property(e => e.Scale)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("scale");
 
                 entity.Property(e => e.Sex)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sex");
 
                 entity.Property(e => e.Shape)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("shape");
 
                 entity.Property(e => e.Skin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skin");
 
                 entity.Property(e => e.Socks)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("socks");
 
                 entity.Property(e => e.StartDate)
@@ -16261,125 +16119,110 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("start_date");
 
                 entity.Property(e => e.StoryEarRandomTimeMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_ear_random_time_max");
 
                 entity.Property(e => e.StoryEarRandomTimeMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_ear_random_time_min");
 
                 entity.Property(e => e.StoryTailRandomTimeMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_tail_random_time_max");
 
                 entity.Property(e => e.StoryTailRandomTimeMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("story_tail_random_time_min");
 
                 entity.Property(e => e.TailModelId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tail_model_id");
 
                 entity.Property(e => e.TailRandomTimeMax)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tail_random_time_max");
 
                 entity.Property(e => e.TailRandomTimeMin)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tail_random_time_min");
 
                 entity.Property(e => e.UiBorderColor)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_border_color")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_border_color");
 
                 entity.Property(e => e.UiColorMain)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_color_main")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_color_main");
 
                 entity.Property(e => e.UiColorSub)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_color_sub")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_color_sub");
 
                 entity.Property(e => e.UiNameplateColor1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_nameplate_color_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_nameplate_color_1");
 
                 entity.Property(e => e.UiNameplateColor2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_nameplate_color_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_nameplate_color_2");
 
                 entity.Property(e => e.UiNumColor1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_num_color_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_num_color_1");
 
                 entity.Property(e => e.UiNumColor2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_num_color_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_num_color_2");
 
                 entity.Property(e => e.UiSpeechColor1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_speech_color_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_speech_color_1");
 
                 entity.Property(e => e.UiSpeechColor2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_speech_color_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_speech_color_2");
 
                 entity.Property(e => e.UiTrainingColor1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_training_color_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_training_color_1");
 
                 entity.Property(e => e.UiTrainingColor2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_training_color_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_training_color_2");
 
                 entity.Property(e => e.UiTurnColor)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_turn_color")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_turn_color");
 
                 entity.Property(e => e.UiWipeColor1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_wipe_color_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_wipe_color_1");
 
                 entity.Property(e => e.UiWipeColor2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_wipe_color_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_wipe_color_2");
 
                 entity.Property(e => e.UiWipeColor3)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("ui_wipe_color_3")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("ui_wipe_color_3");
 
                 entity.Property(e => e.UraObjectives)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ura_objectives");
             });
 
@@ -16427,39 +16270,39 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_nice_objectives_info");
 
                 entity.Property(e => e.ConditionId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_id");
 
                 entity.Property(e => e.ConditionType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
 
                 entity.Property(e => e.ConditionValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_1");
 
                 entity.Property(e => e.ConditionValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("condition_value_2");
 
                 entity.Property(e => e.DetermineRace)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("determine_race");
 
                 entity.Property(e => e.DetermineRaceFlag)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("determine_race_flag");
 
                 entity.Property(e => e.RaceInstanceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
 
                 entity.Property(e => e.RaceSetId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_set_id");
 
                 entity.Property(e => e.RaceType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_type");
 
                 entity.Property(e => e.RouteId)
@@ -16467,15 +16310,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("route_id");
 
                 entity.Property(e => e.SortId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("sort_id");
 
                 entity.Property(e => e.TargetType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("target_type");
 
                 entity.Property(e => e.Turn)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("turn");
             });
 
@@ -16486,51 +16329,51 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_nice_race_info");
 
                 entity.Property(e => e.Class)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("class");
 
                 entity.Property(e => e.Course)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("course");
 
                 entity.Property(e => e.CourseSet)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("course_set");
 
                 entity.Property(e => e.Direction)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("direction");
 
                 entity.Property(e => e.Distance)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("distance");
 
                 entity.Property(e => e.EntryNum)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("entry_num");
 
                 entity.Property(e => e.FanCount)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("fan_count");
 
                 entity.Property(e => e.Grade)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade");
 
                 entity.Property(e => e.Group)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("group");
 
                 entity.Property(e => e.Half)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("half");
 
                 entity.Property(e => e.Month)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("month");
 
                 entity.Property(e => e.RaceId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_id");
 
                 entity.Property(e => e.RaceInstanceId)
@@ -16538,15 +16381,15 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("race_instance_id");
 
                 entity.Property(e => e.RaceTrackId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("race_track_id");
 
                 entity.Property(e => e.RequiredFans)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("required_fans");
 
                 entity.Property(e => e.Terrain)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("terrain");
             });
 
@@ -16557,111 +16400,109 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_nice_skill_data_info");
 
                 entity.Property(e => e.AbilityType11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_1_1");
 
                 entity.Property(e => e.AbilityType12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_1_2");
 
                 entity.Property(e => e.AbilityType13)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_1_3");
 
                 entity.Property(e => e.AbilityType21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_2_1");
 
                 entity.Property(e => e.AbilityType22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_2_2");
 
                 entity.Property(e => e.AbilityType23)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("ability_type_2_3");
 
                 entity.Property(e => e.CardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("card_id");
 
                 entity.Property(e => e.Condition1)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("condition_1")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("condition_1");
 
                 entity.Property(e => e.Condition2)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("condition_2")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("condition_2");
 
                 entity.Property(e => e.FloatAbilityTime1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_time_1");
 
                 entity.Property(e => e.FloatAbilityTime2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_time_2");
 
                 entity.Property(e => e.FloatAbilityValue11)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_1_1");
 
                 entity.Property(e => e.FloatAbilityValue12)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_1_2");
 
                 entity.Property(e => e.FloatAbilityValue13)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_1_3");
 
                 entity.Property(e => e.FloatAbilityValue21)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_2_1");
 
                 entity.Property(e => e.FloatAbilityValue22)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_2_2");
 
                 entity.Property(e => e.FloatAbilityValue23)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("float_ability_value_2_3");
 
                 entity.Property(e => e.GradeValue)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("grade_value");
 
                 entity.Property(e => e.IconId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("icon_id");
 
                 entity.Property(e => e.NeedSkillPoint)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("need_skill_point");
 
                 entity.Property(e => e.PopularityAddParam1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity_add_param_1");
 
                 entity.Property(e => e.PopularityAddParam2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity_add_param_2");
 
                 entity.Property(e => e.PopularityAddValue1)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity_add_value_1");
 
                 entity.Property(e => e.PopularityAddValue2)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("popularity_add_value_2");
 
                 entity.Property(e => e.Rarity)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("rarity");
 
                 entity.Property(e => e.SkillCategory)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("skill_category");
 
                 entity.Property(e => e.SkillDesc)
@@ -16687,14 +16528,13 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("skill_name_english");
 
                 entity.Property(e => e.SupportCardId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("support_card_id");
 
                 entity.Property(e => e.TagId)
                     .IsRequired()
                     .HasColumnType("text")
-                    .HasColumnName("tag_id")
-                    .UseCollation("utf8mb4_unicode_ci");
+                    .HasColumnName("tag_id");
             });
 
             modelBuilder.Entity<NiceSuccessionRelationMemberType>(entity =>
@@ -16704,15 +16544,15 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_succession_relation_member_types");
 
                 entity.Property(e => e.CharaId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
 
                 entity.Property(e => e.RelationPoint)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("relation_point");
 
                 entity.Property(e => e.RelationType)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("relation_type");
 
                 entity.Property(e => e.SrmId)
@@ -16727,7 +16567,7 @@ namespace UmaMusumeAPI.Context
                 entity.ToView("vw_tutorial_messages");
 
                 entity.Property(e => e.TutorialId)
-                    .HasColumnType("bigint(20)")
+                    .HasColumnType("int(11)")
                     .HasColumnName("tutorial_id");
 
                 entity.Property(e => e.TutorialIndex)
@@ -16743,7 +16583,6 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("text")
                     .HasColumnName("tutorial_text_english");
             });
-            #endregion
 
             OnModelCreatingPartial(modelBuilder);
         }

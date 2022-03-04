@@ -6,18 +6,18 @@ namespace UmaMusumeAPI.Models.Tables
     public class CardData
     {
         public int Id { get; set; }
-        public long CharaId { get; set; }
-        public long DefaultRarity { get; set; }
-        public long LimitedChara { get; set; }
-        public long AvailableSkillSetId { get; set; }
-        public long TalentSpeed { get; set; }
-        public long TalentStamina { get; set; }
-        public long TalentPow { get; set; }
-        public long TalentGuts { get; set; }
-        public long TalentWiz { get; set; }
-        public long TalentGroupId { get; set; }
-        public long BgId { get; set; }
-        public long GetPieceId { get; set; }
-        public long RunningStyle { get; set; }
+        public int CharaId { get; set; }
+        public int DefaultRarity { get; set; }
+        public int LimitedChara { get; set; }
+        public int AvailableSkillSetId { get; set; }
+        public int TalentSpeed { get; set; }
+        public int TalentStamina { get; set; }
+        public int TalentPow { get; set; }
+        public int TalentGuts { get; set; }
+        public int TalentWiz { get; set; }
+        public int TalentGroupId { get; set; }
+        public int BgId { get; set; }
+        public int GetPieceId { get; set; }
+        public int RunningStyle { get; set; }
     }
 }

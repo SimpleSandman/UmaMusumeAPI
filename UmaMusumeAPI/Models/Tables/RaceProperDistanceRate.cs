@@ -6,7 +6,7 @@ namespace UmaMusumeAPI.Models.Tables
     public class RaceProperDistanceRate
     {
         public int Id { get; set; }
-        public long ProperRateSpeed { get; set; }
-        public long ProperRatePower { get; set; }
+        public int ProperRateSpeed { get; set; }
+        public int ProperRatePower { get; set; }
     }
 }

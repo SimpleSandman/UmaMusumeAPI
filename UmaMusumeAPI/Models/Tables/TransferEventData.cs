@@ -3,8 +3,8 @@
     public class TransferEventData
     {
         public int TransferEventId { get; set; }
-        public long PreStartDate { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
+        public int PreStartDate { get; set; }
+        public int StartDate { get; set; }
+        public int EndDate { get; set; }
     }
 }

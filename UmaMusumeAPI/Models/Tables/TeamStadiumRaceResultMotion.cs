@@ -2,25 +2,25 @@
 {
     public class TeamStadiumRaceResultMotion
     {
-        public long CharacterId { get; set; }
-        public long Win1 { get; set; }
-        public long Win2 { get; set; }
-        public long Win2PositionY { get; set; }
-        public long Win3 { get; set; }
-        public long Win3PositionY { get; set; }
-        public long Win4 { get; set; }
-        public long Win4PositionY { get; set; }
-        public long Win5 { get; set; }
-        public long Lose1 { get; set; }
-        public long Lose2 { get; set; }
-        public long Lose3 { get; set; }
-        public long Lose4 { get; set; }
-        public long Lose5 { get; set; }
-        public long Draw1 { get; set; }
-        public long Draw2 { get; set; }
-        public long Draw3 { get; set; }
-        public long Draw4 { get; set; }
-        public long Draw5 { get; set; }
-        public long PositionY { get; set; }
+        public int CharacterId { get; set; }
+        public int Win1 { get; set; }
+        public int Win2 { get; set; }
+        public int Win2PositionY { get; set; }
+        public int Win3 { get; set; }
+        public int Win3PositionY { get; set; }
+        public int Win4 { get; set; }
+        public int Win4PositionY { get; set; }
+        public int Win5 { get; set; }
+        public int Lose1 { get; set; }
+        public int Lose2 { get; set; }
+        public int Lose3 { get; set; }
+        public int Lose4 { get; set; }
+        public int Lose5 { get; set; }
+        public int Draw1 { get; set; }
+        public int Draw2 { get; set; }
+        public int Draw3 { get; set; }
+        public int Draw4 { get; set; }
+        public int Draw5 { get; set; }
+        public int PositionY { get; set; }
     }
 }

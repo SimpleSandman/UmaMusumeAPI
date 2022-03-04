@@ -6,8 +6,8 @@ namespace UmaMusumeAPI.Models.Tables
     public class CircleStampData
     {
         public int Id { get; set; }
-        public long DispOrder { get; set; }
+        public int DispOrder { get; set; }
         public string StartDate { get; set; }
-        public long Type { get; set; }
+        public int Type { get; set; }
     }
 }

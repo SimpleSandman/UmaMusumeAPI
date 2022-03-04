@@ -6,13 +6,13 @@ namespace UmaMusumeAPI.Models.Tables
     public class CircleRankData
     {
         public int Id { get; set; }
-        public long NeedRankingMax { get; set; }
-        public long NeedRankingMin { get; set; }
-        public long RewardItemCategory1 { get; set; }
-        public long RewardItemId1 { get; set; }
-        public long RewardNum1 { get; set; }
-        public long RewardItemCategory2 { get; set; }
-        public long RewardItemId2 { get; set; }
-        public long RewardNum2 { get; set; }
+        public int NeedRankingMax { get; set; }
+        public int NeedRankingMin { get; set; }
+        public int RewardItemCategory1 { get; set; }
+        public int RewardItemId1 { get; set; }
+        public int RewardNum1 { get; set; }
+        public int RewardItemCategory2 { get; set; }
+        public int RewardItemId2 { get; set; }
+        public int RewardNum2 { get; set; }
     }
 }

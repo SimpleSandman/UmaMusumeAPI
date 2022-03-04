@@ -6,12 +6,12 @@ namespace UmaMusumeAPI.Models.Tables
     public class TrainingCuttCharaData
     {
         public int Id { get; set; }
-        public long CommandId { get; set; }
-        public long SubId { get; set; }
-        public long CharaNum { get; set; }
-        public long CharaId { get; set; }
-        public long TargetTimeline { get; set; }
-        public long TargetListIndex { get; set; }
-        public long PropTarget { get; set; }
+        public int CommandId { get; set; }
+        public int SubId { get; set; }
+        public int CharaNum { get; set; }
+        public int CharaId { get; set; }
+        public int TargetTimeline { get; set; }
+        public int TargetListIndex { get; set; }
+        public int PropTarget { get; set; }
     }
 }

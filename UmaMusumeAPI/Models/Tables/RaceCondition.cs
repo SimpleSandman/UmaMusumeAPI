@@ -6,9 +6,9 @@ namespace UmaMusumeAPI.Models.Tables
     public class RaceCondition
     {
         public int Id { get; set; }
-        public long Season { get; set; }
-        public long Weather { get; set; }
-        public long Ground { get; set; }
-        public long Rate { get; set; }
+        public int Season { get; set; }
+        public int Weather { get; set; }
+        public int Ground { get; set; }
+        public int Rate { get; set; }
     }
 }

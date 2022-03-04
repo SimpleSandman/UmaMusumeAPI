@@ -3,8 +3,8 @@
     public class NiceSuccessionRelationMemberType
     {
         public int SrmId { get; set; }
-        public long CharaId { get; set; }
-        public long RelationType { get; set; }
-        public long RelationPoint { get; set; }
+        public int CharaId { get; set; }
+        public int RelationType { get; set; }
+        public int RelationPoint { get; set; }
     }
 }

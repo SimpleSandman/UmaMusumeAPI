@@ -7,6 +7,6 @@ namespace UmaMusumeAPI.Models.Tables
     {
         public int Id { get; set; }
         public int CharaId { get; set; }
-        public long CharaMotionSetId { get; set; }
+        public int CharaMotionSetId { get; set; }
     }
 }

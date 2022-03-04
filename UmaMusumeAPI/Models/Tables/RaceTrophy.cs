@@ -6,12 +6,12 @@ namespace UmaMusumeAPI.Models.Tables
     public class RaceTrophy
     {
         public int Id { get; set; }
-        public long TrophyId { get; set; }
-        public long RaceInstanceId { get; set; }
-        public long OriginalFlag { get; set; }
-        public long DispOrder { get; set; }
-        public long Size { get; set; }
-        public long EventType { get; set; }
+        public int TrophyId { get; set; }
+        public int RaceInstanceId { get; set; }
+        public int OriginalFlag { get; set; }
+        public int DispOrder { get; set; }
+        public int Size { get; set; }
+        public int EventType { get; set; }
         public string StartDate { get; set; }
         public string DisplayEndDate { get; set; }
     }

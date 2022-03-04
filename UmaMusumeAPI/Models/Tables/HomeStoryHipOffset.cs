@@ -5,11 +5,11 @@ namespace UmaMusumeAPI.Models.Tables
     [GeneratedController]
     public class HomeStoryHipOffset
     {
-        public long Id { get; set; }
-        public long HomeEventType { get; set; }
-        public long Num { get; set; }
-        public long StoryId { get; set; }
-        public long CharaId { get; set; }
-        public long Offset { get; set; }
+        public int Id { get; set; }
+        public int HomeEventType { get; set; }
+        public int Num { get; set; }
+        public int StoryId { get; set; }
+        public int CharaId { get; set; }
+        public int Offset { get; set; }
     }
 }

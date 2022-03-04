@@ -6,10 +6,10 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeScenarioRecord
     {
         public int Id { get; set; }
-        public long ScenarioId { get; set; }
-        public long NeedRecordMin { get; set; }
-        public long RewardItemCategory { get; set; }
-        public long RewardItemId { get; set; }
-        public long RewardNum { get; set; }
+        public int ScenarioId { get; set; }
+        public int NeedRecordMin { get; set; }
+        public int RewardItemCategory { get; set; }
+        public int RewardItemId { get; set; }
+        public int RewardNum { get; set; }
     }
 }

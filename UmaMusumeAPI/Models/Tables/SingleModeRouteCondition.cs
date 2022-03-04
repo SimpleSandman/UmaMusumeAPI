@@ -3,9 +3,9 @@
     public class SingleModeRouteCondition
     {
         public int Id { get; set; }
-        public long ConditionSetId { get; set; }
-        public long ConditionType1 { get; set; }
-        public long ConditionValue1 { get; set; }
-        public long ConditionValue2 { get; set; }
+        public int ConditionSetId { get; set; }
+        public int ConditionType1 { get; set; }
+        public int ConditionValue1 { get; set; }
+        public int ConditionValue2 { get; set; }
     }
 }

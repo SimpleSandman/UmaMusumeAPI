@@ -6,23 +6,26 @@ namespace UmaMusumeAPI.Models.Tables
     public class StoryEventStoryData
     {
         public int Id { get; set; }
-        public long StoryEventId { get; set; }
-        public long EpisodeIndexId { get; set; }
-        public long StoryConditionType { get; set; }
-        public long StoryType1 { get; set; }
-        public long StoryId1 { get; set; }
-        public long StoryType2 { get; set; }
-        public long StoryId2 { get; set; }
-        public long StoryType3 { get; set; }
-        public long StoryId3 { get; set; }
-        public long StoryType4 { get; set; }
-        public long StoryId4 { get; set; }
-        public long StoryType5 { get; set; }
-        public long StoryId5 { get; set; }
-        public long NeedPoint { get; set; }
-        public long AddRewardCategory1 { get; set; }
-        public long AddRewardId1 { get; set; }
-        public long AddRewardNum1 { get; set; }
-        public long StartDate { get; set; }
+        public int StoryEventId { get; set; }
+        public int EpisodeIndexId { get; set; }
+        public int StoryConditionType { get; set; }
+        public int StoryType1 { get; set; }
+        public int StoryId1 { get; set; }
+        public int StoryType2 { get; set; }
+        public int StoryId2 { get; set; }
+        public int StoryType3 { get; set; }
+        public int StoryId3 { get; set; }
+        public int StoryType4 { get; set; }
+        public int StoryId4 { get; set; }
+        public int StoryType5 { get; set; }
+        public int StoryId5 { get; set; }
+        public int NeedPoint { get; set; }
+        public int AddRewardCategory1 { get; set; }
+        public int AddRewardId1 { get; set; }
+        public int AddRewardNum1 { get; set; }
+        public int AddRewardCategory2 { get; set; }
+        public int AddRewardId2 { get; set; }
+        public int AddRewardNum2 { get; set; }
+        public int StartDate { get; set; }
     }
 }

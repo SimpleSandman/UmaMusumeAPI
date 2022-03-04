@@ -6,9 +6,9 @@ namespace UmaMusumeAPI.Models.Tables
     public class GachaFreeCampaign
     {
         public int Id { get; set; }
-        public long GachaId { get; set; }
-        public long TargetDrawType { get; set; }
-        public long StartDate { get; set; }
-        public long EndDate { get; set; }
+        public int GachaId { get; set; }
+        public int TargetDrawType { get; set; }
+        public int StartDate { get; set; }
+        public int EndDate { get; set; }
     }
 }

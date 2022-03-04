@@ -3,7 +3,7 @@
     public class SuccessionRelationRank
     {
         public int RelationRank { get; set; }
-        public long RankValueMin { get; set; }
-        public long RankValueMax { get; set; }
+        public int RankValueMin { get; set; }
+        public int RankValueMax { get; set; }
     }
 }

@@ -5,10 +5,10 @@ namespace UmaMusumeAPI.Models.Views
     public class NiceCharaBioInfo
     {
         public int CharaId { get; set; }
-        public long BirthYear { get; set; }
-        public long BirthMonth { get; set; }
-        public long BirthDay { get; set; }
-        public long Sex { get; set; }
+        public int BirthYear { get; set; }
+        public int BirthMonth { get; set; }
+        public int BirthDay { get; set; }
+        public int Sex { get; set; }
         public string ImageColorMain { get; set; }
         public string ImageColorSub { get; set; }
         public string UiColorMain { get; set; }
@@ -26,27 +26,27 @@ namespace UmaMusumeAPI.Models.Views
         public string UiSpeechColor2 { get; set; }
         public string UiNameplateColor1 { get; set; }
         public string UiNameplateColor2 { get; set; }
-        public long Height { get; set; }
-        public long Bust { get; set; }
-        public long Scale { get; set; }
-        public long Skin { get; set; }
-        public long Shape { get; set; }
-        public long Socks { get; set; }
-        public long PersonalDress { get; set; }
-        public long TailModelId { get; set; }
-        public long RaceRunningType { get; set; }
-        public long EarRandomTimeMin { get; set; }
-        public long EarRandomTimeMax { get; set; }
-        public long TailRandomTimeMin { get; set; }
-        public long TailRandomTimeMax { get; set; }
-        public long StoryEarRandomTimeMin { get; set; }
-        public long StoryEarRandomTimeMax { get; set; }
-        public long StoryTailRandomTimeMin { get; set; }
-        public long StoryTailRandomTimeMax { get; set; }
-        public long AttachmentModelId { get; set; }
-        public long MiniMayuShaderType { get; set; }
+        public int Height { get; set; }
+        public int Bust { get; set; }
+        public int Scale { get; set; }
+        public int Skin { get; set; }
+        public int Shape { get; set; }
+        public int Socks { get; set; }
+        public int PersonalDress { get; set; }
+        public int TailModelId { get; set; }
+        public int RaceRunningType { get; set; }
+        public int EarRandomTimeMin { get; set; }
+        public int EarRandomTimeMax { get; set; }
+        public int TailRandomTimeMin { get; set; }
+        public int TailRandomTimeMax { get; set; }
+        public int StoryEarRandomTimeMin { get; set; }
+        public int StoryEarRandomTimeMax { get; set; }
+        public int StoryTailRandomTimeMin { get; set; }
+        public int StoryTailRandomTimeMax { get; set; }
+        public int AttachmentModelId { get; set; }
+        public int MiniMayuShaderType { get; set; }
         public DateTime? StartDate { get; set; }
-        public long CharaCategory { get; set; }
+        public int CharaCategory { get; set; }
         public long? UraObjectives { get; set; }
     }
 }

@@ -4,6 +4,6 @@
     {
         public int PosId { get; set; }
         public int OriginalPersonality { get; set; }
-        public long ChangePersonality { get; set; }
+        public int ChangePersonality { get; set; }
     }
 }

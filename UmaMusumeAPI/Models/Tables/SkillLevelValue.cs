@@ -6,8 +6,8 @@ namespace UmaMusumeAPI.Models.Tables
     public class SkillLevelValue
     {
         public int Id { get; set; }
-        public long AbilityType { get; set; }
-        public long Level { get; set; }
-        public long FloatAbilityValueCoef { get; set; }
+        public int AbilityType { get; set; }
+        public int Level { get; set; }
+        public int FloatAbilityValueCoef { get; set; }
     }
 }

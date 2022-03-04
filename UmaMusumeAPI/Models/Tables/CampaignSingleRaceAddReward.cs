@@ -6,11 +6,11 @@ namespace UmaMusumeAPI.Models.Tables
     public class CampaignSingleRaceAddReward
     {
         public int Id { get; set; }
-        public long RaceAdditionalRewardId { get; set; }
-        public long ItemCategory { get; set; }
-        public long ItemId { get; set; }
-        public long RewardType { get; set; }
-        public long RewardValue { get; set; }
-        public long RewardRate { get; set; }
+        public int RaceAdditionalRewardId { get; set; }
+        public int ItemCategory { get; set; }
+        public int ItemId { get; set; }
+        public int RewardType { get; set; }
+        public int RewardValue { get; set; }
+        public int RewardRate { get; set; }
     }
 }

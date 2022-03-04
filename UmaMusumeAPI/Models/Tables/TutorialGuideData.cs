@@ -6,8 +6,8 @@ namespace UmaMusumeAPI.Models.Tables
     public class TutorialGuideData
     {
         public int Id { get; set; }
-        public long GroupId { get; set; }
-        public long PageIndex { get; set; }
-        public long ImageIndex { get; set; }
+        public int GroupId { get; set; }
+        public int PageIndex { get; set; }
+        public int ImageIndex { get; set; }
     }
 }

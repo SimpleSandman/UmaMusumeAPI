@@ -6,7 +6,7 @@ namespace UmaMusumeAPI.Models.Tables
     public class LoveRank
     {
         public int Id { get; set; }
-        public long Rank { get; set; }
-        public long TotalPoint { get; set; }
+        public int Rank { get; set; }
+        public int TotalPoint { get; set; }
     }
 }

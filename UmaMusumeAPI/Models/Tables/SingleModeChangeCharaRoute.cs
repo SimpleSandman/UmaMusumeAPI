@@ -6,8 +6,8 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeChangeCharaRoute
     {
         public int Id { get; set; }
-        public long RouteRaceGroupId { get; set; }
-        public long CharaId { get; set; }
-        public long RouteRaceId { get; set; }
+        public int RouteRaceGroupId { get; set; }
+        public int CharaId { get; set; }
+        public int RouteRaceId { get; set; }
     }
 }

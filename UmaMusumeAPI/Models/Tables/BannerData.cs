@@ -6,12 +6,12 @@ namespace UmaMusumeAPI.Models.Tables
     public class BannerData
     {
         public int Id { get; set; }
-        public long BannerId { get; set; }
-        public long Type { get; set; }
-        public long GroupId { get; set; }
-        public long Transition { get; set; }
-        public long Priority { get; set; }
-        public long ConditionValue { get; set; }
+        public int BannerId { get; set; }
+        public int Type { get; set; }
+        public int GroupId { get; set; }
+        public int Transition { get; set; }
+        public int Priority { get; set; }
+        public int ConditionValue { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
     }

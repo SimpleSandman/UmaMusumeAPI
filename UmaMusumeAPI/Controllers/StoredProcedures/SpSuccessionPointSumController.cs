@@ -57,14 +57,14 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
 
                         return new SpSuccessionPointSum
                         {
-                            Parent1Child = (long)dr["parent1_child"],
-                            GrandparentAParent1 = (long)dr["grandparentA_parent1"],
-                            GrandparentBParent1 = (long)dr["grandparentB_parent1"],
-                            Parent2Child = (long)dr["parent2_child"],
-                            GrandparentAParent2 = (long)dr["grandparentA_parent2"],
-                            GrandparentBParent2 = (long)dr["grandparentB_parent2"],
-                            Parent1Parent2 = (long)dr["parent1_parent2"],
-                            PointSum = (long)dr["point_sum"]
+                            Parent1Child = (int)dr["parent1_child"],
+                            GrandparentAParent1 = (int)dr["grandparentA_parent1"],
+                            GrandparentBParent1 = (int)dr["grandparentB_parent1"],
+                            Parent2Child = (int)dr["parent2_child"],
+                            GrandparentAParent2 = (int)dr["grandparentA_parent2"],
+                            GrandparentBParent2 = (int)dr["grandparentB_parent2"],
+                            Parent1Parent2 = (int)dr["parent1_parent2"],
+                            PointSum = (int)dr["point_sum"]
                         };
                     }
                 }

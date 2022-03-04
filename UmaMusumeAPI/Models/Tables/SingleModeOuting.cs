@@ -6,8 +6,8 @@ namespace UmaMusumeAPI.Models.Tables
     public class SingleModeOuting
     {
         public int Id { get; set; }
-        public long CommandGroupId { get; set; }
-        public long Condition { get; set; }
-        public long IsPlayCutt { get; set; }
+        public int CommandGroupId { get; set; }
+        public int Condition { get; set; }
+        public int IsPlayCutt { get; set; }
     }
 }
