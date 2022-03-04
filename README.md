@@ -24,7 +24,7 @@ The stored procedures are:
 
 ## Translation Endpoint
 
-I've created the `TextDataEnglish` [endpoint](https://www.tracenacademy.com/api/TextDataEnglish) by importing [FabulousCupcake's translation repo](https://github.com/FabulousCupcake/umamusume-db-translate/tree/master/src/data) that holds `.csv` files of translated data based on the original `text_data` table.
+I've created the `TextDataEnglish` [endpoint](https://www.tracenacademy.com/api/TextDataEnglish) by importing [Noccu's fork of FabulousCupcake's translation repo](https://github.com/noccu/umamusume-db-translate/tree/playtest/src/data) that holds `.csv` files of translated data based on the original `text_data` table.
 
 In addition, I've created multiple `Basic` endpoints for `TextDataEnglish` that could help with indexing or basic text searching. The most interesting endpoint is the POST request that searches Japanese AND English text.
 
