@@ -389,6 +389,7 @@ namespace UmaMusumeAPI.Context
                 .HasNoKey();
             #endregion
 
+            #region Tables
             modelBuilder.Entity<AnnounceCharacter>(entity =>
             {
                 entity.ToTable("announce_character");
@@ -14740,7 +14741,9 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("int(11)")
                     .HasColumnName("page_index");
             });
+            #endregion
 
+            #region Views
             modelBuilder.Entity<BasicCardDataInfo>(entity =>
             {
                 entity.HasNoKey();
@@ -16583,6 +16586,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("text")
                     .HasColumnName("tutorial_text_english");
             });
+            #endregion
 
             OnModelCreatingPartial(modelBuilder);
         }
