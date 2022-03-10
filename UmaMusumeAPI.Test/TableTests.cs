@@ -11,20 +11,20 @@ using Xunit;
 namespace UmaMusumeAPI.Test
 {
     /// <summary>
-    /// Testing every actual database table from the API
+    /// Test every actual database table from the API
     /// </summary>
     public class TableTests : IntegrationTest
     {
         public TableTests(WebApplicationFactory<Startup> api) : base(api) { }
 
+        #region GET Tests
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("AnnounceCharacter", false)]
         [InlineData("AnnounceCharacter/101", true)]
         public async Task GetAnnounceCharacter(string endpointUrl, bool hasSingleReturn)
         {
-            object? response = await ReturnResponseAsync<AnnounceCharacter>(endpointUrl, hasSingleReturn);
-            ValidateResponse<AnnounceCharacter>(response, hasSingleReturn);
+            await TestEndpointAsync<AnnounceCharacter>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -33,8 +33,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AnnounceData/30004", true)]
         public async Task GetAnnounceData(string endpointUrl, bool hasSingleReturn)
         {
-            object? response = await ReturnResponseAsync<AnnounceData>(endpointUrl, hasSingleReturn);
-            ValidateResponse<AnnounceData>(response, hasSingleReturn);
+            await TestEndpointAsync<AnnounceData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -43,8 +42,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AnnounceEvent/1", true)]
         public async Task GetAnnounceEvent(string endpointUrl, bool hasSingleReturn)
         {
-            object? response = await ReturnResponseAsync<AnnounceEvent>(endpointUrl, hasSingleReturn);
-            ValidateResponse<AnnounceEvent>(response, hasSingleReturn);
+            await TestEndpointAsync<AnnounceEvent>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -53,8 +51,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AnnounceSupportCard/501", true)]
         public async Task GetAnnounceSupportCard(string endpointUrl, bool hasSingleReturn)
         {
-            object? response = await ReturnResponseAsync<AnnounceSupportCard>(endpointUrl, hasSingleReturn);
-            ValidateResponse<AnnounceSupportCard>(response, hasSingleReturn);
+            await TestEndpointAsync<AnnounceSupportCard>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -63,8 +60,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudienceData/1", true)]
         public async Task GetAudienceData(string endpointUrl, bool hasSingleReturn)
         {
-            object? response = await ReturnResponseAsync<AudienceData>(endpointUrl, hasSingleReturn);
-            ValidateResponse<AudienceData>(response, hasSingleReturn);
+            await TestEndpointAsync<AudienceData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -73,8 +69,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudienceDressColorSet/1", true)]
         public async Task GetAudienceDressColorSet(string endpointUrl, bool hasSingleReturn)
         {
-            object? response = await ReturnResponseAsync<AudienceDressColorSet>(endpointUrl, hasSingleReturn);
-            ValidateResponse<AudienceDressColorSet>(response, hasSingleReturn);
+            await TestEndpointAsync<AudienceDressColorSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -83,8 +78,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudienceHairColorSet/1", true)]
         public async Task GetAudienceHairColorSet(string endpointUrl, bool hasSingleReturn)
         {
-            object? response = await ReturnResponseAsync<AudienceHairColorSet>(endpointUrl, hasSingleReturn);
-            ValidateResponse<AudienceHairColorSet>(response, hasSingleReturn);
+            await TestEndpointAsync<AudienceHairColorSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -93,8 +87,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudienceImpostor/110", false)]
         public async Task GetAudienceImpostor(string endpointUrl, bool hasSingleReturn)
         {
-            object? response = await ReturnResponseAsync<AudienceImpostor>(endpointUrl, hasSingleReturn);
-            ValidateResponse<AudienceImpostor>(response, hasSingleReturn);
+            await TestEndpointAsync<AudienceImpostor>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -103,8 +96,8 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudienceImpostorColorSet/1", false)]
         public async Task GetAudienceImpostorColorSet(string endpointUrl, bool hasSingleReturn)
         {
-            object? response = await ReturnResponseAsync<AudienceImpostorColorSet>(endpointUrl, hasSingleReturn);
-            ValidateResponse<AudienceImpostorColorSet>(response, hasSingleReturn, true);
+            await TestEndpointAsync<AudienceImpostorColorSet>(endpointUrl, hasSingleReturn, true);
         }
+        #endregion
     }
 }
