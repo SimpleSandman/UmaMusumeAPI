@@ -27,7 +27,7 @@ namespace UmaMusumeAPI.Controllers.Tables
             return await _context.FaceTypeData.ToListAsync();
         }
 
-        // GET: api/FaceTypeData/5
+        // GET: api/FaceTypeData/Base
         [HttpGet("{label}")]
         public async Task<ActionResult<FaceTypeData>> GetFaceTypeData(string label)
         {

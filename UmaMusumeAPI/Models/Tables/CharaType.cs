@@ -1,8 +1,5 @@
-﻿using UmaMusumeAPI.Controllers;
-
-namespace UmaMusumeAPI.Models.Tables
+﻿namespace UmaMusumeAPI.Models.Tables
 {
-    [GeneratedController]
     public class CharaType
     {
         public string Id { get; set; }
