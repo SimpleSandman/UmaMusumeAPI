@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -29,10 +30,11 @@ namespace UmaMusumeAPI.Controllers.Tables
 
         // GET: api/SingleModeConclusionSet/5
         [HttpGet("{storyId}")]
-        public async Task<ActionResult<SingleModeConclusionSet>> GetSingleModeConclusionSet(int storyId)
+        public async Task<ActionResult<IEnumerable<SingleModeConclusionSet>>> GetSingleModeConclusionSet(int storyId)
         {
             var singleModeConclusionSet = await _context.SingleModeConclusionSets
-                .SingleOrDefaultAsync(c => c.StoryId == storyId);
+                .Where(c => c.StoryId == storyId)
+                .ToListAsync();
 
             if (singleModeConclusionSet == null)
             {

@@ -3,7 +3,7 @@
 namespace UmaMusumeAPI.Models.Tables
 {
     [GeneratedController]
-    public class SingleModeTagCardPo
+    public class SingleModeTagCardPos
     {
         public int Id { get; set; }
         public int SupportCardId { get; set; }

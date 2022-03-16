@@ -30,11 +30,10 @@ namespace UmaMusumeAPI.Controllers.Tables
 
         // GET: api/SingleModeDifficultyMode/5
         [HttpGet("{difficultyId}")]
-        public async Task<ActionResult<IEnumerable<SingleModeDifficultyMode>>> GetSingleModeDifficultyMode(int difficultyId)
+        public async Task<ActionResult<SingleModeDifficultyMode>> GetSingleModeDifficultyMode(int difficultyId)
         {
             var singleModeDifficultyMode = await _context.SingleModeDifficultyModes
-                .Where(c => c.DifficultyId == difficultyId)
-                .ToListAsync();
+                .SingleOrDefaultAsync(c => c.DifficultyId == difficultyId);
 
             if (singleModeDifficultyMode == null)
             {

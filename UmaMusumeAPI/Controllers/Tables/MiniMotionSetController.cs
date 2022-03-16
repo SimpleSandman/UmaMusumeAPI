@@ -27,7 +27,7 @@ namespace UmaMusumeAPI.Controllers.Tables
             return await _context.MiniMotionSets.ToListAsync();
         }
 
-        // GET: api/MiniMotionSet/5
+        // GET: api/MiniMotionSet/Bit01
         [HttpGet("{label}")]
         public async Task<ActionResult<MiniMotionSet>> GetMiniMotionSet(string label)
         {

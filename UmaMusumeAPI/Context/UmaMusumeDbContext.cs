@@ -244,7 +244,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeSpecialChara> SingleModeSpecialCharas { get; set; }
         public virtual DbSet<SingleModeStoryData> SingleModeStoryData { get; set; }
         public virtual DbSet<SingleModeStoryGuide> SingleModeStoryGuides { get; set; }
-        public virtual DbSet<SingleModeTagCardPo> SingleModeTagCardPos { get; set; }
+        public virtual DbSet<SingleModeTagCardPos> SingleModeTagCardPos { get; set; }
         public virtual DbSet<SingleModeTeamName> SingleModeTeamNames { get; set; }
         public virtual DbSet<SingleModeTopBg> SingleModeTopBgs { get; set; }
         public virtual DbSet<SingleModeTopBgChara> SingleModeTopBgCharas { get; set; }
@@ -275,7 +275,6 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<StoryExtraStoryData> StoryExtraStoryData { get; set; }
         public virtual DbSet<StoryHipOffset> StoryHipOffsets { get; set; }
         public virtual DbSet<StoryLivePosition> StoryLivePositions { get; set; }
-        public virtual DbSet<StoryLiveSet> StoryLiveSets { get; set; }
         public virtual DbSet<StoryStill> StoryStills { get; set; }
         public virtual DbSet<SuccessionFactor> SuccessionFactors { get; set; }
         public virtual DbSet<SuccessionFactorEffect> SuccessionFactorEffects { get; set; }
@@ -11252,7 +11251,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("guide_id");
             });
 
-            modelBuilder.Entity<SingleModeTagCardPo>(entity =>
+            modelBuilder.Entity<SingleModeTagCardPos>(entity =>
             {
                 entity.ToTable("single_mode_tag_card_pos");
 

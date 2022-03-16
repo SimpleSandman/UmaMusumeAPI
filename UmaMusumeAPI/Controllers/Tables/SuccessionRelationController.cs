@@ -28,10 +28,11 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/SuccessionRelation/5
-        [HttpGet("{id}")]
+        [HttpGet("{relationType}")]
         public async Task<ActionResult<SuccessionRelation>> GetSuccessionRelation(int relationType)
         {
-            var successionRelation = await _context.SuccessionRelations.FindAsync(relationType);
+            var successionRelation = await _context.SuccessionRelations
+                .SingleOrDefaultAsync(c => c.RelationType == relationType);
 
             if (successionRelation == null)
             {
