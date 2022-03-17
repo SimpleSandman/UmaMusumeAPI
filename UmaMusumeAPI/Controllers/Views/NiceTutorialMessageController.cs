@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -29,10 +30,11 @@ namespace UmaMusumeAPI.Controllers.Views
 
         // GET: api/NiceTutorialMessage/5
         [HttpGet("{tutorialId}")]
-        public async Task<ActionResult<NiceTutorialMessage>> GetNiceTutorialMessage(int tutorialId)
+        public async Task<ActionResult<IEnumerable<NiceTutorialMessage>>> GetNiceTutorialMessage(int tutorialId)
         {
-            // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
-            var niceTutorialMessage = await _context.NiceTutorialMessages.SingleOrDefaultAsync(c => c.TutorialId == tutorialId);
+            var niceTutorialMessage = await _context.NiceTutorialMessages
+                .Where(c => c.TutorialId == tutorialId)
+                .ToListAsync();
 
             if (niceTutorialMessage == null)
             {

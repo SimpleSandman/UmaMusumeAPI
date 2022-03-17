@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -29,10 +30,11 @@ namespace UmaMusumeAPI.Controllers.Views
 
         // GET: api/BasicGiftMessageInfo/5
         [HttpGet("{giftMessageId}")]
-        public async Task<ActionResult<BasicGiftMessageInfo>> GetBasicGiftMessageInfo(int giftMessageId)
+        public async Task<ActionResult<IEnumerable<BasicGiftMessageInfo>>> GetBasicGiftMessageInfo(int giftMessageId)
         {
-            // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
-            var basicGiftMessageInfo = await _context.BasicGiftMessageInfos.SingleOrDefaultAsync(c => c.GiftMessageId == giftMessageId);
+            var basicGiftMessageInfo = await _context.BasicGiftMessageInfos
+                .Where(c => c.GiftMessageId == giftMessageId)
+                .ToListAsync();
 
             if (basicGiftMessageInfo == null)
             {

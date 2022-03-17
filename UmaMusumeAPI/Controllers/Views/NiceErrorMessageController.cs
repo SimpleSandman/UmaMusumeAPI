@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -29,10 +30,11 @@ namespace UmaMusumeAPI.Controllers.Views
 
         // GET: api/NiceErrorMessage/5
         [HttpGet("{errorId}")]
-        public async Task<ActionResult<NiceErrorMessage>> GetNiceErrorMessage(int errorId)
+        public async Task<ActionResult<IEnumerable<NiceErrorMessage>>> GetNiceErrorMessage(int errorId)
         {
-            // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
-            var niceErrorMessage = await _context.NiceErrorMessages.SingleOrDefaultAsync(c => c.ErrorId == errorId);
+            var niceErrorMessage = await _context.NiceErrorMessages
+                .Where(c => c.ErrorId == errorId)
+                .ToListAsync();
 
             if (niceErrorMessage == null)
             {

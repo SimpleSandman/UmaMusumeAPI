@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -29,10 +30,11 @@ namespace UmaMusumeAPI.Controllers.Views
 
         // GET: api/BasicSkillDataInfo/5
         [HttpGet("{skillId}")]
-        public async Task<ActionResult<BasicSkillDataInfo>> GetBasicSkillDataInfo(int skillId)
+        public async Task<ActionResult<IEnumerable<BasicSkillDataInfo>>> GetBasicSkillDataInfo(int skillId)
         {
-            // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
-            var basicSkillDataInfo = await _context.BasicSkillDataInfos.SingleOrDefaultAsync(c => c.SkillId == skillId);
+            var basicSkillDataInfo = await _context.BasicSkillDataInfos
+                .Where(c => c.SkillId == skillId)
+                .ToListAsync();
 
             if (basicSkillDataInfo == null)
             {

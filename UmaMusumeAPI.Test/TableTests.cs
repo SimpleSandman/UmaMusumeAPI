@@ -24,7 +24,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AnnounceCharacter/101", true)]
         public async Task GetAnnounceCharacter(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AnnounceCharacter>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AnnounceCharacter>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -33,7 +33,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AnnounceData/30004", true)]
         public async Task GetAnnounceData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AnnounceData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AnnounceData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -42,7 +42,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AnnounceEvent/1", true)]
         public async Task GetAnnounceEvent(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AnnounceEvent>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AnnounceEvent>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -51,7 +51,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AnnounceSupportCard/501", true)]
         public async Task GetAnnounceSupportCard(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AnnounceSupportCard>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AnnounceSupportCard>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -60,7 +60,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudienceData/1", true)]
         public async Task GetAudienceData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AudienceData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AudienceData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -69,7 +69,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudienceDressColorSet/1", true)]
         public async Task GetAudienceDressColorSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AudienceDressColorSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AudienceDressColorSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -78,7 +78,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudienceHairColorSet/1", true)]
         public async Task GetAudienceHairColorSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AudienceHairColorSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AudienceHairColorSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -87,7 +87,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudienceImpostor/110", false)]
         public async Task GetAudienceImpostor(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AudienceImpostor>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AudienceImpostor>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -96,7 +96,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudienceImpostorColorSet/1", false)]
         public async Task GetAudienceImpostorColorSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AudienceImpostorColorSet>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<AudienceImpostorColorSet>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]
@@ -105,7 +105,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudienceImpostorLottery/100", false)]
         public async Task GetAudienceImpostorLottery(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AudienceImpostorLottery>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AudienceImpostorLottery>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -114,7 +114,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudioCuesheet/1", true)]
         public async Task GetAudioCuesheet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AudioCuesheet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AudioCuesheet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -123,7 +123,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudioIgnoredCueOnHighspeed/1", true)]
         public async Task GetAudioIgnoredCueOnHighspeed(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AudioIgnoredCueOnHighspeed>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AudioIgnoredCueOnHighspeed>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -132,7 +132,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AudioStoryEffect/1", true)]
         public async Task GetAudioStoryEffect(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AudioStoryEffect>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AudioStoryEffect>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -141,7 +141,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("AvailableSkillSet/1", true)]
         public async Task GetAvailableSkillSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<AvailableSkillSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<AvailableSkillSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -150,7 +150,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("BackgroundData/1", true)]
         public async Task GetBackgroundData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<BackgroundData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<BackgroundData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -159,7 +159,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("BackgroundOffsetData/1", true)]
         public async Task GetBackgroundOffsetData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<BackgroundOffsetData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<BackgroundOffsetData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -168,7 +168,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("BannerData/1", true)]
         public async Task GetBannerData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<BannerData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<BannerData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -177,7 +177,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CampaignCharaStorySchedule/6", false)]
         public async Task GetCampaignCharaStorySchedule(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CampaignCharaStorySchedule>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CampaignCharaStorySchedule>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -186,7 +186,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CampaignData/1", true)]
         public async Task GetCampaignData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CampaignData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CampaignData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -195,7 +195,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CampaignPresentBonusDetail/1", true)]
         public async Task GetCampaignPresentBonusDetail(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CampaignPresentBonusDetail>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CampaignPresentBonusDetail>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -204,7 +204,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CampaignSingleRaceAddData/1", true)]
         public async Task GetCampaignSingleRaceAddData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CampaignSingleRaceAddData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CampaignSingleRaceAddData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -213,7 +213,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CampaignSingleRaceAddReward/1", true)]
         public async Task GetCampaignSingleRaceAddReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CampaignSingleRaceAddReward>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CampaignSingleRaceAddReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -222,7 +222,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CardData/100101", true)]
         public async Task GetCardData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CardData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CardData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -231,7 +231,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CardRarityData/10010103", true)]
         public async Task GetCardRarityData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CardRarityData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CardRarityData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -240,7 +240,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CardTalentHintUpgrade/1001", true)]
         public async Task GetCardTalentHintUpgrade(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CardTalentHintUpgrade>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CardTalentHintUpgrade>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -249,7 +249,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CardTalentUpgrade/1", true)]
         public async Task GetCardTalentUpgrade(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CardTalentUpgrade>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CardTalentUpgrade>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -258,7 +258,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChallengeMatchBossNpc/1", true)]
         public async Task GetChallengeMatchBossNpc(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChallengeMatchBossNpc>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChallengeMatchBossNpc>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -267,7 +267,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChallengeMatchData/1", true)]
         public async Task GetChallengeMatchData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChallengeMatchData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChallengeMatchData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -276,7 +276,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChallengeMatchRace/1", true)]
         public async Task GetChallengeMatchRace(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChallengeMatchRace>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChallengeMatchRace>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -285,7 +285,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChallengeMatchRaceNpc/101", true)]
         public async Task GetChallengeMatchRaceNpc(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChallengeMatchRaceNpc>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChallengeMatchRaceNpc>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -294,7 +294,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChallengeMatchRawPoint/1", true)]
         public async Task GetChallengeMatchRawPoint(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChallengeMatchRawPoint>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChallengeMatchRawPoint>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -303,7 +303,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChallengeMatchRetryBonus/1", true)]
         public async Task GetChallengeMatchRetryBonus(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChallengeMatchRetryBonus>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChallengeMatchRetryBonus>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -312,7 +312,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsBgm/1", true)]
         public async Task GetChampionsBgm(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsBgm>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsBgm>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -321,7 +321,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsEntryReward/0", false)]
         public async Task GetChampionsEntryReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsEntryReward>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsEntryReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -330,7 +330,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsEvaluationRate/1", true)]
         public async Task GetChampionsEvaluationRate(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsEvaluationRate>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsEvaluationRate>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -339,7 +339,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsNewsCharaComment/1", true)]
         public async Task GetChampionsNewsCharaComment(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsNewsCharaComment>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsNewsCharaComment>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -348,7 +348,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsNewsCharaDetail/100", true)]
         public async Task GetChampionsNewsCharaDetail(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsNewsCharaDetail>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsNewsCharaDetail>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -357,7 +357,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsNewsCharaWininfo/1", true)]
         public async Task GetChampionsNewsCharaWininfo(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsNewsCharaWininfo>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsNewsCharaWininfo>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -366,7 +366,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsNewsRace/1001", true)]
         public async Task GetChampionsNewsRace(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsNewsRace>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsNewsRace>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -375,7 +375,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsNewsTitle/1", true)]
         public async Task GetChampionsNewsTitle(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsNewsTitle>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsNewsTitle>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -384,7 +384,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsNewsTrainerDetail/100", true)]
         public async Task GetChampionsNewsTrainerDetail(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsNewsTrainerDetail>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsNewsTrainerDetail>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -393,7 +393,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsNewsTrainerWininfo/1", true)]
         public async Task GetChampionsNewsTrainerWininfo(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsNewsTrainerWininfo>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsNewsTrainerWininfo>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -402,7 +402,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsRaceCondition/1", false)]
         public async Task GetChampionsRaceCondition(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsRaceCondition>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsRaceCondition>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -411,7 +411,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsRewardRate/1", true)]
         public async Task GetChampionsRewardRate(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsRewardRate>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsRewardRate>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -420,7 +420,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsRoundDetail/1", true)]
         public async Task GetChampionsRoundDetail(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsRoundDetail>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsRoundDetail>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -429,7 +429,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsRoundSchedule/1", true)]
         public async Task GetChampionsRoundSchedule(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsRoundSchedule>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsRoundSchedule>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -438,7 +438,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsSchedule/1", true)]
         public async Task GetChampionsSchedule(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsSchedule>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsSchedule>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -447,7 +447,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ChampionsStandMotion/0", false)]
         public async Task GetChampionsStandMotion(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ChampionsStandMotion>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ChampionsStandMotion>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -456,7 +456,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CharaCategoryMotion/1001", true)]
         public async Task GetCharaCategoryMotion(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CharaCategoryMotion>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CharaCategoryMotion>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -465,7 +465,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CharacterPropAnimation/1", true)]
         public async Task GetCharacterPropAnimation(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CharacterPropAnimation>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CharacterPropAnimation>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -474,7 +474,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CharacterSystemLottery/1", true)]
         public async Task GetCharacterSystemLottery(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CharacterSystemLottery>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CharacterSystemLottery>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -483,7 +483,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CharacterSystemText/1001", false)]
         public async Task GetCharacterSystemText(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CharacterSystemText>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CharacterSystemText>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -492,7 +492,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CharaData/1001", true)]
         public async Task GetCharaData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CharaData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CharaData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -501,7 +501,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CharaMotionAct/1", true)]
         public async Task GetCharaMotionAct(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CharaMotionAct>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CharaMotionAct>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -510,7 +510,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CharaMotionSet/1", true)]
         public async Task GetCharaMotionSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CharaMotionSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CharaMotionSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -519,7 +519,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CharaStoryData/1", true)]
         public async Task GetCharaStoryData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CharaStoryData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CharaStoryData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -528,7 +528,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CharaType/1001", true)]
         public async Task GetCharaType(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CharaType>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CharaType>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -537,7 +537,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CircleRankData/1", true)]
         public async Task GetCircleRankData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CircleRankData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CircleRankData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -546,7 +546,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CircleStampData/100001", true)]
         public async Task GetCircleStampData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CircleStampData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CircleStampData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -555,7 +555,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CraneGameArmSwing/1", true)]
         public async Task GetCraneGameArmSwing(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CraneGameArmSwing>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CraneGameArmSwing>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -564,7 +564,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CraneGameCatchResult/1", false)]
         public async Task GetCraneGameCatchResult(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CraneGameCatchResult>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CraneGameCatchResult>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -573,7 +573,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CraneGameDefineParam/1", true)]
         public async Task GetCraneGameDefineParam(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CraneGameDefineParam>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CraneGameDefineParam>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -582,7 +582,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CraneGameExtraOddsCondition/3", true)]
         public async Task GetCraneGameExtraOddsCondition(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CraneGameExtraOddsCondition>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CraneGameExtraOddsCondition>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -591,7 +591,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CraneGameHiddenOdd/1", true)]
         public async Task GetCraneGameHiddenOdd(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CraneGameHiddenOdd>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CraneGameHiddenOdd>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -600,7 +600,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CraneGamePrizeFace/1", true)]
         public async Task GetCraneGamePrizeFace(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CraneGamePrizeFace>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CraneGamePrizeFace>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -609,7 +609,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CraneGamePrizePattern/1", true)]
         public async Task GetCraneGamePrizePattern(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CraneGamePrizePattern>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CraneGamePrizePattern>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -618,7 +618,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("CraneGameProp/1", true)]
         public async Task GetCraneGameProp(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<CraneGameProp>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<CraneGameProp>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -627,7 +627,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("DailyPack/16", false)]
         public async Task GetDailyPack(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<DailyPack>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<DailyPack>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -636,7 +636,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("DailyRace/1", true)]
         public async Task GetDailyRace(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<DailyRace>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<DailyRace>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -645,7 +645,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("DailyRaceBilling/1", true)]
         public async Task GetDailyRaceBilling(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<DailyRaceBilling>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<DailyRaceBilling>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -654,7 +654,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("DailyRaceNpc/1", true)]
         public async Task GetDailyRaceNpc(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<DailyRaceNpc>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<DailyRaceNpc>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -663,7 +663,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("Directory/1", true)]
         public async Task GetDirectory(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<Directory>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<Directory>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -672,7 +672,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("DressData/1", true)]
         public async Task GetDressData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<DressData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<DressData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -681,7 +681,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("EventMotionData/1", true)]
         public async Task GetEventMotionData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<EventMotionData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<EventMotionData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -690,7 +690,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("EventMotionPlusData/1", true)]
         public async Task GetEventMotionPlusData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<EventMotionPlusData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<EventMotionPlusData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -699,7 +699,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("FaceTypeData/Base", true)]
         public async Task GetFaceTypeData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<FaceTypeData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<FaceTypeData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -708,7 +708,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("FacialMouthChange/1", true)]
         public async Task GetFacialMouthChange(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<FacialMouthChange>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<FacialMouthChange>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -717,7 +717,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("GachaAvailable/10001", false)]
         public async Task GetGachaAvailable(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<GachaAvailable>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<GachaAvailable>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -726,7 +726,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("GachaData/10001", true)]
         public async Task GetGachaData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<GachaData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<GachaData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -735,7 +735,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("GachaExchange/30002", false)]
         public async Task GetGachaExchange(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<GachaExchange>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<GachaExchange>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -744,7 +744,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("GachaFreeCampaign/1", true)]
         public async Task GetGachaFreeCampaign(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<GachaFreeCampaign>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<GachaFreeCampaign>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -753,7 +753,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("GachaPiece/1", true)]
         public async Task GetGachaPiece(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<GachaPiece>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<GachaPiece>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -762,7 +762,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("GachaPrizeOdd/1", false)]
         public async Task GetGachaPrizeOdd(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<GachaPrizeOdd>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<GachaPrizeOdd>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]
@@ -771,7 +771,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("GachaStockCampaign/1", true)]
         public async Task GetGachaStockCampaign(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<GachaStockCampaign>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<GachaStockCampaign>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -780,7 +780,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("GachaStockDetail/1", true)]
         public async Task GetGachaStockDetail(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<GachaStockDetail>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<GachaStockDetail>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -789,7 +789,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("GachaTopBg/1", true)]
         public async Task GetGachaTopBg(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<GachaTopBg>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<GachaTopBg>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -798,7 +798,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("GiftMessage/6", true)]
         public async Task GetGiftMessage(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<GiftMessage>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<GiftMessage>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -807,7 +807,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("HighlightInterpolate/1", true)]
         public async Task GetHighlightInterpolate(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<HighlightInterpolate>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<HighlightInterpolate>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -816,7 +816,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("HomeCharacterType/1", false)]
         public async Task GetHomeCharacterType(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<HomeCharacterType>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<HomeCharacterType>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -825,7 +825,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("HomeEat/1001", false)]
         public async Task GetHomeEat(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<HomeEat>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<HomeEat>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -834,7 +834,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("HomeEnvSetting/1", true)]
         public async Task GetHomeEnvSetting(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<HomeEnvSetting>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<HomeEnvSetting>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -843,7 +843,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("HomeEventSchedule/1", true)]
         public async Task GetHomeEventSchedule(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<HomeEventSchedule>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<HomeEventSchedule>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -852,7 +852,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("HomePosterData/1004", true)]
         public async Task GetHomePosterData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<HomePosterData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<HomePosterData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -861,7 +861,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("HomePropSetting/1", false)]
         public async Task GetHomePropSetting(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<HomePropSetting>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<HomePropSetting>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -870,7 +870,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("HomeStoryHipOffset/1", false)]
         public async Task GetHomeStoryHipOffset(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<HomeStoryHipOffset>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<HomeStoryHipOffset>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -879,7 +879,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("HomeStoryTrigger/1", true)]
         public async Task GetHomeStoryTrigger(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<HomeStoryTrigger>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<HomeStoryTrigger>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -888,7 +888,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("HomeWalkGroup/1", true)]
         public async Task GetHomeWalkGroup(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<HomeWalkGroup>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<HomeWalkGroup>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -897,7 +897,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("HonorData/100101", true)]
         public async Task GetHonorData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<HonorData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<HonorData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -906,7 +906,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ItemData/1", true)]
         public async Task GetItemData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ItemData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ItemData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -915,7 +915,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ItemExchange/2001", true)]
         public async Task GetItemExchange(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ItemExchange>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ItemExchange>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -924,7 +924,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ItemExchangeTop/2000", true)]
         public async Task GetItemExchangeTop(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ItemExchangeTop>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ItemExchangeTop>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -933,7 +933,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ItemGroup/1", true)]
         public async Task GetItemGroup(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ItemGroup>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ItemGroup>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -942,7 +942,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ItemPack/1", true)]
         public async Task GetItemPack(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ItemPack>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ItemPack>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -951,7 +951,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ItemPlace/1", false)]
         public async Task GetItemPlace(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ItemPlace>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ItemPlace>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -960,7 +960,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("JukeboxCharaTagData/1", true)]
         public async Task GetJukeboxCharaTagData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<JukeboxCharaTagData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<JukeboxCharaTagData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -969,7 +969,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("JukeboxComment/1", true)]
         public async Task GetJukeboxComment(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<JukeboxComment>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<JukeboxComment>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -978,7 +978,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("JukeboxMotionData/1", true)]
         public async Task GetJukeboxMotionData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<JukeboxMotionData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<JukeboxMotionData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -987,7 +987,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("JukeboxMusicData/1001", true)]
         public async Task GetJukeboxMusicData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<JukeboxMusicData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<JukeboxMusicData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -996,7 +996,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("JukeboxReactionData/1", true)]
         public async Task GetJukeboxReactionData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<JukeboxReactionData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<JukeboxReactionData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1005,7 +1005,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("JukeboxRequestData/1", true)]
         public async Task GetJukeboxRequestData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<JukeboxRequestData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<JukeboxRequestData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1014,7 +1014,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("LegendRace/2", true)]
         public async Task GetLegendRace(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<LegendRace>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LegendRace>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1023,7 +1023,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("LegendRaceBilling/1", true)]
         public async Task GetLegendRaceBilling(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<LegendRaceBilling>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LegendRaceBilling>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1032,7 +1032,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("LegendRaceBossNpc/103", true)]
         public async Task GetLegendRaceBossNpc(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<LegendRaceBossNpc>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LegendRaceBossNpc>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1041,7 +1041,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("LegendRaceNpc/101", true)]
         public async Task GetLegendRaceNpc(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<LegendRaceNpc>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LegendRaceNpc>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1050,7 +1050,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("LimitedExchange/1", true)]
         public async Task GetLimitedExchange(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<LimitedExchange>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LimitedExchange>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1059,7 +1059,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("LimitedExchangeReward/1", true)]
         public async Task GetLimitedExchangeReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<LimitedExchangeReward>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LimitedExchangeReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1068,7 +1068,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("LimitedExchangeRewardOdd/1", true)]
         public async Task GetLimitedExchangeRewardOdd(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<LimitedExchangeRewardOdd>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LimitedExchangeRewardOdd>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1077,7 +1077,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("LiveData/1001", true)]
         public async Task GetLiveData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<LiveData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LiveData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1086,7 +1086,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("LivePermissionData/1004", false)]
         public async Task GetLivePermissionData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<LivePermissionData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LivePermissionData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1095,7 +1095,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("LoginBonusData/10001", true)]
         public async Task GetLoginBonusData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<LoginBonusData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LoginBonusData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1104,7 +1104,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("LoginBonusDetail/1", true)]
         public async Task GetLoginBonusDetail(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<LoginBonusDetail>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LoginBonusDetail>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1113,7 +1113,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("LoveRank/1", true)]
         public async Task GetLoveRank(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<LoveRank>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LoveRank>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1122,7 +1122,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MainStoryData/101", true)]
         public async Task GetMainStoryData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MainStoryData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MainStoryData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1131,7 +1131,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MainStoryPart/1", true)]
         public async Task GetMainStoryPart(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MainStoryPart>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MainStoryPart>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1140,7 +1140,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MainStoryRaceBonus/1", true)]
         public async Task GetMainStoryRaceBonus(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MainStoryRaceBonus>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MainStoryRaceBonus>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1149,7 +1149,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MainStoryRaceBonusCondition/1", true)]
         public async Task GetMainStoryRaceBonusCondition(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MainStoryRaceBonusCondition>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MainStoryRaceBonusCondition>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1158,7 +1158,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MainStoryRaceCharaData/71", true)]
         public async Task GetMainStoryRaceCharaData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MainStoryRaceCharaData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MainStoryRaceCharaData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1167,7 +1167,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MainStoryRaceData/1", true)]
         public async Task GetMainStoryRaceData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MainStoryRaceData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MainStoryRaceData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1176,7 +1176,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MiniBg/10001", true)]
         public async Task GetMiniBg(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MiniBg>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MiniBg>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1185,7 +1185,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MiniBgCharaMotion/1000101", true)]
         public async Task GetMiniBgCharaMotion(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MiniBgCharaMotion>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MiniBgCharaMotion>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1194,7 +1194,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MiniFaceTypeData/BoobooA", true)]
         public async Task GetMiniFaceTypeData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MiniFaceTypeData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MiniFaceTypeData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1203,7 +1203,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MiniMotionSet/Bit01", true)]
         public async Task GetMiniMotionSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MiniMotionSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MiniMotionSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1212,7 +1212,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MiniMouthType/1", true)]
         public async Task GetMiniMouthType(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MiniMouthType>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MiniMouthType>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1221,7 +1221,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MissionData/100000", true)]
         public async Task GetMissionData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MissionData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MissionData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1230,7 +1230,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MobData/8008", true)]
         public async Task GetMobData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MobData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MobData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1239,7 +1239,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MobDressColorSet/8008", true)]
         public async Task GetMobDressColorSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MobDressColorSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MobDressColorSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1248,7 +1248,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("MobHairColorSet/1", true)]
         public async Task GetMobHairColorSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<MobHairColorSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<MobHairColorSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1257,7 +1257,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("NeedPieceNumData/1", true)]
         public async Task GetNeedPieceNumData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<NeedPieceNumData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<NeedPieceNumData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1266,7 +1266,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("Nickname/1", true)]
         public async Task GetNickname(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<Nickname>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<Nickname>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1275,7 +1275,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("NoteProfile/1", true)]
         public async Task GetNoteProfile(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<NoteProfile>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<NoteProfile>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1284,7 +1284,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("NoteProfileTextType/1", true)]
         public async Task GetNoteProfileTextType(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<NoteProfileTextType>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<NoteProfileTextType>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1293,7 +1293,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("PieceData/100000", true)]
         public async Task GetPieceData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<PieceData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<PieceData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1302,7 +1302,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("PriceChange/1", true)]
         public async Task GetPriceChange(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<PriceChange>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<PriceChange>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1311,7 +1311,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("Race/1001", true)]
         public async Task GetRace(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<Race>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<Race>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1320,7 +1320,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceBgm/1", true)]
         public async Task GetRaceBgm(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceBgm>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceBgm>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1329,7 +1329,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceBgmCutinExtensionTime/1", true)]
         public async Task GetRaceBgmCutinExtensionTime(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceBgmCutinExtensionTime>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceBgmCutinExtensionTime>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1338,7 +1338,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceBgmPattern/1", true)]
         public async Task GetRaceBgmPattern(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceBgmPattern>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceBgmPattern>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1347,7 +1347,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceBibColor/0", false)]
         public async Task GetRaceBibColor(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceBibColor>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceBibColor>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1356,7 +1356,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceCondition/1", true)]
         public async Task GetRaceCondition(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceCondition>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceCondition>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1365,7 +1365,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceCourseSet/10101", true)]
         public async Task GetRaceCourseSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceCourseSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceCourseSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1374,7 +1374,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceCourseSetStatus/1", true)]
         public async Task GetRaceCourseSetStatus(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceCourseSetStatus>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceCourseSetStatus>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1383,7 +1383,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceEnvDefine/1", true)]
         public async Task GetRaceEnvDefine(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceEnvDefine>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceEnvDefine>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1392,7 +1392,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceFenceSet/10101", true)]
         public async Task GetRaceFenceSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceFenceSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceFenceSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1401,7 +1401,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceInstance/100101", true)]
         public async Task GetRaceInstance(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceInstance>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceInstance>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1410,7 +1410,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceJikkyoBase/1", true)]
         public async Task GetRaceJikkyoBase(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceJikkyoBase>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceJikkyoBase>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1419,7 +1419,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceJikkyoComment/1", true)]
         public async Task GetRaceJikkyoComment(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceJikkyoComment>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceJikkyoComment>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1428,7 +1428,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceJikkyoCue/1", false)]
         public async Task GetRaceJikkyoCue(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceJikkyoCue>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceJikkyoCue>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1437,7 +1437,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceJikkyoMessage/1", true)]
         public async Task GetRaceJikkyoMessage(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceJikkyoMessage>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceJikkyoMessage>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1446,7 +1446,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceJikkyoRace/1001", true)]
         public async Task GetRaceJikkyoRace(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceJikkyoRace>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceJikkyoRace>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1455,7 +1455,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceJikkyoTrigger/1", true)]
         public async Task GetRaceJikkyoTrigger(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceJikkyoTrigger>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceJikkyoTrigger>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1464,7 +1464,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceMotivationRate/1", true)]
         public async Task GetRaceMotivationRate(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceMotivationRate>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceMotivationRate>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1473,7 +1473,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceOverrunPattern/1", true)]
         public async Task GetRaceOverrunPattern(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceOverrunPattern>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceOverrunPattern>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1482,7 +1482,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RacePlayerCamera/100000", true)]
         public async Task GetRacePlayerCamera(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RacePlayerCamera>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RacePlayerCamera>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1491,7 +1491,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RacePopularityProperValue/1", true)]
         public async Task GetRacePopularityProperValue(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RacePopularityProperValue>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RacePopularityProperValue>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1500,7 +1500,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceProperDistanceRate/1", true)]
         public async Task GetRaceProperDistanceRate(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceProperDistanceRate>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceProperDistanceRate>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1509,7 +1509,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceProperGroundRate/1", true)]
         public async Task GetRaceProperGroundRate(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceProperGroundRate>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceProperGroundRate>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1518,7 +1518,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceProperRunningstyleRate/1", true)]
         public async Task GetRaceProperRunningstyleRate(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceProperRunningstyleRate>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceProperRunningstyleRate>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1527,7 +1527,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceSingleModeTeamStatus/1", true)]
         public async Task GetRaceSingleModeTeamStatus(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceSingleModeTeamStatus>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceSingleModeTeamStatus>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1536,7 +1536,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceTrack/10001", true)]
         public async Task GetRaceTrack(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceTrack>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceTrack>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1545,7 +1545,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceTrophy/1", true)]
         public async Task GetRaceTrophy(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceTrophy>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceTrophy>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1554,7 +1554,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RaceTrophyReward/1001", true)]
         public async Task GetRaceTrophyReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RaceTrophyReward>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceTrophyReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1563,7 +1563,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("RandomEarTailMotion/1", true)]
         public async Task GetRandomEarTailMotion(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<RandomEarTailMotion>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RandomEarTailMotion>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1572,7 +1572,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SeasonData/1", true)]
         public async Task GetSeasonData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SeasonData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SeasonData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1581,7 +1581,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("ShortEpisode/1", true)]
         public async Task GetShortEpisode(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<ShortEpisode>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<ShortEpisode>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1590,7 +1590,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeAnalyzeMessage/1", true)]
         public async Task GetSingleModeAnalyzeMessage(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeAnalyzeMessage>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeAnalyzeMessage>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1599,7 +1599,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeAnalyzeTicket/1", true)]
         public async Task GetSingleModeAnalyzeTicket(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeAnalyzeTicket>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeAnalyzeTicket>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1608,7 +1608,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeAoharuCuttType/1", true)]
         public async Task GetSingleModeAoharuCuttType(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeAoharuCuttType>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeAoharuCuttType>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1617,7 +1617,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeAoharuResultCutt/1", true)]
         public async Task GetSingleModeAoharuResultCutt(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeAoharuResultCutt>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeAoharuResultCutt>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1626,7 +1626,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeAoharuSchedule/1", true)]
         public async Task GetSingleModeAoharuSchedule(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeAoharuSchedule>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeAoharuSchedule>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1635,7 +1635,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeAoOffset/1", true)]
         public async Task GetSingleModeAoOffset(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeAoOffset>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeAoOffset>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1644,7 +1644,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeAoTrainingPlate/1", true)]
         public async Task GetSingleModeAoTrainingPlate(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeAoTrainingPlate>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeAoTrainingPlate>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1653,7 +1653,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeChangeCharaRoute/1", true)]
         public async Task GetSingleModeChangeCharaRoute(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeChangeCharaRoute>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeChangeCharaRoute>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1662,7 +1662,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeCharaEffect/1", true)]
         public async Task GetSingleModeCharaEffect(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeCharaEffect>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeCharaEffect>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1671,7 +1671,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeCharaGrade/1", true)]
         public async Task GetSingleModeCharaGrade(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeCharaGrade>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeCharaGrade>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1680,7 +1680,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeCharaProgram/1", true)]
         public async Task GetSingleModeCharaProgram(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeCharaProgram>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeCharaProgram>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1689,7 +1689,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeConclusionSet/400000035", false)]
         public async Task GetSingleModeConclusionSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeConclusionSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeConclusionSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1698,7 +1698,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeDifficultyBox/1", false)]
         public async Task GetSingleModeDifficultyBox(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeDifficultyBox>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeDifficultyBox>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1707,7 +1707,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeDifficultyBoxGauge/1", true)]
         public async Task GetSingleModeDifficultyBoxGauge(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeDifficultyBoxGauge>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeDifficultyBoxGauge>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1716,7 +1716,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeDifficultyBoxReward/1", true)]
         public async Task GetSingleModeDifficultyBoxReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeDifficultyBoxReward>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeDifficultyBoxReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1725,7 +1725,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeDifficultyData/1000", false)]
         public async Task GetSingleModeDifficultyData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeDifficultyData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeDifficultyData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1734,7 +1734,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeDifficultyMode/1000", true)]
         public async Task GetSingleModeDifficultyMode(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeDifficultyMode>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeDifficultyMode>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1743,7 +1743,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeEvaluation/1", true)]
         public async Task GetSingleModeEvaluation(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeEvaluation>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeEvaluation>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1752,7 +1752,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeEventConclusion/1", false)]
         public async Task GetSingleModeEventConclusion(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeEventConclusion>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeEventConclusion>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1761,7 +1761,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeEventItemDetail/1", true)]
         public async Task GetSingleModeEventItemDetail(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeEventItemDetail>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeEventItemDetail>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1770,7 +1770,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeEventProduction/400001017", true)]
         public async Task GetSingleModeEventProduction(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeEventProduction>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeEventProduction>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1779,7 +1779,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeFanCount/1", true)]
         public async Task GetSingleModeFanCount(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeFanCount>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeFanCount>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1788,7 +1788,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeFreeCoinRace/1", true)]
         public async Task GetSingleModeFreeCoinRace(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeFreeCoinRace>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeFreeCoinRace>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1797,7 +1797,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeFreeShop/1", true)]
         public async Task GetSingleModeFreeShop(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeFreeShop>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeFreeShop>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1806,7 +1806,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeFreeShopBg/1", true)]
         public async Task GetSingleModeFreeShopBg(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeFreeShopBg>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeFreeShopBg>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1815,7 +1815,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeFreeShopEffect/1", true)]
         public async Task GetSingleModeFreeShopEffect(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeFreeShopEffect>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeFreeShopEffect>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1824,7 +1824,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeFreeShopItem/1", true)]
         public async Task GetSingleModeFreeShopItem(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeFreeShopItem>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeFreeShopItem>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1833,7 +1833,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeFreeTrainingPlate/1", true)]
         public async Task GetSingleModeFreeTrainingPlate(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeFreeTrainingPlate>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeFreeTrainingPlate>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1842,7 +1842,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeFreeWinPoint/1", true)]
         public async Task GetSingleModeFreeWinPoint(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeFreeWinPoint>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeFreeWinPoint>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1851,7 +1851,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeHintGain/1", true)]
         public async Task GetSingleModeHintGain(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeHintGain>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeHintGain>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1860,7 +1860,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeMemberRank/1", true)]
         public async Task GetSingleModeMemberRank(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeMemberRank>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeMemberRank>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1869,7 +1869,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeMemberRankPoint/1", true)]
         public async Task GetSingleModeMemberRankPoint(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeMemberRankPoint>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeMemberRankPoint>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1878,7 +1878,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeMessage/1", true)]
         public async Task GetSingleModeMessage(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeMessage>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeMessage>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1887,7 +1887,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeNpc/1", true)]
         public async Task GetSingleModeNpc(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeNpc>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeNpc>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1896,7 +1896,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeOuting/1", true)]
         public async Task GetSingleModeOuting(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeOuting>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeOuting>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1905,7 +1905,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeOutingSet/1", true)]
         public async Task GetSingleModeOutingSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeOutingSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeOutingSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1914,7 +1914,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeProgram/1", true)]
         public async Task GetSingleModeProgram(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeProgram>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeProgram>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1923,7 +1923,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeRaceGroup/1", true)]
         public async Task GetSingleModeRaceGroup(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeRaceGroup>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeRaceGroup>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1932,7 +1932,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeRaceLive/1", true)]
         public async Task GetSingleModeRaceLive(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeRaceLive>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeRaceLive>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1941,7 +1941,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeRank/1", true)]
         public async Task GetSingleModeRank(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeRank>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeRank>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1950,7 +1950,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeRecommend/1", true)]
         public async Task GetSingleModeRecommend(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeRecommend>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeRecommend>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1959,7 +1959,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeRecommendSetting/1", true)]
         public async Task GetSingleModeRecommendSetting(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeRecommendSetting>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeRecommendSetting>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1968,7 +1968,7 @@ namespace UmaMusumeAPI.Test
         //[InlineData("SingleModeRestrictSupport/1", true)]
         public async Task GetSingleModeRestrictSupport(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeRestrictSupport>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeRestrictSupport>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]
@@ -1977,7 +1977,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeRewardSet/1", true)]
         public async Task GetSingleModeRewardSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeRewardSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeRewardSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1986,7 +1986,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeRival/1", true)]
         public async Task GetSingleModeRival(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeRival>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeRival>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1995,7 +1995,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeRoute/1", true)]
         public async Task GetSingleModeRoute(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeRoute>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeRoute>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2004,7 +2004,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeRouteAnnounce/4001", true)]
         public async Task GetSingleModeRouteAnnounce(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeRouteAnnounce>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeRouteAnnounce>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2013,7 +2013,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeRouteCondition/1", true)]
         public async Task GetSingleModeRouteCondition(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeRouteCondition>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeRouteCondition>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2022,7 +2022,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeRouteRace/1", true)]
         public async Task GetSingleModeRouteRace(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeRouteRace>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeRouteRace>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2031,7 +2031,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeScenario/1", true)]
         public async Task GetSingleModeScenario(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeScenario>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeScenario>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2040,7 +2040,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeScenarioRecord/1", true)]
         public async Task GetSingleModeScenarioRecord(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeScenarioRecord>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeScenarioRecord>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2049,7 +2049,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeScoutChara/1", true)]
         public async Task GetSingleModeScoutChara(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeScoutChara>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeScoutChara>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2058,7 +2058,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeSkillNeedPoint/200011", true)]
         public async Task GetSingleModeSkillNeedPoint(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeSkillNeedPoint>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeSkillNeedPoint>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2067,7 +2067,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeSpecialChara/11", true)]
         public async Task GetSingleModeSpecialChara(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeSpecialChara>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeSpecialChara>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2076,7 +2076,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeStoryData/1", true)]
         public async Task GetSingleModeStoryData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeStoryData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeStoryData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2085,7 +2085,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeStoryGuide/400002041", true)]
         public async Task GetSingleModeStoryGuide(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeStoryGuide>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeStoryGuide>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2094,7 +2094,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeTagCardPos/1", true)]
         public async Task GetSingleModeTagCardPos(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeTagCardPos>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeTagCardPos>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2103,7 +2103,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeTeamName/1", true)]
         public async Task GetSingleModeTeamName(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeTeamName>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeTeamName>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2112,7 +2112,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeTopBg/1", true)]
         public async Task GetSingleModeTopBg(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeTopBg>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeTopBg>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2121,7 +2121,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeTopBgChara/212401", true)]
         public async Task GetSingleModeTopBgChara(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeTopBgChara>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeTopBgChara>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2130,7 +2130,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeTraining/1", true)]
         public async Task GetSingleModeTraining(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeTraining>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeTraining>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2139,7 +2139,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeTrainingEffect/1", true)]
         public async Task GetSingleModeTrainingEffect(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeTrainingEffect>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeTrainingEffect>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2148,7 +2148,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeTrainingSe/1", true)]
         public async Task GetSingleModeTrainingSe(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeTrainingSe>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeTrainingSe>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2157,7 +2157,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeTurn/1", true)]
         public async Task GetSingleModeTurn(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeTurn>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeTurn>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2166,7 +2166,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeUniqueChara/1", true)]
         public async Task GetSingleModeUniqueChara(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeUniqueChara>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeUniqueChara>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2175,7 +2175,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SingleModeWinsSaddle/1", true)]
         public async Task GetSingleModeWinsSaddle(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SingleModeWinsSaddle>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SingleModeWinsSaddle>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2184,7 +2184,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SkillData/10071", true)]
         public async Task GetSkillData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SkillData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SkillData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2193,7 +2193,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SkillExp/1", true)]
         public async Task GetSkillExp(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SkillExp>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SkillExp>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2202,7 +2202,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SkillLevelValue/1", true)]
         public async Task GetSkillLevelValue(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SkillLevelValue>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SkillLevelValue>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2211,7 +2211,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SkillRarity/1", true)]
         public async Task GetSkillRarity(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SkillRarity>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SkillRarity>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2220,7 +2220,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SkillSet/8008", true)]
         public async Task GetSkillSet(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SkillSet>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SkillSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2229,7 +2229,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryEventBingoReward/1", true)]
         public async Task GetStoryEventBingoReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryEventBingoReward>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryEventBingoReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2238,7 +2238,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryEventBonusCard/1", true)]
         public async Task GetStoryEventBonusCard(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryEventBonusCard>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryEventBonusCard>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2247,7 +2247,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryEventBonusSupportCard/1", true)]
         public async Task GetStoryEventBonusSupportCard(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryEventBonusSupportCard>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryEventBonusSupportCard>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2256,7 +2256,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryEventData/1001", true)]
         public async Task GetStoryEventData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryEventData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryEventData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2265,7 +2265,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryEventMission/1", true)]
         public async Task GetStoryEventMission(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryEventMission>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryEventMission>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2274,7 +2274,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryEventMissionTopChara/1", true)]
         public async Task GetStoryEventMissionTopChara(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryEventMissionTopChara>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryEventMissionTopChara>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2283,7 +2283,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryEventNicknameBonus/1", true)]
         public async Task GetStoryEventNicknameBonus(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryEventNicknameBonus>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryEventNicknameBonus>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2292,7 +2292,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryEventPointReward/1", true)]
         public async Task GetStoryEventPointReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryEventPointReward>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryEventPointReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2301,7 +2301,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryEventRouletteBingo/1", true)]
         public async Task GetStoryEventRouletteBingo(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryEventRouletteBingo>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryEventRouletteBingo>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2310,7 +2310,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryEventStoryData/1", true)]
         public async Task GetStoryEventStoryData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryEventStoryData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryEventStoryData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2319,7 +2319,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryEventTopChara/1", true)]
         public async Task GetStoryEventTopChara(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryEventTopChara>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryEventTopChara>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2328,7 +2328,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryEventWinBonus/1", true)]
         public async Task GetStoryEventWinBonus(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryEventWinBonus>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryEventWinBonus>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2337,7 +2337,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryExtraData/1001", true)]
         public async Task GetStoryExtraData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryExtraData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryExtraData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2346,7 +2346,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryExtraStoryData/1", true)]
         public async Task GetStoryExtraStoryData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryExtraStoryData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryExtraStoryData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2355,7 +2355,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryHipOffset/40", false)]
         public async Task GetStoryHipOffset(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryHipOffset>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryHipOffset>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2364,7 +2364,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryLivePosition/1", true)]
         public async Task GetStoryLivePosition(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryLivePosition>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryLivePosition>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2373,7 +2373,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("StoryStill/1", true)]
         public async Task GetStoryStill(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<StoryStill>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<StoryStill>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2382,7 +2382,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SuccessionFactor/101", true)]
         public async Task GetSuccessionFactor(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SuccessionFactor>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SuccessionFactor>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2391,7 +2391,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SuccessionFactorEffect/1", true)]
         public async Task GetSuccessionFactorEffect(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SuccessionFactorEffect>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SuccessionFactorEffect>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2400,7 +2400,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SuccessionInitialFactor/1", true)]
         public async Task GetSuccessionInitialFactor(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SuccessionInitialFactor>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SuccessionInitialFactor>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2409,7 +2409,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SuccessionRelation/101", true)]
         public async Task GetSuccessionRelation(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SuccessionRelation>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SuccessionRelation>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2418,7 +2418,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SuccessionRelationMember/1", true)]
         public async Task GetSuccessionRelationMember(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SuccessionRelationMember>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SuccessionRelationMember>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2427,7 +2427,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SuccessionRelationRank/1", true)]
         public async Task GetSuccessionRelationRank(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SuccessionRelationRank>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SuccessionRelationRank>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2436,7 +2436,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SuccessionRental/1", true)]
         public async Task GetSuccessionRental(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SuccessionRental>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SuccessionRental>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2445,7 +2445,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SupportCardData/10001", true)]
         public async Task GetSupportCardData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SupportCardData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SupportCardData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2454,7 +2454,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SupportCardEffectTable/10001", false)]
         public async Task GetSupportCardEffectTable(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SupportCardEffectTable>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SupportCardEffectTable>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2463,7 +2463,7 @@ namespace UmaMusumeAPI.Test
         //[InlineData("SupportCardGroup/1", true)]
         public async Task GetSupportCardGroup(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SupportCardGroup>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SupportCardGroup>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]
@@ -2472,7 +2472,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SupportCardLevel/1001", true)]
         public async Task GetSupportCardLevel(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SupportCardLevel>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SupportCardLevel>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2481,7 +2481,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SupportCardLimit/1", true)]
         public async Task GetSupportCardLimit(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SupportCardLimit>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SupportCardLimit>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2490,7 +2490,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SupportCardLimitBreak/2020", true)]
         public async Task GetSupportCardLimitBreak(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SupportCardLimitBreak>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SupportCardLimitBreak>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2499,7 +2499,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SupportCardTeamScoreBonus/1", true)]
         public async Task GetSupportCardTeamScoreBonus(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SupportCardTeamScoreBonus>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SupportCardTeamScoreBonus>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2508,7 +2508,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("SupportCardUniqueEffect/20001", true)]
         public async Task GetSupportCardUniqueEffect(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<SupportCardUniqueEffect>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<SupportCardUniqueEffect>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2517,7 +2517,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TeamStadium/1", true)]
         public async Task GetTeamStadium(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TeamStadium>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TeamStadium>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2526,7 +2526,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TeamStadiumBgm/1", true)]
         public async Task GetTeamStadiumBgm(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TeamStadiumBgm>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TeamStadiumBgm>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2535,7 +2535,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TeamStadiumClass/1", true)]
         public async Task GetTeamStadiumClass(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TeamStadiumClass>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TeamStadiumClass>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2544,7 +2544,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TeamStadiumClassReward/1", true)]
         public async Task GetTeamStadiumClassReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TeamStadiumClassReward>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TeamStadiumClassReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2553,7 +2553,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TeamStadiumEvaluationRate/1", false)]
         public async Task GetTeamStadiumEvaluationRate(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TeamStadiumEvaluationRate>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TeamStadiumEvaluationRate>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2562,7 +2562,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TeamStadiumRaceResultMotion/1001", false)]
         public async Task GetTeamStadiumRaceResultMotion(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TeamStadiumRaceResultMotion>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TeamStadiumRaceResultMotion>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2571,7 +2571,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TeamStadiumRank/1", true)]
         public async Task GetTeamStadiumRank(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TeamStadiumRank>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TeamStadiumRank>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2580,7 +2580,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TeamStadiumRawScore/1", true)]
         public async Task GetTeamStadiumRawScore(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TeamStadiumRawScore>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TeamStadiumRawScore>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2589,7 +2589,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TeamStadiumScoreBonus/1", true)]
         public async Task GetTeamStadiumScoreBonus(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TeamStadiumScoreBonus>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TeamStadiumScoreBonus>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2598,7 +2598,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TeamStadiumStandMotion/1010", false)]
         public async Task GetTeamStadiumStandMotion(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TeamStadiumStandMotion>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TeamStadiumStandMotion>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2607,7 +2607,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TeamStadiumSupportText/1", true)]
         public async Task GetTeamStadiumSupportText(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TeamStadiumSupportText>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TeamStadiumSupportText>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2616,7 +2616,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TextData/1", false)]
         public async Task GetTextData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TextData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TextData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2625,7 +2625,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TextDataEnglish/1", true)]
         public async Task GetTextDataEnglish(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TextDataEnglish>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TextDataEnglish>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2634,7 +2634,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TimezoneData/1", true)]
         public async Task GetTimezoneData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TimezoneData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TimezoneData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2643,7 +2643,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("Topic/1", true)]
         public async Task GetTopic(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<Topic>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<Topic>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2652,7 +2652,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TrainedCharaTradeItem/1", true)]
         public async Task GetTrainedCharaTradeItem(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TrainedCharaTradeItem>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TrainedCharaTradeItem>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2661,7 +2661,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TrainingChallengeExam/1", true)]
         public async Task GetTrainingChallengeExam(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TrainingChallengeExam>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TrainingChallengeExam>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2670,7 +2670,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TrainingChallengeMaster/2001", true)]
         public async Task GetTrainingChallengeMaster(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TrainingChallengeMaster>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TrainingChallengeMaster>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2679,7 +2679,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TrainingChallengeScore/1", true)]
         public async Task GetTrainingChallengeScore(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TrainingChallengeScore>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TrainingChallengeScore>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2688,7 +2688,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TrainingChallengeTotalScore/1", true)]
         public async Task GetTrainingChallengeTotalScore(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TrainingChallengeTotalScore>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TrainingChallengeTotalScore>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2697,7 +2697,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TrainingCuttCharaData/1", true)]
         public async Task GetTrainingCuttCharaData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TrainingCuttCharaData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TrainingCuttCharaData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2706,7 +2706,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TrainingCuttData/101045", false)]
         public async Task GetTrainingCuttData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TrainingCuttData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TrainingCuttData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2715,7 +2715,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TransferEventData/1", true)]
         public async Task GetTransferEventData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TransferEventData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TransferEventData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2724,7 +2724,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TransferEventDetail/1001", true)]
         public async Task GetTransferEventDetail(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TransferEventDetail>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TransferEventDetail>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2733,7 +2733,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TransferEventReward/10010101", true)]
         public async Task GetTransferEventReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TransferEventReward>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TransferEventReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2742,7 +2742,7 @@ namespace UmaMusumeAPI.Test
         [InlineData("TutorialGuideData/1", true)]
         public async Task GetTutorialGuideData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestEndpointAsync<TutorialGuideData>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<TutorialGuideData>(endpointUrl, hasSingleReturn);
         }
         #endregion
     }

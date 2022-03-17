@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Mvc;
@@ -29,10 +30,11 @@ namespace UmaMusumeAPI.Controllers.Views
 
         // GET: api/BasicStoryEventMissionInfo/5
         [HttpGet("{storyEventMissionId}")]
-        public async Task<ActionResult<BasicStoryEventMissionInfo>> GetBasicStoryEventMissionInfo(int storyEventMissionId)
+        public async Task<ActionResult<IEnumerable<BasicStoryEventMissionInfo>>> GetBasicStoryEventMissionInfo(int storyEventMissionId)
         {
-            // Since views don't have PKs, we need to use .SingleOrDefaultAsync() to best imitate .FindAsync()
-            var basicStoryEventMissionInfo = await _context.BasicStoryEventMissionInfos.SingleOrDefaultAsync(c => c.StoryEventMissionId == storyEventMissionId);
+            var basicStoryEventMissionInfo = await _context.BasicStoryEventMissionInfos
+                .Where(c => c.StoryEventMissionId == storyEventMissionId)
+                .ToListAsync();
 
             if (basicStoryEventMissionInfo == null)
             {

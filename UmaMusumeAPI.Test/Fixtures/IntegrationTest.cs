@@ -22,17 +22,34 @@ namespace UmaMusumeAPI.Test.Fixtures
 
         #region Protected Method
         /// <summary>
-        /// Get the deserialized response from the API request
+        /// Get the deserialized response from the GET API request
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="endpointUrl">The actual request for API testing which is already prefixed with the <see cref="string"/>, /api/</param>
         /// <param name="hasSingleReturn">Will the returning object contain a list of objects?</param>
         /// <param name="knownEmptyTable">Check if response is empty as expected</param>
-        protected async Task TestEndpointAsync<T>(string endpointUrl, bool hasSingleReturn, bool knownEmptyTable = false)
+        protected async Task TestGetEndpointAsync<T>(string endpointUrl, bool hasSingleReturn, bool knownEmptyTable = false)
         {
             object? response = hasSingleReturn
                 ? await _client.GetAndDeserialize<T>(endpointUrl)
                 : await _client.GetAndDeserialize<IEnumerable<T>>(endpointUrl);
+
+            ValidateResponse<T>(response, hasSingleReturn, knownEmptyTable);
+        }
+
+        /// <summary>
+        /// Get the deserialized response from the POST API request
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="U"></typeparam>
+        /// <param name="endpointUrl"></param>
+        /// <param name="hasSingleReturn"></param>
+        /// <param name="requestBody"></param>
+        /// <param name="knownEmptyTable"></param>
+        /// <returns></returns>
+        protected async Task TestPostEndpointAsync<T, U>(string endpointUrl, bool hasSingleReturn, U requestBody, bool knownEmptyTable = false)
+        {
+            object? response = await _client.PostAndDeserialize<T, U>(endpointUrl, requestBody);
 
             ValidateResponse<T>(response, hasSingleReturn, knownEmptyTable);
         }
@@ -64,7 +81,7 @@ namespace UmaMusumeAPI.Test.Fixtures
                 IEnumerable<T> listResponse = (IEnumerable<T>)response;
                 if (knownEmptyTable)
                 {
-                    Assert.True(!listResponse.Any());
+                    Assert.False(listResponse.Any());
                 }
                 else
                 {
