@@ -25,9 +25,9 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
 
         // GET: api/SpSuccessionGrandparentRecommendation/1008/1011
         [HttpGet("{child}/{parent}")]
-        public async Task<ActionResult<IEnumerable<SpSuccessionGrandparentRecommendation>>> GetSpSuccessionGrandparentRecommendation(long child, long parent)
+        public async Task<ActionResult<IEnumerable<SpSuccessionGrandparentRecommendation>>> GetSpSuccessionGrandparentRecommendation(int child, int parent)
         {
-            if (child == 0L || parent == 0L)
+            if (child == 0 || parent == 0)
             {
                 return NotFound();
             }
@@ -41,8 +41,8 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
                     command.CommandType = CommandType.StoredProcedure;
                     command.CommandText = "sp_succession_grandparent_recommendation";
 
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@child", Value = child, MySqlDbType = MySqlDbType.Int64 });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@parent", Value = parent, MySqlDbType = MySqlDbType.Int64 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@child", Value = child, MySqlDbType = MySqlDbType.Int32 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@parent", Value = parent, MySqlDbType = MySqlDbType.Int32 });
 
                     using (MySqlDataReader dr = await command.ExecuteReaderAsync())
                     {
@@ -52,8 +52,8 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
                         {
                             grandparentRecommendations.Add(new SpSuccessionGrandparentRecommendation 
                             {
-                                GrandparentRecommendationId = (int)dr["grandparent_recommendation_id"],
-                                GrandparentCompatibility = (int)dr["grandparent_compatibility"]
+                                GrandparentRecommendationId = int.Parse(dr["grandparent_recommendation_id"].ToString()),
+                                GrandparentCompatibility = int.Parse(dr["grandparent_compatibility"].ToString())
                             });
                         }
 

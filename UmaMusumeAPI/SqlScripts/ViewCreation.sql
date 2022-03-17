@@ -466,7 +466,7 @@ WHERE `td`.`category` = 191;
 CREATE
 VIEW vw_basic_story_event_mission_info
 AS
-SELECT `sem`.`id` AS `story_event_mission_id`
+SELECT DISTINCT `sem`.`id` AS `story_event_mission_id`
      , `sem`.`story_event_id` AS `story_event_id`
      , `sem`.`mission_type` AS `mission_type`
      , `sem`.`step_group_id` AS `step_group_id`

@@ -27,9 +27,9 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
         [HttpPost]
         public async Task<ActionResult<SpSuccessionPointSum>> GetSpSuccessionPointSum([FromBody] SpSuccessionPointSumDTO body)
         {
-            if (body.Child == 0L
-                || body.Parent1 == 0L || body.Grandparent1A == 0L || body.Grandparent1B == 0L
-                || body.Parent2 == 0L || body.Grandparent2A == 0L || body.Grandparent2B == 0L)
+            if (body.Child == 0
+                || body.Parent1 == 0 || body.Grandparent1A == 0 || body.Grandparent1B == 0
+                || body.Parent2 == 0 || body.Grandparent2A == 0 || body.Grandparent2B == 0)
             {
                 return NotFound();
             }
@@ -43,13 +43,13 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
                     command.CommandType = CommandType.StoredProcedure;
                     command.CommandText = "sp_succession_point_sum";
 
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@child", Value = body.Child, MySqlDbType = MySqlDbType.Int64 });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@parent1", Value = body.Parent1, MySqlDbType = MySqlDbType.Int64 });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_1a", Value = body.Grandparent1A, MySqlDbType = MySqlDbType.Int64 });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_1b", Value = body.Grandparent1B, MySqlDbType = MySqlDbType.Int64 });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@parent2", Value = body.Parent2, MySqlDbType = MySqlDbType.Int64 });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_2a", Value = body.Grandparent2A, MySqlDbType = MySqlDbType.Int64 });
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_2b", Value = body.Grandparent2B, MySqlDbType = MySqlDbType.Int64 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@child", Value = body.Child, MySqlDbType = MySqlDbType.Int32 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@parent1", Value = body.Parent1, MySqlDbType = MySqlDbType.Int32 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_1a", Value = body.Grandparent1A, MySqlDbType = MySqlDbType.Int32 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_1b", Value = body.Grandparent1B, MySqlDbType = MySqlDbType.Int32 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@parent2", Value = body.Parent2, MySqlDbType = MySqlDbType.Int32 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_2a", Value = body.Grandparent2A, MySqlDbType = MySqlDbType.Int32 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@grand_parent_2b", Value = body.Grandparent2B, MySqlDbType = MySqlDbType.Int32 });
 
                     using (MySqlDataReader dr = await command.ExecuteReaderAsync())
                     {
@@ -57,14 +57,14 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
 
                         return new SpSuccessionPointSum
                         {
-                            Parent1Child = (int)dr["parent1_child"],
-                            GrandparentAParent1 = (int)dr["grandparentA_parent1"],
-                            GrandparentBParent1 = (int)dr["grandparentB_parent1"],
-                            Parent2Child = (int)dr["parent2_child"],
-                            GrandparentAParent2 = (int)dr["grandparentA_parent2"],
-                            GrandparentBParent2 = (int)dr["grandparentB_parent2"],
-                            Parent1Parent2 = (int)dr["parent1_parent2"],
-                            PointSum = (int)dr["point_sum"]
+                            Parent1Child = int.Parse(dr["parent1_child"].ToString()),
+                            GrandparentAParent1 = int.Parse(dr["grandparentA_parent1"].ToString()),
+                            GrandparentBParent1 = int.Parse(dr["grandparentB_parent1"].ToString()),
+                            Parent2Child = int.Parse(dr["parent2_child"].ToString()),
+                            GrandparentAParent2 = int.Parse(dr["grandparentA_parent2"].ToString()),
+                            GrandparentBParent2 = int.Parse(dr["grandparentB_parent2"].ToString()),
+                            Parent1Parent2 = int.Parse(dr["parent1_parent2"].ToString()),
+                            PointSum = int.Parse(dr["point_sum"].ToString())
                         };
                     }
                 }

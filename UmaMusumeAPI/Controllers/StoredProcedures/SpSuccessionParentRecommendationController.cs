@@ -25,9 +25,9 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
 
         // GET: api/SpSuccessionParentRecommendation/1008
         [HttpGet("{child}")]
-        public async Task<ActionResult<IEnumerable<SpSuccessionParentRecommendation>>> GetSpSuccessionParentRecommendation(long child)
+        public async Task<ActionResult<IEnumerable<SpSuccessionParentRecommendation>>> GetSpSuccessionParentRecommendation(int child)
         {
-            if (child == 0L)
+            if (child == 0)
             {
                 return NotFound();
             }
@@ -41,7 +41,7 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
                     command.CommandType = CommandType.StoredProcedure;
                     command.CommandText = "sp_succession_parent_recommendation";
 
-                    command.Parameters.Add(new MySqlParameter { ParameterName = "@child", Value = child, MySqlDbType = MySqlDbType.Int64 });
+                    command.Parameters.Add(new MySqlParameter { ParameterName = "@child", Value = child, MySqlDbType = MySqlDbType.Int32 });
 
                     using (MySqlDataReader dr = await command.ExecuteReaderAsync())
                     {
@@ -51,8 +51,8 @@ namespace UmaMusumeAPI.Controllers.StoredProcedures
                         {
                             parentRecommendations.Add(new SpSuccessionParentRecommendation
                             {
-                                ParentRecommendationId = (int)dr["parent_recommendation_id"],
-                                ParentCompatibility = (int)dr["parent_compatibility"]
+                                ParentRecommendationId = int.Parse(dr["parent_recommendation_id"].ToString()),
+                                ParentCompatibility = int.Parse(dr["parent_compatibility"].ToString())
                             });
                         }
 

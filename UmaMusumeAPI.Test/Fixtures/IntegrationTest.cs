@@ -49,7 +49,9 @@ namespace UmaMusumeAPI.Test.Fixtures
         /// <returns></returns>
         protected async Task TestPostEndpointAsync<T, U>(string endpointUrl, bool hasSingleReturn, U requestBody, bool knownEmptyTable = false)
         {
-            object? response = await _client.PostAndDeserialize<T, U>(endpointUrl, requestBody);
+            object? response = hasSingleReturn
+                ? await _client.PostAndDeserialize<T, U>(endpointUrl, requestBody)
+                : await _client.PostAndDeserialize<IEnumerable<T>, U>(endpointUrl, requestBody);
 
             ValidateResponse<T>(response, hasSingleReturn, knownEmptyTable);
         }

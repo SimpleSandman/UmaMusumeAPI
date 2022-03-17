@@ -350,7 +350,7 @@ namespace UmaMusumeAPI.Test
         [Trait("EndpointType", "Basic")]
         [InlineData("Special Week", true)]
         [InlineData("スペシャルウィーク", false)]
-        public async Task PostBasicTextDataEnglishQuery(string searchQuery, bool isEnglishQuery)
+        public async Task PostBasicTextDataEnglish(string searchQuery, bool isEnglishQuery)
         {
             string endpointUrl = "BasicTextDataEnglish";
             BasicTextEnglishDTO englishRequestBody = new BasicTextEnglishDTO 
