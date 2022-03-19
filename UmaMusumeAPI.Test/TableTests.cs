@@ -1965,10 +1965,10 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeRestrictSupport", false)]
-        //[InlineData("SingleModeRestrictSupport/1", true)]
+        [InlineData("SingleModeRestrictSupport/1", true)]
         public async Task GetSingleModeRestrictSupport(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SingleModeRestrictSupport>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeRestrictSupport>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2460,10 +2460,10 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SupportCardGroup", false)]
-        //[InlineData("SupportCardGroup/1", true)]
+        [InlineData("SupportCardGroup/1", true)]
         public async Task GetSupportCardGroup(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SupportCardGroup>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SupportCardGroup>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
