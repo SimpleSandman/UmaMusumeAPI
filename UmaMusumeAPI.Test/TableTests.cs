@@ -398,6 +398,24 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("ChampionsNewsWinComment", false)]
+        [InlineData("ChampionsNewsWinComment/1", true)]
+        public async Task GetChampionsNewsWinComment(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<ChampionsNewsWinComment>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("ChampionsNewsWinTitle", false)]
+        [InlineData("ChampionsNewsWinTitle/1", true)]
+        public async Task GetChampionsNewsWinTitle(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<ChampionsNewsWinTitle>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("ChampionsRaceCondition", false)]
         [InlineData("ChampionsRaceCondition/1", false)]
         public async Task GetChampionsRaceCondition(string endpointUrl, bool hasSingleReturn)
@@ -623,6 +641,15 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("DailyLegendRace", false)]
+        [InlineData("DailyLegendRace/10001", true)]
+        public async Task GetDailyLegendRace(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<DailyLegendRace>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("DailyPack", false)]
         [InlineData("DailyPack/16", false)]
         public async Task GetDailyPack(string endpointUrl, bool hasSingleReturn)
@@ -709,6 +736,78 @@ namespace UmaMusumeAPI.Test
         public async Task GetFacialMouthChange(string endpointUrl, bool hasSingleReturn)
         {
             await TestGetEndpointAsync<FacialMouthChange>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("FanRaidAllReward", false)]
+        //[InlineData("FanRaidAllReward/1", true)]
+        public async Task GetFanRaidAllReward(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<FanRaidAllReward>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("FanRaidBonusChara", false)]
+        //[InlineData("FanRaidBonusChara/1", true)]
+        public async Task GetFanRaidBonusChara(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<FanRaidBonusChara>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("FanRaidBonusSupportCard", false)]
+        //[InlineData("FanRaidBonusSupportCard/1", true)]
+        public async Task GetFanRaidBonusSupportCard(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<FanRaidBonusSupportCard>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("FanRaidData", false)]
+        //[InlineData("FanRaidData/1", true)]
+        public async Task GetFanRaidData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<FanRaidData>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("FanRaidIndividualReward", false)]
+        //[InlineData("FanRaidIndividualReward/1", true)]
+        public async Task GetFanRaidIndividualReward(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<FanRaidIndividualReward>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("FanRaidStoryData", false)]
+        //[InlineData("FanRaidStoryData/1", true)]
+        public async Task GetFanRaidStoryData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<FanRaidStoryData>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("FanRaidTopChara", false)]
+        //[InlineData("FanRaidTopChara/1", true)]
+        public async Task GetFanRaidTopChara(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<FanRaidTopChara>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("FanRaidTopData", false)]
+        //[InlineData("FanRaidTopData/1", true)]
+        public async Task GetFanRaidTopData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<FanRaidTopData>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]
