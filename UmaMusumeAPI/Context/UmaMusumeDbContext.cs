@@ -8371,6 +8371,10 @@ namespace UmaMusumeAPI.Context
                     .ValueGeneratedNever()
                     .HasColumnName("id");
 
+                entity.Property(e => e.Difficulty)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("difficulty");
+
                 entity.Property(e => e.EntrytableBgmCueName)
                     .IsRequired()
                     .HasColumnType("text")
@@ -12474,6 +12478,10 @@ namespace UmaMusumeAPI.Context
                     .IsRequired()
                     .HasColumnType("text")
                     .HasColumnName("condition_2");
+
+                entity.Property(e => e.DisableCountCondition)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("disable_count_condition");
 
                 entity.Property(e => e.DisableSinglemode)
                     .HasColumnType("int(11)")

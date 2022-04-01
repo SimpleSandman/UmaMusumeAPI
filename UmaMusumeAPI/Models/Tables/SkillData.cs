@@ -74,5 +74,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int DisableSinglemode { get; set; }
         public int StartDate { get; set; }
         public int EndDate { get; set; }
+        public int DisableCountCondition { get; set; }
     }
 }
