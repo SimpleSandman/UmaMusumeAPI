@@ -162,12 +162,14 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<MobData> MobData { get; set; }
         public virtual DbSet<MobDressColorSet> MobDressColorSets { get; set; }
         public virtual DbSet<MobHairColorSet> MobHairColorSets { get; set; }
+        public virtual DbSet<NameCardBg> NameCardBgs { get; set; }
         public virtual DbSet<NeedPieceNumData> NeedPieceNumData { get; set; }
         public virtual DbSet<Nickname> Nicknames { get; set; }
         public virtual DbSet<NoteProfile> NoteProfiles { get; set; }
         public virtual DbSet<NoteProfileTextType> NoteProfileTextTypes { get; set; }
         public virtual DbSet<PieceData> PieceData { get; set; }
         public virtual DbSet<PriceChange> PriceChanges { get; set; }
+        public virtual DbSet<ProfileCardBg> ProfileCardBgs { get; set; }
         public virtual DbSet<Race> Races { get; set; }
         public virtual DbSet<RaceBgm> RaceBgms { get; set; }
         public virtual DbSet<RaceBgmCutinExtensionTime> RaceBgmCutinExtensionTimes { get; set; }
@@ -8029,6 +8031,60 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("tail_toon_color_r2");
             });
 
+            modelBuilder.Entity<NameCardBg>(entity =>
+            {
+                entity.ToTable("name_card_bg");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BgGroup)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_group");
+
+                entity.Property(e => e.BgId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_id");
+
+                entity.Property(e => e.BgSub)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_sub");
+
+                entity.Property(e => e.Height)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("height");
+
+                entity.Property(e => e.Order)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("order");
+
+                entity.Property(e => e.OtherGroup)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("other_group");
+
+                entity.Property(e => e.PosX)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("pos_x");
+
+                entity.Property(e => e.PosY)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("pos_y");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.TimeGroup)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("time_group");
+
+                entity.Property(e => e.Width)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("width");
+            });
+
             modelBuilder.Entity<NeedPieceNumData>(entity =>
             {
                 entity.ToTable("need_piece_num_data");
@@ -8204,6 +8260,32 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.PayItemNum)
                     .HasColumnType("int(11)")
                     .HasColumnName("pay_item_num");
+            });
+
+            modelBuilder.Entity<ProfileCardBg>(entity =>
+            {
+                entity.ToTable("profile_card_bg");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BackgroundId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("background_id");
+
+                entity.Property(e => e.CardType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("card_type");
+
+                entity.Property(e => e.SortId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("sort_id");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
             });
 
             modelBuilder.Entity<Race>(entity =>
