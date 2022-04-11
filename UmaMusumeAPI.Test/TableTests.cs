@@ -1181,6 +1181,15 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("LiveExtraData", false)]
+        //[InlineData("LiveExtraData/1001", true)]
+        public async Task GetLiveExtraData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<LiveExtraData>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("LivePermissionData", false)]
         [InlineData("LivePermissionData/1004", false)]
         public async Task GetLivePermissionData(string endpointUrl, bool hasSingleReturn)
@@ -1353,10 +1362,10 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("NameCardBg", false)]
-        //[InlineData("NameCardBg/1", true)]
+        [InlineData("NameCardBg/2001", true)]
         public async Task GetNameCardBg(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<NameCardBg>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<NameCardBg>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1416,10 +1425,10 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("ProfileCardBg", false)]
-        //[InlineData("ProfileCardBg/1", true)]
+        [InlineData("ProfileCardBg/1", true)]
         public async Task GetProfileCardBg(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<ProfileCardBg>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<ProfileCardBg>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]

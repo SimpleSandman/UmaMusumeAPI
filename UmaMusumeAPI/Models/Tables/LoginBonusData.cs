@@ -11,5 +11,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int DispOrder { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
+        public int StampId { get; set; }
     }
 }

@@ -143,6 +143,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<LimitedExchangeReward> LimitedExchangeRewards { get; set; }
         public virtual DbSet<LimitedExchangeRewardOdd> LimitedExchangeRewardOdds { get; set; }
         public virtual DbSet<LiveData> LiveData { get; set; }
+        public virtual DbSet<LiveExtraData> LiveExtraData { get; set; }
         public virtual DbSet<LivePermissionData> LivePermissionData { get; set; }
         public virtual DbSet<LoginBonusData> LoginBonusData { get; set; }
         public virtual DbSet<LoginBonusDetail> LoginBonusDetails { get; set; }
@@ -6722,6 +6723,42 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("title_color_top");
             });
 
+            modelBuilder.Entity<LiveExtraData>(entity =>
+            {
+                entity.ToTable("live_extra_data");
+
+                entity.HasIndex(e => e.MusicId, "live_extra_data_0_music_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ConditionType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_type");
+
+                entity.Property(e => e.ConditionValue1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_value_1");
+
+                entity.Property(e => e.ConditionValue2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_value_2");
+
+                entity.Property(e => e.GroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("group_id");
+
+                entity.Property(e => e.MusicId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("music_id");
+
+                entity.Property(e => e.NextMusicId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("next_music_id");
+            });
+
             modelBuilder.Entity<LivePermissionData>(entity =>
             {
                 entity.HasKey(e => new { e.MusicId, e.CharaId })
@@ -6776,6 +6813,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Type)
                     .HasColumnType("int(11)")
                     .HasColumnName("type");
+
+                entity.Property(e => e.StampId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("stamp_id");
             });
 
             modelBuilder.Entity<LoginBonusDetail>(entity =>
@@ -10250,6 +10291,10 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("int(11)")
                     .HasColumnName("item_num");
 
+                entity.Property(e => e.PrizeType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("prize_type");
+
                 entity.Property(e => e.Rate)
                     .HasColumnType("int(11)")
                     .HasColumnName("rate");
@@ -10273,6 +10318,10 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("int(11)")
                     .HasColumnName("difficulty");
 
+                entity.Property(e => e.AdditionSkill)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("addition_skill");
+
                 entity.Property(e => e.ConditionType)
                     .HasColumnType("int(11)")
                     .HasColumnName("condition_type");
@@ -10293,6 +10342,10 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("int(11)")
                     .HasColumnName("continue_flag");
 
+                entity.Property(e => e.DescriptionId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("description_id");
+
                 entity.Property(e => e.DifficultyIndex)
                     .HasColumnType("int(11)")
                     .HasColumnName("difficulty_index");
@@ -10304,6 +10357,18 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.DifficultyRate)
                     .HasColumnType("int(11)")
                     .HasColumnName("difficulty_rate");
+
+                entity.Property(e => e.FirstClearItemCategory)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("firstclear_item_category");
+
+                entity.Property(e => e.FirstClearItemId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("firstclear_item_id");
+
+                entity.Property(e => e.FirstClearNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("firstclear_num");
 
                 entity.Property(e => e.GaugeRate)
                     .HasColumnType("int(11)")
@@ -10320,6 +10385,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.MaxNum)
                     .HasColumnType("int(11)")
                     .HasColumnName("max_num");
+
+                entity.Property(e => e.ResultType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("result_type");
 
                 entity.Property(e => e.SpecialFlag)
                     .HasColumnType("int(11)")

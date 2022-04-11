@@ -12,5 +12,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int ItemId { get; set; }
         public int ItemNum { get; set; }
         public int Rate { get; set; }
+        public int PrizeType { get; set; }
     }
 }

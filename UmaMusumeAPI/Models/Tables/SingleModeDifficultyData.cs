@@ -17,5 +17,11 @@
         public int ItemCategory { get; set; }
         public int ItemId { get; set; }
         public int MaxNum { get; set; }
+        public int DescriptionId { get; set; }
+        public int ResultType { get; set; }
+        public int AdditionSkill { get; set; }
+        public int FirstClearItemCategory { get; set; }
+        public int FirstClearItemId { get; set; }
+        public int FirstClearNum { get; set; }
     }
 }
