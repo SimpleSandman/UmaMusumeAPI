@@ -275,6 +275,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SkillSet> SkillSets { get; set; }
         public virtual DbSet<StoryEventBingoReward> StoryEventBingoRewards { get; set; }
         public virtual DbSet<StoryEventBonusCard> StoryEventBonusCards { get; set; }
+        public virtual DbSet<StoryEventBonusGroupSupportCard> StoryEventBonusGroupSupportCards { get; set; }
         public virtual DbSet<StoryEventBonusSupportCard> StoryEventBonusSupportCards { get; set; }
         public virtual DbSet<StoryEventData> StoryEventData { get; set; }
         public virtual DbSet<StoryEventMission> StoryEventMissions { get; set; }
@@ -4242,6 +4243,14 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.UseSeason)
                     .HasColumnType("int(11)")
                     .HasColumnName("use_season");
+
+                entity.Property(e => e.CostumeType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("costume_type");
+
+                entity.Property(e => e.UseDressChange)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("use_dress_change");
             });
 
             modelBuilder.Entity<EventMotionData>(entity =>
@@ -12973,6 +12982,63 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StoryEventId)
                     .HasColumnType("int(11)")
                     .HasColumnName("story_event_id");
+            });
+
+            modelBuilder.Entity<StoryEventBonusGroupSupportCard>(entity =>
+            {
+                entity.ToTable("story_event_bonus_group_support_card");
+
+                entity.HasIndex(e => e.StoryEventId, "story_event_bonus_group_support_card_0_story_event_id");
+
+                entity.HasIndex(e => e.SupportCardId, "story_event_bonus_group_support_card_0_support_card_id");
+
+                entity.HasIndex(e => new { e.StoryEventId, e.CharaId, e.SupportCardId }, "story_event_id")
+                    .IsUnique();
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.Limit0)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("limit_0");
+
+                entity.Property(e => e.Limit1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("limit_1");
+
+                entity.Property(e => e.Limit2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("limit_2");
+
+                entity.Property(e => e.Limit3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("limit_3");
+
+                entity.Property(e => e.Limit4)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("limit_4");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.StoryEventId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_event_id");
+
+                entity.Property(e => e.SupportCardId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("support_card_id");
             });
 
             modelBuilder.Entity<StoryEventBonusSupportCard>(entity =>

@@ -2360,6 +2360,15 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("StoryEventBonusGroupSupportCard", false)]
+        //[InlineData("StoryEventBonusGroupSupportCard/1", true)]
+        public async Task GetStoryEventBonusGroupSupportCard(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<StoryEventBonusGroupSupportCard>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("StoryEventBonusCard", false)]
         [InlineData("StoryEventBonusCard/1", true)]
         public async Task GetStoryEventBonusCard(string endpointUrl, bool hasSingleReturn)
