@@ -10267,6 +10267,22 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.ResultMin)
                     .HasColumnType("int(11)")
                     .HasColumnName("result_min");
+
+                entity.Property(e => e.ScenarioId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("scenario_id");
+
+                entity.Property(e => e.AddConditionType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("add_condition_type");
+
+                entity.Property(e => e.AddConditionMin)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("add_condition_min");
+
+                entity.Property(e => e.AddConditionMax)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("add_condition_max");
             });
 
             modelBuilder.Entity<SingleModeDifficultyBoxReward>(entity =>
@@ -10481,6 +10497,14 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StandMotion)
                     .HasColumnType("int(11)")
                     .HasColumnName("stand_motion");
+
+                entity.Property(e => e.ConsumeTpRatio)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("consume_tp_ratio");
+
+                entity.Property(e => e.ConsumeTpBonusRatio)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("consume_tp_bonus_ratio");
             });
 
             modelBuilder.Entity<SingleModeEvaluation>(entity =>
@@ -11774,6 +11798,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StatusValue)
                     .HasColumnType("int(11)")
                     .HasColumnName("status_value");
+
+                entity.Property(e => e.SolvableType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("solvable_type");
             });
 
             modelBuilder.Entity<SingleModeSpecialChara>(entity =>

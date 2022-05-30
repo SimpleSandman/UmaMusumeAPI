@@ -19,5 +19,7 @@
         public int RewardSetId { get; set; }
         public int GaugeMax { get; set; }
         public int GaugeUp { get; set; }
+        public int ConsumeTpRatio { get; set; }
+        public int ConsumeTpBonusRatio { get; set; }
     }
 }

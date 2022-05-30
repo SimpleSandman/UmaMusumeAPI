@@ -9,5 +9,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int NeedSkillPoint { get; set; }
         public int StatusType { get; set; }
         public int StatusValue { get; set; }
+        public int SolvableType { get; set; }
     }
 }

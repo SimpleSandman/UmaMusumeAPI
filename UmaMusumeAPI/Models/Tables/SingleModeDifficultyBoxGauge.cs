@@ -10,5 +10,9 @@ namespace UmaMusumeAPI.Models.Tables
         public int ResultMin { get; set; }
         public int ResultMax { get; set; }
         public int GaugeRate { get; set; }
+        public int ScenarioId { get; set; }
+        public int AddConditionType { get; set; }
+        public int AddConditionMin { get; set; }
+        public int AddConditionMax { get; set; }
     }
 }
