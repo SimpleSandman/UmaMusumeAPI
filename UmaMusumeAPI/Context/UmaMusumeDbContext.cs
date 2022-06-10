@@ -173,6 +173,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<ProfileCardBg> ProfileCardBgs { get; set; }
         public virtual DbSet<Race> Races { get; set; }
         public virtual DbSet<RaceBgm> RaceBgms { get; set; }
+        public virtual DbSet<RaceBgmCutin> RaceBgmCutins { get; set; }
         public virtual DbSet<RaceBgmCutinExtensionTime> RaceBgmCutinExtensionTimes { get; set; }
         public virtual DbSet<RaceBgmPattern> RaceBgmPatterns { get; set; }
         public virtual DbSet<RaceBibColor> RaceBibColors { get; set; }
@@ -8534,6 +8535,59 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("single_mode_route_race_id");
             });
 
+            modelBuilder.Entity<RaceBgmCutin>(entity =>
+            {
+                entity.ToTable("race_bgm_cutin");
+
+                entity.HasIndex(e => e.BgmGroupId, "race_bgm_cutin_0_bgm_group_id");
+
+                entity.HasIndex(e => e.CardId, "race_bgm_cutin_0_card_id")
+                    .IsUnique();
+
+                entity.HasIndex(e => new { e.CardId, e.BgmGroupId }, "race_bgm_cutin_0_card_id_1_bgm_group_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BgmGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bgm_group_id");
+
+                entity.Property(e => e.CardId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("card_id");
+
+                entity.Property(e => e.ExclusiveControl)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("exclusive_control");
+
+                entity.Property(e => e.FadeoutTime)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("fadeout_time");
+
+                entity.Property(e => e.LongCutinBgmCueName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("long_cutin_bgm_cue_name");
+
+                entity.Property(e => e.LongCutinBgmCuesheetName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("long_cutin_bgm_cuesheet_name");
+
+                entity.Property(e => e.ShortCutinBgmCueName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("short_cutin_bgm_cue_name");
+
+                entity.Property(e => e.ShortCutinBgmCuesheetName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("short_cutin_bgm_cuesheet_name");
+            });
+
             modelBuilder.Entity<RaceBgmCutinExtensionTime>(entity =>
             {
                 entity.ToTable("race_bgm_cutin_extension_time");
@@ -10785,6 +10839,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.MotionId)
                     .HasColumnType("int(11)")
                     .HasColumnName("motion_id");
+
+                entity.Property(e => e.UseFlag)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("use_flag");
             });
 
             modelBuilder.Entity<SingleModeFreeTrainingPlate>(entity =>

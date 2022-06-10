@@ -1451,6 +1451,15 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("RaceBgmCutin", false)]
+        //[InlineData("RaceBgmCutin/1", true)]
+        public async Task GetRaceBgmCutin(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<RaceBgmCutin>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("RaceBgmCutinExtensionTime", false)]
         [InlineData("RaceBgmCutinExtensionTime/1", true)]
         public async Task GetRaceBgmCutinExtensionTime(string endpointUrl, bool hasSingleReturn)

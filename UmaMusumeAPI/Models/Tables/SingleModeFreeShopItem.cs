@@ -13,5 +13,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int EffectGroup { get; set; }
         public int EffectPriority { get; set; }
         public int MotionId { get; set; }
+        public int UseFlag { get; set; }
     }
 }
