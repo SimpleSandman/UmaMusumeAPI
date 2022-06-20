@@ -138,6 +138,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<LegendRace> LegendRaces { get; set; }
         public virtual DbSet<LegendRaceBilling> LegendRaceBillings { get; set; }
         public virtual DbSet<LegendRaceBossNpc> LegendRaceBossNpcs { get; set; }
+        public virtual DbSet<LegendRaceCuttCharaData> LegendRaceCuttCharaData { get; set; }
         public virtual DbSet<LegendRaceNpc> LegendRaceNpcs { get; set; }
         public virtual DbSet<LimitedExchange> LimitedExchanges { get; set; }
         public virtual DbSet<LimitedExchangeReward> LimitedExchangeRewards { get; set; }
@@ -6433,6 +6434,38 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Wiz)
                     .HasColumnType("int(11)")
                     .HasColumnName("wiz");
+            });
+
+            modelBuilder.Entity<LegendRaceCuttCharaData>(entity =>
+            {
+                entity.ToTable("legend_race_cutt_chara_data");
+
+                entity.HasIndex(e => new { e.SubId, e.CharaNum }, "legend_race_cutt_chara_data_0_sub_id_1_chara_num");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.CharaNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_num");
+
+                entity.Property(e => e.SubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("sub_id");
+
+                entity.Property(e => e.TargetListIndex)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("target_list_index");
+
+                entity.Property(e => e.TargetTimeline)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("target_timeline");
             });
 
             modelBuilder.Entity<LegendRaceNpc>(entity =>

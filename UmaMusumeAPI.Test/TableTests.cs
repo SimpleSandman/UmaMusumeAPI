@@ -1136,6 +1136,15 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("LegendRaceCuttCharaData", false)]
+        [InlineData("LegendRaceCuttCharaData/1", true)]
+        public async Task GetLegendRaceCuttCharaData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<LegendRaceCuttCharaData>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("LegendRaceNpc", false)]
         [InlineData("LegendRaceNpc/101", true)]
         public async Task GetLegendRaceNpc(string endpointUrl, bool hasSingleReturn)
