@@ -1191,10 +1191,10 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("LiveExtraData", false)]
-        //[InlineData("LiveExtraData/1001", true)]
+        [InlineData("LiveExtraData/1", true)]
         public async Task GetLiveExtraData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<LiveExtraData>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<LiveExtraData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
