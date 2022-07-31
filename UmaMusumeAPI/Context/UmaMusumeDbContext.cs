@@ -308,6 +308,21 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SupportCardLimitBreak> SupportCardLimitBreaks { get; set; }
         public virtual DbSet<SupportCardTeamScoreBonus> SupportCardTeamScoreBonus { get; set; }
         public virtual DbSet<SupportCardUniqueEffect> SupportCardUniqueEffects { get; set; }
+        public virtual DbSet<TeamBuildingBasicReward> TeamBuildingBasicRewards { get; set; }
+        public virtual DbSet<TeamBuildingCharaCount> TeamBuildingCharaCounts { get; set; }
+        public virtual DbSet<TeamBuildingCharaGroup> TeamBuildingCharaGroups { get; set; }
+        public virtual DbSet<TeamBuildingCollectionChara> TeamBuildingCollectionCharas { get; set; }
+        public virtual DbSet<TeamBuildingCollectionSet> TeamBuildingCollectionSets { get; set; }
+        public virtual DbSet<TeamBuildingConsecutiveWin> TeamBuildingConsecutiveWins { get; set; }
+        public virtual DbSet<TeamBuildingData> TeamBuildingData { get; set; }
+        public virtual DbSet<TeamBuildingDiscountPoint> TeamBuildingDiscountPoints { get; set; }
+        public virtual DbSet<TeamBuildingRace> TeamBuildingRaces { get; set; }
+        public virtual DbSet<TeamBuildingRaceNpc> TeamBuildingRaceNpcs { get; set; }
+        public virtual DbSet<TeamBuildingRank> TeamBuildingRanks { get; set; }
+        public virtual DbSet<TeamBuildingRankRewardGroup> TeamBuildingRankRewardGroups { get; set; }
+        public virtual DbSet<TeamBuildingRetryBonu> TeamBuildingRetryBonus { get; set; }
+        public virtual DbSet<TeamBuildingScoutPoint> TeamBuildingScoutPoints { get; set; }
+        public virtual DbSet<TeamBuildingWinReward> TeamBuildingWinRewards { get; set; }
         public virtual DbSet<TeamStadium> TeamStadia { get; set; }
         public virtual DbSet<TeamStadiumBgm> TeamStadiumBgms { get; set; }
         public virtual DbSet<TeamStadiumClass> TeamStadiumClasses { get; set; }
@@ -14466,6 +14481,498 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Value14)
                     .HasColumnType("int(11)")
                     .HasColumnName("value_1_4");
+            });
+
+            modelBuilder.Entity<TeamBuildingBasicReward>(entity =>
+            {
+                entity.ToTable("team_building_basic_reward");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ItemCategory)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.ItemNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num");
+
+                entity.Property(e => e.RewardValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("reward_value");
+
+                entity.Property(e => e.TeamRankMax)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("team_rank_max");
+
+                entity.Property(e => e.TeamRankMin)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("team_rank_min");
+            });
+
+            modelBuilder.Entity<TeamBuildingCharaCount>(entity =>
+            {
+                entity.ToTable("team_building_chara_count");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BonusValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bonus_value");
+
+                entity.Property(e => e.CollectionCharaMax)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("collection_chara_max");
+
+                entity.Property(e => e.CollectionCharaMin)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("collection_chara_min");
+            });
+
+            modelBuilder.Entity<TeamBuildingCharaGroup>(entity =>
+            {
+                entity.ToTable("team_building_chara_group");
+
+                entity.HasIndex(e => e.CharaGroupId, "team_building_chara_group_0_chara_group_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_group_id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+            });
+
+            modelBuilder.Entity<TeamBuildingCollectionChara>(entity =>
+            {
+                entity.ToTable("team_building_collection_chara");
+
+                entity.HasIndex(e => e.CharaId, "team_building_collection_chara_0_chara_id");
+
+                entity.HasIndex(e => e.TeamBuildingEventId, "team_building_collection_chara_0_team_building_event_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BonusType1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bonus_type_1");
+
+                entity.Property(e => e.BonusType2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bonus_type_2");
+
+                entity.Property(e => e.BonusValue1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bonus_value_1");
+
+                entity.Property(e => e.BonusValue2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bonus_value_2");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.ConditionType1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_type_1");
+
+                entity.Property(e => e.ConditionType2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_type_2");
+
+                entity.Property(e => e.TeamBuildingEventId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("team_building_event_id");
+            });
+
+            modelBuilder.Entity<TeamBuildingCollectionSet>(entity =>
+            {
+                entity.ToTable("team_building_collection_set");
+
+                entity.HasIndex(e => e.TeamBuildingEventId, "team_building_collection_set_0_team_building_event_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_group_id");
+
+                entity.Property(e => e.SkillId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("skill_id");
+
+                entity.Property(e => e.TeamBuildingEventId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("team_building_event_id");
+            });
+
+            modelBuilder.Entity<TeamBuildingConsecutiveWin>(entity =>
+            {
+                entity.ToTable("team_building_consecutive_wins");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BonusValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bonus_value");
+
+                entity.Property(e => e.ConsecutiveWinsNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("consecutive_wins_num");
+            });
+
+            modelBuilder.Entity<TeamBuildingData>(entity =>
+            {
+                entity.HasKey(e => e.TeamBuildingEventId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("team_building_data");
+
+                entity.Property(e => e.TeamBuildingEventId)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("team_building_event_id");
+
+                entity.Property(e => e.BgId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_id");
+
+                entity.Property(e => e.BgSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_sub_id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.EndingDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("ending_date");
+
+                entity.Property(e => e.NoticeDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("notice_date");
+
+                entity.Property(e => e.StaminaAdd)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("stamina_add");
+
+                entity.Property(e => e.StaminaAddTime)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("stamina_add_time");
+
+                entity.Property(e => e.StaminaDefault)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("stamina_default");
+
+                entity.Property(e => e.StaminaMax)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("stamina_max");
+
+                entity.Property(e => e.StartAddScoutPoint)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_add_scout_point");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
+            });
+
+            modelBuilder.Entity<TeamBuildingDiscountPoint>(entity =>
+            {
+                entity.ToTable("team_building_discount_point");
+
+                entity.HasIndex(e => e.TeamRank, "team_building_discount_point_0_team_rank")
+                    .IsUnique();
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.DiscountValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("discount_value");
+
+                entity.Property(e => e.TeamRank)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("team_rank");
+            });
+
+            modelBuilder.Entity<TeamBuildingRace>(entity =>
+            {
+                entity.ToTable("team_building_race");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BgId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_id");
+
+                entity.Property(e => e.BgSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_sub_id");
+
+                entity.Property(e => e.RaceInstanceId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("race_instance_id");
+
+                entity.Property(e => e.RotationOrder)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("rotation_order");
+
+                entity.Property(e => e.TeamBuildingEventId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("team_building_event_id");
+            });
+
+            modelBuilder.Entity<TeamBuildingRaceNpc>(entity =>
+            {
+                entity.ToTable("team_building_race_npc");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.Guts)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("guts");
+
+                entity.Property(e => e.MobId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("mob_id");
+
+                entity.Property(e => e.NpcGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("npc_group_id");
+
+                entity.Property(e => e.Pow)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("pow");
+
+                entity.Property(e => e.ProperDistanceLong)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("proper_distance_long");
+
+                entity.Property(e => e.ProperDistanceMiddle)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("proper_distance_middle");
+
+                entity.Property(e => e.ProperDistanceMile)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("proper_distance_mile");
+
+                entity.Property(e => e.ProperDistanceShort)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("proper_distance_short");
+
+                entity.Property(e => e.ProperGroundDirt)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("proper_ground_dirt");
+
+                entity.Property(e => e.ProperGroundTurf)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("proper_ground_turf");
+
+                entity.Property(e => e.ProperRunningStyleNige)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("proper_running_style_nige");
+
+                entity.Property(e => e.ProperRunningStyleOikomi)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("proper_running_style_oikomi");
+
+                entity.Property(e => e.ProperRunningStyleSashi)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("proper_running_style_sashi");
+
+                entity.Property(e => e.ProperRunningStyleSenko)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("proper_running_style_senko");
+
+                entity.Property(e => e.RaceDressId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("race_dress_id");
+
+                entity.Property(e => e.SkillSetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("skill_set_id");
+
+                entity.Property(e => e.Speed)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("speed");
+
+                entity.Property(e => e.Stamina)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("stamina");
+
+                entity.Property(e => e.Wiz)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("wiz");
+            });
+
+            modelBuilder.Entity<TeamBuildingRank>(entity =>
+            {
+                entity.ToTable("team_building_rank");
+
+                entity.HasIndex(e => e.TeamRank, "team_building_rank_0_team_rank");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.RewardGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("reward_group_id");
+
+                entity.Property(e => e.TeamMaxValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("team_max_value");
+
+                entity.Property(e => e.TeamMinValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("team_min_value");
+
+                entity.Property(e => e.TeamRank)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("team_rank");
+            });
+
+            modelBuilder.Entity<TeamBuildingRankRewardGroup>(entity =>
+            {
+                entity.ToTable("team_building_rank_reward_group");
+
+                entity.HasIndex(e => e.RewardGroupId, "team_building_rank_reward_group_0_reward_group_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ItemCategory)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.ItemNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num");
+
+                entity.Property(e => e.RewardGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("reward_group_id");
+            });
+
+            modelBuilder.Entity<TeamBuildingRetryBonu>(entity =>
+            {
+                entity.ToTable("team_building_retry_bonus");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BonusRate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bonus_rate");
+
+                entity.Property(e => e.ResimulateNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("resimulate_num");
+
+                entity.Property(e => e.RetryMax)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("retry_max");
+
+                entity.Property(e => e.RetryMin)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("retry_min");
+            });
+
+            modelBuilder.Entity<TeamBuildingScoutPoint>(entity =>
+            {
+                entity.ToTable("team_building_scout_point");
+
+                entity.HasIndex(e => e.CharaRank, "team_building_scout_point_0_chara_rank")
+                    .IsUnique();
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaRank)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_rank");
+
+                entity.Property(e => e.ScoutValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("scout_value");
+            });
+
+            modelBuilder.Entity<TeamBuildingWinReward>(entity =>
+            {
+                entity.ToTable("team_building_win_reward");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ItemCategory)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.ItemNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num");
+
+                entity.Property(e => e.WinLoopNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("win_loop_num");
             });
 
             modelBuilder.Entity<TeamStadium>(entity =>
