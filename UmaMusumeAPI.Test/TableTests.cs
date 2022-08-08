@@ -2666,6 +2666,141 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingBasicReward", false)]
+        [InlineData("TeamBuildingBasicReward/1", true)]
+        public async Task GetTeamBuildingBasicReward(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingBasicReward>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingCharaCount", false)]
+        [InlineData("TeamBuildingCharaCount/1", true)]
+        public async Task GetTeamBuildingCharaCount(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingCharaCount>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingCharaGroup", false)]
+        [InlineData("TeamBuildingCharaGroup/1", true)]
+        public async Task GetTeamBuildingCharaGroup(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingCharaGroup>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingCollectionChara", false)]
+        [InlineData("TeamBuildingCollectionChara/1", true)]
+        public async Task GetTeamBuildingCollectionChara(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingCollectionChara>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingCollectionSet", false)]
+        [InlineData("TeamBuildingCollectionSet/1", true)]
+        public async Task GetTeamBuildingCollectionSet(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingCollectionSet>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingConsecutiveWin", false)]
+        [InlineData("TeamBuildingConsecutiveWin/1", true)]
+        public async Task GetTeamBuildingConsecutiveWin(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingConsecutiveWin>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingData", false)]
+        [InlineData("TeamBuildingData/1001", true)]
+        public async Task GetTeamBuildingData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingData>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingDiscountPoint", false)]
+        [InlineData("TeamBuildingDiscountPoint/1", true)]
+        public async Task GetTeamBuildingDiscountPoint(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingDiscountPoint>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingRace", false)]
+        [InlineData("TeamBuildingRace/1", true)]
+        public async Task GetTeamBuildingRace(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingRace>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingRaceNpc", false)]
+        [InlineData("TeamBuildingRaceNpc/1", true)]
+        public async Task GetTeamBuildingRaceNpc(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingRaceNpc>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingRank", false)]
+        [InlineData("TeamBuildingRank/1", true)]
+        public async Task GetTeamBuildingRank(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingRank>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingRankRewardGroup", false)]
+        [InlineData("TeamBuildingRankRewardGroup/1", true)]
+        public async Task GetTeamBuildingRankRewardGroup(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingRankRewardGroup>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingRetryBonus", false)]
+        [InlineData("TeamBuildingRetryBonus/1", true)]
+        public async Task GetTeamBuildingRetryBonus(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingRetryBonus>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingScoutPoint", false)]
+        [InlineData("TeamBuildingScoutPoint/1", true)]
+        public async Task GetTeamBuildingScoutPoint(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingScoutPoint>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("TeamBuildingWinReward", false)]
+        [InlineData("TeamBuildingWinReward/1", true)]
+        public async Task GetTeamBuildingWinReward(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<TeamBuildingWinReward>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("TeamStadium", false)]
         [InlineData("TeamStadium/1", true)]
         public async Task GetTeamStadium(string endpointUrl, bool hasSingleReturn)

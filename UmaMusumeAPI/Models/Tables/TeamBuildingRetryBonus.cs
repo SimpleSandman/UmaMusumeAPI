@@ -3,7 +3,7 @@
 namespace UmaMusumeAPI.Models.Tables
 {
     [GeneratedController]
-    public class TeamBuildingRetryBonu
+    public class TeamBuildingRetryBonus
     {
         public int Id { get; set; }
         public int RetryMin { get; set; }

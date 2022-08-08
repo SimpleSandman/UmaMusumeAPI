@@ -14,5 +14,9 @@ namespace UmaMusumeAPI.Models.Tables
         public int BonusChara1 { get; set; }
         public int BonusChara2 { get; set; }
         public int BonusChara3 { get; set; }
+        public int GimmickType { get; set; }
+        public int GimmickTriggerSkill { get; set; }
+        public int GimmickMatchRaceAsset { get; set; }
+        public int GimmickUnmatchRaceAsset { get; set; }
     }
 }

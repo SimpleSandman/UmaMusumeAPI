@@ -12,5 +12,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int TurfVisionType { get; set; }
         public int FootsmokeColorType { get; set; }
         public int Area { get; set; }
+        public int GatePanelType { get; set; }
+        public int GateLampType { get; set; }
     }
 }

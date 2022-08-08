@@ -30,5 +30,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int ProperGroundTurf { get; set; }
         public int ProperGroundDirt { get; set; }
         public int SkillSetId { get; set; }
+        public int IsPlayer { get; set; }
+        public int ShowSkillType { get; set; }
     }
 }

@@ -75,5 +75,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int StartDate { get; set; }
         public int EndDate { get; set; }
         public int DisableCountCondition { get; set; }
+        public int IsGeneralSkill { get; set; }
     }
 }

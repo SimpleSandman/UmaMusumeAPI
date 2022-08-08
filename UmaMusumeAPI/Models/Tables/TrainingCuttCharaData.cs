@@ -13,5 +13,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int TargetTimeline { get; set; }
         public int TargetListIndex { get; set; }
         public int PropTarget { get; set; }
+        public int DressId { get; set; }
     }
 }

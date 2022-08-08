@@ -11,5 +11,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int Date { get; set; }
         public int Time { get; set; }
         public int RaceNumber { get; set; }
+        public int ClockTime { get; set; }
     }
 }

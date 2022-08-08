@@ -16,5 +16,6 @@ namespace UmaMusumeAPI.Models.Tables
         public string Url { get; set; }
         public int StartDate { get; set; }
         public int EndDate { get; set; }
+        public int PosIndex { get; set; }
     }
 }

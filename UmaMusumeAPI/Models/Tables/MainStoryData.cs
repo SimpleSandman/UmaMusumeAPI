@@ -31,5 +31,8 @@ namespace UmaMusumeAPI.Models.Tables
         public int AddRewardCategory1 { get; set; }
         public int AddRewardId1 { get; set; }
         public int AddRewardNum1 { get; set; }
+        public int PrevEpisodeIndex { get; set; }
+        public int NextEpisodeIndex { get; set; }
+        public int DisplayType { get; set; }
     }
 }

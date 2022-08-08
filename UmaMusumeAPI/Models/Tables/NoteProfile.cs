@@ -11,5 +11,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int LockType { get; set; }
         public int LockValue { get; set; }
         public int Sort { get; set; }
+        public int SecretFlg { get; set; }
     }
 }

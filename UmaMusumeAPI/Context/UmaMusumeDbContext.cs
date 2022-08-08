@@ -320,7 +320,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<TeamBuildingRaceNpc> TeamBuildingRaceNpcs { get; set; }
         public virtual DbSet<TeamBuildingRank> TeamBuildingRanks { get; set; }
         public virtual DbSet<TeamBuildingRankRewardGroup> TeamBuildingRankRewardGroups { get; set; }
-        public virtual DbSet<TeamBuildingRetryBonu> TeamBuildingRetryBonus { get; set; }
+        public virtual DbSet<TeamBuildingRetryBonus> TeamBuildingRetryBonus { get; set; }
         public virtual DbSet<TeamBuildingScoutPoint> TeamBuildingScoutPoints { get; set; }
         public virtual DbSet<TeamBuildingWinReward> TeamBuildingWinRewards { get; set; }
         public virtual DbSet<TeamStadium> TeamStadia { get; set; }
@@ -5476,6 +5476,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Width)
                     .HasColumnType("int(11)")
                     .HasColumnName("width");
+
+                entity.Property(e => e.PosIndex)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("pos_index");
             });
 
             modelBuilder.Entity<HomePropSetting>(entity =>
@@ -7094,6 +7098,18 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StoryType5)
                     .HasColumnType("int(11)")
                     .HasColumnName("story_type_5");
+
+                entity.Property(e => e.PrevEpisodeIndex)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("prev_episode_index");
+
+                entity.Property(e => e.NextEpisodeIndex)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("next_episode_index");
+
+                entity.Property(e => e.DisplayType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("display_type");
             });
 
             modelBuilder.Entity<MainStoryPart>(entity =>
@@ -7283,6 +7299,14 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Wiz)
                     .HasColumnType("int(11)")
                     .HasColumnName("wiz");
+
+                entity.Property(e => e.IsPlayer)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("is_player");
+
+                entity.Property(e => e.ShowSkillType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("show_skill_type");
             });
 
             modelBuilder.Entity<MainStoryRaceData>(entity =>
@@ -7325,6 +7349,22 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.RaceInstanceId)
                     .HasColumnType("int(11)")
                     .HasColumnName("race_instance_id");
+
+                entity.Property(e => e.GimmickType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gimmick_type");
+
+                entity.Property(e => e.GimmickTriggerSkill)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gimmick_trigger_skill");
+
+                entity.Property(e => e.GimmickMatchRaceAsset)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gimmick_match_race_asset");
+
+                entity.Property(e => e.GimmickUnmatchRaceAsset)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gimmick_unmatch_race_asset");
             });
 
             modelBuilder.Entity<MiniBg>(entity =>
@@ -8283,6 +8323,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.TextType)
                     .HasColumnType("int(11)")
                     .HasColumnName("text_type");
+
+                entity.Property(e => e.SecretFlg)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("secret_flg");
             });
 
             modelBuilder.Entity<NoteProfileTextType>(entity =>
@@ -9340,6 +9384,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Time)
                     .HasColumnType("int(11)")
                     .HasColumnName("time");
+
+                entity.Property(e => e.ClockTime)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("time");
             });
 
             modelBuilder.Entity<RaceJikkyoBase>(entity =>
@@ -9806,6 +9854,14 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.TurfVisionType)
                     .HasColumnType("int(11)")
                     .HasColumnName("turf_vision_type");
+
+                entity.Property(e => e.GatePanelType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gate_panel_type");
+
+                entity.Property(e => e.GateLampType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gate_lamp_type");
             });
 
             modelBuilder.Entity<RaceTrophy>(entity =>
@@ -12877,6 +12933,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.UniqueSkillId2)
                     .HasColumnType("int(11)")
                     .HasColumnName("unique_skill_id_2");
+
+                entity.Property(e => e.IsGeneralSkill)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("is_general_skill");
             });
 
             modelBuilder.Entity<SkillExp>(entity =>
@@ -14902,7 +14962,7 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("reward_group_id");
             });
 
-            modelBuilder.Entity<TeamBuildingRetryBonu>(entity =>
+            modelBuilder.Entity<TeamBuildingRetryBonus>(entity =>
             {
                 entity.ToTable("team_building_retry_bonus");
 
@@ -15871,6 +15931,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.TargetTimeline)
                     .HasColumnType("int(11)")
                     .HasColumnName("target_timeline");
+
+                entity.Property(e => e.DressId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("dress_id");
             });
 
             modelBuilder.Entity<TrainingCuttData>(entity =>
@@ -15933,6 +15997,42 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StartDate)
                     .HasColumnType("int(11)")
                     .HasColumnName("start_date");
+
+                entity.Property(e => e.LogoId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("logo_id");
+
+                entity.Property(e => e.BgId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_id");
+
+                entity.Property(e => e.BgSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_sub_id");
+
+                entity.Property(e => e.TutorialGuideId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("tutorial_guide_id");
+
+                entity.Property(e => e.BgmCueName)
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cue_name");
+
+                entity.Property(e => e.BgmCuesheetName)
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cuesheet_name");
+
+                entity.Property(e => e.TopTrigger)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("top_trigger");
+
+                entity.Property(e => e.FinishTrigger)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("finish_trigger");
+
+                entity.Property(e => e.ClearTrigger)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("clear_trigger");
             });
 
             modelBuilder.Entity<TransferEventDetail>(entity =>
