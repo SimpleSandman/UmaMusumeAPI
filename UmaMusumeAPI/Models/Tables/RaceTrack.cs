@@ -14,5 +14,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int Area { get; set; }
         public int GatePanelType { get; set; }
         public int GateLampType { get; set; }
+        public int BoardConditionType { get; set; }
     }
 }

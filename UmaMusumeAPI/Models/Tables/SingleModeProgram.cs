@@ -20,5 +20,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int NeedFanCount { get; set; }
         public int FanSetId { get; set; }
         public int RewardSetId { get; set; }
+        public int ReserveProgramId { get; set; }
+        public int RandomGroupId { get; set; }
     }
 }

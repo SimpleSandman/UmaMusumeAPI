@@ -20,5 +20,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int GoalFlower { get; set; }
         public int Audience { get; set; }
         public int EntryNum { get; set; }
+        public int IsDirtGrade { get; set; }
+        public int StartDate { get; set; }
     }
 }

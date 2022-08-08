@@ -21,5 +21,11 @@ namespace UmaMusumeAPI.Models.Tables
         public string LabelFontColor { get; set; }
         public string LabelBgColor { get; set; }
         public int CharaProgramChangeFlag { get; set; }
+        public int MaxSpeed { get; set; }
+        public int MaxStamina { get; set; }
+        public int MaxPow { get; set; }
+        public int MaxGuts { get; set; }
+        public int MaxWiz { get; set; }
+        public int GimmickDiscountRate { get; set; }
     }
 }

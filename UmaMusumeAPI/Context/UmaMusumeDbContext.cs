@@ -8501,6 +8501,14 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.ThumbnailId)
                     .HasColumnType("int(11)")
                     .HasColumnName("thumbnail_id");
+
+                entity.Property(e => e.IsDirtGrade)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("is_dirtgrade");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
             });
 
             modelBuilder.Entity<RaceBgm>(entity =>
@@ -9862,6 +9870,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.GateLampType)
                     .HasColumnType("int(11)")
                     .HasColumnName("gate_lamp_type");
+
+                entity.Property(e => e.BoardConditionType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("board_condition_type");
             });
 
             modelBuilder.Entity<RaceTrophy>(entity =>
@@ -11354,6 +11366,14 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.RewardSetId)
                     .HasColumnType("int(11)")
                     .HasColumnName("reward_set_id");
+
+                entity.Property(e => e.ReserveProgramId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("reserve_program_id");
+
+                entity.Property(e => e.RandomGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("random_group_id");
             });
 
             modelBuilder.Entity<SingleModeRaceGroup>(entity =>
@@ -11794,6 +11814,30 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.TurnSetId)
                     .HasColumnType("int(11)")
                     .HasColumnName("turn_set_id");
+
+                entity.Property(e => e.MaxSpeed)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("max_speed");
+
+                entity.Property(e => e.MaxStamina)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("max_stamina");
+
+                entity.Property(e => e.MaxPow)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("max_pow");
+
+                entity.Property(e => e.MaxGuts)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("max_guts");
+
+                entity.Property(e => e.MaxWiz)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("max_wiz");
+
+                entity.Property(e => e.GimmickDiscountRate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gimmick_discount_rate");
             });
 
             modelBuilder.Entity<SingleModeScenarioRecord>(entity =>
