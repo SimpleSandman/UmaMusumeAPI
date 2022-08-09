@@ -161,6 +161,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<MiniMotionSet> MiniMotionSets { get; set; }
         public virtual DbSet<MiniMouthType> MiniMouthTypes { get; set; }
         public virtual DbSet<MissionData> MissionData { get; set; }
+        public virtual DbSet<MissionRaceEquate> MissionRaceEquates { get; set; }
         public virtual DbSet<MobData> MobData { get; set; }
         public virtual DbSet<MobDressColorSet> MobDressColorSets { get; set; }
         public virtual DbSet<MobHairColorSet> MobHairColorSets { get; set; }
@@ -234,6 +235,11 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeFreeTrainingPlate> SingleModeFreeTrainingPlates { get; set; }
         public virtual DbSet<SingleModeFreeWinPoint> SingleModeFreeWinPoints { get; set; }
         public virtual DbSet<SingleModeHintGain> SingleModeHintGains { get; set; }
+        public virtual DbSet<SingleModeLiveLiveData> SingleModeLiveLiveData { get; set; }
+        public virtual DbSet<SingleModeLiveMasterBonus> SingleModeLiveMasterBonus { get; set; }
+        public virtual DbSet<SingleModeLiveSongList> SingleModeLiveSongLists { get; set; }
+        public virtual DbSet<SingleModeLiveSquare> SingleModeLiveSquares { get; set; }
+        public virtual DbSet<SingleModeLiveTrainingPlate> SingleModeLiveTrainingPlates { get; set; }
         public virtual DbSet<SingleModeMemberRank> SingleModeMemberRanks { get; set; }
         public virtual DbSet<SingleModeMemberRankPoint> SingleModeMemberRankPoints { get; set; }
         public virtual DbSet<SingleModeMessage> SingleModeMessages { get; set; }
@@ -7799,6 +7805,26 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("user_show");
             });
 
+            modelBuilder.Entity<MissionRaceEquate>(entity =>
+            {
+                entity.ToTable("mission_race_equate");
+
+                entity.HasIndex(e => e.InputId, "mission_race_equate_0_input_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EquateId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("equate_id");
+
+                entity.Property(e => e.InputId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("input_id");
+            });
+
             modelBuilder.Entity<MobData>(entity =>
             {
                 entity.HasKey(e => e.MobId)
@@ -11054,6 +11080,240 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.SupportCardId)
                     .HasColumnType("int(11)")
                     .HasColumnName("support_card_id");
+            });
+
+            modelBuilder.Entity<SingleModeLiveLiveData>(entity =>
+            {
+                entity.ToTable("single_mode_live_live_data");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.GreatSuccessNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("great_success_num");
+
+                entity.Property(e => e.LiveType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("live_type");
+
+                entity.Property(e => e.NormalMusicId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("normal_music_id");
+
+                entity.Property(e => e.SongNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("song_num");
+
+                entity.Property(e => e.SpecialMusicId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("special_music_id");
+
+                entity.Property(e => e.TurnNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("turn_num");
+            });
+
+            modelBuilder.Entity<SingleModeLiveMasterBonus>(entity =>
+            {
+                entity.ToTable("single_mode_live_master_bonus");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.MasterBonusGainType1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_type_1");
+
+                entity.Property(e => e.MasterBonusGainType2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_type_2");
+
+                entity.Property(e => e.MasterBonusGainType3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_type_3");
+
+                entity.Property(e => e.MasterBonusGainValue11)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_value_1_1");
+
+                entity.Property(e => e.MasterBonusGainValue12)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_value_1_2");
+
+                entity.Property(e => e.MasterBonusGainValue13)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_value_1_3");
+
+                entity.Property(e => e.MasterBonusGainValue14)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_value_1_4");
+
+                entity.Property(e => e.MasterBonusGainValue21)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_value_2_1");
+
+                entity.Property(e => e.MasterBonusGainValue22)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_value_2_2");
+
+                entity.Property(e => e.MasterBonusGainValue23)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_value_2_3");
+
+                entity.Property(e => e.MasterBonusGainValue24)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_value_2_4");
+
+                entity.Property(e => e.MasterBonusGainValue31)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_value_3_1");
+
+                entity.Property(e => e.MasterBonusGainValue32)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_value_3_2");
+
+                entity.Property(e => e.MasterBonusGainValue33)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_value_3_3");
+
+                entity.Property(e => e.MasterBonusGainValue34)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_gain_value_3_4");
+
+                entity.Property(e => e.MasterBonusType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_type");
+
+                entity.Property(e => e.MasterBonusTypeValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_type_value");
+            });
+
+            modelBuilder.Entity<SingleModeLiveSongList>(entity =>
+            {
+                entity.ToTable("single_mode_live_song_list");
+
+                entity.HasIndex(e => e.CommandId, "single_mode_live_song_list_0_command_id");
+
+                entity.HasIndex(e => e.LiveId, "single_mode_live_song_list_0_live_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CommandId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("command_id");
+
+                entity.Property(e => e.Level)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("level");
+
+                entity.Property(e => e.LiveBonusType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("live_bonus_type");
+
+                entity.Property(e => e.LiveBonusValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("live_bonus_value");
+
+                entity.Property(e => e.LiveId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("live_id");
+
+                entity.Property(e => e.MasterBonusContentTextId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_content_text_id");
+            });
+
+            modelBuilder.Entity<SingleModeLiveSquare>(entity =>
+            {
+                entity.ToTable("single_mode_live_square");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.MasterBonusId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("master_bonus_id");
+
+                entity.Property(e => e.PerfType1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("perf_type_1");
+
+                entity.Property(e => e.PerfType2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("perf_type_2");
+
+                entity.Property(e => e.PerfType3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("perf_type_3");
+
+                entity.Property(e => e.PerfType4)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("perf_type_4");
+
+                entity.Property(e => e.PerfType5)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("perf_type_5");
+
+                entity.Property(e => e.PerfValue1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("perf_value_1");
+
+                entity.Property(e => e.PerfValue2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("perf_value_2");
+
+                entity.Property(e => e.PerfValue3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("perf_value_3");
+
+                entity.Property(e => e.PerfValue4)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("perf_value_4");
+
+                entity.Property(e => e.PerfValue5)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("perf_value_5");
+
+                entity.Property(e => e.SquareContentTextId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("square_content_text_id");
+
+                entity.Property(e => e.SquareTitleTextId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("square_title_text_id");
+
+                entity.Property(e => e.SquareType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("square_type");
+            });
+
+            modelBuilder.Entity<SingleModeLiveTrainingPlate>(entity =>
+            {
+                entity.ToTable("single_mode_live_training_plate");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ValueMax)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("value_max");
+
+                entity.Property(e => e.ValueMin)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("value_min");
             });
 
             modelBuilder.Entity<SingleModeMemberRank>(entity =>

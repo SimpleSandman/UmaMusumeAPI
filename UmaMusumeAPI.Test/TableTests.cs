@@ -1343,6 +1343,15 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("MissionRaceEquate", false)]
+        [InlineData("MissionRaceEquate/1", true)]
+        public async Task GetMissionRaceEquate(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<MissionRaceEquate>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("MobData", false)]
         [InlineData("MobData/8008", true)]
         public async Task GetMobData(string endpointUrl, bool hasSingleReturn)
@@ -1996,6 +2005,51 @@ namespace UmaMusumeAPI.Test
         public async Task GetSingleModeHintGain(string endpointUrl, bool hasSingleReturn)
         {
             await TestGetEndpointAsync<SingleModeHintGain>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeLiveLiveData", false)]
+        //[InlineData("SingleModeLiveLiveData/1", true)]
+        public async Task GetSingleModeLiveLiveData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeLiveLiveData>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeLiveMasterBonus", false)]
+        //[InlineData("SingleModeLiveMasterBonus/1", true)]
+        public async Task GetSingleModeLiveMasterBonus(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeLiveMasterBonus>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeLiveSongList", false)]
+        //[InlineData("SingleModeLiveSongList/1", true)]
+        public async Task GetSingleModeLiveSongList(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeLiveSongList>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeLiveSquare", false)]
+        //[InlineData("SingleModeLiveSquare/1", true)]
+        public async Task GetSingleModeLiveSquare(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeLiveSquare>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeLiveTrainingPlate", false)]
+        //[InlineData("SingleModeLiveTrainingPlate/1", true)]
+        public async Task GetSingleModeLiveTrainingPlate(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeLiveTrainingPlate>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]
