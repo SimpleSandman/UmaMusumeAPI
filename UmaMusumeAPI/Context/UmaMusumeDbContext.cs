@@ -2806,6 +2806,14 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StartDate)
                     .HasColumnType("int(11)")
                     .HasColumnName("start_date");
+
+                entity.Property(e => e.ChampionsCharaSelectBgId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("champions_chara_select_bg_id");
+
+                entity.Property(e => e.ChampionsCharaSelectBgSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("champions_chara_select_bg_sub_id");
             });
 
             modelBuilder.Entity<ChampionsStandMotion>(entity =>
@@ -16141,6 +16149,18 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.TargetMainScenario)
                     .HasColumnType("int(11)")
                     .HasColumnName("target_main_scenario");
+
+                entity.Property(e => e.RentalValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("rental_value");
+
+                entity.Property(e => e.ConsumeTpRatio)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("consume_tp_ratio");
+
+                entity.Property(e => e.BonusRewardRatio)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bonus_reward_ratio");
             });
 
             modelBuilder.Entity<TrainingChallengeScore>(entity =>

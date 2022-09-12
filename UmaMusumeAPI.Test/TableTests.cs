@@ -2019,7 +2019,7 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeLiveMasterBonus", false)]
-        [InlineData("SingleModeLiveMasterBonus/1", true)]
+        [InlineData("SingleModeLiveMasterBonus/11001", true)]
         public async Task GetSingleModeLiveMasterBonus(string endpointUrl, bool hasSingleReturn)
         {
             await TestGetEndpointAsync<SingleModeLiveMasterBonus>(endpointUrl, hasSingleReturn);
@@ -2037,7 +2037,7 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeLiveSquare", false)]
-        [InlineData("SingleModeLiveSquare/1", true)]
+        [InlineData("SingleModeLiveSquare/11001", true)]
         public async Task GetSingleModeLiveSquare(string endpointUrl, bool hasSingleReturn)
         {
             await TestGetEndpointAsync<SingleModeLiveSquare>(endpointUrl, hasSingleReturn);

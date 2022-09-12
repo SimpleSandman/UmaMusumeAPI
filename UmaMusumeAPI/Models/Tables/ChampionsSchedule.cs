@@ -20,5 +20,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int ChampionsFinishBgId { get; set; }
         public int ChampionsFinishBgPositionX { get; set; }
         public int NoticeDate { get; set; }
+        public int ChampionsCharaSelectBgId { get; set; }
+        public int ChampionsCharaSelectBgSubId { get; set; }
     }
 }

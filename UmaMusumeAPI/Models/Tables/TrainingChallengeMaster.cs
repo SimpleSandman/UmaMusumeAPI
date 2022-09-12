@@ -19,5 +19,8 @@ namespace UmaMusumeAPI.Models.Tables
         public int EndDate { get; set; }
         public int StartResultDate { get; set; }
         public int EndResultDate { get; set; }
+        public int RentalValue { get; set; }
+        public int ConsumeTpRatio { get; set; }
+        public int BonusRewardRatio { get; set; }
     }
 }
