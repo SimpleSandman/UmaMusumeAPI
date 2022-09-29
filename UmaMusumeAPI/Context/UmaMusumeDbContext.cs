@@ -9611,6 +9611,34 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.CuesheetId)
                     .HasColumnType("int(11)")
                     .HasColumnName("cuesheet_id");
+
+                entity.Property(e => e.CuesheetName)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("cuesheet_name");
+
+                entity.Property(e => e.ConditionType1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_type_1");
+
+                entity.Property(e => e.ConditionValue1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_value_1");
+
+                entity.Property(e => e.ConditionType2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_type_2");
+
+                entity.Property(e => e.ConditionValue2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_value_2");
+
+                entity.Property(e => e.ConditionType3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_type_3");
+
+                entity.Property(e => e.ConditionValue3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_value_3");
             });
 
             modelBuilder.Entity<RaceJikkyoMessage>(entity =>
