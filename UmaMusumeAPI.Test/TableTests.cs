@@ -182,6 +182,15 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("CampaignCuttData", false)]
+        [InlineData("CampaignCuttData/1", true)]
+        public async Task GetCampaignCuttData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<CampaignCuttData>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("CampaignData", false)]
         [InlineData("CampaignData/1", true)]
         public async Task GetCampaignData(string endpointUrl, bool hasSingleReturn)
@@ -214,6 +223,42 @@ namespace UmaMusumeAPI.Test
         public async Task GetCampaignSingleRaceAddReward(string endpointUrl, bool hasSingleReturn)
         {
             await TestGetEndpointAsync<CampaignSingleRaceAddReward>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("CampaignWalkingChara/", false)]
+        [InlineData("CampaignWalkingChara/226", false)]
+        public async Task GetCampaignWalkingChara(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<CampaignWalkingChara>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("CampaignWalkingData/", false)]
+        [InlineData("CampaignWalkingData/1", true)]
+        public async Task GetCampaignWalkingData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<CampaignWalkingData>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("CampaignWalkingLocation/", false)]
+        [InlineData("CampaignWalkingLocation/1", true)]
+        public async Task GetCampaignWalkingLocation(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<CampaignWalkingLocation>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("CampaignWalkingRewardSet/", false)]
+        [InlineData("CampaignWalkingRewardSet/1", true)]
+        public async Task GetCampaignWalkingRewardSet(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<CampaignWalkingRewardSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1105,6 +1150,33 @@ namespace UmaMusumeAPI.Test
         public async Task GetJukeboxRequestData(string endpointUrl, bool hasSingleReturn)
         {
             await TestGetEndpointAsync<JukeboxRequestData>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("JukeboxSetlistData", false)]
+        //[InlineData("JukeboxSetlistData/1", true)]
+        public async Task GetJukeboxSetlistData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<JukeboxSetlistData>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("JukeboxSetlistMusicData", false)]
+        //[InlineData("JukeboxSetlistMusicData/1", true)]
+        public async Task GetJukeboxSetlistMusicData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<JukeboxSetlistMusicData>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("JukeboxSetlistSingerData", false)]
+        //[InlineData("JukeboxSetlistSingerData/1", true)]
+        public async Task GetJukeboxSetlistSingerData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<JukeboxSetlistSingerData>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]
@@ -2239,6 +2311,15 @@ namespace UmaMusumeAPI.Test
         public async Task GetSingleModeScenarioRecord(string endpointUrl, bool hasSingleReturn)
         {
             await TestGetEndpointAsync<SingleModeScenarioRecord>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeScenarioUpdate", false)]
+        //[InlineData("SingleModeScenarioUpdate/1", true)]
+        public async Task GetSingleModeScenarioUpdate(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeScenarioUpdate>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]

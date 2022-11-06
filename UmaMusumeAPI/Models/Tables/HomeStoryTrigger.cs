@@ -16,5 +16,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int ConditionType { get; set; }
         public int GalleryCharaId { get; set; }
         public int DispOrder { get; set; }
+        public int StartDate { get; set; }
     }
 }

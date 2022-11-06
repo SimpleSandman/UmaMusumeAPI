@@ -3,14 +3,14 @@
 namespace UmaMusumeAPI.Models.Tables
 {
     [GeneratedController]
-    public class HomeEventSchedule
+    public class SingleModeScenarioUpdate
     {
         public int Id { get; set; }
-        public int EventId { get; set; }
+        public int ScenarioId { get; set; }
+        public int TipsGroupId { get; set; }
+        public int PageIndexFrom { get; set; }
+        public int PageIndexTo { get; set; }
         public int StartDate { get; set; }
         public int EndDate { get; set; }
-        public int EventStoryType { get; set; }
-        public int EventWalkType { get; set; }
-        public int EventFooterType { get; set; }
     }
 }

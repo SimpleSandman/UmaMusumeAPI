@@ -14,5 +14,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int ConditionValue { get; set; }
         public string StartDate { get; set; }
         public string EndDate { get; set; }
+        public int BannerImageId { get; set; }
+        public int DialogImageId { get; set; }
     }
 }

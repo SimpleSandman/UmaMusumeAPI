@@ -48,5 +48,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int MiniMayuShaderType { get; set; }
         public int StartDate { get; set; }
         public int CharaCategory { get; set; }
+        public int LoveRankLimit { get; set; }
     }
 }
