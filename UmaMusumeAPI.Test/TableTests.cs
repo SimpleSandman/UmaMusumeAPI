@@ -1155,28 +1155,28 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("JukeboxSetlistData", false)]
-        //[InlineData("JukeboxSetlistData/1", true)]
+        [InlineData("JukeboxSetlistData/1", true)]
         public async Task GetJukeboxSetlistData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<JukeboxSetlistData>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<JukeboxSetlistData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("JukeboxSetlistMusicData", false)]
-        //[InlineData("JukeboxSetlistMusicData/1", true)]
+        [InlineData("JukeboxSetlistMusicData/100101", true)]
         public async Task GetJukeboxSetlistMusicData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<JukeboxSetlistMusicData>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<JukeboxSetlistMusicData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("JukeboxSetlistSingerData", false)]
-        //[InlineData("JukeboxSetlistSingerData/1", true)]
+        [InlineData("JukeboxSetlistSingerData/10010001", true)]
         public async Task GetJukeboxSetlistSingerData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<JukeboxSetlistSingerData>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<JukeboxSetlistSingerData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2316,10 +2316,10 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeScenarioUpdate", false)]
-        //[InlineData("SingleModeScenarioUpdate/1", true)]
+        [InlineData("SingleModeScenarioUpdate/1", true)]
         public async Task GetSingleModeScenarioUpdate(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SingleModeScenarioUpdate>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeScenarioUpdate>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
