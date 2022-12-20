@@ -37,6 +37,8 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<CampaignPresentBonusDetail> CampaignPresentBonusDetails { get; set; }
         public virtual DbSet<CampaignSingleRaceAddData> CampaignSingleRaceAddData { get; set; }
         public virtual DbSet<CampaignSingleRaceAddReward> CampaignSingleRaceAddRewards { get; set; }
+        public virtual DbSet<CampaignStoryData> CampaignStoryData { get; set; }
+        public virtual DbSet<CampaignSwapMotionData> CampaignSwapMotionData { get; set; }
         public virtual DbSet<CampaignWalkingChara> CampaignWalkingCharas { get; set; }
         public virtual DbSet<CampaignWalkingData> CampaignWalkingData { get; set; }
         public virtual DbSet<CampaignWalkingLocation> CampaignWalkingLocations { get; set; }
@@ -80,6 +82,17 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<CharacterSystemText> CharacterSystemTexts { get; set; }
         public virtual DbSet<CircleRankData> CircleRankData { get; set; }
         public virtual DbSet<CircleStampData> CircleStampData { get; set; }
+        public virtual DbSet<CollectEventMapBgData> CollectEventMapBgData { get; set; }
+        public virtual DbSet<CollectEventMapMaster> CollectEventMapMasters { get; set; }
+        public virtual DbSet<CollectRaidAllReward> CollectRaidAllRewards { get; set; }
+        public virtual DbSet<CollectRaidIndividualReward> CollectRaidIndividualRewards { get; set; }
+        public virtual DbSet<CollectRaidMaster> CollectRaidMasters { get; set; }
+        public virtual DbSet<CollectRaidMission> CollectRaidMissions { get; set; }
+        public virtual DbSet<CollectRaidMissionTopChara> CollectRaidMissionTopCharas { get; set; }
+        public virtual DbSet<CollectRaidSegmentCutt> CollectRaidSegmentCutts { get; set; }
+        public virtual DbSet<CollectRaidStagingMiniChara> CollectRaidStagingMiniCharas { get; set; }
+        public virtual DbSet<CollectRaidStory> CollectRaidStories { get; set; }
+        public virtual DbSet<CollectRaidTopData> CollectRaidTopData { get; set; }
         public virtual DbSet<CraneGameArmSwing> CraneGameArmSwings { get; set; }
         public virtual DbSet<CraneGameCatchResult> CraneGameCatchResults { get; set; }
         public virtual DbSet<CraneGameDefineParam> CraneGameDefineParams { get; set; }
@@ -154,6 +167,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<LiveData> LiveData { get; set; }
         public virtual DbSet<LiveExtraData> LiveExtraData { get; set; }
         public virtual DbSet<LivePermissionData> LivePermissionData { get; set; }
+        public virtual DbSet<LoginBonusChara> LoginBonusCharas { get; set; }
         public virtual DbSet<LoginBonusData> LoginBonusData { get; set; }
         public virtual DbSet<LoginBonusDetail> LoginBonusDetails { get; set; }
         public virtual DbSet<LoveRank> LoveRanks { get; set; }
@@ -222,6 +236,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeAoharuSchedule> SingleModeAoharuSchedules { get; set; }
         public virtual DbSet<SingleModeChangeCharaRoute> SingleModeChangeCharaRoutes { get; set; }
         public virtual DbSet<SingleModeCharaEffect> SingleModeCharaEffects { get; set; }
+        public virtual DbSet<SingleModeCharaEffectBuff> SingleModeCharaEffectBuffs { get; set; }
         public virtual DbSet<SingleModeCharaGrade> SingleModeCharaGrades { get; set; }
         public virtual DbSet<SingleModeCharaProgram> SingleModeCharaPrograms { get; set; }
         public virtual DbSet<SingleModeConclusionSet> SingleModeConclusionSets { get; set; }
@@ -1317,6 +1332,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.UserShow)
                     .HasColumnType("int(11)")
                     .HasColumnName("user_show");
+
+                entity.Property(e => e.OpenFlagId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("open_flag_id");
             });
 
             modelBuilder.Entity<CampaignPresentBonusDetail>(entity =>
@@ -1435,6 +1454,62 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.RewardValue)
                     .HasColumnType("int(11)")
                     .HasColumnName("reward_value");
+            });
+
+            modelBuilder.Entity<CampaignStoryData>(entity =>
+            {
+                entity.ToTable("campaign_story_data");
+
+                entity.HasIndex(e => e.CampaignId, "campaign_story_data_0_campaign_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CampaignId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("campaign_id");
+
+                entity.Property(e => e.ConditionType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_type");
+
+                entity.Property(e => e.ConditionValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_value");
+
+                entity.Property(e => e.StoryId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_id");
+            });
+
+            modelBuilder.Entity<CampaignSwapMotionData>(entity =>
+            {
+                entity.ToTable("campaign_swap_motion_data");
+
+                entity.HasIndex(e => e.DressId, "campaign_swap_motion_data_0_dress_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CutId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("cut_id");
+
+                entity.Property(e => e.CutSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("cut_sub_id");
+
+                entity.Property(e => e.DressId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("dress_id");
+
+                entity.Property(e => e.ReplaceIndex)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("replace_index");
             });
 
             modelBuilder.Entity<CampaignWalkingChara>(entity =>
@@ -3650,6 +3725,440 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Type)
                     .HasColumnType("int(11)")
                     .HasColumnName("type");
+            });
+
+            modelBuilder.Entity<CollectEventMapBgData>(entity =>
+            {
+                entity.ToTable("collect_event_map_bg_data");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BgId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_id");
+
+                entity.Property(e => e.BgSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_sub_id");
+
+                entity.Property(e => e.BgmCueName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cue_name");
+
+                entity.Property(e => e.BgmCuesheetName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cuesheet_name");
+            });
+
+            modelBuilder.Entity<CollectEventMapMaster>(entity =>
+            {
+                entity.ToTable("collect_event_map_master");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BannerId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("banner_id");
+
+                entity.Property(e => e.BgDataId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_data_id");
+
+                entity.Property(e => e.CollectTapEndDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("collect_tap_end_date");
+
+                entity.Property(e => e.CollectTapMaxPosIndex)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("collect_tap_max_pos_index");
+
+                entity.Property(e => e.CollectTapRewardSetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("collect_tap_reward_set_id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.EventEndDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("event_end_date");
+
+                entity.Property(e => e.LoginBonusId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("login_bonus_id");
+
+                entity.Property(e => e.ShortEpisodeId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("short_episode_id");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.TipsGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("tips_group_id");
+            });
+
+            modelBuilder.Entity<CollectRaidAllReward>(entity =>
+            {
+                entity.ToTable("collect_raid_all_reward");
+
+                entity.HasIndex(e => e.AllRewardSetId, "collect_raid_all_reward_0_all_reward_set_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.AllCollectItemNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("all_collect_item_num");
+
+                entity.Property(e => e.AllRewardSetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("all_reward_set_id");
+
+                entity.Property(e => e.ItemCategory)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.ItemNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num");
+            });
+
+            modelBuilder.Entity<CollectRaidIndividualReward>(entity =>
+            {
+                entity.ToTable("collect_raid_individual_reward");
+
+                entity.HasIndex(e => e.IndividualRewardSetId, "collect_raid_individual_reward_0_individual_reward_set_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.IndividualCollectItemNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("individual_collect_item_num");
+
+                entity.Property(e => e.IndividualRewardSetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("individual_reward_set_id");
+
+                entity.Property(e => e.ItemCategory)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category");
+
+                entity.Property(e => e.ItemId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id");
+
+                entity.Property(e => e.ItemNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num");
+            });
+
+            modelBuilder.Entity<CollectRaidMaster>(entity =>
+            {
+                entity.ToTable("collect_raid_master");
+
+                entity.HasIndex(e => e.IndividualRewardSetId, "collect_raid_master_0_individual_reward_set_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.AllRewardSetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("all_reward_set_id");
+
+                entity.Property(e => e.CalcEndDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("calc_end_date");
+
+                entity.Property(e => e.CalcStartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("calc_start_date");
+
+                entity.Property(e => e.CollectEventMapMasterId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("collect_event_map_master_id");
+
+                entity.Property(e => e.CollectItemId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("collect_item_id");
+
+                entity.Property(e => e.EndDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("end_date");
+
+                entity.Property(e => e.GainCollectItemMin)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gain_collect_item_min");
+
+                entity.Property(e => e.GainCollectItemRate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gain_collect_item_rate");
+
+                entity.Property(e => e.IndividualRewardSetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("individual_reward_set_id");
+
+                entity.Property(e => e.MissionTopCharaGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("mission_top_chara_group_id");
+
+                entity.Property(e => e.NoticeDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("notice_date");
+
+                entity.Property(e => e.StagingMiniCharaGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("staging_mini_chara_group_id");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
+
+                entity.Property(e => e.StoryListBgId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_list_bg_id");
+
+                entity.Property(e => e.StoryListBgSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_list_bg_sub_id");
+
+                entity.Property(e => e.StorySetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_set_id");
+            });
+
+            modelBuilder.Entity<CollectRaidMission>(entity =>
+            {
+                entity.ToTable("collect_raid_mission");
+
+                entity.HasIndex(e => e.MissionDataId, "collect_raid_mission_0_mission_data_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CollectRaidMasterId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("collect_raid_master_id");
+
+                entity.Property(e => e.MissionDataId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("mission_data_id");
+            });
+
+            modelBuilder.Entity<CollectRaidMissionTopChara>(entity =>
+            {
+                entity.ToTable("collect_raid_mission_top_chara");
+
+                entity.HasIndex(e => e.MissionTopCharaGroupId, "collect_raid_mission_top_chara_0_mission_top_chara_group_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BgId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_id");
+
+                entity.Property(e => e.BgSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_sub_id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.DressId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("dress_id");
+
+                entity.Property(e => e.EndingFlag)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("ending_flag");
+
+                entity.Property(e => e.MissionTopCharaGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("mission_top_chara_group_id");
+            });
+
+            modelBuilder.Entity<CollectRaidSegmentCutt>(entity =>
+            {
+                entity.ToTable("collect_raid_segment_cutt");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CutId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("cut_id");
+
+                entity.Property(e => e.CutSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("cut_sub_id");
+            });
+
+            modelBuilder.Entity<CollectRaidStagingMiniChara>(entity =>
+            {
+                entity.ToTable("collect_raid_staging_mini_chara");
+
+                entity.HasIndex(e => e.StagingMiniCharaGroupId, "collect_raid_staging_mini_chara_0_staging_mini_chara_group_id");
+
+                entity.HasIndex(e => new { e.StagingMiniCharaGroupId, e.StagingType }, "collect_raid_staging_mini_chara_0_staging_mini_chara_group_id_1");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.DressId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("dress_id");
+
+                entity.Property(e => e.MiniMotionId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("mini_motion_id");
+
+                entity.Property(e => e.StagingMiniCharaGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("staging_mini_chara_group_id");
+
+                entity.Property(e => e.StagingType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("staging_type");
+            });
+
+            modelBuilder.Entity<CollectRaidStory>(entity =>
+            {
+                entity.ToTable("collect_raid_story");
+
+                entity.HasIndex(e => e.StorySetId, "collect_raid_story_0_story_set_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EpisodeIndexId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("episode_index_id");
+
+                entity.Property(e => e.StoryConditionType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_condition_type");
+
+                entity.Property(e => e.StoryId1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_id_1");
+
+                entity.Property(e => e.StoryId2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_id_2");
+
+                entity.Property(e => e.StoryId3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_id_3");
+
+                entity.Property(e => e.StorySetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_set_id");
+
+                entity.Property(e => e.StoryType1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_type_1");
+
+                entity.Property(e => e.StoryType2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_type_2");
+
+                entity.Property(e => e.StoryType3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("story_type_3");
+            });
+
+            modelBuilder.Entity<CollectRaidTopData>(entity =>
+            {
+                entity.ToTable("collect_raid_top_data");
+
+                entity.HasIndex(e => e.CollectRaidId, "collect_raid_top_data_0_collect_raid_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.BgmCueName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cue_name");
+
+                entity.Property(e => e.BgmCuesheetName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("bgm_cuesheet_name");
+
+                entity.Property(e => e.CollectRaidId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("collect_raid_id");
+
+                entity.Property(e => e.ConditionType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_type");
+
+                entity.Property(e => e.ConditionValue)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_value");
+
+                entity.Property(e => e.CutId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("cut_id");
+
+                entity.Property(e => e.CutSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("cut_sub_id");
+
+                entity.Property(e => e.EnvCueName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("env_cue_name");
+
+                entity.Property(e => e.EnvCuesheetName)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("env_cuesheet_name");
+
+                entity.Property(e => e.SegmentCuttId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("segment_cutt_id");
             });
 
             modelBuilder.Entity<CraneGameArmSwing>(entity =>
@@ -6359,6 +6868,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.VersionType)
                     .HasColumnType("int(11)")
                     .HasColumnName("version_type");
+
+                entity.Property(e => e.AlterJacket)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("alter_jacket");
             });
 
             modelBuilder.Entity<JukeboxReactionData>(entity =>
@@ -7130,6 +7643,51 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("chara_id");
             });
 
+            modelBuilder.Entity<LoginBonusChara>(entity =>
+            {
+                entity.ToTable("login_bonus_chara");
+
+                entity.HasIndex(e => e.LoginBonusDetailId, "login_bonus_chara_0_login_bonus_detail_id")
+                    .IsUnique();
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.CharaId2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id_2");
+
+                entity.Property(e => e.CharaNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_num");
+
+                entity.Property(e => e.DressId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("dress_id");
+
+                entity.Property(e => e.DressId2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("dress_id_2");
+
+                entity.Property(e => e.LoginBonusDetailId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("login_bonus_detail_id");
+
+                entity.Property(e => e.PoseId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("pose_id");
+
+                entity.Property(e => e.PoseId2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("pose_id_2");
+            });
+
             modelBuilder.Entity<LoginBonusData>(entity =>
             {
                 entity.ToTable("login_bonus_data");
@@ -7169,6 +7727,22 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StampId)
                     .HasColumnType("int(11)")
                     .HasColumnName("stamp_id");
+
+                entity.Property(e => e.BgId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_id");
+
+                entity.Property(e => e.GroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("group_id");
+
+                entity.Property(e => e.Step)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("step");
+
+                entity.Property(e => e.GiftMessageId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gift_message_id");
             });
 
             modelBuilder.Entity<LoginBonusDetail>(entity =>
@@ -10625,6 +11199,54 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Priority)
                     .HasColumnType("int(11)")
                     .HasColumnName("priority");
+            });
+
+            modelBuilder.Entity<SingleModeCharaEffectBuff>(entity =>
+            {
+                entity.ToTable("single_mode_chara_effect_buff");
+
+                entity.HasIndex(e => e.CharaId, "single_mode_chara_effect_buff_0_chara_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.EffectId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("effect_id");
+
+                entity.Property(e => e.GutsAdd)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("guts_add");
+
+                entity.Property(e => e.PowerAdd)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("power_add");
+
+                entity.Property(e => e.ProgramId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("program_id");
+
+                entity.Property(e => e.SpeedAdd)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("speed_add");
+
+                entity.Property(e => e.StaminaAdd)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("stamina_add");
+
+                entity.Property(e => e.Turn)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("turn");
+
+                entity.Property(e => e.WizAdd)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("wiz_add");
             });
 
             modelBuilder.Entity<SingleModeCharaGrade>(entity =>

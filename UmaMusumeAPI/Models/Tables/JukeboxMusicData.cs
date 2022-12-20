@@ -19,5 +19,6 @@
         public int ShortLength { get; set; }
         public int StartDate { get; set; }
         public int EndDate { get; set; }
+        public int AlterJacket { get; set; }
     }
 }

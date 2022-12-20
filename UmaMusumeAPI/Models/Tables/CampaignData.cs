@@ -15,5 +15,6 @@
         public int LogoType { get; set; }
         public int StartTime { get; set; }
         public int EndTime { get; set; }
+        public int OpenFlagId { get; set; }
     }
 }
