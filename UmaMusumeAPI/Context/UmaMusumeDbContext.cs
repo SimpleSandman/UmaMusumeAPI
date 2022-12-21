@@ -14,6 +14,8 @@ namespace UmaMusumeAPI.Context
         public UmaMusumeDbContext(DbContextOptions<UmaMusumeDbContext> options) : base(options) { }
 
         #region DbSets Tables
+
+        #region Master Tables
         public virtual DbSet<AnnounceCharacter> AnnounceCharacters { get; set; }
         public virtual DbSet<AnnounceData> AnnounceData { get; set; }
         public virtual DbSet<AnnounceEvent> AnnounceEvents { get; set; }
@@ -381,6 +383,15 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<TutorialGuideData> TutorialGuideData { get; set; }
         #endregion
 
+        #region Meta Tables
+        public virtual DbSet<MetaA> MetaAs { get; set; }
+        public virtual DbSet<MetaC> MetaCs { get; set; }
+        public virtual DbSet<MetaI> MetaIs { get; set; }
+        public virtual DbSet<MetaR> MetaRs { get; set; }
+        #endregion
+
+        #endregion
+
         #region DbSets Views
         public virtual DbSet<BasicCardDataInfo> BasicCardDataInfos { get; set; }
         public virtual DbSet<BasicCharaDataInfo> BasicCharaDataInfos { get; set; }
@@ -451,6 +462,8 @@ namespace UmaMusumeAPI.Context
             #endregion
 
             #region Tables
+
+            #region Master Tables
             modelBuilder.Entity<AnnounceCharacter>(entity =>
             {
                 entity.ToTable("announce_character");
@@ -17513,6 +17526,132 @@ namespace UmaMusumeAPI.Context
                     .HasColumnType("int(11)")
                     .HasColumnName("page_index");
             });
+            #endregion
+
+            #region Meta Tables
+            modelBuilder.Entity<MetaA>(entity =>
+            {
+                entity.HasKey(e => e.I)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("meta_a");
+
+                entity.HasIndex(e => e.S, "a1");
+
+                entity.HasIndex(e => new { e.G, e.S }, "a3");
+
+                entity.HasIndex(e => e.P, "a4");
+
+                entity.Property(e => e.I)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("i");
+
+                entity.Property(e => e.C)
+                    .HasColumnType("int(8)")
+                    .HasColumnName("c");
+
+                entity.Property(e => e.D)
+                    .HasColumnType("text")
+                    .HasColumnName("d");
+
+                entity.Property(e => e.G)
+                    .HasColumnType("int(4)")
+                    .HasColumnName("g");
+
+                entity.Property(e => e.H)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("h");
+
+                entity.Property(e => e.K)
+                    .HasColumnType("int(1)")
+                    .HasColumnName("k");
+
+                entity.Property(e => e.L)
+                    .HasColumnType("int(8)")
+                    .HasColumnName("l");
+
+                entity.Property(e => e.M)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("m");
+
+                entity.Property(e => e.N)
+                    .IsRequired()
+                    .HasColumnType("text")
+                    .HasColumnName("n");
+
+                entity.Property(e => e.P)
+                    .HasColumnType("int(4)")
+                    .HasColumnName("p");
+
+                entity.Property(e => e.S)
+                    .HasColumnType("int(1)")
+                    .HasColumnName("s");
+            });
+
+            modelBuilder.Entity<MetaC>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("meta_c");
+
+                entity.HasIndex(e => e.N, "n")
+                    .IsUnique();
+
+                entity.Property(e => e.H)
+                    .HasColumnType("text")
+                    .HasColumnName("h");
+
+                entity.Property(e => e.N)
+                    .HasColumnType("text")
+                    .HasColumnName("n");
+            });
+
+            modelBuilder.Entity<MetaI>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("meta_i");
+
+                entity.HasIndex(e => e.K, "k")
+                    .IsUnique();
+
+                entity.Property(e => e.K)
+                    .HasColumnType("text")
+                    .HasColumnName("k");
+
+                entity.Property(e => e.V)
+                    .HasColumnType("text")
+                    .HasColumnName("v");
+            });
+
+            modelBuilder.Entity<MetaR>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("meta_r");
+
+                entity.HasIndex(e => new { e.F, e.T }, "r0")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.D, "r1");
+
+                entity.Property(e => e.D)
+                    .HasColumnType("int(2)")
+                    .HasColumnName("d");
+
+                entity.Property(e => e.F)
+                    .HasColumnType("int(4)")
+                    .HasColumnName("f");
+
+                entity.Property(e => e.T)
+                    .HasColumnType("int(4)")
+                    .HasColumnName("t");
+            });
+            #endregion
+
             #endregion
 
             #region Views

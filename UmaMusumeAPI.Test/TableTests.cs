@@ -18,6 +18,8 @@ namespace UmaMusumeAPI.Test
         public TableTests(WebApplicationFactory<Startup> api) : base(api) { }
 
         #region GET Tests
+
+        #region Master Tables
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("AnnounceCharacter", false)]
@@ -3302,6 +3304,46 @@ namespace UmaMusumeAPI.Test
         {
             await TestGetEndpointAsync<TutorialGuideData>(endpointUrl, hasSingleReturn);
         }
+        #endregion
+
+        #region Meta Tables
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("MetaA", false)]
+        [InlineData("MetaA/1", true)]
+        public async Task GetMetaA(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<MetaA>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("MetaC", false)]
+        [InlineData("MetaC/root", true)]
+        public async Task GetMetaC(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<MetaC>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("MetaI", false)]
+        [InlineData("MetaI/version", true)]
+        public async Task GetMetaI(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<MetaI>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("MetaR", false)]
+        [InlineData("MetaR/1", false)]
+        public async Task GetMetaR(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<MetaR>(endpointUrl, hasSingleReturn);
+        }
+        #endregion
+
         #endregion
     }
 }
