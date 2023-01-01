@@ -12,5 +12,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int BackgroundDataId { get; set; }
         public int RewardSetId { get; set; }
         public int LovePoint { get; set; }
+        public int BgPositionCustom { get; set; }
+        public int BgPositionX { get; set; }
     }
 }

@@ -11,5 +11,7 @@
         public int StartDate { get; set; }
         public int EndingDate { get; set; }
         public int EndDate { get; set; }
+        public int ChallengeMatchTopBgId { get; set; }
+        public int ChallengeMatchTopBgSubId { get; set; }
     }
 }

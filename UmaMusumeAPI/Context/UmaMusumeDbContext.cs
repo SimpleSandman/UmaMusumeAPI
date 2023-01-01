@@ -274,6 +274,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeProgram> SingleModePrograms { get; set; }
         public virtual DbSet<SingleModeRaceGroup> SingleModeRaceGroups { get; set; }
         public virtual DbSet<SingleModeRaceLive> SingleModeRaceLives { get; set; }
+        public virtual DbSet<SingleModeRaceRestrictTurn> SingleModeRaceRestrictTurns { get; set; }
         public virtual DbSet<SingleModeRank> SingleModeRanks { get; set; }
         public virtual DbSet<SingleModeRecommend> SingleModeRecommends { get; set; }
         public virtual DbSet<SingleModeRecommendSetting> SingleModeRecommendSettings { get; set; }
@@ -294,6 +295,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeStoryGuide> SingleModeStoryGuides { get; set; }
         public virtual DbSet<SingleModeTagCardPos> SingleModeTagCardPos { get; set; }
         public virtual DbSet<SingleModeTeamName> SingleModeTeamNames { get; set; }
+        public virtual DbSet<SingleModeTeamRaceSet> SingleModeTeamRaceSets { get; set; }
         public virtual DbSet<SingleModeTopBg> SingleModeTopBgs { get; set; }
         public virtual DbSet<SingleModeTopBgChara> SingleModeTopBgCharas { get; set; }
         public virtual DbSet<SingleModeTraining> SingleModeTrainings { get; set; }
@@ -1634,6 +1636,14 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.RewardSetId)
                     .HasColumnType("int(11)")
                     .HasColumnName("reward_set_id");
+
+                entity.Property(e => e.BgPositionCustom)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_position_custom");
+
+                entity.Property(e => e.BgPositionX)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bg_position_x");
             });
 
             modelBuilder.Entity<CampaignWalkingRewardSet>(entity =>
@@ -2140,6 +2150,14 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StartDate)
                     .HasColumnType("int(11)")
                     .HasColumnName("start_date");
+
+                entity.Property(e => e.ChallengeMatchTopBgId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("challenge_match_top_bg_id");
+
+                entity.Property(e => e.ChallengeMatchTopBgSubId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("challenge_match_top_bg_sub_id");
             });
 
             modelBuilder.Entity<ChallengeMatchRace>(entity =>
@@ -13460,6 +13478,77 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.CharaId)
                     .HasColumnType("int(11)")
                     .HasColumnName("chara_id");
+            });
+
+            modelBuilder.Entity<SingleModeRaceRestrictTurn>(entity =>
+            {
+                entity.HasKey(e => new { e.CharaId, e.Turn })
+                    .HasName("PRIMARY")
+                    .HasAnnotation("MySql:IndexPrefixLength", new[] { 0, 0 });
+
+                entity.ToTable("single_mode_race_restrict_turn");
+
+                entity.HasIndex(e => e.CharaId, "single_mode_race_restrict_turn_0_chara_id");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.Turn)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("turn");
+
+                entity.Property(e => e.GainId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("gain_id");
+            });
+
+            modelBuilder.Entity<SingleModeTeamRaceSet>(entity =>
+            {
+                entity.ToTable("single_mode_team_race_set");
+
+                entity.HasIndex(e => e.SuperTeamCharaId, "single_mode_team_race_set_0_super_team_chara_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.MotionId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("motion_id");
+
+                entity.Property(e => e.RaceInstanceId1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("race_instance_id_1");
+
+                entity.Property(e => e.RaceInstanceId2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("race_instance_id_2");
+
+                entity.Property(e => e.RaceInstanceId3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("race_instance_id_3");
+
+                entity.Property(e => e.RaceInstanceId4)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("race_instance_id_4");
+
+                entity.Property(e => e.RaceInstanceId5)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("race_instance_id_5");
+
+                entity.Property(e => e.Rank)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("rank");
+
+                entity.Property(e => e.StatusCorrection)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("status_correction");
+
+                entity.Property(e => e.SuperTeamCharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("super_team_chara_id");
             });
 
             modelBuilder.Entity<SingleModeTopBg>(entity =>

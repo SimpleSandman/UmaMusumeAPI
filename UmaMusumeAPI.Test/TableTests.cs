@@ -230,10 +230,10 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("CampaignStoryData", false)]
-        //[InlineData("CampaignStoryData/1", true)]
+        [InlineData("CampaignStoryData/1", true)]
         public async Task GetCampaignStoryData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<CampaignStoryData>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<CampaignStoryData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2344,6 +2344,15 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeRaceRestrictTurn", false)]
+        [InlineData("SingleModeRaceRestrictTurn/1044", false)]
+        public async Task GetSingleModeRaceRestrictTurn(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeRaceRestrictTurn>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeRank", false)]
         [InlineData("SingleModeRank/1", true)]
         public async Task GetSingleModeRank(string endpointUrl, bool hasSingleReturn)
@@ -2520,6 +2529,15 @@ namespace UmaMusumeAPI.Test
         public async Task GetSingleModeTeamName(string endpointUrl, bool hasSingleReturn)
         {
             await TestGetEndpointAsync<SingleModeTeamName>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeTeamRaceSet", false)]
+        [InlineData("SingleModeTeamRaceSet/100", true)]
+        public async Task GetSingleModeTeamRaceSet(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeTeamRaceSet>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
