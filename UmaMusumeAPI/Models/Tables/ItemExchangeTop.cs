@@ -11,5 +11,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int ItemTopCategory { get; set; }
         public int StartDate { get; set; }
         public int EndDate { get; set; }
+        public int ShopEnterTrigger { get; set; }
     }
 }

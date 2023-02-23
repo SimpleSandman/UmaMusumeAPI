@@ -17,5 +17,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int ConditionValue2 { get; set; }
         public int DetermineRace { get; set; }
         public int DetermineRaceFlag { get; set; }
+        public int ScenarioGroupId { get; set; }
     }
 }

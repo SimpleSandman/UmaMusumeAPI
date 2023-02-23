@@ -27,5 +27,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int MaxGuts { get; set; }
         public int MaxWiz { get; set; }
         public int GimmickDiscountRate { get; set; }
+        public int AdditionalIconSetId { get; set; }
     }
 }

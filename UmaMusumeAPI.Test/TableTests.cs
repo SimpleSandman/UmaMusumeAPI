@@ -202,6 +202,15 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("CampaignNPresentBonusData", false)]
+        [InlineData("CampaignNPresentBonusData/1", true)]
+        public async Task GetCampaignNPresentBonusData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<CampaignNPresentBonusData>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("CampaignPresentBonusDetail", false)]
         [InlineData("CampaignPresentBonusDetail/1", true)]
         public async Task GetCampaignPresentBonusDetail(string endpointUrl, bool hasSingleReturn)
@@ -225,6 +234,15 @@ namespace UmaMusumeAPI.Test
         public async Task GetCampaignSingleRaceAddReward(string endpointUrl, bool hasSingleReturn)
         {
             await TestGetEndpointAsync<CampaignSingleRaceAddReward>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("CampaignSpPresentBonusData", false)]
+        [InlineData("CampaignSpPresentBonusData/1", true)]
+        public async Task GetCampaignSpPresentBonusData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<CampaignSpPresentBonusData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1768,6 +1786,15 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("RaceJikkyoBaseVenus", false)]
+        //[InlineData("RaceJikkyoBaseVenus/1", true)]
+        public async Task GetRaceJikkyoBaseVenus(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<RaceJikkyoBaseVenus>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("RaceJikkyoComment", false)]
         [InlineData("RaceJikkyoComment/1", true)]
         public async Task GetRaceJikkyoComment(string endpointUrl, bool hasSingleReturn)
@@ -2452,6 +2479,15 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeScenarioGroup", false)]
+        [InlineData("SingleModeScenarioGroup/1", true)]
+        public async Task GetSingleModeScenarioGroup(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeScenarioGroup>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeScenarioRecord", false)]
         [InlineData("SingleModeScenarioRecord/1", true)]
         public async Task GetSingleModeScenarioRecord(string endpointUrl, bool hasSingleReturn)
@@ -2605,6 +2641,51 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeVenusCrystalGroup", false)]
+        //[InlineData("SingleModeVenusCrystalGroup/1", true)]
+        public async Task GetSingleModeVenusCrystalGroup(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeVenusCrystalGroup>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeVenusSpiritEffect", false)]
+        //[InlineData("SingleModeVenusSpiritEffect/1", true)]
+        public async Task GetSingleModeVenusSpiritEffect(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeVenusSpiritEffect>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeVenusSpiritGroup", false)]
+        //[InlineData("SingleModeVenusSpiritGroup/1", true)]
+        public async Task GetSingleModeVenusSpiritGroup(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeVenusSpiritGroup>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeVenusSpraceData", false)]
+        //[InlineData("SingleModeVenusSpraceData/1", true)]
+        public async Task GetSingleModeVenusSpraceData(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeVenusSpraceData>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SingleModeVenusTrainingPlate", false)]
+        //[InlineData("SingleModeVenusTrainingPlate/1", true)]
+        public async Task GetSingleModeVenusTrainingPlate(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SingleModeVenusTrainingPlate>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeWinsSaddle", false)]
         [InlineData("SingleModeWinsSaddle/1", true)]
         public async Task GetSingleModeWinsSaddle(string endpointUrl, bool hasSingleReturn)
@@ -2655,6 +2736,24 @@ namespace UmaMusumeAPI.Test
         public async Task GetSkillSet(string endpointUrl, bool hasSingleReturn)
         {
             await TestGetEndpointAsync<SkillSet>(endpointUrl, hasSingleReturn);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SkillUpgradeCondition", false)]
+        //[InlineData("SkillUpgradeCondition/1", true)]
+        public async Task GetSkillUpgradeCondition(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SkillUpgradeCondition>(endpointUrl, hasSingleReturn, true);
+        }
+
+        [Theory]
+        [Trait("EndpointType", "Raw")]
+        [InlineData("SkillUpgradeDescription", false)]
+        //[InlineData("SkillUpgradeDescription/1", true)]
+        public async Task GetSkillUpgradeDescription(string endpointUrl, bool hasSingleReturn)
+        {
+            await TestGetEndpointAsync<SkillUpgradeDescription>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]

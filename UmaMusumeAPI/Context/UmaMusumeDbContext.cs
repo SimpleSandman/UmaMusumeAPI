@@ -36,9 +36,11 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<CampaignCharaStorySchedule> CampaignCharaStorySchedules { get; set; }
         public virtual DbSet<CampaignCuttData> CampaignCuttData { get; set; }
         public virtual DbSet<CampaignData> CampaignData { get; set; }
+        public virtual DbSet<CampaignNPresentBonusData> CampaignNPresentBonusData { get; set; }
         public virtual DbSet<CampaignPresentBonusDetail> CampaignPresentBonusDetails { get; set; }
         public virtual DbSet<CampaignSingleRaceAddData> CampaignSingleRaceAddData { get; set; }
         public virtual DbSet<CampaignSingleRaceAddReward> CampaignSingleRaceAddRewards { get; set; }
+        public virtual DbSet<CampaignSpPresentBonusData> CampaignSpPresentBonusData { get; set; }
         public virtual DbSet<CampaignStoryData> CampaignStoryData { get; set; }
         public virtual DbSet<CampaignSwapMotionData> CampaignSwapMotionData { get; set; }
         public virtual DbSet<CampaignWalkingChara> CampaignWalkingCharas { get; set; }
@@ -210,6 +212,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<RaceFenceSet> RaceFenceSets { get; set; }
         public virtual DbSet<RaceInstance> RaceInstances { get; set; }
         public virtual DbSet<RaceJikkyoBase> RaceJikkyoBases { get; set; }
+        public virtual DbSet<RaceJikkyoBaseVenus> RaceJikkyoBaseVenus { get; set; }
         public virtual DbSet<RaceJikkyoComment> RaceJikkyoComments { get; set; }
         public virtual DbSet<RaceJikkyoCue> RaceJikkyoCues { get; set; }
         public virtual DbSet<RaceJikkyoMessage> RaceJikkyoMessages { get; set; }
@@ -286,6 +289,7 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeRouteCondition> SingleModeRouteConditions { get; set; }
         public virtual DbSet<SingleModeRouteRace> SingleModeRouteRaces { get; set; }
         public virtual DbSet<SingleModeScenario> SingleModeScenarios { get; set; }
+        public virtual DbSet<SingleModeScenarioGroup> SingleModeScenarioGroups { get; set; }
         public virtual DbSet<SingleModeScenarioRecord> SingleModeScenarioRecords { get; set; }
         public virtual DbSet<SingleModeScenarioUpdate> SingleModeScenarioUpdates { get; set; }
         public virtual DbSet<SingleModeScoutChara> SingleModeScoutCharas { get; set; }
@@ -303,12 +307,19 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<SingleModeTrainingSe> SingleModeTrainingSes { get; set; }
         public virtual DbSet<SingleModeTurn> SingleModeTurns { get; set; }
         public virtual DbSet<SingleModeUniqueChara> SingleModeUniqueCharas { get; set; }
+        public virtual DbSet<SingleModeVenusCrystalGroup> SingleModeVenusCrystalGroups { get; set; }
+        public virtual DbSet<SingleModeVenusSpiritEffect> SingleModeVenusSpiritEffects { get; set; }
+        public virtual DbSet<SingleModeVenusSpiritGroup> SingleModeVenusSpiritGroups { get; set; }
+        public virtual DbSet<SingleModeVenusSpraceData> SingleModeVenusSpraceData { get; set; }
+        public virtual DbSet<SingleModeVenusTrainingPlate> SingleModeVenusTrainingPlates { get; set; }
         public virtual DbSet<SingleModeWinsSaddle> SingleModeWinsSaddles { get; set; }
         public virtual DbSet<SkillData> SkillData { get; set; }
         public virtual DbSet<SkillExp> SkillExps { get; set; }
         public virtual DbSet<SkillLevelValue> SkillLevelValues { get; set; }
         public virtual DbSet<SkillRarity> SkillRarities { get; set; }
         public virtual DbSet<SkillSet> SkillSets { get; set; }
+        public virtual DbSet<SkillUpgradeCondition> SkillUpgradeConditions { get; set; }
+        public virtual DbSet<SkillUpgradeDescription> SkillUpgradeDescriptions { get; set; }
         public virtual DbSet<StoryEventBingoReward> StoryEventBingoRewards { get; set; }
         public virtual DbSet<StoryEventBonusCard> StoryEventBonusCards { get; set; }
         public virtual DbSet<StoryEventBonusGroupSupportCard> StoryEventBonusGroupSupportCards { get; set; }
@@ -1353,6 +1364,44 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("open_flag_id");
             });
 
+            modelBuilder.Entity<CampaignNPresentBonusData>(entity =>
+            {
+                entity.ToTable("campaign_n_present_bonus_data");
+
+                entity.HasIndex(e => e.CardId, "campaign_n_present_bonus_data_0_card_id");
+
+                entity.HasIndex(e => new { e.TargetType, e.CardId }, "campaign_n_present_bonus_data_0_target_type_1_card_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CardId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("card_id");
+
+                entity.Property(e => e.Count)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("count");
+
+                entity.Property(e => e.ItemCategory1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category_1");
+
+                entity.Property(e => e.ItemId1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id_1");
+
+                entity.Property(e => e.ItemNum1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num_1");
+
+                entity.Property(e => e.TargetType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("target_type");
+            });
+
             modelBuilder.Entity<CampaignPresentBonusDetail>(entity =>
             {
                 entity.ToTable("campaign_present_bonus_detail");
@@ -1469,6 +1518,60 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.RewardValue)
                     .HasColumnType("int(11)")
                     .HasColumnName("reward_value");
+            });
+
+            modelBuilder.Entity<CampaignSpPresentBonusData>(entity =>
+            {
+                entity.ToTable("campaign_sp_present_bonus_data");
+
+                entity.HasIndex(e => e.CardId, "campaign_sp_present_bonus_data_0_card_id");
+
+                entity.HasIndex(e => new { e.TargetType, e.CardId }, "campaign_sp_present_bonus_data_0_target_type_1_card_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CardId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("card_id");
+
+                entity.Property(e => e.Count)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("count");
+
+                entity.Property(e => e.ItemCategory1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_category_1");
+
+                entity.Property(e => e.ItemId1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_id_1");
+
+                entity.Property(e => e.ItemNum1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("item_num_1");
+
+                entity.Property(e => e.LocationId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("location_id");
+
+                entity.Property(e => e.MotionType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("motion_type");
+
+                entity.Property(e => e.PropId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("prop_id");
+
+                entity.Property(e => e.ReplaceIndex)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("replace_index");
+
+                entity.Property(e => e.TargetType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("target_type");
             });
 
             modelBuilder.Entity<CampaignStoryData>(entity =>
@@ -6328,6 +6431,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StartDate)
                     .HasColumnType("int(11)")
                     .HasColumnName("start_date");
+
+                entity.Property(e => e.AvailableGalleryKey)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("available_gallery_key");
             });
 
             modelBuilder.Entity<HomeWalkGroup>(entity =>
@@ -6657,6 +6764,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StartDate)
                     .HasColumnType("int(11)")
                     .HasColumnName("start_date");
+
+                entity.Property(e => e.ShopEnterTrigger)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("shop_enter_trigger");
             });
 
             modelBuilder.Entity<ItemGroup>(entity =>
@@ -9424,6 +9535,14 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.StartDate)
                     .HasColumnType("int(11)")
                     .HasColumnName("start_date");
+
+                entity.Property(e => e.StartGate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_gate");
+
+                entity.Property(e => e.StartGatePanel)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_gate_panel");
             });
 
             modelBuilder.Entity<RaceBgm>(entity =>
@@ -10318,6 +10437,130 @@ namespace UmaMusumeAPI.Context
                 entity.ToTable("race_jikkyo_base");
 
                 entity.HasIndex(e => e.Mode, "race_jikkyo_base_0_mode");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CameraHorse1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("camera_horse1");
+
+                entity.Property(e => e.CameraHorse2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("camera_horse2");
+
+                entity.Property(e => e.CameraId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("camera_id");
+
+                entity.Property(e => e.CommentGroup)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("comment_group");
+
+                entity.Property(e => e.DisableReentrySituation)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("disable_reentry_situation");
+
+                entity.Property(e => e.DisableReuse)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("disable_reuse");
+
+                entity.Property(e => e.Discard)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("discard");
+
+                entity.Property(e => e.Immediate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("immediate");
+
+                entity.Property(e => e.MessageGroup)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("message_group");
+
+                entity.Property(e => e.Mode)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("mode");
+
+                entity.Property(e => e.Per)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("per");
+
+                entity.Property(e => e.Priority)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("priority");
+
+                entity.Property(e => e.Situation)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("situation");
+
+                entity.Property(e => e.SituationEnd)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("situation_end");
+
+                entity.Property(e => e.SubMode)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("sub_mode");
+
+                entity.Property(e => e.SubModeJump)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("sub_mode_jump");
+
+                entity.Property(e => e.SubSituation)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("sub_situation");
+
+                entity.Property(e => e.Tension)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("tension");
+
+                entity.Property(e => e.Trigger0)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("trigger0");
+
+                entity.Property(e => e.Trigger1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("trigger1");
+
+                entity.Property(e => e.Trigger2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("trigger2");
+
+                entity.Property(e => e.Trigger3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("trigger3");
+
+                entity.Property(e => e.Trigger4)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("trigger4");
+
+                entity.Property(e => e.Trigger5)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("trigger5");
+
+                entity.Property(e => e.Trigger6)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("trigger6");
+
+                entity.Property(e => e.Trigger7)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("trigger7");
+
+                entity.Property(e => e.Trigger8)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("trigger8");
+
+                entity.Property(e => e.Trigger9)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("trigger9");
+            });
+
+            modelBuilder.Entity<RaceJikkyoBaseVenus>(entity =>
+            {
+                entity.ToTable("race_jikkyo_base_venus");
+
+                entity.HasIndex(e => e.Mode, "race_jikkyo_base_venus_0_mode");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
@@ -12045,6 +12288,18 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.SupportCardId)
                     .HasColumnType("int(11)")
                     .HasColumnName("support_card_id");
+
+                entity.Property(e => e.GroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("group_id");
+
+                entity.Property(e => e.ConditionSetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("condition_set_id");
+
+                entity.Property(e => e.Priority)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("priority");
             });
 
             modelBuilder.Entity<SingleModeLiveLiveData>(entity =>
@@ -12967,6 +13222,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.Turn)
                     .HasColumnType("int(11)")
                     .HasColumnName("turn");
+
+                entity.Property(e => e.ScenarioGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("scenario_group_id");
             });
 
             modelBuilder.Entity<SingleModeScenario>(entity =>
@@ -13063,6 +13322,30 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.GimmickDiscountRate)
                     .HasColumnType("int(11)")
                     .HasColumnName("gimmick_discount_rate");
+
+                entity.Property(e => e.AdditionalIconSetId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("additional_icon_set_id");
+            });
+
+            modelBuilder.Entity<SingleModeScenarioGroup>(entity =>
+            {
+                entity.ToTable("single_mode_scenario_group");
+
+                entity.HasIndex(e => e.ScenarioId, "single_mode_scenario_group_0_scenario_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.GroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("group_id");
+
+                entity.Property(e => e.ScenarioId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("scenario_id");
             });
 
             modelBuilder.Entity<SingleModeScenarioRecord>(entity =>
@@ -13403,6 +13686,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.SupportCharaId)
                     .HasColumnType("int(11)")
                     .HasColumnName("support_chara_id");
+
+                entity.Property(e => e.AvailableGalleryKey)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("available_gallery_key");
             });
 
             modelBuilder.Entity<SingleModeStoryGuide>(entity =>
@@ -13960,6 +14247,153 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("training_placement");
             });
 
+            modelBuilder.Entity<SingleModeVenusCrystalGroup>(entity =>
+            {
+                entity.ToTable("single_mode_venus_crystal_group");
+
+                entity.HasIndex(e => e.CharaId, "single_mode_venus_crystal_group_0_chara_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ActiveEffectGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("active_effect_group_id");
+
+                entity.Property(e => e.ActiveEffectTurn)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("active_effect_turn");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.PassiveEffectGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("passive_effect_group_id");
+
+                entity.Property(e => e.VenusLevel)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("venus_level");
+            });
+
+            modelBuilder.Entity<SingleModeVenusSpiritEffect>(entity =>
+            {
+                entity.ToTable("single_mode_venus_spirit_effect");
+
+                entity.HasIndex(e => e.SpiritEffectGroupId, "single_mode_venus_spirit_effect_0_spirit_effect_group_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.EffectType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("effect_type");
+
+                entity.Property(e => e.EffectValue1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("effect_value_1");
+
+                entity.Property(e => e.EffectValue2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("effect_value_2");
+
+                entity.Property(e => e.EffectValue3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("effect_value_3");
+
+                entity.Property(e => e.EffectValue4)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("effect_value_4");
+
+                entity.Property(e => e.SpiritEffectGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("spirit_effect_group_id");
+            });
+
+            modelBuilder.Entity<SingleModeVenusSpiritGroup>(entity =>
+            {
+                entity.HasKey(e => e.SpiritId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("single_mode_venus_spirit_group");
+
+                entity.Property(e => e.SpiritId)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("spirit_id");
+
+                entity.Property(e => e.BonusGroup)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("bonus_group");
+
+                entity.Property(e => e.CharaId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("chara_id");
+
+                entity.Property(e => e.SpiritEffectGroupId1)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("spirit_effect_group_id_1");
+
+                entity.Property(e => e.SpiritEffectGroupId2)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("spirit_effect_group_id_2");
+
+                entity.Property(e => e.SpiritEffectGroupId3)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("spirit_effect_group_id_3");
+
+                entity.Property(e => e.SpiritEffectGroupId4)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("spirit_effect_group_id_4");
+
+                entity.Property(e => e.SpiritEffectGroupId5)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("spirit_effect_group_id_5");
+            });
+
+            modelBuilder.Entity<SingleModeVenusSpraceData>(entity =>
+            {
+                entity.ToTable("single_mode_venus_sprace_data");
+
+                entity.HasIndex(e => e.RaceGroupId, "single_mode_venus_sprace_data_0_race_group_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.RaceGroupId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("race_group_id");
+
+                entity.Property(e => e.TurnNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("turn_num");
+            });
+
+            modelBuilder.Entity<SingleModeVenusTrainingPlate>(entity =>
+            {
+                entity.ToTable("single_mode_venus_training_plate");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.ValueMax)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("value_max");
+
+                entity.Property(e => e.ValueMin)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("value_min");
+            });
+
             modelBuilder.Entity<SingleModeWinsSaddle>(entity =>
             {
                 entity.ToTable("single_mode_wins_saddle");
@@ -14489,6 +14923,74 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.SkillLevel9)
                     .HasColumnType("int(11)")
                     .HasColumnName("skill_level9");
+            });
+
+            modelBuilder.Entity<SkillUpgradeCondition>(entity =>
+            {
+                entity.ToTable("skill_upgrade_condition");
+
+                entity.HasIndex(e => new { e.DescriptionId, e.Num, e.SubNum }, "description_id")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.DescriptionId, "skill_upgrade_condition_0_description_id");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CountType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("count_type");
+
+                entity.Property(e => e.DescriptionId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("description_id");
+
+                entity.Property(e => e.Num)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("num");
+
+                entity.Property(e => e.SubNum)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("sub_num");
+
+                entity.Property(e => e.TimingType)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("timing_type");
+            });
+
+            modelBuilder.Entity<SkillUpgradeDescription>(entity =>
+            {
+                entity.ToTable("skill_upgrade_description");
+
+                entity.HasIndex(e => new { e.CardId, e.SkillId }, "card_id")
+                    .IsUnique();
+
+                entity.HasIndex(e => e.CardId, "skill_upgrade_description_0_card_id");
+
+                entity.HasIndex(e => new { e.CardId, e.Rank }, "skill_upgrade_description_0_card_id_1_rank");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .ValueGeneratedNever()
+                    .HasColumnName("id");
+
+                entity.Property(e => e.CardId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("card_id");
+
+                entity.Property(e => e.Rank)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("rank");
+
+                entity.Property(e => e.SkillId)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("skill_id");
+
+                entity.Property(e => e.StartDate)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("start_date");
             });
 
             modelBuilder.Entity<StoryEventBingoReward>(entity =>
@@ -17347,6 +17849,10 @@ namespace UmaMusumeAPI.Context
                 entity.Property(e => e.DressId)
                     .HasColumnType("int(11)")
                     .HasColumnName("dress_id");
+
+                entity.Property(e => e.SelectorLabel)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("selector_label");
             });
 
             modelBuilder.Entity<TrainingCuttData>(entity =>

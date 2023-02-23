@@ -14,5 +14,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int TargetListIndex { get; set; }
         public int PropTarget { get; set; }
         public int DressId { get; set; }
+        public int SelectorLabel { get; set; }
     }
 }

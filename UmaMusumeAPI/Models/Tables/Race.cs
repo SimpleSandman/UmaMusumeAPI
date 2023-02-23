@@ -22,5 +22,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int EntryNum { get; set; }
         public int IsDirtGrade { get; set; }
         public int StartDate { get; set; }
+        public int StartGate { get; set; }
+        public int StartGatePanel { get; set; }
     }
 }
