@@ -13031,10 +13031,8 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("single_mode_rival");
 
-                entity.HasIndex(e => new { e.CharaId, e.Turn, e.RaceProgramId, e.RivalCharaId }, "chara_id")
+                entity.HasIndex(e => new { e.CharaId, e.Turn, e.RaceProgramId, e.RivalCharaId, e.RivalFlagId }, "single_mode_rival_0")
                     .IsUnique();
-
-                entity.HasIndex(e => e.RaceProgramId, "single_mode_rival_0_race_program_id");
 
                 entity.Property(e => e.Id)
                     .HasColumnType("int(11)")
