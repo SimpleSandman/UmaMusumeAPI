@@ -21,5 +21,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int SaboriType { get; set; }
         public int DressType { get; set; }
         public int DressId { get; set; }
+        public int GroupId { get; set; }
     }
 }

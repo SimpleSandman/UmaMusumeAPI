@@ -50,5 +50,8 @@ namespace UmaMusumeAPI.Models.Tables
         public int BonusItemNum2 { get; set; }
         public int StartDate { get; set; }
         public int EndDate { get; set; }
+        public int DrawGuaranteeType { get; set; }
+        public int GachaOddsId { get; set; }
+        public int PaidGachaButtonType { get; set; }
     }
 }

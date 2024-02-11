@@ -12,5 +12,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int Per { get; set; }
         public int CommentGroup { get; set; }
         public int Reuse { get; set; }
+        public int OmitTag { get; set; }
     }
 }

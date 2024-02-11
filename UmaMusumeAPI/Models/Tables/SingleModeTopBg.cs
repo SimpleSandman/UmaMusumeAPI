@@ -17,5 +17,6 @@ namespace UmaMusumeAPI.Models.Tables
         public string EnvCueName { get; set; }
         public string EnvCuesheetName { get; set; }
         public int MaxPlacement { get; set; }
+        public int HalfType { get; set; }
     }
 }

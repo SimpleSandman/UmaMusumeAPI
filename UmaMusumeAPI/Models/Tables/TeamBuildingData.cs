@@ -17,5 +17,8 @@ namespace UmaMusumeAPI.Models.Tables
         public int StartDate { get; set; }
         public int EndingDate { get; set; }
         public int EndDate { get; set; }
+        public int MiddleDate { get; set; }
+        public int RequiredRaceCount { get; set; }
+        public int SpecialRaceCount { get; set; }
     }
 }

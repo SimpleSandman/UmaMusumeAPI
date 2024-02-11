@@ -30,7 +30,7 @@ namespace UmaMusumeAPI.Controllers.Tables
 
         // GET: api/TrainingCuttData/5
         [HttpGet("{commandId}")]
-        public async Task<ActionResult<IEnumerable<TrainingCuttData>>> GetTrainingCuttData(long commandId)
+        public async Task<ActionResult<IEnumerable<TrainingCuttData>>> GetTrainingCuttData(int commandId)
         {
             var trainingCuttData = await _context.TrainingCuttData
                 .Where(c => c.CommandId == commandId)

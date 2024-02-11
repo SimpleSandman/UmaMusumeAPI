@@ -11,5 +11,9 @@ namespace UmaMusumeAPI.Models.Tables
         public int ResourceId { get; set; }
         public int Title { get; set; }
         public int SubTitle { get; set; }
+        public int Distance { get; set; }
+        public int Ground { get; set; }
+        public int RaceTrackId { get; set; }
+        public int Weather { get; set; }
     }
 }

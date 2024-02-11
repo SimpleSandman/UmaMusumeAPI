@@ -24,5 +24,11 @@ namespace UmaMusumeAPI.Models.Tables
         public int StartDate { get; set; }
         public int StartGate { get; set; }
         public int StartGatePanel { get; set; }
+        public int AudienceGroupId { get; set; }
+        public int ChangeFullGate { get; set; }
+        public int PaddockBgId { get; set; }
+        public string RealFfCueName { get; set; }
+        public string RealFfCuesheetName { get; set; }
+        public int ResultPodium { get; set; }
     }
 }

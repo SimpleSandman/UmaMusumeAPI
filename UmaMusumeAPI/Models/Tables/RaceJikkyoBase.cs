@@ -34,5 +34,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int CameraHorse1 { get; set; }
         public int CameraHorse2 { get; set; }
         public int DisableReuse { get; set; }
+        public int IsForcePlayEventCamera { get; set; }
     }
 }

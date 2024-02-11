@@ -96,5 +96,10 @@ namespace UmaMusumeAPI.Models.Tables
         public int BgmTime30 { get; set; }
         public string BgmCueName30 { get; set; }
         public string BgmCuesheetName30 { get; set; }
+        public string BgmSkipTriggerCueName { get; set; }
+        public string BgmSkipTriggerCuesheetName { get; set; }
+        public string BgmTriggerCueName { get; set; }
+        public string BgmTriggerCuesheetName { get; set; }
+        public int BgmTriggerTimeAgo { get; set; }
     }
 }

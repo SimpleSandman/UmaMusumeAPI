@@ -28,5 +28,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int MaxWiz { get; set; }
         public int GimmickDiscountRate { get; set; }
         public int AdditionalIconSetId { get; set; }
+        public int SkillUpgradeNum { get; set; }
     }
 }

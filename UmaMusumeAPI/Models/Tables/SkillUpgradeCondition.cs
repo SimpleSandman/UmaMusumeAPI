@@ -11,5 +11,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int SubNum { get; set; }
         public int TimingType { get; set; }
         public int CountType { get; set; }
+        public int UpgradeType { get; set; }
     }
 }

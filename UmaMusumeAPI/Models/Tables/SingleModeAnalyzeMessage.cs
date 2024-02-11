@@ -14,5 +14,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int Rate { get; set; }
         public int MotionType { get; set; }
         public int CharacterType { get; set; }
+        public int ConditionSet { get; set; }
     }
 }

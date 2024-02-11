@@ -10,5 +10,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int Weather { get; set; }
         public int Ground { get; set; }
         public int Rate { get; set; }
+        public int Area { get; set; }
     }
 }

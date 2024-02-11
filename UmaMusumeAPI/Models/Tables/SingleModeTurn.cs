@@ -27,5 +27,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int StoryClothId { get; set; }
         public int StoryBgId { get; set; }
         public int StoryBgSubId { get; set; }
+        public string BgmUniqueCueName { get; set; }
+        public string BgmUniqueCuesheetName { get; set; }
     }
 }

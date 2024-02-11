@@ -10,5 +10,6 @@ namespace UmaMusumeAPI.Models.Tables
         public string MotionName { get; set; }
         public int EarType { get; set; }
         public int UseStory { get; set; }
+        public int UseTheater { get; set; }
     }
 }

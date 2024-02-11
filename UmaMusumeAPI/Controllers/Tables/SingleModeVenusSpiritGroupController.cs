@@ -29,17 +29,17 @@ namespace UmaMusumeAPI.Controllers.Tables
         }
 
         // GET: api/SingleModeVenusSpiritGroup/5
-        [HttpGet("{fanRaidId}")]
+        [HttpGet("{spiritId}")]
         public async Task<ActionResult<SingleModeVenusSpiritGroup>> GetSingleModeVenusSpiritGroup(int spiritId)
         {
-            var SingleModeVenusSpiritGroup = await _context.SingleModeVenusSpiritGroups.FindAsync(spiritId);
+            var singleModeVenusSpiritGroup = await _context.SingleModeVenusSpiritGroups.FindAsync(spiritId);
 
-            if (SingleModeVenusSpiritGroup == null)
+            if (singleModeVenusSpiritGroup == null)
             {
                 return NotFound();
             }
 
-            return SingleModeVenusSpiritGroup;
+            return singleModeVenusSpiritGroup;
         }
     }
 }

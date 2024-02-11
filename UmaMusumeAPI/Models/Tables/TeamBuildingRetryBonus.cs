@@ -10,5 +10,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int RetryMax { get; set; }
         public int BonusRate { get; set; }
         public int ResimulateNum { get; set; }
+        public int DownRate { get; set; }
     }
 }

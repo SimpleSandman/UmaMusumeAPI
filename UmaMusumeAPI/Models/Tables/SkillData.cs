@@ -82,5 +82,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int AdditionalActivateType21 { get; set; }
         public int AdditionalActivateType22 { get; set; }
         public int AdditionalActivateType23 { get; set; }
+        public int Priority { get; set; }
     }
 }

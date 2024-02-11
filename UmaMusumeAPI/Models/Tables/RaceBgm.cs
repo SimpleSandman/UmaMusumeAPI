@@ -30,5 +30,6 @@ namespace UmaMusumeAPI.Models.Tables
         public string ResultListBgmCueName3 { get; set; }
         public string ResultListBgmCuesheetName3 { get; set; }
         public int Difficulty { get; set; }
+        public int ConditionType { get; set; }
     }
 }

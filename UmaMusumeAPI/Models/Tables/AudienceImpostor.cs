@@ -16,5 +16,6 @@
         public int Pattern8 { get; set; }
         public int Pattern9 { get; set; }
         public int Pattern10 { get; set; }
+        public int AudienceGroupId { get; set; }
     }
 }

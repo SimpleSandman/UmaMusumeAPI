@@ -16,5 +16,8 @@ namespace UmaMusumeAPI.Models.Tables
         public int GroupId { get; set; }
         public int Step { get; set; }
         public int GiftMessageId { get; set; }
+        public int AnimeFileId { get; set; }
+        public string AnimeFileLabel { get; set; }
+        public string NewStartDate { get; set; }
     }
 }

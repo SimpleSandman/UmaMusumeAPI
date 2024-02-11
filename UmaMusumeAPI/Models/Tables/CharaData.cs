@@ -49,5 +49,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int StartDate { get; set; }
         public int CharaCategory { get; set; }
         public int LoveRankLimit { get; set; }
+        public int LastYear { get; set; }
     }
 }

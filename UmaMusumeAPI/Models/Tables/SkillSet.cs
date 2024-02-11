@@ -26,5 +26,25 @@ namespace UmaMusumeAPI.Models.Tables
         public int SkillLevel9 { get; set; }
         public int SkillId10 { get; set; }
         public int SkillLevel10 { get; set; }
+        public int SkillId11 { get; set; }
+        public int SkillLevel11 { get; set; }
+        public int SkillId12 { get; set; }
+        public int SkillLevel12 { get; set; }
+        public int SkillId13 { get; set; }
+        public int SkillLevel13 { get; set; }
+        public int SkillId14 { get; set; }
+        public int SkillLevel14 { get; set; }
+        public int SkillId15 { get; set; }
+        public int SkillLevel15 { get; set; }
+        public int SkillId16 { get; set; }
+        public int SkillLevel16 { get; set; }
+        public int SkillId17 { get; set; }
+        public int SkillLevel17 { get; set; }
+        public int SkillId18 { get; set; }
+        public int SkillLevel18 { get; set; }
+        public int SkillId19 { get; set; }
+        public int SkillLevel19 { get; set; }
+        public int SkillId20 { get; set; }
+        public int SkillLevel20 { get; set; }
     }
 }

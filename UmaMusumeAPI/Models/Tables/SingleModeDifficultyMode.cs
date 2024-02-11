@@ -21,5 +21,12 @@
         public int GaugeUp { get; set; }
         public int ConsumeTpRatio { get; set; }
         public int ConsumeTpBonusRatio { get; set; }
+        public int FirstClearMotion { get; set; }
+        public int ItemCategory { get; set; }
+        public int ItemId { get; set; }
+        public int MaxNum { get; set; }
+        public int PrizeMotion1 { get; set; }
+        public int PrizeMotion2 { get; set; }
+        public int PrizeMotion3 { get; set; }
     }
 }

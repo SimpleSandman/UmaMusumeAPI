@@ -15,5 +15,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int ReceiveConditionType { get; set; }
         public int StartDate { get; set; }
         public int EndDate { get; set; }
+        public int Type { get; set; }
     }
 }

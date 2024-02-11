@@ -33,5 +33,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int EndTime { get; set; }
         public int CostumeType { get; set; }
         public int UseDressChange { get; set; }
+        public int MiniMayuShaderType { get; set; }
     }
 }

@@ -38,5 +38,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int PickUpItemId3 { get; set; }
         public int PickUpItemNum3 { get; set; }
         public int StartDate { get; set; }
+        public int HasUniqueBgEnv { get; set; }
     }
 }

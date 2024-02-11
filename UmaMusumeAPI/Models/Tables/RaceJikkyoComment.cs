@@ -11,5 +11,6 @@ namespace UmaMusumeAPI.Models.Tables
         public string Voice { get; set; }
         public int Per { get; set; }
         public int MessageGroup { get; set; }
+        public int OmitTag { get; set; }
     }
 }

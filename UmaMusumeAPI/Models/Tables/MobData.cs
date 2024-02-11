@@ -20,5 +20,6 @@
         public int HairCutoff { get; set; }
         public int AttachmentModelId { get; set; }
         public int CaptureType { get; set; }
+        public int MayuVisibleType { get; set; }
     }
 }
