@@ -9948,8 +9948,6 @@ CREATE TABLE login_bonus_data
   , type INT(11) NOT NULL
   , count_num INT(11) NOT NULL
   , disp_order INT(11) NOT NULL
-  , start_date TEXT NOT NULL
-  , end_date TEXT NOT NULL
   , stamp_id INT(11) NOT NULL
   , bg_id INT(11) NOT NULL
   , group_id INT(11) NOT NULL
@@ -9958,19 +9956,21 @@ CREATE TABLE login_bonus_data
   , anime_file_id INT(11) NOT NULL
   , anime_file_label TEXT NOT NULL
   , new_start_date TEXT NOT NULL
+  , start_date TEXT NOT NULL
+  , end_date TEXT NOT NULL
   , PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 442,
+AVG_ROW_LENGTH = 116,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
 
 --
--- Create index `disp_order` on table `login_bonus_data`
+-- Create index `login_bonus_data_0_group_id` on table `login_bonus_data`
 --
 ALTER TABLE login_bonus_data
-ADD UNIQUE INDEX disp_order (disp_order);
+ADD INDEX login_bonus_data_0_group_id (group_id);
 
 --
 -- Create index `login_bonus_data_0_type` on table `login_bonus_data`

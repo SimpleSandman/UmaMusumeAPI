@@ -9,8 +9,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int Type { get; set; }
         public int CountNum { get; set; }
         public int DispOrder { get; set; }
-        public string StartDate { get; set; }
-        public string EndDate { get; set; }
         public int StampId { get; set; }
         public int BgId { get; set; }
         public int GroupId { get; set; }
@@ -19,5 +17,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int AnimeFileId { get; set; }
         public string AnimeFileLabel { get; set; }
         public string NewStartDate { get; set; }
+        public string StartDate { get; set; }
+        public string EndDate { get; set; }
     }
 }

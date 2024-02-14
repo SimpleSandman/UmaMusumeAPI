@@ -8737,8 +8737,7 @@ namespace UmaMusumeAPI.Context
             {
                 entity.ToTable("login_bonus_data");
 
-                entity.HasIndex(e => e.DispOrder, "disp_order")
-                    .IsUnique();
+                entity.HasIndex(e => e.GroupId, "login_bonus_data_0_group_id");
 
                 entity.HasIndex(e => e.Type, "login_bonus_data_0_type");
 
