@@ -22,34 +22,6 @@ The stored procedures are:
 - [SpSuccessionPointSum](https://github.com/SimpleSandman/UmaMusumeAPI/blob/master/UmaMusumeAPI/SqlScripts/StoredProcedureCreation.sql#L36)
   - This is the overall calculation based on the child's compatibility with the proposed parents and grandparents
 
-## Translation Endpoint
-
-I've created the `TextDataEnglish` [endpoint](https://www.tracenacademy.com/api/TextDataEnglish) by importing [Noccu's translation repo](https://github.com/noccu/umamusu-translate/tree/master/translations) that holds `.json` files of translated data based on the original `text_data` table.
-
-In addition, I've created multiple `Basic` endpoints for `TextDataEnglish` that could help with indexing or basic text searching. The most interesting endpoint is the POST request that searches Japanese AND English text.
-
-```bash
-curl -X 'POST' \
-  'https://www.tracenacademy.com/api/BasicTextDataEnglish' \
-  -H 'accept: text/plain' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "searchQuery": "Special Week",
-  "isEnglishQuery": true
-}'
-```
-
-```bash
-curl -X 'POST' \
-  'https://www.tracenacademy.com/api/BasicTextDataEnglish' \
-  -H 'accept: text/plain' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "searchQuery": "スペシャルウィーク",
-  "isEnglishQuery": false
-}'
-```
-
 # Initial Setup
 Under `UmaMusumeAPI/Properties/launchSettings.json`, set the `MARIA_CONNECTION_STRING` environment variable to your MariaDB database for "development" and on the hosting site's config variables section for "release".
 
