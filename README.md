@@ -1,7 +1,7 @@
 # Uma Musume REST API <br/> [![Build](https://ci.appveyor.com/api/projects/status/e3dq3bvxffkmmpty/branch/master?svg=true)](https://ci.appveyor.com/project/SimpleSandman/umamusumeapi/branch/master) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e77ffc16dc4c4eeabc2d2618538a2d17)](https://www.codacy.com/gh/SimpleSandman/UmaMusumeAPI/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SimpleSandman/UmaMusumeAPI&amp;utm_campaign=Badge_Grade) [![codecov](https://codecov.io/gh/SimpleSandman/UmaMusumeAPI/branch/master/graph/badge.svg?token=COWCEBUUO6)](https://codecov.io/gh/SimpleSandman/UmaMusumeAPI)
 This is a community REST API based on [Uma Musume: Pretty Derby](https://umamusume.jp/)'s `meta` and `master.mdb` files that is read from a MariaDB database. This is based on the Swagger UI/OpenAPI specification. I'm using MariaDB instead of MySQL for the sake of keeping as much of this as open-source as possible. The API is available [here](https://www.tracenacademy.com/index.html) for your viewing pleasure.
 
-I've written a [loader app](https://github.com/SimpleSandman/UmaMusumeLoadSqlData) that allows you to load the `meta` and `master.mdb`'s data from the [DMM version](https://dmg.umamusume.jp/) of this game into either SQL Server or MySQL/MariaDB databases. The reason for both is due to change in database specifications midway through development, but I didn't want to let my hard work go to waste.
+I've written a [loader app](https://github.com/SimpleSandman/UmaMusumeLoadSqlData) that allows you to load the `meta` and `master.mdb`'s data from the [DMM version](https://dmg.umamusume.jp/) of this game into a MySQL/MariaDB database.
 
 ## Features
 
@@ -21,34 +21,6 @@ The stored procedures are:
   - This is the recommended parents based on the child
 - [SpSuccessionPointSum](https://github.com/SimpleSandman/UmaMusumeAPI/blob/master/UmaMusumeAPI/SqlScripts/StoredProcedureCreation.sql#L36)
   - This is the overall calculation based on the child's compatibility with the proposed parents and grandparents
-
-## Translation Endpoint
-
-I've created the `TextDataEnglish` [endpoint](https://www.tracenacademy.com/api/TextDataEnglish) by importing [Noccu's translation repo](https://github.com/noccu/umamusu-translate/tree/master/translations) that holds `.json` files of translated data based on the original `text_data` table.
-
-In addition, I've created multiple `Basic` endpoints for `TextDataEnglish` that could help with indexing or basic text searching. The most interesting endpoint is the POST request that searches Japanese AND English text.
-
-```bash
-curl -X 'POST' \
-  'https://www.tracenacademy.com/api/BasicTextDataEnglish' \
-  -H 'accept: text/plain' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "searchQuery": "Special Week",
-  "isEnglishQuery": true
-}'
-```
-
-```bash
-curl -X 'POST' \
-  'https://www.tracenacademy.com/api/BasicTextDataEnglish' \
-  -H 'accept: text/plain' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "searchQuery": "スペシャルウィーク",
-  "isEnglishQuery": false
-}'
-```
 
 # Initial Setup
 Under `UmaMusumeAPI/Properties/launchSettings.json`, set the `MARIA_CONNECTION_STRING` environment variable to your MariaDB database for "development" and on the hosting site's config variables section for "release".

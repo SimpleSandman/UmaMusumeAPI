@@ -62,9 +62,9 @@ namespace UmaMusumeAPI
                 c.SwaggerDoc("v1", new OpenApiInfo 
                 { 
                     Title = "Uma Musume API", 
-                    Version = "v2024.02.13",
+                    Version = "v2024.12.08",
                     Description = "A community API for the mobile game, Uma Musume: Pretty Derby. " 
-                        + "This is utilizing the \"master.mdb\" file",
+                        + "This is utilizing the \"master.mdb\" and \"meta\" files",
                     Contact = new OpenApiContact
                     {
                         Name = "GitHub",

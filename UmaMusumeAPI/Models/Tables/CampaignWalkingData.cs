@@ -19,5 +19,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int IconIdLocation3 { get; set; }
         public int LogoId { get; set; }
         public int MapId { get; set; }
+        public int GaugeConsumeNum { get; set; }
+        public int SpecialCampaignType { get; set; }
     }
 }

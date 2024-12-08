@@ -9,6 +9,5 @@
         public int Type1 { get; set; }
         public int Value1 { get; set; }
         public string ScoreBonusName { get; set; }
-        public string ScoreBonusNameEnglish { get; set; }
     }
 }

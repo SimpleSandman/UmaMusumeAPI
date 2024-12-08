@@ -10,7 +10,5 @@ namespace UmaMusumeAPI.Models.Views
         public DateTime? CharaStartDate { get; set; }
         public string CharaName { get; set; }
         public string CharaCv { get; set; }
-        public string CharaNameEnglish { get; set; }
-        public string CharaCvEnglish { get; set; }
     }
 }

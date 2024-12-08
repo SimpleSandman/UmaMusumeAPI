@@ -12,5 +12,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int EventStoryType { get; set; }
         public int EventWalkType { get; set; }
         public int EventFooterType { get; set; }
+        public int EventFooterPropId { get; set; }
+        public int EventWalkPropId { get; set; }
     }
 }

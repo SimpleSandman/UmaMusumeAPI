@@ -13,7 +13,5 @@
         public int TalentWiz { get; set; }
         public string CardName { get; set; }
         public string CardTitle { get; set; }
-        public string CardNameEnglish { get; set; }
-        public string CardTitleEnglish { get; set; }
     }
 }

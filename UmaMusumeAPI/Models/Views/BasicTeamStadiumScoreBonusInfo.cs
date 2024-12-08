@@ -9,6 +9,5 @@
         public int ConditionValue2 { get; set; }
         public int ScoreRate { get; set; }
         public string ScoreBonusName { get; set; }
-        public string ScoreBonusNameEnglish { get; set; }
     }
 }

@@ -7,6 +7,7 @@ namespace UmaMusumeAPI.Models.Tables
     {
         public int Id { get; set; }
         public int EventCategoryId { get; set; }
+        public int IsSpecial { get; set; }
         public int ItemId { get; set; }
         public int NameIndex { get; set; }
     }

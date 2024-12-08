@@ -10,5 +10,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int CutId { get; set; }
         public int CutSubId { get; set; }
         public int ReplaceIndex { get; set; }
+        public int CharaId { get; set; }
     }
 }

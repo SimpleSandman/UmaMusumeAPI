@@ -29,5 +29,9 @@ namespace UmaMusumeAPI.Models.Tables
         public int SkillSetId { get; set; }
         public int SkillSetId1 { get; set; }
         public int SkillSetId2 { get; set; }
+        public int ReplaceBossId { get; set; }
+        public int ReplaceMidBossId { get; set; }
+        public int ReplaceNpcId { get; set; }
+        public int UseReplacing { get; set; }
     }
 }

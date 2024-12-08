@@ -15,5 +15,6 @@ namespace UmaMusumeAPI.Models.Tables
         public string StartDate { get; set; }
         public string EndDate { get; set; }
         public string BgImage { get; set; }
+        public int JobsTrainingReportPointLimit { get; set; }
     }
 }

@@ -18,5 +18,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int FinishTimeMinRandomRange { get; set; }
         public int FinishTimeMax { get; set; }
         public int FinishTimeMaxRandomRange { get; set; }
+        public int ExCamera { get; set; }
+        public int RunOutside { get; set; }
     }
 }

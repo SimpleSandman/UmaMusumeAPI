@@ -24,5 +24,9 @@ namespace UmaMusumeAPI.Models.Tables
         public int ItemCategory5 { get; set; }
         public int ItemId5 { get; set; }
         public int ItemNum5 { get; set; }
+        public int DispEndDate { get; set; }
+        public int DispStartDate { get; set; }
+        public int EndDate { get; set; }
+        public int StartDate { get; set; }
     }
 }

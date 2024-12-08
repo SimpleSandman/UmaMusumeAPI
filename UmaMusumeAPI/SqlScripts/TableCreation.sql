@@ -374,6 +374,11 @@ DROP TABLE IF EXISTS collect_event_map_master;
 DROP TABLE IF EXISTS collect_raid_all_reward;
 
 --
+-- Drop table `collect_raid_dress_color`
+--
+DROP TABLE IF EXISTS collect_raid_dress_color;
+
+--
 -- Drop table `collect_raid_individual_reward`
 --
 DROP TABLE IF EXISTS collect_raid_individual_reward;
@@ -479,6 +484,21 @@ DROP TABLE IF EXISTS daily_race_billing;
 DROP TABLE IF EXISTS daily_race_npc;
 
 --
+-- Drop table `deck_recommend_exception`
+--
+DROP TABLE IF EXISTS deck_recommend_exception;
+
+--
+-- Drop table `deck_recommend_lv_correction`
+--
+DROP TABLE IF EXISTS deck_recommend_lv_correction;
+
+--
+-- Drop table `deck_recommend_organize`
+--
+DROP TABLE IF EXISTS deck_recommend_organize;
+
+--
 -- Drop table `directory`
 --
 DROP TABLE IF EXISTS directory;
@@ -512,6 +532,11 @@ DROP TABLE IF EXISTS face_type_data;
 -- Drop table `facial_mouth_change`
 --
 DROP TABLE IF EXISTS facial_mouth_change;
+
+--
+-- Drop table `factor_research_animation_data`
+--
+DROP TABLE IF EXISTS factor_research_animation_data;
 
 --
 -- Drop table `factor_research_box`
@@ -789,6 +814,36 @@ DROP TABLE IF EXISTS item_group;
 DROP TABLE IF EXISTS item_place;
 
 --
+-- Drop table `jobs_genre`
+--
+DROP TABLE IF EXISTS jobs_genre;
+
+--
+-- Drop table `jobs_place`
+--
+DROP TABLE IF EXISTS jobs_place;
+
+--
+-- Drop table `jobs_point_limit`
+--
+DROP TABLE IF EXISTS jobs_point_limit;
+
+--
+-- Drop table `jobs_random_drop_reward`
+--
+DROP TABLE IF EXISTS jobs_random_drop_reward;
+
+--
+-- Drop table `jobs_reward`
+--
+DROP TABLE IF EXISTS jobs_reward;
+
+--
+-- Drop table `jobs_reward_sort_disp_order`
+--
+DROP TABLE IF EXISTS jobs_reward_sort_disp_order;
+
+--
 -- Drop table `jukebox_comment`
 --
 DROP TABLE IF EXISTS jukebox_comment;
@@ -842,16 +897,6 @@ DROP TABLE IF EXISTS legend_race_cutt_chara_data;
 -- Drop table `legend_race_npc`
 --
 DROP TABLE IF EXISTS legend_race_npc;
-
---
--- Drop table `limited_exchange`
---
-DROP TABLE IF EXISTS limited_exchange;
-
---
--- Drop table `limited_exchange_reward`
---
-DROP TABLE IF EXISTS limited_exchange_reward;
 
 --
 -- Drop table `live_data`
@@ -984,6 +1029,11 @@ DROP TABLE IF EXISTS mini_bg_chara_motion;
 DROP TABLE IF EXISTS mini_face_type_data;
 
 --
+-- Drop table `mini_mob`
+--
+DROP TABLE IF EXISTS mini_mob;
+
+--
 -- Drop table `mini_motion_set`
 --
 DROP TABLE IF EXISTS mini_motion_set;
@@ -1077,11 +1127,6 @@ DROP TABLE IF EXISTS race_bgm;
 -- Drop table `race_bgm_cutin`
 --
 DROP TABLE IF EXISTS race_bgm_cutin;
-
---
--- Drop table `race_bgm_cutin_extension_time`
---
-DROP TABLE IF EXISTS race_bgm_cutin_extension_time;
 
 --
 -- Drop table `race_bgm_pattern`
@@ -1244,6 +1289,11 @@ DROP TABLE IF EXISTS rating_race_reward_group;
 DROP TABLE IF EXISTS rating_race_weekend_reward;
 
 --
+-- Drop table `room_match_training_rank`
+--
+DROP TABLE IF EXISTS room_match_training_rank;
+
+--
 -- Drop table `season_data`
 --
 DROP TABLE IF EXISTS season_data;
@@ -1257,6 +1307,46 @@ DROP TABLE IF EXISTS select_pickup;
 -- Drop table `short_episode`
 --
 DROP TABLE IF EXISTS short_episode;
+
+--
+-- Drop table `single_mode_09_board`
+--
+DROP TABLE IF EXISTS single_mode_09_board;
+
+--
+-- Drop table `single_mode_09_chip`
+--
+DROP TABLE IF EXISTS single_mode_09_chip;
+
+--
+-- Drop table `single_mode_09_chip_effect`
+--
+DROP TABLE IF EXISTS single_mode_09_chip_effect;
+
+--
+-- Drop table `single_mode_09_learning_bonus`
+--
+DROP TABLE IF EXISTS single_mode_09_learning_bonus;
+
+--
+-- Drop table `single_mode_09_link_effect`
+--
+DROP TABLE IF EXISTS single_mode_09_link_effect;
+
+--
+-- Drop table `single_mode_09_progress_rate`
+--
+DROP TABLE IF EXISTS single_mode_09_progress_rate;
+
+--
+-- Drop table `single_mode_09_schedule`
+--
+DROP TABLE IF EXISTS single_mode_09_schedule;
+
+--
+-- Drop table `single_mode_09_training_boost`
+--
+DROP TABLE IF EXISTS single_mode_09_training_boost;
 
 --
 -- Drop table `single_mode_analyze_condition`
@@ -1377,6 +1467,131 @@ DROP TABLE IF EXISTS single_mode_chara_program;
 -- Drop table `single_mode_conclusion_set`
 --
 DROP TABLE IF EXISTS single_mode_conclusion_set;
+
+--
+-- Drop table `single_mode_cook_coin_rate`
+--
+DROP TABLE IF EXISTS single_mode_cook_coin_rate;
+
+--
+-- Drop table `single_mode_cook_cooking_cutt`
+--
+DROP TABLE IF EXISTS single_mode_cook_cooking_cutt;
+
+--
+-- Drop table `single_mode_cook_cooking_rate`
+--
+DROP TABLE IF EXISTS single_mode_cook_cooking_rate;
+
+--
+-- Drop table `single_mode_cook_cooking_type`
+--
+DROP TABLE IF EXISTS single_mode_cook_cooking_type;
+
+--
+-- Drop table `single_mode_cook_dish`
+--
+DROP TABLE IF EXISTS single_mode_cook_dish;
+
+--
+-- Drop table `single_mode_cook_dish_cutt`
+--
+DROP TABLE IF EXISTS single_mode_cook_dish_cutt;
+
+--
+-- Drop table `single_mode_cook_dish_cutt_se`
+--
+DROP TABLE IF EXISTS single_mode_cook_dish_cutt_se;
+
+--
+-- Drop table `single_mode_cook_dish_effect`
+--
+DROP TABLE IF EXISTS single_mode_cook_dish_effect;
+
+--
+-- Drop table `single_mode_cook_dish_icon`
+--
+DROP TABLE IF EXISTS single_mode_cook_dish_icon;
+
+--
+-- Drop table `single_mode_cook_dish_material`
+--
+DROP TABLE IF EXISTS single_mode_cook_dish_material;
+
+--
+-- Drop table `single_mode_cook_dish_name`
+--
+DROP TABLE IF EXISTS single_mode_cook_dish_name;
+
+--
+-- Drop table `single_mode_cook_garden`
+--
+DROP TABLE IF EXISTS single_mode_cook_garden;
+
+--
+-- Drop table `single_mode_cook_garden_bg`
+--
+DROP TABLE IF EXISTS single_mode_cook_garden_bg;
+
+--
+-- Drop table `single_mode_cook_garden_effect`
+--
+DROP TABLE IF EXISTS single_mode_cook_garden_effect;
+
+--
+-- Drop table `single_mode_cook_garden_level`
+--
+DROP TABLE IF EXISTS single_mode_cook_garden_level;
+
+--
+-- Drop table `single_mode_cook_listener`
+--
+DROP TABLE IF EXISTS single_mode_cook_listener;
+
+--
+-- Drop table `single_mode_cook_material_rate`
+--
+DROP TABLE IF EXISTS single_mode_cook_material_rate;
+
+--
+-- Drop table `single_mode_cook_message`
+--
+DROP TABLE IF EXISTS single_mode_cook_message;
+
+--
+-- Drop table `single_mode_cook_motion_group`
+--
+DROP TABLE IF EXISTS single_mode_cook_motion_group;
+
+--
+-- Drop table `single_mode_cook_motion_status`
+--
+DROP TABLE IF EXISTS single_mode_cook_motion_status;
+
+--
+-- Drop table `single_mode_cook_power_data`
+--
+DROP TABLE IF EXISTS single_mode_cook_power_data;
+
+--
+-- Drop table `single_mode_cook_stand_motion`
+--
+DROP TABLE IF EXISTS single_mode_cook_stand_motion;
+
+--
+-- Drop table `single_mode_cook_success_effect`
+--
+DROP TABLE IF EXISTS single_mode_cook_success_effect;
+
+--
+-- Drop table `single_mode_cook_success_odds`
+--
+DROP TABLE IF EXISTS single_mode_cook_success_odds;
+
+--
+-- Drop table `single_mode_cook_success_type`
+--
+DROP TABLE IF EXISTS single_mode_cook_success_type;
 
 --
 -- Drop table `single_mode_difficulty_box`
@@ -1537,6 +1752,11 @@ DROP TABLE IF EXISTS single_mode_program;
 -- Drop table `single_mode_race_group`
 --
 DROP TABLE IF EXISTS single_mode_race_group;
+
+--
+-- Drop table `single_mode_race_limit_reward`
+--
+DROP TABLE IF EXISTS single_mode_race_limit_reward;
 
 --
 -- Drop table `single_mode_race_live`
@@ -1724,6 +1944,11 @@ DROP TABLE IF EXISTS single_mode_top_bg_chara;
 DROP TABLE IF EXISTS single_mode_training;
 
 --
+-- Drop table `single_mode_training_bg_chara`
+--
+DROP TABLE IF EXISTS single_mode_training_bg_chara;
+
+--
 -- Drop table `single_mode_training_effect`
 --
 DROP TABLE IF EXISTS single_mode_training_effect;
@@ -1879,6 +2104,11 @@ DROP TABLE IF EXISTS story_event_top_chara;
 DROP TABLE IF EXISTS story_extra_data;
 
 --
+-- Drop table `story_extra_movie_data`
+--
+DROP TABLE IF EXISTS story_extra_movie_data;
+
+--
 -- Drop table `story_extra_story_data`
 --
 DROP TABLE IF EXISTS story_extra_story_data;
@@ -1902,6 +2132,11 @@ DROP TABLE IF EXISTS story_still;
 -- Drop table `story_wipe_dictionary`
 --
 DROP TABLE IF EXISTS story_wipe_dictionary;
+
+--
+-- Drop table `subscription_effect`
+--
+DROP TABLE IF EXISTS subscription_effect;
 
 --
 -- Drop table `succession_factor`
@@ -2124,11 +2359,6 @@ DROP TABLE IF EXISTS team_stadium_support_text;
 DROP TABLE IF EXISTS text_data;
 
 --
--- Drop table `text_data_english`
---
-DROP TABLE IF EXISTS text_data_english;
-
---
 -- Drop table `timezone_data`
 --
 DROP TABLE IF EXISTS timezone_data;
@@ -2276,17 +2506,16 @@ USE umamusume;
 --
 -- Create table `ultimate_race_select_top`
 --
-CREATE TABLE ultimate_race_select_top
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , clear_history_racetitle INT(11) NOT NULL
-  , clear_history_racetitle_sub INT(11) NOT NULL
+CREATE TABLE ultimate_race_select_top (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  clear_history_racetitle int(11) NOT NULL,
+  clear_history_racetitle_sub int(11) NOT NULL
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 5461,
+AVG_ROW_LENGTH = 910,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -2300,36 +2529,39 @@ ADD INDEX ultimate_race_select_top_0_group_id (group_id);
 --
 -- Create table `ultimate_race_npc`
 --
-CREATE TABLE ultimate_race_npc
-(
-    id INT(11) NOT NULL
-  , npc_group_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , mob_id INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , cutin_flag INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , pow INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , proper_distance_short INT(11) NOT NULL
-  , proper_distance_mile INT(11) NOT NULL
-  , proper_distance_middle INT(11) NOT NULL
-  , proper_distance_long INT(11) NOT NULL
-  , proper_running_style_nige INT(11) NOT NULL
-  , proper_running_style_senko INT(11) NOT NULL
-  , proper_running_style_sashi INT(11) NOT NULL
-  , proper_running_style_oikomi INT(11) NOT NULL
-  , proper_ground_turf INT(11) NOT NULL
-  , proper_ground_dirt INT(11) NOT NULL
-  , skill_set_id INT(11) NOT NULL
-  , skill_set_id_1 INT(11) NOT NULL
-  , skill_set_id_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE ultimate_race_npc (
+  id int(11) NOT NULL,
+  npc_group_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  mob_id int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  cutin_flag int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  pow int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  proper_distance_short int(11) NOT NULL,
+  proper_distance_mile int(11) NOT NULL,
+  proper_distance_middle int(11) NOT NULL,
+  proper_distance_long int(11) NOT NULL,
+  proper_running_style_nige int(11) NOT NULL,
+  proper_running_style_senko int(11) NOT NULL,
+  proper_running_style_sashi int(11) NOT NULL,
+  proper_running_style_oikomi int(11) NOT NULL,
+  proper_ground_turf int(11) NOT NULL,
+  proper_ground_dirt int(11) NOT NULL,
+  skill_set_id int(11) NOT NULL,
+  skill_set_id_1 int(11) NOT NULL,
+  skill_set_id_2 int(11) NOT NULL,
+  use_replacing int(11) NOT NULL,
+  replace_npc_id int(11) NOT NULL,
+  replace_midboss_id int(11) NOT NULL,
+  replace_boss_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 197,
+AVG_ROW_LENGTH = 154,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -2343,18 +2575,19 @@ ADD INDEX ultimate_race_npc_0_npc_group_id (npc_group_id);
 --
 -- Create table `ultimate_race_data`
 --
-CREATE TABLE ultimate_race_data
-(
-    id INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub_id INT(11) NOT NULL
-  , notice_date INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE ultimate_race_data (
+  id int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub_id int(11) NOT NULL,
+  notice_date int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
+AVG_ROW_LENGTH = 4096,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -2362,24 +2595,23 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `ultimate_race_contents_change`
 --
-CREATE TABLE ultimate_race_contents_change
-(
-    id INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , npc_id INT(11) NOT NULL
-  , change_race_instance_id INT(11) NOT NULL
-  , add_clear_item_category_1 INT(11) NOT NULL
-  , add_clear_item_id_1 INT(11) NOT NULL
-  , add_clear_item_num_1 INT(11) NOT NULL
-  , add_clear_item_category_2 INT(11) NOT NULL
-  , add_clear_item_id_2 INT(11) NOT NULL
-  , add_clear_item_num_2 INT(11) NOT NULL
-  , add_clear_item_category_3 INT(11) NOT NULL
-  , add_clear_item_id_3 INT(11) NOT NULL
-  , add_clear_item_num_3 INT(11) NOT NULL
+CREATE TABLE ultimate_race_contents_change (
+  id int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  npc_id int(11) NOT NULL,
+  change_race_instance_id int(11) NOT NULL,
+  add_clear_item_category_1 int(11) NOT NULL,
+  add_clear_item_id_1 int(11) NOT NULL,
+  add_clear_item_num_1 int(11) NOT NULL,
+  add_clear_item_category_2 int(11) NOT NULL,
+  add_clear_item_id_2 int(11) NOT NULL,
+  add_clear_item_num_2 int(11) NOT NULL,
+  add_clear_item_category_3 int(11) NOT NULL,
+  add_clear_item_id_3 int(11) NOT NULL,
+  add_clear_item_num_3 int(11) NOT NULL
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 682,
+AVG_ROW_LENGTH = 260,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -2393,29 +2625,28 @@ ADD INDEX ultimate_race_contents_change_0_race_instance_id (race_instance_id);
 --
 -- Create table `ultimate_race_contents`
 --
-CREATE TABLE ultimate_race_contents
-(
-    id INT(11) NOT NULL
-  , event_id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , difficulty INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , season INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , ground INT(11) NOT NULL
-  , first_clear_item_category_1 INT(11) NOT NULL
-  , first_clear_item_id_1 INT(11) NOT NULL
-  , first_clear_item_num_1 INT(11) NOT NULL
-  , first_clear_item_category_2 INT(11) NOT NULL
-  , first_clear_item_id_2 INT(11) NOT NULL
-  , first_clear_item_num_2 INT(11) NOT NULL
-  , first_clear_item_category_3 INT(11) NOT NULL
-  , first_clear_item_id_3 INT(11) NOT NULL
-  , first_clear_item_num_3 INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
+CREATE TABLE ultimate_race_contents (
+  id int(11) NOT NULL,
+  event_id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  difficulty int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  season int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  ground int(11) NOT NULL,
+  first_clear_item_category_1 int(11) NOT NULL,
+  first_clear_item_id_1 int(11) NOT NULL,
+  first_clear_item_num_1 int(11) NOT NULL,
+  first_clear_item_category_2 int(11) NOT NULL,
+  first_clear_item_id_2 int(11) NOT NULL,
+  first_clear_item_num_2 int(11) NOT NULL,
+  first_clear_item_category_3 int(11) NOT NULL,
+  first_clear_item_id_3 int(11) NOT NULL,
+  first_clear_item_num_3 int(11) NOT NULL,
+  start_date int(11) NOT NULL
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 1820,
+AVG_ROW_LENGTH = 303,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -2441,13 +2672,12 @@ ADD INDEX ultimate_race_contents_0_id (id);
 --
 -- Create table `tutorial_guide_data`
 --
-CREATE TABLE tutorial_guide_data
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , page_index INT(11) NOT NULL
-  , image_index INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE tutorial_guide_data (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  page_index int(11) NOT NULL,
+  image_index int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 146,
@@ -2470,18 +2700,16 @@ ADD UNIQUE INDEX tutorial_guide_data_0_group_id_1_page_index (group_id, page_ind
 --
 -- Create table `transfer_rotation_schedule`
 --
-CREATE TABLE transfer_rotation_schedule
-(
-    id INT(11) NOT NULL
-  , rotation_start_day INT(11) NOT NULL
-  , rotation_start_time TEXT NOT NULL
-  , base_date INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE transfer_rotation_schedule (
+  id int(11) NOT NULL,
+  rotation_start_day int(11) NOT NULL,
+  rotation_start_time text NOT NULL,
+  base_date int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -2489,15 +2717,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `transfer_rotation_reward`
 --
-CREATE TABLE transfer_rotation_reward
-(
-    id INT(11) NOT NULL
-  , rotation_id INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , odds INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE transfer_rotation_reward (
+  id int(11) NOT NULL,
+  rotation_id int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  odds int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 63,
@@ -2514,29 +2741,28 @@ ADD INDEX transfer_rotation_reward_0_rotation_id (rotation_id);
 --
 -- Create table `transfer_rotation_detail`
 --
-CREATE TABLE transfer_rotation_detail
-(
-    id INT(11) NOT NULL
-  , rotation_id INT(11) NOT NULL
-  , trainer_type INT(11) NOT NULL
-  , difficulty INT(11) NOT NULL
-  , limited_type INT(11) NOT NULL
-  , condition1_type INT(11) NOT NULL
-  , condition1_value1 INT(11) NOT NULL
-  , condition1_value2 INT(11) NOT NULL
-  , condition2_type INT(11) NOT NULL
-  , condition2_value1 INT(11) NOT NULL
-  , condition2_value2 INT(11) NOT NULL
-  , condition3_type INT(11) NOT NULL
-  , condition3_value1 INT(11) NOT NULL
-  , condition3_value2 INT(11) NOT NULL
-  , condition4_type INT(11) NOT NULL
-  , condition4_value1 INT(11) NOT NULL
-  , condition4_value2 INT(11) NOT NULL
-  , condition5_type INT(11) NOT NULL
-  , condition5_value1 INT(11) NOT NULL
-  , condition5_value2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE transfer_rotation_detail (
+  id int(11) NOT NULL,
+  rotation_id int(11) NOT NULL,
+  trainer_type int(11) NOT NULL,
+  difficulty int(11) NOT NULL,
+  limited_type int(11) NOT NULL,
+  condition1_type int(11) NOT NULL,
+  condition1_value1 int(11) NOT NULL,
+  condition1_value2 int(11) NOT NULL,
+  condition2_type int(11) NOT NULL,
+  condition2_value1 int(11) NOT NULL,
+  condition2_value2 int(11) NOT NULL,
+  condition3_type int(11) NOT NULL,
+  condition3_value1 int(11) NOT NULL,
+  condition3_value2 int(11) NOT NULL,
+  condition4_type int(11) NOT NULL,
+  condition4_value1 int(11) NOT NULL,
+  condition4_value2 int(11) NOT NULL,
+  condition5_type int(11) NOT NULL,
+  condition5_value1 int(11) NOT NULL,
+  condition5_value2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 273,
@@ -2553,11 +2779,10 @@ ADD INDEX transfer_rotation_detail_0_rotation_id (rotation_id);
 --
 -- Create table `transfer_rotation_data`
 --
-CREATE TABLE transfer_rotation_data
-(
-    id INT(11) NOT NULL
-  , schedule_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE transfer_rotation_data (
+  id int(11) NOT NULL,
+  schedule_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 819,
@@ -2568,16 +2793,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `transfer_event_reward`
 --
-CREATE TABLE transfer_event_reward
-(
-    transfer_reward_id INT(11) NOT NULL
-  , transfer_detail_id INT(11) NOT NULL
-  , reward_rank INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , odds INT(11) NOT NULL
-  , PRIMARY KEY (transfer_reward_id)
+CREATE TABLE transfer_event_reward (
+  transfer_reward_id int(11) NOT NULL,
+  transfer_detail_id int(11) NOT NULL,
+  reward_rank int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  odds int(11) NOT NULL,
+  PRIMARY KEY (transfer_reward_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 130,
@@ -2594,32 +2818,31 @@ ADD INDEX transfer_event_reward_0_transfer_detail_id (transfer_detail_id);
 --
 -- Create table `transfer_event_detail`
 --
-CREATE TABLE transfer_event_detail
-(
-    transfer_detail_id INT(11) NOT NULL
-  , transfer_event_id INT(11) NOT NULL
-  , trainer_type INT(11) NOT NULL
-  , difficulty INT(11) NOT NULL
-  , limited_type INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , cool_time INT(11) NOT NULL
-  , condition1_type INT(11) NOT NULL
-  , condition1_value1 INT(11) NOT NULL
-  , condition1_value2 INT(11) NOT NULL
-  , condition2_type INT(11) NOT NULL
-  , condition2_value1 INT(11) NOT NULL
-  , condition2_value2 INT(11) NOT NULL
-  , condition3_type INT(11) NOT NULL
-  , condition3_value1 INT(11) NOT NULL
-  , condition3_value2 INT(11) NOT NULL
-  , condition4_type INT(11) NOT NULL
-  , condition4_value1 INT(11) NOT NULL
-  , condition4_value2 INT(11) NOT NULL
-  , condition5_type INT(11) NOT NULL
-  , condition5_value1 INT(11) NOT NULL
-  , condition5_value2 INT(11) NOT NULL
-  , PRIMARY KEY (transfer_detail_id)
+CREATE TABLE transfer_event_detail (
+  transfer_detail_id int(11) NOT NULL,
+  transfer_event_id int(11) NOT NULL,
+  trainer_type int(11) NOT NULL,
+  difficulty int(11) NOT NULL,
+  limited_type int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  cool_time int(11) NOT NULL,
+  condition1_type int(11) NOT NULL,
+  condition1_value1 int(11) NOT NULL,
+  condition1_value2 int(11) NOT NULL,
+  condition2_type int(11) NOT NULL,
+  condition2_value1 int(11) NOT NULL,
+  condition2_value2 int(11) NOT NULL,
+  condition3_type int(11) NOT NULL,
+  condition3_value1 int(11) NOT NULL,
+  condition3_value2 int(11) NOT NULL,
+  condition4_type int(11) NOT NULL,
+  condition4_value1 int(11) NOT NULL,
+  condition4_value2 int(11) NOT NULL,
+  condition5_type int(11) NOT NULL,
+  condition5_value1 int(11) NOT NULL,
+  condition5_value2 int(11) NOT NULL,
+  PRIMARY KEY (transfer_detail_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 303,
@@ -2636,22 +2859,21 @@ ADD INDEX transfer_event_detail_0_transfer_event_id (transfer_event_id);
 --
 -- Create table `transfer_event_data`
 --
-CREATE TABLE transfer_event_data
-(
-    transfer_event_id INT(11) NOT NULL
-  , pre_start_date INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , logo_id INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub_id INT(11) NOT NULL
-  , tutorial_guide_id INT(11) NOT NULL
-  , bgm_cue_name TEXT NOT NULL
-  , bgm_cuesheet_name TEXT NOT NULL
-  , top_trigger INT(11) NOT NULL
-  , finish_trigger INT(11) NOT NULL
-  , clear_trigger INT(11) NOT NULL
-  , PRIMARY KEY (transfer_event_id)
+CREATE TABLE transfer_event_data (
+  transfer_event_id int(11) NOT NULL,
+  pre_start_date int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  logo_id int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub_id int(11) NOT NULL,
+  tutorial_guide_id int(11) NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet_name text NOT NULL,
+  top_trigger int(11) NOT NULL,
+  finish_trigger int(11) NOT NULL,
+  clear_trigger int(11) NOT NULL,
+  PRIMARY KEY (transfer_event_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2048,
@@ -2662,18 +2884,18 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `training_report_special_reward`
 --
-CREATE TABLE training_report_special_reward
-(
-    id INT(11) NOT NULL
-  , reward_set INT(11) NOT NULL
-  , is_pickup INT(11) NOT NULL
-  , base_point INT(11) NOT NULL
-  , reward_item_id INT(11) NOT NULL
-  , reward_item_category INT(11) NOT NULL
-  , reward_item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE training_report_special_reward (
+  id int(11) NOT NULL,
+  reward_set int(11) NOT NULL,
+  is_pickup int(11) NOT NULL,
+  base_point int(11) NOT NULL,
+  reward_item_id int(11) NOT NULL,
+  reward_item_category int(11) NOT NULL,
+  reward_item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 109,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -2687,14 +2909,14 @@ ADD INDEX training_report_special_reward_0_reward_set (reward_set);
 --
 -- Create table `training_report_ratio`
 --
-CREATE TABLE training_report_ratio
-(
-    id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE training_report_ratio (
+  id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 5461,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -2708,21 +2930,22 @@ ADD UNIQUE INDEX training_report_ratio_0_type (type);
 --
 -- Create table `training_report_pass`
 --
-CREATE TABLE training_report_pass
-(
-    id INT(11) NOT NULL
-  , season_id INT(11) NOT NULL
-  , product_master_id INT(11) NOT NULL
-  , inflation_coef INT(11) NOT NULL
-  , normal_reward_set INT(11) NOT NULL
-  , special_reward_set INT(11) NOT NULL
-  , remind_date TEXT NOT NULL
-  , start_date TEXT NOT NULL
-  , end_date TEXT NOT NULL
-  , bg_image TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE training_report_pass (
+  id int(11) NOT NULL,
+  season_id int(11) NOT NULL,
+  product_master_id int(11) NOT NULL,
+  inflation_coef int(11) NOT NULL,
+  normal_reward_set int(11) NOT NULL,
+  special_reward_set int(11) NOT NULL,
+  remind_date text NOT NULL,
+  start_date text NOT NULL,
+  end_date text NOT NULL,
+  bg_image text NOT NULL,
+  jobs_training_report_point_limit int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 1489,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -2736,18 +2959,18 @@ ADD UNIQUE INDEX training_report_pass_0_season_id (season_id);
 --
 -- Create table `training_report_normal_reward`
 --
-CREATE TABLE training_report_normal_reward
-(
-    id INT(11) NOT NULL
-  , reward_set INT(11) NOT NULL
-  , is_pickup INT(11) NOT NULL
-  , base_point INT(11) NOT NULL
-  , reward_item_id INT(11) NOT NULL
-  , reward_item_category INT(11) NOT NULL
-  , reward_item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE training_report_normal_reward (
+  id int(11) NOT NULL,
+  reward_set int(11) NOT NULL,
+  is_pickup int(11) NOT NULL,
+  base_point int(11) NOT NULL,
+  reward_item_id int(11) NOT NULL,
+  reward_item_category int(11) NOT NULL,
+  reward_item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 109,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -2761,14 +2984,14 @@ ADD INDEX training_report_normal_reward_0_reward_set (reward_set);
 --
 -- Create table `training_report_inflation`
 --
-CREATE TABLE training_report_inflation
-(
-    id INT(11) NOT NULL
-  , point_threshold INT(11) NOT NULL
-  , value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE training_report_inflation (
+  id int(11) NOT NULL,
+  point_threshold int(11) NOT NULL,
+  value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 268,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -2776,12 +2999,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `training_cutt_group_data`
 --
-CREATE TABLE training_cutt_group_data
-(
-    group_id INT(11) NOT NULL
-  , `order` INT(11) NOT NULL
-  , command_id INT(11) NOT NULL
-  , sub_id INT(11) NOT NULL
+CREATE TABLE training_cutt_group_data (
+  group_id int(11) NOT NULL,
+  `order` int(11) NOT NULL,
+  command_id int(11) NOT NULL,
+  sub_id int(11) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -2804,16 +3026,14 @@ ADD INDEX training_cutt_group_data_0_group_id (group_id);
 --
 -- Create table `training_cutt_flash`
 --
-CREATE TABLE training_cutt_flash
-(
-    command_id INT(11) NOT NULL
-  , sub_folder TEXT NOT NULL
-  , file_format TEXT NOT NULL
-  , control_type INT(11) NOT NULL
-  , PRIMARY KEY (command_id)
+CREATE TABLE training_cutt_flash (
+  command_id int(11) NOT NULL,
+  sub_folder text NOT NULL,
+  file_format text NOT NULL,
+  control_type int(11) NOT NULL,
+  PRIMARY KEY (command_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -2821,15 +3041,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `training_cutt_data`
 --
-CREATE TABLE training_cutt_data
-(
-    command_id INT(11) NOT NULL
-  , sub_id INT(11) NOT NULL
-  , chara_num INT(11) NOT NULL
-  , target_chara_index INT(11) NOT NULL
-  , target_value INT(11) NOT NULL
-  , cutt_index INT(11) NOT NULL
-  , success_flg INT(11) NOT NULL
+CREATE TABLE training_cutt_data (
+  command_id int(11) NOT NULL,
+  sub_id int(11) NOT NULL,
+  chara_num int(11) NOT NULL,
+  target_chara_index int(11) NOT NULL,
+  target_value int(11) NOT NULL,
+  cutt_index int(11) NOT NULL,
+  success_flg int(11) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 227,
@@ -2846,19 +3065,18 @@ ADD INDEX training_cutt_data_0_command_id_1_sub_id (command_id, sub_id);
 --
 -- Create table `training_cutt_chara_data`
 --
-CREATE TABLE training_cutt_chara_data
-(
-    id INT(11) NOT NULL
-  , command_id INT(11) NOT NULL
-  , sub_id INT(11) NOT NULL
-  , chara_num INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , target_timeline INT(11) NOT NULL
-  , target_list_index INT(11) NOT NULL
-  , prop_target INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , selector_label INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE training_cutt_chara_data (
+  id int(11) NOT NULL,
+  command_id int(11) NOT NULL,
+  sub_id int(11) NOT NULL,
+  chara_num int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  target_timeline int(11) NOT NULL,
+  target_list_index int(11) NOT NULL,
+  prop_target int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  selector_label int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 58,
@@ -2875,16 +3093,15 @@ ADD INDEX training_cutt_chara_data_0_command_id_1_sub_id (command_id, sub_id);
 --
 -- Create table `training_challenge_score`
 --
-CREATE TABLE training_challenge_score
-(
-    id INT(11) NOT NULL
-  , score_group_id INT(11) NOT NULL
-  , score_type INT(11) NOT NULL
-  , data INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , bonus_score INT(11) NOT NULL
-  , reward_coin INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE training_challenge_score (
+  id int(11) NOT NULL,
+  score_group_id int(11) NOT NULL,
+  score_type int(11) NOT NULL,
+  data int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  bonus_score int(11) NOT NULL,
+  reward_coin int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 130,
@@ -2901,27 +3118,26 @@ ADD INDEX training_challenge_score_0_score_group_id (score_group_id);
 --
 -- Create table `training_challenge_master`
 --
-CREATE TABLE training_challenge_master
-(
-    id INT(11) NOT NULL
-  , target_main_scenario INT(11) NOT NULL
-  , exam_id_1 INT(11) NOT NULL
-  , exam_id_2 INT(11) NOT NULL
-  , exam_id_3 INT(11) NOT NULL
-  , exam_id_4 INT(11) NOT NULL
-  , exam_id_5 INT(11) NOT NULL
-  , ex_exam_id INT(11) NOT NULL
-  , free_exam_id INT(11) NOT NULL
-  , shop_id INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , start_result_date INT(11) NOT NULL
-  , end_result_date INT(11) NOT NULL
-  , notice_date INT(11) NOT NULL
-  , rental_value INT(11) NOT NULL
-  , consume_tp_ratio INT(11) NOT NULL
-  , bonus_reward_ratio INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE training_challenge_master (
+  id int(11) NOT NULL,
+  target_main_scenario int(11) NOT NULL,
+  exam_id_1 int(11) NOT NULL,
+  exam_id_2 int(11) NOT NULL,
+  exam_id_3 int(11) NOT NULL,
+  exam_id_4 int(11) NOT NULL,
+  exam_id_5 int(11) NOT NULL,
+  ex_exam_id int(11) NOT NULL,
+  free_exam_id int(11) NOT NULL,
+  shop_id int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  start_result_date int(11) NOT NULL,
+  end_result_date int(11) NOT NULL,
+  notice_date int(11) NOT NULL,
+  rental_value int(11) NOT NULL,
+  consume_tp_ratio int(11) NOT NULL,
+  bonus_reward_ratio int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 16384,
@@ -2932,33 +3148,32 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `training_challenge_exam`
 --
-CREATE TABLE training_challenge_exam
-(
-    id INT(11) NOT NULL
-  , feature_type INT(11) NOT NULL
-  , good_score INT(11) NOT NULL
-  , good_score_reward_coin INT(11) NOT NULL
-  , great_score INT(11) NOT NULL
-  , great_score_reward_coin INT(11) NOT NULL
-  , exellent_score INT(11) NOT NULL
-  , exellent_score_reward_coin INT(11) NOT NULL
-  , score_group_id INT(11) NOT NULL
-  , item_category_1 INT(11) NOT NULL
-  , item_id_1 INT(11) NOT NULL
-  , item_num_1 INT(11) NOT NULL
-  , item_category_2 INT(11) NOT NULL
-  , item_id_2 INT(11) NOT NULL
-  , item_num_2 INT(11) NOT NULL
-  , item_category_3 INT(11) NOT NULL
-  , item_id_3 INT(11) NOT NULL
-  , item_num_3 INT(11) NOT NULL
-  , item_category_4 INT(11) NOT NULL
-  , item_id_4 INT(11) NOT NULL
-  , item_num_4 INT(11) NOT NULL
-  , item_category_5 INT(11) NOT NULL
-  , item_id_5 INT(11) NOT NULL
-  , item_num_5 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE training_challenge_exam (
+  id int(11) NOT NULL,
+  feature_type int(11) NOT NULL,
+  good_score int(11) NOT NULL,
+  good_score_reward_coin int(11) NOT NULL,
+  great_score int(11) NOT NULL,
+  great_score_reward_coin int(11) NOT NULL,
+  exellent_score int(11) NOT NULL,
+  exellent_score_reward_coin int(11) NOT NULL,
+  score_group_id int(11) NOT NULL,
+  item_category_1 int(11) NOT NULL,
+  item_id_1 int(11) NOT NULL,
+  item_num_1 int(11) NOT NULL,
+  item_category_2 int(11) NOT NULL,
+  item_id_2 int(11) NOT NULL,
+  item_num_2 int(11) NOT NULL,
+  item_category_3 int(11) NOT NULL,
+  item_id_3 int(11) NOT NULL,
+  item_num_3 int(11) NOT NULL,
+  item_category_4 int(11) NOT NULL,
+  item_id_4 int(11) NOT NULL,
+  item_num_4 int(11) NOT NULL,
+  item_category_5 int(11) NOT NULL,
+  item_id_5 int(11) NOT NULL,
+  item_num_5 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2340,
@@ -2969,14 +3184,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `trained_chara_trade_item`
 --
-CREATE TABLE trained_chara_trade_item
-(
-    id INT(11) NOT NULL
-  , trained_chara_rank INT(11) NOT NULL
-  , trade_item_category INT(11) NOT NULL
-  , trade_item_id INT(11) NOT NULL
-  , trade_item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE trained_chara_trade_item (
+  id int(11) NOT NULL,
+  trained_chara_rank int(11) NOT NULL,
+  trade_item_category int(11) NOT NULL,
+  trade_item_id int(11) NOT NULL,
+  trade_item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 167,
@@ -2993,14 +3207,13 @@ ADD UNIQUE INDEX trained_chara_trade_item_0_trained_chara_rank (trained_chara_ra
 --
 -- Create table `topics`
 --
-CREATE TABLE topics
-(
-    id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , value INT(11) NOT NULL
-  , `index` INT(11) NOT NULL
-  , start_date TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE topics (
+  id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  value int(11) NOT NULL,
+  `index` int(11) NOT NULL,
+  start_date text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 144,
@@ -3017,13 +3230,12 @@ ADD INDEX topics_0_type (type);
 --
 -- Create table `timezone_data`
 --
-CREATE TABLE timezone_data
-(
-    timezone INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , start_hour TEXT NOT NULL
-  , end_hour TEXT NOT NULL
-  , PRIMARY KEY (timezone)
+CREATE TABLE timezone_data (
+  timezone int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  start_hour text NOT NULL,
+  end_hour text NOT NULL,
+  PRIMARY KEY (timezone)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 4096,
@@ -3032,38 +3244,14 @@ COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
 
 --
--- Create table `text_data_english`
---
-CREATE TABLE text_data_english
-(
-    text TEXT NOT NULL
-  , translation TEXT NOT NULL
-  , id INT(11) NOT NULL AUTO_INCREMENT
-  , PRIMARY KEY (id)
-)
-ENGINE = INNODB,
-AUTO_INCREMENT = 3,
-AVG_ROW_LENGTH = 312,
-CHARACTER SET utf8mb4,
-COLLATE utf8mb4_general_ci,
-ROW_FORMAT = DYNAMIC;
-
---
--- Create index `text_data_english_text` on table `text_data_english`
---
-ALTER TABLE text_data_english
-ADD INDEX text_data_english_text (text (768));
-
---
 -- Create table `text_data`
 --
-CREATE TABLE text_data
-(
-    id INT(11) NOT NULL
-  , category INT(11) NOT NULL
-  , `index` INT(11) NOT NULL
-  , text TEXT NOT NULL
-  , PRIMARY KEY (category, `index`)
+CREATE TABLE text_data (
+  id int(11) NOT NULL,
+  category int(11) NOT NULL,
+  `index` int(11) NOT NULL,
+  text text NOT NULL,
+  PRIMARY KEY (category, `index`)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 112,
@@ -3074,13 +3262,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `team_stadium_support_text`
 --
-CREATE TABLE team_stadium_support_text
-(
-    id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , min_bonus INT(11) NOT NULL
-  , max_bonus INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_stadium_support_text (
+  id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  min_bonus int(11) NOT NULL,
+  max_bonus int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1638,
@@ -3097,15 +3284,14 @@ ADD INDEX team_stadium_support_text_0_type (type);
 --
 -- Create table `team_stadium_stand_motion`
 --
-CREATE TABLE team_stadium_stand_motion
-(
-    character_id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , `position` INT(11) NOT NULL
-  , motion_set INT(11) NOT NULL
-  , rotation INT(11) NOT NULL
-  , position_x INT(11) NOT NULL
+CREATE TABLE team_stadium_stand_motion (
+  character_id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  `position` int(11) NOT NULL,
+  motion_set int(11) NOT NULL,
+  rotation int(11) NOT NULL,
+  position_x int(11) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1170,
@@ -3122,15 +3308,14 @@ ADD INDEX team_stadium_stand_motion_0_character_id_1_type (character_id, type);
 --
 -- Create table `team_stadium_score_bonus`
 --
-CREATE TABLE team_stadium_score_bonus
-(
-    id INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , score_rate INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_stadium_score_bonus (
+  id int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  score_rate int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2340,
@@ -3147,17 +3332,16 @@ ADD INDEX team_stadium_score_bonus_0_condition_type (condition_type);
 --
 -- Create table `team_stadium_raw_score`
 --
-CREATE TABLE team_stadium_raw_score
-(
-    id INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , score INT(11) NOT NULL
-  , race_score_name_id INT(11) NOT NULL
-  , sort_order INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_stadium_raw_score (
+  id int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  score int(11) NOT NULL,
+  race_score_name_id int(11) NOT NULL,
+  sort_order int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 172,
@@ -3180,17 +3364,16 @@ ADD INDEX team_stadium_raw_score_0_race_score_name_id (race_score_name_id);
 --
 -- Create table `team_stadium_rank`
 --
-CREATE TABLE team_stadium_rank
-(
-    id INT(11) NOT NULL
-  , team_rank INT(11) NOT NULL
-  , team_rank_group INT(11) NOT NULL
-  , team_min_value INT(11) NOT NULL
-  , team_max_value INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_stadium_rank (
+  id int(11) NOT NULL,
+  team_rank int(11) NOT NULL,
+  team_rank_group int(11) NOT NULL,
+  team_min_value int(11) NOT NULL,
+  team_max_value int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 546,
@@ -3201,28 +3384,27 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `team_stadium_race_result_motion`
 --
-CREATE TABLE team_stadium_race_result_motion
-(
-    character_id INT(11) NOT NULL
-  , win_1 INT(11) NOT NULL
-  , win_2 INT(11) NOT NULL
-  , win_2_position_y INT(11) NOT NULL
-  , win_3 INT(11) NOT NULL
-  , win_3_position_y INT(11) NOT NULL
-  , win_4 INT(11) NOT NULL
-  , win_4_position_y INT(11) NOT NULL
-  , win_5 INT(11) NOT NULL
-  , lose_1 INT(11) NOT NULL
-  , lose_2 INT(11) NOT NULL
-  , lose_3 INT(11) NOT NULL
-  , lose_4 INT(11) NOT NULL
-  , lose_5 INT(11) NOT NULL
-  , draw_1 INT(11) NOT NULL
-  , draw_2 INT(11) NOT NULL
-  , draw_3 INT(11) NOT NULL
-  , draw_4 INT(11) NOT NULL
-  , draw_5 INT(11) NOT NULL
-  , position_y INT(11) NOT NULL
+CREATE TABLE team_stadium_race_result_motion (
+  character_id int(11) NOT NULL,
+  win_1 int(11) NOT NULL,
+  win_2 int(11) NOT NULL,
+  win_2_position_y int(11) NOT NULL,
+  win_3 int(11) NOT NULL,
+  win_3_position_y int(11) NOT NULL,
+  win_4 int(11) NOT NULL,
+  win_4_position_y int(11) NOT NULL,
+  win_5 int(11) NOT NULL,
+  lose_1 int(11) NOT NULL,
+  lose_2 int(11) NOT NULL,
+  lose_3 int(11) NOT NULL,
+  lose_4 int(11) NOT NULL,
+  lose_5 int(11) NOT NULL,
+  draw_1 int(11) NOT NULL,
+  draw_2 int(11) NOT NULL,
+  draw_3 int(11) NOT NULL,
+  draw_4 int(11) NOT NULL,
+  draw_5 int(11) NOT NULL,
+  position_y int(11) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 230,
@@ -3239,13 +3421,12 @@ ADD INDEX team_stadium_race_result_motion_0_character_id (character_id);
 --
 -- Create table `team_stadium_evaluation_rate`
 --
-CREATE TABLE team_stadium_evaluation_rate
-(
-    id INT(11) NOT NULL
-  , proper_type INT(11) NOT NULL
-  , proper_rank INT(11) NOT NULL
-  , rate INT(11) NOT NULL
-  , PRIMARY KEY (proper_type, proper_rank)
+CREATE TABLE team_stadium_evaluation_rate (
+  id int(11) NOT NULL,
+  proper_type int(11) NOT NULL,
+  proper_rank int(11) NOT NULL,
+  rate int(11) NOT NULL,
+  PRIMARY KEY (proper_type, proper_rank)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 682,
@@ -3256,28 +3437,31 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `team_stadium_class_reward`
 --
-CREATE TABLE team_stadium_class_reward
-(
-    id INT(11) NOT NULL
-  , team_stadium_id INT(11) NOT NULL
-  , team_class INT(11) NOT NULL
-  , class_reward_type INT(11) NOT NULL
-  , item_category_1 INT(11) NOT NULL
-  , item_id_1 INT(11) NOT NULL
-  , item_num_1 INT(11) NOT NULL
-  , item_category_2 INT(11) NOT NULL
-  , item_id_2 INT(11) NOT NULL
-  , item_num_2 INT(11) NOT NULL
-  , item_category_3 INT(11) NOT NULL
-  , item_id_3 INT(11) NOT NULL
-  , item_num_3 INT(11) NOT NULL
-  , item_category_4 INT(11) NOT NULL
-  , item_id_4 INT(11) NOT NULL
-  , item_num_4 INT(11) NOT NULL
-  , item_category_5 INT(11) NOT NULL
-  , item_id_5 INT(11) NOT NULL
-  , item_num_5 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_stadium_class_reward (
+  id int(11) NOT NULL,
+  team_stadium_id int(11) NOT NULL,
+  team_class int(11) NOT NULL,
+  class_reward_type int(11) NOT NULL,
+  item_category_1 int(11) NOT NULL,
+  item_id_1 int(11) NOT NULL,
+  item_num_1 int(11) NOT NULL,
+  item_category_2 int(11) NOT NULL,
+  item_id_2 int(11) NOT NULL,
+  item_num_2 int(11) NOT NULL,
+  item_category_3 int(11) NOT NULL,
+  item_id_3 int(11) NOT NULL,
+  item_num_3 int(11) NOT NULL,
+  item_category_4 int(11) NOT NULL,
+  item_id_4 int(11) NOT NULL,
+  item_num_4 int(11) NOT NULL,
+  item_category_5 int(11) NOT NULL,
+  item_id_5 int(11) NOT NULL,
+  item_num_5 int(11) NOT NULL,
+  disp_start_date int(11) NOT NULL,
+  disp_end_date int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 963,
@@ -3294,15 +3478,14 @@ ADD INDEX team_stadium_class_reward_0_team_stadium_id_1_class_reward_type (team_
 --
 -- Create table `team_stadium_class`
 --
-CREATE TABLE team_stadium_class
-(
-    id INT(11) NOT NULL
-  , team_stadium_id INT(11) NOT NULL
-  , team_class INT(11) NOT NULL
-  , unit_max_num INT(11) NOT NULL
-  , class_up_range INT(11) NOT NULL
-  , class_down_range INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_stadium_class (
+  id int(11) NOT NULL,
+  team_stadium_id int(11) NOT NULL,
+  team_class int(11) NOT NULL,
+  unit_max_num int(11) NOT NULL,
+  class_up_range int(11) NOT NULL,
+  class_down_range int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2730,
@@ -3319,14 +3502,13 @@ ADD INDEX team_stadium_class_0_team_stadium_id (team_stadium_id);
 --
 -- Create table `team_stadium_bgm`
 --
-CREATE TABLE team_stadium_bgm
-(
-    id INT(11) NOT NULL
-  , scene_type INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , cue_name TEXT NOT NULL
-  , cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_stadium_bgm (
+  id int(11) NOT NULL,
+  scene_type int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  cue_name text NOT NULL,
+  cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1489,
@@ -3343,24 +3525,23 @@ ADD INDEX team_stadium_bgm_0_scene_type (scene_type);
 --
 -- Create table `team_stadium`
 --
-CREATE TABLE team_stadium
-(
-    id INT(11) NOT NULL
-  , race_start_date INT(11) NOT NULL
-  , race_start_time TEXT NOT NULL
-  , race_end_date INT(11) NOT NULL
-  , race_end_time TEXT NOT NULL
-  , interval_start_date INT(11) NOT NULL
-  , interval_start_time TEXT NOT NULL
-  , interval_end_date INT(11) NOT NULL
-  , interval_end_time TEXT NOT NULL
-  , calc_start_date INT(11) NOT NULL
-  , calc_start_time TEXT NOT NULL
-  , calc_end_date INT(11) NOT NULL
-  , calc_end_time TEXT NOT NULL
-  , start_date TEXT NOT NULL
-  , end_date TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_stadium (
+  id int(11) NOT NULL,
+  race_start_date int(11) NOT NULL,
+  race_start_time text NOT NULL,
+  race_end_date int(11) NOT NULL,
+  race_end_time text NOT NULL,
+  interval_start_date int(11) NOT NULL,
+  interval_start_time text NOT NULL,
+  interval_end_date int(11) NOT NULL,
+  interval_end_time text NOT NULL,
+  calc_start_date int(11) NOT NULL,
+  calc_start_time text NOT NULL,
+  calc_end_date int(11) NOT NULL,
+  calc_end_time text NOT NULL,
+  start_date text NOT NULL,
+  end_date text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 16384,
@@ -3371,14 +3552,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `team_building_win_reward`
 --
-CREATE TABLE team_building_win_reward
-(
-    id INT(11) NOT NULL
-  , win_loop_num INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_win_reward (
+  id int(11) NOT NULL,
+  win_loop_num int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -3389,15 +3569,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `team_building_team_race_set`
 --
-CREATE TABLE team_building_team_race_set
-(
-    id INT(11) NOT NULL
-  , npc_group_id INT(11) NOT NULL
-  , motion_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_team_race_set (
+  id int(11) NOT NULL,
+  npc_group_id int(11) NOT NULL,
+  motion_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 1170,
+AVG_ROW_LENGTH = 546,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -3411,18 +3590,17 @@ ADD INDEX team_building_team_race_set_0_npc_group_id (npc_group_id);
 --
 -- Create table `team_building_sp_race_schedule`
 --
-CREATE TABLE team_building_sp_race_schedule
-(
-    id INT(11) NOT NULL
-  , event_id INT(11) NOT NULL
-  , special_race_instance_id INT(11) NOT NULL
-  , race_condition_id INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_sp_race_schedule (
+  id int(11) NOT NULL,
+  event_id int(11) NOT NULL,
+  special_race_instance_id int(11) NOT NULL,
+  race_condition_id int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 2048,
+AVG_ROW_LENGTH = 682,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -3436,12 +3614,11 @@ ADD INDEX team_building_sp_race_schedule_0_event_id (event_id);
 --
 -- Create table `team_building_scout_point`
 --
-CREATE TABLE team_building_scout_point
-(
-    id INT(11) NOT NULL
-  , chara_rank INT(11) NOT NULL
-  , scout_value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_scout_point (
+  id int(11) NOT NULL,
+  chara_rank int(11) NOT NULL,
+  scout_value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 167,
@@ -3458,15 +3635,14 @@ ADD UNIQUE INDEX team_building_scout_point_0_chara_rank (chara_rank);
 --
 -- Create table `team_building_retry_bonus`
 --
-CREATE TABLE team_building_retry_bonus
-(
-    id INT(11) NOT NULL
-  , retry_min INT(11) NOT NULL
-  , retry_max INT(11) NOT NULL
-  , bonus_rate INT(11) NOT NULL
-  , resimulate_num INT(11) NOT NULL
-  , down_rate INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_retry_bonus (
+  id int(11) NOT NULL,
+  retry_min int(11) NOT NULL,
+  retry_max int(11) NOT NULL,
+  bonus_rate int(11) NOT NULL,
+  resimulate_num int(11) NOT NULL,
+  down_rate int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -3477,14 +3653,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `team_building_rank_reward_group`
 --
-CREATE TABLE team_building_rank_reward_group
-(
-    id INT(11) NOT NULL
-  , reward_group_id INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_rank_reward_group (
+  id int(11) NOT NULL,
+  reward_group_id int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 399,
@@ -3501,14 +3676,13 @@ ADD INDEX team_building_rank_reward_group_0_reward_group_id (reward_group_id);
 --
 -- Create table `team_building_rank`
 --
-CREATE TABLE team_building_rank
-(
-    id INT(11) NOT NULL
-  , team_rank INT(11) NOT NULL
-  , team_min_value INT(11) NOT NULL
-  , team_max_value INT(11) NOT NULL
-  , reward_group_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_rank (
+  id int(11) NOT NULL,
+  team_rank int(11) NOT NULL,
+  team_min_value int(11) NOT NULL,
+  team_max_value int(11) NOT NULL,
+  reward_group_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 546,
@@ -3525,33 +3699,32 @@ ADD INDEX team_building_rank_0_team_rank (team_rank);
 --
 -- Create table `team_building_race_npc`
 --
-CREATE TABLE team_building_race_npc
-(
-    id INT(11) NOT NULL
-  , npc_group_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , mob_id INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , pow INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , proper_distance_short INT(11) NOT NULL
-  , proper_distance_mile INT(11) NOT NULL
-  , proper_distance_middle INT(11) NOT NULL
-  , proper_distance_long INT(11) NOT NULL
-  , proper_running_style_nige INT(11) NOT NULL
-  , proper_running_style_senko INT(11) NOT NULL
-  , proper_running_style_sashi INT(11) NOT NULL
-  , proper_running_style_oikomi INT(11) NOT NULL
-  , proper_ground_turf INT(11) NOT NULL
-  , proper_ground_dirt INT(11) NOT NULL
-  , skill_set_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_race_npc (
+  id int(11) NOT NULL,
+  npc_group_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  mob_id int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  pow int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  proper_distance_short int(11) NOT NULL,
+  proper_distance_mile int(11) NOT NULL,
+  proper_distance_middle int(11) NOT NULL,
+  proper_distance_long int(11) NOT NULL,
+  proper_running_style_nige int(11) NOT NULL,
+  proper_running_style_senko int(11) NOT NULL,
+  proper_running_style_sashi int(11) NOT NULL,
+  proper_running_style_oikomi int(11) NOT NULL,
+  proper_ground_turf int(11) NOT NULL,
+  proper_ground_dirt int(11) NOT NULL,
+  skill_set_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 213,
+AVG_ROW_LENGTH = 165,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -3559,12 +3732,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `team_building_discount_point`
 --
-CREATE TABLE team_building_discount_point
-(
-    id INT(11) NOT NULL
-  , team_rank INT(11) NOT NULL
-  , discount_value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_discount_point (
+  id int(11) NOT NULL,
+  team_rank int(11) NOT NULL,
+  discount_value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 546,
@@ -3581,27 +3753,26 @@ ADD UNIQUE INDEX team_building_discount_point_0_team_rank (team_rank);
 --
 -- Create table `team_building_data`
 --
-CREATE TABLE team_building_data
-(
-    team_building_event_id INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub_id INT(11) NOT NULL
-  , stamina_default INT(11) NOT NULL
-  , stamina_max INT(11) NOT NULL
-  , stamina_add INT(11) NOT NULL
-  , stamina_add_time TEXT NOT NULL
-  , start_add_scout_point INT(11) NOT NULL
-  , notice_date INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , ending_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , special_race_count INT(11) NOT NULL
-  , required_race_count INT(11) NOT NULL
-  , middle_date INT(11) NOT NULL
-  , PRIMARY KEY (team_building_event_id)
+CREATE TABLE team_building_data (
+  team_building_event_id int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub_id int(11) NOT NULL,
+  stamina_default int(11) NOT NULL,
+  stamina_max int(11) NOT NULL,
+  stamina_add int(11) NOT NULL,
+  stamina_add_time text NOT NULL,
+  start_add_scout_point int(11) NOT NULL,
+  notice_date int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  ending_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  special_race_count int(11) NOT NULL,
+  required_race_count int(11) NOT NULL,
+  middle_date int(11) NOT NULL,
+  PRIMARY KEY (team_building_event_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 4096,
+AVG_ROW_LENGTH = 2730,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -3609,12 +3780,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `team_building_consecutive_wins`
 --
-CREATE TABLE team_building_consecutive_wins
-(
-    id INT(11) NOT NULL
-  , consecutive_wins_num INT(11) NOT NULL
-  , bonus_value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_consecutive_wins (
+  id int(11) NOT NULL,
+  consecutive_wins_num int(11) NOT NULL,
+  bonus_value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1638,
@@ -3625,16 +3795,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `team_building_collection_set`
 --
-CREATE TABLE team_building_collection_set
-(
-    id INT(11) NOT NULL
-  , team_building_event_id INT(11) NOT NULL
-  , chara_group_id INT(11) NOT NULL
-  , skill_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_collection_set (
+  id int(11) NOT NULL,
+  team_building_event_id int(11) NOT NULL,
+  chara_group_id int(11) NOT NULL,
+  skill_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 910,
+AVG_ROW_LENGTH = 585,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -3648,21 +3817,20 @@ ADD INDEX team_building_collection_set_0_team_building_event_id (team_building_e
 --
 -- Create table `team_building_collection_chara`
 --
-CREATE TABLE team_building_collection_chara
-(
-    id INT(11) NOT NULL
-  , team_building_event_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , condition_type_1 INT(11) NOT NULL
-  , bonus_type_1 INT(11) NOT NULL
-  , bonus_value_1 INT(11) NOT NULL
-  , condition_type_2 INT(11) NOT NULL
-  , bonus_type_2 INT(11) NOT NULL
-  , bonus_value_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_collection_chara (
+  id int(11) NOT NULL,
+  team_building_event_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  condition_type_1 int(11) NOT NULL,
+  bonus_type_1 int(11) NOT NULL,
+  bonus_value_1 int(11) NOT NULL,
+  condition_type_2 int(11) NOT NULL,
+  bonus_type_2 int(11) NOT NULL,
+  bonus_value_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 164,
+AVG_ROW_LENGTH = 132,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -3682,15 +3850,14 @@ ADD INDEX team_building_collection_chara_0_team_building_event_id (team_building
 --
 -- Create table `team_building_chara_group`
 --
-CREATE TABLE team_building_chara_group
-(
-    id INT(11) NOT NULL
-  , chara_group_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_chara_group (
+  id int(11) NOT NULL,
+  chara_group_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 455,
+AVG_ROW_LENGTH = 292,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -3704,13 +3871,12 @@ ADD INDEX team_building_chara_group_0_chara_group_id (chara_group_id);
 --
 -- Create table `team_building_chara_count`
 --
-CREATE TABLE team_building_chara_count
-(
-    id INT(11) NOT NULL
-  , collection_chara_min INT(11) NOT NULL
-  , collection_chara_max INT(11) NOT NULL
-  , bonus_value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE team_building_chara_count (
+  id int(11) NOT NULL,
+  collection_chara_min int(11) NOT NULL,
+  collection_chara_max int(11) NOT NULL,
+  bonus_value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1638,
@@ -3721,23 +3887,22 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `support_card_unique_effect`
 --
-CREATE TABLE support_card_unique_effect
-(
-    id INT(11) NOT NULL
-  , lv INT(11) NOT NULL
-  , type_0 INT(11) NOT NULL
-  , value_0 INT(11) NOT NULL
-  , value_0_1 INT(11) NOT NULL
-  , value_0_2 INT(11) NOT NULL
-  , value_0_3 INT(11) NOT NULL
-  , value_0_4 INT(11) NOT NULL
-  , type_1 INT(11) NOT NULL
-  , value_1 INT(11) NOT NULL
-  , value_1_1 INT(11) NOT NULL
-  , value_1_2 INT(11) NOT NULL
-  , value_1_3 INT(11) NOT NULL
-  , value_1_4 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE support_card_unique_effect (
+  id int(11) NOT NULL,
+  lv int(11) NOT NULL,
+  type_0 int(11) NOT NULL,
+  value_0 int(11) NOT NULL,
+  value_0_1 int(11) NOT NULL,
+  value_0_2 int(11) NOT NULL,
+  value_0_3 int(11) NOT NULL,
+  value_0_4 int(11) NOT NULL,
+  type_1 int(11) NOT NULL,
+  value_1 int(11) NOT NULL,
+  value_1_1 int(11) NOT NULL,
+  value_1_2 int(11) NOT NULL,
+  value_1_3 int(11) NOT NULL,
+  value_1_4 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 136,
@@ -3748,12 +3913,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `support_card_team_score_bonus`
 --
-CREATE TABLE support_card_team_score_bonus
-(
-    id INT(11) NOT NULL
-  , level INT(11) NOT NULL
-  , score_rate INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE support_card_team_score_bonus (
+  id int(11) NOT NULL,
+  level int(11) NOT NULL,
+  score_rate int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2340,
@@ -3770,14 +3934,13 @@ ADD INDEX support_card_team_score_bonus_0_level (level);
 --
 -- Create table `support_card_limit_break`
 --
-CREATE TABLE support_card_limit_break
-(
-    id INT(11) NOT NULL
-  , rarity INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE support_card_limit_break (
+  id int(11) NOT NULL,
+  rarity int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -3788,15 +3951,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `support_card_limit`
 --
-CREATE TABLE support_card_limit
-(
-    rarity INT(11) NOT NULL
-  , limit_0 INT(11) NOT NULL
-  , limit_1 INT(11) NOT NULL
-  , limit_2 INT(11) NOT NULL
-  , limit_3 INT(11) NOT NULL
-  , limit_4 INT(11) NOT NULL
-  , PRIMARY KEY (rarity)
+CREATE TABLE support_card_limit (
+  rarity int(11) NOT NULL,
+  limit_0 int(11) NOT NULL,
+  limit_1 int(11) NOT NULL,
+  limit_2 int(11) NOT NULL,
+  limit_3 int(11) NOT NULL,
+  limit_4 int(11) NOT NULL,
+  PRIMARY KEY (rarity)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -3807,13 +3969,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `support_card_level`
 --
-CREATE TABLE support_card_level
-(
-    id INT(11) NOT NULL
-  , rarity INT(11) NOT NULL
-  , level INT(11) NOT NULL
-  , total_exp INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE support_card_level (
+  id int(11) NOT NULL,
+  rarity int(11) NOT NULL,
+  level int(11) NOT NULL,
+  total_exp int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 121,
@@ -3836,13 +3997,12 @@ ADD INDEX support_card_level_0_rarity (rarity);
 --
 -- Create table `support_card_group`
 --
-CREATE TABLE support_card_group
-(
-    id INT(11) NOT NULL
-  , support_card_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , outing_max INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE support_card_group (
+  id int(11) NOT NULL,
+  support_card_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  outing_max int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1092,
@@ -3865,22 +4025,21 @@ ADD INDEX support_card_group_0_support_card_id (support_card_id);
 --
 -- Create table `support_card_effect_table`
 --
-CREATE TABLE support_card_effect_table
-(
-    id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , init INT(11) NOT NULL
-  , limit_lv5 INT(11) NOT NULL
-  , limit_lv10 INT(11) NOT NULL
-  , limit_lv15 INT(11) NOT NULL
-  , limit_lv20 INT(11) NOT NULL
-  , limit_lv25 INT(11) NOT NULL
-  , limit_lv30 INT(11) NOT NULL
-  , limit_lv35 INT(11) NOT NULL
-  , limit_lv40 INT(11) NOT NULL
-  , limit_lv45 INT(11) NOT NULL
-  , limit_lv50 INT(11) NOT NULL
-  , PRIMARY KEY (id, type)
+CREATE TABLE support_card_effect_table (
+  id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  init int(11) NOT NULL,
+  limit_lv5 int(11) NOT NULL,
+  limit_lv10 int(11) NOT NULL,
+  limit_lv15 int(11) NOT NULL,
+  limit_lv20 int(11) NOT NULL,
+  limit_lv25 int(11) NOT NULL,
+  limit_lv30 int(11) NOT NULL,
+  limit_lv35 int(11) NOT NULL,
+  limit_lv40 int(11) NOT NULL,
+  limit_lv45 int(11) NOT NULL,
+  limit_lv50 int(11) NOT NULL,
+  PRIMARY KEY (id, type)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 91,
@@ -3897,12 +4056,11 @@ ADD INDEX support_card_effect_table_0_id (id);
 --
 -- Create table `support_card_effect_filter_group`
 --
-CREATE TABLE support_card_effect_filter_group
-(
-    group_id INT(11) NOT NULL
-  , sort_id INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , PRIMARY KEY (group_id)
+CREATE TABLE support_card_effect_filter_group (
+  group_id int(11) NOT NULL,
+  sort_id int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  PRIMARY KEY (group_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 4096,
@@ -3913,16 +4071,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `support_card_effect_filter`
 --
-CREATE TABLE support_card_effect_filter
-(
-    type INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , sort_id INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , PRIMARY KEY (type)
+CREATE TABLE support_card_effect_filter (
+  type int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  sort_id int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  PRIMARY KEY (type)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 655,
+AVG_ROW_LENGTH = 630,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -3936,26 +4093,25 @@ ADD INDEX support_card_effect_filter_0_group_id (group_id);
 --
 -- Create table `support_card_data`
 --
-CREATE TABLE support_card_data
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , rarity INT(11) NOT NULL
-  , exchange_item_id INT(11) NOT NULL
-  , effect_table_id INT(11) NOT NULL
-  , unique_effect_id INT(11) NOT NULL
-  , command_type INT(11) NOT NULL
-  , command_id INT(11) NOT NULL
-  , support_card_type INT(11) NOT NULL
-  , skill_set_id INT(11) NOT NULL
-  , detail_pos_x INT(11) NOT NULL
-  , detail_pos_y INT(11) NOT NULL
-  , detail_scale INT(11) NOT NULL
-  , detail_rot_z INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , outing_max INT(11) NOT NULL
-  , effect_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE support_card_data (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  rarity int(11) NOT NULL,
+  exchange_item_id int(11) NOT NULL,
+  effect_table_id int(11) NOT NULL,
+  unique_effect_id int(11) NOT NULL,
+  command_type int(11) NOT NULL,
+  command_id int(11) NOT NULL,
+  support_card_type int(11) NOT NULL,
+  skill_set_id int(11) NOT NULL,
+  detail_pos_x int(11) NOT NULL,
+  detail_pos_y int(11) NOT NULL,
+  detail_scale int(11) NOT NULL,
+  detail_rot_z int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  outing_max int(11) NOT NULL,
+  effect_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 249,
@@ -3972,14 +4128,13 @@ ADD INDEX support_card_data_0_chara_id (chara_id);
 --
 -- Create table `succession_rental`
 --
-CREATE TABLE succession_rental
-(
-    id INT(11) NOT NULL
-  , rental_rank INT(11) NOT NULL
-  , rental_num INT(11) NOT NULL
-  , use_value1 INT(11) NOT NULL
-  , use_value2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE succession_rental (
+  id int(11) NOT NULL,
+  rental_rank int(11) NOT NULL,
+  rental_num int(11) NOT NULL,
+  use_value1 int(11) NOT NULL,
+  use_value2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 83,
@@ -3996,12 +4151,11 @@ ADD INDEX succession_rental_0_rental_rank_1_rental_num (rental_rank, rental_num)
 --
 -- Create table `succession_relation_rank`
 --
-CREATE TABLE succession_relation_rank
-(
-    relation_rank INT(11) NOT NULL
-  , rank_value_min INT(11) NOT NULL
-  , rank_value_max INT(11) NOT NULL
-  , PRIMARY KEY (relation_rank)
+CREATE TABLE succession_relation_rank (
+  relation_rank int(11) NOT NULL,
+  rank_value_min int(11) NOT NULL,
+  rank_value_max int(11) NOT NULL,
+  PRIMARY KEY (relation_rank)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -4012,12 +4166,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `succession_relation_member`
 --
-CREATE TABLE succession_relation_member
-(
-    id INT(11) NOT NULL
-  , relation_type INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE succession_relation_member (
+  id int(11) NOT NULL,
+  relation_type int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 55,
@@ -4034,11 +4187,10 @@ ADD INDEX succession_relation_member_0_chara_id (chara_id);
 --
 -- Create table `succession_relation`
 --
-CREATE TABLE succession_relation
-(
-    relation_type INT(11) NOT NULL
-  , relation_point INT(11) NOT NULL
-  , PRIMARY KEY (relation_type)
+CREATE TABLE succession_relation (
+  relation_type int(11) NOT NULL,
+  relation_point int(11) NOT NULL,
+  PRIMARY KEY (relation_type)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 69,
@@ -4049,14 +4201,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `succession_initial_factor`
 --
-CREATE TABLE succession_initial_factor
-(
-    id INT(11) NOT NULL
-  , factor_type INT(11) NOT NULL
-  , value_1 INT(11) NOT NULL
-  , value_2 INT(11) NOT NULL
-  , add_point INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE succession_initial_factor (
+  id int(11) NOT NULL,
+  factor_type int(11) NOT NULL,
+  value_1 int(11) NOT NULL,
+  value_2 int(11) NOT NULL,
+  add_point int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2340,
@@ -4079,15 +4230,14 @@ ADD INDEX succession_initial_factor_0_factor_type_1_value_1 (factor_type, value_
 --
 -- Create table `succession_factor_effect`
 --
-CREATE TABLE succession_factor_effect
-(
-    id INT(11) NOT NULL
-  , factor_group_id INT(11) NOT NULL
-  , effect_id INT(11) NOT NULL
-  , target_type INT(11) NOT NULL
-  , value_1 INT(11) NOT NULL
-  , value_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE succession_factor_effect (
+  id int(11) NOT NULL,
+  factor_group_id int(11) NOT NULL,
+  effect_id int(11) NOT NULL,
+  target_type int(11) NOT NULL,
+  value_1 int(11) NOT NULL,
+  value_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 72,
@@ -4110,17 +4260,17 @@ ADD INDEX succession_factor_effect_0_factor_group_id_1_effect_id (factor_group_i
 --
 -- Create table `succession_factor`
 --
-CREATE TABLE succession_factor
-(
-    factor_id INT(11) NOT NULL
-  , factor_group_id INT(11) NOT NULL
-  , rarity INT(11) NOT NULL
-  , grade INT(11) NOT NULL
-  , factor_type INT(11) NOT NULL
-  , effect_group_id INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (factor_id)
+CREATE TABLE succession_factor (
+  factor_id int(11) NOT NULL,
+  factor_group_id int(11) NOT NULL,
+  rarity int(11) NOT NULL,
+  grade int(11) NOT NULL,
+  factor_type int(11) NOT NULL,
+  effect_group_id int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  succession_search_hidden int(11) NOT NULL,
+  PRIMARY KEY (factor_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 93,
@@ -4135,35 +4285,60 @@ ALTER TABLE succession_factor
 ADD UNIQUE INDEX succession_factor_0_factor_group_id_1_rarity (factor_group_id, rarity);
 
 --
--- Create table `story_wipe_dictionary`
+-- Create table `subscription_effect`
 --
-CREATE TABLE story_wipe_dictionary
-(
-    id INT(11) NOT NULL
-  , motion_root TEXT NOT NULL
-  , wipe_id INT(11) NOT NULL
-  , sub_id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , default_length INT(11) NOT NULL
-  , offset_length INT(11) NOT NULL
-  , vertical_extend_length INT(11) NOT NULL
-  , ignore_tap_length INT(11) NOT NULL
-  , se_name TEXT NOT NULL
-  , sheet_name TEXT NOT NULL
-  , use_mini INT(11) NOT NULL
-  , mini_motion_name TEXT NOT NULL
-  , mini_motion_start INT(11) NOT NULL
-  , mini_motion_end INT(11) NOT NULL
-  , emotion_label TEXT NOT NULL
-  , emotion_label_start TEXT NOT NULL
-  , emotion_label_end TEXT NOT NULL
-  , emotion_icon TEXT NOT NULL
-  , emotion_icon_start TEXT NOT NULL
-  , emotion_icon_end TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE subscription_effect (
+  id int(11) NOT NULL,
+  target_type int(11) NOT NULL,
+  effect_type_1 int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  user_show int(11) NOT NULL,
+  image_icon_id int(11) NOT NULL,
+  transition_type int(11) NOT NULL,
+  start_time int(11) NOT NULL,
+  end_time int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 297,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `subscription_effect_0_target_type` on table `subscription_effect`
+--
+ALTER TABLE subscription_effect
+ADD INDEX subscription_effect_0_target_type (target_type);
+
+--
+-- Create table `story_wipe_dictionary`
+--
+CREATE TABLE story_wipe_dictionary (
+  id int(11) NOT NULL,
+  motion_root text NOT NULL,
+  wipe_id int(11) NOT NULL,
+  sub_id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  default_length int(11) NOT NULL,
+  offset_length int(11) NOT NULL,
+  vertical_extend_length int(11) NOT NULL,
+  ignore_tap_length int(11) NOT NULL,
+  se_name text NOT NULL,
+  sheet_name text NOT NULL,
+  use_mini int(11) NOT NULL,
+  mini_motion_name text NOT NULL,
+  mini_motion_start int(11) NOT NULL,
+  mini_motion_end int(11) NOT NULL,
+  emotion_label text NOT NULL,
+  emotion_label_start text NOT NULL,
+  emotion_label_end text NOT NULL,
+  emotion_icon text NOT NULL,
+  emotion_icon_start text NOT NULL,
+  emotion_icon_end text NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 252,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -4183,13 +4358,12 @@ ADD UNIQUE INDEX wipe_id USING HASH (wipe_id, sub_id, type, use_mini, mini_motio
 --
 -- Create table `story_still`
 --
-CREATE TABLE story_still
-(
-    id INT(11) NOT NULL
-  , still_id INT(11) NOT NULL
-  , page_id INT(11) NOT NULL
-  , order_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_still (
+  id int(11) NOT NULL,
+  still_id int(11) NOT NULL,
+  page_id int(11) NOT NULL,
+  order_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 244,
@@ -4206,20 +4380,19 @@ ADD INDEX story_still_0_still_id (still_id);
 --
 -- Create table `story_live_position`
 --
-CREATE TABLE story_live_position
-(
-    id INT(11) NOT NULL
-  , set_id INT(11) NOT NULL
-  , music_id INT(11) NOT NULL
-  , position_id INT(11) NOT NULL
-  , chara_type INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , dress_color INT(11) NOT NULL
-  , second_dress_id INT(11) NOT NULL
-  , second_dress_color INT(11) NOT NULL
-  , vocal_chara_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_live_position (
+  id int(11) NOT NULL,
+  set_id int(11) NOT NULL,
+  music_id int(11) NOT NULL,
+  position_id int(11) NOT NULL,
+  chara_type int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  dress_color int(11) NOT NULL,
+  second_dress_id int(11) NOT NULL,
+  second_dress_color int(11) NOT NULL,
+  vocal_chara_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 172,
@@ -4242,12 +4415,11 @@ ADD INDEX story_live_position_0_set_id (set_id);
 --
 -- Create table `story_hip_offset`
 --
-CREATE TABLE story_hip_offset
-(
-    category_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , offset INT(11) NOT NULL
-  , PRIMARY KEY (category_id, chara_id)
+CREATE TABLE story_hip_offset (
+  category_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  offset int(11) NOT NULL,
+  PRIMARY KEY (category_id, chara_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 496,
@@ -4258,31 +4430,30 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `story_extra_story_data`
 --
-CREATE TABLE story_extra_story_data
-(
-    id INT(11) NOT NULL
-  , story_extra_id INT(11) NOT NULL
-  , episode_index_id INT(11) NOT NULL
-  , story_type_1 INT(11) NOT NULL
-  , story_id_1 INT(11) NOT NULL
-  , story_type_2 INT(11) NOT NULL
-  , story_id_2 INT(11) NOT NULL
-  , story_type_3 INT(11) NOT NULL
-  , story_id_3 INT(11) NOT NULL
-  , story_type_4 INT(11) NOT NULL
-  , story_id_4 INT(11) NOT NULL
-  , story_type_5 INT(11) NOT NULL
-  , story_id_5 INT(11) NOT NULL
-  , add_reward_category_1 INT(11) NOT NULL
-  , add_reward_id_1 INT(11) NOT NULL
-  , add_reward_num_1 INT(11) NOT NULL
-  , add_reward_category_2 INT(11) NOT NULL
-  , add_reward_id_2 INT(11) NOT NULL
-  , add_reward_num_2 INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , notice_end_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_extra_story_data (
+  id int(11) NOT NULL,
+  story_extra_id int(11) NOT NULL,
+  episode_index_id int(11) NOT NULL,
+  story_type_1 int(11) NOT NULL,
+  story_id_1 int(11) NOT NULL,
+  story_type_2 int(11) NOT NULL,
+  story_id_2 int(11) NOT NULL,
+  story_type_3 int(11) NOT NULL,
+  story_id_3 int(11) NOT NULL,
+  story_type_4 int(11) NOT NULL,
+  story_id_4 int(11) NOT NULL,
+  story_type_5 int(11) NOT NULL,
+  story_id_5 int(11) NOT NULL,
+  add_reward_category_1 int(11) NOT NULL,
+  add_reward_id_1 int(11) NOT NULL,
+  add_reward_num_1 int(11) NOT NULL,
+  add_reward_category_2 int(11) NOT NULL,
+  add_reward_id_2 int(11) NOT NULL,
+  add_reward_num_2 int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  notice_end_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1260,
@@ -4297,14 +4468,30 @@ ALTER TABLE story_extra_story_data
 ADD INDEX story_extra_story_data_0_story_extra_id (story_extra_id);
 
 --
+-- Create table `story_extra_movie_data`
+--
+CREATE TABLE story_extra_movie_data (
+  id int(11) NOT NULL,
+  movie_path text NOT NULL,
+  sort int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 8192,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
 -- Create table `story_extra_data`
 --
-CREATE TABLE story_extra_data
-(
-    story_extra_id INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (story_extra_id)
+CREATE TABLE story_extra_data (
+  story_extra_id int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (story_extra_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -4315,22 +4502,21 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `story_event_top_chara`
 --
-CREATE TABLE story_event_top_chara
-(
-    id INT(11) NOT NULL
-  , story_event_id INT(11) NOT NULL
-  , min_episode_index INT(11) NOT NULL
-  , max_episode_index INT(11) NOT NULL
-  , ending_flag INT(11) NOT NULL
-  , character_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , menu_bg_id INT(11) NOT NULL
-  , menu_bg_sub_id INT(11) NOT NULL
-  , bgm_cue_name TEXT NOT NULL
-  , bgm_cuesheet_name TEXT NOT NULL
-  , env_cue_name TEXT NOT NULL
-  , env_cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_event_top_chara (
+  id int(11) NOT NULL,
+  story_event_id int(11) NOT NULL,
+  min_episode_index int(11) NOT NULL,
+  max_episode_index int(11) NOT NULL,
+  ending_flag int(11) NOT NULL,
+  character_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  menu_bg_id int(11) NOT NULL,
+  menu_bg_sub_id int(11) NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet_name text NOT NULL,
+  env_cue_name text NOT NULL,
+  env_cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 396,
@@ -4347,31 +4533,30 @@ ADD INDEX story_event_top_chara_0_story_event_id (story_event_id);
 --
 -- Create table `story_event_story_data`
 --
-CREATE TABLE story_event_story_data
-(
-    id INT(11) NOT NULL
-  , story_event_id INT(11) NOT NULL
-  , episode_index_id INT(11) NOT NULL
-  , story_condition_type INT(11) NOT NULL
-  , story_type_1 INT(11) NOT NULL
-  , story_id_1 INT(11) NOT NULL
-  , story_type_2 INT(11) NOT NULL
-  , story_id_2 INT(11) NOT NULL
-  , story_type_3 INT(11) NOT NULL
-  , story_id_3 INT(11) NOT NULL
-  , story_type_4 INT(11) NOT NULL
-  , story_id_4 INT(11) NOT NULL
-  , story_type_5 INT(11) NOT NULL
-  , story_id_5 INT(11) NOT NULL
-  , need_point INT(11) NOT NULL
-  , add_reward_category_1 INT(11) NOT NULL
-  , add_reward_id_1 INT(11) NOT NULL
-  , add_reward_num_1 INT(11) NOT NULL
-  , add_reward_category_2 INT(11) NOT NULL
-  , add_reward_id_2 INT(11) NOT NULL
-  , add_reward_num_2 INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_event_story_data (
+  id int(11) NOT NULL,
+  story_event_id int(11) NOT NULL,
+  episode_index_id int(11) NOT NULL,
+  story_condition_type int(11) NOT NULL,
+  story_type_1 int(11) NOT NULL,
+  story_id_1 int(11) NOT NULL,
+  story_type_2 int(11) NOT NULL,
+  story_id_2 int(11) NOT NULL,
+  story_type_3 int(11) NOT NULL,
+  story_id_3 int(11) NOT NULL,
+  story_type_4 int(11) NOT NULL,
+  story_id_4 int(11) NOT NULL,
+  story_type_5 int(11) NOT NULL,
+  story_id_5 int(11) NOT NULL,
+  need_point int(11) NOT NULL,
+  add_reward_category_1 int(11) NOT NULL,
+  add_reward_id_1 int(11) NOT NULL,
+  add_reward_num_1 int(11) NOT NULL,
+  add_reward_category_2 int(11) NOT NULL,
+  add_reward_id_2 int(11) NOT NULL,
+  add_reward_num_2 int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 182,
@@ -4394,24 +4579,23 @@ ADD UNIQUE INDEX story_event_story_data_0_story_event_id_1_episode_index_id (sto
 --
 -- Create table `story_event_roulette_bingo`
 --
-CREATE TABLE story_event_roulette_bingo
-(
-    id INT(11) NOT NULL
-  , roulette_id INT(11) NOT NULL
-  , story_event_id INT(11) NOT NULL
-  , sheet_num INT(11) NOT NULL
-  , can_loop INT(11) NOT NULL
-  , use_item_category INT(11) NOT NULL
-  , use_item_id INT(11) NOT NULL
-  , use_item_num INT(11) NOT NULL
-  , character_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , reset_line INT(11) NOT NULL
-  , reward_set_id INT(11) NOT NULL
-  , roulette_max_num INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_event_roulette_bingo (
+  id int(11) NOT NULL,
+  roulette_id int(11) NOT NULL,
+  story_event_id int(11) NOT NULL,
+  sheet_num int(11) NOT NULL,
+  can_loop int(11) NOT NULL,
+  use_item_category int(11) NOT NULL,
+  use_item_id int(11) NOT NULL,
+  use_item_num int(11) NOT NULL,
+  character_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  reset_line int(11) NOT NULL,
+  reward_set_id int(11) NOT NULL,
+  roulette_max_num int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 372,
@@ -4434,15 +4618,14 @@ ADD INDEX story_event_roulette_bingo_0_story_event_id (story_event_id);
 --
 -- Create table `story_event_point_reward`
 --
-CREATE TABLE story_event_point_reward
-(
-    id INT(11) NOT NULL
-  , story_event_id INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , point INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_event_point_reward (
+  id int(11) NOT NULL,
+  story_event_id int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  point int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 76,
@@ -4459,13 +4642,12 @@ ADD INDEX story_event_point_reward_0_story_event_id (story_event_id);
 --
 -- Create table `story_event_nickname_bonus`
 --
-CREATE TABLE story_event_nickname_bonus
-(
-    id INT(11) NOT NULL
-  , story_event_id INT(11) NOT NULL
-  , nickname_rank INT(11) NOT NULL
-  , bonus_point INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_event_nickname_bonus (
+  id int(11) NOT NULL,
+  story_event_id int(11) NOT NULL,
+  nickname_rank int(11) NOT NULL,
+  bonus_point int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 496,
@@ -4488,20 +4670,19 @@ ADD INDEX story_event_nickname_bonus_0_story_event_id (story_event_id);
 --
 -- Create table `story_event_mission_top_chara`
 --
-CREATE TABLE story_event_mission_top_chara
-(
-    id INT(11) NOT NULL
-  , story_event_id INT(11) NOT NULL
-  , ending_flag INT(11) NOT NULL
-  , character_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , menu_bg_id INT(11) NOT NULL
-  , menu_bg_sub_id INT(11) NOT NULL
-  , bgm_cue_name TEXT NOT NULL
-  , bgm_cuesheet_name TEXT NOT NULL
-  , env_cue_name TEXT NOT NULL
-  , env_cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_event_mission_top_chara (
+  id int(11) NOT NULL,
+  story_event_id int(11) NOT NULL,
+  ending_flag int(11) NOT NULL,
+  character_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  menu_bg_id int(11) NOT NULL,
+  menu_bg_sub_id int(11) NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet_name text NOT NULL,
+  env_cue_name text NOT NULL,
+  env_cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 744,
@@ -4518,27 +4699,26 @@ ADD INDEX story_event_mission_top_chara_0_story_event_id (story_event_id);
 --
 -- Create table `story_event_mission`
 --
-CREATE TABLE story_event_mission
-(
-    id INT(11) NOT NULL
-  , story_event_id INT(11) NOT NULL
-  , mission_type INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , condition_value_3 INT(11) NOT NULL
-  , condition_value_4 INT(11) NOT NULL
-  , condition_num INT(11) NOT NULL
-  , step_group_id INT(11) NOT NULL
-  , step_order INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , transition_type INT(11) NOT NULL
-  , date_check_flg INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_event_mission (
+  id int(11) NOT NULL,
+  story_event_id int(11) NOT NULL,
+  mission_type int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  condition_value_3 int(11) NOT NULL,
+  condition_value_4 int(11) NOT NULL,
+  condition_num int(11) NOT NULL,
+  step_group_id int(11) NOT NULL,
+  step_order int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  transition_type int(11) NOT NULL,
+  date_check_flg int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 169,
@@ -4555,19 +4735,18 @@ ADD INDEX story_event_mission_0_story_event_id (story_event_id);
 --
 -- Create table `story_event_data`
 --
-CREATE TABLE story_event_data
-(
-    story_event_id INT(11) NOT NULL
-  , announce_id INT(11) NOT NULL
-  , consume_tp_ratio INT(11) NOT NULL
-  , bonus_reward_ratio INT(11) NOT NULL
-  , notice_date INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , middle_date_01 INT(11) NOT NULL
-  , middle_date_02 INT(11) NOT NULL
-  , ending_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (story_event_id)
+CREATE TABLE story_event_data (
+  story_event_id int(11) NOT NULL,
+  announce_id int(11) NOT NULL,
+  consume_tp_ratio int(11) NOT NULL,
+  bonus_reward_ratio int(11) NOT NULL,
+  notice_date int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  middle_date_01 int(11) NOT NULL,
+  middle_date_02 int(11) NOT NULL,
+  ending_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (story_event_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1489,
@@ -4578,21 +4757,20 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `story_event_bonus_support_card`
 --
-CREATE TABLE story_event_bonus_support_card
-(
-    id INT(11) NOT NULL
-  , story_event_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , rarity INT(11) NOT NULL
-  , support_card_id INT(11) NOT NULL
-  , limit_0 INT(11) NOT NULL
-  , limit_1 INT(11) NOT NULL
-  , limit_2 INT(11) NOT NULL
-  , limit_3 INT(11) NOT NULL
-  , limit_4 INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_event_bonus_support_card (
+  id int(11) NOT NULL,
+  story_event_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  rarity int(11) NOT NULL,
+  support_card_id int(11) NOT NULL,
+  limit_0 int(11) NOT NULL,
+  limit_1 int(11) NOT NULL,
+  limit_2 int(11) NOT NULL,
+  limit_3 int(11) NOT NULL,
+  limit_4 int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 96,
@@ -4615,23 +4793,22 @@ ADD UNIQUE INDEX story_event_id (story_event_id, chara_id, rarity, support_card_
 --
 -- Create table `story_event_bonus_group_support_card`
 --
-CREATE TABLE story_event_bonus_group_support_card
-(
-    id INT(11) NOT NULL
-  , story_event_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , support_card_id INT(11) NOT NULL
-  , limit_0 INT(11) NOT NULL
-  , limit_1 INT(11) NOT NULL
-  , limit_2 INT(11) NOT NULL
-  , limit_3 INT(11) NOT NULL
-  , limit_4 INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_event_bonus_group_support_card (
+  id int(11) NOT NULL,
+  story_event_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  support_card_id int(11) NOT NULL,
+  limit_0 int(11) NOT NULL,
+  limit_1 int(11) NOT NULL,
+  limit_2 int(11) NOT NULL,
+  limit_3 int(11) NOT NULL,
+  limit_4 int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 963,
+AVG_ROW_LENGTH = 910,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -4657,20 +4834,19 @@ ADD UNIQUE INDEX story_event_id (story_event_id, chara_id, support_card_id);
 --
 -- Create table `story_event_bonus_card`
 --
-CREATE TABLE story_event_bonus_card
-(
-    id INT(11) NOT NULL
-  , story_event_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , rarity_1 INT(11) NOT NULL
-  , rarity_2 INT(11) NOT NULL
-  , rarity_3 INT(11) NOT NULL
-  , rarity_4 INT(11) NOT NULL
-  , rarity_5 INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_event_bonus_card (
+  id int(11) NOT NULL,
+  story_event_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  rarity_1 int(11) NOT NULL,
+  rarity_2 int(11) NOT NULL,
+  rarity_3 int(11) NOT NULL,
+  rarity_4 int(11) NOT NULL,
+  rarity_5 int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 237,
@@ -4693,15 +4869,14 @@ ADD UNIQUE INDEX story_event_id (story_event_id, chara_id, card_id);
 --
 -- Create table `story_event_bingo_reward`
 --
-CREATE TABLE story_event_bingo_reward
-(
-    id INT(11) NOT NULL
-  , reward_set_id INT(11) NOT NULL
-  , line_num INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE story_event_bingo_reward (
+  id int(11) NOT NULL,
+  reward_set_id int(11) NOT NULL,
+  line_num int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 89,
@@ -4744,16 +4919,16 @@ ADD INDEX skill_up_scenario_condition_0_scenario_id (scenario_id);
 --
 -- Create table `skill_upgrade_speciality`
 --
-CREATE TABLE skill_upgrade_speciality
-(
-    id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , base_skill_id INT(11) NOT NULL
-  , skill_id INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE skill_upgrade_speciality (
+  id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  base_skill_id int(11) NOT NULL,
+  skill_id int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 862,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -4788,7 +4963,7 @@ CREATE TABLE skill_upgrade_description (
   PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 49,
+AVG_ROW_LENGTH = 114,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -4814,19 +4989,18 @@ ADD INDEX skill_upgrade_description_0_card_id_1_rank (card_id, `rank`);
 --
 -- Create table `skill_upgrade_condition`
 --
-CREATE TABLE skill_upgrade_condition
-(
-    id INT(11) NOT NULL
-  , description_id INT(11) NOT NULL
-  , num INT(11) NOT NULL
-  , sub_num INT(11) NOT NULL
-  , timing_type INT(11) NOT NULL
-  , count_type INT(11) NOT NULL
-  , upgrade_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE skill_upgrade_condition (
+  id int(11) NOT NULL,
+  description_id int(11) NOT NULL,
+  num int(11) NOT NULL,
+  sub_num int(11) NOT NULL,
+  timing_type int(11) NOT NULL,
+  count_type int(11) NOT NULL,
+  upgrade_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 84,
+AVG_ROW_LENGTH = 77,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -4846,50 +5020,49 @@ ADD INDEX skill_upgrade_condition_0_description_id (description_id);
 --
 -- Create table `skill_set`
 --
-CREATE TABLE skill_set
-(
-    id INT(11) NOT NULL
-  , skill_id1 INT(11) NOT NULL
-  , skill_level1 INT(11) NOT NULL
-  , skill_id2 INT(11) NOT NULL
-  , skill_level2 INT(11) NOT NULL
-  , skill_id3 INT(11) NOT NULL
-  , skill_level3 INT(11) NOT NULL
-  , skill_id4 INT(11) NOT NULL
-  , skill_level4 INT(11) NOT NULL
-  , skill_id5 INT(11) NOT NULL
-  , skill_level5 INT(11) NOT NULL
-  , skill_id6 INT(11) NOT NULL
-  , skill_level6 INT(11) NOT NULL
-  , skill_id7 INT(11) NOT NULL
-  , skill_level7 INT(11) NOT NULL
-  , skill_id8 INT(11) NOT NULL
-  , skill_level8 INT(11) NOT NULL
-  , skill_id9 INT(11) NOT NULL
-  , skill_level9 INT(11) NOT NULL
-  , skill_id10 INT(11) NOT NULL
-  , skill_level10 INT(11) NOT NULL
-  , skill_id11 INT(11) NOT NULL
-  , skill_level11 INT(11) NOT NULL
-  , skill_id12 INT(11) NOT NULL
-  , skill_level12 INT(11) NOT NULL
-  , skill_id13 INT(11) NOT NULL
-  , skill_level13 INT(11) NOT NULL
-  , skill_id14 INT(11) NOT NULL
-  , skill_level14 INT(11) NOT NULL
-  , skill_id15 INT(11) NOT NULL
-  , skill_level15 INT(11) NOT NULL
-  , skill_id16 INT(11) NOT NULL
-  , skill_level16 INT(11) NOT NULL
-  , skill_id17 INT(11) NOT NULL
-  , skill_level17 INT(11) NOT NULL
-  , skill_id18 INT(11) NOT NULL
-  , skill_level18 INT(11) NOT NULL
-  , skill_id19 INT(11) NOT NULL
-  , skill_level19 INT(11) NOT NULL
-  , skill_id20 INT(11) NOT NULL
-  , skill_level20 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE skill_set (
+  id int(11) NOT NULL,
+  skill_id1 int(11) NOT NULL,
+  skill_level1 int(11) NOT NULL,
+  skill_id2 int(11) NOT NULL,
+  skill_level2 int(11) NOT NULL,
+  skill_id3 int(11) NOT NULL,
+  skill_level3 int(11) NOT NULL,
+  skill_id4 int(11) NOT NULL,
+  skill_level4 int(11) NOT NULL,
+  skill_id5 int(11) NOT NULL,
+  skill_level5 int(11) NOT NULL,
+  skill_id6 int(11) NOT NULL,
+  skill_level6 int(11) NOT NULL,
+  skill_id7 int(11) NOT NULL,
+  skill_level7 int(11) NOT NULL,
+  skill_id8 int(11) NOT NULL,
+  skill_level8 int(11) NOT NULL,
+  skill_id9 int(11) NOT NULL,
+  skill_level9 int(11) NOT NULL,
+  skill_id10 int(11) NOT NULL,
+  skill_level10 int(11) NOT NULL,
+  skill_id11 int(11) NOT NULL,
+  skill_level11 int(11) NOT NULL,
+  skill_id12 int(11) NOT NULL,
+  skill_level12 int(11) NOT NULL,
+  skill_id13 int(11) NOT NULL,
+  skill_level13 int(11) NOT NULL,
+  skill_id14 int(11) NOT NULL,
+  skill_level14 int(11) NOT NULL,
+  skill_id15 int(11) NOT NULL,
+  skill_level15 int(11) NOT NULL,
+  skill_id16 int(11) NOT NULL,
+  skill_level16 int(11) NOT NULL,
+  skill_id17 int(11) NOT NULL,
+  skill_level17 int(11) NOT NULL,
+  skill_id18 int(11) NOT NULL,
+  skill_level18 int(11) NOT NULL,
+  skill_id19 int(11) NOT NULL,
+  skill_level19 int(11) NOT NULL,
+  skill_id20 int(11) NOT NULL,
+  skill_level20 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 142,
@@ -4900,13 +5073,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `skill_level_value`
 --
-CREATE TABLE skill_level_value
-(
-    id INT(11) NOT NULL
-  , ability_type INT(11) NOT NULL
-  , level INT(11) NOT NULL
-  , float_ability_value_coef INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE skill_level_value (
+  id int(11) NOT NULL,
+  ability_type int(11) NOT NULL,
+  level int(11) NOT NULL,
+  float_ability_value_coef int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 72,
@@ -4923,13 +5095,12 @@ ADD INDEX skill_level_value_0_ability_type (ability_type);
 --
 -- Create table `skill_exp`
 --
-CREATE TABLE skill_exp
-(
-    id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , level INT(11) NOT NULL
-  , scale INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE skill_exp (
+  id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  level int(11) NOT NULL,
+  scale int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1638,
@@ -4946,87 +5117,86 @@ ADD INDEX skill_exp_0_type (type);
 --
 -- Create table `skill_data`
 --
-CREATE TABLE skill_data
-(
-    id INT(11) NOT NULL
-  , rarity INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , group_rate INT(11) NOT NULL
-  , filter_switch INT(11) NOT NULL
-  , grade_value INT(11) NOT NULL
-  , skill_category INT(11) NOT NULL
-  , tag_id TEXT NOT NULL
-  , unique_skill_id_1 INT(11) NOT NULL
-  , unique_skill_id_2 INT(11) NOT NULL
-  , exp_type INT(11) NOT NULL
-  , potential_per_default INT(11) NOT NULL
-  , activate_lot INT(11) NOT NULL
-  , precondition_1 TEXT NOT NULL
-  , condition_1 TEXT NOT NULL
-  , float_ability_time_1 INT(11) NOT NULL
-  , ability_time_usage_1 INT(11) NOT NULL
-  , float_cooldown_time_1 INT(11) NOT NULL
-  , ability_type_1_1 INT(11) NOT NULL
-  , ability_value_usage_1_1 INT(11) NOT NULL
-  , ability_value_level_usage_1_1 INT(11) NOT NULL
-  , float_ability_value_1_1 INT(11) NOT NULL
-  , target_type_1_1 INT(11) NOT NULL
-  , target_value_1_1 INT(11) NOT NULL
-  , ability_type_1_2 INT(11) NOT NULL
-  , ability_value_usage_1_2 INT(11) NOT NULL
-  , ability_value_level_usage_1_2 INT(11) NOT NULL
-  , float_ability_value_1_2 INT(11) NOT NULL
-  , target_type_1_2 INT(11) NOT NULL
-  , target_value_1_2 INT(11) NOT NULL
-  , ability_type_1_3 INT(11) NOT NULL
-  , ability_value_usage_1_3 INT(11) NOT NULL
-  , ability_value_level_usage_1_3 INT(11) NOT NULL
-  , float_ability_value_1_3 INT(11) NOT NULL
-  , target_type_1_3 INT(11) NOT NULL
-  , target_value_1_3 INT(11) NOT NULL
-  , precondition_2 TEXT NOT NULL
-  , condition_2 TEXT NOT NULL
-  , float_ability_time_2 INT(11) NOT NULL
-  , ability_time_usage_2 INT(11) NOT NULL
-  , float_cooldown_time_2 INT(11) NOT NULL
-  , ability_type_2_1 INT(11) NOT NULL
-  , ability_value_usage_2_1 INT(11) NOT NULL
-  , ability_value_level_usage_2_1 INT(11) NOT NULL
-  , float_ability_value_2_1 INT(11) NOT NULL
-  , target_type_2_1 INT(11) NOT NULL
-  , target_value_2_1 INT(11) NOT NULL
-  , ability_type_2_2 INT(11) NOT NULL
-  , ability_value_usage_2_2 INT(11) NOT NULL
-  , ability_value_level_usage_2_2 INT(11) NOT NULL
-  , float_ability_value_2_2 INT(11) NOT NULL
-  , target_type_2_2 INT(11) NOT NULL
-  , target_value_2_2 INT(11) NOT NULL
-  , ability_type_2_3 INT(11) NOT NULL
-  , ability_value_usage_2_3 INT(11) NOT NULL
-  , ability_value_level_usage_2_3 INT(11) NOT NULL
-  , float_ability_value_2_3 INT(11) NOT NULL
-  , target_type_2_3 INT(11) NOT NULL
-  , target_value_2_3 INT(11) NOT NULL
-  , popularity_add_param_1 INT(11) NOT NULL
-  , popularity_add_value_1 INT(11) NOT NULL
-  , popularity_add_param_2 INT(11) NOT NULL
-  , popularity_add_value_2 INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , icon_id INT(11) NOT NULL
-  , plate_type INT(11) NOT NULL
-  , disable_singlemode INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , disable_count_condition INT(11) NOT NULL
-  , is_general_skill INT(11) NOT NULL
-  , additional_activate_type_1_1 INT(11) NOT NULL
-  , additional_activate_type_1_2 INT(11) NOT NULL
-  , additional_activate_type_1_3 INT(11) NOT NULL
-  , additional_activate_type_2_1 INT(11) NOT NULL
-  , additional_activate_type_2_2 INT(11) NOT NULL
-  , additional_activate_type_2_3 INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE skill_data (
+  id int(11) NOT NULL,
+  rarity int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  group_rate int(11) NOT NULL,
+  filter_switch int(11) NOT NULL,
+  grade_value int(11) NOT NULL,
+  skill_category int(11) NOT NULL,
+  tag_id text NOT NULL,
+  unique_skill_id_1 int(11) NOT NULL,
+  unique_skill_id_2 int(11) NOT NULL,
+  exp_type int(11) NOT NULL,
+  potential_per_default int(11) NOT NULL,
+  activate_lot int(11) NOT NULL,
+  precondition_1 text NOT NULL,
+  condition_1 text NOT NULL,
+  float_ability_time_1 int(11) NOT NULL,
+  ability_time_usage_1 int(11) NOT NULL,
+  float_cooldown_time_1 int(11) NOT NULL,
+  ability_type_1_1 int(11) NOT NULL,
+  ability_value_usage_1_1 int(11) NOT NULL,
+  ability_value_level_usage_1_1 int(11) NOT NULL,
+  float_ability_value_1_1 int(11) NOT NULL,
+  target_type_1_1 int(11) NOT NULL,
+  target_value_1_1 int(11) NOT NULL,
+  ability_type_1_2 int(11) NOT NULL,
+  ability_value_usage_1_2 int(11) NOT NULL,
+  ability_value_level_usage_1_2 int(11) NOT NULL,
+  float_ability_value_1_2 int(11) NOT NULL,
+  target_type_1_2 int(11) NOT NULL,
+  target_value_1_2 int(11) NOT NULL,
+  ability_type_1_3 int(11) NOT NULL,
+  ability_value_usage_1_3 int(11) NOT NULL,
+  ability_value_level_usage_1_3 int(11) NOT NULL,
+  float_ability_value_1_3 int(11) NOT NULL,
+  target_type_1_3 int(11) NOT NULL,
+  target_value_1_3 int(11) NOT NULL,
+  precondition_2 text NOT NULL,
+  condition_2 text NOT NULL,
+  float_ability_time_2 int(11) NOT NULL,
+  ability_time_usage_2 int(11) NOT NULL,
+  float_cooldown_time_2 int(11) NOT NULL,
+  ability_type_2_1 int(11) NOT NULL,
+  ability_value_usage_2_1 int(11) NOT NULL,
+  ability_value_level_usage_2_1 int(11) NOT NULL,
+  float_ability_value_2_1 int(11) NOT NULL,
+  target_type_2_1 int(11) NOT NULL,
+  target_value_2_1 int(11) NOT NULL,
+  ability_type_2_2 int(11) NOT NULL,
+  ability_value_usage_2_2 int(11) NOT NULL,
+  ability_value_level_usage_2_2 int(11) NOT NULL,
+  float_ability_value_2_2 int(11) NOT NULL,
+  target_type_2_2 int(11) NOT NULL,
+  target_value_2_2 int(11) NOT NULL,
+  ability_type_2_3 int(11) NOT NULL,
+  ability_value_usage_2_3 int(11) NOT NULL,
+  ability_value_level_usage_2_3 int(11) NOT NULL,
+  float_ability_value_2_3 int(11) NOT NULL,
+  target_type_2_3 int(11) NOT NULL,
+  target_value_2_3 int(11) NOT NULL,
+  popularity_add_param_1 int(11) NOT NULL,
+  popularity_add_value_1 int(11) NOT NULL,
+  popularity_add_param_2 int(11) NOT NULL,
+  popularity_add_value_2 int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  icon_id int(11) NOT NULL,
+  plate_type int(11) NOT NULL,
+  disable_singlemode int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  disable_count_condition int(11) NOT NULL,
+  is_general_skill int(11) NOT NULL,
+  additional_activate_type_1_1 int(11) NOT NULL,
+  additional_activate_type_1_2 int(11) NOT NULL,
+  additional_activate_type_1_3 int(11) NOT NULL,
+  additional_activate_type_2_1 int(11) NOT NULL,
+  additional_activate_type_2_2 int(11) NOT NULL,
+  additional_activate_type_2_3 int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 431,
@@ -5043,22 +5213,21 @@ ADD INDEX skill_data_0_group_id (group_id);
 --
 -- Create table `single_mode_wins_saddle`
 --
-CREATE TABLE single_mode_wins_saddle
-(
-    id INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , `condition` INT(11) NOT NULL
-  , win_saddle_type INT(11) NOT NULL
-  , race_instance_id_1 INT(11) NOT NULL
-  , race_instance_id_2 INT(11) NOT NULL
-  , race_instance_id_3 INT(11) NOT NULL
-  , race_instance_id_4 INT(11) NOT NULL
-  , race_instance_id_5 INT(11) NOT NULL
-  , race_instance_id_6 INT(11) NOT NULL
-  , race_instance_id_7 INT(11) NOT NULL
-  , race_instance_id_8 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_wins_saddle (
+  id int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  `condition` int(11) NOT NULL,
+  win_saddle_type int(11) NOT NULL,
+  race_instance_id_1 int(11) NOT NULL,
+  race_instance_id_2 int(11) NOT NULL,
+  race_instance_id_3 int(11) NOT NULL,
+  race_instance_id_4 int(11) NOT NULL,
+  race_instance_id_5 int(11) NOT NULL,
+  race_instance_id_6 int(11) NOT NULL,
+  race_instance_id_7 int(11) NOT NULL,
+  race_instance_id_8 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 105,
@@ -5069,12 +5238,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_venus_sprace_data`
 --
-CREATE TABLE single_mode_venus_sprace_data
-(
-    id INT(11) NOT NULL
-  , race_group_id INT(11) NOT NULL
-  , turn_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_venus_sprace_data (
+  id int(11) NOT NULL,
+  race_group_id int(11) NOT NULL,
+  turn_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -5091,17 +5259,16 @@ ADD INDEX single_mode_venus_sprace_data_0_race_group_id (race_group_id);
 --
 -- Create table `single_mode_venus_spirit_group`
 --
-CREATE TABLE single_mode_venus_spirit_group
-(
-    spirit_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , bonus_group INT(11) NOT NULL
-  , spirit_effect_group_id_1 INT(11) NOT NULL
-  , spirit_effect_group_id_2 INT(11) NOT NULL
-  , spirit_effect_group_id_3 INT(11) NOT NULL
-  , spirit_effect_group_id_4 INT(11) NOT NULL
-  , spirit_effect_group_id_5 INT(11) NOT NULL
-  , PRIMARY KEY (spirit_id)
+CREATE TABLE single_mode_venus_spirit_group (
+  spirit_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  bonus_group int(11) NOT NULL,
+  spirit_effect_group_id_1 int(11) NOT NULL,
+  spirit_effect_group_id_2 int(11) NOT NULL,
+  spirit_effect_group_id_3 int(11) NOT NULL,
+  spirit_effect_group_id_4 int(11) NOT NULL,
+  spirit_effect_group_id_5 int(11) NOT NULL,
+  PRIMARY KEY (spirit_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 910,
@@ -5112,16 +5279,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_venus_spirit_effect`
 --
-CREATE TABLE single_mode_venus_spirit_effect
-(
-    id INT(11) NOT NULL
-  , spirit_effect_group_id INT(11) NOT NULL
-  , effect_type INT(11) NOT NULL
-  , effect_value_1 INT(11) NOT NULL
-  , effect_value_2 INT(11) NOT NULL
-  , effect_value_3 INT(11) NOT NULL
-  , effect_value_4 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_venus_spirit_effect (
+  id int(11) NOT NULL,
+  spirit_effect_group_id int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  effect_value_2 int(11) NOT NULL,
+  effect_value_3 int(11) NOT NULL,
+  effect_value_4 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 197,
@@ -5138,15 +5304,14 @@ ADD INDEX single_mode_venus_spirit_effect_0_spirit_effect_group_id (spirit_effec
 --
 -- Create table `single_mode_venus_crystal_group`
 --
-CREATE TABLE single_mode_venus_crystal_group
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , venus_level INT(11) NOT NULL
-  , passive_effect_group_id INT(11) NOT NULL
-  , active_effect_group_id INT(11) NOT NULL
-  , active_effect_turn INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_venus_crystal_group (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  venus_level int(11) NOT NULL,
+  passive_effect_group_id int(11) NOT NULL,
+  active_effect_group_id int(11) NOT NULL,
+  active_effect_turn int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1092,
@@ -5163,18 +5328,17 @@ ADD INDEX single_mode_venus_crystal_group_0_chara_id (chara_id);
 --
 -- Create table `single_mode_unique_chara`
 --
-CREATE TABLE single_mode_unique_chara
-(
-    id INT(11) NOT NULL
-  , partner_id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , period INT(11) NOT NULL
-  , training_placement INT(11) NOT NULL
-  , gain_flag_id INT(11) NOT NULL
-  , is_support_featured_stock INT(11) NOT NULL
-  , gain_role_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_unique_chara (
+  id int(11) NOT NULL,
+  partner_id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  period int(11) NOT NULL,
+  training_placement int(11) NOT NULL,
+  gain_flag_id int(11) NOT NULL,
+  is_support_featured_stock int(11) NOT NULL,
+  gain_role_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1170,
@@ -5191,33 +5355,32 @@ ADD INDEX single_mode_unique_chara_0_partner_id_1_scenario_id (partner_id, scena
 --
 -- Create table `single_mode_turn`
 --
-CREATE TABLE single_mode_turn
-(
-    id INT(11) NOT NULL
-  , turn_set_id INT(11) NOT NULL
-  , turn INT(11) NOT NULL
-  , year INT(11) NOT NULL
-  , month INT(11) NOT NULL
-  , half INT(11) NOT NULL
-  , period INT(11) NOT NULL
-  , unique_command INT(11) NOT NULL
-  , training_set_id INT(11) NOT NULL
-  , outing_set_id INT(11) NOT NULL
-  , top_cloth_id INT(11) NOT NULL
-  , top_bg_id INT(11) NOT NULL
-  , bgm_cue_name TEXT NOT NULL
-  , bgm_cuesheet_name TEXT NOT NULL
-  , env_cue_name TEXT NOT NULL
-  , env_cuesheet_name TEXT NOT NULL
-  , rest_type INT(11) NOT NULL
-  , health_room_type INT(11) NOT NULL
-  , race_entry_type INT(11) NOT NULL
-  , story_cloth_id INT(11) NOT NULL
-  , story_bg_id INT(11) NOT NULL
-  , story_bg_sub_id INT(11) NOT NULL
-  , bgm_unique_cue_name TEXT NOT NULL
-  , bgm_unique_cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_turn (
+  id int(11) NOT NULL,
+  turn_set_id int(11) NOT NULL,
+  turn int(11) NOT NULL,
+  year int(11) NOT NULL,
+  month int(11) NOT NULL,
+  half int(11) NOT NULL,
+  period int(11) NOT NULL,
+  unique_command int(11) NOT NULL,
+  training_set_id int(11) NOT NULL,
+  outing_set_id int(11) NOT NULL,
+  top_cloth_id int(11) NOT NULL,
+  top_bg_id int(11) NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet_name text NOT NULL,
+  env_cue_name text NOT NULL,
+  env_cuesheet_name text NOT NULL,
+  rest_type int(11) NOT NULL,
+  health_room_type int(11) NOT NULL,
+  race_entry_type int(11) NOT NULL,
+  story_cloth_id int(11) NOT NULL,
+  story_bg_id int(11) NOT NULL,
+  story_bg_sub_id int(11) NOT NULL,
+  bgm_unique_cue_name text NOT NULL,
+  bgm_unique_cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 350,
@@ -5234,17 +5397,16 @@ ADD INDEX single_mode_turn_0_turn_set_id (turn_set_id);
 --
 -- Create table `single_mode_training_se`
 --
-CREATE TABLE single_mode_training_se
-(
-    id INT(11) NOT NULL
-  , sheet_id VARCHAR(750) NOT NULL
-  , se_cue_name TEXT NOT NULL
-  , se_cuesheet_name TEXT NOT NULL
-  , skip_se_cue_name TEXT NOT NULL
-  , skip_se_cuesheet_name TEXT NOT NULL
-  , chara_index INT(11) NOT NULL
-  , voice_trigger_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_training_se (
+  id int(11) NOT NULL,
+  sheet_id varchar(750) NOT NULL,
+  se_cue_name text NOT NULL,
+  se_cuesheet_name text NOT NULL,
+  skip_se_cue_name text NOT NULL,
+  skip_se_cuesheet_name text NOT NULL,
+  chara_index int(11) NOT NULL,
+  voice_trigger_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 327,
@@ -5261,13 +5423,12 @@ ADD INDEX single_mode_training_se_0_sheet_id (sheet_id);
 --
 -- Create table `single_mode_training_plate`
 --
-CREATE TABLE single_mode_training_plate
-(
-    id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , value_min INT(11) NOT NULL
-  , value_max INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_training_plate (
+  id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  value_min int(11) NOT NULL,
+  value_max int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -5284,16 +5445,15 @@ ADD INDEX single_mode_training_plate_0_scenario_id (scenario_id);
 --
 -- Create table `single_mode_training_effect`
 --
-CREATE TABLE single_mode_training_effect
-(
-    id INT(11) NOT NULL
-  , command_id INT(11) NOT NULL
-  , sub_id INT(11) NOT NULL
-  , result_state INT(11) NOT NULL
-  , target_type INT(11) NOT NULL
-  , effect_value INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_training_effect (
+  id int(11) NOT NULL,
+  command_id int(11) NOT NULL,
+  sub_id int(11) NOT NULL,
+  result_state int(11) NOT NULL,
+  target_type int(11) NOT NULL,
+  effect_value int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 97,
@@ -5308,28 +5468,56 @@ ALTER TABLE single_mode_training_effect
 ADD INDEX single_mode_training_effect_0_command_id_1_result_state (command_id, result_state);
 
 --
+-- Create table `single_mode_training_bg_chara`
+--
+CREATE TABLE single_mode_training_bg_chara (
+  id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  command_id int(11) NOT NULL,
+  command_level int(11) NOT NULL,
+  cut_id int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 546,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_training_bg_chara_0_command_id_1_command_level` on table `single_mode_training_bg_chara`
+--
+ALTER TABLE single_mode_training_bg_chara
+ADD INDEX single_mode_training_bg_chara_0_command_id_1_command_level (command_id, command_level);
+
+--
+-- Create index `single_mode_training_bg_chara_0_scenario_id` on table `single_mode_training_bg_chara`
+--
+ALTER TABLE single_mode_training_bg_chara
+ADD INDEX single_mode_training_bg_chara_0_scenario_id (scenario_id);
+
+--
 -- Create table `single_mode_training`
 --
-CREATE TABLE single_mode_training
-(
-    id INT(11) NOT NULL
-  , command_id INT(11) NOT NULL
-  , base_command_id INT(11) NOT NULL
-  , command_level INT(11) NOT NULL
-  , command_type INT(11) NOT NULL
-  , cutin_file_id INT(11) NOT NULL
-  , max_chara_num INT(11) NOT NULL
-  , failure_rate INT(11) NOT NULL
-  , menu_bg_id INT(11) NOT NULL
-  , menu_bg_sub_id INT(11) NOT NULL
-  , env_cue_name TEXT NOT NULL
-  , env_cuesheet_name TEXT NOT NULL
-  , motion_set INT(11) NOT NULL
-  , sabori_type INT(11) NOT NULL
-  , dress_type INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_training (
+  id int(11) NOT NULL,
+  command_id int(11) NOT NULL,
+  base_command_id int(11) NOT NULL,
+  command_level int(11) NOT NULL,
+  command_type int(11) NOT NULL,
+  cutin_file_id int(11) NOT NULL,
+  max_chara_num int(11) NOT NULL,
+  failure_rate int(11) NOT NULL,
+  menu_bg_id int(11) NOT NULL,
+  menu_bg_sub_id int(11) NOT NULL,
+  env_cue_name text NOT NULL,
+  env_cuesheet_name text NOT NULL,
+  motion_set int(11) NOT NULL,
+  sabori_type int(11) NOT NULL,
+  dress_type int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 455,
@@ -5364,17 +5552,16 @@ ADD INDEX single_mode_training_0_cutin_file_id (cutin_file_id);
 --
 -- Create table `single_mode_top_bg_chara`
 --
-CREATE TABLE single_mode_top_bg_chara
-(
-    id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , pos_x INT(11) NOT NULL
-  , pos_z INT(11) NOT NULL
-  , rotation_y INT(11) NOT NULL
-  , motion_set_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_top_bg_chara (
+  id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  pos_x int(11) NOT NULL,
+  pos_z int(11) NOT NULL,
+  rotation_y int(11) NOT NULL,
+  motion_set_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1365,
@@ -5391,22 +5578,21 @@ ADD INDEX single_mode_top_bg_chara_0_bg_id_1_scenario_id (bg_id, scenario_id);
 --
 -- Create table `single_mode_top_bg`
 --
-CREATE TABLE single_mode_top_bg
-(
-    id INT(11) NOT NULL
-  , month INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub_id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , bg_progress INT(11) NOT NULL
-  , bg_effect TEXT NOT NULL
-  , bgm_cue_name TEXT NOT NULL
-  , bgm_cuesheet TEXT NOT NULL
-  , env_cue_name TEXT NOT NULL
-  , env_cuesheet_name TEXT NOT NULL
-  , max_placement INT(11) NOT NULL
-  , half_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_top_bg (
+  id int(11) NOT NULL,
+  month int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub_id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  bg_progress int(11) NOT NULL,
+  bg_effect text NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet text NOT NULL,
+  env_cue_name text NOT NULL,
+  env_cuesheet_name text NOT NULL,
+  max_placement int(11) NOT NULL,
+  half_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 264,
@@ -5457,11 +5643,10 @@ ADD INDEX single_mode_team_race_set_0_super_team_chara_id (super_team_chara_id);
 --
 -- Create table `single_mode_team_name`
 --
-CREATE TABLE single_mode_team_name
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_team_name (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 4096,
@@ -5472,18 +5657,17 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_tag_card_pos`
 --
-CREATE TABLE single_mode_tag_card_pos
-(
-    id INT(11) NOT NULL
-  , support_card_id INT(11) NOT NULL
-  , pattern INT(11) NOT NULL
-  , pos_index INT(11) NOT NULL
-  , pos_x INT(11) NOT NULL
-  , pos_y INT(11) NOT NULL
-  , scale_x INT(11) NOT NULL
-  , scale_y INT(11) NOT NULL
-  , rot_z INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_tag_card_pos (
+  id int(11) NOT NULL,
+  support_card_id int(11) NOT NULL,
+  pattern int(11) NOT NULL,
+  pos_index int(11) NOT NULL,
+  pos_x int(11) NOT NULL,
+  pos_y int(11) NOT NULL,
+  scale_x int(11) NOT NULL,
+  scale_y int(11) NOT NULL,
+  rot_z int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 67,
@@ -5500,11 +5684,10 @@ ADD INDEX single_mode_tag_card_pos_0_support_card_id (support_card_id);
 --
 -- Create table `single_mode_story_guide`
 --
-CREATE TABLE single_mode_story_guide
-(
-    story_id INT(11) NOT NULL
-  , guide_id INT(11) NOT NULL
-  , PRIMARY KEY (story_id)
+CREATE TABLE single_mode_story_guide (
+  story_id int(11) NOT NULL,
+  guide_id int(11) NOT NULL,
+  PRIMARY KEY (story_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -5515,35 +5698,37 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_story_data`
 --
-CREATE TABLE single_mode_story_data
-(
-    id INT(11) NOT NULL
-  , story_id INT(11) NOT NULL
-  , short_story_id INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , card_chara_id INT(11) NOT NULL
-  , support_card_id INT(11) NOT NULL
-  , support_chara_id INT(11) NOT NULL
-  , show_progress_1 INT(11) NOT NULL
-  , show_progress_2 INT(11) NOT NULL
-  , show_progress_3 INT(11) NOT NULL
-  , show_clear INT(11) NOT NULL
-  , show_succession INT(11) NOT NULL
-  , event_title_style INT(11) NOT NULL
-  , event_title_dress_icon INT(11) NOT NULL
-  , event_title_chara_icon INT(11) NOT NULL
-  , se_change INT(11) NOT NULL
-  , ending_type INT(11) NOT NULL
-  , race_event_flag INT(11) NOT NULL
-  , mini_game_result INT(11) NOT NULL
-  , gallery_main_scenario INT(11) NOT NULL
-  , gallery_flag INT(11) NOT NULL
-  , gallery_list_id INT(11) NOT NULL
-  , past_race_id INT(11) NOT NULL
-  , available_gallery_key INT(11) NOT NULL
-  , force_use_race_dress INT(11) NOT NULL
-  , event_category INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_story_data (
+  id int(11) NOT NULL,
+  story_id int(11) NOT NULL,
+  short_story_id int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  card_chara_id int(11) NOT NULL,
+  support_card_id int(11) NOT NULL,
+  support_chara_id int(11) NOT NULL,
+  show_progress_1 int(11) NOT NULL,
+  show_progress_2 int(11) NOT NULL,
+  show_progress_3 int(11) NOT NULL,
+  show_clear int(11) NOT NULL,
+  show_succession int(11) NOT NULL,
+  event_title_style int(11) NOT NULL,
+  event_title_dress_icon int(11) NOT NULL,
+  event_title_chara_icon int(11) NOT NULL,
+  se_change int(11) NOT NULL,
+  ending_type int(11) NOT NULL,
+  race_event_flag int(11) NOT NULL,
+  mini_game_result int(11) NOT NULL,
+  gallery_main_scenario int(11) NOT NULL,
+  gallery_flag int(11) NOT NULL,
+  gallery_list_id int(11) NOT NULL,
+  past_race_id int(11) NOT NULL,
+  available_gallery_key int(11) NOT NULL,
+  force_use_race_dress int(11) NOT NULL,
+  event_category int(11) NOT NULL,
+  past_race_id_2 int(11) NOT NULL,
+  past_race_id_3 int(11) NOT NULL,
+  past_race_id_4 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 255,
@@ -5596,16 +5781,16 @@ ADD INDEX single_mode_story_data_0_support_chara_id (support_chara_id);
 --
 -- Create table `single_mode_sport_training_cut`
 --
-CREATE TABLE single_mode_sport_training_cut
-(
-    id INT(11) NOT NULL
-  , command_id INT(11) NOT NULL
-  , training_level INT(11) NOT NULL
-  , success_cutin_name TEXT NOT NULL
-  , failure_cutin_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_sport_training_cut (
+  id int(11) NOT NULL,
+  command_id int(11) NOT NULL,
+  training_level int(11) NOT NULL,
+  success_cutin_name text NOT NULL,
+  failure_cutin_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 218,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -5619,17 +5804,17 @@ ADD INDEX single_mode_sport_training_cut_0_command_id_1_training_level (command_
 --
 -- Create table `single_mode_sport_stance_effect`
 --
-CREATE TABLE single_mode_sport_stance_effect
-(
-    id INT(11) NOT NULL
-  , effect_type INT(11) NOT NULL
-  , effect_value_1 INT(11) NOT NULL
-  , effect_value_2 INT(11) NOT NULL
-  , effect_value_3 INT(11) NOT NULL
-  , effect_value_4 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_sport_stance_effect (
+  id int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  effect_value_2 int(11) NOT NULL,
+  effect_value_3 int(11) NOT NULL,
+  effect_value_4 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 2048,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -5637,20 +5822,20 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_sport_stance`
 --
-CREATE TABLE single_mode_sport_stance
-(
-    id INT(11) NOT NULL
-  , sport_type INT(11) NOT NULL
-  , total_sport_rank INT(11) NOT NULL
-  , stance_effect_id_1 INT(11) NOT NULL
-  , stance_effect_id_2 INT(11) NOT NULL
-  , stance_effect_id_3 INT(11) NOT NULL
-  , stance_effect_id_4 INT(11) NOT NULL
-  , stance_effect_id_5 INT(11) NOT NULL
-  , effect_turn INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_sport_stance (
+  id int(11) NOT NULL,
+  sport_type int(11) NOT NULL,
+  total_sport_rank int(11) NOT NULL,
+  stance_effect_id_1 int(11) NOT NULL,
+  stance_effect_id_2 int(11) NOT NULL,
+  stance_effect_id_3 int(11) NOT NULL,
+  stance_effect_id_4 int(11) NOT NULL,
+  stance_effect_id_5 int(11) NOT NULL,
+  effect_turn int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 546,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -5664,16 +5849,16 @@ ADD INDEX single_mode_sport_stance_0_sport_type (sport_type);
 --
 -- Create table `single_mode_sport_sport_type`
 --
-CREATE TABLE single_mode_sport_sport_type
-(
-    id INT(11) NOT NULL
-  , command_id INT(11) NOT NULL
-  , training_set_id INT(11) NOT NULL
-  , target_type INT(11) NOT NULL
-  , sport_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_sport_sport_type (
+  id int(11) NOT NULL,
+  command_id int(11) NOT NULL,
+  training_set_id int(11) NOT NULL,
+  target_type int(11) NOT NULL,
+  sport_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 1092,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -5693,13 +5878,13 @@ ADD INDEX single_mode_sport_sport_type_0_sport_type (sport_type);
 --
 -- Create table `single_mode_sport_mob`
 --
-CREATE TABLE single_mode_sport_mob
-(
-    id INT(11) NOT NULL
-  , mob_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_sport_mob (
+  id int(11) NOT NULL,
+  mob_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 81,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -5707,16 +5892,16 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_sport_link`
 --
-CREATE TABLE single_mode_sport_link
-(
-    id INT(11) NOT NULL
-  , command_id INT(11) NOT NULL
-  , training_level INT(11) NOT NULL
-  , target_type INT(11) NOT NULL
-  , effect_value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_sport_link (
+  id int(11) NOT NULL,
+  command_id int(11) NOT NULL,
+  training_level int(11) NOT NULL,
+  target_type int(11) NOT NULL,
+  effect_value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 109,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -5730,19 +5915,19 @@ ADD INDEX single_mode_sport_link_0_command_id (command_id);
 --
 -- Create table `single_mode_sport_item_effect`
 --
-CREATE TABLE single_mode_sport_item_effect
-(
-    id INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , effect_type INT(11) NOT NULL
-  , effect_value_1 INT(11) NOT NULL
-  , effect_value_2 INT(11) NOT NULL
-  , effect_value_3 INT(11) NOT NULL
-  , effect_value_4 INT(11) NOT NULL
-  , motion_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_sport_item_effect (
+  id int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  effect_value_2 int(11) NOT NULL,
+  effect_value_3 int(11) NOT NULL,
+  effect_value_4 int(11) NOT NULL,
+  motion_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 2340,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -5756,15 +5941,15 @@ ADD INDEX single_mode_sport_item_effect_0_item_id (item_id);
 --
 -- Create table `single_mode_sport_compe_se`
 --
-CREATE TABLE single_mode_sport_compe_se
-(
-    id INT(11) NOT NULL
-  , sheet_id VARCHAR(750) NOT NULL
-  , se_cue_name TEXT NOT NULL
-  , se_cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_sport_compe_se (
+  id int(11) NOT NULL,
+  sheet_id varchar(750) NOT NULL,
+  se_cue_name text NOT NULL,
+  se_cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 1092,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -5778,20 +5963,20 @@ ADD INDEX single_mode_sport_compe_se_0_sheet_id (sheet_id);
 --
 -- Create table `single_mode_sport_compe_effect`
 --
-CREATE TABLE single_mode_sport_compe_effect
-(
-    id INT(11) NOT NULL
-  , sport_type INT(11) NOT NULL
-  , min_num INT(11) NOT NULL
-  , max_num INT(11) NOT NULL
-  , effect_type INT(11) NOT NULL
-  , effect_value_1 INT(11) NOT NULL
-  , effect_value_2 INT(11) NOT NULL
-  , effect_value_3 INT(11) NOT NULL
-  , effect_value_4 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_sport_compe_effect (
+  id int(11) NOT NULL,
+  sport_type int(11) NOT NULL,
+  min_num int(11) NOT NULL,
+  max_num int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  effect_value_2 int(11) NOT NULL,
+  effect_value_3 int(11) NOT NULL,
+  effect_value_4 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 1092,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -5805,16 +5990,16 @@ ADD INDEX single_mode_sport_compe_effect_0_sport_type (sport_type);
 --
 -- Create table `single_mode_sport_competition`
 --
-CREATE TABLE single_mode_sport_competition
-(
-    id INT(11) NOT NULL
-  , compe_type INT(11) NOT NULL
-  , turn INT(11) NOT NULL
-  , win_num INT(11) NOT NULL
-  , win_sport_rank INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_sport_competition (
+  id int(11) NOT NULL,
+  compe_type int(11) NOT NULL,
+  turn int(11) NOT NULL,
+  win_num int(11) NOT NULL,
+  win_sport_rank int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 3276,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -5834,12 +6019,11 @@ ADD INDEX single_mode_sport_competition_0_turn (turn);
 --
 -- Create table `single_mode_special_chara`
 --
-CREATE TABLE single_mode_special_chara
-(
-    id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_special_chara (
+  id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2730,
@@ -5862,14 +6046,13 @@ ADD INDEX single_mode_special_chara_0_scenario_id_1_chara_id (scenario_id, chara
 --
 -- Create table `single_mode_skill_need_point`
 --
-CREATE TABLE single_mode_skill_need_point
-(
-    id INT(11) NOT NULL
-  , need_skill_point INT(11) NOT NULL
-  , status_type INT(11) NOT NULL
-  , status_value INT(11) NOT NULL
-  , solvable_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_skill_need_point (
+  id int(11) NOT NULL,
+  need_skill_point int(11) NOT NULL,
+  status_type int(11) NOT NULL,
+  status_value int(11) NOT NULL,
+  solvable_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 37,
@@ -5880,35 +6063,34 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_scout_chara`
 --
-CREATE TABLE single_mode_scout_chara
-(
-    id INT(11) NOT NULL
-  , support_card_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , live_dress_id INT(11) NOT NULL
-  , tag_support_card_id INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , pow INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , proper_distance_short INT(11) NOT NULL
-  , proper_distance_mile INT(11) NOT NULL
-  , proper_distance_middle INT(11) NOT NULL
-  , proper_distance_long INT(11) NOT NULL
-  , proper_running_style_nige INT(11) NOT NULL
-  , proper_running_style_senko INT(11) NOT NULL
-  , proper_running_style_sashi INT(11) NOT NULL
-  , proper_running_style_oikomi INT(11) NOT NULL
-  , proper_ground_turf INT(11) NOT NULL
-  , proper_ground_dirt INT(11) NOT NULL
-  , speed_limit INT(11) NOT NULL
-  , stamina_limit INT(11) NOT NULL
-  , pow_limit INT(11) NOT NULL
-  , guts_limit INT(11) NOT NULL
-  , wiz_limit INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_scout_chara (
+  id int(11) NOT NULL,
+  support_card_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  live_dress_id int(11) NOT NULL,
+  tag_support_card_id int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  pow int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  proper_distance_short int(11) NOT NULL,
+  proper_distance_mile int(11) NOT NULL,
+  proper_distance_middle int(11) NOT NULL,
+  proper_distance_long int(11) NOT NULL,
+  proper_running_style_nige int(11) NOT NULL,
+  proper_running_style_senko int(11) NOT NULL,
+  proper_running_style_sashi int(11) NOT NULL,
+  proper_running_style_oikomi int(11) NOT NULL,
+  proper_ground_turf int(11) NOT NULL,
+  proper_ground_dirt int(11) NOT NULL,
+  speed_limit int(11) NOT NULL,
+  stamina_limit int(11) NOT NULL,
+  pow_limit int(11) NOT NULL,
+  guts_limit int(11) NOT NULL,
+  wiz_limit int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 346,
@@ -5925,16 +6107,15 @@ ADD INDEX single_mode_scout_chara_0_chara_id (chara_id);
 --
 -- Create table `single_mode_scenario_update`
 --
-CREATE TABLE single_mode_scenario_update
-(
-    id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , tips_group_id INT(11) NOT NULL
-  , page_index_from INT(11) NOT NULL
-  , page_index_to INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_scenario_update (
+  id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  tips_group_id int(11) NOT NULL,
+  page_index_from int(11) NOT NULL,
+  page_index_to int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -5951,15 +6132,14 @@ ADD INDEX single_mode_scenario_update_0_scenario_id (scenario_id);
 --
 -- Create table `single_mode_scenario_record`
 --
-CREATE TABLE single_mode_scenario_record
-(
-    id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , need_record_min INT(11) NOT NULL
-  , reward_item_category INT(11) NOT NULL
-  , reward_item_id INT(11) NOT NULL
-  , reward_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_scenario_record (
+  id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  need_record_min int(11) NOT NULL,
+  reward_item_category int(11) NOT NULL,
+  reward_item_id int(11) NOT NULL,
+  reward_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 606,
@@ -5976,15 +6156,14 @@ ADD INDEX single_mode_scenario_record_0_scenario_id (scenario_id);
 --
 -- Create table `single_mode_scenario_group`
 --
-CREATE TABLE single_mode_scenario_group
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_scenario_group (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 564,
+AVG_ROW_LENGTH = 348,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -5998,33 +6177,32 @@ ADD INDEX single_mode_scenario_group_0_scenario_id (scenario_id);
 --
 -- Create table `single_mode_scenario`
 --
-CREATE TABLE single_mode_scenario
-(
-    id INT(11) NOT NULL
-  , sort_id INT(11) NOT NULL
-  , scenario_image_id INT(11) NOT NULL
-  , prologue_id INT(11) NOT NULL
-  , turn_set_id INT(11) NOT NULL
-  , hint_rate INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub_id INT(11) NOT NULL
-  , bg_offset_x INT(11) NOT NULL
-  , sec_bg_id INT(11) NOT NULL
-  , sec_bg_sub_id INT(11) NOT NULL
-  , label_font_color TEXT NOT NULL
-  , label_bg_color TEXT NOT NULL
-  , chara_program_change_flag INT(11) NOT NULL
-  , max_speed INT(11) NOT NULL
-  , max_stamina INT(11) NOT NULL
-  , max_pow INT(11) NOT NULL
-  , max_guts INT(11) NOT NULL
-  , max_wiz INT(11) NOT NULL
-  , gimmick_discount_rate INT(11) NOT NULL
-  , additional_icon_set_id INT(11) NOT NULL
-  , skill_upgrade_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_scenario (
+  id int(11) NOT NULL,
+  sort_id int(11) NOT NULL,
+  scenario_image_id int(11) NOT NULL,
+  prologue_id int(11) NOT NULL,
+  turn_set_id int(11) NOT NULL,
+  hint_rate int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub_id int(11) NOT NULL,
+  bg_offset_x int(11) NOT NULL,
+  sec_bg_id int(11) NOT NULL,
+  sec_bg_sub_id int(11) NOT NULL,
+  label_font_color text NOT NULL,
+  label_bg_color text NOT NULL,
+  chara_program_change_flag int(11) NOT NULL,
+  max_speed int(11) NOT NULL,
+  max_stamina int(11) NOT NULL,
+  max_pow int(11) NOT NULL,
+  max_guts int(11) NOT NULL,
+  max_wiz int(11) NOT NULL,
+  gimmick_discount_rate int(11) NOT NULL,
+  additional_icon_set_id int(11) NOT NULL,
+  skill_upgrade_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -6035,22 +6213,21 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_route_race`
 --
-CREATE TABLE single_mode_route_race
-(
-    id INT(11) NOT NULL
-  , race_set_id INT(11) NOT NULL
-  , target_type INT(11) NOT NULL
-  , sort_id INT(11) NOT NULL
-  , turn INT(11) NOT NULL
-  , race_type INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_id INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , determine_race INT(11) NOT NULL
-  , determine_race_flag INT(11) NOT NULL
-  , scenario_group_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_route_race (
+  id int(11) NOT NULL,
+  race_set_id int(11) NOT NULL,
+  target_type int(11) NOT NULL,
+  sort_id int(11) NOT NULL,
+  turn int(11) NOT NULL,
+  race_type int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_id int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  determine_race int(11) NOT NULL,
+  determine_race_flag int(11) NOT NULL,
+  scenario_group_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 121,
@@ -6067,14 +6244,13 @@ ADD INDEX single_mode_route_race_0_race_set_id (race_set_id);
 --
 -- Create table `single_mode_route_condition`
 --
-CREATE TABLE single_mode_route_condition
-(
-    id INT(11) NOT NULL
-  , condition_set_id INT(11) NOT NULL
-  , condition_type_1 INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_route_condition (
+  id int(11) NOT NULL,
+  condition_set_id int(11) NOT NULL,
+  condition_type_1 int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1024,
@@ -6091,15 +6267,14 @@ ADD INDEX single_mode_route_condition_0_condition_set_id (condition_set_id);
 --
 -- Create table `single_mode_route_announce`
 --
-CREATE TABLE single_mode_route_announce
-(
-    id INT(11) NOT NULL
-  , route_race_type INT(11) NOT NULL
-  , route_race_id INT(11) NOT NULL
-  , turn INT(11) NOT NULL
-  , target_type INT(11) NOT NULL
-  , target_value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_route_announce (
+  id int(11) NOT NULL,
+  route_race_type int(11) NOT NULL,
+  route_race_id int(11) NOT NULL,
+  turn int(11) NOT NULL,
+  target_type int(11) NOT NULL,
+  target_value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 910,
@@ -6116,15 +6291,14 @@ ADD INDEX single_mode_route_announce_0_route_race_type_1_route_race_id (route_ra
 --
 -- Create table `single_mode_route`
 --
-CREATE TABLE single_mode_route
-(
-    id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , race_set_id INT(11) NOT NULL
-  , condition_set_id INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_route (
+  id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  race_set_id int(11) NOT NULL,
+  condition_set_id int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 282,
@@ -6147,47 +6321,51 @@ ADD INDEX single_mode_route_0_scenario_id_1_chara_id (scenario_id, chara_id);
 --
 -- Create table `single_mode_rival`
 --
-CREATE TABLE single_mode_rival
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , turn INT(11) NOT NULL
-  , race_program_id INT(11) NOT NULL
-  , rival_flag_id INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , rival_chara_id INT(11) NOT NULL
-  , single_mode_npc_id INT(11) NOT NULL
-  , frame_order INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_rival (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  turn int(11) NOT NULL,
+  race_program_id int(11) NOT NULL,
+  rival_flag_id int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  rival_chara_id int(11) NOT NULL,
+  single_mode_npc_id int(11) NOT NULL,
+  frame_order int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 67,
+AVG_ROW_LENGTH = 63,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
 
 --
--- Create index `single_mode_rival_0` on table `single_mode_rival`
+-- Create index `chara_id` on table `single_mode_rival`
 --
 ALTER TABLE single_mode_rival
-ADD UNIQUE INDEX single_mode_rival_0 (chara_id, turn, race_program_id, rival_chara_id, rival_flag_id);
+ADD UNIQUE INDEX chara_id (chara_id, turn, race_program_id, rival_chara_id, rival_flag_id, single_mode_npc_id);
+
+--
+-- Create index `single_mode_rival_0_race_program_id` on table `single_mode_rival`
+--
+ALTER TABLE single_mode_rival
+ADD INDEX single_mode_rival_0_race_program_id (race_program_id);
 
 --
 -- Create table `single_mode_reward_set`
 --
-CREATE TABLE single_mode_reward_set
-(
-    id INT(11) NOT NULL
-  , reward_set_id INT(11) NOT NULL
-  , order_min INT(11) NOT NULL
-  , order_max INT(11) NOT NULL
-  , reward_type INT(11) NOT NULL
-  , bonus INT(11) NOT NULL
-  , odds INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_reward_set (
+  id int(11) NOT NULL,
+  reward_set_id int(11) NOT NULL,
+  order_min int(11) NOT NULL,
+  order_max int(11) NOT NULL,
+  reward_type int(11) NOT NULL,
+  bonus int(11) NOT NULL,
+  odds int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 111,
@@ -6204,15 +6382,14 @@ ADD INDEX single_mode_reward_set_0_reward_set_id (reward_set_id);
 --
 -- Create table `single_mode_restrict_support`
 --
-CREATE TABLE single_mode_restrict_support
-(
-    id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , support_card_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_restrict_support (
+  id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  support_card_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 8192,
+AVG_ROW_LENGTH = 2340,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -6232,12 +6409,11 @@ ADD INDEX single_mode_restrict_support_0_support_card_id (support_card_id);
 --
 -- Create table `single_mode_recommend_setting`
 --
-CREATE TABLE single_mode_recommend_setting
-(
-    id INT(11) NOT NULL
-  , recommend_course_id INT(11) NOT NULL
-  , header_font_color TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_recommend_setting (
+  id int(11) NOT NULL,
+  recommend_course_id int(11) NOT NULL,
+  header_font_color text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -6254,12 +6430,11 @@ ADD INDEX single_mode_recommend_setting_0_recommend_course_id (recommend_course_
 --
 -- Create table `single_mode_recommend`
 --
-CREATE TABLE single_mode_recommend
-(
-    id INT(11) NOT NULL
-  , grade_upper_limit INT(11) NOT NULL
-  , grade_lower_limit INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_recommend (
+  id int(11) NOT NULL,
+  grade_upper_limit int(11) NOT NULL,
+  grade_lower_limit int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1170,
@@ -6270,12 +6445,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_rank`
 --
-CREATE TABLE single_mode_rank
-(
-    id INT(11) NOT NULL
-  , min_value INT(11) NOT NULL
-  , max_value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_rank (
+  id int(11) NOT NULL,
+  min_value int(11) NOT NULL,
+  max_value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 167,
@@ -6286,15 +6460,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_race_restrict_turn`
 --
-CREATE TABLE single_mode_race_restrict_turn
-(
-    chara_id INT(11) NOT NULL
-  , turn INT(11) NOT NULL
-  , gain_id INT(11) NOT NULL
-  , PRIMARY KEY (chara_id, turn)
+CREATE TABLE single_mode_race_restrict_turn (
+  chara_id int(11) NOT NULL,
+  turn int(11) NOT NULL,
+  gain_id int(11) NOT NULL,
+  PRIMARY KEY (chara_id, turn)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 2340,
+AVG_ROW_LENGTH = 1820,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -6308,13 +6481,12 @@ ADD INDEX single_mode_race_restrict_turn_0_chara_id (chara_id);
 --
 -- Create table `single_mode_race_live`
 --
-CREATE TABLE single_mode_race_live
-(
-    id INT(11) NOT NULL
-  , grade INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , music_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_race_live (
+  id int(11) NOT NULL,
+  grade int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  music_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 131,
@@ -6323,14 +6495,31 @@ COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
 
 --
+-- Create table `single_mode_race_limit_reward`
+--
+CREATE TABLE single_mode_race_limit_reward (
+  id int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  reward_num int(11) NOT NULL,
+  reward_limit int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
 -- Create table `single_mode_race_group`
 --
-CREATE TABLE single_mode_race_group
-(
-    id INT(11) NOT NULL
-  , race_group_id INT(11) NOT NULL
-  , race_program_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_race_group (
+  id int(11) NOT NULL,
+  race_group_id int(11) NOT NULL,
+  race_program_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 66,
@@ -6353,26 +6542,25 @@ ADD INDEX single_mode_race_group_0_race_program_id (race_program_id);
 --
 -- Create table `single_mode_program`
 --
-CREATE TABLE single_mode_program
-(
-    id INT(11) NOT NULL
-  , base_program_id INT(11) NOT NULL
-  , program_group INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , race_permission INT(11) NOT NULL
-  , month INT(11) NOT NULL
-  , half INT(11) NOT NULL
-  , grade_rate_id INT(11) NOT NULL
-  , entry_decrease INT(11) NOT NULL
-  , entry_decrease_flag INT(11) NOT NULL
-  , recommend_class_id INT(11) NOT NULL
-  , filly_only_flag INT(11) NOT NULL
-  , need_fan_count INT(11) NOT NULL
-  , fan_set_id INT(11) NOT NULL
-  , reward_set_id INT(11) NOT NULL
-  , reserve_program_id INT(11) NOT NULL
-  , random_group_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_program (
+  id int(11) NOT NULL,
+  base_program_id int(11) NOT NULL,
+  program_group int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  race_permission int(11) NOT NULL,
+  month int(11) NOT NULL,
+  half int(11) NOT NULL,
+  grade_rate_id int(11) NOT NULL,
+  entry_decrease int(11) NOT NULL,
+  entry_decrease_flag int(11) NOT NULL,
+  recommend_class_id int(11) NOT NULL,
+  filly_only_flag int(11) NOT NULL,
+  need_fan_count int(11) NOT NULL,
+  fan_set_id int(11) NOT NULL,
+  reward_set_id int(11) NOT NULL,
+  reserve_program_id int(11) NOT NULL,
+  random_group_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 133,
@@ -6389,17 +6577,16 @@ ADD INDEX single_mode_program_0_month (month);
 --
 -- Create table `single_mode_preview_bgm`
 --
-CREATE TABLE single_mode_preview_bgm
-(
-    id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , preview_order INT(11) NOT NULL
-  , cue_name TEXT NOT NULL
-  , cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_preview_bgm (
+  id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  preview_order int(11) NOT NULL,
+  cue_name text NOT NULL,
+  cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 1260,
+AVG_ROW_LENGTH = 862,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -6413,15 +6600,14 @@ ADD INDEX single_mode_preview_bgm_0_scenario_id (scenario_id);
 --
 -- Create table `single_mode_outing_set`
 --
-CREATE TABLE single_mode_outing_set
-(
-    id INT(11) NOT NULL
-  , command_group_id_1 INT(11) NOT NULL
-  , command_group_id_2 INT(11) NOT NULL
-  , command_group_id_3 INT(11) NOT NULL
-  , command_group_id_4 INT(11) NOT NULL
-  , command_group_id_5 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_outing_set (
+  id int(11) NOT NULL,
+  command_group_id_1 int(11) NOT NULL,
+  command_group_id_2 int(11) NOT NULL,
+  command_group_id_3 int(11) NOT NULL,
+  command_group_id_4 int(11) NOT NULL,
+  command_group_id_5 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -6432,13 +6618,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_outing`
 --
-CREATE TABLE single_mode_outing
-(
-    id INT(11) NOT NULL
-  , command_group_id INT(11) NOT NULL
-  , `condition` INT(11) NOT NULL
-  , is_play_cutt INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_outing (
+  id int(11) NOT NULL,
+  command_group_id int(11) NOT NULL,
+  `condition` int(11) NOT NULL,
+  is_play_cutt int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -6455,32 +6640,31 @@ ADD INDEX single_mode_outing_0_command_group_id (command_group_id);
 --
 -- Create table `single_mode_npc`
 --
-CREATE TABLE single_mode_npc
-(
-    id INT(11) NOT NULL
-  , npc_group_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , mob_id INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , pow INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , proper_distance_short INT(11) NOT NULL
-  , proper_distance_mile INT(11) NOT NULL
-  , proper_distance_middle INT(11) NOT NULL
-  , proper_distance_long INT(11) NOT NULL
-  , proper_running_style_nige INT(11) NOT NULL
-  , proper_running_style_senko INT(11) NOT NULL
-  , proper_running_style_sashi INT(11) NOT NULL
-  , proper_running_style_oikomi INT(11) NOT NULL
-  , proper_ground_turf INT(11) NOT NULL
-  , proper_ground_dirt INT(11) NOT NULL
-  , skill_set_id INT(11) NOT NULL
-  , motivation_min INT(11) NOT NULL
-  , motivation_max INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_npc (
+  id int(11) NOT NULL,
+  npc_group_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  mob_id int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  pow int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  proper_distance_short int(11) NOT NULL,
+  proper_distance_mile int(11) NOT NULL,
+  proper_distance_middle int(11) NOT NULL,
+  proper_distance_long int(11) NOT NULL,
+  proper_running_style_nige int(11) NOT NULL,
+  proper_running_style_senko int(11) NOT NULL,
+  proper_running_style_sashi int(11) NOT NULL,
+  proper_running_style_oikomi int(11) NOT NULL,
+  proper_ground_turf int(11) NOT NULL,
+  proper_ground_dirt int(11) NOT NULL,
+  skill_set_id int(11) NOT NULL,
+  motivation_min int(11) NOT NULL,
+  motivation_max int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 143,
@@ -6497,19 +6681,18 @@ ADD INDEX single_mode_npc_0_npc_group_id (npc_group_id);
 --
 -- Create table `single_mode_message`
 --
-CREATE TABLE single_mode_message
-(
-    id INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , emergent INT(11) NOT NULL
-  , status_type_1 INT(11) NOT NULL
-  , status_value_1_1 INT(11) NOT NULL
-  , status_value_1_2 INT(11) NOT NULL
-  , status_type_2 INT(11) NOT NULL
-  , status_value_2_1 INT(11) NOT NULL
-  , status_value_2_2 INT(11) NOT NULL
-  , character_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_message (
+  id int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  emergent int(11) NOT NULL,
+  status_type_1 int(11) NOT NULL,
+  status_value_1_1 int(11) NOT NULL,
+  status_value_1_2 int(11) NOT NULL,
+  status_type_2 int(11) NOT NULL,
+  status_value_2_1 int(11) NOT NULL,
+  status_value_2_2 int(11) NOT NULL,
+  character_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 630,
@@ -6520,12 +6703,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_member_rank_points`
 --
-CREATE TABLE single_mode_member_rank_points
-(
-    id INT(11) NOT NULL
-  , rank_id INT(11) NOT NULL
-  , points INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_member_rank_points (
+  id int(11) NOT NULL,
+  rank_id int(11) NOT NULL,
+  points int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2048,
@@ -6542,13 +6724,12 @@ ADD INDEX single_mode_member_rank_points_0_rank_id (rank_id);
 --
 -- Create table `single_mode_member_rank`
 --
-CREATE TABLE single_mode_member_rank
-(
-    id INT(11) NOT NULL
-  , value_min INT(11) NOT NULL
-  , value_max INT(11) NOT NULL
-  , member_rank_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_member_rank (
+  id int(11) NOT NULL,
+  value_min int(11) NOT NULL,
+  value_max int(11) NOT NULL,
+  member_rank_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2048,
@@ -6565,24 +6746,23 @@ ADD INDEX single_mode_member_rank_0_member_rank_id (member_rank_id);
 --
 -- Create table `single_mode_live_square`
 --
-CREATE TABLE single_mode_live_square
-(
-    id INT(11) NOT NULL
-  , square_title_text_id INT(11) NOT NULL
-  , square_content_text_id INT(11) NOT NULL
-  , master_bonus_id INT(11) NOT NULL
-  , square_type INT(11) NOT NULL
-  , perf_type_1 INT(11) NOT NULL
-  , perf_value_1 INT(11) NOT NULL
-  , perf_type_2 INT(11) NOT NULL
-  , perf_value_2 INT(11) NOT NULL
-  , perf_type_3 INT(11) NOT NULL
-  , perf_value_3 INT(11) NOT NULL
-  , perf_type_4 INT(11) NOT NULL
-  , perf_value_4 INT(11) NOT NULL
-  , perf_type_5 INT(11) NOT NULL
-  , perf_value_5 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_live_square (
+  id int(11) NOT NULL,
+  square_title_text_id int(11) NOT NULL,
+  square_content_text_id int(11) NOT NULL,
+  master_bonus_id int(11) NOT NULL,
+  square_type int(11) NOT NULL,
+  perf_type_1 int(11) NOT NULL,
+  perf_value_1 int(11) NOT NULL,
+  perf_type_2 int(11) NOT NULL,
+  perf_value_2 int(11) NOT NULL,
+  perf_type_3 int(11) NOT NULL,
+  perf_value_3 int(11) NOT NULL,
+  perf_type_4 int(11) NOT NULL,
+  perf_value_4 int(11) NOT NULL,
+  perf_type_5 int(11) NOT NULL,
+  perf_value_5 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 182,
@@ -6593,16 +6773,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_live_song_list`
 --
-CREATE TABLE single_mode_live_song_list
-(
-    id INT(11) NOT NULL
-  , command_id INT(11) NOT NULL
-  , live_id INT(11) NOT NULL
-  , level INT(11) NOT NULL
-  , master_bonus_content_text_id INT(11) NOT NULL
-  , live_bonus_type INT(11) NOT NULL
-  , live_bonus_value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_live_song_list (
+  id int(11) NOT NULL,
+  command_id int(11) NOT NULL,
+  live_id int(11) NOT NULL,
+  level int(11) NOT NULL,
+  master_bonus_content_text_id int(11) NOT NULL,
+  live_bonus_type int(11) NOT NULL,
+  live_bonus_value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 682,
@@ -6625,27 +6804,26 @@ ADD INDEX single_mode_live_song_list_0_live_id (live_id);
 --
 -- Create table `single_mode_live_master_bonus`
 --
-CREATE TABLE single_mode_live_master_bonus
-(
-    id INT(11) NOT NULL
-  , master_bonus_type INT(11) NOT NULL
-  , master_bonus_type_value INT(11) NOT NULL
-  , master_bonus_gain_type_1 INT(11) NOT NULL
-  , master_bonus_gain_value_1_1 INT(11) NOT NULL
-  , master_bonus_gain_value_1_2 INT(11) NOT NULL
-  , master_bonus_gain_value_1_3 INT(11) NOT NULL
-  , master_bonus_gain_value_1_4 INT(11) NOT NULL
-  , master_bonus_gain_type_2 INT(11) NOT NULL
-  , master_bonus_gain_value_2_1 INT(11) NOT NULL
-  , master_bonus_gain_value_2_2 INT(11) NOT NULL
-  , master_bonus_gain_value_2_3 INT(11) NOT NULL
-  , master_bonus_gain_value_2_4 INT(11) NOT NULL
-  , master_bonus_gain_type_3 INT(11) NOT NULL
-  , master_bonus_gain_value_3_1 INT(11) NOT NULL
-  , master_bonus_gain_value_3_2 INT(11) NOT NULL
-  , master_bonus_gain_value_3_3 INT(11) NOT NULL
-  , master_bonus_gain_value_3_4 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_live_master_bonus (
+  id int(11) NOT NULL,
+  master_bonus_type int(11) NOT NULL,
+  master_bonus_type_value int(11) NOT NULL,
+  master_bonus_gain_type_1 int(11) NOT NULL,
+  master_bonus_gain_value_1_1 int(11) NOT NULL,
+  master_bonus_gain_value_1_2 int(11) NOT NULL,
+  master_bonus_gain_value_1_3 int(11) NOT NULL,
+  master_bonus_gain_value_1_4 int(11) NOT NULL,
+  master_bonus_gain_type_2 int(11) NOT NULL,
+  master_bonus_gain_value_2_1 int(11) NOT NULL,
+  master_bonus_gain_value_2_2 int(11) NOT NULL,
+  master_bonus_gain_value_2_3 int(11) NOT NULL,
+  master_bonus_gain_value_2_4 int(11) NOT NULL,
+  master_bonus_gain_type_3 int(11) NOT NULL,
+  master_bonus_gain_value_3_1 int(11) NOT NULL,
+  master_bonus_gain_value_3_2 int(11) NOT NULL,
+  master_bonus_gain_value_3_3 int(11) NOT NULL,
+  master_bonus_gain_value_3_4 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 123,
@@ -6656,16 +6834,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_live_live_data`
 --
-CREATE TABLE single_mode_live_live_data
-(
-    id INT(11) NOT NULL
-  , live_type INT(11) NOT NULL
-  , turn_num INT(11) NOT NULL
-  , great_success_num INT(11) NOT NULL
-  , song_num INT(11) NOT NULL
-  , normal_music_id INT(11) NOT NULL
-  , special_music_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_live_live_data (
+  id int(11) NOT NULL,
+  live_type int(11) NOT NULL,
+  turn_num int(11) NOT NULL,
+  great_success_num int(11) NOT NULL,
+  song_num int(11) NOT NULL,
+  normal_music_id int(11) NOT NULL,
+  special_music_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -6676,18 +6853,17 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_hint_gain`
 --
-CREATE TABLE single_mode_hint_gain
-(
-    id INT(11) NOT NULL
-  , hint_id INT(11) NOT NULL
-  , support_card_id INT(11) NOT NULL
-  , hint_group INT(11) NOT NULL
-  , hint_gain_type INT(11) NOT NULL
-  , hint_value_1 INT(11) NOT NULL
-  , hint_value_2 INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , condition_set_id INT(11) NOT NULL
-  , priority INT(11) NOT NULL
+CREATE TABLE single_mode_hint_gain (
+  id int(11) NOT NULL,
+  hint_id int(11) NOT NULL,
+  support_card_id int(11) NOT NULL,
+  hint_group int(11) NOT NULL,
+  hint_gain_type int(11) NOT NULL,
+  hint_value_1 int(11) NOT NULL,
+  hint_value_2 int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  condition_set_id int(11) NOT NULL,
+  priority int(11) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 72,
@@ -6704,15 +6880,14 @@ ADD INDEX single_mode_hint_gain_0_hint_id (hint_id);
 --
 -- Create table `single_mode_hide_chara_text`
 --
-CREATE TABLE single_mode_hide_chara_text
-(
-    id INT(11) NOT NULL
-  , character_id INT(11) NOT NULL
-  , voice_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_hide_chara_text (
+  id int(11) NOT NULL,
+  character_id int(11) NOT NULL,
+  voice_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 1489,
+AVG_ROW_LENGTH = 1260,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -6726,15 +6901,14 @@ ADD INDEX single_mode_hide_chara_text_0_character_id (character_id);
 --
 -- Create table `single_mode_free_win_point`
 --
-CREATE TABLE single_mode_free_win_point
-(
-    id INT(11) NOT NULL
-  , race_group_id INT(11) NOT NULL
-  , grade INT(11) NOT NULL
-  , order_min INT(11) NOT NULL
-  , order_max INT(11) NOT NULL
-  , point_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_free_win_point (
+  id int(11) NOT NULL,
+  race_group_id int(11) NOT NULL,
+  grade int(11) NOT NULL,
+  order_min int(11) NOT NULL,
+  order_max int(11) NOT NULL,
+  point_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 248,
@@ -6757,13 +6931,12 @@ ADD INDEX single_mode_free_win_point_0_race_group_id (race_group_id);
 --
 -- Create table `single_mode_free_training_plate`
 --
-CREATE TABLE single_mode_free_training_plate
-(
-    id INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , value_min INT(11) NOT NULL
-  , value_max INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_free_training_plate (
+  id int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  value_min int(11) NOT NULL,
+  value_max int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -6780,18 +6953,17 @@ ADD INDEX single_mode_free_training_plate_0_condition_type (condition_type);
 --
 -- Create table `single_mode_free_shop_item`
 --
-CREATE TABLE single_mode_free_shop_item
-(
-    id INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , effect_group_id INT(11) NOT NULL
-  , coin_num INT(11) NOT NULL
-  , limit_num INT(11) NOT NULL
-  , effect_group INT(11) NOT NULL
-  , effect_priority INT(11) NOT NULL
-  , motion_id INT(11) NOT NULL
-  , use_flag INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_free_shop_item (
+  id int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  effect_group_id int(11) NOT NULL,
+  coin_num int(11) NOT NULL,
+  limit_num int(11) NOT NULL,
+  effect_group int(11) NOT NULL,
+  effect_priority int(11) NOT NULL,
+  motion_id int(11) NOT NULL,
+  use_flag int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 309,
@@ -6808,17 +6980,16 @@ ADD INDEX single_mode_free_shop_item_0_item_id (item_id);
 --
 -- Create table `single_mode_free_shop_effect`
 --
-CREATE TABLE single_mode_free_shop_effect
-(
-    id INT(11) NOT NULL
-  , effect_group_id INT(11) NOT NULL
-  , effect_type INT(11) NOT NULL
-  , effect_value_1 INT(11) NOT NULL
-  , effect_value_2 INT(11) NOT NULL
-  , effect_value_3 INT(11) NOT NULL
-  , effect_value_4 INT(11) NOT NULL
-  , turn INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_free_shop_effect (
+  id int(11) NOT NULL,
+  effect_group_id int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  effect_value_2 int(11) NOT NULL,
+  effect_value_3 int(11) NOT NULL,
+  effect_value_4 int(11) NOT NULL,
+  turn int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 256,
@@ -6835,14 +7006,13 @@ ADD INDEX single_mode_free_shop_effect_0_effect_group_id (effect_group_id);
 --
 -- Create table `single_mode_free_shop_bg`
 --
-CREATE TABLE single_mode_free_shop_bg
-(
-    id INT(11) NOT NULL
-  , start_turn INT(11) NOT NULL
-  , end_turn INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_free_shop_bg (
+  id int(11) NOT NULL,
+  start_turn int(11) NOT NULL,
+  end_turn int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -6853,14 +7023,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_free_shop`
 --
-CREATE TABLE single_mode_free_shop
-(
-    id INT(11) NOT NULL
-  , start_turn INT(11) NOT NULL
-  , end_turn INT(11) NOT NULL
-  , lineup_group_id INT(11) NOT NULL
-  , max_lineup_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_free_shop (
+  id int(11) NOT NULL,
+  start_turn int(11) NOT NULL,
+  end_turn int(11) NOT NULL,
+  lineup_group_id int(11) NOT NULL,
+  max_lineup_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1489,
@@ -6871,14 +7040,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_free_coin_race`
 --
-CREATE TABLE single_mode_free_coin_race
-(
-    id INT(11) NOT NULL
-  , grade INT(11) NOT NULL
-  , order_min INT(11) NOT NULL
-  , order_max INT(11) NOT NULL
-  , coin_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_free_coin_race (
+  id int(11) NOT NULL,
+  grade int(11) NOT NULL,
+  order_min int(11) NOT NULL,
+  order_max int(11) NOT NULL,
+  coin_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 455,
@@ -6895,13 +7063,12 @@ ADD INDEX single_mode_free_coin_race_0_grade (grade);
 --
 -- Create table `single_mode_fan_count`
 --
-CREATE TABLE single_mode_fan_count
-(
-    id INT(11) NOT NULL
-  , fan_set_id INT(11) NOT NULL
-  , `order` INT(11) NOT NULL
-  , fan_count INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_fan_count (
+  id int(11) NOT NULL,
+  fan_set_id int(11) NOT NULL,
+  `order` int(11) NOT NULL,
+  fan_count int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 72,
@@ -6918,14 +7085,13 @@ ADD INDEX single_mode_fan_count_0_fan_set_id (fan_set_id);
 --
 -- Create table `single_mode_event_production`
 --
-CREATE TABLE single_mode_event_production
-(
-    story_id INT(11) NOT NULL
-  , event_category_id INT(11) NOT NULL
-  , max_item_id INT(11) NOT NULL
-  , item_dir TEXT NOT NULL
-  , item_name TEXT NOT NULL
-  , PRIMARY KEY (story_id)
+CREATE TABLE single_mode_event_production (
+  story_id int(11) NOT NULL,
+  event_category_id int(11) NOT NULL,
+  max_item_id int(11) NOT NULL,
+  item_dir text NOT NULL,
+  item_name text NOT NULL,
+  PRIMARY KEY (story_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 268,
@@ -6936,13 +7102,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_event_item_detail`
 --
-CREATE TABLE single_mode_event_item_detail
-(
-    id INT(11) NOT NULL
-  , event_category_id INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , name_index INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_event_item_detail (
+  id int(11) NOT NULL,
+  event_category_id int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  name_index int(11) NOT NULL,
+  is_special int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1024,
@@ -6959,12 +7125,11 @@ ADD INDEX single_mode_event_item_detail_0_event_category_id_1_item_id (event_cat
 --
 -- Create table `single_mode_event_conclusion`
 --
-CREATE TABLE single_mode_event_conclusion
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , chara_motion_set_id INT(11) NOT NULL
-  , PRIMARY KEY (id, chara_id)
+CREATE TABLE single_mode_event_conclusion (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  chara_motion_set_id int(11) NOT NULL,
+  PRIMARY KEY (id, chara_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 80,
@@ -6975,12 +7140,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_evaluation`
 --
-CREATE TABLE single_mode_evaluation
-(
-    id INT(11) NOT NULL
-  , evaluation INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_evaluation (
+  id int(11) NOT NULL,
+  evaluation int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1365,
@@ -6997,35 +7161,34 @@ ADD INDEX single_mode_evaluation_0_chara_id (chara_id);
 --
 -- Create table `single_mode_difficulty_mode`
 --
-CREATE TABLE single_mode_difficulty_mode
-(
-    difficulty_id INT(11) NOT NULL
-  , guide_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , in_motion INT(11) NOT NULL
-  , stand_motion INT(11) NOT NULL
-  , play_motion INT(11) NOT NULL
-  , gauge_motion INT(11) NOT NULL
-  , gauge_motion2 INT(11) NOT NULL
-  , gauge_motion3 INT(11) NOT NULL
-  , popout_motion INT(11) NOT NULL
-  , bgm_cue_name TEXT NOT NULL
-  , bgm_cuesheet_name TEXT NOT NULL
-  , reward_type INT(11) NOT NULL
-  , reward_set_id INT(11) NOT NULL
-  , gauge_max INT(11) NOT NULL
-  , gauge_up INT(11) NOT NULL
-  , firstclear_motion INT(11) NOT NULL
-  , prize_motion1 INT(11) NOT NULL
-  , prize_motion2 INT(11) NOT NULL
-  , prize_motion3 INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , max_num INT(11) NOT NULL
-  , consume_tp_ratio INT(11) NOT NULL
-  , consume_tp_bonus_ratio INT(11) NOT NULL
-  , PRIMARY KEY (difficulty_id)
+CREATE TABLE single_mode_difficulty_mode (
+  difficulty_id int(11) NOT NULL,
+  guide_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  in_motion int(11) NOT NULL,
+  stand_motion int(11) NOT NULL,
+  play_motion int(11) NOT NULL,
+  gauge_motion int(11) NOT NULL,
+  gauge_motion2 int(11) NOT NULL,
+  gauge_motion3 int(11) NOT NULL,
+  popout_motion int(11) NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet_name text NOT NULL,
+  reward_type int(11) NOT NULL,
+  reward_set_id int(11) NOT NULL,
+  gauge_max int(11) NOT NULL,
+  gauge_up int(11) NOT NULL,
+  firstclear_motion int(11) NOT NULL,
+  prize_motion1 int(11) NOT NULL,
+  prize_motion2 int(11) NOT NULL,
+  prize_motion3 int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  max_num int(11) NOT NULL,
+  consume_tp_ratio int(11) NOT NULL,
+  consume_tp_bonus_ratio int(11) NOT NULL,
+  PRIMARY KEY (difficulty_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -7036,30 +7199,29 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_difficulty_data`
 --
-CREATE TABLE single_mode_difficulty_data
-(
-    difficulty_id INT(11) NOT NULL
-  , difficulty INT(11) NOT NULL
-  , difficulty_index INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value INT(11) NOT NULL
-  , condition_type_2 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , difficulty_rate INT(11) NOT NULL
-  , difficulty_motivation INT(11) NOT NULL
-  , continue_flag INT(11) NOT NULL
-  , special_flag INT(11) NOT NULL
-  , gauge_rate INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , max_num INT(11) NOT NULL
-  , description_id INT(11) NOT NULL
-  , result_type INT(11) NOT NULL
-  , addition_skill INT(11) NOT NULL
-  , firstclear_item_category INT(11) NOT NULL
-  , firstclear_item_id INT(11) NOT NULL
-  , firstclear_num INT(11) NOT NULL
-  , PRIMARY KEY (difficulty_id, difficulty)
+CREATE TABLE single_mode_difficulty_data (
+  difficulty_id int(11) NOT NULL,
+  difficulty int(11) NOT NULL,
+  difficulty_index int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value int(11) NOT NULL,
+  condition_type_2 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  difficulty_rate int(11) NOT NULL,
+  difficulty_motivation int(11) NOT NULL,
+  continue_flag int(11) NOT NULL,
+  special_flag int(11) NOT NULL,
+  gauge_rate int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  max_num int(11) NOT NULL,
+  description_id int(11) NOT NULL,
+  result_type int(11) NOT NULL,
+  addition_skill int(11) NOT NULL,
+  firstclear_item_category int(11) NOT NULL,
+  firstclear_item_id int(11) NOT NULL,
+  firstclear_num int(11) NOT NULL,
+  PRIMARY KEY (difficulty_id, difficulty)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2730,
@@ -7076,17 +7238,16 @@ ADD INDEX single_mode_difficulty_data_0_difficulty_id_1_difficulty_index (diffic
 --
 -- Create table `single_mode_difficulty_box_reward`
 --
-CREATE TABLE single_mode_difficulty_box_reward
-(
-    id INT(11) NOT NULL
-  , box_id INT(11) NOT NULL
-  , box_num INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , rate INT(11) NOT NULL
-  , prize_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_difficulty_box_reward (
+  id int(11) NOT NULL,
+  box_id int(11) NOT NULL,
+  box_num int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  rate int(11) NOT NULL,
+  prize_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 819,
@@ -7103,18 +7264,17 @@ ADD INDEX single_mode_difficulty_box_reward_0_box_id (box_id);
 --
 -- Create table `single_mode_difficulty_box_gauge`
 --
-CREATE TABLE single_mode_difficulty_box_gauge
-(
-    id INT(11) NOT NULL
-  , difficulty_id INT(11) NOT NULL
-  , result_min INT(11) NOT NULL
-  , result_max INT(11) NOT NULL
-  , gauge_rate INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , add_condition_type INT(11) NOT NULL
-  , add_condition_min INT(11) NOT NULL
-  , add_condition_max INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_difficulty_box_gauge (
+  id int(11) NOT NULL,
+  difficulty_id int(11) NOT NULL,
+  result_min int(11) NOT NULL,
+  result_max int(11) NOT NULL,
+  gauge_rate int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  add_condition_type int(11) NOT NULL,
+  add_condition_min int(11) NOT NULL,
+  add_condition_max int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -7131,18 +7291,17 @@ ADD INDEX single_mode_difficulty_box_gauge_0_difficulty_id (difficulty_id);
 --
 -- Create table `single_mode_difficulty_box`
 --
-CREATE TABLE single_mode_difficulty_box
-(
-    reward_set_id INT(11) NOT NULL
-  , box_step INT(11) NOT NULL
-  , box_open_condition INT(11) NOT NULL
-  , box_type INT(11) NOT NULL
-  , box_id INT(11) NOT NULL
-  , cue_name_icon TEXT NOT NULL
-  , cue_name_popout TEXT NOT NULL
-  , cuesheet_name_icon TEXT NOT NULL
-  , cuesheet_name_popout TEXT NOT NULL
-  , PRIMARY KEY (reward_set_id, box_step)
+CREATE TABLE single_mode_difficulty_box (
+  reward_set_id int(11) NOT NULL,
+  box_step int(11) NOT NULL,
+  box_open_condition int(11) NOT NULL,
+  box_type int(11) NOT NULL,
+  box_id int(11) NOT NULL,
+  cue_name_icon text NOT NULL,
+  cue_name_popout text NOT NULL,
+  cuesheet_name_icon text NOT NULL,
+  cuesheet_name_popout text NOT NULL,
+  PRIMARY KEY (reward_set_id, box_step)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -7169,13 +7328,657 @@ ALTER TABLE single_mode_difficulty_box
 ADD INDEX single_mode_difficulty_box_0_reward_set_id (reward_set_id);
 
 --
+-- Create table `single_mode_cook_success_type`
+--
+CREATE TABLE single_mode_cook_success_type (
+  id int(11) NOT NULL,
+  success_motion_id int(11) NOT NULL,
+  success_motion_swap1_id int(11) NOT NULL,
+  success_motion_swap2_id int(11) NOT NULL,
+  success_effect_name text NOT NULL,
+  success_effect_position int(11) NOT NULL,
+  success_effect_swap1_name text NOT NULL,
+  success_effect_swap2_name text NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 4096,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_success_type_0_success_motion_id` on table `single_mode_cook_success_type`
+--
+ALTER TABLE single_mode_cook_success_type
+ADD INDEX single_mode_cook_success_type_0_success_motion_id (success_motion_id);
+
+--
+-- Create table `single_mode_cook_success_odds`
+--
+CREATE TABLE single_mode_cook_success_odds (
+  id int(11) NOT NULL,
+  power_min int(11) NOT NULL,
+  power_max int(11) NOT NULL,
+  success_rate int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 2048,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `single_mode_cook_success_effect`
+--
+CREATE TABLE single_mode_cook_success_effect (
+  id int(11) NOT NULL,
+  effect_group_id int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  effect_value_2 int(11) NOT NULL,
+  effect_value_3 int(11) NOT NULL,
+  effect_value_4 int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  rate int(11) NOT NULL,
+  odds int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 819,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `single_mode_cook_stand_motion`
+--
+CREATE TABLE single_mode_cook_stand_motion (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  mini_chara_motion_id int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 546,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_stand_motion_0_type` on table `single_mode_cook_stand_motion`
+--
+ALTER TABLE single_mode_cook_stand_motion
+ADD INDEX single_mode_cook_stand_motion_0_type (type);
+
+--
+-- Create index `single_mode_cook_stand_motion_0_type_1_chara_id` on table `single_mode_cook_stand_motion`
+--
+ALTER TABLE single_mode_cook_stand_motion
+ADD INDEX single_mode_cook_stand_motion_0_type_1_chara_id (type, chara_id);
+
+--
+-- Create index `single_mode_cook_stand_motion_0_type_1_chara_id_2_condition_type` on table `single_mode_cook_stand_motion`
+--
+ALTER TABLE single_mode_cook_stand_motion
+ADD INDEX single_mode_cook_stand_motion_0_type_1_chara_id_2_condition_type (type, chara_id, condition_type);
+
+--
+-- Create index `single_mode_cook_stand_motion_0_type_1_condition_type` on table `single_mode_cook_stand_motion`
+--
+ALTER TABLE single_mode_cook_stand_motion
+ADD INDEX single_mode_cook_stand_motion_0_type_1_condition_type (type, condition_type);
+
+--
+-- Create table `single_mode_cook_power_data`
+--
+CREATE TABLE single_mode_cook_power_data (
+  id int(11) NOT NULL,
+  cook_type int(11) NOT NULL,
+  turn_num int(11) NOT NULL,
+  success_num int(11) NOT NULL,
+  great_success_num int(11) NOT NULL,
+  garden_lv int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 3276,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `single_mode_cook_motion_status`
+--
+CREATE TABLE single_mode_cook_motion_status (
+  id int(11) NOT NULL,
+  turn_progress int(11) NOT NULL,
+  garden_progress int(11) NOT NULL,
+  motion_id_1 int(11) NOT NULL,
+  motion_id_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 1170,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_motion_status_0_turn_progress_1_garden_progress` on table `single_mode_cook_motion_status`
+--
+ALTER TABLE single_mode_cook_motion_status
+ADD INDEX single_mode_cook_motion_status_0_turn_progress_1_garden_progress (turn_progress, garden_progress);
+
+--
+-- Create table `single_mode_cook_motion_group`
+--
+CREATE TABLE single_mode_cook_motion_group (
+  id int(11) NOT NULL,
+  bg_motion_id_1 int(11) NOT NULL,
+  bg_swap_motion_id_1_1 int(11) NOT NULL,
+  bg_swap_motion_speed_1_1 int(11) NOT NULL,
+  bg_swap_motion_blend_1_1 int(11) NOT NULL,
+  bg_swap_motion_id_1_2 int(11) NOT NULL,
+  bg_swap_motion_speed_1_2 int(11) NOT NULL,
+  bg_swap_motion_blend_1_2 int(11) NOT NULL,
+  bg_motion_id_2 int(11) NOT NULL,
+  bg_swap_motion_id_2_1 int(11) NOT NULL,
+  bg_swap_motion_blend_2_1 int(11) NOT NULL,
+  bg_swap_motion_id_2_2 int(11) NOT NULL,
+  bg_swap_motion_blend_2_2 int(11) NOT NULL,
+  bg_motion_id_3 int(11) NOT NULL,
+  bg_swap_motion_id_3_1 int(11) NOT NULL,
+  bg_swap_motion_blend_3_1 int(11) NOT NULL,
+  bg_swap_motion_id_3_2 int(11) NOT NULL,
+  bg_swap_motion_blend_3_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 455,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `single_mode_cook_message`
+--
+CREATE TABLE single_mode_cook_message (
+  id int(11) NOT NULL,
+  view_type int(11) NOT NULL,
+  condition_flag int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 4096,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_message_0_view_type` on table `single_mode_cook_message`
+--
+ALTER TABLE single_mode_cook_message
+ADD INDEX single_mode_cook_message_0_view_type (view_type);
+
+--
+-- Create table `single_mode_cook_material_rate`
+--
+CREATE TABLE single_mode_cook_material_rate (
+  id int(11) NOT NULL,
+  boost_type int(11) NOT NULL,
+  material_count int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  material_quantity_rate int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 2048,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_material_rate_0_material_count_1_boost_type` on table `single_mode_cook_material_rate`
+--
+ALTER TABLE single_mode_cook_material_rate
+ADD INDEX single_mode_cook_material_rate_0_material_count_1_boost_type (material_count, boost_type);
+
+--
+-- Create table `single_mode_cook_listener`
+--
+CREATE TABLE single_mode_cook_listener (
+  id int(11) NOT NULL,
+  camera text NOT NULL,
+  pos_x int(11) NOT NULL,
+  pos_y int(11) NOT NULL,
+  pos_z int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 2730,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_listener_0_camera` on table `single_mode_cook_listener`
+--
+ALTER TABLE single_mode_cook_listener
+ADD INDEX single_mode_cook_listener_0_camera (camera (768));
+
+--
+-- Create table `single_mode_cook_garden_level`
+--
+CREATE TABLE single_mode_cook_garden_level (
+  id int(11) NOT NULL,
+  facility_id int(11) NOT NULL,
+  garden_lv int(11) NOT NULL,
+  facility_lv int(11) NOT NULL,
+  effect_group_id int(11) NOT NULL,
+  coin_num int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 655,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_garden_level_0_facility_id` on table `single_mode_cook_garden_level`
+--
+ALTER TABLE single_mode_cook_garden_level
+ADD INDEX single_mode_cook_garden_level_0_facility_id (facility_id);
+
+--
+-- Create index `single_mode_cook_garden_level_0_facility_id_1_garden_lv` on table `single_mode_cook_garden_level`
+--
+ALTER TABLE single_mode_cook_garden_level
+ADD INDEX single_mode_cook_garden_level_0_facility_id_1_garden_lv (facility_id, garden_lv);
+
+--
+-- Create index `single_mode_cook_garden_level_0_garden_lv` on table `single_mode_cook_garden_level`
+--
+ALTER TABLE single_mode_cook_garden_level
+ADD INDEX single_mode_cook_garden_level_0_garden_lv (garden_lv);
+
+--
+-- Create table `single_mode_cook_garden_effect`
+--
+CREATE TABLE single_mode_cook_garden_effect (
+  id int(11) NOT NULL,
+  effect_group_id int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  effect_value_2 int(11) NOT NULL,
+  effect_value_3 int(11) NOT NULL,
+  effect_value_4 int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 156,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_garden_effect_0_effect_group_id` on table `single_mode_cook_garden_effect`
+--
+ALTER TABLE single_mode_cook_garden_effect
+ADD INDEX single_mode_cook_garden_effect_0_effect_group_id (effect_group_id);
+
+--
+-- Create table `single_mode_cook_garden_bg`
+--
+CREATE TABLE single_mode_cook_garden_bg (
+  id int(11) NOT NULL,
+  month int(11) NOT NULL,
+  half_type int(11) NOT NULL,
+  progress int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  sub_bg_id int(11) NOT NULL,
+  mini_motion_group_id_min int(11) NOT NULL,
+  mini_motion_group_id_max int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 409,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_garden_bg_0_bg_id` on table `single_mode_cook_garden_bg`
+--
+ALTER TABLE single_mode_cook_garden_bg
+ADD INDEX single_mode_cook_garden_bg_0_bg_id (bg_id);
+
+--
+-- Create index `single_mode_cook_garden_bg_0_month_1_half_type` on table `single_mode_cook_garden_bg`
+--
+ALTER TABLE single_mode_cook_garden_bg
+ADD INDEX single_mode_cook_garden_bg_0_month_1_half_type (month, half_type);
+
+--
+-- Create table `single_mode_cook_garden`
+--
+CREATE TABLE single_mode_cook_garden (
+  facility_id int(11) NOT NULL,
+  PRIMARY KEY (facility_id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 3276,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `single_mode_cook_dish_name`
+--
+CREATE TABLE single_mode_cook_dish_name (
+  id int(11) NOT NULL,
+  dish_group_id int(11) NOT NULL,
+  effect_group_id int(11) NOT NULL,
+  great_success_flag int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 528,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_dish_name_0_dish_group_id` on table `single_mode_cook_dish_name`
+--
+ALTER TABLE single_mode_cook_dish_name
+ADD INDEX single_mode_cook_dish_name_0_dish_group_id (dish_group_id);
+
+--
+-- Create table `single_mode_cook_dish_material`
+--
+CREATE TABLE single_mode_cook_dish_material (
+  id int(11) NOT NULL,
+  material_group_id int(11) NOT NULL,
+  material_id int(11) NOT NULL,
+  material_num int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 431,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_dish_material_0_material_group_id` on table `single_mode_cook_dish_material`
+--
+ALTER TABLE single_mode_cook_dish_material
+ADD INDEX single_mode_cook_dish_material_0_material_group_id (material_group_id);
+
+--
+-- Create table `single_mode_cook_dish_icon`
+--
+CREATE TABLE single_mode_cook_dish_icon (
+  dish_group_id int(11) NOT NULL,
+  icon_id int(11) NOT NULL,
+  PRIMARY KEY (dish_group_id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 1260,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `single_mode_cook_dish_effect`
+--
+CREATE TABLE single_mode_cook_dish_effect (
+  id int(11) NOT NULL,
+  effect_group_id int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  effect_value_2 int(11) NOT NULL,
+  effect_value_3 int(11) NOT NULL,
+  effect_value_4 int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 237,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_dish_effect_0_effect_group_id` on table `single_mode_cook_dish_effect`
+--
+ALTER TABLE single_mode_cook_dish_effect
+ADD INDEX single_mode_cook_dish_effect_0_effect_group_id (effect_group_id);
+
+--
+-- Create table `single_mode_cook_dish_cutt_se`
+--
+CREATE TABLE single_mode_cook_dish_cutt_se (
+  id int(11) NOT NULL,
+  command_group_id int(11) NOT NULL,
+  chara_type int(11) NOT NULL,
+  se_cue_name text NOT NULL,
+  se_cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 248,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_dish_cutt_se_0_chara_type` on table `single_mode_cook_dish_cutt_se`
+--
+ALTER TABLE single_mode_cook_dish_cutt_se
+ADD INDEX single_mode_cook_dish_cutt_se_0_chara_type (chara_type);
+
+--
+-- Create index `single_mode_cook_dish_cutt_se_0_chara_type_1_command_group_id` on table `single_mode_cook_dish_cutt_se`
+--
+ALTER TABLE single_mode_cook_dish_cutt_se
+ADD INDEX single_mode_cook_dish_cutt_se_0_chara_type_1_command_group_id (chara_type, command_group_id);
+
+--
+-- Create index `single_mode_cook_dish_cutt_se_0_command_group_id` on table `single_mode_cook_dish_cutt_se`
+--
+ALTER TABLE single_mode_cook_dish_cutt_se
+ADD INDEX single_mode_cook_dish_cutt_se_0_command_group_id (command_group_id);
+
+--
+-- Create table `single_mode_cook_dish_cutt`
+--
+CREATE TABLE single_mode_cook_dish_cutt (
+  id int(11) NOT NULL,
+  command_group_id int(11) NOT NULL,
+  material_group_id int(11) NOT NULL,
+  is_success int(11) NOT NULL,
+  cutt_id text NOT NULL,
+  prop_id text NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 297,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_dish_cutt_0_command_group_id` on table `single_mode_cook_dish_cutt`
+--
+ALTER TABLE single_mode_cook_dish_cutt
+ADD INDEX single_mode_cook_dish_cutt_0_command_group_id (command_group_id);
+
+--
+-- Create index `single_mode_cook_dish_cutt_0_command_group_id_material_group_id` on table `single_mode_cook_dish_cutt`
+--
+ALTER TABLE single_mode_cook_dish_cutt
+ADD INDEX single_mode_cook_dish_cutt_0_command_group_id_material_group_id (command_group_id, material_group_id);
+
+--
+-- Create index `single_mode_cook_dish_cutt_0_cutt_id` on table `single_mode_cook_dish_cutt`
+--
+ALTER TABLE single_mode_cook_dish_cutt
+ADD INDEX single_mode_cook_dish_cutt_0_cutt_id (cutt_id (768));
+
+--
+-- Create index `single_mode_cook_dish_cutt_0_material_group_id` on table `single_mode_cook_dish_cutt`
+--
+ALTER TABLE single_mode_cook_dish_cutt
+ADD INDEX single_mode_cook_dish_cutt_0_material_group_id (material_group_id);
+
+--
+-- Create table `single_mode_cook_dish`
+--
+CREATE TABLE single_mode_cook_dish (
+  id int(11) NOT NULL,
+  dish_set_id int(11) NOT NULL,
+  dish_group_id int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  material_group_id int(11) NOT NULL,
+  effect_group_id int(11) NOT NULL,
+  success_effect_group_id int(11) NOT NULL,
+  gain_coin int(11) NOT NULL,
+  gain_power int(11) NOT NULL,
+  sort_order int(11) NOT NULL,
+  dish_type int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 468,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `single_mode_cook_cooking_type`
+--
+CREATE TABLE single_mode_cook_cooking_type (
+  id int(11) NOT NULL,
+  cooking_motion_id int(11) NOT NULL,
+  swap_type int(11) NOT NULL,
+  cooking_motion_swap_id int(11) NOT NULL,
+  cooking_effect_name_1 text NOT NULL,
+  cooking_effect_position_1 int(11) NOT NULL,
+  cooking_effect_name_2 text NOT NULL,
+  cooking_effect_position_2 int(11) NOT NULL,
+  cooking_effect_swap_name_1 text NOT NULL,
+  cooking_effect_swap_position_1 int(11) NOT NULL,
+  cooking_effect_swap_name_2 text NOT NULL,
+  cooking_effect_swap_position_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 390,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_cooking_type_0_cooking_motion_id` on table `single_mode_cook_cooking_type`
+--
+ALTER TABLE single_mode_cook_cooking_type
+ADD INDEX single_mode_cook_cooking_type_0_cooking_motion_id (cooking_motion_id);
+
+--
+-- Create index `single_mode_cook_cooking_type_0_cooking_motion_id_1_swap_type` on table `single_mode_cook_cooking_type`
+--
+ALTER TABLE single_mode_cook_cooking_type
+ADD INDEX single_mode_cook_cooking_type_0_cooking_motion_id_1_swap_type (cooking_motion_id, swap_type);
+
+--
+-- Create table `single_mode_cook_cooking_rate`
+--
+CREATE TABLE single_mode_cook_cooking_rate (
+  id int(11) NOT NULL,
+  dish_type int(11) NOT NULL,
+  cooking_cutt_id int(11) NOT NULL,
+  cooking_num int(11) NOT NULL,
+  success_rate int(11) NOT NULL,
+  great_success_rate int(11) NOT NULL,
+  confirmed_great_success_rate int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 146,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_cooking_rate_0_dish_type` on table `single_mode_cook_cooking_rate`
+--
+ALTER TABLE single_mode_cook_cooking_rate
+ADD INDEX single_mode_cook_cooking_rate_0_dish_type (dish_type);
+
+--
+-- Create table `single_mode_cook_cooking_cutt`
+--
+CREATE TABLE single_mode_cook_cooking_cutt (
+  id int(11) NOT NULL,
+  cooking_num int(11) NOT NULL,
+  cooking_motion_id_1 int(11) NOT NULL,
+  cooking_motion_id_2 int(11) NOT NULL,
+  cooking_motion_id_3 int(11) NOT NULL,
+  cooking_motion_id_4 int(11) NOT NULL,
+  success_motion_id int(11) NOT NULL,
+  camera text NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 277,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_cooking_cutt_0_cooking_num` on table `single_mode_cook_cooking_cutt`
+--
+ALTER TABLE single_mode_cook_cooking_cutt
+ADD INDEX single_mode_cook_cooking_cutt_0_cooking_num (cooking_num);
+
+--
+-- Create table `single_mode_cook_coin_rate`
+--
+CREATE TABLE single_mode_cook_coin_rate (
+  id int(11) NOT NULL,
+  period int(11) NOT NULL,
+  material_count int(11) NOT NULL,
+  coin_quantity_rate int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 1820,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_cook_coin_rate_0_material_count_1_period` on table `single_mode_cook_coin_rate`
+--
+ALTER TABLE single_mode_cook_coin_rate
+ADD INDEX single_mode_cook_coin_rate_0_material_count_1_period (material_count, period);
+
+--
 -- Create table `single_mode_conclusion_set`
 --
-CREATE TABLE single_mode_conclusion_set
-(
-    story_id INT(11) NOT NULL
-  , root_id INT(11) NOT NULL
-  , conclusion_id INT(11) NOT NULL
+CREATE TABLE single_mode_conclusion_set (
+  story_id int(11) NOT NULL,
+  root_id int(11) NOT NULL,
+  conclusion_id int(11) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 90,
@@ -7192,13 +7995,13 @@ ADD INDEX single_mode_conclusion_set_0_story_id (story_id);
 --
 -- Create table `single_mode_chara_program`
 --
-CREATE TABLE single_mode_chara_program
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , program_group INT(11) NOT NULL
-  , program_group_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_chara_program (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  program_group int(11) NOT NULL,
+  program_group_2 int(11) NOT NULL,
+  base_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 92,
@@ -7215,13 +8018,12 @@ ADD INDEX single_mode_chara_program_0_chara_id (chara_id);
 --
 -- Create table `single_mode_chara_grade`
 --
-CREATE TABLE single_mode_chara_grade
-(
-    id INT(11) NOT NULL
-  , win_num INT(11) NOT NULL
-  , run_num INT(11) NOT NULL
-  , need_fan_count INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_chara_grade (
+  id int(11) NOT NULL,
+  win_num int(11) NOT NULL,
+  run_num int(11) NOT NULL,
+  need_fan_count int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1638,
@@ -7232,22 +8034,20 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_chara_effect_buff`
 --
-CREATE TABLE single_mode_chara_effect_buff
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , effect_id INT(11) NOT NULL
-  , turn INT(11) NOT NULL
-  , program_id INT(11) NOT NULL
-  , speed_add INT(11) NOT NULL
-  , stamina_add INT(11) NOT NULL
-  , power_add INT(11) NOT NULL
-  , guts_add INT(11) NOT NULL
-  , wiz_add INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_chara_effect_buff (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  effect_id int(11) NOT NULL,
+  turn int(11) NOT NULL,
+  program_id int(11) NOT NULL,
+  speed_add int(11) NOT NULL,
+  stamina_add int(11) NOT NULL,
+  power_add int(11) NOT NULL,
+  guts_add int(11) NOT NULL,
+  wiz_add int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -7261,14 +8061,13 @@ ADD INDEX single_mode_chara_effect_buff_0_chara_id (chara_id);
 --
 -- Create table `single_mode_chara_effect`
 --
-CREATE TABLE single_mode_chara_effect
-(
-    id INT(11) NOT NULL
-  , effect_type INT(11) NOT NULL
-  , effect_category INT(11) NOT NULL
-  , effect_group_id INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_chara_effect (
+  id int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  effect_category int(11) NOT NULL,
+  effect_group_id int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 819,
@@ -7279,13 +8078,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_change_chara_route`
 --
-CREATE TABLE single_mode_change_chara_route
-(
-    id INT(11) NOT NULL
-  , route_race_group_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , route_race_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_change_chara_route (
+  id int(11) NOT NULL,
+  route_race_group_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  route_race_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 321,
@@ -7302,15 +8100,14 @@ ADD INDEX single_mode_change_chara_route_0_route_race_group_id_1_chara_id (route
 --
 -- Create table `single_mode_arc_win_pt`
 --
-CREATE TABLE single_mode_arc_win_pt
-(
-    id INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , grade INT(11) NOT NULL
-  , order_min INT(11) NOT NULL
-  , order_max INT(11) NOT NULL
-  , point_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_arc_win_pt (
+  id int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  grade int(11) NOT NULL,
+  order_min int(11) NOT NULL,
+  order_max int(11) NOT NULL,
+  point_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 134,
@@ -7333,13 +8130,12 @@ ADD INDEX single_mode_arc_win_pt_0_race_instance_id (race_instance_id);
 --
 -- Create table `single_mode_arc_training_eff`
 --
-CREATE TABLE single_mode_arc_training_eff
-(
-    id INT(11) NOT NULL
-  , require_pt_min INT(11) NOT NULL
-  , require_pt_max INT(11) NOT NULL
-  , training_eff INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_arc_training_eff (
+  id int(11) NOT NULL,
+  require_pt_min int(11) NOT NULL,
+  require_pt_max int(11) NOT NULL,
+  training_eff int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 528,
@@ -7350,14 +8146,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_arc_taiman_peff_grp`
 --
-CREATE TABLE single_mode_arc_taiman_peff_grp
-(
-    id INT(11) NOT NULL
-  , icon_id INT(11) NOT NULL
-  , sub_id INT(11) NOT NULL
-  , effect_id_1 INT(11) NOT NULL
-  , effect_id_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_arc_taiman_peff_grp (
+  id int(11) NOT NULL,
+  icon_id int(11) NOT NULL,
+  sub_id int(11) NOT NULL,
+  effect_id_1 int(11) NOT NULL,
+  effect_id_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1365,
@@ -7368,12 +8163,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_arc_schedule`
 --
-CREATE TABLE single_mode_arc_schedule
-(
-    id INT(11) NOT NULL
-  , race_program_id INT(11) NOT NULL
-  , turn_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_arc_schedule (
+  id int(11) NOT NULL,
+  race_program_id int(11) NOT NULL,
+  turn_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 4096,
@@ -7390,12 +8184,11 @@ ADD INDEX single_mode_arc_schedule_0_race_program_id (race_program_id);
 --
 -- Create table `single_mode_arc_race_debuff`
 --
-CREATE TABLE single_mode_arc_race_debuff
-(
-    id INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , debuff_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_arc_race_debuff (
+  id int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  debuff_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 341,
@@ -7418,13 +8211,12 @@ ADD INDEX single_mode_arc_race_debuff_0_race_instance_id (race_instance_id);
 --
 -- Create table `single_mode_arc_potential_level`
 --
-CREATE TABLE single_mode_arc_potential_level
-(
-    id INT(11) NOT NULL
-  , potential_id INT(11) NOT NULL
-  , potential_lv INT(11) NOT NULL
-  , global_exp INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_arc_potential_level (
+  id int(11) NOT NULL,
+  potential_id int(11) NOT NULL,
+  potential_lv int(11) NOT NULL,
+  global_exp int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 910,
@@ -7441,20 +8233,19 @@ ADD INDEX single_mode_arc_potential_level_0_potential_id (potential_id);
 --
 -- Create table `single_mode_arc_potential_cond`
 --
-CREATE TABLE single_mode_arc_potential_cond
-(
-    id INT(11) NOT NULL
-  , potential_id INT(11) NOT NULL
-  , num INT(11) NOT NULL
-  , count_type INT(11) NOT NULL
-  , display_total_count INT(11) NOT NULL
-  , condition_type_1 INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , condition_value_3 INT(11) NOT NULL
-  , condition_value_4 INT(11) NOT NULL
-  , condition_value_5 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_arc_potential_cond (
+  id int(11) NOT NULL,
+  potential_id int(11) NOT NULL,
+  num int(11) NOT NULL,
+  count_type int(11) NOT NULL,
+  display_total_count int(11) NOT NULL,
+  condition_type_1 int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  condition_value_3 int(11) NOT NULL,
+  condition_value_4 int(11) NOT NULL,
+  condition_value_5 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1260,
@@ -7471,19 +8262,18 @@ ADD INDEX single_mode_arc_potential_cond_0_potential_id (potential_id);
 --
 -- Create table `single_mode_arc_potential_buff`
 --
-CREATE TABLE single_mode_arc_potential_buff
-(
-    id INT(11) NOT NULL
-  , potential_id INT(11) NOT NULL
-  , potential_lv INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , power INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , turf INT(11) NOT NULL
-  , middle INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_arc_potential_buff (
+  id int(11) NOT NULL,
+  potential_id int(11) NOT NULL,
+  potential_lv int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  power int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  turf int(11) NOT NULL,
+  middle int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2048,
@@ -7506,17 +8296,16 @@ ADD INDEX single_mode_arc_potential_buff_0_potential_id_1_potential_lv (potentia
 --
 -- Create table `single_mode_arc_potential_bonus`
 --
-CREATE TABLE single_mode_arc_potential_bonus
-(
-    id INT(11) NOT NULL
-  , potential_id INT(11) NOT NULL
-  , potential_lv INT(11) NOT NULL
-  , effect_type INT(11) NOT NULL
-  , effect_value_1 INT(11) NOT NULL
-  , effect_value_2 INT(11) NOT NULL
-  , effect_value_3 INT(11) NOT NULL
-  , effect_value_4 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_arc_potential_bonus (
+  id int(11) NOT NULL,
+  potential_id int(11) NOT NULL,
+  potential_lv int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  effect_value_2 int(11) NOT NULL,
+  effect_value_3 int(11) NOT NULL,
+  effect_value_4 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 862,
@@ -7554,19 +8343,18 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_arc_debuff`
 --
-CREATE TABLE single_mode_arc_debuff
-(
-    id INT(11) NOT NULL
-  , potential_id INT(11) NOT NULL
-  , potential_lv INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , power INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , turf INT(11) NOT NULL
-  , middle INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_arc_debuff (
+  id int(11) NOT NULL,
+  potential_id int(11) NOT NULL,
+  potential_lv int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  power int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  turf int(11) NOT NULL,
+  middle int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1820,
@@ -7589,15 +8377,14 @@ ADD INDEX single_mode_arc_debuff_0_potential_id_1_potential_lv (potential_id, po
 --
 -- Create table `single_mode_ao_offset`
 --
-CREATE TABLE single_mode_ao_offset
-(
-    id INT(11) NOT NULL
-  , offset_1 INT(11) NOT NULL
-  , offset_2 INT(11) NOT NULL
-  , offset_3 INT(11) NOT NULL
-  , offset_4 INT(11) NOT NULL
-  , offset_5 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_ao_offset (
+  id int(11) NOT NULL,
+  offset_1 int(11) NOT NULL,
+  offset_2 int(11) NOT NULL,
+  offset_3 int(11) NOT NULL,
+  offset_4 int(11) NOT NULL,
+  offset_5 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -7608,16 +8395,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_aoharu_schedule`
 --
-CREATE TABLE single_mode_aoharu_schedule
-(
-    id INT(11) NOT NULL
-  , turn_num INT(11) NOT NULL
-  , notice_turn_1 INT(11) NOT NULL
-  , notice_turn_2 INT(11) NOT NULL
-  , notice_turn_3 INT(11) NOT NULL
-  , notice_turn_4 INT(11) NOT NULL
-  , notice_turn_5 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_aoharu_schedule (
+  id int(11) NOT NULL,
+  turn_num int(11) NOT NULL,
+  notice_turn_1 int(11) NOT NULL,
+  notice_turn_2 int(11) NOT NULL,
+  notice_turn_3 int(11) NOT NULL,
+  notice_turn_4 int(11) NOT NULL,
+  notice_turn_5 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -7628,12 +8414,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `single_mode_aoharu_result_cutt`
 --
-CREATE TABLE single_mode_aoharu_result_cutt
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , cutt_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_aoharu_result_cutt (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  cutt_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 4096,
@@ -7650,13 +8435,12 @@ ADD INDEX single_mode_aoharu_result_cutt_0_chara_id (chara_id);
 --
 -- Create table `single_mode_aoharu_cutt_type`
 --
-CREATE TABLE single_mode_aoharu_cutt_type
-(
-    id INT(11) NOT NULL
-  , cutt_type INT(11) NOT NULL
-  , cutt_id INT(11) NOT NULL
-  , chara_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_aoharu_cutt_type (
+  id int(11) NOT NULL,
+  cutt_type int(11) NOT NULL,
+  cutt_id int(11) NOT NULL,
+  chara_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 682,
@@ -7685,12 +8469,11 @@ ADD INDEX single_mode_aoharu_cutt_type_0_cutt_type (cutt_type);
 --
 -- Create table `single_mode_analyze_ticket`
 --
-CREATE TABLE single_mode_analyze_ticket
-(
-    id INT(11) NOT NULL
-  , grade INT(11) NOT NULL
-  , cost_ticket INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_analyze_ticket (
+  id int(11) NOT NULL,
+  grade int(11) NOT NULL,
+  cost_ticket int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2340,
@@ -7707,19 +8490,18 @@ ADD INDEX single_mode_analyze_ticket_0_grade (grade);
 --
 -- Create table `single_mode_analyze_message`
 --
-CREATE TABLE single_mode_analyze_message
-(
-    id INT(11) NOT NULL
-  , proper_ground INT(11) NOT NULL
-  , proper_distance INT(11) NOT NULL
-  , popularity INT(11) NOT NULL
-  , year INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , rate INT(11) NOT NULL
-  , motion_type INT(11) NOT NULL
-  , character_type INT(11) NOT NULL
-  , condition_set INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_analyze_message (
+  id int(11) NOT NULL,
+  proper_ground int(11) NOT NULL,
+  proper_distance int(11) NOT NULL,
+  popularity int(11) NOT NULL,
+  year int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  rate int(11) NOT NULL,
+  motion_type int(11) NOT NULL,
+  character_type int(11) NOT NULL,
+  condition_set int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 309,
@@ -7736,15 +8518,14 @@ ADD INDEX single_mode_analyze_message_0_popularity (popularity);
 --
 -- Create table `single_mode_analyze_condition`
 --
-CREATE TABLE single_mode_analyze_condition
-(
-    id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , condition_value_3 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE single_mode_analyze_condition (
+  id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  condition_value_3 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -7753,17 +8534,177 @@ COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
 
 --
+-- Create table `single_mode_09_training_boost`
+--
+CREATE TABLE single_mode_09_training_boost (
+  id int(11) NOT NULL,
+  boost_set_id int(11) NOT NULL,
+  level_min int(11) NOT NULL,
+  level_max int(11) NOT NULL,
+  add_value int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 303,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_09_training_boost_0_boost_set_id` on table `single_mode_09_training_boost`
+--
+ALTER TABLE single_mode_09_training_boost
+ADD INDEX single_mode_09_training_boost_0_boost_set_id (boost_set_id);
+
+--
+-- Create table `single_mode_09_schedule`
+--
+CREATE TABLE single_mode_09_schedule (
+  id int(11) NOT NULL,
+  turn_num int(11) NOT NULL,
+  target_pt int(11) NOT NULL,
+  stock_num int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 3276,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `single_mode_09_progress_rate`
+--
+CREATE TABLE single_mode_09_progress_rate (
+  id int(11) NOT NULL,
+  progress_min int(11) NOT NULL,
+  progress_max int(11) NOT NULL,
+  result_type int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 5461,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `single_mode_09_link_effect`
+--
+CREATE TABLE single_mode_09_link_effect (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  effect_value_2 int(11) NOT NULL,
+  effect_value_3 int(11) NOT NULL,
+  effect_value_4 int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 1260,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_09_link_effect_0_chara_id` on table `single_mode_09_link_effect`
+--
+ALTER TABLE single_mode_09_link_effect
+ADD INDEX single_mode_09_link_effect_0_chara_id (chara_id);
+
+--
+-- Create table `single_mode_09_learning_bonus`
+--
+CREATE TABLE single_mode_09_learning_bonus (
+  id int(11) NOT NULL,
+  point_min int(11) NOT NULL,
+  point_max int(11) NOT NULL,
+  base_value int(11) NOT NULL,
+  bonus_value int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 8192,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `single_mode_09_chip_effect`
+--
+CREATE TABLE single_mode_09_chip_effect (
+  id int(11) NOT NULL,
+  chip_id int(11) NOT NULL,
+  point int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  effect_category int(11) NOT NULL,
+  effect_type int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  effect_value_2 int(11) NOT NULL,
+  effect_value_3 int(11) NOT NULL,
+  effect_value_4 int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 234,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_09_chip_effect_0_chip_id` on table `single_mode_09_chip_effect`
+--
+ALTER TABLE single_mode_09_chip_effect
+ADD INDEX single_mode_09_chip_effect_0_chip_id (chip_id);
+
+--
+-- Create table `single_mode_09_chip`
+--
+CREATE TABLE single_mode_09_chip (
+  id int(11) NOT NULL,
+  schedule_id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  board_id int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 1260,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `single_mode_09_chip_0_board_id` on table `single_mode_09_chip`
+--
+ALTER TABLE single_mode_09_chip
+ADD INDEX single_mode_09_chip_0_board_id (board_id);
+
+--
+-- Create table `single_mode_09_board`
+--
+CREATE TABLE single_mode_09_board (
+  id int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 5461,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
 -- Create table `short_episode`
 --
-CREATE TABLE short_episode
-(
-    id INT(11) NOT NULL
-  , scene INT(11) NOT NULL
-  , sort INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , story_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE short_episode (
+  id int(11) NOT NULL,
+  scene int(11) NOT NULL,
+  sort int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  story_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2048,
@@ -7780,18 +8721,17 @@ ADD INDEX short_episode_0_scene (scene);
 --
 -- Create table `select_pickup`
 --
-CREATE TABLE select_pickup
-(
-    id INT(11) NOT NULL
-  , gacha_id INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , card_type INT(11) NOT NULL
-  , recommend_order INT(11) NOT NULL
-  , recommend_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE select_pickup (
+  id int(11) NOT NULL,
+  gacha_id int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  card_type int(11) NOT NULL,
+  recommend_order int(11) NOT NULL,
+  recommend_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 546,
+AVG_ROW_LENGTH = 121,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -7805,15 +8745,14 @@ ADD INDEX select_pickup_0_gacha_id (gacha_id);
 --
 -- Create table `season_data`
 --
-CREATE TABLE season_data
-(
-    id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , season INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , start_date TEXT NOT NULL
-  , end_date TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE season_data (
+  id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  season int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  start_date text NOT NULL,
+  end_date text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 585,
@@ -7828,18 +8767,40 @@ ALTER TABLE season_data
 ADD INDEX season_data_0_type (type);
 
 --
--- Create table `rating_race_weekend_reward`
+-- Create table `room_match_training_rank`
 --
-CREATE TABLE rating_race_weekend_reward
-(
-    id INT(11) NOT NULL
-  , rating_race_data_id INT(11) NOT NULL
-  , rating_rank INT(11) NOT NULL
-  , weekend_reward_point INT(11) NOT NULL
-  , reward_group_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE room_match_training_rank (
+  id INT(11) NOT NULL,
+  rank INT(11) NOT NULL,
+  rule_line INT(11) NOT NULL,
+  start_date TEXT NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 186,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `room_match_training_rank_0_rank` on table `room_match_training_rank`
+--
+ALTER TABLE room_match_training_rank
+ADD INDEX room_match_training_rank_0_rank (`rank`);
+
+--
+-- Create table `rating_race_weekend_reward`
+--
+CREATE TABLE rating_race_weekend_reward (
+  id int(11) NOT NULL,
+  rating_race_data_id int(11) NOT NULL,
+  rating_rank int(11) NOT NULL,
+  weekend_reward_point int(11) NOT NULL,
+  reward_group_id int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 1820,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -7859,16 +8820,16 @@ ADD INDEX rating_race_weekend_reward_0_rating_race_data_id_1_rating_rank (rating
 --
 -- Create table `rating_race_reward_group`
 --
-CREATE TABLE rating_race_reward_group
-(
-    id INT(11) NOT NULL
-  , reward_group_id INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE rating_race_reward_group (
+  id int(11) NOT NULL,
+  reward_group_id int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 94,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -7882,19 +8843,19 @@ ADD INDEX rating_race_reward_group_0_reward_group_id (reward_group_id);
 --
 -- Create table `rating_race_rating_rank`
 --
-CREATE TABLE rating_race_rating_rank
-(
-    id INT(11) NOT NULL
-  , rating_race_data_id INT(11) NOT NULL
-  , rating_rank INT(11) NOT NULL
-  , rating_score_min INT(11) NOT NULL
-  , rating_score_max INT(11) NOT NULL
-  , downgrade_permitted INT(11) NOT NULL
-  , npc_count INT(11) NOT NULL
-  , reward_group_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE rating_race_rating_rank (
+  id int(11) NOT NULL,
+  rating_race_data_id int(11) NOT NULL,
+  rating_rank int(11) NOT NULL,
+  rating_score_min int(11) NOT NULL,
+  rating_score_max int(11) NOT NULL,
+  downgrade_permitted int(11) NOT NULL,
+  npc_count int(11) NOT NULL,
+  reward_group_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 1638,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -7908,22 +8869,22 @@ ADD INDEX rating_race_rating_rank_0_rating_race_data_id (rating_race_data_id);
 --
 -- Create table `rating_race_phase_schedule`
 --
-CREATE TABLE rating_race_phase_schedule
-(
-    id INT(11) NOT NULL
-  , rating_race_data_id INT(11) NOT NULL
-  , week INT(11) NOT NULL
-  , phase INT(11) NOT NULL
-  , rating_race_condition_id_short INT(11) NOT NULL
-  , rating_race_condition_id_mile INT(11) NOT NULL
-  , rating_race_condition_id_middle INT(11) NOT NULL
-  , rating_race_condition_id_long INT(11) NOT NULL
-  , rating_race_condition_id_dirt INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE rating_race_phase_schedule (
+  id int(11) NOT NULL,
+  rating_race_data_id int(11) NOT NULL,
+  week int(11) NOT NULL,
+  phase int(11) NOT NULL,
+  rating_race_condition_id_short int(11) NOT NULL,
+  rating_race_condition_id_mile int(11) NOT NULL,
+  rating_race_condition_id_middle int(11) NOT NULL,
+  rating_race_condition_id_long int(11) NOT NULL,
+  rating_race_condition_id_dirt int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 2048,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -7937,16 +8898,16 @@ ADD INDEX rating_race_phase_schedule_0_rating_race_data_id (rating_race_data_id)
 --
 -- Create table `rating_race_finale_reward`
 --
-CREATE TABLE rating_race_finale_reward
-(
-    id INT(11) NOT NULL
-  , rating_race_data_id INT(11) NOT NULL
-  , rating_rank INT(11) NOT NULL
-  , finish_order INT(11) NOT NULL
-  , reward_group_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE rating_race_finale_reward (
+  id int(11) NOT NULL,
+  rating_race_data_id int(11) NOT NULL,
+  rating_rank int(11) NOT NULL,
+  finish_order int(11) NOT NULL,
+  reward_group_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 151,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -7960,17 +8921,16 @@ ADD INDEX rating_race_finale_reward_0_rating_race_data_id (rating_race_data_id);
 --
 -- Create table `rating_race_data`
 --
-CREATE TABLE rating_race_data
-(
-    id INT(11) NOT NULL
-  , notice_date INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , weekday_free_play_num INT(11) NOT NULL
-  , weekend_free_play_num INT(11) NOT NULL
-  , rating_rank_initial_limit INT(11) NOT NULL
-  , rating_rank_reset_limit INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE rating_race_data (
+  id int(11) NOT NULL,
+  notice_date int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  weekday_free_play_num int(11) NOT NULL,
+  weekend_free_play_num int(11) NOT NULL,
+  rating_rank_initial_limit int(11) NOT NULL,
+  rating_rank_reset_limit int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 CHARACTER SET utf8mb4,
@@ -7980,18 +8940,18 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `rating_race_condition`
 --
-CREATE TABLE rating_race_condition
-(
-    id INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , season INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , ground INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE rating_race_condition (
+  id int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  season int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  ground int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 655,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -7999,15 +8959,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `random_ear_tail_motion`
 --
-CREATE TABLE random_ear_tail_motion
-(
-    id INT(11) NOT NULL
-  , parts_type INT(11) NOT NULL
-  , motion_name TEXT NOT NULL
-  , ear_type INT(11) NOT NULL
-  , use_story INT(11) NOT NULL
-  , use_theater INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE random_ear_tail_motion (
+  id int(11) NOT NULL,
+  parts_type int(11) NOT NULL,
+  motion_name text NOT NULL,
+  ear_type int(11) NOT NULL,
+  use_story int(11) NOT NULL,
+  use_theater int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 606,
@@ -8024,18 +8983,17 @@ ADD INDEX random_ear_tail_motion_0_parts_type (parts_type);
 --
 -- Create table `race_trophy`
 --
-CREATE TABLE race_trophy
-(
-    id INT(11) NOT NULL
-  , trophy_id INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , original_flag INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , size INT(11) NOT NULL
-  , event_type INT(11) NOT NULL
-  , start_date TEXT NOT NULL
-  , display_end_date TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_trophy (
+  id int(11) NOT NULL,
+  trophy_id int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  original_flag int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  size int(11) NOT NULL,
+  event_type int(11) NOT NULL,
+  start_date text NOT NULL,
+  display_end_date text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 193,
@@ -8058,21 +9016,20 @@ ADD INDEX race_trophy_0_trophy_id (trophy_id);
 --
 -- Create table `race_track`
 --
-CREATE TABLE race_track
-(
-    id INT(11) NOT NULL
-  , initial_lane_type INT(11) NOT NULL
-  , enable_half_gate INT(11) NOT NULL
-  , horse_num_gate_variation INT(11) NOT NULL
-  , turf_vision_type INT(11) NOT NULL
-  , footsmoke_color_type INT(11) NOT NULL
-  , area INT(11) NOT NULL
-  , flag_type INT(11) NOT NULL
-  , gate_panel_type INT(11) NOT NULL
-  , gate_lamp_type INT(11) NOT NULL
-  , board_condition_type INT(11) NOT NULL
-  , result_board_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_track (
+  id int(11) NOT NULL,
+  initial_lane_type int(11) NOT NULL,
+  enable_half_gate int(11) NOT NULL,
+  horse_num_gate_variation int(11) NOT NULL,
+  turf_vision_type int(11) NOT NULL,
+  footsmoke_color_type int(11) NOT NULL,
+  area int(11) NOT NULL,
+  flag_type int(11) NOT NULL,
+  gate_panel_type int(11) NOT NULL,
+  gate_lamp_type int(11) NOT NULL,
+  board_condition_type int(11) NOT NULL,
+  result_board_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1489,
@@ -8083,12 +9040,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `race_single_mode_team_status`
 --
-CREATE TABLE race_single_mode_team_status
-(
-    id INT(11) NOT NULL
-  , team_rank_threshold INT(11) NOT NULL
-  , add_status INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_single_mode_team_status (
+  id int(11) NOT NULL,
+  team_rank_threshold int(11) NOT NULL,
+  add_status int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2730,
@@ -8099,11 +9055,10 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `race_proper_runningstyle_rate`
 --
-CREATE TABLE race_proper_runningstyle_rate
-(
-    id INT(11) NOT NULL
-  , proper_rate INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_proper_runningstyle_rate (
+  id int(11) NOT NULL,
+  proper_rate int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1820,
@@ -8114,11 +9069,10 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `race_proper_ground_rate`
 --
-CREATE TABLE race_proper_ground_rate
-(
-    id INT(11) NOT NULL
-  , proper_rate INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_proper_ground_rate (
+  id int(11) NOT NULL,
+  proper_rate int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1820,
@@ -8129,12 +9083,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `race_proper_distance_rate`
 --
-CREATE TABLE race_proper_distance_rate
-(
-    id INT(11) NOT NULL
-  , proper_rate_speed INT(11) NOT NULL
-  , proper_rate_power INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_proper_distance_rate (
+  id int(11) NOT NULL,
+  proper_rate_speed int(11) NOT NULL,
+  proper_rate_power int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1820,
@@ -8145,13 +9098,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `race_player_camera`
 --
-CREATE TABLE race_player_camera
-(
-    id INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , prefab_name VARCHAR(750) NOT NULL
-  , category INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_player_camera (
+  id int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  prefab_name varchar(750) NOT NULL,
+  category int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 168,
@@ -8174,16 +9126,15 @@ ADD INDEX race_player_camera_0_prefab_name (prefab_name);
 --
 -- Create table `race_overrun_pattern`
 --
-CREATE TABLE race_overrun_pattern
-(
-    id INT(11) NOT NULL
-  , finish_order_0_type INT(11) NOT NULL
-  , finish_order_1_type INT(11) NOT NULL
-  , finish_order_2_type INT(11) NOT NULL
-  , finish_order_3_type INT(11) NOT NULL
-  , finish_order_4_type INT(11) NOT NULL
-  , finish_order_lose_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_overrun_pattern (
+  id int(11) NOT NULL,
+  finish_order_0_type int(11) NOT NULL,
+  finish_order_1_type int(11) NOT NULL,
+  finish_order_2_type int(11) NOT NULL,
+  finish_order_3_type int(11) NOT NULL,
+  finish_order_4_type int(11) NOT NULL,
+  finish_order_lose_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -8194,11 +9145,10 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `race_motivation_rate`
 --
-CREATE TABLE race_motivation_rate
-(
-    id INT(11) NOT NULL
-  , motivation_rate INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_motivation_rate (
+  id int(11) NOT NULL,
+  motivation_rate int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -8209,16 +9159,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `race_jikkyo_trigger`
 --
-CREATE TABLE race_jikkyo_trigger
-(
-    id INT(11) NOT NULL
-  , command INT(11) NOT NULL
-  , inequality INT(11) NOT NULL
-  , horse1 INT(11) NOT NULL
-  , horse2 INT(11) NOT NULL
-  , param1 INT(11) NOT NULL
-  , param2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_jikkyo_trigger (
+  id int(11) NOT NULL,
+  command int(11) NOT NULL,
+  inequality int(11) NOT NULL,
+  horse1 int(11) NOT NULL,
+  horse2 int(11) NOT NULL,
+  param1 int(11) NOT NULL,
+  param2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 66,
@@ -8229,11 +9178,10 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `race_jikkyo_race`
 --
-CREATE TABLE race_jikkyo_race
-(
-    id INT(11) NOT NULL
-  , cue_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_jikkyo_race (
+  id int(11) NOT NULL,
+  cue_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 82,
@@ -8244,17 +9192,16 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `race_jikkyo_message`
 --
-CREATE TABLE race_jikkyo_message
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , message TEXT NOT NULL
-  , voice TEXT NOT NULL
-  , per INT(11) NOT NULL
-  , comment_group INT(11) NOT NULL
-  , reuse INT(11) NOT NULL
-  , omit_tag INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_jikkyo_message (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  message text NOT NULL,
+  voice text NOT NULL,
+  per int(11) NOT NULL,
+  comment_group int(11) NOT NULL,
+  reuse int(11) NOT NULL,
+  omit_tag int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 171,
@@ -8277,19 +9224,18 @@ ADD INDEX race_jikkyo_message_0_group_id (group_id);
 --
 -- Create table `race_jikkyo_cue`
 --
-CREATE TABLE race_jikkyo_cue
-(
-    id INT(11) NOT NULL
-  , cuesheet_id INT(11) NOT NULL
-  , cuesheet_type INT(11) NOT NULL
-  , condition_type_1 INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_type_2 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , condition_type_3 INT(11) NOT NULL
-  , condition_value_3 INT(11) NOT NULL
-  , cuesheet_name INT(11) NOT NULL
-  , PRIMARY KEY (id, cuesheet_type)
+CREATE TABLE race_jikkyo_cue (
+  id int(11) NOT NULL,
+  cuesheet_id int(11) NOT NULL,
+  cuesheet_type int(11) NOT NULL,
+  condition_type_1 int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_type_2 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  condition_type_3 int(11) NOT NULL,
+  condition_value_3 int(11) NOT NULL,
+  cuesheet_name int(11) NOT NULL,
+  PRIMARY KEY (id, cuesheet_type)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 57,
@@ -8306,16 +9252,15 @@ ADD INDEX race_jikkyo_cue_0_cuesheet_type (cuesheet_type);
 --
 -- Create table `race_jikkyo_comment`
 --
-CREATE TABLE race_jikkyo_comment
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , message TEXT NOT NULL
-  , voice TEXT NOT NULL
-  , per INT(11) NOT NULL
-  , message_group INT(11) NOT NULL
-  , omit_tag INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_jikkyo_comment (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  message text NOT NULL,
+  voice text NOT NULL,
+  per int(11) NOT NULL,
+  message_group int(11) NOT NULL,
+  omit_tag int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 257,
@@ -8332,38 +9277,37 @@ ADD INDEX race_jikkyo_comment_0_group_id (group_id);
 --
 -- Create table `race_jikkyo_base_venus`
 --
-CREATE TABLE race_jikkyo_base_venus
-(
-    id INT(11) NOT NULL
-  , mode INT(11) NOT NULL
-  , sub_mode INT(11) NOT NULL
-  , sub_mode_jump INT(11) NOT NULL
-  , situation INT(11) NOT NULL
-  , sub_situation INT(11) NOT NULL
-  , situation_end INT(11) NOT NULL
-  , disable_reentry_situation INT(11) NOT NULL
-  , trigger0 INT(11) NOT NULL
-  , trigger1 INT(11) NOT NULL
-  , trigger2 INT(11) NOT NULL
-  , trigger3 INT(11) NOT NULL
-  , trigger4 INT(11) NOT NULL
-  , trigger5 INT(11) NOT NULL
-  , trigger6 INT(11) NOT NULL
-  , trigger7 INT(11) NOT NULL
-  , trigger8 INT(11) NOT NULL
-  , trigger9 INT(11) NOT NULL
-  , message_group INT(11) NOT NULL
-  , comment_group INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , per INT(11) NOT NULL
-  , immediate INT(11) NOT NULL
-  , discard INT(11) NOT NULL
-  , tension INT(11) NOT NULL
-  , camera_id INT(11) NOT NULL
-  , camera_horse1 INT(11) NOT NULL
-  , camera_horse2 INT(11) NOT NULL
-  , disable_reuse INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_jikkyo_base_venus (
+  id int(11) NOT NULL,
+  mode int(11) NOT NULL,
+  sub_mode int(11) NOT NULL,
+  sub_mode_jump int(11) NOT NULL,
+  situation int(11) NOT NULL,
+  sub_situation int(11) NOT NULL,
+  situation_end int(11) NOT NULL,
+  disable_reentry_situation int(11) NOT NULL,
+  trigger0 int(11) NOT NULL,
+  trigger1 int(11) NOT NULL,
+  trigger2 int(11) NOT NULL,
+  trigger3 int(11) NOT NULL,
+  trigger4 int(11) NOT NULL,
+  trigger5 int(11) NOT NULL,
+  trigger6 int(11) NOT NULL,
+  trigger7 int(11) NOT NULL,
+  trigger8 int(11) NOT NULL,
+  trigger9 int(11) NOT NULL,
+  message_group int(11) NOT NULL,
+  comment_group int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  per int(11) NOT NULL,
+  immediate int(11) NOT NULL,
+  discard int(11) NOT NULL,
+  tension int(11) NOT NULL,
+  camera_id int(11) NOT NULL,
+  camera_horse1 int(11) NOT NULL,
+  camera_horse2 int(11) NOT NULL,
+  disable_reuse int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 171,
@@ -8380,39 +9324,38 @@ ADD INDEX race_jikkyo_base_venus_0_mode (mode);
 --
 -- Create table `race_jikkyo_base`
 --
-CREATE TABLE race_jikkyo_base
-(
-    id INT(11) NOT NULL
-  , mode INT(11) NOT NULL
-  , sub_mode INT(11) NOT NULL
-  , sub_mode_jump INT(11) NOT NULL
-  , situation INT(11) NOT NULL
-  , sub_situation INT(11) NOT NULL
-  , situation_end INT(11) NOT NULL
-  , disable_reentry_situation INT(11) NOT NULL
-  , trigger0 INT(11) NOT NULL
-  , trigger1 INT(11) NOT NULL
-  , trigger2 INT(11) NOT NULL
-  , trigger3 INT(11) NOT NULL
-  , trigger4 INT(11) NOT NULL
-  , trigger5 INT(11) NOT NULL
-  , trigger6 INT(11) NOT NULL
-  , trigger7 INT(11) NOT NULL
-  , trigger8 INT(11) NOT NULL
-  , trigger9 INT(11) NOT NULL
-  , message_group INT(11) NOT NULL
-  , comment_group INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , per INT(11) NOT NULL
-  , immediate INT(11) NOT NULL
-  , discard INT(11) NOT NULL
-  , tension INT(11) NOT NULL
-  , camera_id INT(11) NOT NULL
-  , camera_horse1 INT(11) NOT NULL
-  , camera_horse2 INT(11) NOT NULL
-  , disable_reuse INT(11) NOT NULL
-  , is_force_play_event_camera INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_jikkyo_base (
+  id int(11) NOT NULL,
+  mode int(11) NOT NULL,
+  sub_mode int(11) NOT NULL,
+  sub_mode_jump int(11) NOT NULL,
+  situation int(11) NOT NULL,
+  sub_situation int(11) NOT NULL,
+  situation_end int(11) NOT NULL,
+  disable_reentry_situation int(11) NOT NULL,
+  trigger0 int(11) NOT NULL,
+  trigger1 int(11) NOT NULL,
+  trigger2 int(11) NOT NULL,
+  trigger3 int(11) NOT NULL,
+  trigger4 int(11) NOT NULL,
+  trigger5 int(11) NOT NULL,
+  trigger6 int(11) NOT NULL,
+  trigger7 int(11) NOT NULL,
+  trigger8 int(11) NOT NULL,
+  trigger9 int(11) NOT NULL,
+  message_group int(11) NOT NULL,
+  comment_group int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  per int(11) NOT NULL,
+  immediate int(11) NOT NULL,
+  discard int(11) NOT NULL,
+  tension int(11) NOT NULL,
+  camera_id int(11) NOT NULL,
+  camera_horse1 int(11) NOT NULL,
+  camera_horse2 int(11) NOT NULL,
+  disable_reuse int(11) NOT NULL,
+  is_force_play_event_camera int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 416,
@@ -8429,16 +9372,15 @@ ADD INDEX race_jikkyo_base_0_mode (mode);
 --
 -- Create table `race_instance`
 --
-CREATE TABLE race_instance
-(
-    id INT(11) NOT NULL
-  , race_id INT(11) NOT NULL
-  , npc_group_id INT(11) NOT NULL
-  , date INT(11) NOT NULL
-  , time INT(11) NOT NULL
-  , race_number INT(11) NOT NULL
-  , clock_time INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_instance (
+  id int(11) NOT NULL,
+  race_id int(11) NOT NULL,
+  npc_group_id int(11) NOT NULL,
+  date int(11) NOT NULL,
+  time int(11) NOT NULL,
+  race_number int(11) NOT NULL,
+  clock_time int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 68,
@@ -8455,18 +9397,17 @@ ADD INDEX race_instance_0_race_id (race_id);
 --
 -- Create table `race_fence_set`
 --
-CREATE TABLE race_fence_set
-(
-    id INT(11) NOT NULL
-  , fence_1 INT(11) NOT NULL
-  , fence_2 INT(11) NOT NULL
-  , fence_3 INT(11) NOT NULL
-  , fence_4 INT(11) NOT NULL
-  , fence_5 INT(11) NOT NULL
-  , fence_6 INT(11) NOT NULL
-  , fence_7 INT(11) NOT NULL
-  , fence_8 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_fence_set (
+  id int(11) NOT NULL,
+  fence_1 int(11) NOT NULL,
+  fence_2 int(11) NOT NULL,
+  fence_3 int(11) NOT NULL,
+  fence_4 int(11) NOT NULL,
+  fence_5 int(11) NOT NULL,
+  fence_6 int(11) NOT NULL,
+  fence_7 int(11) NOT NULL,
+  fence_8 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 151,
@@ -8477,15 +9418,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `race_env_define`
 --
-CREATE TABLE race_env_define
-(
-    id INT(11) NOT NULL
-  , race_track_id INT(11) NOT NULL
-  , season INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , timezone INT(11) NOT NULL
-  , resource INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_env_define (
+  id int(11) NOT NULL,
+  race_track_id int(11) NOT NULL,
+  season int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  timezone int(11) NOT NULL,
+  resource int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 74,
@@ -8502,12 +9442,11 @@ ADD INDEX race_env_define_0_race_track_id (race_track_id);
 --
 -- Create table `race_course_set_status`
 --
-CREATE TABLE race_course_set_status
-(
-    course_set_status_id INT(11) NOT NULL
-  , target_status_1 INT(11) NOT NULL
-  , target_status_2 INT(11) NOT NULL
-  , PRIMARY KEY (course_set_status_id)
+CREATE TABLE race_course_set_status (
+  course_set_status_id int(11) NOT NULL,
+  target_status_1 int(11) NOT NULL,
+  target_status_2 int(11) NOT NULL,
+  PRIMARY KEY (course_set_status_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1820,
@@ -8518,22 +9457,23 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `race_course_set`
 --
-CREATE TABLE race_course_set
-(
-    id INT(11) NOT NULL
-  , race_track_id INT(11) NOT NULL
-  , distance INT(11) NOT NULL
-  , ground INT(11) NOT NULL
-  , `inout` INT(11) NOT NULL
-  , turn INT(11) NOT NULL
-  , fence_set INT(11) NOT NULL
-  , float_lane_max INT(11) NOT NULL
-  , course_set_status_id INT(11) NOT NULL
-  , finish_time_min INT(11) NOT NULL
-  , finish_time_min_random_range INT(11) NOT NULL
-  , finish_time_max INT(11) NOT NULL
-  , finish_time_max_random_range INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_course_set (
+  id int(11) NOT NULL,
+  race_track_id int(11) NOT NULL,
+  distance int(11) NOT NULL,
+  ground int(11) NOT NULL,
+  `inout` int(11) NOT NULL,
+  turn int(11) NOT NULL,
+  fence_set int(11) NOT NULL,
+  float_lane_max int(11) NOT NULL,
+  course_set_status_id int(11) NOT NULL,
+  finish_time_min int(11) NOT NULL,
+  finish_time_min_random_range int(11) NOT NULL,
+  finish_time_max int(11) NOT NULL,
+  finish_time_max_random_range int(11) NOT NULL,
+  run_outside int(11) NOT NULL,
+  ex_camera int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 153,
@@ -8550,15 +9490,14 @@ ADD INDEX race_course_set_0_race_track_id (race_track_id);
 --
 -- Create table `race_condition`
 --
-CREATE TABLE race_condition
-(
-    id INT(11) NOT NULL
-  , season INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , ground INT(11) NOT NULL
-  , rate INT(11) NOT NULL
-  , area INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_condition (
+  id int(11) NOT NULL,
+  season int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  ground int(11) NOT NULL,
+  rate int(11) NOT NULL,
+  area int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 512,
@@ -8593,13 +9532,12 @@ ADD INDEX race_condition_0_weather_1_ground (weather, ground);
 --
 -- Create table `race_bib_color`
 --
-CREATE TABLE race_bib_color
-(
-    grade INT(11) NOT NULL
-  , race_id INT(11) NOT NULL
-  , bib_color INT(11) NOT NULL
-  , font_color INT(11) NOT NULL
-  , PRIMARY KEY (grade, race_id)
+CREATE TABLE race_bib_color (
+  grade int(11) NOT NULL,
+  race_id int(11) NOT NULL,
+  bib_color int(11) NOT NULL,
+  font_color int(11) NOT NULL,
+  PRIMARY KEY (grade, race_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 218,
@@ -8610,105 +9548,104 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `race_bgm_pattern`
 --
-CREATE TABLE race_bgm_pattern
-(
-    id INT(11) NOT NULL
-  , bgm_time_1 INT(11) NOT NULL
-  , bgm_cue_name_1 TEXT NOT NULL
-  , bgm_cuesheet_name_1 TEXT NOT NULL
-  , bgm_time_2 INT(11) NOT NULL
-  , bgm_cue_name_2 TEXT NOT NULL
-  , bgm_cuesheet_name_2 TEXT NOT NULL
-  , bgm_time_3 INT(11) NOT NULL
-  , bgm_cue_name_3 TEXT NOT NULL
-  , bgm_cuesheet_name_3 TEXT NOT NULL
-  , bgm_time_4 INT(11) NOT NULL
-  , bgm_cue_name_4 TEXT NOT NULL
-  , bgm_cuesheet_name_4 TEXT NOT NULL
-  , bgm_time_5 INT(11) NOT NULL
-  , bgm_cue_name_5 TEXT NOT NULL
-  , bgm_cuesheet_name_5 TEXT NOT NULL
-  , bgm_time_6 INT(11) NOT NULL
-  , bgm_cue_name_6 TEXT NOT NULL
-  , bgm_cuesheet_name_6 TEXT NOT NULL
-  , bgm_time_7 INT(11) NOT NULL
-  , bgm_cue_name_7 TEXT NOT NULL
-  , bgm_cuesheet_name_7 TEXT NOT NULL
-  , bgm_time_8 INT(11) NOT NULL
-  , bgm_cue_name_8 TEXT NOT NULL
-  , bgm_cuesheet_name_8 TEXT NOT NULL
-  , bgm_time_9 INT(11) NOT NULL
-  , bgm_cue_name_9 TEXT NOT NULL
-  , bgm_cuesheet_name_9 TEXT NOT NULL
-  , bgm_time_10 INT(11) NOT NULL
-  , bgm_cue_name_10 TEXT NOT NULL
-  , bgm_cuesheet_name_10 TEXT NOT NULL
-  , bgm_time_11 INT(11) NOT NULL
-  , bgm_cue_name_11 TEXT NOT NULL
-  , bgm_cuesheet_name_11 TEXT NOT NULL
-  , bgm_time_12 INT(11) NOT NULL
-  , bgm_cue_name_12 TEXT NOT NULL
-  , bgm_cuesheet_name_12 TEXT NOT NULL
-  , bgm_time_13 INT(11) NOT NULL
-  , bgm_cue_name_13 TEXT NOT NULL
-  , bgm_cuesheet_name_13 TEXT NOT NULL
-  , bgm_time_14 INT(11) NOT NULL
-  , bgm_cue_name_14 TEXT NOT NULL
-  , bgm_cuesheet_name_14 TEXT NOT NULL
-  , bgm_time_15 INT(11) NOT NULL
-  , bgm_cue_name_15 TEXT NOT NULL
-  , bgm_cuesheet_name_15 TEXT NOT NULL
-  , bgm_time_16 INT(11) NOT NULL
-  , bgm_cue_name_16 TEXT NOT NULL
-  , bgm_cuesheet_name_16 TEXT NOT NULL
-  , bgm_time_17 INT(11) NOT NULL
-  , bgm_cue_name_17 TEXT NOT NULL
-  , bgm_cuesheet_name_17 TEXT NOT NULL
-  , bgm_time_18 INT(11) NOT NULL
-  , bgm_cue_name_18 TEXT NOT NULL
-  , bgm_cuesheet_name_18 TEXT NOT NULL
-  , bgm_time_19 INT(11) NOT NULL
-  , bgm_cue_name_19 TEXT NOT NULL
-  , bgm_cuesheet_name_19 TEXT NOT NULL
-  , bgm_time_20 INT(11) NOT NULL
-  , bgm_cue_name_20 TEXT NOT NULL
-  , bgm_cuesheet_name_20 TEXT NOT NULL
-  , bgm_time_21 INT(11) NOT NULL
-  , bgm_cue_name_21 TEXT NOT NULL
-  , bgm_cuesheet_name_21 TEXT NOT NULL
-  , bgm_time_22 INT(11) NOT NULL
-  , bgm_cue_name_22 TEXT NOT NULL
-  , bgm_cuesheet_name_22 TEXT NOT NULL
-  , bgm_time_23 INT(11) NOT NULL
-  , bgm_cue_name_23 TEXT NOT NULL
-  , bgm_cuesheet_name_23 TEXT NOT NULL
-  , bgm_time_24 INT(11) NOT NULL
-  , bgm_cue_name_24 TEXT NOT NULL
-  , bgm_cuesheet_name_24 TEXT NOT NULL
-  , bgm_time_25 INT(11) NOT NULL
-  , bgm_cue_name_25 TEXT NOT NULL
-  , bgm_cuesheet_name_25 TEXT NOT NULL
-  , bgm_time_26 INT(11) NOT NULL
-  , bgm_cue_name_26 TEXT NOT NULL
-  , bgm_cuesheet_name_26 TEXT NOT NULL
-  , bgm_time_27 INT(11) NOT NULL
-  , bgm_cue_name_27 TEXT NOT NULL
-  , bgm_cuesheet_name_27 TEXT NOT NULL
-  , bgm_time_28 INT(11) NOT NULL
-  , bgm_cue_name_28 TEXT NOT NULL
-  , bgm_cuesheet_name_28 TEXT NOT NULL
-  , bgm_time_29 INT(11) NOT NULL
-  , bgm_cue_name_29 TEXT NOT NULL
-  , bgm_cuesheet_name_29 TEXT NOT NULL
-  , bgm_time_30 INT(11) NOT NULL
-  , bgm_cue_name_30 TEXT NOT NULL
-  , bgm_cuesheet_name_30 TEXT NOT NULL
-  , bgm_trigger_time_ago INT(11) NOT NULL
-  , bgm_trigger_cue_name TEXT NOT NULL
-  , bgm_trigger_cuesheet_name TEXT NOT NULL
-  , bgm_skip_trigger_cue_name TEXT NOT NULL
-  , bgm_skip_trigger_cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_bgm_pattern (
+  id int(11) NOT NULL,
+  bgm_time_1 int(11) NOT NULL,
+  bgm_cue_name_1 text NOT NULL,
+  bgm_cuesheet_name_1 text NOT NULL,
+  bgm_time_2 int(11) NOT NULL,
+  bgm_cue_name_2 text NOT NULL,
+  bgm_cuesheet_name_2 text NOT NULL,
+  bgm_time_3 int(11) NOT NULL,
+  bgm_cue_name_3 text NOT NULL,
+  bgm_cuesheet_name_3 text NOT NULL,
+  bgm_time_4 int(11) NOT NULL,
+  bgm_cue_name_4 text NOT NULL,
+  bgm_cuesheet_name_4 text NOT NULL,
+  bgm_time_5 int(11) NOT NULL,
+  bgm_cue_name_5 text NOT NULL,
+  bgm_cuesheet_name_5 text NOT NULL,
+  bgm_time_6 int(11) NOT NULL,
+  bgm_cue_name_6 text NOT NULL,
+  bgm_cuesheet_name_6 text NOT NULL,
+  bgm_time_7 int(11) NOT NULL,
+  bgm_cue_name_7 text NOT NULL,
+  bgm_cuesheet_name_7 text NOT NULL,
+  bgm_time_8 int(11) NOT NULL,
+  bgm_cue_name_8 text NOT NULL,
+  bgm_cuesheet_name_8 text NOT NULL,
+  bgm_time_9 int(11) NOT NULL,
+  bgm_cue_name_9 text NOT NULL,
+  bgm_cuesheet_name_9 text NOT NULL,
+  bgm_time_10 int(11) NOT NULL,
+  bgm_cue_name_10 text NOT NULL,
+  bgm_cuesheet_name_10 text NOT NULL,
+  bgm_time_11 int(11) NOT NULL,
+  bgm_cue_name_11 text NOT NULL,
+  bgm_cuesheet_name_11 text NOT NULL,
+  bgm_time_12 int(11) NOT NULL,
+  bgm_cue_name_12 text NOT NULL,
+  bgm_cuesheet_name_12 text NOT NULL,
+  bgm_time_13 int(11) NOT NULL,
+  bgm_cue_name_13 text NOT NULL,
+  bgm_cuesheet_name_13 text NOT NULL,
+  bgm_time_14 int(11) NOT NULL,
+  bgm_cue_name_14 text NOT NULL,
+  bgm_cuesheet_name_14 text NOT NULL,
+  bgm_time_15 int(11) NOT NULL,
+  bgm_cue_name_15 text NOT NULL,
+  bgm_cuesheet_name_15 text NOT NULL,
+  bgm_time_16 int(11) NOT NULL,
+  bgm_cue_name_16 text NOT NULL,
+  bgm_cuesheet_name_16 text NOT NULL,
+  bgm_time_17 int(11) NOT NULL,
+  bgm_cue_name_17 text NOT NULL,
+  bgm_cuesheet_name_17 text NOT NULL,
+  bgm_time_18 int(11) NOT NULL,
+  bgm_cue_name_18 text NOT NULL,
+  bgm_cuesheet_name_18 text NOT NULL,
+  bgm_time_19 int(11) NOT NULL,
+  bgm_cue_name_19 text NOT NULL,
+  bgm_cuesheet_name_19 text NOT NULL,
+  bgm_time_20 int(11) NOT NULL,
+  bgm_cue_name_20 text NOT NULL,
+  bgm_cuesheet_name_20 text NOT NULL,
+  bgm_time_21 int(11) NOT NULL,
+  bgm_cue_name_21 text NOT NULL,
+  bgm_cuesheet_name_21 text NOT NULL,
+  bgm_time_22 int(11) NOT NULL,
+  bgm_cue_name_22 text NOT NULL,
+  bgm_cuesheet_name_22 text NOT NULL,
+  bgm_time_23 int(11) NOT NULL,
+  bgm_cue_name_23 text NOT NULL,
+  bgm_cuesheet_name_23 text NOT NULL,
+  bgm_time_24 int(11) NOT NULL,
+  bgm_cue_name_24 text NOT NULL,
+  bgm_cuesheet_name_24 text NOT NULL,
+  bgm_time_25 int(11) NOT NULL,
+  bgm_cue_name_25 text NOT NULL,
+  bgm_cuesheet_name_25 text NOT NULL,
+  bgm_time_26 int(11) NOT NULL,
+  bgm_cue_name_26 text NOT NULL,
+  bgm_cuesheet_name_26 text NOT NULL,
+  bgm_time_27 int(11) NOT NULL,
+  bgm_cue_name_27 text NOT NULL,
+  bgm_cuesheet_name_27 text NOT NULL,
+  bgm_time_28 int(11) NOT NULL,
+  bgm_cue_name_28 text NOT NULL,
+  bgm_cuesheet_name_28 text NOT NULL,
+  bgm_time_29 int(11) NOT NULL,
+  bgm_cue_name_29 text NOT NULL,
+  bgm_cuesheet_name_29 text NOT NULL,
+  bgm_time_30 int(11) NOT NULL,
+  bgm_cue_name_30 text NOT NULL,
+  bgm_cuesheet_name_30 text NOT NULL,
+  bgm_trigger_time_ago int(11) NOT NULL,
+  bgm_trigger_cue_name text NOT NULL,
+  bgm_trigger_cuesheet_name text NOT NULL,
+  bgm_skip_trigger_cue_name text NOT NULL,
+  bgm_skip_trigger_cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2114,
@@ -8717,45 +9654,19 @@ COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
 
 --
--- Create table `race_bgm_cutin_extension_time`
---
-CREATE TABLE race_bgm_cutin_extension_time
-(
-    id INT(11) NOT NULL
-  , cutin_category INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , extension_sec INT(11) NOT NULL
-  , extension_sec_long INT(11) NOT NULL
-  , PRIMARY KEY (id)
-)
-ENGINE = INNODB,
-AVG_ROW_LENGTH = 134,
-CHARACTER SET utf8mb4,
-COLLATE utf8mb4_general_ci,
-ROW_FORMAT = DYNAMIC;
-
---
--- Create index `race_bgm_cutin_extension_time_0_cutin_category` on table `race_bgm_cutin_extension_time`
---
-ALTER TABLE race_bgm_cutin_extension_time
-ADD INDEX race_bgm_cutin_extension_time_0_cutin_category (cutin_category);
-
---
 -- Create table `race_bgm_cutin`
 --
-CREATE TABLE race_bgm_cutin
-(
-    id INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , bgm_group_id INT(11) NOT NULL
-  , fadeout_time INT(11) NOT NULL
-  , exclusive_control INT(11) NOT NULL
-  , short_cutin_bgm_cue_name TEXT NOT NULL
-  , short_cutin_bgm_cuesheet_name TEXT NOT NULL
-  , long_cutin_bgm_cue_name TEXT NOT NULL
-  , long_cutin_bgm_cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_bgm_cutin (
+  id int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  bgm_group_id int(11) NOT NULL,
+  fadeout_time int(11) NOT NULL,
+  exclusive_control int(11) NOT NULL,
+  short_cutin_bgm_cue_name text NOT NULL,
+  short_cutin_bgm_cuesheet_name text NOT NULL,
+  long_cutin_bgm_cue_name text NOT NULL,
+  long_cutin_bgm_cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -8784,35 +9695,34 @@ ADD INDEX race_bgm_cutin_0_card_id_1_bgm_group_id (card_id, bgm_group_id);
 --
 -- Create table `race_bgm`
 --
-CREATE TABLE race_bgm
-(
-    id INT(11) NOT NULL
-  , race_type INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , grade INT(11) NOT NULL
-  , single_mode_route_race_id INT(11) NOT NULL
-  , single_mode_program_id INT(11) NOT NULL
-  , paddock_bgm_cue_name TEXT NOT NULL
-  , paddock_bgm_cuesheet_name TEXT NOT NULL
-  , entrytable_bgm_cue_name TEXT NOT NULL
-  , entrytable_bgm_cuesheet_name TEXT NOT NULL
-  , first_bgm_pattern INT(11) NOT NULL
-  , second_bgm_pattern INT(11) NOT NULL
-  , result_cutin_bgm_cue_name_1 TEXT NOT NULL
-  , result_cutin_bgm_cuesheet_name_1 TEXT NOT NULL
-  , result_cutin_bgm_cue_name_2 TEXT NOT NULL
-  , result_cutin_bgm_cuesheet_name_2 TEXT NOT NULL
-  , result_cutin_bgm_cue_name_3 TEXT NOT NULL
-  , result_cutin_bgm_cuesheet_name_3 TEXT NOT NULL
-  , result_list_bgm_cue_name_1 TEXT NOT NULL
-  , result_list_bgm_cuesheet_name_1 TEXT NOT NULL
-  , result_list_bgm_cue_name_2 TEXT NOT NULL
-  , result_list_bgm_cuesheet_name_2 TEXT NOT NULL
-  , result_list_bgm_cue_name_3 TEXT NOT NULL
-  , result_list_bgm_cuesheet_name_3 TEXT NOT NULL
-  , difficulty INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race_bgm (
+  id int(11) NOT NULL,
+  race_type int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  grade int(11) NOT NULL,
+  single_mode_route_race_id int(11) NOT NULL,
+  single_mode_program_id int(11) NOT NULL,
+  paddock_bgm_cue_name text NOT NULL,
+  paddock_bgm_cuesheet_name text NOT NULL,
+  entrytable_bgm_cue_name text NOT NULL,
+  entrytable_bgm_cuesheet_name text NOT NULL,
+  first_bgm_pattern int(11) NOT NULL,
+  second_bgm_pattern int(11) NOT NULL,
+  result_cutin_bgm_cue_name_1 text NOT NULL,
+  result_cutin_bgm_cuesheet_name_1 text NOT NULL,
+  result_cutin_bgm_cue_name_2 text NOT NULL,
+  result_cutin_bgm_cuesheet_name_2 text NOT NULL,
+  result_cutin_bgm_cue_name_3 text NOT NULL,
+  result_cutin_bgm_cuesheet_name_3 text NOT NULL,
+  result_list_bgm_cue_name_1 text NOT NULL,
+  result_list_bgm_cuesheet_name_1 text NOT NULL,
+  result_list_bgm_cue_name_2 text NOT NULL,
+  result_list_bgm_cuesheet_name_2 text NOT NULL,
+  result_list_bgm_cue_name_3 text NOT NULL,
+  result_list_bgm_cuesheet_name_3 text NOT NULL,
+  difficulty int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 535,
@@ -8829,34 +9739,33 @@ ADD INDEX race_bgm_0_race_type (race_type);
 --
 -- Create table `race`
 --
-CREATE TABLE race
-(
-    id INT(11) NOT NULL
-  , `group` INT(11) NOT NULL
-  , grade INT(11) NOT NULL
-  , course_set INT(11) NOT NULL
-  , thumbnail_id INT(11) NOT NULL
-  , ff_cue_name TEXT NOT NULL
-  , ff_cuesheet_name TEXT NOT NULL
-  , ff_anim INT(11) NOT NULL
-  , ff_camera INT(11) NOT NULL
-  , ff_camera_sub INT(11) NOT NULL
-  , ff_sub INT(11) NOT NULL
-  , goal_gate INT(11) NOT NULL
-  , goal_flower INT(11) NOT NULL
-  , audience INT(11) NOT NULL
-  , entry_num INT(11) NOT NULL
-  , is_dirtgrade INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , start_gate INT(11) NOT NULL
-  , start_gate_panel INT(11) NOT NULL
-  , real_ff_cue_name TEXT NOT NULL
-  , real_ff_cuesheet_name TEXT NOT NULL
-  , result_podium INT(11) NOT NULL
-  , audience_group_id INT(11) NOT NULL
-  , paddock_bg_id INT(11) NOT NULL
-  , change_full_gate INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE race (
+  id int(11) NOT NULL,
+  `group` int(11) NOT NULL,
+  grade int(11) NOT NULL,
+  course_set int(11) NOT NULL,
+  thumbnail_id int(11) NOT NULL,
+  ff_cue_name text NOT NULL,
+  ff_cuesheet_name text NOT NULL,
+  ff_anim int(11) NOT NULL,
+  ff_camera int(11) NOT NULL,
+  ff_camera_sub int(11) NOT NULL,
+  ff_sub int(11) NOT NULL,
+  goal_gate int(11) NOT NULL,
+  goal_flower int(11) NOT NULL,
+  audience int(11) NOT NULL,
+  entry_num int(11) NOT NULL,
+  is_dirtgrade int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  start_gate int(11) NOT NULL,
+  start_gate_panel int(11) NOT NULL,
+  real_ff_cue_name text NOT NULL,
+  real_ff_cuesheet_name text NOT NULL,
+  result_podium int(11) NOT NULL,
+  audience_group_id int(11) NOT NULL,
+  paddock_bg_id int(11) NOT NULL,
+  change_full_gate int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 134,
@@ -8879,14 +9788,13 @@ ADD INDEX race_0_group (`group`);
 --
 -- Create table `price_change`
 --
-CREATE TABLE price_change
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , min_num INT(11) NOT NULL
-  , max_num INT(11) NOT NULL
-  , pay_item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE price_change (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  min_num int(11) NOT NULL,
+  max_num int(11) NOT NULL,
+  pay_item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1820,
@@ -8903,13 +9811,12 @@ ADD INDEX price_change_0_group_id (group_id);
 --
 -- Create table `piece_data`
 --
-CREATE TABLE piece_data
-(
-    id INT(11) NOT NULL
-  , item_place_id INT(11) NOT NULL
-  , start_date TEXT NOT NULL
-  , end_date TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE piece_data (
+  id int(11) NOT NULL,
+  item_place_id int(11) NOT NULL,
+  start_date text NOT NULL,
+  end_date text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 230,
@@ -8920,16 +9827,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `paid_gacha_button_type`
 --
-CREATE TABLE paid_gacha_button_type
-(
-    id INT(11) NOT NULL
-  , gacha_count INT(11) NOT NULL
-  , paid_num INT(11) NOT NULL
-  , draw_guarantee_rarity INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE paid_gacha_button_type (
+  id int(11) NOT NULL,
+  gacha_count int(11) NOT NULL,
+  paid_num int(11) NOT NULL,
+  draw_guarantee_rarity int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -8937,13 +9842,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `note_profile_text_type`
 --
-CREATE TABLE note_profile_text_type
-(
-    id INT(11) NOT NULL
-  , text_type INT(11) NOT NULL
-  , text_category_id INT(11) NOT NULL
-  , sort INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE note_profile_text_type (
+  id int(11) NOT NULL,
+  text_type int(11) NOT NULL,
+  text_category_id int(11) NOT NULL,
+  sort int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 780,
@@ -8960,16 +9864,15 @@ ADD INDEX note_profile_text_type_0_text_type (text_type);
 --
 -- Create table `note_profile`
 --
-CREATE TABLE note_profile
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , text_type INT(11) NOT NULL
-  , lock_type INT(11) NOT NULL
-  , lock_value INT(11) NOT NULL
-  , sort INT(11) NOT NULL
-  , secret_flg INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE note_profile (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  text_type int(11) NOT NULL,
+  lock_type int(11) NOT NULL,
+  lock_value int(11) NOT NULL,
+  sort int(11) NOT NULL,
+  secret_flg int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 564,
@@ -9015,12 +9918,11 @@ ADD INDEX nickname_0_user_show (user_show);
 --
 -- Create table `need_piece_num_data`
 --
-CREATE TABLE need_piece_num_data
-(
-    id INT(11) NOT NULL
-  , rarity INT(11) NOT NULL
-  , piece_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE need_piece_num_data (
+  id int(11) NOT NULL,
+  rarity int(11) NOT NULL,
+  piece_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -9037,21 +9939,20 @@ ADD UNIQUE INDEX need_piece_num_data_0_rarity (rarity);
 --
 -- Create table `name_card_bg`
 --
-CREATE TABLE name_card_bg
-(
-    id INT(11) NOT NULL
-  , other_group INT(11) NOT NULL
-  , bg_group INT(11) NOT NULL
-  , time_group INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub INT(11) NOT NULL
-  , `order` INT(11) NOT NULL
-  , pos_x INT(11) NOT NULL
-  , pos_y INT(11) NOT NULL
-  , width INT(11) NOT NULL
-  , height INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE name_card_bg (
+  id int(11) NOT NULL,
+  other_group int(11) NOT NULL,
+  bg_group int(11) NOT NULL,
+  time_group int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub int(11) NOT NULL,
+  `order` int(11) NOT NULL,
+  pos_x int(11) NOT NULL,
+  pos_y int(11) NOT NULL,
+  width int(11) NOT NULL,
+  height int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 109,
@@ -9062,52 +9963,51 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `mob_hair_color_set`
 --
-CREATE TABLE mob_hair_color_set
-(
-    id INT(11) NOT NULL
-  , hair_color_r1 TEXT NOT NULL
-  , hair_color_r2 TEXT NOT NULL
-  , hair_color_g1 TEXT NOT NULL
-  , hair_color_g2 TEXT NOT NULL
-  , hair_color_b1 TEXT NOT NULL
-  , hair_color_b2 TEXT NOT NULL
-  , hair_toon_color_r1 TEXT NOT NULL
-  , hair_toon_color_r2 TEXT NOT NULL
-  , hair_toon_color_g1 TEXT NOT NULL
-  , hair_toon_color_g2 TEXT NOT NULL
-  , hair_toon_color_b1 TEXT NOT NULL
-  , hair_toon_color_b2 TEXT NOT NULL
-  , mayu_color_r1 TEXT NOT NULL
-  , mayu_color_r2 TEXT NOT NULL
-  , mayu_color_g1 TEXT NOT NULL
-  , mayu_color_g2 TEXT NOT NULL
-  , mayu_color_b1 TEXT NOT NULL
-  , mayu_color_b2 TEXT NOT NULL
-  , mayu_toon_color_r1 TEXT NOT NULL
-  , mayu_toon_color_r2 TEXT NOT NULL
-  , mayu_toon_color_g1 TEXT NOT NULL
-  , mayu_toon_color_g2 TEXT NOT NULL
-  , mayu_toon_color_b1 TEXT NOT NULL
-  , mayu_toon_color_b2 TEXT NOT NULL
-  , eye_color_r1 TEXT NOT NULL
-  , eye_color_r2 TEXT NOT NULL
-  , eye_color_g1 TEXT NOT NULL
-  , eye_color_g2 TEXT NOT NULL
-  , eye_color_b1 TEXT NOT NULL
-  , eye_color_b2 TEXT NOT NULL
-  , tail_color_r1 TEXT NOT NULL
-  , tail_color_r2 TEXT NOT NULL
-  , tail_color_g1 TEXT NOT NULL
-  , tail_color_g2 TEXT NOT NULL
-  , tail_color_b1 TEXT NOT NULL
-  , tail_color_b2 TEXT NOT NULL
-  , tail_toon_color_r1 TEXT NOT NULL
-  , tail_toon_color_r2 TEXT NOT NULL
-  , tail_toon_color_g1 TEXT NOT NULL
-  , tail_toon_color_g2 TEXT NOT NULL
-  , tail_toon_color_b1 TEXT NOT NULL
-  , tail_toon_color_b2 TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE mob_hair_color_set (
+  id int(11) NOT NULL,
+  hair_color_r1 text NOT NULL,
+  hair_color_r2 text NOT NULL,
+  hair_color_g1 text NOT NULL,
+  hair_color_g2 text NOT NULL,
+  hair_color_b1 text NOT NULL,
+  hair_color_b2 text NOT NULL,
+  hair_toon_color_r1 text NOT NULL,
+  hair_toon_color_r2 text NOT NULL,
+  hair_toon_color_g1 text NOT NULL,
+  hair_toon_color_g2 text NOT NULL,
+  hair_toon_color_b1 text NOT NULL,
+  hair_toon_color_b2 text NOT NULL,
+  mayu_color_r1 text NOT NULL,
+  mayu_color_r2 text NOT NULL,
+  mayu_color_g1 text NOT NULL,
+  mayu_color_g2 text NOT NULL,
+  mayu_color_b1 text NOT NULL,
+  mayu_color_b2 text NOT NULL,
+  mayu_toon_color_r1 text NOT NULL,
+  mayu_toon_color_r2 text NOT NULL,
+  mayu_toon_color_g1 text NOT NULL,
+  mayu_toon_color_g2 text NOT NULL,
+  mayu_toon_color_b1 text NOT NULL,
+  mayu_toon_color_b2 text NOT NULL,
+  eye_color_r1 text NOT NULL,
+  eye_color_r2 text NOT NULL,
+  eye_color_g1 text NOT NULL,
+  eye_color_g2 text NOT NULL,
+  eye_color_b1 text NOT NULL,
+  eye_color_b2 text NOT NULL,
+  tail_color_r1 text NOT NULL,
+  tail_color_r2 text NOT NULL,
+  tail_color_g1 text NOT NULL,
+  tail_color_g2 text NOT NULL,
+  tail_color_b1 text NOT NULL,
+  tail_color_b2 text NOT NULL,
+  tail_toon_color_r1 text NOT NULL,
+  tail_toon_color_r2 text NOT NULL,
+  tail_toon_color_g1 text NOT NULL,
+  tail_toon_color_g2 text NOT NULL,
+  tail_toon_color_b1 text NOT NULL,
+  tail_toon_color_b2 text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 736,
@@ -9118,22 +10018,21 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `mob_dress_color_set`
 --
-CREATE TABLE mob_dress_color_set
-(
-    id INT(11) NOT NULL
-  , color_r1 TEXT NOT NULL
-  , color_r2 TEXT NOT NULL
-  , color_g1 TEXT NOT NULL
-  , color_g2 TEXT NOT NULL
-  , color_b1 TEXT NOT NULL
-  , color_b2 TEXT NOT NULL
-  , toon_color_r1 TEXT NOT NULL
-  , toon_color_r2 TEXT NOT NULL
-  , toon_color_g1 TEXT NOT NULL
-  , toon_color_g2 TEXT NOT NULL
-  , toon_color_b1 TEXT NOT NULL
-  , toon_color_b2 TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE mob_dress_color_set (
+  id int(11) NOT NULL,
+  color_r1 text NOT NULL,
+  color_r2 text NOT NULL,
+  color_g1 text NOT NULL,
+  color_g2 text NOT NULL,
+  color_b1 text NOT NULL,
+  color_b2 text NOT NULL,
+  toon_color_r1 text NOT NULL,
+  toon_color_r2 text NOT NULL,
+  toon_color_g1 text NOT NULL,
+  toon_color_g2 text NOT NULL,
+  toon_color_b1 text NOT NULL,
+  toon_color_b2 text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 170,
@@ -9144,28 +10043,27 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `mob_data`
 --
-CREATE TABLE mob_data
-(
-    mob_id INT(11) NOT NULL
-  , chara_face_model INT(11) NOT NULL
-  , chara_skin_color INT(11) NOT NULL
-  , chara_hair_model INT(11) NOT NULL
-  , chara_hair_color INT(11) NOT NULL
-  , chara_height INT(11) NOT NULL
-  , chara_bust_size INT(11) NOT NULL
-  , socks INT(11) NOT NULL
-  , default_personality INT(11) NOT NULL
-  , race_personality INT(11) NOT NULL
-  , race_running_type INT(11) NOT NULL
-  , sex INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , dress_color_id INT(11) NOT NULL
-  , use_live INT(11) NOT NULL
-  , hair_cutoff INT(11) NOT NULL
-  , attachment_model_id INT(11) NOT NULL
-  , capture_type INT(11) NOT NULL
-  , mayu_visible_type INT(11) NOT NULL
-  , PRIMARY KEY (mob_id)
+CREATE TABLE mob_data (
+  mob_id int(11) NOT NULL,
+  chara_face_model int(11) NOT NULL,
+  chara_skin_color int(11) NOT NULL,
+  chara_hair_model int(11) NOT NULL,
+  chara_hair_color int(11) NOT NULL,
+  chara_height int(11) NOT NULL,
+  chara_bust_size int(11) NOT NULL,
+  socks int(11) NOT NULL,
+  default_personality int(11) NOT NULL,
+  race_personality int(11) NOT NULL,
+  race_running_type int(11) NOT NULL,
+  sex int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  dress_color_id int(11) NOT NULL,
+  use_live int(11) NOT NULL,
+  hair_cutoff int(11) NOT NULL,
+  attachment_model_id int(11) NOT NULL,
+  capture_type int(11) NOT NULL,
+  mayu_visible_type int(11) NOT NULL,
+  PRIMARY KEY (mob_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 147,
@@ -9176,12 +10074,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `mission_race_scenario_group`
 --
-CREATE TABLE mission_race_scenario_group
-(
-    id INT(11) NOT NULL
-  , scenario_id INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE mission_race_scenario_group (
+  id int(11) NOT NULL,
+  scenario_id int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -9198,15 +10095,14 @@ ADD INDEX mission_race_scenario_group_0_race_instance_id (race_instance_id);
 --
 -- Create table `mission_race_equate`
 --
-CREATE TABLE mission_race_equate
-(
-    id INT(11) NOT NULL
-  , input_id INT(11) NOT NULL
-  , equate_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE mission_race_equate (
+  id int(11) NOT NULL,
+  input_id int(11) NOT NULL,
+  equate_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 655,
+AVG_ROW_LENGTH = 528,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -9220,29 +10116,28 @@ ADD INDEX mission_race_equate_0_input_id (input_id);
 --
 -- Create table `mission_data`
 --
-CREATE TABLE mission_data
-(
-    id INT(11) NOT NULL
-  , mission_type INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , condition_value_3 INT(11) NOT NULL
-  , condition_value_4 INT(11) NOT NULL
-  , condition_num INT(11) NOT NULL
-  , step_group_id INT(11) NOT NULL
-  , step_order INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , event_id INT(11) NOT NULL
-  , user_show INT(11) NOT NULL
-  , date_check_flg INT(11) NOT NULL
-  , transition_type INT(11) NOT NULL
-  , start_date TEXT NOT NULL
-  , end_date TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE mission_data (
+  id int(11) NOT NULL,
+  mission_type int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  condition_value_3 int(11) NOT NULL,
+  condition_value_4 int(11) NOT NULL,
+  condition_num int(11) NOT NULL,
+  step_group_id int(11) NOT NULL,
+  step_order int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  event_id int(11) NOT NULL,
+  user_show int(11) NOT NULL,
+  date_check_flg int(11) NOT NULL,
+  transition_type int(11) NOT NULL,
+  start_date text NOT NULL,
+  end_date text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 150,
@@ -9259,12 +10154,11 @@ ADD INDEX mission_data_0_mission_type (mission_type);
 --
 -- Create table `mini_mouth_type`
 --
-CREATE TABLE mini_mouth_type
-(
-    id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , reverse_mouth_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE mini_mouth_type (
+  id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  reverse_mouth_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 512,
@@ -9275,32 +10169,36 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `mini_motion_set`
 --
-CREATE TABLE mini_motion_set
-(
-    id INT(11) NOT NULL
-  , label VARCHAR(300) NOT NULL
-  , body_motion TEXT NOT NULL
-  , body_motion_type INT(11) NOT NULL
-  , body_motion_play_type INT(11) NOT NULL
-  , body_motion_scene_type INT(11) NOT NULL
-  , scene_sub_folder TEXT NOT NULL
-  , chara_type_target INT(11) NOT NULL
-  , add_layer_index INT(11) NOT NULL
-  , is_mirror INT(11) NOT NULL
-  , facial_motion TEXT NOT NULL
-  , chara_face_type TEXT NOT NULL
-  , transition_time INT(11) NOT NULL
-  , ear_motion TEXT NOT NULL
-  , is_enable_randome_ear INT(11) NOT NULL
-  , tail_motion TEXT NOT NULL
-  , tail_motion_type INT(11) NOT NULL
-  , is_enable_randome_tail INT(11) NOT NULL
-  , prop_id INT(11) NOT NULL
-  , prop_motion TEXT NOT NULL
-  , prop_motion_scene_type INT(11) NOT NULL
-  , prop_attach_node_name_type INT(11) NOT NULL
-  , is_prop_require_motion_end INT(11) NOT NULL
-  , PRIMARY KEY (label)
+CREATE TABLE mini_motion_set (
+  id int(11) NOT NULL,
+  label varchar(300) NOT NULL,
+  body_motion text NOT NULL,
+  body_motion_type int(11) NOT NULL,
+  body_motion_play_type int(11) NOT NULL,
+  body_motion_scene_type int(11) NOT NULL,
+  scene_sub_folder text NOT NULL,
+  chara_type_target int(11) NOT NULL,
+  add_layer_index int(11) NOT NULL,
+  is_mirror int(11) NOT NULL,
+  facial_motion text NOT NULL,
+  chara_face_type text NOT NULL,
+  transition_time int(11) NOT NULL,
+  ear_motion text NOT NULL,
+  is_enable_randome_ear int(11) NOT NULL,
+  tail_motion text NOT NULL,
+  tail_motion_type int(11) NOT NULL,
+  is_enable_randome_tail int(11) NOT NULL,
+  prop_id int(11) NOT NULL,
+  prop_motion text NOT NULL,
+  prop_motion_scene_type int(11) NOT NULL,
+  prop_attach_node_name_type int(11) NOT NULL,
+  is_prop_require_motion_end int(11) NOT NULL,
+  prop_id_2 int(11) NOT NULL,
+  prop_motion_2 text NOT NULL,
+  prop_motion_scene_type_2 int(11) NOT NULL,
+  prop_attach_node_name_type_2 int(11) NOT NULL,
+  use_tail_in_body_motion int(11) NOT NULL,
+  PRIMARY KEY (label)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 236,
@@ -9315,18 +10213,34 @@ ALTER TABLE mini_motion_set
 ADD INDEX mini_motion_set_0_id (id);
 
 --
+-- Create table `mini_mob`
+--
+CREATE TABLE mini_mob (
+  id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  `body` int(11) NOT NULL,
+  hair int(11) NOT NULL,
+  tail int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 1365,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
 -- Create table `mini_face_type_data`
 --
-CREATE TABLE mini_face_type_data
-(
-    label VARCHAR(300) NOT NULL
-  , eyebrow_l INT(11) NOT NULL
-  , eyebrow_r INT(11) NOT NULL
-  , eye_l INT(11) NOT NULL
-  , eye_r INT(11) NOT NULL
-  , mouth INT(11) NOT NULL
-  , cheek INT(11) NOT NULL
-  , PRIMARY KEY (label)
+CREATE TABLE mini_face_type_data (
+  label varchar(300) NOT NULL,
+  eyebrow_l int(11) NOT NULL,
+  eyebrow_r int(11) NOT NULL,
+  eye_l int(11) NOT NULL,
+  eye_r int(11) NOT NULL,
+  mouth int(11) NOT NULL,
+  cheek int(11) NOT NULL,
+  PRIMARY KEY (label)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 468,
@@ -9337,37 +10251,37 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `mini_bg_chara_motion`
 --
-CREATE TABLE mini_bg_chara_motion
-(
-    id INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , sub_group_id INT(11) NOT NULL
-  , is_mob INT(11) NOT NULL
-  , main_chara_num INT(11) NOT NULL
-  , pos_obj TEXT NOT NULL
-  , position_file TEXT NOT NULL
-  , grid_pos_x INT(11) NOT NULL
-  , grid_pos_y INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , motion_name TEXT NOT NULL
-  , timeline TEXT NOT NULL
-  , timeline_actor TEXT NOT NULL
-  , direction INT(11) NOT NULL
-  , chara_pos_y TEXT NOT NULL
-  , chara_shadow INT(11) NOT NULL
-  , use_grid_pos_job_select INT(11) NOT NULL
-  , position_anim TEXT NOT NULL
-  , fixed_render_order INT(11) NOT NULL
-  , se_cue_name01 TEXT NOT NULL
-  , se_cue_sheet01 TEXT NOT NULL
-  , se_start_frame01 INT(11) NOT NULL
-  , se_cue_name02 TEXT NOT NULL
-  , se_cue_sheet02 TEXT NOT NULL
-  , se_start_frame02 INT(11) NOT NULL
-  , effect_id INT(11) NOT NULL
-  , effect_start_sec TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE mini_bg_chara_motion (
+  id int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  sub_group_id int(11) NOT NULL,
+  is_mob int(11) NOT NULL,
+  main_chara_num int(11) NOT NULL,
+  pos_obj text NOT NULL,
+  position_file text NOT NULL,
+  grid_pos_x int(11) NOT NULL,
+  grid_pos_y int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  motion_name text NOT NULL,
+  timeline text NOT NULL,
+  timeline_actor text NOT NULL,
+  direction int(11) NOT NULL,
+  chara_pos_y text NOT NULL,
+  chara_shadow int(11) NOT NULL,
+  use_grid_pos_job_select int(11) NOT NULL,
+  position_anim text NOT NULL,
+  fixed_render_order int(11) NOT NULL,
+  se_cue_name01 text NOT NULL,
+  se_cue_sheet01 text NOT NULL,
+  se_start_frame01 int(11) NOT NULL,
+  se_cue_name02 text NOT NULL,
+  se_cue_sheet02 text NOT NULL,
+  se_start_frame02 int(11) NOT NULL,
+  effect_id int(11) NOT NULL,
+  effect_start_sec text NOT NULL,
+  second_pos_obj text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 195,
@@ -9384,18 +10298,17 @@ ADD INDEX mini_bg_chara_motion_0_bg_id (bg_id);
 --
 -- Create table `mini_bg`
 --
-CREATE TABLE mini_bg
-(
-    id INT(11) NOT NULL
-  , scene_type INT(11) NOT NULL
-  , release_num INT(11) NOT NULL
-  , size_x INT(11) NOT NULL
-  , size_y INT(11) NOT NULL
-  , grid_offset_x TEXT NOT NULL
-  , grid_offset_y TEXT NOT NULL
-  , dress_id INT(11) NOT NULL
-  , `position` TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE mini_bg (
+  id int(11) NOT NULL,
+  scene_type int(11) NOT NULL,
+  release_num int(11) NOT NULL,
+  size_x int(11) NOT NULL,
+  size_y int(11) NOT NULL,
+  grid_offset_x text NOT NULL,
+  grid_offset_y text NOT NULL,
+  dress_id int(11) NOT NULL,
+  `position` text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -9412,11 +10325,10 @@ ADD INDEX mini_bg_0_scene_type (scene_type);
 --
 -- Create table `meta_r`
 --
-CREATE TABLE meta_r
-(
-    f INT(4) DEFAULT NULL
-  , t INT(4) DEFAULT NULL
-  , d INT(2) DEFAULT NULL
+CREATE TABLE meta_r (
+  f int(4) DEFAULT NULL,
+  t int(4) DEFAULT NULL,
+  d int(2) DEFAULT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 40,
@@ -9439,10 +10351,9 @@ ADD INDEX r1 (d);
 --
 -- Create table `meta_i`
 --
-CREATE TABLE meta_i
-(
-    k TEXT DEFAULT NULL
-  , v TEXT DEFAULT NULL
+CREATE TABLE meta_i (
+  k text DEFAULT NULL,
+  v text DEFAULT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 16384,
@@ -9459,10 +10370,9 @@ ADD UNIQUE INDEX k USING HASH (k);
 --
 -- Create table `meta_c`
 --
-CREATE TABLE meta_c
-(
-    n TEXT DEFAULT NULL
-  , h TEXT DEFAULT NULL
+CREATE TABLE meta_c (
+  n text DEFAULT NULL,
+  h text DEFAULT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 455,
@@ -9479,20 +10389,19 @@ ADD UNIQUE INDEX n USING HASH (n);
 --
 -- Create table `meta_a`
 --
-CREATE TABLE meta_a
-(
-    i INT(11) NOT NULL
-  , n TEXT NOT NULL
-  , d TEXT DEFAULT NULL
-  , g INT(4) NOT NULL
-  , l INT(8) NOT NULL
-  , c INT(8) NOT NULL
-  , h TEXT NOT NULL
-  , m TEXT NOT NULL
-  , k INT(1) NOT NULL
-  , s INT(1) NOT NULL
-  , p INT(4) NOT NULL DEFAULT 0
-  , PRIMARY KEY (i)
+CREATE TABLE meta_a (
+  i int(11) NOT NULL,
+  n text NOT NULL,
+  d text DEFAULT NULL,
+  g int(4) NOT NULL,
+  l int(8) NOT NULL,
+  c int(8) NOT NULL,
+  h text NOT NULL,
+  m text NOT NULL,
+  k int(1) NOT NULL,
+  s int(1) NOT NULL,
+  p int(4) NOT NULL DEFAULT 0,
+  PRIMARY KEY (i)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 184,
@@ -9521,16 +10430,15 @@ ADD INDEX a4 (p);
 --
 -- Create table `map_event_story_data`
 --
-CREATE TABLE map_event_story_data
-(
-    id INT(11) NOT NULL
-  , event_id INT(11) NOT NULL
-  , episode_index_id INT(11) NOT NULL
-  , story_condition_type INT(11) NOT NULL
-  , story_id INT(11) NOT NULL
-  , point_condition_type INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE map_event_story_data (
+  id int(11) NOT NULL,
+  event_id int(11) NOT NULL,
+  episode_index_id int(11) NOT NULL,
+  story_condition_type int(11) NOT NULL,
+  story_id int(11) NOT NULL,
+  point_condition_type int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -9547,19 +10455,18 @@ ADD INDEX map_event_story_data_0_event_id (event_id);
 --
 -- Create table `map_event_mini_motion`
 --
-CREATE TABLE map_event_mini_motion
-(
-    id INT(11) NOT NULL
-  , event_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , stand_motion INT(11) NOT NULL
-  , walk_motion INT(11) NOT NULL
-  , arrive_motion INT(11) NOT NULL
-  , checkpoint_motion INT(11) NOT NULL
-  , tap_motion INT(11) NOT NULL
-  , complete_motion INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE map_event_mini_motion (
+  id int(11) NOT NULL,
+  event_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  stand_motion int(11) NOT NULL,
+  walk_motion int(11) NOT NULL,
+  arrive_motion int(11) NOT NULL,
+  checkpoint_motion int(11) NOT NULL,
+  tap_motion int(11) NOT NULL,
+  complete_motion int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -9576,28 +10483,27 @@ ADD INDEX map_event_mini_motion_0_event_id (event_id);
 --
 -- Create table `map_event_map_point`
 --
-CREATE TABLE map_event_map_point
-(
-    id INT(11) NOT NULL
-  , event_id INT(11) NOT NULL
-  , map_point_id INT(11) NOT NULL
-  , area_id INT(11) NOT NULL
-  , check_point_flag INT(11) NOT NULL
-  , disp_flag INT(11) NOT NULL
-  , next_episode_unlock_map_point_id INT(11) NOT NULL
-  , gauge_num INT(11) NOT NULL
-  , story_id_1 INT(11) NOT NULL
-  , story_id_2 INT(11) NOT NULL
-  , item_category_1 INT(11) NOT NULL
-  , item_id_1 INT(11) NOT NULL
-  , item_num_1 INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , motion_id INT(11) NOT NULL
-  , next_episode_id INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , movie_start_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE map_event_map_point (
+  id int(11) NOT NULL,
+  event_id int(11) NOT NULL,
+  map_point_id int(11) NOT NULL,
+  area_id int(11) NOT NULL,
+  check_point_flag int(11) NOT NULL,
+  disp_flag int(11) NOT NULL,
+  next_episode_unlock_map_point_id int(11) NOT NULL,
+  gauge_num int(11) NOT NULL,
+  story_id_1 int(11) NOT NULL,
+  story_id_2 int(11) NOT NULL,
+  item_category_1 int(11) NOT NULL,
+  item_id_1 int(11) NOT NULL,
+  item_num_1 int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  motion_id int(11) NOT NULL,
+  next_episode_id int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  movie_start_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1638,
@@ -9614,14 +10520,13 @@ ADD INDEX map_event_map_point_0_event_id (event_id);
 --
 -- Create table `map_event_flavor_text`
 --
-CREATE TABLE map_event_flavor_text
-(
-    id INT(11) NOT NULL
-  , event_id INT(11) NOT NULL
-  , image_type INT(11) NOT NULL
-  , story_id INT(11) NOT NULL
-  , story_condition_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE map_event_flavor_text (
+  id int(11) NOT NULL,
+  event_id int(11) NOT NULL,
+  image_type int(11) NOT NULL,
+  story_id int(11) NOT NULL,
+  story_condition_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 910,
@@ -9638,19 +10543,17 @@ ADD INDEX map_event_flavor_text_0_event_id (event_id);
 --
 -- Create table `map_event_data`
 --
-CREATE TABLE map_event_data
-(
-    event_id INT(11) NOT NULL
-  , gauge_max INT(11) NOT NULL
-  , gauge_up_singlemode INT(11) NOT NULL
-  , gauge_up_teamstadium INT(11) NOT NULL
-  , gauge_up_login INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (event_id)
+CREATE TABLE map_event_data (
+  event_id int(11) NOT NULL,
+  gauge_max int(11) NOT NULL,
+  gauge_up_singlemode int(11) NOT NULL,
+  gauge_up_teamstadium int(11) NOT NULL,
+  gauge_up_login int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (event_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -9658,13 +10561,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `map_event_area_data`
 --
-CREATE TABLE map_event_area_data
-(
-    id INT(11) NOT NULL
-  , area_id INT(11) NOT NULL
-  , event_id INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE map_event_area_data (
+  id int(11) NOT NULL,
+  area_id int(11) NOT NULL,
+  event_id int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 4096,
@@ -9681,22 +10583,21 @@ ADD INDEX map_event_area_data_0_event_id (event_id);
 --
 -- Create table `main_story_race_data`
 --
-CREATE TABLE main_story_race_data
-(
-    id INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , race_condition_id INT(11) NOT NULL
-  , clear_rank INT(11) NOT NULL
-  , bonus_group_id INT(11) NOT NULL
-  , bonus_chara_1 INT(11) NOT NULL
-  , bonus_chara_2 INT(11) NOT NULL
-  , bonus_chara_3 INT(11) NOT NULL
-  , gimmick_type INT(11) NOT NULL
-  , gimmick_trigger_skill INT(11) NOT NULL
-  , gimmick_match_race_asset INT(11) NOT NULL
-  , gimmick_unmatch_race_asset INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE main_story_race_data (
+  id int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  race_condition_id int(11) NOT NULL,
+  clear_rank int(11) NOT NULL,
+  bonus_group_id int(11) NOT NULL,
+  bonus_chara_1 int(11) NOT NULL,
+  bonus_chara_2 int(11) NOT NULL,
+  bonus_chara_3 int(11) NOT NULL,
+  gimmick_type int(11) NOT NULL,
+  gimmick_trigger_skill int(11) NOT NULL,
+  gimmick_match_race_asset int(11) NOT NULL,
+  gimmick_unmatch_race_asset int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 819,
@@ -9707,36 +10608,35 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `main_story_race_chara_data`
 --
-CREATE TABLE main_story_race_chara_data
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , bracket_number INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , mob_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , chara_color_type INT(11) NOT NULL
-  , motivation INT(11) NOT NULL
-  , running_style INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , pow INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , proper_distance_short INT(11) NOT NULL
-  , proper_distance_mile INT(11) NOT NULL
-  , proper_distance_middle INT(11) NOT NULL
-  , proper_distance_long INT(11) NOT NULL
-  , proper_running_style_nige INT(11) NOT NULL
-  , proper_running_style_senko INT(11) NOT NULL
-  , proper_running_style_sashi INT(11) NOT NULL
-  , proper_running_style_oikomi INT(11) NOT NULL
-  , proper_ground_turf INT(11) NOT NULL
-  , proper_ground_dirt INT(11) NOT NULL
-  , skill_set_id INT(11) NOT NULL
-  , is_player INT(11) NOT NULL
-  , show_skill_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE main_story_race_chara_data (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  bracket_number int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  mob_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  chara_color_type int(11) NOT NULL,
+  motivation int(11) NOT NULL,
+  running_style int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  pow int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  proper_distance_short int(11) NOT NULL,
+  proper_distance_mile int(11) NOT NULL,
+  proper_distance_middle int(11) NOT NULL,
+  proper_distance_long int(11) NOT NULL,
+  proper_running_style_nige int(11) NOT NULL,
+  proper_running_style_senko int(11) NOT NULL,
+  proper_running_style_sashi int(11) NOT NULL,
+  proper_running_style_oikomi int(11) NOT NULL,
+  proper_ground_turf int(11) NOT NULL,
+  proper_ground_dirt int(11) NOT NULL,
+  skill_set_id int(11) NOT NULL,
+  is_player int(11) NOT NULL,
+  show_skill_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 307,
@@ -9759,14 +10659,13 @@ ADD INDEX main_story_race_chara_data_0_running_style (running_style);
 --
 -- Create table `main_story_race_bonus_condition`
 --
-CREATE TABLE main_story_race_bonus_condition
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE main_story_race_bonus_condition (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1489,
@@ -9783,14 +10682,13 @@ ADD INDEX main_story_race_bonus_condition_0_group_id (group_id);
 --
 -- Create table `main_story_race_bonus`
 --
-CREATE TABLE main_story_race_bonus
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , bonus_type INT(11) NOT NULL
-  , bonus_value INT(11) NOT NULL
-  , condition_group INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE main_story_race_bonus (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  bonus_type int(11) NOT NULL,
+  bonus_value int(11) NOT NULL,
+  condition_group int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1024,
@@ -9807,13 +10705,15 @@ ADD INDEX main_story_race_bonus_0_group_id (group_id);
 --
 -- Create table `main_story_part`
 --
-CREATE TABLE main_story_part
-(
-    id INT(11) NOT NULL
-  , main_story_last_chapter INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , ui_color TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE main_story_part (
+  id int(11) NOT NULL,
+  main_story_last_chapter int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  ui_color text NOT NULL,
+  section_id int(11) NOT NULL,
+  part_index int(11) NOT NULL,
+  is_last_part int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -9824,38 +10724,41 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `main_story_data`
 --
-CREATE TABLE main_story_data
-(
-    id INT(11) NOT NULL
-  , part_id INT(11) NOT NULL
-  , episode_index INT(11) NOT NULL
-  , story_number INT(11) NOT NULL
-  , story_type_1 INT(11) NOT NULL
-  , story_id_1 INT(11) NOT NULL
-  , story_type_2 INT(11) NOT NULL
-  , story_id_2 INT(11) NOT NULL
-  , story_type_3 INT(11) NOT NULL
-  , story_id_3 INT(11) NOT NULL
-  , story_type_4 INT(11) NOT NULL
-  , story_id_4 INT(11) NOT NULL
-  , story_type_5 INT(11) NOT NULL
-  , story_id_5 INT(11) NOT NULL
-  , lock_type_1 INT(11) NOT NULL
-  , lock_value_1_1 INT(11) NOT NULL
-  , lock_value_1_2 INT(11) NOT NULL
-  , lock_type_2 INT(11) NOT NULL
-  , lock_value_2_1 INT(11) NOT NULL
-  , lock_value_2_2 INT(11) NOT NULL
-  , lock_type_3 INT(11) NOT NULL
-  , lock_value_3_1 INT(11) NOT NULL
-  , lock_value_3_2 INT(11) NOT NULL
-  , add_reward_category_1 INT(11) NOT NULL
-  , add_reward_id_1 INT(11) NOT NULL
-  , add_reward_num_1 INT(11) NOT NULL
-  , prev_episode_index INT(11) NOT NULL
-  , next_episode_index INT(11) NOT NULL
-  , display_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE main_story_data (
+  id int(11) NOT NULL,
+  part_id int(11) NOT NULL,
+  episode_index int(11) NOT NULL,
+  story_number int(11) NOT NULL,
+  story_type_1 int(11) NOT NULL,
+  story_id_1 int(11) NOT NULL,
+  story_type_2 int(11) NOT NULL,
+  story_id_2 int(11) NOT NULL,
+  story_type_3 int(11) NOT NULL,
+  story_id_3 int(11) NOT NULL,
+  story_type_4 int(11) NOT NULL,
+  story_id_4 int(11) NOT NULL,
+  story_type_5 int(11) NOT NULL,
+  story_id_5 int(11) NOT NULL,
+  lock_type_1 int(11) NOT NULL,
+  lock_value_1_1 int(11) NOT NULL,
+  lock_value_1_2 int(11) NOT NULL,
+  lock_type_2 int(11) NOT NULL,
+  lock_value_2_1 int(11) NOT NULL,
+  lock_value_2_2 int(11) NOT NULL,
+  lock_type_3 int(11) NOT NULL,
+  lock_value_3_1 int(11) NOT NULL,
+  lock_value_3_2 int(11) NOT NULL,
+  add_reward_category_1 int(11) NOT NULL,
+  add_reward_id_1 int(11) NOT NULL,
+  add_reward_num_1 int(11) NOT NULL,
+  prev_episode_index int(11) NOT NULL,
+  next_episode_index int(11) NOT NULL,
+  display_type int(11) NOT NULL,
+  add_reward_category_2 int(11) NOT NULL,
+  add_reward_id_2 int(11) NOT NULL,
+  add_reward_num_2 int(11) NOT NULL,
+  lock_reference_episode_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 190,
@@ -9899,27 +10802,26 @@ ADD UNIQUE INDEX love_rank_0_rank (`rank`);
 --
 -- Create table `login_bonus_detail`
 --
-CREATE TABLE login_bonus_detail
-(
-    id INT(11) NOT NULL
-  , login_bonus_id INT(11) NOT NULL
-  , `count` INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , item_category_2 INT(11) NOT NULL
-  , item_id_2 INT(11) NOT NULL
-  , item_num_2 INT(11) NOT NULL
-  , item_category_3 INT(11) NOT NULL
-  , item_id_3 INT(11) NOT NULL
-  , item_num_3 INT(11) NOT NULL
-  , item_category_4 INT(11) NOT NULL
-  , item_id_4 INT(11) NOT NULL
-  , item_num_4 INT(11) NOT NULL
-  , item_category_5 INT(11) NOT NULL
-  , item_id_5 INT(11) NOT NULL
-  , item_num_5 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE login_bonus_detail (
+  id int(11) NOT NULL,
+  login_bonus_id int(11) NOT NULL,
+  `count` int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  item_category_2 int(11) NOT NULL,
+  item_id_2 int(11) NOT NULL,
+  item_num_2 int(11) NOT NULL,
+  item_category_3 int(11) NOT NULL,
+  item_id_3 int(11) NOT NULL,
+  item_num_3 int(11) NOT NULL,
+  item_category_4 int(11) NOT NULL,
+  item_id_4 int(11) NOT NULL,
+  item_num_4 int(11) NOT NULL,
+  item_category_5 int(11) NOT NULL,
+  item_id_5 int(11) NOT NULL,
+  item_num_5 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 168,
@@ -9942,26 +10844,25 @@ ADD UNIQUE INDEX login_bonus_id (login_bonus_id, `count`);
 --
 -- Create table `login_bonus_data`
 --
-CREATE TABLE login_bonus_data
-(
-    id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , count_num INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , stamp_id INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , step INT(11) NOT NULL
-  , gift_message_id INT(11) NOT NULL
-  , anime_file_id INT(11) NOT NULL
-  , anime_file_label TEXT NOT NULL
-  , new_start_date TEXT NOT NULL
-  , start_date TEXT NOT NULL
-  , end_date TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE login_bonus_data (
+  id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  count_num int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  stamp_id int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  step int(11) NOT NULL,
+  gift_message_id int(11) NOT NULL,
+  anime_file_id int(11) NOT NULL,
+  anime_file_label text NOT NULL,
+  new_start_date text NOT NULL,
+  start_date text NOT NULL,
+  end_date text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 116,
+AVG_ROW_LENGTH = 305,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -9981,18 +10882,17 @@ ADD INDEX login_bonus_data_0_type (type);
 --
 -- Create table `login_bonus_chara`
 --
-CREATE TABLE login_bonus_chara
-(
-    id INT(11) NOT NULL
-  , login_bonus_detail_id INT(11) NOT NULL
-  , chara_num INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , pose_id INT(11) NOT NULL
-  , chara_id_2 INT(11) NOT NULL
-  , dress_id_2 INT(11) NOT NULL
-  , pose_id_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE login_bonus_chara (
+  id int(11) NOT NULL,
+  login_bonus_detail_id int(11) NOT NULL,
+  chara_num int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  pose_id int(11) NOT NULL,
+  chara_id_2 int(11) NOT NULL,
+  dress_id_2 int(11) NOT NULL,
+  pose_id_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1260,
@@ -10009,11 +10909,10 @@ ADD UNIQUE INDEX login_bonus_chara_0_login_bonus_detail_id (login_bonus_detail_i
 --
 -- Create table `live_permission_data`
 --
-CREATE TABLE live_permission_data
-(
-    music_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , PRIMARY KEY (music_id, chara_id)
+CREATE TABLE live_permission_data (
+  music_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  PRIMARY KEY (music_id, chara_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 82,
@@ -10030,19 +10929,17 @@ ADD INDEX live_permission_data_0_music_id (music_id);
 --
 -- Create table `live_extra_data`
 --
-CREATE TABLE live_extra_data
-(
-    id INT(11) NOT NULL
-  , music_id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , next_music_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE live_extra_data (
+  id int(11) NOT NULL,
+  music_id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  next_music_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -10056,27 +10953,26 @@ ADD INDEX live_extra_data_0_music_id (music_id);
 --
 -- Create table `live_data`
 --
-CREATE TABLE live_data
-(
-    music_id INT(11) NOT NULL
-  , sort INT(11) NOT NULL
-  , music_type INT(11) NOT NULL
-  , title_color_top TEXT NOT NULL
-  , title_color_bottom TEXT NOT NULL
-  , condition_type INT(11) NOT NULL
-  , song_chara_type INT(11) NOT NULL
-  , live_member_number INT(11) NOT NULL
-  , default_main_dress INT(11) NOT NULL
-  , default_main_dress_color INT(11) NOT NULL
-  , default_mob_dress INT(11) NOT NULL
-  , default_mob_dress_color INT(11) NOT NULL
-  , backdancer_order INT(11) NOT NULL
-  , backdancer_dress INT(11) NOT NULL
-  , backdancer_dress_color INT(11) NOT NULL
-  , has_live INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (music_id)
+CREATE TABLE live_data (
+  music_id int(11) NOT NULL,
+  sort int(11) NOT NULL,
+  music_type int(11) NOT NULL,
+  title_color_top text NOT NULL,
+  title_color_bottom text NOT NULL,
+  condition_type int(11) NOT NULL,
+  song_chara_type int(11) NOT NULL,
+  live_member_number int(11) NOT NULL,
+  default_main_dress int(11) NOT NULL,
+  default_main_dress_color int(11) NOT NULL,
+  default_mob_dress int(11) NOT NULL,
+  default_mob_dress_color int(11) NOT NULL,
+  backdancer_order int(11) NOT NULL,
+  backdancer_dress int(11) NOT NULL,
+  backdancer_dress_color int(11) NOT NULL,
+  has_live int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (music_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 655,
@@ -10091,79 +10987,32 @@ ALTER TABLE live_data
 ADD UNIQUE INDEX sort (sort);
 
 --
--- Create table `limited_exchange_reward`
---
-CREATE TABLE limited_exchange_reward
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , odds INT(11) NOT NULL
-  , item_exchange_id INT(11) NOT NULL
-  , ribbon_value INT(11) NOT NULL
-  , PRIMARY KEY (id)
-)
-ENGINE = INNODB,
-AVG_ROW_LENGTH = 74,
-CHARACTER SET utf8mb4,
-COLLATE utf8mb4_general_ci,
-ROW_FORMAT = DYNAMIC;
-
---
--- Create table `limited_exchange`
---
-CREATE TABLE limited_exchange
-(
-    id INT(11) NOT NULL
-  , item_exchange_top_id INT(11) NOT NULL
-  , open_value INT(11) NOT NULL
-  , item_lineup_value INT(11) NOT NULL
-  , odds_id INT(11) NOT NULL
-  , daily_race_odds INT(11) NOT NULL
-  , daily_race_ceiling INT(11) NOT NULL
-  , legend_race_odds INT(11) NOT NULL
-  , legend_race_ceiling INT(11) NOT NULL
-  , single_mode_odds INT(11) NOT NULL
-  , single_mode_ceiling INT(11) NOT NULL
-  , team_stadium_odds INT(11) NOT NULL
-  , team_stadium_ceiling INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
-)
-ENGINE = INNODB,
-AVG_ROW_LENGTH = 5461,
-CHARACTER SET utf8mb4,
-COLLATE utf8mb4_general_ci,
-ROW_FORMAT = DYNAMIC;
-
---
 -- Create table `legend_race_npc`
 --
-CREATE TABLE legend_race_npc
-(
-    id INT(11) NOT NULL
-  , npc_group_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , mob_id INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , pow INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , proper_distance_short INT(11) NOT NULL
-  , proper_distance_mile INT(11) NOT NULL
-  , proper_distance_middle INT(11) NOT NULL
-  , proper_distance_long INT(11) NOT NULL
-  , proper_running_style_nige INT(11) NOT NULL
-  , proper_running_style_senko INT(11) NOT NULL
-  , proper_running_style_sashi INT(11) NOT NULL
-  , proper_running_style_oikomi INT(11) NOT NULL
-  , proper_ground_turf INT(11) NOT NULL
-  , proper_ground_dirt INT(11) NOT NULL
-  , skill_set_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE legend_race_npc (
+  id int(11) NOT NULL,
+  npc_group_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  mob_id int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  pow int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  proper_distance_short int(11) NOT NULL,
+  proper_distance_mile int(11) NOT NULL,
+  proper_distance_middle int(11) NOT NULL,
+  proper_distance_long int(11) NOT NULL,
+  proper_running_style_nige int(11) NOT NULL,
+  proper_running_style_senko int(11) NOT NULL,
+  proper_running_style_sashi int(11) NOT NULL,
+  proper_running_style_oikomi int(11) NOT NULL,
+  proper_ground_turf int(11) NOT NULL,
+  proper_ground_dirt int(11) NOT NULL,
+  skill_set_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 184,
@@ -10174,18 +11023,16 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `legend_race_cutt_chara_data`
 --
-CREATE TABLE legend_race_cutt_chara_data
-(
-    id INT(11) NOT NULL
-  , sub_id INT(11) NOT NULL
-  , chara_num INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , target_timeline INT(11) NOT NULL
-  , target_list_index INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE legend_race_cutt_chara_data (
+  id int(11) NOT NULL,
+  sub_id int(11) NOT NULL,
+  chara_num int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  target_timeline int(11) NOT NULL,
+  target_list_index int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -10199,31 +11046,30 @@ ADD INDEX legend_race_cutt_chara_data_0_sub_id_1_chara_num (sub_id, chara_num);
 --
 -- Create table `legend_race_boss_npc`
 --
-CREATE TABLE legend_race_boss_npc
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , nickname_id INT(11) NOT NULL
-  , card_rarity_data_id INT(11) NOT NULL
-  , post INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , pow INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , proper_distance_short INT(11) NOT NULL
-  , proper_distance_mile INT(11) NOT NULL
-  , proper_distance_middle INT(11) NOT NULL
-  , proper_distance_long INT(11) NOT NULL
-  , proper_running_style_nige INT(11) NOT NULL
-  , proper_running_style_senko INT(11) NOT NULL
-  , proper_running_style_sashi INT(11) NOT NULL
-  , proper_running_style_oikomi INT(11) NOT NULL
-  , proper_ground_turf INT(11) NOT NULL
-  , proper_ground_dirt INT(11) NOT NULL
-  , skill_set_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE legend_race_boss_npc (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  nickname_id int(11) NOT NULL,
+  card_rarity_data_id int(11) NOT NULL,
+  post int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  pow int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  proper_distance_short int(11) NOT NULL,
+  proper_distance_mile int(11) NOT NULL,
+  proper_distance_middle int(11) NOT NULL,
+  proper_distance_long int(11) NOT NULL,
+  proper_running_style_nige int(11) NOT NULL,
+  proper_running_style_senko int(11) NOT NULL,
+  proper_running_style_sashi int(11) NOT NULL,
+  proper_running_style_oikomi int(11) NOT NULL,
+  proper_ground_turf int(11) NOT NULL,
+  proper_ground_dirt int(11) NOT NULL,
+  skill_set_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 512,
@@ -10234,12 +11080,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `legend_race_billing`
 --
-CREATE TABLE legend_race_billing
-(
-    id INT(11) NOT NULL
-  , frequency INT(11) NOT NULL
-  , pay_cost INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE legend_race_billing (
+  id int(11) NOT NULL,
+  frequency int(11) NOT NULL,
+  pay_cost int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 16384,
@@ -10250,45 +11095,44 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `legend_race`
 --
-CREATE TABLE legend_race
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , legend_bg_id INT(11) NOT NULL
-  , legend_bg_sub_id INT(11) NOT NULL
-  , image_id INT(11) NOT NULL
-  , difficulty INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , season INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , ground INT(11) NOT NULL
-  , legend_race_boss_npc_id INT(11) NOT NULL
-  , cost_num INT(11) NOT NULL
-  , drop_reward_odds_id INT(11) NOT NULL
-  , victory_reward_odds_id INT(11) NOT NULL
-  , first_clear_item_category_1 INT(11) NOT NULL
-  , first_clear_item_id_1 INT(11) NOT NULL
-  , first_clear_item_num_1 INT(11) NOT NULL
-  , first_clear_item_category_2 INT(11) NOT NULL
-  , first_clear_item_id_2 INT(11) NOT NULL
-  , first_clear_item_num_2 INT(11) NOT NULL
-  , first_clear_item_category_3 INT(11) NOT NULL
-  , first_clear_item_id_3 INT(11) NOT NULL
-  , first_clear_item_num_3 INT(11) NOT NULL
-  , pick_up_item_category_1 INT(11) NOT NULL
-  , pick_up_item_id_1 INT(11) NOT NULL
-  , pick_up_item_num_1 INT(11) NOT NULL
-  , pick_up_item_category_2 INT(11) NOT NULL
-  , pick_up_item_id_2 INT(11) NOT NULL
-  , pick_up_item_num_2 INT(11) NOT NULL
-  , pick_up_item_category_3 INT(11) NOT NULL
-  , pick_up_item_id_3 INT(11) NOT NULL
-  , pick_up_item_num_3 INT(11) NOT NULL
-  , notice_date INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , has_unique_bg_env INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE legend_race (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  legend_bg_id int(11) NOT NULL,
+  legend_bg_sub_id int(11) NOT NULL,
+  image_id int(11) NOT NULL,
+  difficulty int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  season int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  ground int(11) NOT NULL,
+  legend_race_boss_npc_id int(11) NOT NULL,
+  cost_num int(11) NOT NULL,
+  drop_reward_odds_id int(11) NOT NULL,
+  victory_reward_odds_id int(11) NOT NULL,
+  first_clear_item_category_1 int(11) NOT NULL,
+  first_clear_item_id_1 int(11) NOT NULL,
+  first_clear_item_num_1 int(11) NOT NULL,
+  first_clear_item_category_2 int(11) NOT NULL,
+  first_clear_item_id_2 int(11) NOT NULL,
+  first_clear_item_num_2 int(11) NOT NULL,
+  first_clear_item_category_3 int(11) NOT NULL,
+  first_clear_item_id_3 int(11) NOT NULL,
+  first_clear_item_num_3 int(11) NOT NULL,
+  pick_up_item_category_1 int(11) NOT NULL,
+  pick_up_item_id_1 int(11) NOT NULL,
+  pick_up_item_num_1 int(11) NOT NULL,
+  pick_up_item_category_2 int(11) NOT NULL,
+  pick_up_item_id_2 int(11) NOT NULL,
+  pick_up_item_num_2 int(11) NOT NULL,
+  pick_up_item_category_3 int(11) NOT NULL,
+  pick_up_item_id_3 int(11) NOT NULL,
+  pick_up_item_num_3 int(11) NOT NULL,
+  notice_date int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  has_unique_bg_env int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 496,
@@ -10311,15 +11155,14 @@ ADD INDEX legend_race_0_race_instance_id (race_instance_id);
 --
 -- Create table `jukebox_setlist_singer_data`
 --
-CREATE TABLE jukebox_setlist_singer_data
-(
-    id INT(11) NOT NULL
-  , setlist_music_id INT(11) NOT NULL
-  , performer INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE jukebox_setlist_singer_data (
+  id int(11) NOT NULL,
+  setlist_music_id int(11) NOT NULL,
+  performer int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 54,
+AVG_ROW_LENGTH = 48,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -10333,17 +11176,16 @@ ADD INDEX jukebox_setlist_singer_data_0_setlist_music_id (setlist_music_id);
 --
 -- Create table `jukebox_setlist_music_data`
 --
-CREATE TABLE jukebox_setlist_music_data
-(
-    id INT(11) NOT NULL
-  , setlist_id INT(11) NOT NULL
-  , set_order INT(11) NOT NULL
-  , music_id INT(11) NOT NULL
-  , play_length INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE jukebox_setlist_music_data (
+  id int(11) NOT NULL,
+  setlist_id int(11) NOT NULL,
+  set_order int(11) NOT NULL,
+  music_id int(11) NOT NULL,
+  play_length int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 102,
+AVG_ROW_LENGTH = 60,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -10357,16 +11199,15 @@ ADD INDEX jukebox_setlist_music_data_0_setlist_id (setlist_id);
 --
 -- Create table `jukebox_setlist_data`
 --
-CREATE TABLE jukebox_setlist_data
-(
-    id INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE jukebox_setlist_data (
+  id int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 2730,
+AVG_ROW_LENGTH = 1638,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -10374,27 +11215,26 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `jukebox_music_data`
 --
-CREATE TABLE jukebox_music_data
-(
-    music_id INT(11) NOT NULL
-  , sort INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , is_hidden INT(11) NOT NULL
-  , version_type INT(11) NOT NULL
-  , request_type INT(11) NOT NULL
-  , lamp_color INT(11) NOT NULL
-  , lamp_animation INT(11) NOT NULL
-  , name_texture_length INT(11) NOT NULL
-  , song_type INT(11) NOT NULL
-  , bgm_cue_name_short TEXT NOT NULL
-  , bgm_cuesheet_name_short TEXT NOT NULL
-  , bgm_cue_name_gamesize TEXT NOT NULL
-  , bgm_cuesheet_name_gamesize TEXT NOT NULL
-  , short_length INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , alter_jacket INT(11) NOT NULL
-  , PRIMARY KEY (music_id)
+CREATE TABLE jukebox_music_data (
+  music_id int(11) NOT NULL,
+  sort int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  is_hidden int(11) NOT NULL,
+  version_type int(11) NOT NULL,
+  request_type int(11) NOT NULL,
+  lamp_color int(11) NOT NULL,
+  lamp_animation int(11) NOT NULL,
+  name_texture_length int(11) NOT NULL,
+  song_type int(11) NOT NULL,
+  bgm_cue_name_short text NOT NULL,
+  bgm_cuesheet_name_short text NOT NULL,
+  bgm_cue_name_gamesize text NOT NULL,
+  bgm_cuesheet_name_gamesize text NOT NULL,
+  short_length int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  alter_jacket int(11) NOT NULL,
+  PRIMARY KEY (music_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 819,
@@ -10417,12 +11257,11 @@ ADD UNIQUE INDEX sort (sort);
 --
 -- Create table `jukebox_motion_data`
 --
-CREATE TABLE jukebox_motion_data
-(
-    id INT(11) NOT NULL
-  , song_type INT(11) NOT NULL
-  , motion_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE jukebox_motion_data (
+  id int(11) NOT NULL,
+  song_type int(11) NOT NULL,
+  motion_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1024,
@@ -10439,15 +11278,14 @@ ADD INDEX jukebox_motion_data_0_song_type (song_type);
 --
 -- Create table `jukebox_comment`
 --
-CREATE TABLE jukebox_comment
-(
-    id INT(11) NOT NULL
-  , comment_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , comment_type INT(11) NOT NULL
-  , variation_type INT(11) NOT NULL
-  , variation_value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE jukebox_comment (
+  id int(11) NOT NULL,
+  comment_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  comment_type int(11) NOT NULL,
+  variation_type int(11) NOT NULL,
+  variation_value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 125,
@@ -10468,14 +11306,176 @@ ALTER TABLE jukebox_comment
 ADD INDEX jukebox_comment_0_comment_id (comment_id);
 
 --
+-- Create table `jobs_reward_sort_disp_order`
+--
+CREATE TABLE jobs_reward_sort_disp_order (
+  id int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 409,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `jobs_reward_sort_disp_order_0_item_category_1_item_id` on table `jobs_reward_sort_disp_order`
+--
+ALTER TABLE jobs_reward_sort_disp_order
+ADD INDEX jobs_reward_sort_disp_order_0_item_category_1_item_id (item_category, item_id);
+
+--
+-- Create table `jobs_reward`
+--
+CREATE TABLE jobs_reward (
+  id int(11) NOT NULL,
+  place_id int(11) NOT NULL,
+  genre_id int(11) NOT NULL,
+  main_reward_slots_id int(11) NOT NULL,
+  main_reward_1_item_disp_type int(11) NOT NULL,
+  main_reward_1_item_category int(11) NOT NULL,
+  main_reward_1_item_id int(11) NOT NULL,
+  main_reward_1_item_num int(11) NOT NULL,
+  main_reward_2_item_disp_type int(11) NOT NULL,
+  main_reward_2_item_category int(11) NOT NULL,
+  main_reward_2_item_id int(11) NOT NULL,
+  main_reward_2_item_num int(11) NOT NULL,
+  main_reward_3_item_disp_type int(11) NOT NULL,
+  main_reward_3_item_category int(11) NOT NULL,
+  main_reward_3_item_id int(11) NOT NULL,
+  main_reward_3_item_num int(11) NOT NULL,
+  main_reward_4_item_disp_type int(11) NOT NULL,
+  main_reward_4_item_category int(11) NOT NULL,
+  main_reward_4_item_id int(11) NOT NULL,
+  main_reward_4_item_num int(11) NOT NULL,
+  main_reward_5_item_disp_type int(11) NOT NULL,
+  main_reward_5_item_category int(11) NOT NULL,
+  main_reward_5_item_id int(11) NOT NULL,
+  main_reward_5_item_num int(11) NOT NULL,
+  main_reward_6_item_disp_type int(11) NOT NULL,
+  main_reward_6_item_category int(11) NOT NULL,
+  main_reward_6_item_id int(11) NOT NULL,
+  main_reward_6_item_num int(11) NOT NULL,
+  main_reward_7_item_disp_type int(11) NOT NULL,
+  main_reward_7_item_category int(11) NOT NULL,
+  main_reward_7_item_id int(11) NOT NULL,
+  main_reward_7_item_num int(11) NOT NULL,
+  main_reward_8_item_disp_type int(11) NOT NULL,
+  main_reward_8_item_category int(11) NOT NULL,
+  main_reward_8_item_id int(11) NOT NULL,
+  main_reward_8_item_num int(11) NOT NULL,
+  main_reward_9_item_disp_type int(11) NOT NULL,
+  main_reward_9_item_category int(11) NOT NULL,
+  main_reward_9_item_id int(11) NOT NULL,
+  main_reward_9_item_num int(11) NOT NULL,
+  random_drop_reward_group_id int(11) NOT NULL,
+  money_reward_item_odds_group_id int(11) NOT NULL,
+  money_min int(11) NOT NULL,
+  support_point_reward_item_odds_group_id int(11) NOT NULL,
+  support_point_min int(11) NOT NULL,
+  trainer_medal int(11) NOT NULL,
+  fan_num_odds_group_id int(11) NOT NULL,
+  fan_num_min int(11) NOT NULL,
+  love_point int(11) NOT NULL,
+  minutes_to_job_complete int(11) NOT NULL,
+  story_event_event_pt int(11) NOT NULL,
+  story_event_roulette_coin int(11) NOT NULL,
+  factor_research_gauge_up int(11) NOT NULL,
+  campaign_walking_gauge_up int(11) NOT NULL,
+  training_challenge_reward_coin int(11) NOT NULL,
+  training_report_pt int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 862,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `jobs_reward_0_place_id` on table `jobs_reward`
+--
+ALTER TABLE jobs_reward
+ADD INDEX jobs_reward_0_place_id (place_id);
+
+--
+-- Create table `jobs_random_drop_reward`
+--
+CREATE TABLE jobs_random_drop_reward (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `jobs_random_drop_reward_0_group_id` on table `jobs_random_drop_reward`
+--
+ALTER TABLE jobs_random_drop_reward
+ADD INDEX jobs_random_drop_reward_0_group_id (group_id);
+
+--
+-- Create table `jobs_point_limit`
+--
+CREATE TABLE jobs_point_limit (
+  id int(11) NOT NULL,
+  jobs_story_event_point_limit int(11) NOT NULL,
+  jobs_story_event_roulette_coin_limit int(11) NOT NULL,
+  jobs_training_challenge_coin_limit int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `jobs_place`
+--
+CREATE TABLE jobs_place (
+  id int(11) NOT NULL,
+  race_track_id int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 1170,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `jobs_genre`
+--
+CREATE TABLE jobs_genre (
+  id int(11) NOT NULL,
+  mini_bg_id_1 int(11) NOT NULL,
+  mini_bg_id_2 int(11) NOT NULL,
+  mini_bg_id_3 int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 4096,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
 -- Create table `item_place`
 --
-CREATE TABLE item_place
-(
-    id INT(11) NOT NULL
-  , transition_type INT(11) NOT NULL
-  , transition_value INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
+CREATE TABLE item_place (
+  id int(11) NOT NULL,
+  transition_type int(11) NOT NULL,
+  transition_value int(11) NOT NULL,
+  start_date int(11) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 117,
@@ -10498,11 +11498,10 @@ ADD INDEX item_place_0_id (id);
 --
 -- Create table `item_group`
 --
-CREATE TABLE item_group
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE item_group (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 468,
@@ -10519,17 +11518,16 @@ ADD INDEX item_group_0_group_id (group_id);
 --
 -- Create table `item_exchange_top`
 --
-CREATE TABLE item_exchange_top
-(
-    id INT(11) NOT NULL
-  , item_exchange_disp_order INT(11) NOT NULL
-  , item_exchange_type INT(11) NOT NULL
-  , item_top_category INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , is_anniv_shop_top INT(11) NOT NULL
-  , shop_enter_trigger INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE item_exchange_top (
+  id int(11) NOT NULL,
+  item_exchange_disp_order int(11) NOT NULL,
+  item_exchange_type int(11) NOT NULL,
+  item_top_category int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  is_anniv_shop_top int(11) NOT NULL,
+  shop_enter_trigger int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 780,
@@ -10546,27 +11544,26 @@ ADD INDEX item_exchange_top_0_item_top_category (item_top_category);
 --
 -- Create table `item_exchange`
 --
-CREATE TABLE item_exchange
-(
-    id INT(11) NOT NULL
-  , item_exchange_top_id INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , change_item_limit_type INT(11) NOT NULL
-  , change_item_limit_num INT(11) NOT NULL
-  , change_item_category INT(11) NOT NULL
-  , change_item_id INT(11) NOT NULL
-  , change_item_num INT(11) NOT NULL
-  , additional_piece_num INT(11) NOT NULL
-  , pay_item_category INT(11) NOT NULL
-  , pay_item_id INT(11) NOT NULL
-  , pay_item_num INT(11) NOT NULL
-  , price_change_group_id INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE item_exchange (
+  id int(11) NOT NULL,
+  item_exchange_top_id int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  change_item_limit_type int(11) NOT NULL,
+  change_item_limit_num int(11) NOT NULL,
+  change_item_category int(11) NOT NULL,
+  change_item_id int(11) NOT NULL,
+  change_item_num int(11) NOT NULL,
+  additional_piece_num int(11) NOT NULL,
+  pay_item_category int(11) NOT NULL,
+  pay_item_id int(11) NOT NULL,
+  pay_item_num int(11) NOT NULL,
+  price_change_group_id int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 163,
@@ -10589,31 +11586,30 @@ ADD INDEX item_exchange_0_pay_item_id (pay_item_id);
 --
 -- Create table `item_data`
 --
-CREATE TABLE item_data
-(
-    id INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , effect_type_1 INT(11) NOT NULL
-  , effect_target_1 INT(11) NOT NULL
-  , effect_value_1 INT(11) NOT NULL
-  , effect_type_2 INT(11) NOT NULL
-  , effect_target_2 INT(11) NOT NULL
-  , effect_value_2 INT(11) NOT NULL
-  , add_value_1 INT(11) NOT NULL
-  , add_value_2 INT(11) NOT NULL
-  , add_value_3 INT(11) NOT NULL
-  , limit_num INT(11) NOT NULL
-  , sort INT(11) NOT NULL
-  , rare INT(11) NOT NULL
-  , enable_request INT(11) NOT NULL
-  , request_reward INT(11) NOT NULL
-  , item_place_id INT(11) NOT NULL
-  , sell_item_id INT(11) NOT NULL
-  , sell_price INT(11) NOT NULL
-  , start_date TEXT NOT NULL
-  , end_date TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE item_data (
+  id int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  effect_type_1 int(11) NOT NULL,
+  effect_target_1 int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  effect_type_2 int(11) NOT NULL,
+  effect_target_2 int(11) NOT NULL,
+  effect_value_2 int(11) NOT NULL,
+  add_value_1 int(11) NOT NULL,
+  add_value_2 int(11) NOT NULL,
+  add_value_3 int(11) NOT NULL,
+  limit_num int(11) NOT NULL,
+  sort int(11) NOT NULL,
+  rare int(11) NOT NULL,
+  enable_request int(11) NOT NULL,
+  request_reward int(11) NOT NULL,
+  item_place_id int(11) NOT NULL,
+  sell_item_id int(11) NOT NULL,
+  sell_price int(11) NOT NULL,
+  start_date text NOT NULL,
+  end_date text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 292,
@@ -10658,16 +11654,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `home_walk_group`
 --
-CREATE TABLE home_walk_group
-(
-    id INT(11) NOT NULL
-  , chara_id_1 INT(11) NOT NULL
-  , enable_eat_1 INT(11) NOT NULL
-  , chara_id_2 INT(11) NOT NULL
-  , enable_eat_2 INT(11) NOT NULL
-  , chara_id_3 INT(11) NOT NULL
-  , enable_eat_3 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE home_walk_group (
+  id int(11) NOT NULL,
+  chara_id_1 int(11) NOT NULL,
+  enable_eat_1 int(11) NOT NULL,
+  chara_id_2 int(11) NOT NULL,
+  enable_eat_2 int(11) NOT NULL,
+  chara_id_3 int(11) NOT NULL,
+  enable_eat_3 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 321,
@@ -10678,22 +11673,21 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `home_story_trigger`
 --
-CREATE TABLE home_story_trigger
-(
-    id INT(11) NOT NULL
-  , pos_id INT(11) NOT NULL
-  , home_event_type INT(11) NOT NULL
-  , num INT(11) NOT NULL
-  , story_id INT(11) NOT NULL
-  , chara_id_1 INT(11) NOT NULL
-  , chara_id_2 INT(11) NOT NULL
-  , chara_id_3 INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , gallery_chara_id INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , available_gallery_key INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE home_story_trigger (
+  id int(11) NOT NULL,
+  pos_id int(11) NOT NULL,
+  home_event_type int(11) NOT NULL,
+  num int(11) NOT NULL,
+  story_id int(11) NOT NULL,
+  chara_id_1 int(11) NOT NULL,
+  chara_id_2 int(11) NOT NULL,
+  chara_id_3 int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  gallery_chara_id int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  available_gallery_key int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 183,
@@ -10728,13 +11722,12 @@ ADD INDEX home_story_trigger_0_pos_id (pos_id);
 --
 -- Create table `home_prop_setting`
 --
-CREATE TABLE home_prop_setting
-(
-    pos_id INT(11) NOT NULL
-  , personality INT(11) NOT NULL
-  , prop_id INT(11) NOT NULL
-  , attach_node INT(11) NOT NULL
-  , PRIMARY KEY (pos_id, personality)
+CREATE TABLE home_prop_setting (
+  pos_id int(11) NOT NULL,
+  personality int(11) NOT NULL,
+  prop_id int(11) NOT NULL,
+  attach_node int(11) NOT NULL,
+  PRIMARY KEY (pos_id, personality)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 819,
@@ -10745,21 +11738,20 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `home_poster_data`
 --
-CREATE TABLE home_poster_data
-(
-    id INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , height INT(11) NOT NULL
-  , width INT(11) NOT NULL
-  , posi_vertical INT(11) NOT NULL
-  , posi_horizontal INT(11) NOT NULL
-  , detail_value INT(11) NOT NULL
-  , url_value INT(11) NOT NULL
-  , url TEXT NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , pos_index INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE home_poster_data (
+  id int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  height int(11) NOT NULL,
+  width int(11) NOT NULL,
+  posi_vertical int(11) NOT NULL,
+  posi_horizontal int(11) NOT NULL,
+  detail_value int(11) NOT NULL,
+  url_value int(11) NOT NULL,
+  url text NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  pos_index int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1170,
@@ -10776,16 +11768,17 @@ ADD INDEX home_poster_data_0_priority (priority);
 --
 -- Create table `home_event_schedule`
 --
-CREATE TABLE home_event_schedule
-(
-    id INT(11) NOT NULL
-  , event_id INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , event_story_type INT(11) NOT NULL
-  , event_walk_type INT(11) NOT NULL
-  , event_footer_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE home_event_schedule (
+  id int(11) NOT NULL,
+  event_id int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  event_story_type int(11) NOT NULL,
+  event_walk_type int(11) NOT NULL,
+  event_footer_type int(11) NOT NULL,
+  event_walk_propid int(11) NOT NULL,
+  event_footer_propid int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -10796,21 +11789,20 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `home_env_setting`
 --
-CREATE TABLE home_env_setting
-(
-    id INT(11) NOT NULL
-  , home_set_id INT(11) NOT NULL
-  , home_event_type INT(11) NOT NULL
-  , resource_event_check INT(11) NOT NULL
-  , season INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , timezone INT(11) NOT NULL
-  , resource INT(11) NOT NULL
-  , bgm_cue_name TEXT NOT NULL
-  , bgm_cuesheet_name TEXT NOT NULL
-  , env_cue_name TEXT NOT NULL
-  , env_cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE home_env_setting (
+  id int(11) NOT NULL,
+  home_set_id int(11) NOT NULL,
+  home_event_type int(11) NOT NULL,
+  resource_event_check int(11) NOT NULL,
+  season int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  timezone int(11) NOT NULL,
+  resource int(11) NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet_name text NOT NULL,
+  env_cue_name text NOT NULL,
+  env_cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 178,
@@ -10827,21 +11819,21 @@ ADD UNIQUE INDEX home_env_setting_index (home_set_id, home_event_type, season, w
 --
 -- Create table `home_eat`
 --
-CREATE TABLE home_eat
-(
-    chara_id INT(11) NOT NULL
-  , body_shape INT(11) NOT NULL
-  , prop_id_right INT(11) NOT NULL
-  , prop_eat_animation_right TEXT NOT NULL
-  , override_motion_right TEXT NOT NULL
-  , prop_id_left INT(11) NOT NULL
-  , prop_eat_animation_left TEXT NOT NULL
-  , override_motion_left TEXT NOT NULL
-  , walk_motion TEXT NOT NULL
-  , walk_chara_face_type TEXT NOT NULL
-  , eat_motion TEXT NOT NULL
-  , eat_facial_motion TEXT NOT NULL
-  , odds INT(11) NOT NULL
+CREATE TABLE home_eat (
+  chara_id int(11) NOT NULL,
+  body_shape int(11) NOT NULL,
+  prop_id_right int(11) NOT NULL,
+  prop_eat_animation_right text NOT NULL,
+  override_motion_right text NOT NULL,
+  prop_id_left int(11) NOT NULL,
+  prop_eat_animation_left text NOT NULL,
+  override_motion_left text NOT NULL,
+  walk_motion text NOT NULL,
+  walk_chara_face_type text NOT NULL,
+  eat_motion text NOT NULL,
+  eat_facial_motion text NOT NULL,
+  odds int(11) NOT NULL,
+  event_type int(11) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 292,
@@ -10858,12 +11850,11 @@ ADD INDEX home_eat_0_chara_id (chara_id);
 --
 -- Create table `home_character_type`
 --
-CREATE TABLE home_character_type
-(
-    pos_id INT(11) NOT NULL
-  , original_personality INT(11) NOT NULL
-  , change_personality INT(11) NOT NULL
-  , PRIMARY KEY (pos_id, original_personality)
+CREATE TABLE home_character_type (
+  pos_id int(11) NOT NULL,
+  original_personality int(11) NOT NULL,
+  change_personality int(11) NOT NULL,
+  PRIMARY KEY (pos_id, original_personality)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 712,
@@ -10874,14 +11865,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `homestory_hip_offset`
 --
-CREATE TABLE homestory_hip_offset
-(
-    id INT(11) NOT NULL
-  , home_event_type INT(11) NOT NULL
-  , num INT(11) NOT NULL
-  , story_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , offset INT(11) NOT NULL
+CREATE TABLE homestory_hip_offset (
+  id int(11) NOT NULL,
+  home_event_type int(11) NOT NULL,
+  num int(11) NOT NULL,
+  story_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  offset int(11) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1365,
@@ -10898,12 +11888,11 @@ ADD INDEX homestory_hip_offset_0_story_id_1_chara_id (story_id, chara_id);
 --
 -- Create table `highlight_interpolate`
 --
-CREATE TABLE highlight_interpolate
-(
-    id INT(11) NOT NULL
-  , in_time INT(11) NOT NULL
-  , out_time INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE highlight_interpolate (
+  id int(11) NOT NULL,
+  in_time int(11) NOT NULL,
+  out_time int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -10914,19 +11903,18 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `heroes_stage_schedule`
 --
-CREATE TABLE heroes_stage_schedule
-(
-    id INT(11) NOT NULL
-  , heroes_id INT(11) NOT NULL
-  , stage INT(11) NOT NULL
-  , stage_step INT(11) NOT NULL
-  , race_num INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_stage_schedule (
+  id int(11) NOT NULL,
+  heroes_id int(11) NOT NULL,
+  stage int(11) NOT NULL,
+  stage_step int(11) NOT NULL,
+  race_num int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 468,
+AVG_ROW_LENGTH = 260,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -10940,16 +11928,15 @@ ADD INDEX heroes_stage_schedule_0_heroes_id (heroes_id);
 --
 -- Create table `heroes_special_reward`
 --
-CREATE TABLE heroes_special_reward
-(
-    id INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_special_reward (
+  id int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1170,
@@ -10960,18 +11947,17 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `heroes_skill_motion`
 --
-CREATE TABLE heroes_skill_motion
-(
-    character_id INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , motion_set_1 INT(11) NOT NULL
-  , stay_motion_set_1 INT(11) NOT NULL
-  , motion_set_2 INT(11) NOT NULL
-  , time_motion_set_2 INT(11) NOT NULL
-  , PRIMARY KEY (character_id)
+CREATE TABLE heroes_skill_motion (
+  character_id int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  motion_set_1 int(11) NOT NULL,
+  stay_motion_set_1 int(11) NOT NULL,
+  motion_set_2 int(11) NOT NULL,
+  time_motion_set_2 int(11) NOT NULL,
+  PRIMARY KEY (character_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 2340,
+AVG_ROW_LENGTH = 2048,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -10979,13 +11965,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `heroes_skill_item`
 --
-CREATE TABLE heroes_skill_item
-(
-    id INT(11) NOT NULL
-  , skill_id INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_skill_item (
+  id int(11) NOT NULL,
+  skill_id int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2340,
@@ -10996,14 +11981,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `heroes_skill`
 --
-CREATE TABLE heroes_skill
-(
-    id INT(11) NOT NULL
-  , league_rank_min INT(11) NOT NULL
-  , league_rank_max INT(11) NOT NULL
-  , skill_id INT(11) NOT NULL
-  , rate INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_skill (
+  id int(11) NOT NULL,
+  league_rank_min int(11) NOT NULL,
+  league_rank_max int(11) NOT NULL,
+  skill_id int(11) NOT NULL,
+  rate int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2340,
@@ -11020,32 +12004,31 @@ ADD UNIQUE INDEX heroes_skill_0_skill_id (skill_id);
 --
 -- Create table `heroes_race_mob_npc`
 --
-CREATE TABLE heroes_race_mob_npc
-(
-    id INT(11) NOT NULL
-  , npc_group_id INT(11) NOT NULL
-  , mob_id INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , pow INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , proper_distance_short INT(11) NOT NULL
-  , proper_distance_mile INT(11) NOT NULL
-  , proper_distance_middle INT(11) NOT NULL
-  , proper_distance_long INT(11) NOT NULL
-  , proper_running_style_nige INT(11) NOT NULL
-  , proper_running_style_senko INT(11) NOT NULL
-  , proper_running_style_sashi INT(11) NOT NULL
-  , proper_running_style_oikomi INT(11) NOT NULL
-  , proper_ground_turf INT(11) NOT NULL
-  , proper_ground_dirt INT(11) NOT NULL
-  , skill_set_id_1 INT(11) NOT NULL
-  , skill_set_id_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_race_mob_npc (
+  id int(11) NOT NULL,
+  npc_group_id int(11) NOT NULL,
+  mob_id int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  pow int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  proper_distance_short int(11) NOT NULL,
+  proper_distance_mile int(11) NOT NULL,
+  proper_distance_middle int(11) NOT NULL,
+  proper_distance_long int(11) NOT NULL,
+  proper_running_style_nige int(11) NOT NULL,
+  proper_running_style_senko int(11) NOT NULL,
+  proper_running_style_sashi int(11) NOT NULL,
+  proper_running_style_oikomi int(11) NOT NULL,
+  proper_ground_turf int(11) NOT NULL,
+  proper_ground_dirt int(11) NOT NULL,
+  skill_set_id_1 int(11) NOT NULL,
+  skill_set_id_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 327,
+AVG_ROW_LENGTH = 273,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11053,13 +12036,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `heroes_race_default_user`
 --
-CREATE TABLE heroes_race_default_user
-(
-    default_npc_team_id INT(11) NOT NULL
-  , PRIMARY KEY (default_npc_team_id)
+CREATE TABLE heroes_race_default_user (
+  default_npc_team_id int(11) NOT NULL,
+  PRIMARY KEY (default_npc_team_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 282,
+AVG_ROW_LENGTH = 260,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11067,36 +12049,35 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `heroes_race_default_npc`
 --
-CREATE TABLE heroes_race_default_npc
-(
-    id INT(11) NOT NULL
-  , default_npc_group_id INT(11) NOT NULL
-  , default_npc_team_id INT(11) NOT NULL
-  , card_rarity_data_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , pow INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , proper_distance_short INT(11) NOT NULL
-  , proper_distance_mile INT(11) NOT NULL
-  , proper_distance_middle INT(11) NOT NULL
-  , proper_distance_long INT(11) NOT NULL
-  , proper_running_style_nige INT(11) NOT NULL
-  , proper_running_style_senko INT(11) NOT NULL
-  , proper_running_style_sashi INT(11) NOT NULL
-  , proper_running_style_oikomi INT(11) NOT NULL
-  , proper_ground_turf INT(11) NOT NULL
-  , proper_ground_dirt INT(11) NOT NULL
-  , skill_id INT(11) NOT NULL
-  , skill_level INT(11) NOT NULL
-  , skill_set_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_race_default_npc (
+  id int(11) NOT NULL,
+  default_npc_group_id int(11) NOT NULL,
+  default_npc_team_id int(11) NOT NULL,
+  card_rarity_data_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  pow int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  proper_distance_short int(11) NOT NULL,
+  proper_distance_mile int(11) NOT NULL,
+  proper_distance_middle int(11) NOT NULL,
+  proper_distance_long int(11) NOT NULL,
+  proper_running_style_nige int(11) NOT NULL,
+  proper_running_style_senko int(11) NOT NULL,
+  proper_running_style_sashi int(11) NOT NULL,
+  proper_running_style_oikomi int(11) NOT NULL,
+  proper_ground_turf int(11) NOT NULL,
+  proper_ground_dirt int(11) NOT NULL,
+  skill_id int(11) NOT NULL,
+  skill_level int(11) NOT NULL,
+  skill_set_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 127,
+AVG_ROW_LENGTH = 341,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11104,19 +12085,18 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `heroes_race_condition`
 --
-CREATE TABLE heroes_race_condition
-(
-    id INT(11) NOT NULL
-  , heroes_id INT(11) NOT NULL
-  , stage INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , season INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , ground INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_race_condition (
+  id int(11) NOT NULL,
+  heroes_id int(11) NOT NULL,
+  stage int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  season int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  ground int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 1092,
+AVG_ROW_LENGTH = 606,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11130,12 +12110,11 @@ ADD INDEX heroes_race_condition_0_heroes_id (heroes_id);
 --
 -- Create table `heroes_lottery_message`
 --
-CREATE TABLE heroes_lottery_message
-(
-    id INT(11) NOT NULL
-  , view_type INT(11) NOT NULL
-  , condition_flag INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_lottery_message (
+  id int(11) NOT NULL,
+  view_type int(11) NOT NULL,
+  condition_flag int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 862,
@@ -11152,13 +12131,12 @@ ADD INDEX heroes_lottery_message_0_view_type (view_type);
 --
 -- Create table `heroes_league_score`
 --
-CREATE TABLE heroes_league_score
-(
-    id INT(11) NOT NULL
-  , league_rank INT(11) NOT NULL
-  , `order` INT(11) NOT NULL
-  , league_score INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_league_score (
+  id int(11) NOT NULL,
+  league_rank int(11) NOT NULL,
+  `order` int(11) NOT NULL,
+  league_score int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1365,
@@ -11169,14 +12147,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `heroes_league_rank_reward_group`
 --
-CREATE TABLE heroes_league_rank_reward_group
-(
-    id INT(11) NOT NULL
-  , reward_group_id INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_league_rank_reward_group (
+  id int(11) NOT NULL,
+  reward_group_id int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 180,
@@ -11193,20 +12170,19 @@ ADD INDEX heroes_league_rank_reward_group_0_reward_group_id (reward_group_id);
 --
 -- Create table `heroes_league_rank`
 --
-CREATE TABLE heroes_league_rank
-(
-    id INT(11) NOT NULL
-  , league_rank_type INT(11) NOT NULL
-  , league_rank INT(11) NOT NULL
-  , league_min_value INT(11) NOT NULL
-  , league_max_value INT(11) NOT NULL
-  , ticket_num INT(11) NOT NULL
-  , reward_group_id INT(11) NOT NULL
-  , top_bgm_cue_name TEXT NOT NULL
-  , top_bgm_cuesheet_name TEXT NOT NULL
-  , racing_base_bgm_cue_name TEXT NOT NULL
-  , racing_base_bgm_cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_league_rank (
+  id int(11) NOT NULL,
+  league_rank_type int(11) NOT NULL,
+  league_rank int(11) NOT NULL,
+  league_min_value int(11) NOT NULL,
+  league_max_value int(11) NOT NULL,
+  ticket_num int(11) NOT NULL,
+  reward_group_id int(11) NOT NULL,
+  top_bgm_cue_name text NOT NULL,
+  top_bgm_cuesheet_name text NOT NULL,
+  racing_base_bgm_cue_name text NOT NULL,
+  racing_base_bgm_cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1024,
@@ -11223,16 +12199,15 @@ ADD INDEX heroes_league_rank_0_league_rank (league_rank);
 --
 -- Create table `heroes_gauge`
 --
-CREATE TABLE heroes_gauge
-(
-    id INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , gauge_up INT(11) NOT NULL
-  , add_timing INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_gauge (
+  id int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  gauge_up int(11) NOT NULL,
+  add_timing int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2048,
@@ -11243,16 +12218,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `heroes_final_stage_race`
 --
-CREATE TABLE heroes_final_stage_race
-(
-    id INT(11) NOT NULL
-  , ranking_min INT(11) NOT NULL
-  , ranking_max INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , race_number INT(11) NOT NULL
-  , race_play INT(11) NOT NULL
-  , heroes_special_reward INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE heroes_final_stage_race (
+  id int(11) NOT NULL,
+  ranking_min int(11) NOT NULL,
+  ranking_max int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  race_number int(11) NOT NULL,
+  race_play int(11) NOT NULL,
+  heroes_special_reward int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 682,
@@ -11263,22 +12237,21 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `heroes_data`
 --
-CREATE TABLE heroes_data
-(
-    heroes_id INT(11) NOT NULL
-  , info_detail_1 INT(11) NOT NULL
-  , info_detail_2 INT(11) NOT NULL
-  , ticket_add INT(11) NOT NULL
-  , ticket_max INT(11) NOT NULL
-  , race_item_limit INT(11) NOT NULL
-  , hero_gauge_max INT(11) NOT NULL
-  , final_stage_user_num INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (heroes_id)
+CREATE TABLE heroes_data (
+  heroes_id int(11) NOT NULL,
+  info_detail_1 int(11) NOT NULL,
+  info_detail_2 int(11) NOT NULL,
+  ticket_add int(11) NOT NULL,
+  ticket_max int(11) NOT NULL,
+  race_item_limit int(11) NOT NULL,
+  hero_gauge_max int(11) NOT NULL,
+  final_stage_user_num int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (heroes_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 3276,
+AVG_ROW_LENGTH = 1820,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11286,14 +12259,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `gift_message`
 --
-CREATE TABLE gift_message
-(
-    id INT(11) NOT NULL
-  , type_1 INT(11) NOT NULL
-  , type_2 INT(11) NOT NULL
-  , type_3 INT(11) NOT NULL
-  , type_4 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE gift_message (
+  id int(11) NOT NULL,
+  type_1 int(11) NOT NULL,
+  type_2 int(11) NOT NULL,
+  type_3 int(11) NOT NULL,
+  type_4 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 221,
@@ -11304,13 +12276,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `gacha_top_bg`
 --
-CREATE TABLE gacha_top_bg
-(
-    id INT(11) NOT NULL
-  , gacha_id INT(11) NOT NULL
-  , logo_size_x INT(11) NOT NULL
-  , logo_size_y INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE gacha_top_bg (
+  id int(11) NOT NULL,
+  gacha_id int(11) NOT NULL,
+  logo_size_x int(11) NOT NULL,
+  logo_size_y int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 182,
@@ -11327,15 +12298,15 @@ ADD INDEX gacha_top_bg_0_gacha_id (gacha_id);
 --
 -- Create table `gacha_stepup`
 --
-CREATE TABLE gacha_stepup
-(
-    id INT(11) NOT NULL
-  , stepup_id INT(11) NOT NULL
-  , target_gacha_id INT(11) NOT NULL
-  , stepup_step INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE gacha_stepup (
+  id int(11) NOT NULL,
+  stepup_id int(11) NOT NULL,
+  target_gacha_id int(11) NOT NULL,
+  stepup_step int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 1092,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11361,31 +12332,30 @@ ADD UNIQUE INDEX gacha_stepup_0_target_gacha_id (target_gacha_id);
 --
 -- Create table `gacha_prize_odds`
 --
-CREATE TABLE gacha_prize_odds
-(
-    prize_odds_id INT(11) NOT NULL
-  , place INT(11) NOT NULL
-  , odds INT(11) NOT NULL
-  , piece_num INT(11) NOT NULL
-  , item_category_1 INT(11) NOT NULL
-  , item_id_1 INT(11) NOT NULL
-  , item_num_1 INT(11) NOT NULL
-  , item_category_2 INT(11) NOT NULL
-  , item_id_2 INT(11) NOT NULL
-  , item_num_2 INT(11) NOT NULL
-  , item_category_3 INT(11) NOT NULL
-  , item_id_3 INT(11) NOT NULL
-  , item_num_3 INT(11) NOT NULL
-  , item_category_4 INT(11) NOT NULL
-  , item_id_4 INT(11) NOT NULL
-  , item_num_4 INT(11) NOT NULL
-  , item_category_5 INT(11) NOT NULL
-  , item_id_5 INT(11) NOT NULL
-  , item_num_5 INT(11) NOT NULL
-  , item_category_6 INT(11) NOT NULL
-  , item_id_6 INT(11) NOT NULL
-  , item_num_6 INT(11) NOT NULL
-  , PRIMARY KEY (prize_odds_id, place)
+CREATE TABLE gacha_prize_odds (
+  prize_odds_id int(11) NOT NULL,
+  place int(11) NOT NULL,
+  odds int(11) NOT NULL,
+  piece_num int(11) NOT NULL,
+  item_category_1 int(11) NOT NULL,
+  item_id_1 int(11) NOT NULL,
+  item_num_1 int(11) NOT NULL,
+  item_category_2 int(11) NOT NULL,
+  item_id_2 int(11) NOT NULL,
+  item_num_2 int(11) NOT NULL,
+  item_category_3 int(11) NOT NULL,
+  item_id_3 int(11) NOT NULL,
+  item_num_3 int(11) NOT NULL,
+  item_category_4 int(11) NOT NULL,
+  item_id_4 int(11) NOT NULL,
+  item_num_4 int(11) NOT NULL,
+  item_category_5 int(11) NOT NULL,
+  item_id_5 int(11) NOT NULL,
+  item_num_5 int(11) NOT NULL,
+  item_category_6 int(11) NOT NULL,
+  item_id_6 int(11) NOT NULL,
+  item_num_6 int(11) NOT NULL,
+  PRIMARY KEY (prize_odds_id, place)
 )
 ENGINE = INNODB,
 CHARACTER SET utf8mb4,
@@ -11401,15 +12371,14 @@ ADD INDEX gacha_prize_odds_0_prize_odds_id (prize_odds_id);
 --
 -- Create table `gacha_piece`
 --
-CREATE TABLE gacha_piece
-(
-    id INT(11) NOT NULL
-  , rarity INT(11) NOT NULL
-  , piece_type INT(11) NOT NULL
-  , piece_num INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE gacha_piece (
+  id int(11) NOT NULL,
+  rarity int(11) NOT NULL,
+  piece_type int(11) NOT NULL,
+  piece_num int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -11426,13 +12395,12 @@ ADD INDEX gacha_piece_0_rarity (rarity);
 --
 -- Create table `gacha_group`
 --
-CREATE TABLE gacha_group
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , target_gacha_id INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE gacha_group (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  target_gacha_id int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 819,
@@ -11455,14 +12423,13 @@ ADD UNIQUE INDEX gacha_group_0_target_gacha_id (target_gacha_id);
 --
 -- Create table `gacha_free_campaign`
 --
-CREATE TABLE gacha_free_campaign
-(
-    id INT(11) NOT NULL
-  , gacha_id INT(11) NOT NULL
-  , target_draw_type INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE gacha_free_campaign (
+  id int(11) NOT NULL,
+  gacha_id int(11) NOT NULL,
+  target_draw_type int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1092,
@@ -11473,14 +12440,13 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `gacha_exchange`
 --
-CREATE TABLE gacha_exchange
-(
-    gacha_id INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , card_type INT(11) NOT NULL
-  , pay_item_num INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , PRIMARY KEY (gacha_id, card_id)
+CREATE TABLE gacha_exchange (
+  gacha_id int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  card_type int(11) NOT NULL,
+  pay_item_num int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  PRIMARY KEY (gacha_id, card_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 93,
@@ -11497,57 +12463,58 @@ ADD INDEX gacha_exchange_0_gacha_id (gacha_id);
 --
 -- Create table `gacha_data`
 --
-CREATE TABLE gacha_data
-(
-    id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , card_type INT(11) NOT NULL
-  , daily_pay_cost INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , only_once_flag INT(11) NOT NULL
-  , rarity_odds_id INT(11) NOT NULL
-  , draw_guarantee_rarity INT(11) NOT NULL
-  , draw_guarantee_num INT(11) NOT NULL
-  , cost_type INT(11) NOT NULL
-  , cost_single INT(11) NOT NULL
-  , prize_odds_id INT(11) NOT NULL
-  , additional_piece_target_card_type_1 INT(11) NOT NULL
-  , additional_piece_target_card_id_1 INT(11) NOT NULL
-  , additional_piece_target_rarity_1 INT(11) NOT NULL
-  , additional_piece_num_1 INT(11) NOT NULL
-  , additional_piece_target_card_type_2 INT(11) NOT NULL
-  , additional_piece_target_card_id_2 INT(11) NOT NULL
-  , additional_piece_target_rarity_2 INT(11) NOT NULL
-  , additional_piece_num_2 INT(11) NOT NULL
-  , additional_piece_target_card_type_3 INT(11) NOT NULL
-  , additional_piece_target_card_id_3 INT(11) NOT NULL
-  , additional_piece_target_rarity_3 INT(11) NOT NULL
-  , additional_piece_num_3 INT(11) NOT NULL
-  , additional_piece_target_card_type_4 INT(11) NOT NULL
-  , additional_piece_target_card_id_4 INT(11) NOT NULL
-  , additional_piece_target_rarity_4 INT(11) NOT NULL
-  , additional_piece_num_4 INT(11) NOT NULL
-  , additional_piece_target_card_type_5 INT(11) NOT NULL
-  , additional_piece_target_card_id_5 INT(11) NOT NULL
-  , additional_piece_target_rarity_5 INT(11) NOT NULL
-  , additional_piece_num_5 INT(11) NOT NULL
-  , additional_piece_target_card_type_6 INT(11) NOT NULL
-  , additional_piece_target_card_id_6 INT(11) NOT NULL
-  , additional_piece_target_rarity_6 INT(11) NOT NULL
-  , additional_piece_num_6 INT(11) NOT NULL
-  , bonus_target_draw_num INT(11) NOT NULL
-  , bonus_item_category_1 INT(11) NOT NULL
-  , bonus_item_id_1 INT(11) NOT NULL
-  , bonus_item_num_1 INT(11) NOT NULL
-  , bonus_item_category_2 INT(11) NOT NULL
-  , bonus_item_id_2 INT(11) NOT NULL
-  , bonus_item_num_2 INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , paid_gacha_button_type INT(11) NOT NULL
-  , gacha_odds_id INT(11) NOT NULL
-  , draw_guarantee_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE gacha_data (
+  id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  card_type int(11) NOT NULL,
+  daily_pay_cost int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  only_once_flag int(11) NOT NULL,
+  rarity_odds_id int(11) NOT NULL,
+  draw_guarantee_rarity int(11) NOT NULL,
+  draw_guarantee_num int(11) NOT NULL,
+  cost_type int(11) NOT NULL,
+  cost_single int(11) NOT NULL,
+  prize_odds_id int(11) NOT NULL,
+  additional_piece_target_card_type_1 int(11) NOT NULL,
+  additional_piece_target_card_id_1 int(11) NOT NULL,
+  additional_piece_target_rarity_1 int(11) NOT NULL,
+  additional_piece_num_1 int(11) NOT NULL,
+  additional_piece_target_card_type_2 int(11) NOT NULL,
+  additional_piece_target_card_id_2 int(11) NOT NULL,
+  additional_piece_target_rarity_2 int(11) NOT NULL,
+  additional_piece_num_2 int(11) NOT NULL,
+  additional_piece_target_card_type_3 int(11) NOT NULL,
+  additional_piece_target_card_id_3 int(11) NOT NULL,
+  additional_piece_target_rarity_3 int(11) NOT NULL,
+  additional_piece_num_3 int(11) NOT NULL,
+  additional_piece_target_card_type_4 int(11) NOT NULL,
+  additional_piece_target_card_id_4 int(11) NOT NULL,
+  additional_piece_target_rarity_4 int(11) NOT NULL,
+  additional_piece_num_4 int(11) NOT NULL,
+  additional_piece_target_card_type_5 int(11) NOT NULL,
+  additional_piece_target_card_id_5 int(11) NOT NULL,
+  additional_piece_target_rarity_5 int(11) NOT NULL,
+  additional_piece_num_5 int(11) NOT NULL,
+  additional_piece_target_card_type_6 int(11) NOT NULL,
+  additional_piece_target_card_id_6 int(11) NOT NULL,
+  additional_piece_target_rarity_6 int(11) NOT NULL,
+  additional_piece_num_6 int(11) NOT NULL,
+  bonus_target_draw_num int(11) NOT NULL,
+  bonus_item_category_1 int(11) NOT NULL,
+  bonus_item_id_1 int(11) NOT NULL,
+  bonus_item_num_1 int(11) NOT NULL,
+  bonus_item_category_2 int(11) NOT NULL,
+  bonus_item_id_2 int(11) NOT NULL,
+  bonus_item_num_2 int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  paid_gacha_button_type int(11) NOT NULL,
+  gacha_odds_id int(11) NOT NULL,
+  draw_guarantee_type int(11) NOT NULL,
+  draw_limit int(11) NOT NULL,
+  force_exchange int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 546,
@@ -11558,17 +12525,16 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `gacha_available`
 --
-CREATE TABLE gacha_available
-(
-    gacha_id INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , card_type INT(11) NOT NULL
-  , rarity INT(11) NOT NULL
-  , odds INT(11) NOT NULL
-  , is_pickup INT(11) NOT NULL
-  , recommend_order INT(11) NOT NULL
-  , is_prize_selectable INT(11) NOT NULL
-  , PRIMARY KEY (gacha_id, card_id)
+CREATE TABLE gacha_available (
+  gacha_id int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  card_type int(11) NOT NULL,
+  rarity int(11) NOT NULL,
+  odds int(11) NOT NULL,
+  is_pickup int(11) NOT NULL,
+  recommend_order int(11) NOT NULL,
+  is_prize_selectable int(11) NOT NULL,
+  PRIMARY KEY (gacha_id, card_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 207,
@@ -11585,19 +12551,18 @@ ADD INDEX gacha_available_0_gacha_id (gacha_id);
 --
 -- Create table `fan_raid_top_data`
 --
-CREATE TABLE fan_raid_top_data
-(
-    id INT(11) NOT NULL
-  , fan_raid_id INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub_id INT(11) NOT NULL
-  , bgm_cue_name TEXT NOT NULL
-  , bgm_cuesheet_name TEXT NOT NULL
-  , env_cue_name TEXT NOT NULL
-  , env_cuesheet_name TEXT NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE fan_raid_top_data (
+  id int(11) NOT NULL,
+  fan_raid_id int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub_id int(11) NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet_name text NOT NULL,
+  env_cue_name text NOT NULL,
+  env_cuesheet_name text NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 4096,
@@ -11614,14 +12579,13 @@ ADD INDEX fan_raid_top_data_0_fan_raid_id (fan_raid_id);
 --
 -- Create table `fan_raid_top_chara`
 --
-CREATE TABLE fan_raid_top_chara
-(
-    id INT(11) NOT NULL
-  , top_data_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , mini_motion_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE fan_raid_top_chara (
+  id int(11) NOT NULL,
+  top_data_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  mini_motion_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1638,
@@ -11638,16 +12602,15 @@ ADD INDEX fan_raid_top_chara_0_top_data_id (top_data_id);
 --
 -- Create table `fan_raid_story_data`
 --
-CREATE TABLE fan_raid_story_data
-(
-    id INT(11) NOT NULL
-  , fan_raid_id INT(11) NOT NULL
-  , story_condition_type INT(11) NOT NULL
-  , story_type_1 INT(11) NOT NULL
-  , story_id_1 INT(11) NOT NULL
-  , story_type_2 INT(11) NOT NULL
-  , story_id_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE fan_raid_story_data (
+  id int(11) NOT NULL,
+  fan_raid_id int(11) NOT NULL,
+  story_condition_type int(11) NOT NULL,
+  story_type_1 int(11) NOT NULL,
+  story_id_1 int(11) NOT NULL,
+  story_type_2 int(11) NOT NULL,
+  story_id_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -11664,15 +12627,14 @@ ADD INDEX fan_raid_story_data_0_fan_raid_id_1_story_condition_type (fan_raid_id,
 --
 -- Create table `fan_raid_individual_reward`
 --
-CREATE TABLE fan_raid_individual_reward
-(
-    id INT(11) NOT NULL
-  , fan_raid_id INT(11) NOT NULL
-  , individual_fan INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE fan_raid_individual_reward (
+  id int(11) NOT NULL,
+  fan_raid_id int(11) NOT NULL,
+  individual_fan int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2340,
@@ -11689,23 +12651,21 @@ ADD INDEX fan_raid_individual_reward_0_fan_raid_id (fan_raid_id);
 --
 -- Create table `fan_raid_data`
 --
-CREATE TABLE fan_raid_data
-(
-    fan_raid_id INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , result_se_cue_name TEXT NOT NULL
-  , result_se_cuesheet_name TEXT NOT NULL
-  , start_date INT(11) NOT NULL
-  , calc_start_date INT(11) NOT NULL
-  , calc_end_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (fan_raid_id)
+CREATE TABLE fan_raid_data (
+  fan_raid_id int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  result_se_cue_name text NOT NULL,
+  result_se_cuesheet_name text NOT NULL,
+  start_date int(11) NOT NULL,
+  calc_start_date int(11) NOT NULL,
+  calc_end_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (fan_raid_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11713,13 +12673,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `fan_raid_bonus_support_card`
 --
-CREATE TABLE fan_raid_bonus_support_card
-(
-    id INT(11) NOT NULL
-  , fan_raid_id INT(11) NOT NULL
-  , support_card_id INT(11) NOT NULL
-  , add_fan INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE fan_raid_bonus_support_card (
+  id int(11) NOT NULL,
+  fan_raid_id int(11) NOT NULL,
+  support_card_id int(11) NOT NULL,
+  add_fan int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -11736,16 +12695,14 @@ ADD INDEX fan_raid_bonus_support_card_0_fan_raid_id (fan_raid_id);
 --
 -- Create table `fan_raid_bonus_chara`
 --
-CREATE TABLE fan_raid_bonus_chara
-(
-    id INT(11) NOT NULL
-  , fan_raid_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , add_fan INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE fan_raid_bonus_chara (
+  id int(11) NOT NULL,
+  fan_raid_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  add_fan int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11759,15 +12716,14 @@ ADD INDEX fan_raid_bonus_chara_0_fan_raid_id (fan_raid_id);
 --
 -- Create table `fan_raid_all_reward`
 --
-CREATE TABLE fan_raid_all_reward
-(
-    id INT(11) NOT NULL
-  , fan_raid_id INT(11) NOT NULL
-  , all_fan INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE fan_raid_all_reward (
+  id int(11) NOT NULL,
+  fan_raid_id int(11) NOT NULL,
+  all_fan int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2340,
@@ -11784,23 +12740,22 @@ ADD INDEX fan_raid_all_reward_0_fan_raid_id (fan_raid_id);
 --
 -- Create table `factor_research_top`
 --
-CREATE TABLE factor_research_top
-(
-    id INT(11) NOT NULL
-  , factor_research_event_id INT(11) NOT NULL
-  , ending_flag INT(11) NOT NULL
-  , character_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , menu_bg_id INT(11) NOT NULL
-  , menu_bg_sub_id INT(11) NOT NULL
-  , bgm_cue_name TEXT NOT NULL
-  , bgm_cuesheet_name TEXT NOT NULL
-  , env_cue_name TEXT NOT NULL
-  , env_cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE factor_research_top (
+  id int(11) NOT NULL,
+  factor_research_event_id int(11) NOT NULL,
+  ending_flag int(11) NOT NULL,
+  character_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  menu_bg_id int(11) NOT NULL,
+  menu_bg_sub_id int(11) NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet_name text NOT NULL,
+  env_cue_name text NOT NULL,
+  env_cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 2048,
+AVG_ROW_LENGTH = 682,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11814,14 +12769,13 @@ ADD INDEX factor_research_top_0_factor_research_event_id_1_ending_flag (factor_r
 --
 -- Create table `factor_research_factor_upgrade`
 --
-CREATE TABLE factor_research_factor_upgrade
-(
-    id INT(11) NOT NULL
-  , factor_type INT(11) NOT NULL
-  , is_upgradable INT(11) NOT NULL
-  , factor_rarity INT(11) NOT NULL
-  , use_item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE factor_research_factor_upgrade (
+  id int(11) NOT NULL,
+  factor_type int(11) NOT NULL,
+  is_upgradable int(11) NOT NULL,
+  factor_rarity int(11) NOT NULL,
+  use_item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1170,
@@ -11838,26 +12792,26 @@ ADD INDEX factor_research_factor_upgrade_0_factor_type (factor_type);
 --
 -- Create table `factor_research_data`
 --
-CREATE TABLE factor_research_data
-(
-    factor_research_event_id INT(11) NOT NULL
-  , consume_tp_ratio INT(11) NOT NULL
-  , bonus_reward_ratio INT(11) NOT NULL
-  , result_type INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , in_motion INT(11) NOT NULL
-  , stand_motion INT(11) NOT NULL
-  , prize_motion1 INT(11) NOT NULL
-  , prize_motion2 INT(11) NOT NULL
-  , notice_date INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , ending_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (factor_research_event_id)
+CREATE TABLE factor_research_data (
+  factor_research_event_id int(11) NOT NULL,
+  consume_tp_ratio int(11) NOT NULL,
+  bonus_reward_ratio int(11) NOT NULL,
+  result_type int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  in_motion int(11) NOT NULL,
+  stand_motion int(11) NOT NULL,
+  prize_motion1 int(11) NOT NULL,
+  prize_motion2 int(11) NOT NULL,
+  notice_date int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  ending_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  special_event_type int(11) NOT NULL,
+  PRIMARY KEY (factor_research_event_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 4096,
+AVG_ROW_LENGTH = 1820,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11865,20 +12819,19 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `factor_research_box_reward`
 --
-CREATE TABLE factor_research_box_reward
-(
-    id INT(11) NOT NULL
-  , box_id INT(11) NOT NULL
-  , box_num INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , rate INT(11) NOT NULL
-  , prize_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE factor_research_box_reward (
+  id int(11) NOT NULL,
+  box_id int(11) NOT NULL,
+  box_num int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  rate int(11) NOT NULL,
+  prize_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 282,
+AVG_ROW_LENGTH = 123,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11892,15 +12845,14 @@ ADD INDEX factor_research_box_reward_0_box_id (box_id);
 --
 -- Create table `factor_research_box`
 --
-CREATE TABLE factor_research_box
-(
-    box_id INT(11) NOT NULL
-  , factor_research_event_id INT(11) NOT NULL
-  , box_step INT(11) NOT NULL
-  , PRIMARY KEY (box_id)
+CREATE TABLE factor_research_box (
+  box_id int(11) NOT NULL,
+  factor_research_event_id int(11) NOT NULL,
+  box_step int(11) NOT NULL,
+  PRIMARY KEY (box_id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 4096,
+AVG_ROW_LENGTH = 1820,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11912,15 +12864,42 @@ ALTER TABLE factor_research_box
 ADD INDEX factor_research_box_0_factor_research_event_id (factor_research_event_id);
 
 --
+-- Create table `factor_research_animation_data`
+--
+CREATE TABLE factor_research_animation_data (
+  id int(11) NOT NULL,
+  special_event_type int(11) NOT NULL,
+  prise_type int(11) NOT NULL,
+  chara_order int(11) NOT NULL,
+  chara_angle int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  in_motion int(11) NOT NULL,
+  stand_motion int(11) NOT NULL,
+  prize_motion int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 2340,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `factor_research_animation_data_0_special_event_type_1_prise_type` on table `factor_research_animation_data`
+--
+ALTER TABLE factor_research_animation_data
+ADD INDEX factor_research_animation_data_0_special_event_type_1_prise_type (special_event_type, prise_type);
+
+--
 -- Create table `facial_mouth_change`
 --
-CREATE TABLE facial_mouth_change
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , before_facialname TEXT NOT NULL
-  , after_facialname TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE facial_mouth_change (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  before_facialname text NOT NULL,
+  after_facialname text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1170,
@@ -11943,18 +12922,17 @@ ADD UNIQUE INDEX facial_mouth_change_0_chara_id_1_before_facialname USING HASH (
 --
 -- Create table `face_type_data`
 --
-CREATE TABLE face_type_data
-(
-    label VARCHAR(300) NOT NULL
-  , eyebrow_l TEXT NOT NULL
-  , eyebrow_r TEXT NOT NULL
-  , eye_l TEXT NOT NULL
-  , eye_r TEXT NOT NULL
-  , mouth TEXT NOT NULL
-  , mouth_shape_type INT(11) NOT NULL
-  , inverce_face_type TEXT NOT NULL
-  , set_face_group INT(11) NOT NULL
-  , PRIMARY KEY (label)
+CREATE TABLE face_type_data (
+  label varchar(300) NOT NULL,
+  eyebrow_l text NOT NULL,
+  eyebrow_r text NOT NULL,
+  eye_l text NOT NULL,
+  eye_r text NOT NULL,
+  mouth text NOT NULL,
+  mouth_shape_type int(11) NOT NULL,
+  inverce_face_type text NOT NULL,
+  set_face_group int(11) NOT NULL,
+  PRIMARY KEY (label)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 143,
@@ -11965,18 +12943,17 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `exchange_ticket_detail`
 --
-CREATE TABLE exchange_ticket_detail
-(
-    id INT(11) NOT NULL
-  , card_type INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , additional_piece_num INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE exchange_ticket_detail (
+  id int(11) NOT NULL,
+  card_type int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  additional_piece_num int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 61,
+AVG_ROW_LENGTH = 50,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -11990,16 +12967,15 @@ ADD INDEX exchange_ticket_detail_0_card_type (card_type);
 --
 -- Create table `event_motion_plus_data`
 --
-CREATE TABLE event_motion_plus_data
-(
-    id INT(11) NOT NULL
-  , command_name TEXT NOT NULL
-  , base_state_name VARCHAR(750) NOT NULL
-  , layer_index INT(11) NOT NULL
-  , tail_motion_type INT(11) NOT NULL
-  , start_blend_time INT(11) NOT NULL
-  , end_blend_time INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE event_motion_plus_data (
+  id int(11) NOT NULL,
+  command_name text NOT NULL,
+  base_state_name varchar(750) NOT NULL,
+  layer_index int(11) NOT NULL,
+  tail_motion_type int(11) NOT NULL,
+  start_blend_time int(11) NOT NULL,
+  end_blend_time int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 109,
@@ -12022,18 +12998,17 @@ ADD INDEX event_motion_plus_data_0_layer_index (layer_index);
 --
 -- Create table `event_motion_data`
 --
-CREATE TABLE event_motion_data
-(
-    id INT(11) NOT NULL
-  , command_name TEXT NOT NULL
-  , base_state_name TEXT NOT NULL
-  , pose_blend INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , state_group INT(11) NOT NULL
-  , category INT(11) NOT NULL
-  , start_blend_time INT(11) NOT NULL
-  , end_blend_time INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE event_motion_data (
+  id int(11) NOT NULL,
+  command_name text NOT NULL,
+  base_state_name text NOT NULL,
+  pose_blend int(11) NOT NULL,
+  type int(11) NOT NULL,
+  state_group int(11) NOT NULL,
+  category int(11) NOT NULL,
+  start_blend_time int(11) NOT NULL,
+  end_blend_time int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 109,
@@ -12056,38 +13031,37 @@ ADD INDEX event_motion_data_0_type (type);
 --
 -- Create table `dress_data`
 --
-CREATE TABLE dress_data
-(
-    id INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , have_mini INT(11) NOT NULL
-  , general_purpose INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , use_gender INT(11) NOT NULL
-  , body_shape INT(11) NOT NULL
-  , body_type INT(11) NOT NULL
-  , body_type_sub INT(11) NOT NULL
-  , body_setting INT(11) NOT NULL
-  , use_race INT(11) NOT NULL
-  , use_live INT(11) NOT NULL
-  , use_live_theater INT(11) NOT NULL
-  , use_home INT(11) NOT NULL
-  , is_wet INT(11) NOT NULL
-  , is_dirt INT(11) NOT NULL
-  , head_sub_id INT(11) NOT NULL
-  , use_season INT(11) NOT NULL
-  , dress_color_main TEXT NOT NULL
-  , dress_color_sub TEXT NOT NULL
-  , color_num INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , tail_model_id INT(11) NOT NULL
-  , tail_model_sub_id INT(11) NOT NULL
-  , start_time INT(11) NOT NULL
-  , end_time INT(11) NOT NULL
-  , costume_type INT(11) NOT NULL
-  , use_dress_change INT(11) NOT NULL
-  , mini_mayu_shader_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE dress_data (
+  id int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  have_mini int(11) NOT NULL,
+  general_purpose int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  use_gender int(11) NOT NULL,
+  body_shape int(11) NOT NULL,
+  body_type int(11) NOT NULL,
+  body_type_sub int(11) NOT NULL,
+  body_setting int(11) NOT NULL,
+  use_race int(11) NOT NULL,
+  use_live int(11) NOT NULL,
+  use_live_theater int(11) NOT NULL,
+  use_home int(11) NOT NULL,
+  is_wet int(11) NOT NULL,
+  is_dirt int(11) NOT NULL,
+  head_sub_id int(11) NOT NULL,
+  use_season int(11) NOT NULL,
+  dress_color_main text NOT NULL,
+  dress_color_sub text NOT NULL,
+  color_num int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  tail_model_id int(11) NOT NULL,
+  tail_model_sub_id int(11) NOT NULL,
+  start_time int(11) NOT NULL,
+  end_time int(11) NOT NULL,
+  costume_type int(11) NOT NULL,
+  use_dress_change int(11) NOT NULL,
+  mini_mayu_shader_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 368,
@@ -12116,15 +13090,14 @@ ADD INDEX dress_data_0_condition_type (condition_type);
 --
 -- Create table `directory`
 --
-CREATE TABLE directory
-(
-    id INT(11) NOT NULL
-  , required_point INT(11) NOT NULL
-  , rank_level INT(11) NOT NULL
-  , item_category_1 INT(11) NOT NULL
-  , item_id_1 INT(11) NOT NULL
-  , item_num_1 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE directory (
+  id int(11) NOT NULL,
+  required_point int(11) NOT NULL,
+  rank_level int(11) NOT NULL,
+  item_category_1 int(11) NOT NULL,
+  item_id_1 int(11) NOT NULL,
+  item_num_1 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 81,
@@ -12145,33 +13118,88 @@ ALTER TABLE directory
 ADD INDEX directory_0_required_point (required_point);
 
 --
+-- Create table `deck_recommend_organize`
+--
+CREATE TABLE deck_recommend_organize (
+  id int(11) NOT NULL,
+  distance_type int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  command_id_1 int(11) NOT NULL,
+  command_id_2 int(11) NOT NULL,
+  command_id_3 int(11) NOT NULL,
+  command_id_4 int(11) NOT NULL,
+  command_id_5 int(11) NOT NULL,
+  command_id_6 int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 3276,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `deck_recommend_organize_0_distance_type` on table `deck_recommend_organize`
+--
+ALTER TABLE deck_recommend_organize
+ADD INDEX deck_recommend_organize_0_distance_type (distance_type);
+
+--
+-- Create table `deck_recommend_lv_correction`
+--
+CREATE TABLE deck_recommend_lv_correction (
+  condition_type int(11) NOT NULL,
+  correction_lv int(11) NOT NULL,
+  PRIMARY KEY (condition_type)
+)
+ENGINE = INNODB,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create table `deck_recommend_exception`
+--
+CREATE TABLE deck_recommend_exception (
+  support_card_id int(11) NOT NULL,
+  distribution_flag int(11) NOT NULL,
+  PRIMARY KEY (support_card_id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 1820,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
 -- Create table `daily_race_npc`
 --
-CREATE TABLE daily_race_npc
-(
-    id INT(11) NOT NULL
-  , npc_group_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , mob_id INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , pow INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , proper_distance_short INT(11) NOT NULL
-  , proper_distance_mile INT(11) NOT NULL
-  , proper_distance_middle INT(11) NOT NULL
-  , proper_distance_long INT(11) NOT NULL
-  , proper_running_style_nige INT(11) NOT NULL
-  , proper_running_style_senko INT(11) NOT NULL
-  , proper_running_style_sashi INT(11) NOT NULL
-  , proper_running_style_oikomi INT(11) NOT NULL
-  , proper_ground_turf INT(11) NOT NULL
-  , proper_ground_dirt INT(11) NOT NULL
-  , skill_set_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE daily_race_npc (
+  id int(11) NOT NULL,
+  npc_group_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  mob_id int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  pow int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  proper_distance_short int(11) NOT NULL,
+  proper_distance_mile int(11) NOT NULL,
+  proper_distance_middle int(11) NOT NULL,
+  proper_distance_long int(11) NOT NULL,
+  proper_running_style_nige int(11) NOT NULL,
+  proper_running_style_senko int(11) NOT NULL,
+  proper_running_style_sashi int(11) NOT NULL,
+  proper_running_style_oikomi int(11) NOT NULL,
+  proper_ground_turf int(11) NOT NULL,
+  proper_ground_dirt int(11) NOT NULL,
+  skill_set_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 122,
@@ -12182,12 +13210,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `daily_race_billing`
 --
-CREATE TABLE daily_race_billing
-(
-    id INT(11) NOT NULL
-  , frequency INT(11) NOT NULL
-  , pay_cost INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE daily_race_billing (
+  id int(11) NOT NULL,
+  frequency int(11) NOT NULL,
+  pay_cost int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 16384,
@@ -12198,39 +13225,38 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `daily_race`
 --
-CREATE TABLE daily_race
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , difficulty INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , cost_num INT(11) NOT NULL
-  , unique_chara_npc_min INT(11) NOT NULL
-  , unique_chara_npc_max INT(11) NOT NULL
-  , normal_rewards_odds_id INT(11) NOT NULL
-  , bonus_rewards_odds_id INT(11) NOT NULL
-  , rare_reward_odds_id INT(11) NOT NULL
-  , first_clear_item_category_1 INT(11) NOT NULL
-  , first_clear_item_id_1 INT(11) NOT NULL
-  , first_clear_item_num_1 INT(11) NOT NULL
-  , first_clear_item_category_2 INT(11) NOT NULL
-  , first_clear_item_id_2 INT(11) NOT NULL
-  , first_clear_item_num_2 INT(11) NOT NULL
-  , first_clear_item_category_3 INT(11) NOT NULL
-  , first_clear_item_id_3 INT(11) NOT NULL
-  , first_clear_item_num_3 INT(11) NOT NULL
-  , pick_up_item_category_1 INT(11) NOT NULL
-  , pick_up_item_id_1 INT(11) NOT NULL
-  , pick_up_item_num_1 INT(11) NOT NULL
-  , pick_up_item_category_2 INT(11) NOT NULL
-  , pick_up_item_id_2 INT(11) NOT NULL
-  , pick_up_item_num_2 INT(11) NOT NULL
-  , pick_up_item_category_3 INT(11) NOT NULL
-  , pick_up_item_id_3 INT(11) NOT NULL
-  , pick_up_item_num_3 INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE daily_race (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  difficulty int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  cost_num int(11) NOT NULL,
+  unique_chara_npc_min int(11) NOT NULL,
+  unique_chara_npc_max int(11) NOT NULL,
+  normal_rewards_odds_id int(11) NOT NULL,
+  bonus_rewards_odds_id int(11) NOT NULL,
+  rare_reward_odds_id int(11) NOT NULL,
+  first_clear_item_category_1 int(11) NOT NULL,
+  first_clear_item_id_1 int(11) NOT NULL,
+  first_clear_item_num_1 int(11) NOT NULL,
+  first_clear_item_category_2 int(11) NOT NULL,
+  first_clear_item_id_2 int(11) NOT NULL,
+  first_clear_item_num_2 int(11) NOT NULL,
+  first_clear_item_category_3 int(11) NOT NULL,
+  first_clear_item_id_3 int(11) NOT NULL,
+  first_clear_item_num_3 int(11) NOT NULL,
+  pick_up_item_category_1 int(11) NOT NULL,
+  pick_up_item_id_1 int(11) NOT NULL,
+  pick_up_item_num_1 int(11) NOT NULL,
+  pick_up_item_category_2 int(11) NOT NULL,
+  pick_up_item_id_2 int(11) NOT NULL,
+  pick_up_item_num_2 int(11) NOT NULL,
+  pick_up_item_category_3 int(11) NOT NULL,
+  pick_up_item_id_3 int(11) NOT NULL,
+  pick_up_item_num_3 int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2730,
@@ -12247,17 +13273,16 @@ ADD INDEX daily_race_0_race_instance_id (race_instance_id);
 --
 -- Create table `daily_pack`
 --
-CREATE TABLE daily_pack
-(
-    shop_data_id INT(11) NOT NULL
-  , platform_id INT(11) NOT NULL
-  , term INT(11) NOT NULL
-  , repurchase_day INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , daily_free_num INT(11) NOT NULL
-  , start_date TEXT NOT NULL
-  , end_date TEXT NOT NULL
-  , PRIMARY KEY (shop_data_id, platform_id)
+CREATE TABLE daily_pack (
+  shop_data_id int(11) NOT NULL,
+  platform_id int(11) NOT NULL,
+  term int(11) NOT NULL,
+  repurchase_day int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  daily_free_num int(11) NOT NULL,
+  start_date text NOT NULL,
+  end_date text NOT NULL,
+  PRIMARY KEY (shop_data_id, platform_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -12274,46 +13299,45 @@ ADD INDEX daily_pack_0_group_id (group_id);
 --
 -- Create table `daily_legend_race`
 --
-CREATE TABLE daily_legend_race
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , legend_bg_id INT(11) NOT NULL
-  , legend_bg_sub_id INT(11) NOT NULL
-  , image_id INT(11) NOT NULL
-  , difficulty INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , season INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , ground INT(11) NOT NULL
-  , legend_race_boss_npc_id INT(11) NOT NULL
-  , cost_num INT(11) NOT NULL
-  , drop_reward_odds_id INT(11) NOT NULL
-  , victory_reward_odds_id INT(11) NOT NULL
-  , first_clear_item_category_1 INT(11) NOT NULL
-  , first_clear_item_id_1 INT(11) NOT NULL
-  , first_clear_item_num_1 INT(11) NOT NULL
-  , first_clear_item_category_2 INT(11) NOT NULL
-  , first_clear_item_id_2 INT(11) NOT NULL
-  , first_clear_item_num_2 INT(11) NOT NULL
-  , first_clear_item_category_3 INT(11) NOT NULL
-  , first_clear_item_id_3 INT(11) NOT NULL
-  , first_clear_item_num_3 INT(11) NOT NULL
-  , pick_up_item_category_1 INT(11) NOT NULL
-  , pick_up_item_id_1 INT(11) NOT NULL
-  , pick_up_item_num_1 INT(11) NOT NULL
-  , pick_up_item_category_2 INT(11) NOT NULL
-  , pick_up_item_id_2 INT(11) NOT NULL
-  , pick_up_item_num_2 INT(11) NOT NULL
-  , pick_up_item_category_3 INT(11) NOT NULL
-  , pick_up_item_id_3 INT(11) NOT NULL
-  , pick_up_item_num_3 INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , has_unique_bg_env INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE daily_legend_race (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  legend_bg_id int(11) NOT NULL,
+  legend_bg_sub_id int(11) NOT NULL,
+  image_id int(11) NOT NULL,
+  difficulty int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  season int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  ground int(11) NOT NULL,
+  legend_race_boss_npc_id int(11) NOT NULL,
+  cost_num int(11) NOT NULL,
+  drop_reward_odds_id int(11) NOT NULL,
+  victory_reward_odds_id int(11) NOT NULL,
+  first_clear_item_category_1 int(11) NOT NULL,
+  first_clear_item_id_1 int(11) NOT NULL,
+  first_clear_item_num_1 int(11) NOT NULL,
+  first_clear_item_category_2 int(11) NOT NULL,
+  first_clear_item_id_2 int(11) NOT NULL,
+  first_clear_item_num_2 int(11) NOT NULL,
+  first_clear_item_category_3 int(11) NOT NULL,
+  first_clear_item_id_3 int(11) NOT NULL,
+  first_clear_item_num_3 int(11) NOT NULL,
+  pick_up_item_category_1 int(11) NOT NULL,
+  pick_up_item_id_1 int(11) NOT NULL,
+  pick_up_item_num_1 int(11) NOT NULL,
+  pick_up_item_category_2 int(11) NOT NULL,
+  pick_up_item_id_2 int(11) NOT NULL,
+  pick_up_item_num_2 int(11) NOT NULL,
+  pick_up_item_category_3 int(11) NOT NULL,
+  pick_up_item_id_3 int(11) NOT NULL,
+  pick_up_item_num_3 int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  has_unique_bg_env int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 356,
+AVG_ROW_LENGTH = 264,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -12333,11 +13357,10 @@ ADD INDEX daily_legend_race_0_race_instance_id (race_instance_id);
 --
 -- Create table `crane_game_prop`
 --
-CREATE TABLE crane_game_prop
-(
-    type INT(11) NOT NULL
-  , num INT(11) NOT NULL
-  , PRIMARY KEY (type)
+CREATE TABLE crane_game_prop (
+  type int(11) NOT NULL,
+  num int(11) NOT NULL,
+  PRIMARY KEY (type)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -12348,11 +13371,10 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `crane_game_prize_pattern`
 --
-CREATE TABLE crane_game_prize_pattern
-(
-    id INT(11) NOT NULL
-  , prop_pattern_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE crane_game_prize_pattern (
+  id int(11) NOT NULL,
+  prop_pattern_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -12363,11 +13385,10 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `crane_game_prize_face`
 --
-CREATE TABLE crane_game_prize_face
-(
-    id INT(11) NOT NULL
-  , face_type TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE crane_game_prize_face (
+  id int(11) NOT NULL,
+  face_type text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -12378,24 +13399,23 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `crane_game_hidden_odds`
 --
-CREATE TABLE crane_game_hidden_odds
-(
-    id INT(11) NOT NULL
-  , animation_id INT(11) NOT NULL
-  , crane_animation_id INT(11) NOT NULL
-  , type_id INT(11) NOT NULL
-  , num INT(11) NOT NULL
-  , big INT(11) NOT NULL
-  , big_index INT(11) NOT NULL
-  , odds_1 INT(11) NOT NULL
-  , odds_2 INT(11) NOT NULL
-  , odds_3 INT(11) NOT NULL
-  , odds_extra INT(11) NOT NULL
-  , rare_effect_odds INT(11) NOT NULL
-  , joint_type INT(11) NOT NULL
-  , lift_type INT(11) NOT NULL
-  , push_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE crane_game_hidden_odds (
+  id int(11) NOT NULL,
+  animation_id int(11) NOT NULL,
+  crane_animation_id int(11) NOT NULL,
+  type_id int(11) NOT NULL,
+  num int(11) NOT NULL,
+  big int(11) NOT NULL,
+  big_index int(11) NOT NULL,
+  odds_1 int(11) NOT NULL,
+  odds_2 int(11) NOT NULL,
+  odds_3 int(11) NOT NULL,
+  odds_extra int(11) NOT NULL,
+  rare_effect_odds int(11) NOT NULL,
+  joint_type int(11) NOT NULL,
+  lift_type int(11) NOT NULL,
+  push_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 496,
@@ -12406,11 +13426,10 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `crane_game_extra_odds_condition`
 --
-CREATE TABLE crane_game_extra_odds_condition
-(
-    credit INT(11) NOT NULL
-  , get_num INT(11) NOT NULL
-  , PRIMARY KEY (credit)
+CREATE TABLE crane_game_extra_odds_condition (
+  credit int(11) NOT NULL,
+  get_num int(11) NOT NULL,
+  PRIMARY KEY (credit)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 16384,
@@ -12421,15 +13440,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `crane_game_define_param`
 --
-CREATE TABLE crane_game_define_param
-(
-    id INT(11) NOT NULL
-  , distance1 TEXT NOT NULL
-  , distance2 TEXT NOT NULL
-  , move_speed_1 TEXT NOT NULL
-  , move_speed_2 TEXT NOT NULL
-  , move_speed_3 TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE crane_game_define_param (
+  id int(11) NOT NULL,
+  distance1 text NOT NULL,
+  distance2 text NOT NULL,
+  move_speed_1 text NOT NULL,
+  move_speed_2 text NOT NULL,
+  move_speed_3 text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 16384,
@@ -12440,19 +13458,18 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `crane_game_catch_result`
 --
-CREATE TABLE crane_game_catch_result
-(
-    odds_id INT(11) NOT NULL
-  , get_num INT(11) NOT NULL
-  , lottery_weight_1_1 INT(11) NOT NULL
-  , lottery_weight_1_2 INT(11) NOT NULL
-  , lottery_weight_2_1 INT(11) NOT NULL
-  , lottery_weight_2_2 INT(11) NOT NULL
-  , lottery_weight_3_1 INT(11) NOT NULL
-  , lottery_weight_3_2 INT(11) NOT NULL
-  , lottery_weight_extra_1 INT(11) NOT NULL
-  , lottery_weight_extra_2 INT(11) NOT NULL
-  , PRIMARY KEY (odds_id, get_num)
+CREATE TABLE crane_game_catch_result (
+  odds_id int(11) NOT NULL,
+  get_num int(11) NOT NULL,
+  lottery_weight_1_1 int(11) NOT NULL,
+  lottery_weight_1_2 int(11) NOT NULL,
+  lottery_weight_2_1 int(11) NOT NULL,
+  lottery_weight_2_2 int(11) NOT NULL,
+  lottery_weight_3_1 int(11) NOT NULL,
+  lottery_weight_3_2 int(11) NOT NULL,
+  lottery_weight_extra_1 int(11) NOT NULL,
+  lottery_weight_extra_2 int(11) NOT NULL,
+  PRIMARY KEY (odds_id, get_num)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 240,
@@ -12463,13 +13480,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `crane_game_arm_swing`
 --
-CREATE TABLE crane_game_arm_swing
-(
-    result_type INT(11) NOT NULL
-  , odds_1 INT(11) NOT NULL
-  , odds_2 INT(11) NOT NULL
-  , odds_3 INT(11) NOT NULL
-  , PRIMARY KEY (result_type)
+CREATE TABLE crane_game_arm_swing (
+  result_type int(11) NOT NULL,
+  odds_1 int(11) NOT NULL,
+  odds_2 int(11) NOT NULL,
+  odds_3 int(11) NOT NULL,
+  PRIMARY KEY (result_type)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -12480,23 +13496,22 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `collect_raid_top_data`
 --
-CREATE TABLE collect_raid_top_data
-(
-    id INT(11) NOT NULL
-  , collect_raid_id INT(11) NOT NULL
-  , cut_id INT(11) NOT NULL
-  , cut_sub_id INT(11) NOT NULL
-  , bgm_cue_name TEXT NOT NULL
-  , bgm_cuesheet_name TEXT NOT NULL
-  , env_cue_name TEXT NOT NULL
-  , env_cuesheet_name TEXT NOT NULL
-  , segment_cutt_id INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE collect_raid_top_data (
+  id int(11) NOT NULL,
+  collect_raid_id int(11) NOT NULL,
+  cut_id int(11) NOT NULL,
+  cut_sub_id int(11) NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet_name text NOT NULL,
+  env_cue_name text NOT NULL,
+  env_cuesheet_name text NOT NULL,
+  segment_cutt_id int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 3276,
+AVG_ROW_LENGTH = 2048,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -12510,22 +13525,23 @@ ADD INDEX collect_raid_top_data_0_collect_raid_id (collect_raid_id);
 --
 -- Create table `collect_raid_story`
 --
-CREATE TABLE collect_raid_story
-(
-    id INT(11) NOT NULL
-  , story_set_id INT(11) NOT NULL
-  , story_condition_type INT(11) NOT NULL
-  , episode_index_id INT(11) NOT NULL
-  , story_type_1 INT(11) NOT NULL
-  , story_id_1 INT(11) NOT NULL
-  , story_type_2 INT(11) NOT NULL
-  , story_id_2 INT(11) NOT NULL
-  , story_type_3 INT(11) NOT NULL
-  , story_id_3 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE collect_raid_story (
+  id int(11) NOT NULL,
+  story_set_id int(11) NOT NULL,
+  story_condition_type int(11) NOT NULL,
+  episode_index_id int(11) NOT NULL,
+  story_type_1 int(11) NOT NULL,
+  story_id_1 int(11) NOT NULL,
+  story_type_2 int(11) NOT NULL,
+  story_id_2 int(11) NOT NULL,
+  story_type_3 int(11) NOT NULL,
+  story_id_3 int(11) NOT NULL,
+  collect_raid_id int(11) NOT NULL,
+  unlock_condition int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 8192,
+AVG_ROW_LENGTH = 3276,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -12539,18 +13555,31 @@ ADD INDEX collect_raid_story_0_story_set_id (story_set_id);
 --
 -- Create table `collect_raid_staging_mini_chara`
 --
-CREATE TABLE collect_raid_staging_mini_chara
-(
-    id INT(11) NOT NULL
-  , staging_mini_chara_group_id INT(11) NOT NULL
-  , staging_type INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , mini_motion_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE collect_raid_staging_mini_chara (
+  id int(11) NOT NULL,
+  staging_mini_chara_group_id int(11) NOT NULL,
+  staging_type int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  mini_motion_id int(11) NOT NULL,
+  chara_angle int(11) NOT NULL,
+  chara_id_2 int(11) NOT NULL,
+  dress_id_2 int(11) NOT NULL,
+  mini_motion_id_2 int(11) NOT NULL,
+  chara_angle_2 int(11) NOT NULL,
+  chara_id_3 int(11) NOT NULL,
+  dress_id_3 int(11) NOT NULL,
+  mini_motion_id_3 int(11) NOT NULL,
+  chara_angle_3 int(11) NOT NULL,
+  chara_id_4 int(11) NOT NULL,
+  dress_id_4 int(11) NOT NULL,
+  mini_motion_id_4 int(11) NOT NULL,
+  chara_angle_4 int(11) NOT NULL,
+  rate int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 3276,
+AVG_ROW_LENGTH = 780,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -12570,12 +13599,11 @@ ADD INDEX collect_raid_staging_mini_chara_0_staging_mini_chara_group_id_1 (stagi
 --
 -- Create table `collect_raid_segment_cutt`
 --
-CREATE TABLE collect_raid_segment_cutt
-(
-    id INT(11) NOT NULL
-  , cut_id INT(11) NOT NULL
-  , cut_sub_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE collect_raid_segment_cutt (
+  id int(11) NOT NULL,
+  cut_id int(11) NOT NULL,
+  cut_sub_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -12586,16 +13614,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `collect_raid_mission_top_chara`
 --
-CREATE TABLE collect_raid_mission_top_chara
-(
-    id INT(11) NOT NULL
-  , mission_top_chara_group_id INT(11) NOT NULL
-  , ending_flag INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE collect_raid_mission_top_chara (
+  id int(11) NOT NULL,
+  mission_top_chara_group_id int(11) NOT NULL,
+  ending_flag int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 4096,
@@ -12612,12 +13639,11 @@ ADD INDEX collect_raid_mission_top_chara_0_mission_top_chara_group_id (mission_t
 --
 -- Create table `collect_raid_mission`
 --
-CREATE TABLE collect_raid_mission
-(
-    id INT(11) NOT NULL
-  , collect_raid_master_id INT(11) NOT NULL
-  , mission_data_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE collect_raid_mission (
+  id int(11) NOT NULL,
+  collect_raid_master_id int(11) NOT NULL,
+  mission_data_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 910,
@@ -12634,29 +13660,33 @@ ADD INDEX collect_raid_mission_0_mission_data_id (mission_data_id);
 --
 -- Create table `collect_raid_master`
 --
-CREATE TABLE collect_raid_master
-(
-    id INT(11) NOT NULL
-  , collect_item_id INT(11) NOT NULL
-  , gain_collect_item_rate INT(11) NOT NULL
-  , gain_collect_item_min INT(11) NOT NULL
-  , individual_reward_set_id INT(11) NOT NULL
-  , all_reward_set_id INT(11) NOT NULL
-  , story_set_id INT(11) NOT NULL
-  , mission_top_chara_group_id INT(11) NOT NULL
-  , staging_mini_chara_group_id INT(11) NOT NULL
-  , story_list_bg_id INT(11) NOT NULL
-  , story_list_bg_sub_id INT(11) NOT NULL
-  , collect_event_map_master_id INT(11) NOT NULL
-  , notice_date INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , calc_start_date INT(11) NOT NULL
-  , calc_end_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE collect_raid_master (
+  id int(11) NOT NULL,
+  collect_item_id int(11) NOT NULL,
+  gain_collect_item_rate int(11) NOT NULL,
+  gain_collect_item_min int(11) NOT NULL,
+  individual_reward_set_id int(11) NOT NULL,
+  all_reward_set_id int(11) NOT NULL,
+  story_set_id int(11) NOT NULL,
+  mission_top_chara_group_id int(11) NOT NULL,
+  staging_mini_chara_group_id int(11) NOT NULL,
+  story_list_bg_id int(11) NOT NULL,
+  story_list_bg_sub_id int(11) NOT NULL,
+  collect_event_map_master_id int(11) NOT NULL,
+  notice_date int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  calc_start_date int(11) NOT NULL,
+  calc_end_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  use_mission int(11) NOT NULL,
+  use_transition_dialog int(11) NOT NULL,
+  story_extra_id int(11) NOT NULL,
+  story_voice_type int(11) NOT NULL,
+  use_all_reward_voice int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
+AVG_ROW_LENGTH = 8192,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -12670,18 +13700,17 @@ ADD INDEX collect_raid_master_0_individual_reward_set_id (individual_reward_set_
 --
 -- Create table `collect_raid_individual_reward`
 --
-CREATE TABLE collect_raid_individual_reward
-(
-    id INT(11) NOT NULL
-  , individual_reward_set_id INT(11) NOT NULL
-  , individual_collect_item_num INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE collect_raid_individual_reward (
+  id int(11) NOT NULL,
+  individual_reward_set_id int(11) NOT NULL,
+  individual_collect_item_num int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 2340,
+AVG_ROW_LENGTH = 1092,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -12693,20 +13722,42 @@ ALTER TABLE collect_raid_individual_reward
 ADD INDEX collect_raid_individual_reward_0_individual_reward_set_id (individual_reward_set_id);
 
 --
--- Create table `collect_raid_all_reward`
+-- Create table `collect_raid_dress_color`
 --
-CREATE TABLE collect_raid_all_reward
-(
-    id INT(11) NOT NULL
-  , all_reward_set_id INT(11) NOT NULL
-  , all_collect_item_num INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE collect_raid_dress_color (
+  id int(11) NOT NULL,
+  collect_raid_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  color_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 2340,
+AVG_ROW_LENGTH = 4096,
+CHARACTER SET utf8mb4,
+COLLATE utf8mb4_general_ci,
+ROW_FORMAT = DYNAMIC;
+
+--
+-- Create index `collect_raid_dress_color_0_collect_raid_id` on table `collect_raid_dress_color`
+--
+ALTER TABLE collect_raid_dress_color
+ADD INDEX collect_raid_dress_color_0_collect_raid_id (collect_raid_id);
+
+--
+-- Create table `collect_raid_all_reward`
+--
+CREATE TABLE collect_raid_all_reward (
+  id int(11) NOT NULL,
+  all_reward_set_id int(11) NOT NULL,
+  all_collect_item_num int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB,
+AVG_ROW_LENGTH = 963,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -12720,24 +13771,22 @@ ADD INDEX collect_raid_all_reward_0_all_reward_set_id (all_reward_set_id);
 --
 -- Create table `collect_event_map_master`
 --
-CREATE TABLE collect_event_map_master
-(
-    id INT(11) NOT NULL
-  , bg_data_id INT(11) NOT NULL
-  , short_episode_id INT(11) NOT NULL
-  , tips_group_id INT(11) NOT NULL
-  , login_bonus_id INT(11) NOT NULL
-  , banner_id INT(11) NOT NULL
-  , collect_tap_max_pos_index INT(11) NOT NULL
-  , collect_tap_reward_set_id INT(11) NOT NULL
-  , collect_tap_end_date INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , event_end_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE collect_event_map_master (
+  id int(11) NOT NULL,
+  bg_data_id int(11) NOT NULL,
+  short_episode_id int(11) NOT NULL,
+  tips_group_id int(11) NOT NULL,
+  login_bonus_id int(11) NOT NULL,
+  banner_id int(11) NOT NULL,
+  collect_tap_max_pos_index int(11) NOT NULL,
+  collect_tap_reward_set_id int(11) NOT NULL,
+  collect_tap_end_date int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  event_end_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -12745,17 +13794,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `collect_event_map_bg_data`
 --
-CREATE TABLE collect_event_map_bg_data
-(
-    id INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub_id INT(11) NOT NULL
-  , bgm_cue_name TEXT NOT NULL
-  , bgm_cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE collect_event_map_bg_data (
+  id int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub_id int(11) NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -12763,13 +13810,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `circle_stamp_data`
 --
-CREATE TABLE circle_stamp_data
-(
-    id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , start_date TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE circle_stamp_data (
+  id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  start_date text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 409,
@@ -12786,18 +13832,17 @@ ADD UNIQUE INDEX disp_order (disp_order);
 --
 -- Create table `circle_rank_data`
 --
-CREATE TABLE circle_rank_data
-(
-    id INT(11) NOT NULL
-  , need_ranking_max INT(11) NOT NULL
-  , need_ranking_min INT(11) NOT NULL
-  , reward_item_category_1 INT(11) NOT NULL
-  , reward_item_id_1 INT(11) NOT NULL
-  , reward_num_1 INT(11) NOT NULL
-  , reward_item_category_2 INT(11) NOT NULL
-  , reward_item_id_2 INT(11) NOT NULL
-  , reward_num_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE circle_rank_data (
+  id int(11) NOT NULL,
+  need_ranking_max int(11) NOT NULL,
+  need_ranking_min int(11) NOT NULL,
+  reward_item_category_1 int(11) NOT NULL,
+  reward_item_id_1 int(11) NOT NULL,
+  reward_num_1 int(11) NOT NULL,
+  reward_item_category_2 int(11) NOT NULL,
+  reward_item_id_2 int(11) NOT NULL,
+  reward_num_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1489,
@@ -12808,15 +13853,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `chara_type`
 --
-CREATE TABLE chara_type
-(
-    id VARCHAR(20) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , target_scene INT(11) NOT NULL
-  , target_cut INT(11) NOT NULL
-  , target_type INT(11) NOT NULL
-  , value INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE chara_type (
+  id varchar(20) NOT NULL,
+  chara_id int(11) NOT NULL,
+  target_scene int(11) NOT NULL,
+  target_cut int(11) NOT NULL,
+  target_type int(11) NOT NULL,
+  value int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 102,
@@ -12833,20 +13877,19 @@ ADD INDEX chara_type_0_target_scene_1_target_cut (target_scene, target_cut);
 --
 -- Create table `chara_story_data`
 --
-CREATE TABLE chara_story_data
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , episode_index INT(11) NOT NULL
-  , story_id INT(11) NOT NULL
-  , lock_type_1 INT(11) NOT NULL
-  , lock_value_1_1 INT(11) NOT NULL
-  , lock_value_1_2 INT(11) NOT NULL
-  , add_reward_category_1 INT(11) NOT NULL
-  , add_reward_id_1 INT(11) NOT NULL
-  , add_reward_num_1 INT(11) NOT NULL
-  , exp_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE chara_story_data (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  episode_index int(11) NOT NULL,
+  story_id int(11) NOT NULL,
+  lock_type_1 int(11) NOT NULL,
+  lock_value_1_1 int(11) NOT NULL,
+  lock_value_1_2 int(11) NOT NULL,
+  add_reward_category_1 int(11) NOT NULL,
+  add_reward_id_1 int(11) NOT NULL,
+  add_reward_num_1 int(11) NOT NULL,
+  exp_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 137,
@@ -12875,19 +13918,19 @@ ADD UNIQUE INDEX chara_story_data_0_story_id (story_id);
 --
 -- Create table `chara_motion_set`
 --
-CREATE TABLE chara_motion_set
-(
-    id INT(11) NOT NULL
-  , body_motion TEXT NOT NULL
-  , body_motion_type INT(11) NOT NULL
-  , body_motion_play_type INT(11) NOT NULL
-  , face_type TEXT NOT NULL
-  , cheek INT(11) NOT NULL
-  , eye_default INT(11) NOT NULL
-  , ear_motion TEXT NOT NULL
-  , tail_motion TEXT NOT NULL
-  , tail_motion_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE chara_motion_set (
+  id int(11) NOT NULL,
+  body_motion text NOT NULL,
+  body_motion_type int(11) NOT NULL,
+  body_motion_play_type int(11) NOT NULL,
+  face_type text NOT NULL,
+  cheek int(11) NOT NULL,
+  eye_default int(11) NOT NULL,
+  ear_motion text NOT NULL,
+  tail_motion text NOT NULL,
+  tail_motion_type int(11) NOT NULL,
+  body_motion_path_segment int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 79,
@@ -12898,13 +13941,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `chara_motion_act`
 --
-CREATE TABLE chara_motion_act
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , target_motion INT(11) NOT NULL
-  , command_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE chara_motion_act (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  target_motion int(11) NOT NULL,
+  command_name text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 455,
@@ -12927,15 +13969,13 @@ ADD UNIQUE INDEX chara_motion_act_0_chara_id_1_command_name USING HASH (chara_id
 --
 -- Create table `chara_dress_color_set_default`
 --
-CREATE TABLE chara_dress_color_set_default
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , color_set_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE chara_dress_color_set_default (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  color_set_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -12949,27 +13989,25 @@ ADD INDEX chara_dress_color_set_default_0_chara_id (chara_id);
 --
 -- Create table `chara_dress_color_set`
 --
-CREATE TABLE chara_dress_color_set
-(
-    id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , area_map_id INT(11) NOT NULL
-  , color_r1 TEXT NOT NULL
-  , color_r2 TEXT NOT NULL
-  , color_g1 TEXT NOT NULL
-  , color_g2 TEXT NOT NULL
-  , color_b1 TEXT NOT NULL
-  , color_b2 TEXT NOT NULL
-  , toon_color_r1 TEXT NOT NULL
-  , toon_color_r2 TEXT NOT NULL
-  , toon_color_g1 TEXT NOT NULL
-  , toon_color_g2 TEXT NOT NULL
-  , toon_color_b1 TEXT NOT NULL
-  , toon_color_b2 TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE chara_dress_color_set (
+  id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  area_map_id int(11) NOT NULL,
+  color_r1 text NOT NULL,
+  color_r2 text NOT NULL,
+  color_g1 text NOT NULL,
+  color_g2 text NOT NULL,
+  color_b1 text NOT NULL,
+  color_b2 text NOT NULL,
+  toon_color_r1 text NOT NULL,
+  toon_color_r2 text NOT NULL,
+  toon_color_g1 text NOT NULL,
+  toon_color_g2 text NOT NULL,
+  toon_color_b1 text NOT NULL,
+  toon_color_b2 text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 16384,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -12983,12 +14021,11 @@ ADD INDEX chara_dress_color_set_0_dress_id (dress_id);
 --
 -- Create table `chara_data_group`
 --
-CREATE TABLE chara_data_group
-(
-    id INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE chara_data_group (
+  id int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 5461,
@@ -13011,54 +14048,53 @@ ADD INDEX chara_data_group_0_group_id (group_id);
 --
 -- Create table `chara_data`
 --
-CREATE TABLE chara_data
-(
-    id INT(11) NOT NULL
-  , birth_year INT(11) NOT NULL
-  , birth_month INT(11) NOT NULL
-  , birth_day INT(11) NOT NULL
-  , sex INT(11) NOT NULL
-  , image_color_main TEXT NOT NULL
-  , image_color_sub TEXT NOT NULL
-  , ui_color_main TEXT NOT NULL
-  , ui_color_sub TEXT NOT NULL
-  , ui_training_color_1 TEXT NOT NULL
-  , ui_training_color_2 TEXT NOT NULL
-  , ui_border_color TEXT NOT NULL
-  , ui_num_color_1 TEXT NOT NULL
-  , ui_num_color_2 TEXT NOT NULL
-  , ui_turn_color TEXT NOT NULL
-  , ui_wipe_color_1 TEXT NOT NULL
-  , ui_wipe_color_2 TEXT NOT NULL
-  , ui_wipe_color_3 TEXT NOT NULL
-  , ui_speech_color_1 TEXT NOT NULL
-  , ui_speech_color_2 TEXT NOT NULL
-  , ui_nameplate_color_1 TEXT NOT NULL
-  , ui_nameplate_color_2 TEXT NOT NULL
-  , height INT(11) NOT NULL
-  , bust INT(11) NOT NULL
-  , scale INT(11) NOT NULL
-  , skin INT(11) NOT NULL
-  , shape INT(11) NOT NULL
-  , socks INT(11) NOT NULL
-  , personal_dress INT(11) NOT NULL
-  , tail_model_id INT(11) NOT NULL
-  , race_running_type INT(11) NOT NULL
-  , ear_random_time_min INT(11) NOT NULL
-  , ear_random_time_max INT(11) NOT NULL
-  , tail_random_time_min INT(11) NOT NULL
-  , tail_random_time_max INT(11) NOT NULL
-  , story_ear_random_time_min INT(11) NOT NULL
-  , story_ear_random_time_max INT(11) NOT NULL
-  , story_tail_random_time_min INT(11) NOT NULL
-  , story_tail_random_time_max INT(11) NOT NULL
-  , attachment_model_id INT(11) NOT NULL
-  , mini_mayu_shader_type INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , chara_category INT(11) NOT NULL
-  , love_rank_limit INT(11) NOT NULL
-  , last_year INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE chara_data (
+  id int(11) NOT NULL,
+  birth_year int(11) NOT NULL,
+  birth_month int(11) NOT NULL,
+  birth_day int(11) NOT NULL,
+  sex int(11) NOT NULL,
+  image_color_main text NOT NULL,
+  image_color_sub text NOT NULL,
+  ui_color_main text NOT NULL,
+  ui_color_sub text NOT NULL,
+  ui_training_color_1 text NOT NULL,
+  ui_training_color_2 text NOT NULL,
+  ui_border_color text NOT NULL,
+  ui_num_color_1 text NOT NULL,
+  ui_num_color_2 text NOT NULL,
+  ui_turn_color text NOT NULL,
+  ui_wipe_color_1 text NOT NULL,
+  ui_wipe_color_2 text NOT NULL,
+  ui_wipe_color_3 text NOT NULL,
+  ui_speech_color_1 text NOT NULL,
+  ui_speech_color_2 text NOT NULL,
+  ui_nameplate_color_1 text NOT NULL,
+  ui_nameplate_color_2 text NOT NULL,
+  height int(11) NOT NULL,
+  bust int(11) NOT NULL,
+  scale int(11) NOT NULL,
+  skin int(11) NOT NULL,
+  shape int(11) NOT NULL,
+  socks int(11) NOT NULL,
+  personal_dress int(11) NOT NULL,
+  tail_model_id int(11) NOT NULL,
+  race_running_type int(11) NOT NULL,
+  ear_random_time_min int(11) NOT NULL,
+  ear_random_time_max int(11) NOT NULL,
+  tail_random_time_min int(11) NOT NULL,
+  tail_random_time_max int(11) NOT NULL,
+  story_ear_random_time_min int(11) NOT NULL,
+  story_ear_random_time_max int(11) NOT NULL,
+  story_tail_random_time_min int(11) NOT NULL,
+  story_tail_random_time_max int(11) NOT NULL,
+  attachment_model_id int(11) NOT NULL,
+  mini_mayu_shader_type int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  chara_category int(11) NOT NULL,
+  love_rank_limit int(11) NOT NULL,
+  last_year int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 592,
@@ -13069,16 +14105,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `chara_category_motion`
 --
-CREATE TABLE chara_category_motion
-(
-    chara_id INT(11) NOT NULL
-  , standby_motion_1 INT(11) NOT NULL
-  , standby_motion_2 INT(11) NOT NULL
-  , standby_motion_3 INT(11) NOT NULL
-  , standby_motion_4 INT(11) NOT NULL
-  , standby_motion_5 INT(11) NOT NULL
-  , standby_motion_6 INT(11) NOT NULL
-  , PRIMARY KEY (chara_id)
+CREATE TABLE chara_category_motion (
+  chara_id int(11) NOT NULL,
+  standby_motion_1 int(11) NOT NULL,
+  standby_motion_2 int(11) NOT NULL,
+  standby_motion_3 int(11) NOT NULL,
+  standby_motion_4 int(11) NOT NULL,
+  standby_motion_5 int(11) NOT NULL,
+  standby_motion_6 int(11) NOT NULL,
+  PRIMARY KEY (chara_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 321,
@@ -13089,23 +14124,23 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `character_system_text`
 --
-CREATE TABLE character_system_text
-(
-    character_id INT(11) NOT NULL
-  , voice_id INT(11) NOT NULL
-  , text TEXT NOT NULL
-  , cue_sheet TEXT NOT NULL
-  , cue_id INT(11) NOT NULL
-  , motion_set INT(11) NOT NULL
-  , scene INT(11) NOT NULL
-  , use_gallery INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , lip_sync_data TEXT NOT NULL
-  , gender INT(11) NOT NULL
-  , motion_second_set INT(11) NOT NULL
-  , motion_second_start INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , PRIMARY KEY (character_id, voice_id)
+CREATE TABLE character_system_text (
+  character_id int(11) NOT NULL,
+  voice_id int(11) NOT NULL,
+  text text NOT NULL,
+  cue_sheet text NOT NULL,
+  cue_id int(11) NOT NULL,
+  motion_set int(11) NOT NULL,
+  scene int(11) NOT NULL,
+  use_gallery int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  lip_sync_data text NOT NULL,
+  gender int(11) NOT NULL,
+  motion_second_set int(11) NOT NULL,
+  motion_second_start int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  gallery_key_usage_condition int(11) NOT NULL,
+  PRIMARY KEY (character_id, voice_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 547,
@@ -13122,18 +14157,17 @@ ADD INDEX character_system_text_0_character_id (character_id);
 --
 -- Create table `character_system_lottery`
 --
-CREATE TABLE character_system_lottery
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , card_rarity_id INT(11) NOT NULL
-  , `trigger` INT(11) NOT NULL
-  , param1 INT(11) NOT NULL
-  , per INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , sys_text_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE character_system_lottery (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  card_rarity_id int(11) NOT NULL,
+  `trigger` int(11) NOT NULL,
+  param1 int(11) NOT NULL,
+  per int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  sys_text_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 71,
@@ -13162,15 +14196,14 @@ ADD INDEX character_system_lottery_0_trigger_1_param1 (`trigger`, param1);
 --
 -- Create table `character_prop_animation`
 --
-CREATE TABLE character_prop_animation
-(
-    id INT(11) NOT NULL
-  , prop_id INT(11) NOT NULL
-  , prop_anim_id INT(11) NOT NULL
-  , layer_index INT(11) NOT NULL
-  , use_state_name TEXT NOT NULL
-  , scene_type INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE character_prop_animation (
+  id int(11) NOT NULL,
+  prop_id int(11) NOT NULL,
+  prop_anim_id int(11) NOT NULL,
+  layer_index int(11) NOT NULL,
+  use_state_name text NOT NULL,
+  scene_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 963,
@@ -13187,13 +14220,12 @@ ADD INDEX character_prop_animation_0_prop_id_1_scene_type (prop_id, scene_type);
 --
 -- Create table `champions_stand_motion`
 --
-CREATE TABLE champions_stand_motion
-(
-    chara_id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , motion_set INT(11) NOT NULL
-  , PRIMARY KEY (chara_id, type)
+CREATE TABLE champions_stand_motion (
+  chara_id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  motion_set int(11) NOT NULL,
+  PRIMARY KEY (chara_id, type)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 910,
@@ -13204,26 +14236,25 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `champions_schedule`
 --
-CREATE TABLE champions_schedule
-(
-    id INT(11) NOT NULL
-  , resource_id INT(11) NOT NULL
-  , info_detail_1 INT(11) NOT NULL
-  , info_detail_2 INT(11) NOT NULL
-  , champions_bg_id INT(11) NOT NULL
-  , champions_league_select_bg_sub_id INT(11) NOT NULL
-  , champions_bg_sub_id INT(11) NOT NULL
-  , champions_finish_bg_sub_id INT(11) NOT NULL
-  , champions_bg_position_x INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , info_detail INT(11) NOT NULL
-  , champions_finish_bg_id INT(11) NOT NULL
-  , champions_finish_bg_position_x INT(11) NOT NULL
-  , notice_date INT(11) NOT NULL
-  , champions_chara_select_bg_id INT(11) NOT NULL
-  , champions_chara_select_bg_sub_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE champions_schedule (
+  id int(11) NOT NULL,
+  resource_id int(11) NOT NULL,
+  info_detail_1 int(11) NOT NULL,
+  info_detail_2 int(11) NOT NULL,
+  champions_bg_id int(11) NOT NULL,
+  champions_league_select_bg_sub_id int(11) NOT NULL,
+  champions_bg_sub_id int(11) NOT NULL,
+  champions_finish_bg_sub_id int(11) NOT NULL,
+  champions_bg_position_x int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  info_detail int(11) NOT NULL,
+  champions_finish_bg_id int(11) NOT NULL,
+  champions_finish_bg_position_x int(11) NOT NULL,
+  notice_date int(11) NOT NULL,
+  champions_chara_select_bg_id int(11) NOT NULL,
+  champions_chara_select_bg_sub_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1638,
@@ -13234,17 +14265,16 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `champions_round_schedule`
 --
-CREATE TABLE champions_round_schedule
-(
-    id INT(11) NOT NULL
-  , champions_id INT(11) NOT NULL
-  , round INT(11) NOT NULL
-  , round_detail INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , interval_start_time INT(11) NOT NULL
-  , interval_end_time INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE champions_round_schedule (
+  id int(11) NOT NULL,
+  champions_id int(11) NOT NULL,
+  round int(11) NOT NULL,
+  round_detail int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  interval_start_time int(11) NOT NULL,
+  interval_end_time int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 273,
@@ -13261,20 +14291,19 @@ ADD INDEX champions_round_schedule_0_champions_id (champions_id);
 --
 -- Create table `champions_round_detail`
 --
-CREATE TABLE champions_round_detail
-(
-    id INT(11) NOT NULL
-  , champions_id INT(11) NOT NULL
-  , league_type INT(11) NOT NULL
-  , round_id INT(11) NOT NULL
-  , round INT(11) NOT NULL
-  , tier INT(11) NOT NULL
-  , round_number INT(11) NOT NULL
-  , breakthrough_number_1 INT(11) NOT NULL
-  , breakthrough_number_2 INT(11) NOT NULL
-  , entry_number INT(11) NOT NULL
-  , free_entry_number INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE champions_round_detail (
+  id int(11) NOT NULL,
+  champions_id int(11) NOT NULL,
+  league_type int(11) NOT NULL,
+  round_id int(11) NOT NULL,
+  round int(11) NOT NULL,
+  tier int(11) NOT NULL,
+  round_number int(11) NOT NULL,
+  breakthrough_number_1 int(11) NOT NULL,
+  breakthrough_number_2 int(11) NOT NULL,
+  entry_number int(11) NOT NULL,
+  free_entry_number int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 117,
@@ -13291,18 +14320,17 @@ ADD INDEX champions_round_detail_0_champions_id_1_league_type (champions_id, lea
 --
 -- Create table `champions_reward_rate`
 --
-CREATE TABLE champions_reward_rate
-(
-    id INT(11) NOT NULL
-  , champions_id INT(11) NOT NULL
-  , league_type INT(11) NOT NULL
-  , round_id INT(11) NOT NULL
-  , win_count INT(11) NOT NULL
-  , ranking INT(11) NOT NULL
-  , rate INT(11) NOT NULL
-  , reward_set_id INT(11) NOT NULL
-  , box_grade INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE champions_reward_rate (
+  id int(11) NOT NULL,
+  champions_id int(11) NOT NULL,
+  league_type int(11) NOT NULL,
+  round_id int(11) NOT NULL,
+  win_count int(11) NOT NULL,
+  ranking int(11) NOT NULL,
+  rate int(11) NOT NULL,
+  reward_set_id int(11) NOT NULL,
+  box_grade int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 136,
@@ -13319,13 +14347,12 @@ ADD INDEX champions_reward_rate_0_champions_id_1_round_id (champions_id, round_i
 --
 -- Create table `champions_race_condition`
 --
-CREATE TABLE champions_race_condition
-(
-    champions_id INT(11) NOT NULL
-  , round_id INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , race_condition_id INT(11) NOT NULL
-  , PRIMARY KEY (champions_id, round_id)
+CREATE TABLE champions_race_condition (
+  champions_id int(11) NOT NULL,
+  round_id int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  race_condition_id int(11) NOT NULL,
+  PRIMARY KEY (champions_id, round_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 234,
@@ -13336,21 +14363,20 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `champions_news_win_title`
 --
-CREATE TABLE champions_news_win_title
-(
-    id INT(11) NOT NULL
-  , round_id INT(11) NOT NULL
-  , win_percent_type INT(11) NOT NULL
-  , resource_id INT(11) NOT NULL
-  , bashin_min INT(11) NOT NULL
-  , bashin_max INT(11) NOT NULL
-  , running_style INT(11) NOT NULL
-  , race_track_id INT(11) NOT NULL
-  , ground INT(11) NOT NULL
-  , distance INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , sub_title INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE champions_news_win_title (
+  id int(11) NOT NULL,
+  round_id int(11) NOT NULL,
+  win_percent_type int(11) NOT NULL,
+  resource_id int(11) NOT NULL,
+  bashin_min int(11) NOT NULL,
+  bashin_max int(11) NOT NULL,
+  running_style int(11) NOT NULL,
+  race_track_id int(11) NOT NULL,
+  ground int(11) NOT NULL,
+  distance int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  sub_title int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 141,
@@ -13361,16 +14387,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `champions_news_win_comment`
 --
-CREATE TABLE champions_news_win_comment
-(
-    id INT(11) NOT NULL
-  , round_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , big_flag INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE champions_news_win_comment (
+  id int(11) NOT NULL,
+  round_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  big_flag int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 60,
+AVG_ROW_LENGTH = 64,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -13378,19 +14403,18 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `champions_news_title`
 --
-CREATE TABLE champions_news_title
-(
-    id INT(11) NOT NULL
-  , round_id INT(11) NOT NULL
-  , win_percent_type INT(11) NOT NULL
-  , resource_id INT(11) NOT NULL
-  , title INT(11) NOT NULL
-  , sub_title INT(11) NOT NULL
-  , race_track_id INT(11) NOT NULL
-  , ground INT(11) NOT NULL
-  , distance INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE champions_news_title (
+  id int(11) NOT NULL,
+  round_id int(11) NOT NULL,
+  win_percent_type int(11) NOT NULL,
+  resource_id int(11) NOT NULL,
+  title int(11) NOT NULL,
+  sub_title int(11) NOT NULL,
+  race_track_id int(11) NOT NULL,
+  ground int(11) NOT NULL,
+  distance int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 124,
@@ -13407,18 +14431,17 @@ ADD INDEX champions_news_title_0_round_id (round_id);
 --
 -- Create table `champions_news_race`
 --
-CREATE TABLE champions_news_race
-(
-    id INT(11) NOT NULL
-  , round_id INT(11) NOT NULL
-  , win_percent_type INT(11) NOT NULL
-  , text_number INT(11) NOT NULL
-  , resource_id INT(11) NOT NULL
-  , race_track_id INT(11) NOT NULL
-  , ground INT(11) NOT NULL
-  , distance INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE champions_news_race (
+  id int(11) NOT NULL,
+  round_id int(11) NOT NULL,
+  win_percent_type int(11) NOT NULL,
+  text_number int(11) NOT NULL,
+  resource_id int(11) NOT NULL,
+  race_track_id int(11) NOT NULL,
+  ground int(11) NOT NULL,
+  distance int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 77,
@@ -13435,13 +14458,12 @@ ADD INDEX champions_news_race_0_round_id (round_id);
 --
 -- Create table `champions_news_chara_comment`
 --
-CREATE TABLE champions_news_chara_comment
-(
-    id INT(11) NOT NULL
-  , round_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , big_flag INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE champions_news_chara_comment (
+  id int(11) NOT NULL,
+  round_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  big_flag int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 98,
@@ -13458,13 +14480,12 @@ ADD INDEX champions_news_chara_comment_0_round_id (round_id);
 --
 -- Create table `champions_evaluation_rate`
 --
-CREATE TABLE champions_evaluation_rate
-(
-    id INT(11) NOT NULL
-  , proper_type INT(11) NOT NULL
-  , proper_rank INT(11) NOT NULL
-  , rate INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE champions_evaluation_rate (
+  id int(11) NOT NULL,
+  proper_type int(11) NOT NULL,
+  proper_rank int(11) NOT NULL,
+  rate int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1024,
@@ -13475,13 +14496,12 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `champions_entry_reward`
 --
-CREATE TABLE champions_entry_reward
-(
-    champions_id INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (champions_id, item_id)
+CREATE TABLE champions_entry_reward (
+  champions_id int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (champions_id, item_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 8192,
@@ -13498,17 +14518,16 @@ ADD INDEX champions_entry_reward_0_champions_id (champions_id);
 --
 -- Create table `champions_bgm`
 --
-CREATE TABLE champions_bgm
-(
-    id INT(11) NOT NULL
-  , round_id INT(11) NOT NULL
-  , scene_type INT(11) NOT NULL
-  , race_number INT(11) NOT NULL
-  , cue_name TEXT NOT NULL
-  , cuesheet_name TEXT NOT NULL
-  , first_bgm_pattern INT(11) NOT NULL
-  , second_bgm_pattern INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE champions_bgm (
+  id int(11) NOT NULL,
+  round_id int(11) NOT NULL,
+  scene_type int(11) NOT NULL,
+  race_number int(11) NOT NULL,
+  cue_name text NOT NULL,
+  cuesheet_name text NOT NULL,
+  first_bgm_pattern int(11) NOT NULL,
+  second_bgm_pattern int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 297,
@@ -13525,17 +14544,16 @@ ADD INDEX champions_bgm_0_round_id_1_scene_type_2_race_number (round_id, scene_t
 --
 -- Create table `challenge_match_raw_point`
 --
-CREATE TABLE challenge_match_raw_point
-(
-    id INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value_1 INT(11) NOT NULL
-  , condition_value_2 INT(11) NOT NULL
-  , point INT(11) NOT NULL
-  , race_point_name_id INT(11) NOT NULL
-  , sort_order INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE challenge_match_raw_point (
+  id int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value_1 int(11) NOT NULL,
+  condition_value_2 int(11) NOT NULL,
+  point int(11) NOT NULL,
+  race_point_name_id int(11) NOT NULL,
+  sort_order int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 178,
@@ -13558,49 +14576,48 @@ ADD INDEX challenge_match_raw_point_0_race_point_name_id (race_point_name_id);
 --
 -- Create table `challenge_match_race`
 --
-CREATE TABLE challenge_match_race
-(
-    id INT(11) NOT NULL
-  , challenge_match_id INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , challenge_match_bg_id INT(11) NOT NULL
-  , challenge_match_bg_sub_id INT(11) NOT NULL
-  , difficulty INT(11) NOT NULL
-  , race_type INT(11) NOT NULL
-  , race_appearance_rate INT(11) NOT NULL
-  , race_instance_id INT(11) NOT NULL
-  , season INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , ground INT(11) NOT NULL
-  , challenge_match_race_boss_npc_id INT(11) NOT NULL
-  , cost_rp INT(11) NOT NULL
-  , drop_reward_odds_id INT(11) NOT NULL
-  , victory_reward_odds_id INT(11) NOT NULL
-  , first_clear_item_category_1 INT(11) NOT NULL
-  , first_clear_item_id_1 INT(11) NOT NULL
-  , first_clear_item_num_1 INT(11) NOT NULL
-  , first_clear_item_category_2 INT(11) NOT NULL
-  , first_clear_item_id_2 INT(11) NOT NULL
-  , first_clear_item_num_2 INT(11) NOT NULL
-  , first_clear_item_category_3 INT(11) NOT NULL
-  , first_clear_item_id_3 INT(11) NOT NULL
-  , first_clear_item_num_3 INT(11) NOT NULL
-  , pick_up_item_category_1 INT(11) NOT NULL
-  , pick_up_item_id_1 INT(11) NOT NULL
-  , pick_up_item_num_1 INT(11) NOT NULL
-  , pick_up_item_category_2 INT(11) NOT NULL
-  , pick_up_item_id_2 INT(11) NOT NULL
-  , pick_up_item_num_2 INT(11) NOT NULL
-  , pick_up_item_category_3 INT(11) NOT NULL
-  , pick_up_item_id_3 INT(11) NOT NULL
-  , pick_up_item_num_3 INT(11) NOT NULL
-  , pick_up_item_category_4 INT(11) NOT NULL
-  , pick_up_item_id_4 INT(11) NOT NULL
-  , pick_up_item_num_4 INT(11) NOT NULL
-  , pick_up_item_category_5 INT(11) NOT NULL
-  , pick_up_item_id_5 INT(11) NOT NULL
-  , pick_up_item_num_5 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE challenge_match_race (
+  id int(11) NOT NULL,
+  challenge_match_id int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  challenge_match_bg_id int(11) NOT NULL,
+  challenge_match_bg_sub_id int(11) NOT NULL,
+  difficulty int(11) NOT NULL,
+  race_type int(11) NOT NULL,
+  race_appearance_rate int(11) NOT NULL,
+  race_instance_id int(11) NOT NULL,
+  season int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  ground int(11) NOT NULL,
+  challenge_match_race_boss_npc_id int(11) NOT NULL,
+  cost_rp int(11) NOT NULL,
+  drop_reward_odds_id int(11) NOT NULL,
+  victory_reward_odds_id int(11) NOT NULL,
+  first_clear_item_category_1 int(11) NOT NULL,
+  first_clear_item_id_1 int(11) NOT NULL,
+  first_clear_item_num_1 int(11) NOT NULL,
+  first_clear_item_category_2 int(11) NOT NULL,
+  first_clear_item_id_2 int(11) NOT NULL,
+  first_clear_item_num_2 int(11) NOT NULL,
+  first_clear_item_category_3 int(11) NOT NULL,
+  first_clear_item_id_3 int(11) NOT NULL,
+  first_clear_item_num_3 int(11) NOT NULL,
+  pick_up_item_category_1 int(11) NOT NULL,
+  pick_up_item_id_1 int(11) NOT NULL,
+  pick_up_item_num_1 int(11) NOT NULL,
+  pick_up_item_category_2 int(11) NOT NULL,
+  pick_up_item_id_2 int(11) NOT NULL,
+  pick_up_item_num_2 int(11) NOT NULL,
+  pick_up_item_category_3 int(11) NOT NULL,
+  pick_up_item_id_3 int(11) NOT NULL,
+  pick_up_item_num_3 int(11) NOT NULL,
+  pick_up_item_category_4 int(11) NOT NULL,
+  pick_up_item_id_4 int(11) NOT NULL,
+  pick_up_item_num_4 int(11) NOT NULL,
+  pick_up_item_category_5 int(11) NOT NULL,
+  pick_up_item_id_5 int(11) NOT NULL,
+  pick_up_item_num_5 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2730,
@@ -13623,20 +14640,19 @@ ADD INDEX challenge_match_race_0_race_instance_id (race_instance_id);
 --
 -- Create table `challenge_match_data`
 --
-CREATE TABLE challenge_match_data
-(
-    challenge_match_id INT(11) NOT NULL
-  , announce_id INT(11) NOT NULL
-  , bonus_skill_id INT(11) NOT NULL
-  , bonus_factor_id INT(11) NOT NULL
-  , item_exchange_top_id INT(11) NOT NULL
-  , notice_date INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , ending_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , challenge_match_top_bg_id INT(11) NOT NULL
-  , challenge_match_top_bg_sub_id INT(11) NOT NULL
-  , PRIMARY KEY (challenge_match_id)
+CREATE TABLE challenge_match_data (
+  challenge_match_id int(11) NOT NULL,
+  announce_id int(11) NOT NULL,
+  bonus_skill_id int(11) NOT NULL,
+  bonus_factor_id int(11) NOT NULL,
+  item_exchange_top_id int(11) NOT NULL,
+  notice_date int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  ending_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  challenge_match_top_bg_id int(11) NOT NULL,
+  challenge_match_top_bg_sub_id int(11) NOT NULL,
+  PRIMARY KEY (challenge_match_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 16384,
@@ -13647,31 +14663,30 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `challenge_match_boss_npc`
 --
-CREATE TABLE challenge_match_boss_npc
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , nickname_id INT(11) NOT NULL
-  , card_rarity_data_id INT(11) NOT NULL
-  , post INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , pow INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , proper_distance_short INT(11) NOT NULL
-  , proper_distance_mile INT(11) NOT NULL
-  , proper_distance_middle INT(11) NOT NULL
-  , proper_distance_long INT(11) NOT NULL
-  , proper_running_style_nige INT(11) NOT NULL
-  , proper_running_style_senko INT(11) NOT NULL
-  , proper_running_style_sashi INT(11) NOT NULL
-  , proper_running_style_oikomi INT(11) NOT NULL
-  , proper_ground_turf INT(11) NOT NULL
-  , proper_ground_dirt INT(11) NOT NULL
-  , skill_set_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE challenge_match_boss_npc (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  nickname_id int(11) NOT NULL,
+  card_rarity_data_id int(11) NOT NULL,
+  post int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  pow int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  proper_distance_short int(11) NOT NULL,
+  proper_distance_mile int(11) NOT NULL,
+  proper_distance_middle int(11) NOT NULL,
+  proper_distance_long int(11) NOT NULL,
+  proper_running_style_nige int(11) NOT NULL,
+  proper_running_style_senko int(11) NOT NULL,
+  proper_running_style_sashi int(11) NOT NULL,
+  proper_running_style_oikomi int(11) NOT NULL,
+  proper_ground_turf int(11) NOT NULL,
+  proper_ground_dirt int(11) NOT NULL,
+  skill_set_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2730,
@@ -13682,30 +14697,29 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `card_talent_upgrade`
 --
-CREATE TABLE card_talent_upgrade
-(
-    id INT(11) NOT NULL
-  , talent_group_id INT(11) NOT NULL
-  , talent_level INT(11) NOT NULL
-  , item_category_1 INT(11) NOT NULL
-  , item_id_1 INT(11) NOT NULL
-  , item_num_1 INT(11) NOT NULL
-  , item_category_2 INT(11) NOT NULL
-  , item_id_2 INT(11) NOT NULL
-  , item_num_2 INT(11) NOT NULL
-  , item_category_3 INT(11) NOT NULL
-  , item_id_3 INT(11) NOT NULL
-  , item_num_3 INT(11) NOT NULL
-  , item_category_4 INT(11) NOT NULL
-  , item_id_4 INT(11) NOT NULL
-  , item_num_4 INT(11) NOT NULL
-  , item_category_5 INT(11) NOT NULL
-  , item_id_5 INT(11) NOT NULL
-  , item_num_5 INT(11) NOT NULL
-  , item_category_6 INT(11) NOT NULL
-  , item_id_6 INT(11) NOT NULL
-  , item_num_6 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE card_talent_upgrade (
+  id int(11) NOT NULL,
+  talent_group_id int(11) NOT NULL,
+  talent_level int(11) NOT NULL,
+  item_category_1 int(11) NOT NULL,
+  item_id_1 int(11) NOT NULL,
+  item_num_1 int(11) NOT NULL,
+  item_category_2 int(11) NOT NULL,
+  item_id_2 int(11) NOT NULL,
+  item_num_2 int(11) NOT NULL,
+  item_category_3 int(11) NOT NULL,
+  item_id_3 int(11) NOT NULL,
+  item_num_3 int(11) NOT NULL,
+  item_category_4 int(11) NOT NULL,
+  item_id_4 int(11) NOT NULL,
+  item_num_4 int(11) NOT NULL,
+  item_category_5 int(11) NOT NULL,
+  item_id_5 int(11) NOT NULL,
+  item_num_5 int(11) NOT NULL,
+  item_category_6 int(11) NOT NULL,
+  item_id_6 int(11) NOT NULL,
+  item_num_6 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 230,
@@ -13722,21 +14736,20 @@ ADD INDEX card_talent_upgrade_0_talent_group_id_1_talent_level (talent_group_id,
 --
 -- Create table `card_talent_hint_upgrade`
 --
-CREATE TABLE card_talent_hint_upgrade
-(
-    id INT(11) NOT NULL
-  , rarity INT(11) NOT NULL
-  , talent_level INT(11) NOT NULL
-  , item_category_1 INT(11) NOT NULL
-  , item_id_1 INT(11) NOT NULL
-  , item_disp_order_1 INT(11) NOT NULL
-  , item_num_1 INT(11) NOT NULL
-  , item_category_2 INT(11) NOT NULL
-  , item_id_2 INT(11) NOT NULL
-  , item_disp_order_2 INT(11) NOT NULL
-  , item_num_2 INT(11) NOT NULL
-  , money_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE card_talent_hint_upgrade (
+  id int(11) NOT NULL,
+  rarity int(11) NOT NULL,
+  talent_level int(11) NOT NULL,
+  item_category_1 int(11) NOT NULL,
+  item_id_1 int(11) NOT NULL,
+  item_disp_order_1 int(11) NOT NULL,
+  item_num_1 int(11) NOT NULL,
+  item_category_2 int(11) NOT NULL,
+  item_id_2 int(11) NOT NULL,
+  item_disp_order_2 int(11) NOT NULL,
+  item_num_2 int(11) NOT NULL,
+  money_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2730,
@@ -13753,36 +14766,35 @@ ADD INDEX card_talent_hint_upgrade_0_rarity_1_talent_level (rarity, talent_level
 --
 -- Create table `card_rarity_data`
 --
-CREATE TABLE card_rarity_data
-(
-    id INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , rarity INT(11) NOT NULL
-  , race_dress_id INT(11) NOT NULL
-  , skill_set INT(11) NOT NULL
-  , speed INT(11) NOT NULL
-  , stamina INT(11) NOT NULL
-  , pow INT(11) NOT NULL
-  , guts INT(11) NOT NULL
-  , wiz INT(11) NOT NULL
-  , max_speed INT(11) NOT NULL
-  , max_stamina INT(11) NOT NULL
-  , max_pow INT(11) NOT NULL
-  , max_guts INT(11) NOT NULL
-  , max_wiz INT(11) NOT NULL
-  , proper_distance_short INT(11) NOT NULL
-  , proper_distance_mile INT(11) NOT NULL
-  , proper_distance_middle INT(11) NOT NULL
-  , proper_distance_long INT(11) NOT NULL
-  , proper_running_style_nige INT(11) NOT NULL
-  , proper_running_style_senko INT(11) NOT NULL
-  , proper_running_style_sashi INT(11) NOT NULL
-  , proper_running_style_oikomi INT(11) NOT NULL
-  , proper_ground_turf INT(11) NOT NULL
-  , proper_ground_dirt INT(11) NOT NULL
-  , get_dress_id_1 INT(11) NOT NULL
-  , get_dress_id_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE card_rarity_data (
+  id int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  rarity int(11) NOT NULL,
+  race_dress_id int(11) NOT NULL,
+  skill_set int(11) NOT NULL,
+  speed int(11) NOT NULL,
+  stamina int(11) NOT NULL,
+  pow int(11) NOT NULL,
+  guts int(11) NOT NULL,
+  wiz int(11) NOT NULL,
+  max_speed int(11) NOT NULL,
+  max_stamina int(11) NOT NULL,
+  max_pow int(11) NOT NULL,
+  max_guts int(11) NOT NULL,
+  max_wiz int(11) NOT NULL,
+  proper_distance_short int(11) NOT NULL,
+  proper_distance_mile int(11) NOT NULL,
+  proper_distance_middle int(11) NOT NULL,
+  proper_distance_long int(11) NOT NULL,
+  proper_running_style_nige int(11) NOT NULL,
+  proper_running_style_senko int(11) NOT NULL,
+  proper_running_style_sashi int(11) NOT NULL,
+  proper_running_style_oikomi int(11) NOT NULL,
+  proper_ground_turf int(11) NOT NULL,
+  proper_ground_dirt int(11) NOT NULL,
+  get_dress_id_1 int(11) NOT NULL,
+  get_dress_id_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 278,
@@ -13811,23 +14823,22 @@ ADD INDEX card_rarity_data_0_race_dress_id (race_dress_id);
 --
 -- Create table `card_data`
 --
-CREATE TABLE card_data
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , default_rarity INT(11) NOT NULL
-  , limited_chara INT(11) NOT NULL
-  , available_skill_set_id INT(11) NOT NULL
-  , talent_speed INT(11) NOT NULL
-  , talent_stamina INT(11) NOT NULL
-  , talent_pow INT(11) NOT NULL
-  , talent_guts INT(11) NOT NULL
-  , talent_wiz INT(11) NOT NULL
-  , talent_group_id INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , get_piece_id INT(11) NOT NULL
-  , running_style INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE card_data (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  default_rarity int(11) NOT NULL,
+  limited_chara int(11) NOT NULL,
+  available_skill_set_id int(11) NOT NULL,
+  talent_speed int(11) NOT NULL,
+  talent_stamina int(11) NOT NULL,
+  talent_pow int(11) NOT NULL,
+  talent_guts int(11) NOT NULL,
+  talent_wiz int(11) NOT NULL,
+  talent_group_id int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  get_piece_id int(11) NOT NULL,
+  running_style int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 234,
@@ -13850,18 +14861,17 @@ ADD INDEX card_data_0_get_piece_id (get_piece_id);
 --
 -- Create table `campaign_walking_reward_set`
 --
-CREATE TABLE campaign_walking_reward_set
-(
-    id INT(11) NOT NULL
-  , reward_set_id INT(11) NOT NULL
-  , limit_num INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , item_num INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_walking_reward_set (
+  id int(11) NOT NULL,
+  reward_set_id int(11) NOT NULL,
+  limit_num int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  item_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 341,
+AVG_ROW_LENGTH = 248,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -13875,30 +14885,30 @@ ADD INDEX campaign_walking_reward_set_0_reward_set_id (reward_set_id);
 --
 -- Create table `campaign_walking_location`
 --
-CREATE TABLE campaign_walking_location
-(
-    id INT(11) NOT NULL
-  , cut_id INT(11) NOT NULL
-  , cut_sub_id INT(11) NOT NULL
-  , material_id TEXT NOT NULL
-  , background_data_id INT(11) NOT NULL
-  , reward_set_id INT(11) NOT NULL
-  , love_point INT(11) NOT NULL
-  , bg_position_custom INT(11) NOT NULL
-  , bg_position_x INT(11) NOT NULL
-  , friend_list_id INT(11) NOT NULL
-  , place_position_x INT(11) NOT NULL
-  , place_position_y INT(11) NOT NULL
-  , place_color_main TEXT NOT NULL
-  , place_color_sub TEXT NOT NULL
-  , bgm_cue_name TEXT NOT NULL
-  , bgm_cuesheet_name TEXT NOT NULL
-  , env_cue_name TEXT NOT NULL
-  , env_cuesheet_name TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_walking_location (
+  id int(11) NOT NULL,
+  cut_id int(11) NOT NULL,
+  cut_sub_id int(11) NOT NULL,
+  material_id text NOT NULL,
+  background_data_id int(11) NOT NULL,
+  reward_set_id int(11) NOT NULL,
+  love_point int(11) NOT NULL,
+  bg_position_custom int(11) NOT NULL,
+  bg_position_x int(11) NOT NULL,
+  friend_list_id int(11) NOT NULL,
+  place_position_x int(11) NOT NULL,
+  place_position_y int(11) NOT NULL,
+  place_color_main text NOT NULL,
+  place_color_sub text NOT NULL,
+  bgm_cue_name text NOT NULL,
+  bgm_cuesheet_name text NOT NULL,
+  env_cue_name text NOT NULL,
+  env_cuesheet_name text NOT NULL,
+  place_tail int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 279,
+AVG_ROW_LENGTH = 249,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -13906,12 +14916,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `campaign_walking_friend`
 --
-CREATE TABLE campaign_walking_friend
-(
-    id INT(11) NOT NULL
-  , friend_list_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_walking_friend (
+  id int(11) NOT NULL,
+  friend_list_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2730,
@@ -13928,26 +14937,27 @@ ADD INDEX campaign_walking_friend_0_friend_list_id (friend_list_id);
 --
 -- Create table `campaign_walking_data`
 --
-CREATE TABLE campaign_walking_data
-(
-    id INT(11) NOT NULL
-  , campaign_id INT(11) NOT NULL
-  , walking_limit INT(11) NOT NULL
-  , gauge_max INT(11) NOT NULL
-  , gauge_up_singlemode INT(11) NOT NULL
-  , gauge_up_teamstadium INT(11) NOT NULL
-  , gauge_up_dailyrace INT(11) NOT NULL
-  , gauge_up_dailylegendrace INT(11) NOT NULL
-  , gauge_up_login INT(11) NOT NULL
-  , logo_id INT(11) NOT NULL
-  , map_id INT(11) NOT NULL
-  , icon_id_location_1 INT(11) NOT NULL
-  , icon_id_location_2 INT(11) NOT NULL
-  , icon_id_location_3 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_walking_data (
+  id int(11) NOT NULL,
+  campaign_id int(11) NOT NULL,
+  walking_limit int(11) NOT NULL,
+  gauge_max int(11) NOT NULL,
+  gauge_up_singlemode int(11) NOT NULL,
+  gauge_up_teamstadium int(11) NOT NULL,
+  gauge_up_dailyrace int(11) NOT NULL,
+  gauge_up_dailylegendrace int(11) NOT NULL,
+  gauge_up_login int(11) NOT NULL,
+  logo_id int(11) NOT NULL,
+  map_id int(11) NOT NULL,
+  icon_id_location_1 int(11) NOT NULL,
+  icon_id_location_2 int(11) NOT NULL,
+  icon_id_location_3 int(11) NOT NULL,
+  special_campaign_type int(11) NOT NULL,
+  gauge_consume_num int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 4096,
+AVG_ROW_LENGTH = 3276,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -13961,16 +14971,15 @@ ADD INDEX campaign_walking_data_0_campaign_id (campaign_id);
 --
 -- Create table `campaign_walking_chara`
 --
-CREATE TABLE campaign_walking_chara
-(
-    campaign_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , location_1 INT(11) NOT NULL
-  , location_2 INT(11) NOT NULL
-  , location_3 INT(11) NOT NULL
+CREATE TABLE campaign_walking_chara (
+  campaign_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  location_1 int(11) NOT NULL,
+  location_2 int(11) NOT NULL,
+  location_3 int(11) NOT NULL
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 54,
+AVG_ROW_LENGTH = 122,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -13990,17 +14999,17 @@ ADD INDEX campaign_walking_chara_0_chara_id (chara_id);
 --
 -- Create table `campaign_swap_motion_data`
 --
-CREATE TABLE campaign_swap_motion_data
-(
-    id INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , cut_id INT(11) NOT NULL
-  , cut_sub_id INT(11) NOT NULL
-  , replace_index INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_swap_motion_data (
+  id int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  cut_id int(11) NOT NULL,
+  cut_sub_id int(11) NOT NULL,
+  replace_index int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 528,
+AVG_ROW_LENGTH = 237,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -14014,14 +15023,13 @@ ADD INDEX campaign_swap_motion_data_0_dress_id (dress_id);
 --
 -- Create table `campaign_story_data`
 --
-CREATE TABLE campaign_story_data
-(
-    id INT(11) NOT NULL
-  , campaign_id INT(11) NOT NULL
-  , condition_type INT(11) NOT NULL
-  , condition_value INT(11) NOT NULL
-  , story_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_story_data (
+  id int(11) NOT NULL,
+  campaign_id int(11) NOT NULL,
+  condition_type int(11) NOT NULL,
+  condition_value int(11) NOT NULL,
+  story_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2048,
@@ -14038,23 +15046,22 @@ ADD INDEX campaign_story_data_0_campaign_id (campaign_id);
 --
 -- Create table `campaign_sp_present_bonus_data`
 --
-CREATE TABLE campaign_sp_present_bonus_data
-(
-    id INT(11) NOT NULL
-  , target_type INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , `count` INT(11) NOT NULL
-  , item_category_1 INT(11) NOT NULL
-  , item_id_1 INT(11) NOT NULL
-  , item_num_1 INT(11) NOT NULL
-  , prop_id INT(11) NOT NULL
-  , location_id INT(11) NOT NULL
-  , motion_type INT(11) NOT NULL
-  , replace_index INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_sp_present_bonus_data (
+  id int(11) NOT NULL,
+  target_type int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  `count` int(11) NOT NULL,
+  item_category_1 int(11) NOT NULL,
+  item_id_1 int(11) NOT NULL,
+  item_num_1 int(11) NOT NULL,
+  prop_id int(11) NOT NULL,
+  location_id int(11) NOT NULL,
+  motion_type int(11) NOT NULL,
+  replace_index int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 141,
+AVG_ROW_LENGTH = 104,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -14074,16 +15081,15 @@ ADD INDEX campaign_sp_present_bonus_data_0_target_type_1_card_id (target_type, c
 --
 -- Create table `campaign_single_race_add_reward`
 --
-CREATE TABLE campaign_single_race_add_reward
-(
-    id INT(11) NOT NULL
-  , race_additional_reward_id INT(11) NOT NULL
-  , item_category INT(11) NOT NULL
-  , item_id INT(11) NOT NULL
-  , reward_type INT(11) NOT NULL
-  , reward_value INT(11) NOT NULL
-  , reward_rate INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_single_race_add_reward (
+  id int(11) NOT NULL,
+  race_additional_reward_id int(11) NOT NULL,
+  item_category int(11) NOT NULL,
+  item_id int(11) NOT NULL,
+  reward_type int(11) NOT NULL,
+  reward_value int(11) NOT NULL,
+  reward_rate int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1092,
@@ -14100,14 +15106,13 @@ ADD INDEX campaign_single_race_add_reward_0_race_additional_reward_id (race_addi
 --
 -- Create table `campaign_single_race_add_data`
 --
-CREATE TABLE campaign_single_race_add_data
-(
-    id INT(11) NOT NULL
-  , race_additional_id INT(11) NOT NULL
-  , race_program_id INT(11) NOT NULL
-  , race_additional_reward_id INT(11) NOT NULL
-  , reward_limit INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_single_race_add_data (
+  id int(11) NOT NULL,
+  race_additional_id int(11) NOT NULL,
+  race_program_id int(11) NOT NULL,
+  race_additional_reward_id int(11) NOT NULL,
+  reward_limit int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 3276,
@@ -14124,13 +15129,12 @@ ADD INDEX campaign_single_race_add_data_0_race_additional_id (race_additional_id
 --
 -- Create table `campaign_rental_support_data`
 --
-CREATE TABLE campaign_rental_support_data
-(
-    id INT(11) NOT NULL
-  , rental_limit INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_rental_support_data (
+  id int(11) NOT NULL,
+  rental_limit int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 CHARACTER SET utf8mb4,
@@ -14140,15 +15144,15 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `campaign_rental_support_card`
 --
-CREATE TABLE campaign_rental_support_card
-(
-    id INT(11) NOT NULL
-  , campaign_rental_support_data_id INT(11) NOT NULL
-  , support_card_id INT(11) NOT NULL
-  , limit_break_count INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_rental_support_card (
+  id int(11) NOT NULL,
+  campaign_rental_support_data_id int(11) NOT NULL,
+  support_card_id int(11) NOT NULL,
+  limit_break_count int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
+AVG_ROW_LENGTH = 1092,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -14162,19 +15166,18 @@ ADD INDEX campaign_rental_support_card_0_campaign_rental_support_data_id (campai
 --
 -- Create table `campaign_present_bonus_detail`
 --
-CREATE TABLE campaign_present_bonus_detail
-(
-    id INT(11) NOT NULL
-  , campaign_id INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , `count` INT(11) NOT NULL
-  , item_category_1 INT(11) NOT NULL
-  , item_id_1 INT(11) NOT NULL
-  , item_num_1 INT(11) NOT NULL
-  , item_category_2 INT(11) NOT NULL
-  , item_id_2 INT(11) NOT NULL
-  , item_num_2 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_present_bonus_detail (
+  id int(11) NOT NULL,
+  campaign_id int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  `count` int(11) NOT NULL,
+  item_category_1 int(11) NOT NULL,
+  item_id_1 int(11) NOT NULL,
+  item_num_1 int(11) NOT NULL,
+  item_category_2 int(11) NOT NULL,
+  item_id_2 int(11) NOT NULL,
+  item_num_2 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 240,
@@ -14203,19 +15206,18 @@ ADD UNIQUE INDEX item_id_1 (item_id_1);
 --
 -- Create table `campaign_n_present_bonus_data`
 --
-CREATE TABLE campaign_n_present_bonus_data
-(
-    id INT(11) NOT NULL
-  , target_type INT(11) NOT NULL
-  , card_id INT(11) NOT NULL
-  , `count` INT(11) NOT NULL
-  , item_category_1 INT(11) NOT NULL
-  , item_id_1 INT(11) NOT NULL
-  , item_num_1 INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_n_present_bonus_data (
+  id int(11) NOT NULL,
+  target_type int(11) NOT NULL,
+  card_id int(11) NOT NULL,
+  `count` int(11) NOT NULL,
+  item_category_1 int(11) NOT NULL,
+  item_id_1 int(11) NOT NULL,
+  item_num_1 int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 141,
+AVG_ROW_LENGTH = 104,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -14235,23 +15237,22 @@ ADD INDEX campaign_n_present_bonus_data_0_target_type_1_card_id (target_type, ca
 --
 -- Create table `campaign_data`
 --
-CREATE TABLE campaign_data
-(
-    campaign_id INT(11) NOT NULL
-  , target_type INT(11) NOT NULL
-  , target_id INT(11) NOT NULL
-  , effect_type_1 INT(11) NOT NULL
-  , effect_value_1 INT(11) NOT NULL
-  , user_show INT(11) NOT NULL
-  , disp_order INT(11) NOT NULL
-  , image_icon_id INT(11) NOT NULL
-  , transition_type INT(11) NOT NULL
-  , image_change INT(11) NOT NULL
-  , logo_type INT(11) NOT NULL
-  , start_time INT(11) NOT NULL
-  , end_time INT(11) NOT NULL
-  , open_flag_id INT(11) NOT NULL
-  , PRIMARY KEY (campaign_id)
+CREATE TABLE campaign_data (
+  campaign_id int(11) NOT NULL,
+  target_type int(11) NOT NULL,
+  target_id int(11) NOT NULL,
+  effect_type_1 int(11) NOT NULL,
+  effect_value_1 int(11) NOT NULL,
+  user_show int(11) NOT NULL,
+  disp_order int(11) NOT NULL,
+  image_icon_id int(11) NOT NULL,
+  transition_type int(11) NOT NULL,
+  image_change int(11) NOT NULL,
+  logo_type int(11) NOT NULL,
+  start_time int(11) NOT NULL,
+  end_time int(11) NOT NULL,
+  open_flag_id int(11) NOT NULL,
+  PRIMARY KEY (campaign_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 156,
@@ -14274,21 +15275,22 @@ ADD INDEX campaign_data_0_target_type (target_type);
 --
 -- Create table `campaign_cutt_data`
 --
-CREATE TABLE campaign_cutt_data
-(
-    id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , cut_id INT(11) NOT NULL
-  , cut_sub_id INT(11) NOT NULL
-  , motion_type INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , campaign_id INT(11) NOT NULL
-  , color_type INT(11) NOT NULL
-  , motion_rate INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE campaign_cutt_data (
+  id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  cut_id int(11) NOT NULL,
+  cut_sub_id int(11) NOT NULL,
+  motion_type int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  campaign_id int(11) NOT NULL,
+  color_type int(11) NOT NULL,
+  motion_rate int(11) NOT NULL,
+  chara_no_change int(11) NOT NULL,
+  trainer_gender_type int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
-AVG_ROW_LENGTH = 87,
+AVG_ROW_LENGTH = 92,
 CHARACTER SET utf8mb4,
 COLLATE utf8mb4_general_ci,
 ROW_FORMAT = DYNAMIC;
@@ -14308,11 +15310,10 @@ ADD INDEX campaign_cutt_data_0_cut_id_1_cut_sub_id (cut_id, cut_sub_id);
 --
 -- Create table `campaign_chara_story_schedule`
 --
-CREATE TABLE campaign_chara_story_schedule
-(
-    campaign_id INT(11) NOT NULL
-  , chara_id INT(11) NOT NULL
-  , story_id INT(11) NOT NULL
+CREATE TABLE campaign_chara_story_schedule (
+  campaign_id int(11) NOT NULL,
+  chara_id int(11) NOT NULL,
+  story_id int(11) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 93,
@@ -14335,20 +15336,19 @@ ADD INDEX campaign_chara_story_schedule_0_chara_id (chara_id);
 --
 -- Create table `banner_data`
 --
-CREATE TABLE banner_data
-(
-    id INT(11) NOT NULL
-  , banner_id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , transition INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , condition_value INT(11) NOT NULL
-  , start_date TEXT NOT NULL
-  , end_date TEXT NOT NULL
-  , banner_image_id INT(11) NOT NULL
-  , dialog_image_id INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE banner_data (
+  id int(11) NOT NULL,
+  banner_id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  transition int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  condition_value int(11) NOT NULL,
+  start_date text NOT NULL,
+  end_date text NOT NULL,
+  banner_image_id int(11) NOT NULL,
+  dialog_image_id int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 103,
@@ -14365,17 +15365,16 @@ ADD INDEX banner_data_0_group_id (group_id);
 --
 -- Create table `background_offset_data`
 --
-CREATE TABLE background_offset_data
-(
-    id INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub INT(11) NOT NULL
-  , offset_id INT(11) NOT NULL
-  , pos_x INT(11) NOT NULL
-  , pos_y INT(11) NOT NULL
-  , width INT(11) NOT NULL
-  , height INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE background_offset_data (
+  id int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub int(11) NOT NULL,
+  offset_id int(11) NOT NULL,
+  pos_x int(11) NOT NULL,
+  pos_y int(11) NOT NULL,
+  width int(11) NOT NULL,
+  height int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1260,
@@ -14398,19 +15397,18 @@ ADD UNIQUE INDEX bg_id (bg_id, bg_sub, offset_id);
 --
 -- Create table `background_data`
 --
-CREATE TABLE background_data
-(
-    id INT(11) NOT NULL
-  , bg_id INT(11) NOT NULL
-  , bg_sub INT(11) NOT NULL
-  , cue_name TEXT NOT NULL
-  , sheet_name TEXT NOT NULL
-  , bus_param_set_name TEXT NOT NULL
-  , pos_x INT(11) NOT NULL
-  , pos_y INT(11) NOT NULL
-  , width INT(11) NOT NULL
-  , height INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE background_data (
+  id int(11) NOT NULL,
+  bg_id int(11) NOT NULL,
+  bg_sub int(11) NOT NULL,
+  cue_name text NOT NULL,
+  sheet_name text NOT NULL,
+  bus_param_set_name text NOT NULL,
+  pos_x int(11) NOT NULL,
+  pos_y int(11) NOT NULL,
+  width int(11) NOT NULL,
+  height int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 207,
@@ -14427,13 +15425,12 @@ ADD UNIQUE INDEX background_data_0_bg_id_1_bg_sub (bg_id, bg_sub);
 --
 -- Create table `available_skill_set`
 --
-CREATE TABLE available_skill_set
-(
-    id INT(11) NOT NULL
-  , available_skill_set_id INT(11) NOT NULL
-  , skill_id INT(11) NOT NULL
-  , need_rank INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE available_skill_set (
+  id int(11) NOT NULL,
+  available_skill_set_id int(11) NOT NULL,
+  skill_id int(11) NOT NULL,
+  need_rank int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 100,
@@ -14450,14 +15447,13 @@ ADD INDEX available_skill_set_0_available_skill_set_id (available_skill_set_id);
 --
 -- Create table `audio_story_effect`
 --
-CREATE TABLE audio_story_effect
-(
-    id INT(11) NOT NULL
-  , effect_name TEXT NOT NULL
-  , cue_name TEXT NOT NULL
-  , cue_sheet TEXT NOT NULL
-  , loop_set INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE audio_story_effect (
+  id int(11) NOT NULL,
+  effect_name text NOT NULL,
+  cue_name text NOT NULL,
+  cue_sheet text NOT NULL,
+  loop_set int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1365,
@@ -14474,12 +15470,11 @@ ADD UNIQUE INDEX audio_story_effect_0_effect_name USING HASH (effect_name);
 --
 -- Create table `audio_ignored_cue_on_highspeed`
 --
-CREATE TABLE audio_ignored_cue_on_highspeed
-(
-    id INT(11) NOT NULL
-  , cue_name VARCHAR(300) NOT NULL
-  , cue_sheet VARCHAR(300) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE audio_ignored_cue_on_highspeed (
+  id int(11) NOT NULL,
+  cue_name varchar(300) NOT NULL,
+  cue_sheet varchar(300) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 2340,
@@ -14496,12 +15491,11 @@ ADD INDEX audio_ignored_cue_on_highspeed_0_cue_name_1_cue_sheet (cue_name, cue_s
 --
 -- Create table `audio_cuesheet`
 --
-CREATE TABLE audio_cuesheet
-(
-    id INT(11) NOT NULL
-  , cue_sheet TEXT NOT NULL
-  , attribute INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE audio_cuesheet (
+  id int(11) NOT NULL,
+  cue_sheet text NOT NULL,
+  attribute int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1365,
@@ -14518,12 +15512,11 @@ ADD INDEX audio_cuesheet_0_attribute (attribute);
 --
 -- Create table `audience_impostor_lottery`
 --
-CREATE TABLE audience_impostor_lottery
-(
-    group_id INT(11) NOT NULL
-  , pattern INT(11) NOT NULL
-  , asset_id INT(11) NOT NULL
-  , odds INT(11) NOT NULL
+CREATE TABLE audience_impostor_lottery (
+  group_id int(11) NOT NULL,
+  pattern int(11) NOT NULL,
+  asset_id int(11) NOT NULL,
+  odds int(11) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 124,
@@ -14540,11 +15533,10 @@ ADD INDEX audience_impostor_lottery_0_group_id_1_pattern (group_id, pattern);
 --
 -- Create table `audience_impostor_color_set`
 --
-CREATE TABLE audience_impostor_color_set
-(
-    color_group_id INT(11) NOT NULL
-  , color TEXT NOT NULL
-  , odds INT(11) NOT NULL
+CREATE TABLE audience_impostor_color_set (
+  color_group_id int(11) NOT NULL,
+  color text NOT NULL,
+  odds int(11) NOT NULL
 )
 ENGINE = INNODB,
 CHARACTER SET utf8mb4,
@@ -14560,23 +15552,22 @@ ADD INDEX audience_impostor_color_set_0_color_group_id (color_group_id);
 --
 -- Create table `audience_impostor`
 --
-CREATE TABLE audience_impostor
-(
-    scene_type INT(11) NOT NULL
-  , season INT(11) NOT NULL
-  , weather INT(11) NOT NULL
-  , group_id INT(11) NOT NULL
-  , pattern_1 INT(11) NOT NULL
-  , pattern_2 INT(11) NOT NULL
-  , pattern_3 INT(11) NOT NULL
-  , pattern_4 INT(11) NOT NULL
-  , pattern_5 INT(11) NOT NULL
-  , pattern_6 INT(11) NOT NULL
-  , pattern_7 INT(11) NOT NULL
-  , pattern_8 INT(11) NOT NULL
-  , pattern_9 INT(11) NOT NULL
-  , pattern_10 INT(11) NOT NULL
-  , audience_group_id INT(11) NOT NULL
+CREATE TABLE audience_impostor (
+  scene_type int(11) NOT NULL,
+  season int(11) NOT NULL,
+  weather int(11) NOT NULL,
+  group_id int(11) NOT NULL,
+  pattern_1 int(11) NOT NULL,
+  pattern_2 int(11) NOT NULL,
+  pattern_3 int(11) NOT NULL,
+  pattern_4 int(11) NOT NULL,
+  pattern_5 int(11) NOT NULL,
+  pattern_6 int(11) NOT NULL,
+  pattern_7 int(11) NOT NULL,
+  pattern_8 int(11) NOT NULL,
+  pattern_9 int(11) NOT NULL,
+  pattern_10 int(11) NOT NULL,
+  audience_group_id int(11) NOT NULL
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 512,
@@ -14593,40 +15584,39 @@ ADD INDEX audience_impostor_0_season_1_weather (season, weather);
 --
 -- Create table `audience_hair_color_set`
 --
-CREATE TABLE audience_hair_color_set
-(
-    id INT(11) NOT NULL
-  , hair_color_r1 TEXT NOT NULL
-  , hair_color_r2 TEXT NOT NULL
-  , hair_color_g1 TEXT NOT NULL
-  , hair_color_g2 TEXT NOT NULL
-  , hair_color_b1 TEXT NOT NULL
-  , hair_color_b2 TEXT NOT NULL
-  , hair_toon_color_r1 TEXT NOT NULL
-  , hair_toon_color_r2 TEXT NOT NULL
-  , hair_toon_color_g1 TEXT NOT NULL
-  , hair_toon_color_g2 TEXT NOT NULL
-  , hair_toon_color_b1 TEXT NOT NULL
-  , hair_toon_color_b2 TEXT NOT NULL
-  , mayu_color_r1 TEXT NOT NULL
-  , mayu_color_r2 TEXT NOT NULL
-  , mayu_color_g1 TEXT NOT NULL
-  , mayu_color_g2 TEXT NOT NULL
-  , mayu_color_b1 TEXT NOT NULL
-  , mayu_color_b2 TEXT NOT NULL
-  , mayu_toon_color_r1 TEXT NOT NULL
-  , mayu_toon_color_r2 TEXT NOT NULL
-  , mayu_toon_color_g1 TEXT NOT NULL
-  , mayu_toon_color_g2 TEXT NOT NULL
-  , mayu_toon_color_b1 TEXT NOT NULL
-  , mayu_toon_color_b2 TEXT NOT NULL
-  , eye_color_r1 TEXT NOT NULL
-  , eye_color_r2 TEXT NOT NULL
-  , eye_color_g1 TEXT NOT NULL
-  , eye_color_g2 TEXT NOT NULL
-  , eye_color_b1 TEXT NOT NULL
-  , eye_color_b2 TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE audience_hair_color_set (
+  id int(11) NOT NULL,
+  hair_color_r1 text NOT NULL,
+  hair_color_r2 text NOT NULL,
+  hair_color_g1 text NOT NULL,
+  hair_color_g2 text NOT NULL,
+  hair_color_b1 text NOT NULL,
+  hair_color_b2 text NOT NULL,
+  hair_toon_color_r1 text NOT NULL,
+  hair_toon_color_r2 text NOT NULL,
+  hair_toon_color_g1 text NOT NULL,
+  hair_toon_color_g2 text NOT NULL,
+  hair_toon_color_b1 text NOT NULL,
+  hair_toon_color_b2 text NOT NULL,
+  mayu_color_r1 text NOT NULL,
+  mayu_color_r2 text NOT NULL,
+  mayu_color_g1 text NOT NULL,
+  mayu_color_g2 text NOT NULL,
+  mayu_color_b1 text NOT NULL,
+  mayu_color_b2 text NOT NULL,
+  mayu_toon_color_r1 text NOT NULL,
+  mayu_toon_color_r2 text NOT NULL,
+  mayu_toon_color_g1 text NOT NULL,
+  mayu_toon_color_g2 text NOT NULL,
+  mayu_toon_color_b1 text NOT NULL,
+  mayu_toon_color_b2 text NOT NULL,
+  eye_color_r1 text NOT NULL,
+  eye_color_r2 text NOT NULL,
+  eye_color_g1 text NOT NULL,
+  eye_color_g2 text NOT NULL,
+  eye_color_b1 text NOT NULL,
+  eye_color_b2 text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 630,
@@ -14637,22 +15627,21 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `audience_dress_color_set`
 --
-CREATE TABLE audience_dress_color_set
-(
-    id INT(11) NOT NULL
-  , color_r1 TEXT NOT NULL
-  , color_r2 TEXT NOT NULL
-  , color_g1 TEXT NOT NULL
-  , color_g2 TEXT NOT NULL
-  , color_b1 TEXT NOT NULL
-  , color_b2 TEXT NOT NULL
-  , toon_color_r1 TEXT NOT NULL
-  , toon_color_r2 TEXT NOT NULL
-  , toon_color_g1 TEXT NOT NULL
-  , toon_color_g2 TEXT NOT NULL
-  , toon_color_b1 TEXT NOT NULL
-  , toon_color_b2 TEXT NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE audience_dress_color_set (
+  id int(11) NOT NULL,
+  color_r1 text NOT NULL,
+  color_r2 text NOT NULL,
+  color_g1 text NOT NULL,
+  color_g2 text NOT NULL,
+  color_b1 text NOT NULL,
+  color_b2 text NOT NULL,
+  toon_color_r1 text NOT NULL,
+  toon_color_r2 text NOT NULL,
+  toon_color_g1 text NOT NULL,
+  toon_color_g2 text NOT NULL,
+  toon_color_b1 text NOT NULL,
+  toon_color_b2 text NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 210,
@@ -14663,23 +15652,22 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `audience_data`
 --
-CREATE TABLE audience_data
-(
-    audience_id INT(11) NOT NULL
-  , chara_face_model INT(11) NOT NULL
-  , chara_skin_color INT(11) NOT NULL
-  , chara_hair_model INT(11) NOT NULL
-  , chara_hair_color INT(11) NOT NULL
-  , prop_id_1 INT(11) NOT NULL
-  , prop_attach_node_name_type_1 INT(11) NOT NULL
-  , prop_id_2 INT(11) NOT NULL
-  , prop_attach_node_name_type_2 INT(11) NOT NULL
-  , chara_height INT(11) NOT NULL
-  , shape INT(11) NOT NULL
-  , chara_bust_size INT(11) NOT NULL
-  , dress_id INT(11) NOT NULL
-  , dress_color_id INT(11) NOT NULL
-  , PRIMARY KEY (audience_id)
+CREATE TABLE audience_data (
+  audience_id int(11) NOT NULL,
+  chara_face_model int(11) NOT NULL,
+  chara_skin_color int(11) NOT NULL,
+  chara_hair_model int(11) NOT NULL,
+  chara_hair_color int(11) NOT NULL,
+  prop_id_1 int(11) NOT NULL,
+  prop_attach_node_name_type_1 int(11) NOT NULL,
+  prop_id_2 int(11) NOT NULL,
+  prop_attach_node_name_type_2 int(11) NOT NULL,
+  chara_height int(11) NOT NULL,
+  shape int(11) NOT NULL,
+  chara_bust_size int(11) NOT NULL,
+  dress_id int(11) NOT NULL,
+  dress_color_id int(11) NOT NULL,
+  PRIMARY KEY (audience_id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 210,
@@ -14690,15 +15678,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `announce_support_card`
 --
-CREATE TABLE announce_support_card
-(
-    id INT(11) NOT NULL
-  , type INT(11) NOT NULL
-  , cuts_pattern INT(11) NOT NULL
-  , support_card_id_a INT(11) NOT NULL
-  , support_card_id_b INT(11) NOT NULL
-  , support_card_id_c INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE announce_support_card (
+  id int(11) NOT NULL,
+  type int(11) NOT NULL,
+  cuts_pattern int(11) NOT NULL,
+  support_card_id_a int(11) NOT NULL,
+  support_card_id_b int(11) NOT NULL,
+  support_card_id_c int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 630,
@@ -14709,15 +15696,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `announce_event`
 --
-CREATE TABLE announce_event
-(
-    id INT(11) NOT NULL
-  , cue_name TEXT NOT NULL
-  , cue_sheet_name TEXT NOT NULL
-  , voice_text_asset INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE announce_event (
+  id int(11) NOT NULL,
+  cue_name text NOT NULL,
+  cue_sheet_name text NOT NULL,
+  voice_text_asset int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 1820,
@@ -14728,15 +15714,14 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `announce_data`
 --
-CREATE TABLE announce_data
-(
-    id INT(11) NOT NULL
-  , announce_type INT(11) NOT NULL
-  , announce_id INT(11) NOT NULL
-  , priority INT(11) NOT NULL
-  , start_date INT(11) NOT NULL
-  , end_date INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE announce_data (
+  id int(11) NOT NULL,
+  announce_type int(11) NOT NULL,
+  announce_id int(11) NOT NULL,
+  priority int(11) NOT NULL,
+  start_date int(11) NOT NULL,
+  end_date int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 268,
@@ -14747,12 +15732,11 @@ ROW_FORMAT = DYNAMIC;
 --
 -- Create table `announce_character`
 --
-CREATE TABLE announce_character
-(
-    id INT(11) NOT NULL
-  , movie_id INT(11) NOT NULL
-  , can_end_second INT(11) NOT NULL
-  , PRIMARY KEY (id)
+CREATE TABLE announce_character (
+  id int(11) NOT NULL,
+  movie_id int(11) NOT NULL,
+  can_end_second int(11) NOT NULL,
+  PRIMARY KEY (id)
 )
 ENGINE = INNODB,
 AVG_ROW_LENGTH = 468,

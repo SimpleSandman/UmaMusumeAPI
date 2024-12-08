@@ -7,6 +7,5 @@
         public string DressColorMain { get; set; }
         public string DressColorSub { get; set; }
         public string Text { get; set; }
-        public string TextEnglish { get; set; }
     }
 }

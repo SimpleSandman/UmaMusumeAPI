@@ -16,5 +16,6 @@
         public int MotionSecondSet { get; set; }
         public int MotionSecondStart { get; set; }
         public int StartDate { get; set; }
+        public int GalleryKeyUsageCondition { get; set; }
     }
 }

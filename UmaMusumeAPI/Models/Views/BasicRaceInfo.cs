@@ -5,6 +5,5 @@
         public int RaceId { get; set; }
         public int RaceCourseSet { get; set; }
         public string RaceName { get; set; }
-        public string RaceNameEnglish { get; set; }
     }
 }

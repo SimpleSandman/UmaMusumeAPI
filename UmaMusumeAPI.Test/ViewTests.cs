@@ -245,16 +245,6 @@ namespace UmaMusumeAPI.Test
         }
 
         [Theory]
-        [Trait("EndpointType", "Basic")]
-        [InlineData("BasicTextDataEnglish", false)]
-        [InlineData("BasicTextDataEnglish/1", false)]
-        [InlineData("BasicTextDataEnglish/1/101", false)]
-        public async Task GetBasicTextDataEnglish(string endpointUrl, bool hasSingleReturn)
-        {
-            await TestGetEndpointAsync<BasicTextDataEnglish>(endpointUrl, hasSingleReturn);
-        }
-
-        [Theory]
         [Trait("EndpointType", "Condensed")]
         [InlineData("CondensedSkillDataInfo", false)]
         [InlineData("CondensedSkillDataInfo/10071", true)]
@@ -342,24 +332,6 @@ namespace UmaMusumeAPI.Test
         public async Task GetNiceTutorialMessage(string endpointUrl, bool hasSingleReturn)
         {
             await TestGetEndpointAsync<NiceTutorialMessage>(endpointUrl, hasSingleReturn);
-        }
-        #endregion
-
-        #region POST Test
-        [Theory]
-        [Trait("EndpointType", "Basic")]
-        [InlineData("Special Week", true)]
-        [InlineData("スペシャルウィーク", false)]
-        public async Task PostBasicTextDataEnglish(string searchQuery, bool isEnglishQuery)
-        {
-            string endpointUrl = "BasicTextDataEnglish";
-            BasicTextEnglishDTO englishRequestBody = new BasicTextEnglishDTO 
-            { 
-                SearchQuery = searchQuery, 
-                IsEnglishQuery = isEnglishQuery
-            };
-
-            await TestPostEndpointAsync<BasicTextDataEnglish, BasicTextEnglishDTO>(endpointUrl, false, englishRequestBody);
         }
         #endregion
     }

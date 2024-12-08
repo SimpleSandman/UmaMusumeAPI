@@ -9,6 +9,5 @@
         public int DressId { get; set; }
         public int DressColorId { get; set; }
         public string MobName { get; set; }
-        public string MobNameEnglish { get; set; }
     }
 }

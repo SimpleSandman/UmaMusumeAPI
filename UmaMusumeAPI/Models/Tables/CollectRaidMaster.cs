@@ -22,5 +22,10 @@ namespace UmaMusumeAPI.Models.Tables
         public int CalcStartDate { get; set; }
         public int CalcEndDate { get; set; }
         public int EndDate { get; set; }
+        public int StoryExtraId { get; set; }
+        public int StoryVoiceType { get; set; }
+        public int UseAllRewardVoice { get; set; }
+        public int UseMission { get; set; }
+        public int UseTransitionDialog { get; set; }
     }
 }

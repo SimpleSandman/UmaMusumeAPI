@@ -15,5 +15,6 @@
         public string EatMotion { get; set; }
         public string EatFacialMotion { get; set; }
         public int Odds { get; set; }
+        public int EventType { get; set; }
     }
 }
