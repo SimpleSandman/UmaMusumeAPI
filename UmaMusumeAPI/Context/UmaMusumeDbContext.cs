@@ -183,8 +183,6 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<LegendRaceBossNpc> LegendRaceBossNpcs { get; set; }
         public virtual DbSet<LegendRaceCuttCharaData> LegendRaceCuttCharaData { get; set; }
         public virtual DbSet<LegendRaceNpc> LegendRaceNpcs { get; set; }
-        public virtual DbSet<LimitedExchange> LimitedExchanges { get; set; }
-        public virtual DbSet<LimitedExchangeReward> LimitedExchangeRewards { get; set; }
         public virtual DbSet<LiveData> LiveData { get; set; }
         public virtual DbSet<LiveExtraData> LiveExtraData { get; set; }
         public virtual DbSet<LivePermissionData> LivePermissionData { get; set; }
@@ -226,7 +224,6 @@ namespace UmaMusumeAPI.Context
         public virtual DbSet<Race> Races { get; set; }
         public virtual DbSet<RaceBgm> RaceBgms { get; set; }
         public virtual DbSet<RaceBgmCutin> RaceBgmCutins { get; set; }
-        public virtual DbSet<RaceBgmCutinExtensionTime> RaceBgmCutinExtensionTimes { get; set; }
         public virtual DbSet<RaceBgmPattern> RaceBgmPatterns { get; set; }
         public virtual DbSet<RaceBibColor> RaceBibColors { get; set; }
         public virtual DbSet<RaceCondition> RaceConditions { get; set; }
@@ -8453,98 +8450,6 @@ namespace UmaMusumeAPI.Context
                     .HasColumnName("wiz");
             });
 
-            modelBuilder.Entity<LimitedExchange>(entity =>
-            {
-                entity.ToTable("limited_exchange");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
-
-                entity.Property(e => e.DailyRaceCeiling)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("daily_race_ceiling");
-
-                entity.Property(e => e.DailyRaceOdds)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("daily_race_odds");
-
-                entity.Property(e => e.EndDate)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("end_date");
-
-                entity.Property(e => e.ItemExchangeTopId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("item_exchange_top_id");
-
-                entity.Property(e => e.ItemLineupValue)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("item_lineup_value");
-
-                entity.Property(e => e.LegendRaceCeiling)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("legend_race_ceiling");
-
-                entity.Property(e => e.LegendRaceOdds)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("legend_race_odds");
-
-                entity.Property(e => e.OddsId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("odds_id");
-
-                entity.Property(e => e.OpenValue)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("open_value");
-
-                entity.Property(e => e.SingleModeCeiling)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("single_mode_ceiling");
-
-                entity.Property(e => e.SingleModeOdds)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("single_mode_odds");
-
-                entity.Property(e => e.StartDate)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("start_date");
-
-                entity.Property(e => e.TeamStadiumCeiling)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("team_stadium_ceiling");
-
-                entity.Property(e => e.TeamStadiumOdds)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("team_stadium_odds");
-            });
-
-            modelBuilder.Entity<LimitedExchangeReward>(entity =>
-            {
-                entity.ToTable("limited_exchange_reward");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
-
-                entity.Property(e => e.GroupId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("group_id");
-
-                entity.Property(e => e.ItemExchangeId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("item_exchange_id");
-
-                entity.Property(e => e.Odds)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("odds");
-
-                entity.Property(e => e.RibbonValue)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("ribbon_value");
-            });
-
             modelBuilder.Entity<LiveData>(entity =>
             {
                 entity.HasKey(e => e.MusicId)
@@ -11067,38 +10972,6 @@ namespace UmaMusumeAPI.Context
                     .IsRequired()
                     .HasColumnType("text")
                     .HasColumnName("short_cutin_bgm_cuesheet_name");
-            });
-
-            modelBuilder.Entity<RaceBgmCutinExtensionTime>(entity =>
-            {
-                entity.ToTable("race_bgm_cutin_extension_time");
-
-                entity.HasIndex(e => e.CutinCategory, "race_bgm_cutin_extension_time_0_cutin_category");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
-
-                entity.Property(e => e.CardId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("card_id");
-
-                entity.Property(e => e.CharaId)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("chara_id");
-
-                entity.Property(e => e.CutinCategory)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("cutin_category");
-
-                entity.Property(e => e.ExtensionSec)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("extension_sec");
-
-                entity.Property(e => e.ExtensionSecLong)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("extension_sec_long");
             });
 
             modelBuilder.Entity<RaceBgmPattern>(entity =>

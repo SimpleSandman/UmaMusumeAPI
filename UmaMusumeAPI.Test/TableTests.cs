@@ -1522,24 +1522,6 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
-        [InlineData("LimitedExchange", false)]
-        //[InlineData("LimitedExchange/1", true)]
-        public async Task GetLimitedExchange(string endpointUrl, bool hasSingleReturn)
-        {
-            await TestGetEndpointAsync<LimitedExchange>(endpointUrl, hasSingleReturn, true);
-        }
-
-        [Theory]
-        [Trait("EndpointType", "Raw")]
-        [InlineData("LimitedExchangeReward", false)]
-        //[InlineData("LimitedExchangeReward/1", true)]
-        public async Task GetLimitedExchangeReward(string endpointUrl, bool hasSingleReturn)
-        {
-            await TestGetEndpointAsync<LimitedExchangeReward>(endpointUrl, hasSingleReturn, true);
-        }
-
-        [Theory]
-        [Trait("EndpointType", "Raw")]
         [InlineData("LiveData", false)]
         [InlineData("LiveData/1001", true)]
         public async Task GetLiveData(string endpointUrl, bool hasSingleReturn)
@@ -1905,15 +1887,6 @@ namespace UmaMusumeAPI.Test
         public async Task GetRaceBgmCutin(string endpointUrl, bool hasSingleReturn)
         {
             await TestGetEndpointAsync<RaceBgmCutin>(endpointUrl, hasSingleReturn);
-        }
-
-        [Theory]
-        [Trait("EndpointType", "Raw")]
-        [InlineData("RaceBgmCutinExtensionTime", false)]
-        //[InlineData("RaceBgmCutinExtensionTime/1", true)]
-        public async Task GetRaceBgmCutinExtensionTime(string endpointUrl, bool hasSingleReturn)
-        {
-            await TestGetEndpointAsync<RaceBgmCutinExtensionTime>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]
