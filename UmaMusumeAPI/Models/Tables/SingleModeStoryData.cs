@@ -28,6 +28,9 @@ namespace UmaMusumeAPI.Models.Tables
         public int GalleryFlag { get; set; }
         public int GalleryListId { get; set; }
         public int PastRaceId { get; set; }
+        public int PastRaceId2 { get; set; }
+        public int PastRaceId3 { get; set; }
+        public int PastRaceId4 { get; set; }
         public int AvailableGalleryKey { get; set; }
         public int EventCategory { get; set; }
         public int ForceUseRaceDress { get; set; }

@@ -15,5 +15,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int StoryId2 { get; set; }
         public int StoryType3 { get; set; }
         public int StoryId3 { get; set; }
+        public int CollectRaidId { get; set; }
+        public int UnlockCondition { get; set; }
     }
 }

@@ -15,5 +15,6 @@ namespace UmaMusumeAPI.Models.Tables
         public string EarMotion { get; set; }
         public string TailMotion { get; set; }
         public int TailMotionType { get; set; }
+        public int BodyMotionPathSegment { get; set; }
     }
 }

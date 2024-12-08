@@ -11,5 +11,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int NoticeDate { get; set; }
         public int StartDate { get; set; }
         public int EndDate { get; set; }
+        public string BgmCueName { get; set; }
+        public string BgmCuesheetName { get; set; }
     }
 }

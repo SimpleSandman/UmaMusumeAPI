@@ -25,5 +25,10 @@
         public int PropMotionSceneType { get; set; }
         public int PropAttachNodeNameType { get; set; }
         public int IsPropRequireMotionEnd { get; set; }
+        public int PropId2 { get; set; }
+        public string PropMotion2 { get; set; }
+        public int PropMotionSceneType2 { get; set; }
+        public int PropAttachNodeNameType2 { get; set; }
+        public int UseTailInBodyMotion { get; set; }
     }
 }

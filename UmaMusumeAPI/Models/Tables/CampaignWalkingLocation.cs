@@ -17,11 +17,12 @@ namespace UmaMusumeAPI.Models.Tables
         public string BgmCueName { get; set; }
         public string BgmCuesheetName { get; set; }
         public string EnvCueName { get; set; }
-        public string EnvCueSheetName { get; set; }
         public int FriendListId { get; set; }
         public string PlaceColorMain { get; set; }
         public string PlaceColorSub { get; set; }
         public int PlacePositionX { get; set; }
         public int PlacePositionY { get; set; }
+        public string EnvCuesheetName { get; set; }
+        public int PlaceTail { get; set; }
     }
 }

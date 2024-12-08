@@ -14,5 +14,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int ColorType { get; set; }
         public int DressId { get; set; }
         public int MotionRate { get; set; }
+        public int CharaNoChange { get; set; }
+        public int TrainerGenderType { get; set; }
     }
 }

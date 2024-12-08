@@ -33,5 +33,6 @@ namespace UmaMusumeAPI.Models.Tables
         public int SeStartFrame02 { get; set; }
         public int EffectId { get; set; }
         public string EffectStartSec { get; set; }
+        public string SecondPosObj { get; set; }
     }
 }

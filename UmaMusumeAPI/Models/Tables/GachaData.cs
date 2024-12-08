@@ -53,5 +53,7 @@ namespace UmaMusumeAPI.Models.Tables
         public int DrawGuaranteeType { get; set; }
         public int GachaOddsId { get; set; }
         public int PaidGachaButtonType { get; set; }
+        public int DrawLimit { get; set; }
+        public int ForceExchange { get; set; }
     }
 }
