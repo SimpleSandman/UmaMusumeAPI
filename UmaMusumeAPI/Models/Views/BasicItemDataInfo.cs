@@ -11,6 +11,5 @@ namespace UmaMusumeAPI.Models.Views
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string ItemName { get; set; }
-        public string ItemNameEnglish { get; set; }
     }
 }

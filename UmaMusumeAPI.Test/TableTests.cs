@@ -218,19 +218,19 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("CampaignRentalSupportCard", false)]
-        //[InlineData("CampaignRentalSupportCard/1", true)]
+        [InlineData("CampaignRentalSupportCard/1", true)]
         public async Task GetCampaignRentalSupportCard(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<CampaignRentalSupportCard>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<CampaignRentalSupportCard>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("CampaignRentalSupportData", false)]
-        //[InlineData("CampaignRentalSupportData/1", true)]
+        [InlineData("CampaignRentalSupportData/1", true)]
         public async Task GetCampaignRentalSupportData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<CampaignRentalSupportData>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<CampaignRentalSupportData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1109,10 +1109,10 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("GachaStepUp", false)]
-        //[InlineData("GachaStepUp/1", true)]
+        [InlineData("GachaStepUp/1", true)]
         public async Task GetGachaStepUp(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<GachaStepUp>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<GachaStepUp>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -1523,19 +1523,19 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("LimitedExchange", false)]
-        [InlineData("LimitedExchange/1", true)]
+        //[InlineData("LimitedExchange/1", true)]
         public async Task GetLimitedExchange(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<LimitedExchange>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LimitedExchange>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("LimitedExchangeReward", false)]
-        [InlineData("LimitedExchangeReward/1", true)]
+        //[InlineData("LimitedExchangeReward/1", true)]
         public async Task GetLimitedExchangeReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<LimitedExchangeReward>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<LimitedExchangeReward>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]
@@ -1910,10 +1910,10 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("RaceBgmCutinExtensionTime", false)]
-        [InlineData("RaceBgmCutinExtensionTime/1", true)]
+        //[InlineData("RaceBgmCutinExtensionTime/1", true)]
         public async Task GetRaceBgmCutinExtensionTime(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<RaceBgmCutinExtensionTime>(endpointUrl, hasSingleReturn);
+            await TestGetEndpointAsync<RaceBgmCutinExtensionTime>(endpointUrl, hasSingleReturn, true);
         }
 
         [Theory]
@@ -2144,64 +2144,64 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("RatingRaceCondition", false)]
-        //[InlineData("RatingRaceCondition/1", true)]
+        [InlineData("RatingRaceCondition/1", true)]
         public async Task GetRatingRaceCondition(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<RatingRaceCondition>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<RatingRaceCondition>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("RatingRaceData", false)]
-        //[InlineData("RatingRaceData/1", true)]
+        [InlineData("RatingRaceData/1", true)]
         public async Task GetRatingRaceData(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<RatingRaceData>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<RatingRaceData>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("RatingRaceFinaleReward", false)]
-        //[InlineData("RatingRaceFinaleReward/1", true)]
+        [InlineData("RatingRaceFinaleReward/1", true)]
         public async Task GetRatingRaceFinaleReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<RatingRaceFinaleReward>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<RatingRaceFinaleReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("RatingRacePhaseSchedule", false)]
-        //[InlineData("RatingRacePhaseSchedule/1", true)]
+        [InlineData("RatingRacePhaseSchedule/1", true)]
         public async Task GetRatingRacePhaseSchedule(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<RatingRacePhaseSchedule>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<RatingRacePhaseSchedule>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("RatingRaceRatingRank", false)]
-        //[InlineData("RatingRaceRatingRank/1", true)]
+        [InlineData("RatingRaceRatingRank/1", true)]
         public async Task GetRatingRaceRatingRank(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<RatingRaceRatingRank>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<RatingRaceRatingRank>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("RatingRaceRewardGroup", false)]
-        //[InlineData("RatingRaceRewardGroup/1", true)]
+        [InlineData("RatingRaceRewardGroup/1", true)]
         public async Task GetRatingRaceRewardGroup(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<RatingRaceRewardGroup>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<RatingRaceRewardGroup>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("RatingRaceWeekendReward", false)]
-        //[InlineData("RatingRaceWeekendReward/1", true)]
+        [InlineData("RatingRaceWeekendReward/1", true)]
         public async Task GetRatingRaceWeekendReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<RatingRaceWeekendReward>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<RatingRaceWeekendReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -2909,91 +2909,91 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeSportCompeEffect", false)]
-        //[InlineData("SingleModeSportCompeEffect/1", true)]
+        [InlineData("SingleModeSportCompeEffect/1011", true)]
         public async Task GetSingleModeSportCompeEffect(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SingleModeSportCompeEffect>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeSportCompeEffect>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeSportCompeSe", false)]
-        //[InlineData("SingleModeSportCompeSe/1", true)]
+        [InlineData("SingleModeSportCompeSe/1", true)]
         public async Task GetSingleModeSportCompeSe(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SingleModeSportCompeSe>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeSportCompeSe>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeSportCompetition", false)]
-        //[InlineData("SingleModeSportCompetition/1", true)]
+        [InlineData("SingleModeSportCompetition/1", true)]
         public async Task GetSingleModeSportCompetition(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SingleModeSportCompetition>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeSportCompetition>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeSportItemEffect", false)]
-        //[InlineData("SingleModeSportItemEffect/1", true)]
+        [InlineData("SingleModeSportItemEffect/1", true)]
         public async Task GetSingleModeSportItemEffect(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SingleModeSportItemEffect>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeSportItemEffect>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeSportLink", false)]
-        //[InlineData("SingleModeSportLink/1", true)]
+        [InlineData("SingleModeSportLink/21010101", true)]
         public async Task GetSingleModeSportLink(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SingleModeSportLink>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeSportLink>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeSportMob", false)]
-        //[InlineData("SingleModeSportMob/1", true)]
+        [InlineData("SingleModeSportMob/1", true)]
         public async Task GetSingleModeSportMob(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SingleModeSportMob>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeSportMob>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeSportSportType", false)]
-        //[InlineData("SingleModeSportSportType/1", true)]
+        [InlineData("SingleModeSportSportType/1", true)]
         public async Task GetSingleModeSportSportType(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SingleModeSportSportType>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeSportSportType>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeSportStance", false)]
-        //[InlineData("SingleModeSportStance/1", true)]
+        [InlineData("SingleModeSportStance/101", true)]
         public async Task GetSingleModeSportStance(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SingleModeSportStance>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeSportStance>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeSportStanceEffect", false)]
-        //[InlineData("SingleModeSportStanceEffect/1", true)]
+        [InlineData("SingleModeSportStanceEffect/101", true)]
         public async Task GetSingleModeSportStanceEffect(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SingleModeSportStanceEffect>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeSportStanceEffect>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SingleModeSportTrainingCut", false)]
-        //[InlineData("SingleModeSportTrainingCut/1", true)]
+        [InlineData("SingleModeSportTrainingCut/1", true)]
         public async Task GetSingleModeSportTrainingCut(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SingleModeSportTrainingCut>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SingleModeSportTrainingCut>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -3215,10 +3215,10 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("SkillUpgradeSpeciality", false)]
-        //[InlineData("SkillUpgradeSpeciality/1", true)]
+        [InlineData("SkillUpgradeSpeciality/407011", true)]
         public async Task GetSkillUpgradeSpeciality(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<SkillUpgradeSpeciality>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<SkillUpgradeSpeciality>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
@@ -3790,15 +3790,6 @@ namespace UmaMusumeAPI.Test
 
         [Theory]
         [Trait("EndpointType", "Raw")]
-        [InlineData("TextDataEnglish", false)]
-        [InlineData("TextDataEnglish/1", true)]
-        public async Task GetTextDataEnglish(string endpointUrl, bool hasSingleReturn)
-        {
-            await TestGetEndpointAsync<TextDataEnglish>(endpointUrl, hasSingleReturn);
-        }
-
-        [Theory]
-        [Trait("EndpointType", "Raw")]
         [InlineData("TimezoneData", false)]
         [InlineData("TimezoneData/1", true)]
         public async Task GetTimezoneData(string endpointUrl, bool hasSingleReturn)
@@ -3890,46 +3881,46 @@ namespace UmaMusumeAPI.Test
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("TrainingReportInflation", false)]
-        //[InlineData("TrainingReportInflation/1", true)]
+        [InlineData("TrainingReportInflation/1", true)]
         public async Task GetTrainingReportInflation(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<TrainingReportInflation>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<TrainingReportInflation>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("TrainingReportNormalReward", false)]
-        //[InlineData("TrainingReportNormalReward/1", true)]
+        [InlineData("TrainingReportNormalReward/10010001", true)]
         public async Task GetTrainingReportNormalReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<TrainingReportNormalReward>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<TrainingReportNormalReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("TrainingReportPass", false)]
-        //[InlineData("TrainingReportPass/1", true)]
+        [InlineData("TrainingReportPass/1", true)]
         public async Task GetTrainingReportPass(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<TrainingReportPass>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<TrainingReportPass>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("TrainingReportRatio", false)]
-        //[InlineData("TrainingReportRatio/1", true)]
+        [InlineData("TrainingReportRatio/1", true)]
         public async Task GetTrainingReportRatio(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<TrainingReportRatio>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<TrainingReportRatio>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]
         [Trait("EndpointType", "Raw")]
         [InlineData("TrainingReportSpecialReward", false)]
-        //[InlineData("TrainingReportSpecialReward/1", true)]
+        [InlineData("TrainingReportSpecialReward/20010001", true)]
         public async Task GetTrainingReportSpecialReward(string endpointUrl, bool hasSingleReturn)
         {
-            await TestGetEndpointAsync<TrainingReportSpecialReward>(endpointUrl, hasSingleReturn, true);
+            await TestGetEndpointAsync<TrainingReportSpecialReward>(endpointUrl, hasSingleReturn);
         }
 
         [Theory]

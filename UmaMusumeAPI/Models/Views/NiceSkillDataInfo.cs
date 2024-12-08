@@ -31,8 +31,6 @@
         public long? NeedSkillPoint { get; set; }
         public string SkillName { get; set; }
         public string SkillDesc { get; set; }
-        public string SkillNameEnglish { get; set; }
-        public string SkillDescEnglish { get; set; }
         public long? CardId { get; set; }
         public long? SupportCardId { get; set; }
     }

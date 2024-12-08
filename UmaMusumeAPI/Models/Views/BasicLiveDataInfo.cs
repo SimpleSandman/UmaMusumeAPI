@@ -8,6 +8,5 @@ namespace UmaMusumeAPI.Models.Views
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string SongName { get; set; }
-        public string SongNameEnglish { get; set; }
     }
 }

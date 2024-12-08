@@ -7,6 +7,5 @@
         public int EpisodeIndex { get; set; }
         public int StoryNumber { get; set; }
         public string MainStoryEpisodeTitle { get; set; }
-        public string MainStoryEpisodeTitleEnglish { get; set; }
     }
 }

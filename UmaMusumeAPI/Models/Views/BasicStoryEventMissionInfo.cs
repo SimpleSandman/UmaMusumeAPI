@@ -10,6 +10,5 @@
         public int ItemId { get; set; }
         public int ItemNum { get; set; }
         public string StoryEventMissionName { get; set; }
-        public string StoryEventMissionNameEnglish { get; set; }
     }
 }

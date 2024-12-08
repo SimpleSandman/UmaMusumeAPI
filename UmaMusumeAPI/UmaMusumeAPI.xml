@@ -4,12 +4,6 @@
         <name>UmaMusumeAPI</name>
     </assembly>
     <members>
-        <member name="P:UmaMusumeAPI.DTO.BasicTextEnglishDTO.SearchQuery">
-            <example>Special Week</example>
-        </member>
-        <member name="P:UmaMusumeAPI.DTO.BasicTextEnglishDTO.IsEnglishQuery">
-            <example>true</example>
-        </member>
         <member name="P:UmaMusumeAPI.DTO.SpSuccessionPointSumDTO.Child">
             <example>1008</example>
         </member>

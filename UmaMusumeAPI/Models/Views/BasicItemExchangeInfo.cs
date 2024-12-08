@@ -9,6 +9,5 @@ namespace UmaMusumeAPI.Models.Views
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public string ItemExchangeCondition { get; set; }
-        public string ItemExchangeConditionEnglish { get; set; }
     }
 }
