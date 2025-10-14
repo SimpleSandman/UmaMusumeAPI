@@ -3,6 +3,11 @@ This is a community REST API based on [Uma Musume: Pretty Derby](https://umamusu
 
 I've written a [loader app](https://github.com/SimpleSandman/UmaMusumeLoadSqlData) that allows you to load the `meta` and `master.mdb`'s data from the [DMM version](https://dmg.umamusume.jp/) of this game into a MySQL/MariaDB database.
 
+## IMPORTANT: Retiring this repo October 29th!
+So I'll be shutting down this project very soon. I've already worked with Katboi from UmaViewer so that app isn't affected by this. My reasoning is that I've been meaning to move on from project as far as maintenance goes. As I've haven't played this game for 3+ years now, but I've always enjoyed this community and wanted to provide some kind of support for as long as I can. I've open-sourced everything except for the CI/CD (which is a very simple setup). This is in the event anyone wanted to pick up where I've left off.
+
+Just for the sake of anyone not following closely to this thread, I'm going to set the EOL (end of life) for the API and supporting apps around Oct 29th (in the United States) for Heroku billing cycle reasons.
+
 ## Features
 
 This API not only has endpoints to the tables, but I've created views for basic info for frequently used tables. I've even implemented stored procedures for a few particular calculations like parent compatibility and recommendations.
