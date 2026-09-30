@@ -1,12 +1,13 @@
 # Uma Musume REST API <br/> [![Build](https://ci.appveyor.com/api/projects/status/e3dq3bvxffkmmpty/branch/master?svg=true)](https://ci.appveyor.com/project/SimpleSandman/umamusumeapi/branch/master) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e77ffc16dc4c4eeabc2d2618538a2d17)](https://www.codacy.com/gh/SimpleSandman/UmaMusumeAPI/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=SimpleSandman/UmaMusumeAPI&amp;utm_campaign=Badge_Grade) [![codecov](https://codecov.io/gh/SimpleSandman/UmaMusumeAPI/branch/master/graph/badge.svg?token=COWCEBUUO6)](https://codecov.io/gh/SimpleSandman/UmaMusumeAPI)
-This is a community REST API based on [Uma Musume: Pretty Derby](https://umamusume.jp/)'s `meta` and `master.mdb` files that is read from a MariaDB database. This is based on the Swagger UI/OpenAPI specification. I'm using MariaDB instead of MySQL for the sake of keeping as much of this as open-source as possible. The API is available [here](https://www.tracenacademy.com/index.html) for your viewing pleasure.
+This was a community REST API based on [Uma Musume: Pretty Derby](https://umamusume.jp/)'s `meta` and `master.mdb` files that was read from a MariaDB database. This was based on the Swagger UI/OpenAPI specification. I was using MariaDB instead of MySQL for the sake of keeping as much of this as open-source as possible.
 
-I've written a [loader app](https://github.com/SimpleSandman/UmaMusumeLoadSqlData) that allows you to load the `meta` and `master.mdb`'s data from the [DMM version](https://dmg.umamusume.jp/) of this game into a MySQL/MariaDB database.
+I had written a [loader app](https://github.com/SimpleSandman/UmaMusumeLoadSqlData) that allowed you to load the `meta` and `master.mdb`'s data from the [DMM version](https://dmg.umamusume.jp/) of this game into a MySQL/MariaDB database.
 
-## IMPORTANT: Retiring this repo October 29th!
-So I'll be shutting down this project very soon. I've already worked with Katboi from UmaViewer so that app isn't affected by this. My reasoning is that I've been meaning to move on from project as far as maintenance goes. As I've haven't played this game for 3+ years now, but I've always enjoyed this community and wanted to provide some kind of support for as long as I can. I've open-sourced everything except for the CI/CD (which is a very simple setup). This is in the event anyone wanted to pick up where I've left off.
+## Retired Repository
 
-Just for the sake of anyone not following closely to this thread, I'm going to set the EOL (end of life) for the API and supporting apps around Oct 29th (in the United States) for Heroku billing cycle reasons.
+This project was retired on October 29, 2025, and the hosted API and its supporting apps have been shut down. I worked with Katboi from UmaViewer beforehand, so that app wasn't affected.
+
+I had been meaning to step away from maintaining this project. By the time I retired it, I hadn't played the game in over three years, but I've always enjoyed this community and wanted to provide some kind of support for as long as I could. I open-sourced everything except the CI/CD, which was a very simple setup, so anyone who wants to pick up where I left off is welcome to fork it.
 
 ## Features
 
